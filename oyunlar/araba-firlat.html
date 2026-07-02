@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katovia • Araba Fırlatma</title>
+  <style>
+    :root {
+      --bg-1: #020817;
+      --bg-2: #07122b;
+      --panel: rgba(22, 34, 62, 0.92);
+      --panel-soft: rgba(38, 52, 84, 0.88);
+      --border: rgba(255,255,255,0.08);
+      --text: #f8fafc;
+      --muted: #b8c4dd;
+      --accent: #3b82f6;
+      --accent-2: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --shadow: 0 16px 40px rgba(0,0,0,0.28);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #08183a 0%, #030b1b 55%, #020816 100%);
+      color: var(--text);
+    }
+
+    .page {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(90deg, rgba(12,26,56,0.96), rgba(5,15,36,0.98));
+    }
+
+    .topbar {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      background: rgba(0, 0, 0, 0.18);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      flex-shrink: 0;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+      font-weight: 700;
+      transition: 0.18s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-1px);
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    .hero {
+      padding: 16px 26px 10px;
+      flex-shrink: 0;
+    }
+
+    .eyebrow {
+      color: #b7c3e0;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      opacity: 0.92;
+    }
+
+    .hero h1 {
+      margin: 0 0 6px;
+      font-size: 54px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 860px;
+      line-height: 1.45;
+    }
+
+    .layout {
+      flex: 1;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 320px 1fr 300px;
+      gap: 14px;
+      padding: 14px 14px 16px;
+    }
+
+    .sidebar,
+    .game-shell {
+      min-height: 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(28,40,70,0.95), rgba(19,29,54,0.96));
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 22px;
+      padding: 18px;
+    }
+
+    .card h2,
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .stat-list {
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .stat-list strong {
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .info-text {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .small-note {
+      color: #a7b5d3;
+      font-size: 14px;
+      line-height: 1.55;
+      opacity: 0.95;
+    }
+
+    .game-shell {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .game-card {
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 3px solid rgba(122, 173, 255, 0.45);
+      background: #86bdf0;
+      position: relative;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .right-header {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      flex: 1;
+      min-width: 84px;
+      text-align: center;
+      padding: 12px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .meter-box {
+      display: grid;
+      gap: 16px;
+    }
+
+    .meter-row {
+      display: grid;
+      gap: 8px;
+    }
+
+    .meter-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .bar {
+      width: 100%;
+      height: 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar-fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 0%;
+      border-radius: inherit;
+      transition: width 0.08s linear;
+    }
+
+    .bar-fill.fuel { background: linear-gradient(90deg, #14b8a6, #67e8f9); }
+    .bar-fill.power { background: linear-gradient(90deg, #ef4444, #fb7185); }
+
+    .vehicle-list {
+      display: grid;
+      gap: 10px;
+      max-height: 260px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .vehicle-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      cursor: pointer;
+      transition: 0.18s ease;
+      user-select: none;
+    }
+
+    .vehicle-item:hover { background: rgba(255,255,255,0.08); }
+    .vehicle-item.active {
+      background: rgba(59,130,246,0.22);
+      border-color: rgba(96,165,250,0.55);
+    }
+    .vehicle-item.locked {
+      opacity: 0.58;
+      cursor: default;
+    }
+
+    .vehicle-name { font-weight: 800; font-size: 14px; }
+    .vehicle-cost { color: var(--muted); font-size: 13px; }
+    .vehicle-tag {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 13px;
+      color: #aab7d5;
+      padding-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="back-btn" href="/oyunlar/araba-oyunlari/">← Araba Oyunlarına Dön</a>
+      <div class="brand">Katovia</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">KATOVIA ARABA OYUNLARI</div>
+      <h1>Araba Fırlatma</h1>
+      <p>Devri ayarla, açıyı kur, doğru anda fırlat ve ilk temas noktasına göre en yüksek mesafeyi yakala. Her deneme puan kazandırır, puan biriktikçe yeni araçlar açılır.</p>
+    </section>
+
+    <section class="layout">
+      <aside class="sidebar left-panel">
+        <div class="card">
+          <h2>Fırlatma Özeti</h2>
+          <div class="stat-list">
+            <div>Araç: <strong id="leftCarName">Başlangıç</strong></div>
+            <div>Toplam Puan: <strong id="leftTotalScore">0</strong></div>
+            <div>En İyi Mesafe: <strong id="leftBestDistance">0 m</strong></div>
+            <div>Son Deneme: <strong id="leftLastDistance">-</strong></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Oyun Bilgisi</h3>
+          <div class="info-text">
+            Sol tuşa basılı tutarak devri yükseltirsin. Aynı anda yakıt yavaş yavaş azalır. Yukarı ve aşağı tuşlarıyla açıyı ayarlayıp boşlukla aracı fırlatırsın.
+          </div>
+        </div>
+
+        <div class="card small-note">
+          Hedef, arabayı en uzağa göndermek değil sadece güç basmak da değil; doğru açı ve doğru zamanlama ile ilk yere değdiği noktayı mümkün olduğunca ileri taşımak.
+          <br><br>
+          Kontroller:<br>
+          ← devir yükselt<br>
+          ↑ / ↓ açı ayarla<br>
+          SPACE fırlat<br>
+          R yeniden başlat
+        </div>
+      </aside>
+
+      <main class="game-shell">
+        <div class="game-card">
+          <canvas id="gameCanvas"></canvas>
+        </div>
+      </main>
+
+      <aside class="sidebar right-panel">
+        <div class="right-header">
+          <div class="pill">Açı: <span id="pillAngle">35°</span></div>
+          <div class="pill">Mesafe: <span id="pillDistance">0 m</span></div>
+        </div>
+
+        <div class="card meter-box">
+          <div class="meter-row">
+            <div class="meter-head"><span>Yakıt</span><span id="fuelValue">100%</span></div>
+            <div class="bar"><div class="bar-fill fuel" id="fuelFill"></div></div>
+          </div>
+          <div class="meter-row">
+            <div class="meter-head"><span>Devir</span><span id="powerValue">0%</span></div>
+            <div class="bar"><div class="bar-fill power" id="powerFill"></div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Araç Garajı</h3>
+          <div class="vehicle-list" id="vehicleList"></div>
+        </div>
+
+        <div class="footer-note">Araç seçimi sadece fırlatmadan önce yapılır.</div>
+      </aside>
+    </section>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const ui = {
+      leftCarName: document.getElementById('leftCarName'),
+      leftTotalScore: document.getElementById('leftTotalScore'),
+      leftBestDistance: document.getElementById('leftBestDistance'),
+      leftLastDistance: document.getElementById('leftLastDistance'),
+      pillAngle: document.getElementById('pillAngle'),
+      pillDistance: document.getElementById('pillDistance'),
+      fuelValue: document.getElementById('fuelValue'),
+      powerValue: document.getElementById('powerValue'),
+      fuelFill: document.getElementById('fuelFill'),
+      powerFill: document.getElementById('powerFill'),
+      vehicleList: document.getElementById('vehicleList')
+    };
+
+    const CONFIG = {
+      gravity: 0.08,
+      minAngle: 10,
+      maxAngle: 75,
+      defaultAngle: 35,
+      maxPower: 100,
+      powerGain: 0.72,
+      powerDecay: 0.16,
+      fuelMax: 100,
+      fuelBurn: 0.11,
+      fuelSlowThreshold: 20,
+      fuelFloor: 7,
+      launchX: 180,
+      angleArrowLength: 76,
+      meterScale: 0.55,
+      resultFrames: 78,
+      bounceFactor: 0.22,
+      friction: 0.985,
+      worldMeters: 1600,
+      unlockCosts: [0, 120, 350, 800, 1600, 2000],
+      cars: [
+        { name: 'Başlangıç', color: '#ef4444', powerMul: 0.52, fuelMul: 1.00, size: 1.00 },
+        { name: 'Sokak GT', color: '#22c55e', powerMul: 0.58, fuelMul: 0.98, size: 1.02 },
+        { name: 'Asfalt Pro', color: '#3b82f6', powerMul: 0.64, fuelMul: 1.00, size: 1.04 },
+        { name: 'Turbo X', color: '#a855f7', powerMul: 0.70, fuelMul: 1.03, size: 1.06 },
+        { name: 'Canavar V', color: '#f97316', powerMul: 0.76, fuelMul: 1.05, size: 1.08 },
+        { name: 'Efsane 6', color: '#111827', powerMul: 0.84, fuelMul: 1.08, size: 1.10 }
+      ]
+    };
+
+    const STORAGE_KEY = 'katovia_car_launch_layout_v1';
+    const keys = { left: false, up: false, down: false };
+
+    const state = {
+      phase: 'ready',
+      totalScore: 0,
+      bestDistance: 0,
+      lastDistance: 0,
+      unlockedCars: 1,
+      selectedCar: 0,
+      angle: CONFIG.defaultAngle,
+      power: 0,
+      fuel: CONFIG.fuelMax,
+      currentDistance: 0,
+      impactDistance: 0,
+      scoreGain: 0,
+      resultCounter: 0,
+      cameraX: 0,
+      justUnlocked: -1,
+      world: { groundY: 0 },
+      car: null
+    };
+
+    function loadSave() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const data = JSON.parse(raw);
+        state.totalScore = data.totalScore || 0;
+        state.bestDistance = data.bestDistance || 0;
+        state.lastDistance = data.lastDistance || 0;
+        state.unlockedCars = Math.max(1, data.unlockedCars || 1);
+        state.selectedCar = Math.min(data.selectedCar || 0, state.unlockedCars - 1);
+      } catch {}
+    }
+
+    function saveGame() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        totalScore: state.totalScore,
+        bestDistance: state.bestDistance,
+        lastDistance: state.lastDistance,
+        unlockedCars: state.unlockedCars,
+        selectedCar: state.selectedCar
+      }));
+    }
+
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+      state.world.groundY = canvas.height * 0.76;
+      if (!state.car || state.phase === 'ready') {
+        state.car = createCar(state.selectedCar);
+      }
+      render();
+    }
+
+    function createCar(index) {
+      const vehicle = CONFIG.cars[index];
+      return {
+        x: CONFIG.launchX,
+        y: state.world.groundY - 22,
+        vx: 0,
+        vy: 0,
+        width: 74 * vehicle.size,
+        height: 24 * vehicle.size,
+        rotation: 0,
+        spin: 0,
+        impacted: false,
+        visible: true
+      };
+    }
+
+    function resetRound() {
+      state.phase = 'ready';
+      state.angle = CONFIG.defaultAngle;
+      state.power = 0;
+      state.fuel = CONFIG.fuelMax;
+      state.currentDistance = 0;
+      state.impactDistance = 0;
+      state.scoreGain = 0;
+      state.resultCounter = 0;
+      state.cameraX = 0;
+      state.justUnlocked = -1;
+      state.car = createCar(state.selectedCar);
+      updateUI();
+    }
+
+    function clamp(value, min, max) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function currentVehicle() {
+      return CONFIG.cars[state.selectedCar];
+    }
+
+    function metersFromWorldX(x) {
+      return Math.max(0, Math.floor((x - CONFIG.launchX) / CONFIG.meterScale));
+    }
+
+    function fuelBurnRate() {
+      return state.fuel <= CONFIG.fuelSlowThreshold ? CONFIG.fuelBurn * 0.28 : CONFIG.fuelBurn;
+    }
+
+    function tryUnlockCars() {
+      let opened = false;
+      while (state.unlockedCars < 5 && state.totalScore >= CONFIG.unlockCosts[state.unlockedCars]) {
+        state.justUnlocked = state.unlockedCars;
+        state.unlockedCars += 1;
+        opened = true;
+      }
+      if (opened) {
+        buildVehicleList();
+        saveGame();
+      }
+    }
+
+    function selectCar(index) {
+      if (state.phase !== 'ready') return;
+      if (index >= state.unlockedCars) return;
+      state.selectedCar = index;
+      saveGame();
+      buildVehicleList();
+      resetRound();
+    }
+
+    function launchCar() {
+      if (state.phase !== 'ready') return;
+      if (state.power < 1) return;
+
+      const vehicle = currentVehicle();
+      const rad = state.angle * Math.PI / 180;
+      const powerRatio = state.power / CONFIG.maxPower;
+      const speed = (2.8 + powerRatio * 6.9) * vehicle.powerMul;
+
+      state.phase = 'flying';
+      state.car.vx = Math.cos(rad) * speed;
+      state.car.vy = -Math.sin(rad) * speed;
+      state.car.spin = 0.02 + powerRatio * 0.05;
+    }
+
+    function updateReady() {
+      if (keys.up) state.angle += 0.55;
+      if (keys.down) state.angle -= 0.55;
+      state.angle = clamp(state.angle, CONFIG.minAngle, CONFIG.maxAngle);
+
+      if (keys.left && state.fuel > CONFIG.fuelFloor) {
+        state.power = clamp(state.power + CONFIG.powerGain, 0, CONFIG.maxPower);
+        state.fuel = Math.max(CONFIG.fuelFloor, state.fuel - fuelBurnRate() * currentVehicle().fuelMul);
+      } else {
+        state.power = Math.max(0, state.power - CONFIG.powerDecay);
+      }
+
+      state.car.x = CONFIG.launchX;
+      state.car.y = state.world.groundY - 22;
+    }
+
+    function updateFlying() {
+      const car = state.car;
+      car.vy += CONFIG.gravity;
+      car.x += car.vx;
+      car.y += car.vy;
+      car.rotation += car.spin;
+
+      state.currentDistance = metersFromWorldX(car.x);
+      const targetCamera = Math.max(0, car.x - canvas.width * 0.28);
+      state.cameraX += (targetCamera - state.cameraX) * 0.10;
+
+      const bottom = car.y + car.height * 0.5;
+      if (!car.impacted && bottom >= state.world.groundY) {
+        car.impacted = true;
+        state.impactDistance = metersFromWorldX(car.x);
+        state.lastDistance = state.impactDistance;
+        state.scoreGain = state.impactDistance;
+        state.totalScore += state.scoreGain;
+        state.bestDistance = Math.max(state.bestDistance, state.impactDistance);
+        tryUnlockCars();
+        saveGame();
+
+        state.phase = 'result';
+        state.resultCounter = CONFIG.resultFrames;
+        state.cameraX = Math.max(0, car.x - canvas.width * 0.5);
+        car.vy = -Math.abs(car.vy) * CONFIG.bounceFactor;
+        car.vx *= 0.97;
+        car.spin *= 1.35;
+      }
+    }
+
+    function updateResult() {
+      const car = state.car;
+      if (state.resultCounter > 0) {
+        car.vy += CONFIG.gravity;
+        car.x += car.vx;
+        car.y += car.vy;
+        car.rotation += car.spin;
+
+        const bottom = car.y + car.height * 0.5;
+        if (bottom >= state.world.groundY) {
+          car.y = state.world.groundY - car.height * 0.5;
+          car.vy = -Math.abs(car.vy) * CONFIG.bounceFactor;
+          car.vx *= CONFIG.friction;
+          car.spin *= 0.95;
+          if (Math.abs(car.vy) < 0.2) car.vy = 0;
+        }
+        state.resultCounter--;
+      } else {
+        car.visible = false;
+      }
+    }
+
+    function update() {
+      if (state.phase === 'ready') updateReady();
+      else if (state.phase === 'flying') updateFlying();
+      else if (state.phase === 'result') updateResult();
+      updateUI();
+    }
+
+    function updateUI() {
+      ui.leftCarName.textContent = currentVehicle().name;
+      ui.leftTotalScore.textContent = state.totalScore;
+      ui.leftBestDistance.textContent = state.bestDistance + ' m';
+      ui.leftLastDistance.textContent = state.lastDistance ? state.lastDistance + ' m' : '-';
+      ui.pillAngle.textContent = Math.round(state.angle) + '°';
+      const shownDistance = state.phase === 'result' ? state.impactDistance : state.currentDistance;
+      ui.pillDistance.textContent = shownDistance + ' m';
+      ui.fuelValue.textContent = Math.round(state.fuel) + '%';
+      ui.powerValue.textContent = Math.round(state.power) + '%';
+      ui.fuelFill.style.width = clamp(state.fuel, 0, 100) + '%';
+      ui.powerFill.style.width = clamp(state.power, 0, 100) + '%';
+    }
+
+    function buildVehicleList() {
+      ui.vehicleList.innerHTML = '';
+      CONFIG.cars.forEach((car, index) => {
+        const unlocked = index < state.unlockedCars;
+        const item = document.createElement('div');
+        item.className = 'vehicle-item' + (state.selectedCar === index ? ' active' : '') + (unlocked ? '' : ' locked');
+
+        const left = document.createElement('div');
+        left.innerHTML = `<div class="vehicle-name">${car.name}</div><div class="vehicle-cost">${unlocked ? 'Açık' : CONFIG.unlockCosts[index] + ' puan'}</div>`;
+
+        const right = document.createElement('div');
+        right.className = 'vehicle-tag';
+        right.textContent = unlocked ? (index === state.selectedCar ? 'Seçili' : 'Seç') : 'Kilitli';
+
+        item.appendChild(left);
+        item.appendChild(right);
+        if (unlocked) item.addEventListener('click', () => selectCar(index));
+        ui.vehicleList.appendChild(item);
+      });
+    }
+
+    function roundRect(x, y, w, h, r) {
+      const rr = Math.min(r, w / 2, h / 2);
+      ctx.beginPath();
+      ctx.moveTo(x + rr, y);
+      ctx.arcTo(x + w, y, x + w, y + h, rr);
+      ctx.arcTo(x + w, y + h, x, y + h, rr);
+      ctx.arcTo(x, y + h, x, y, rr);
+      ctx.arcTo(x, y, x + w, y, rr);
+      ctx.closePath();
+    }
+
+    function shadeColor(hex, amount) {
+      const num = parseInt(hex.replace('#', ''), 16);
+      let r = (num >> 16) + amount;
+      let g = ((num >> 8) & 255) + amount;
+      let b = (num & 255) + amount;
+      r = Math.max(0, Math.min(255, r));
+      g = Math.max(0, Math.min(255, g));
+      b = Math.max(0, Math.min(255, b));
+      return '#' + ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
+    }
+
+    function drawBackground() {
+      const sky = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      sky.addColorStop(0, '#7bb7ea');
+      sky.addColorStop(0.72, '#b9ddfb');
+      sky.addColorStop(0.721, '#a9d06c');
+      sky.addColorStop(1, '#85b554');
+      ctx.fillStyle = sky;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.globalAlpha = 0.18;
+      for (let i = 0; i < 5; i++) {
+        const cloudX = (i * 300) - ((state.cameraX * 0.12) % 1500) + 30;
+        drawCloud(cloudX, 85 + (i % 2) * 35, 1.05 + (i % 3) * 0.08);
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    function drawCloud(x, y, s) {
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      ctx.arc(x, y, 30 * s, 0, Math.PI * 2);
+      ctx.arc(x + 34 * s, y - 14 * s, 36 * s, 0, Math.PI * 2);
+      ctx.arc(x + 74 * s, y, 28 * s, 0, Math.PI * 2);
+      ctx.arc(x + 44 * s, y + 14 * s, 42 * s, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawGround() {
+      const gy = state.world.groundY;
+      ctx.fillStyle = '#9ac763';
+      ctx.fillRect(0, gy, canvas.width, canvas.height - gy);
+      ctx.fillStyle = '#8ec05a';
+      ctx.fillRect(0, gy + 60, canvas.width, 30);
+      ctx.fillStyle = '#b27c3a';
+      ctx.fillRect(0, gy + 90, canvas.width, canvas.height - gy - 90);
+
+      ctx.fillStyle = '#d19d52';
+      for (let i = -2; i < canvas.width / 38 + 4; i++) {
+        const x = i * 38 - (state.cameraX % 38);
+        ctx.fillRect(x, gy + 106, 22, 6);
+      }
+
+      ctx.strokeStyle = 'rgba(255,255,255,0.28)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(0, gy);
+      ctx.lineTo(canvas.width, gy);
+      ctx.stroke();
+    }
+
+    function drawDistanceMarkers() {
+      const gy = state.world.groundY;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'bottom';
+      for (let m = 100; m <= CONFIG.worldMeters; m += 100) {
+        const wx = CONFIG.launchX + m * CONFIG.meterScale;
+        const sx = wx - state.cameraX;
+        if (sx < -80 || sx > canvas.width + 80) continue;
+
+        const major = m % 500 === 0;
+        ctx.strokeStyle = major ? 'rgba(0,0,0,0.28)' : 'rgba(0,0,0,0.14)';
+        ctx.lineWidth = major ? 2 : 1;
+        ctx.beginPath();
+        ctx.moveTo(sx, gy - (major ? 62 : 28));
+        ctx.lineTo(sx, gy);
+        ctx.stroke();
+
+        if (major || m <= 500) {
+          ctx.fillStyle = 'rgba(0,0,0,0.55)';
+          ctx.font = major ? 'bold 13px Arial' : '12px Arial';
+          ctx.fillText(m + ' m', sx, gy - (major ? 68 : 34));
+        }
+      }
+      ctx.textAlign = 'left';
+    }
+
+    function drawLauncher() {
+      const gy = state.world.groundY;
+      const bx = CONFIG.launchX - state.cameraX - 44;
+      ctx.fillStyle = '#5c6066';
+      ctx.fillRect(bx, gy - 52, 16, 52);
+      ctx.fillRect(bx + 10, gy - 16, 118, 16);
+      ctx.fillStyle = '#40444b';
+      ctx.fillRect(bx + 8, gy - 34, 44, 8);
+
+      const pivotX = CONFIG.launchX - state.cameraX + 8;
+      const pivotY = gy - 30;
+      const angleRad = state.angle * Math.PI / 180;
+      const len = CONFIG.angleArrowLength;
+      const tipX = pivotX + Math.cos(angleRad) * len;
+      const tipY = pivotY - Math.sin(angleRad) * len;
+
+      ctx.strokeStyle = '#f4a100';
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.moveTo(pivotX, pivotY);
+      ctx.lineTo(tipX, tipY);
+      ctx.stroke();
+
+      const head = Math.atan2(tipY - pivotY, tipX - pivotX);
+      ctx.fillStyle = '#f4a100';
+      ctx.beginPath();
+      ctx.moveTo(tipX, tipY);
+      ctx.lineTo(tipX - Math.cos(head - 0.45) * 14, tipY - Math.sin(head - 0.45) * 14);
+      ctx.lineTo(tipX - Math.cos(head + 0.45) * 14, tipY - Math.sin(head + 0.45) * 14);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    function drawCar() {
+      const car = state.car;
+      if (!car || !car.visible) return;
+
+      const vehicle = currentVehicle();
+      const sx = car.x - state.cameraX;
+      const sy = car.y;
+      const w = car.width;
+      const h = car.height;
+
+      ctx.save();
+      ctx.translate(sx, sy);
+      ctx.rotate(-car.rotation);
+
+      ctx.fillStyle = vehicle.color;
+      roundRect(-w * 0.5, -h * 0.42, w * 0.72, h * 0.72, 8);
+      ctx.fill();
+
+      ctx.fillStyle = shadeColor(vehicle.color, -26);
+      roundRect(-w * 0.1, -h * 0.74, w * 0.34, h * 0.5, 8);
+      ctx.fill();
+
+      ctx.fillStyle = '#dbeafe';
+      roundRect(-w * 0.02, -h * 0.62, w * 0.16, h * 0.2, 4);
+      ctx.fill();
+
+      drawWheel(-w * 0.22, h * 0.34, h * 0.24);
+      drawWheel(w * 0.18, h * 0.34, h * 0.24);
+
+      if (state.phase === 'ready' && keys.left && state.power > 4) {
+        ctx.globalAlpha = 0.82;
+        ctx.fillStyle = '#ff7a00';
+        ctx.beginPath();
+        ctx.moveTo(-w * 0.56, 0);
+        ctx.lineTo(-w * 0.8 - Math.random() * 12, -6 + Math.random() * 12);
+        ctx.lineTo(-w * 0.56, 6);
+        ctx.closePath();
+        ctx.fill();
+        ctx.globalAlpha = 1;
+      }
+
+      ctx.restore();
+    }
+
+    function drawWheel(x, y, r) {
+      ctx.fillStyle = '#0f172a';
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#94a3b8';
+      ctx.beginPath();
+      ctx.arc(x, y, r * 0.42, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawCenterDistance() {
+      const shown = state.phase === 'result' ? state.impactDistance : state.currentDistance;
+      ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(0,0,0,0.74)';
+      ctx.font = '900 54px Arial';
+      ctx.fillText(shown + ' m', canvas.width * 0.5, 68);
+      ctx.textAlign = 'left';
+    }
+
+    function drawResultCard() {
+      if (state.phase !== 'result') return;
+      const w = 330;
+      const h = 138;
+      const x = canvas.width * 0.5 - w / 2;
+      const y = 112;
+
+      ctx.fillStyle = 'rgba(255,255,255,0.93)';
+      roundRect(x, y, w, h, 18);
+      ctx.fill();
+      ctx.fillStyle = '#111827';
+      ctx.textAlign = 'center';
+      ctx.font = 'bold 22px Arial';
+      ctx.fillText('Deneme Tamamlandı', x + w / 2, y + 34);
+      ctx.font = '900 36px Arial';
+      ctx.fillText(state.impactDistance + ' m', x + w / 2, y + 76);
+      ctx.font = '16px Arial';
+      ctx.fillText('Kazanılan Puan: +' + state.scoreGain, x + w / 2, y + 104);
+      ctx.fillText('R ile tekrar dene', x + w / 2, y + 126);
+      ctx.textAlign = 'left';
+
+      if (state.justUnlocked >= 1) {
+        ctx.fillStyle = 'rgba(255, 231, 88, 0.96)';
+        roundRect(x - 6, y + h + 12, w + 12, 42, 12);
+        ctx.fill();
+        ctx.fillStyle = '#111827';
+        ctx.textAlign = 'center';
+        ctx.font = 'bold 15px Arial';
+        ctx.fillText('Yeni araç açıldı: ' + CONFIG.cars[state.justUnlocked].name, x + w / 2, y + h + 39);
+        ctx.textAlign = 'left';
+      }
+    }
+
+    function render() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawBackground();
+      drawDistanceMarkers();
+      drawGround();
+      drawLauncher();
+      drawCar();
+      drawCenterDistance();
+      drawResultCard();
+    }
+
+    function loop() {
+      update();
+      render();
+      requestAnimationFrame(loop);
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (['ArrowLeft', 'ArrowUp', 'ArrowDown', 'Space'].includes(e.code)) e.preventDefault();
+      if (e.code === 'ArrowLeft') keys.left = true;
+      if (e.code === 'ArrowUp') keys.up = true;
+      if (e.code === 'ArrowDown') keys.down = true;
+      if (e.code === 'Space') launchCar();
+      if (e.code === 'KeyR') resetRound();
+    });
+
+    window.addEventListener('keyup', (e) => {
+      if (e.code === 'ArrowLeft') keys.left = false;
+      if (e.code === 'ArrowUp') keys.up = false;
+      if (e.code === 'ArrowDown') keys.down = false;
+    });
+
+    loadSave();
+    buildVehicleList();
+    resizeCanvas();
+    updateUI();
+    window.addEventListener('resize', resizeCanvas);
+    loop();
+  </script>
+</body>
+</html>

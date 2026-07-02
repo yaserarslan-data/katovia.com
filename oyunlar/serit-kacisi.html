@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Şerit Kaçışı - Katovia</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    :root {
+      --bg1: #081225;
+      --bg2: #0b1630;
+      --panel: rgba(255,255,255,0.06);
+      --panel-border: rgba(255,255,255,0.10);
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.78);
+      --button: #2563eb;
+      --button-hover: #3b82f6;
+      --topbar-h: 74px;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      height: var(--topbar-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      background: rgba(2, 6, 23, 0.94);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      flex-shrink: 0;
+    }
+
+    .back-link {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 10px 15px;
+      border-radius: 999px;
+      transition: 0.18s ease;
+    }
+
+    .back-link:hover {
+      background: rgba(255,255,255,0.14);
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+    }
+
+    .page {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 10px 14px;
+      overflow: hidden;
+    }
+
+    .game-layout {
+      width: 100%;
+      max-width: 1080px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 0;
+    }
+
+    .intro {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .intro .mini {
+      margin: 0 0 5px 0;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.62);
+    }
+
+    .intro .desc {
+      margin: 0;
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.45;
+      max-width: 760px;
+      padding: 0 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.1;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .hud {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: 0 10px;
+    }
+
+    .pill {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .canvas-area {
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+      background: #1f2937;
+      border: 3px solid rgba(255,255,255,0.16);
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      touch-action: none;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      background: var(--button);
+      color: white;
+      transition: 0.18s ease;
+    }
+
+    button:hover {
+      background: var(--button-hover);
+    }
+
+    .controls {
+      opacity: 0.92;
+      text-align: center;
+      line-height: 1.45;
+      max-width: 760px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.88);
+      flex-shrink: 0;
+      padding: 0 12px;
+    }
+
+    @media (max-width: 900px) {
+      :root { --topbar-h: 68px; }
+      .topbar { padding: 0 14px; }
+      .back-link { font-size: 13px; padding: 8px 12px; }
+      .brand { font-size: 16px; }
+      h1 { font-size: 26px; }
+      .intro .desc { font-size: 14px; }
+      .pill { font-size: 13px; padding: 8px 12px; }
+      .controls { font-size: 13px; }
+      button { padding: 10px 16px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a class="back-link" href="/araba-oyunlari/">← Araba Oyunlarına Dön</a>
+    <div class="brand">Katovia</div>
+  </div>
+
+  <div class="page">
+    <div class="game-layout">
+      <div class="intro">
+        <p class="mini">Katovia Araba Oyunları</p>
+        <p class="desc">Trafikte ilerle, araçlardan kaç, yakın geçiş bonusları kazan ve en yüksek skora ulaş.</p>
+      </div>
+
+      <h1>Şerit Kaçışı</h1>
+
+      <div class="hud">
+        <div class="pill">Skor: <span id="score">0</span></div>
+        <div class="pill">En Yüksek: <span id="best">0</span></div>
+        <div class="pill">Yakın Geçiş: <span id="nearMiss">0</span></div>
+        <div class="pill">Hız: <span id="speed">1</span></div>
+      </div>
+
+      <div class="canvas-area">
+        <canvas id="game" width="420" height="700"></canvas>
+      </div>
+
+      <div class="buttons">
+        <button id="startBtn">Oyunu Başlat</button>
+        <button id="restartBtn">Yeniden Başlat</button>
+      </div>
+
+      <div class="controls">
+        <strong>Masaüstü:</strong> Sol / Sağ ok tuşları veya A / D<br>
+        <strong>Mobil:</strong> Ekranda sağa-sola sürükle<br>
+        Amaç: Arabalara çarpmadan ilerle, yakın geçiş yaparak ekstra puan kazan.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+
+    const scoreEl = document.getElementById('score');
+    const bestEl = document.getElementById('best');
+    const nearMissEl = document.getElementById('nearMiss');
+    const speedEl = document.getElementById('speed');
+    const startBtn = document.getElementById('startBtn');
+    const restartBtn = document.getElementById('restartBtn');
+
+    const W = 420;
+    const H = 700;
+    canvas.width = W;
+    canvas.height = H;
+
+    const roadX = 60;
+    const roadW = 300;
+    const laneCount = 3;
+    const laneW = roadW / laneCount;
+    const playerW = 52;
+    const playerH = 96;
+    const enemyW = 52;
+    const enemyH = 96;
+
+    let bestScore = Number(localStorage.getItem('seritKacisiBest') || 0);
+    bestEl.textContent = bestScore;
+
+    let game;
+
+    function resizeCanvas() {
+      const topbarH = 74;
+      const isMobile = window.innerWidth <= 900;
+      const reserved = isMobile ? 250 : 225;
+      const maxW = Math.max(260, window.innerWidth - 24);
+      const maxH = Math.max(320, window.innerHeight - topbarH - reserved);
+      const scale = Math.min(maxW / W, maxH / H, 1);
+
+      canvas.style.width = `${Math.floor(W * scale)}px`;
+      canvas.style.height = `${Math.floor(H * scale)}px`;
+    }
+
+    function laneCenter(index) {
+      return roadX + laneW * index + laneW / 2;
+    }
+
+    function resetGame() {
+      game = {
+        running: false,
+        over: false,
+        score: 0,
+        nearMiss: 0,
+        frame: 0,
+        speed: 4,
+        roadOffset: 0,
+        spawnTimer: 0,
+        spawnInterval: 60,
+        lastNearMissFrame: -999,
+        player: {
+          x: laneCenter(1) - playerW / 2,
+          y: H - 130,
+          w: playerW,
+          h: playerH,
+          lane: 1,
+          color: '#22c55e'
+        },
+        enemies: [],
+        particles: [],
+        flash: 0
+      };
+      updateHud();
+    }
+
+    function updateHud() {
+      scoreEl.textContent = Math.floor(game.score);
+      nearMissEl.textContent = game.nearMiss;
+      speedEl.textContent = game.speed.toFixed(1);
+      bestEl.textContent = bestScore;
+    }
+
+    function spawnEnemy() {
+      const lane = Math.floor(Math.random() * laneCount);
+      const colors = ['#ef4444', '#3b82f6', '#f59e0b', '#a855f7', '#ec4899'];
+      game.enemies.push({
+        lane,
+        x: laneCenter(lane) - enemyW / 2,
+        y: -enemyH - Math.random() * 180,
+        w: enemyW,
+        h: enemyH,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        counted: false,
+        nearMissGiven: false
+      });
+    }
+
+    function rectsOverlap(a, b) {
+      return a.x < b.x + b.w &&
+             a.x + a.w > b.x &&
+             a.y < b.y + b.h &&
+             a.y + a.h > b.y;
+    }
+
+    function explode(x, y, color) {
+      for (let i = 0; i < 20; i++) {
+        game.particles.push({
+          x,
+          y,
+          vx: (Math.random() - 0.5) * 8,
+          vy: (Math.random() - 0.5) * 8,
+          life: 30 + Math.random() * 15,
+          size: 2 + Math.random() * 5,
+          color
+        });
+      }
+    }
+
+    function gameOver() {
+      game.running = false;
+      game.over = true;
+      game.flash = 18;
+      explode(game.player.x + game.player.w / 2, game.player.y + game.player.h / 2, '#ffffff');
+
+      const finalScore = Math.floor(game.score);
+      if (finalScore > bestScore) {
+        bestScore = finalScore;
+        localStorage.setItem('seritKacisiBest', String(bestScore));
+      }
+      updateHud();
+    }
+
+    function movePlayerToLane(lane) {
+      lane = Math.max(0, Math.min(laneCount - 1, lane));
+      game.player.lane = lane;
+      game.player.x = laneCenter(lane) - game.player.w / 2;
+    }
+
+    function update() {
+      if (!game.running) return;
+
+      game.frame++;
+      game.roadOffset += game.speed;
+      game.score += 0.12 * game.speed;
+      game.speed += 0.0025;
+      game.spawnTimer++;
+
+      if (game.spawnTimer >= game.spawnInterval) {
+        spawnEnemy();
+        game.spawnTimer = 0;
+        game.spawnInterval = Math.max(28, 60 - Math.floor(game.speed * 2));
+      }
+
+      for (const enemy of game.enemies) {
+        enemy.y += game.speed + 1.5;
+
+        if (!enemy.counted && enemy.y > H) {
+          enemy.counted = true;
+          game.score += 8;
+        }
+
+        if (rectsOverlap(game.player, enemy)) {
+          gameOver();
+          return;
+        }
+
+        const verticalClose = enemy.y + enemy.h > game.player.y + 10 && enemy.y < game.player.y + game.player.h - 10;
+        const horizontalGap = Math.abs((enemy.x + enemy.w / 2) - (game.player.x + game.player.w / 2));
+
+        if (!enemy.nearMissGiven && verticalClose && horizontalGap < 62 && horizontalGap > 46) {
+          enemy.nearMissGiven = true;
+          game.nearMiss++;
+          game.score += 25;
+          game.lastNearMissFrame = game.frame;
+          explode(enemy.x + enemy.w / 2, enemy.y + enemy.h / 2, '#facc15');
+        }
+      }
+
+      game.enemies = game.enemies.filter(enemy => enemy.y < H + 140);
+
+      for (const p of game.particles) {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.life -= 1;
+        p.size *= 0.985;
+      }
+      game.particles = game.particles.filter(p => p.life > 0 && p.size > 0.5);
+
+      updateHud();
+    }
+
+    function drawRoad() {
+      ctx.fillStyle = '#3f3f46';
+      ctx.fillRect(roadX, 0, roadW, H);
+
+      ctx.fillStyle = '#d4d4d8';
+      ctx.fillRect(roadX - 8, 0, 8, H);
+      ctx.fillRect(roadX + roadW, 0, 8, H);
+
+      ctx.strokeStyle = 'rgba(255,255,255,0.85)';
+      ctx.lineWidth = 6;
+      ctx.setLineDash([32, 24]);
+      for (let i = 1; i < laneCount; i++) {
+        const x = roadX + i * laneW;
+        ctx.beginPath();
+        ctx.moveTo(x, -(game.roadOffset % 56));
+        ctx.lineTo(x, H);
+        ctx.stroke();
+      }
+      ctx.setLineDash([]);
+    }
+
+    function drawCar(x, y, w, h, color, isPlayer = false) {
+      ctx.save();
+      ctx.translate(x, y);
+
+      ctx.fillStyle = color;
+      ctx.fillRect(8, 8, w - 16, h - 16);
+
+      ctx.fillStyle = 'rgba(255,255,255,0.9)';
+      ctx.fillRect(14, 18, w - 28, 18);
+      ctx.fillRect(14, h - 36, w - 28, 14);
+
+      ctx.fillStyle = '#111827';
+      ctx.fillRect(2, 18, 8, 20);
+      ctx.fillRect(w - 10, 18, 8, 20);
+      ctx.fillRect(2, h - 38, 8, 20);
+      ctx.fillRect(w - 10, h - 38, 8, 20);
+
+      if (isPlayer) {
+        ctx.fillStyle = '#86efac';
+        ctx.fillRect(20, 4, w - 40, 6);
+      }
+
+      ctx.restore();
+    }
+
+    function drawParticles() {
+      for (const p of game.particles) {
+        ctx.globalAlpha = Math.max(0, p.life / 40);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    function drawOverlay() {
+      if (!game.running && !game.over) {
+        ctx.fillStyle = 'rgba(0,0,0,0.45)';
+        ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
+        ctx.font = 'bold 34px Arial';
+        ctx.fillText('Şerit Kaçışı', W / 2, H / 2 - 40);
+        ctx.font = '20px Arial';
+        ctx.fillText('Başlamak için butona bas', W / 2, H / 2 + 8);
+      }
+
+      if (game.over) {
+        ctx.fillStyle = 'rgba(0,0,0,0.55)';
+        ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
+        ctx.font = 'bold 34px Arial';
+        ctx.fillText('Oyun Bitti', W / 2, H / 2 - 60);
+        ctx.font = '22px Arial';
+        ctx.fillText('Skor: ' + Math.floor(game.score), W / 2, H / 2 - 14);
+        ctx.fillText('Yakın Geçiş: ' + game.nearMiss, W / 2, H / 2 + 22);
+        ctx.font = '18px Arial';
+        ctx.fillText('Yeniden başlat ve bir kez daha dene', W / 2, H / 2 + 66);
+      }
+
+      if (game.lastNearMissFrame > 0 && game.frame - game.lastNearMissFrame < 28) {
+        const alpha = 1 - (game.frame - game.lastNearMissFrame) / 28;
+        ctx.globalAlpha = alpha;
+        ctx.fillStyle = '#facc15';
+        ctx.font = 'bold 30px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('+25 Yakın Geçiş!', W / 2, 110);
+        ctx.globalAlpha = 1;
+      }
+
+      if (game.flash > 0) {
+        ctx.fillStyle = `rgba(255,255,255,${game.flash / 30})`;
+        ctx.fillRect(0, 0, W, H);
+        game.flash--;
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      ctx.fillStyle = '#0f172a';
+      ctx.fillRect(0, 0, W, H);
+      drawRoad();
+
+      for (const enemy of game.enemies) {
+        drawCar(enemy.x, enemy.y, enemy.w, enemy.h, enemy.color, false);
+      }
+
+      drawCar(game.player.x, game.player.y, game.player.w, game.player.h, game.player.color, true);
+      drawParticles();
+      drawOverlay();
+    }
+
+    function loop() {
+      update();
+      draw();
+      requestAnimationFrame(loop);
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'a') {
+        movePlayerToLane(game.player.lane - 1);
+      }
+      if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'd') {
+        movePlayerToLane(game.player.lane + 1);
+      }
+      if (e.key === ' ' && !game.running) {
+        game.running = true;
+        game.over = false;
+      }
+    });
+
+    let touchStartX = null;
+
+    canvas.addEventListener('pointerdown', (e) => {
+      touchStartX = e.clientX;
+    });
+
+    canvas.addEventListener('pointermove', (e) => {
+      if (touchStartX === null || !game.running) return;
+      const diff = e.clientX - touchStartX;
+      if (diff > 35) {
+        movePlayerToLane(game.player.lane + 1);
+        touchStartX = e.clientX;
+      } else if (diff < -35) {
+        movePlayerToLane(game.player.lane - 1);
+        touchStartX = e.clientX;
+      }
+    });
+
+    canvas.addEventListener('pointerup', () => {
+      touchStartX = null;
+    });
+
+    startBtn.addEventListener('click', () => {
+      if (game.over) resetGame();
+      game.running = true;
+      game.over = false;
+    });
+
+    restartBtn.addEventListener('click', () => {
+      resetGame();
+      game.running = true;
+      game.over = false;
+    });
+
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('load', resizeCanvas);
+
+    resetGame();
+    resizeCanvas();
+    loop();
+  </script>
+</body>
+</html>

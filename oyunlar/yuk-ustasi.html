@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yük Ustası - Katovia</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    :root {
+      --bg1: #0b1324;
+      --bg2: #111c33;
+      --panel: rgba(255,255,255,0.07);
+      --panel-border: rgba(255,255,255,0.12);
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.76);
+      --blue: #2563eb;
+      --blue-hover: #3b82f6;
+      --green: #16a34a;
+      --green-hover: #22c55e;
+      --orange: #f59e0b;
+      --topbar-h: 74px;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    body { display: flex; flex-direction: column; }
+
+    .topbar {
+      height: var(--topbar-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      background: rgba(2, 6, 23, 0.94);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      flex-shrink: 0;
+    }
+
+    .back-link {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 10px 15px;
+      border-radius: 999px;
+      transition: 0.18s ease;
+    }
+
+    .back-link:hover { background: rgba(255,255,255,0.14); }
+
+    .brand { font-size: 18px; font-weight: bold; letter-spacing: 0.3px; }
+
+    .page {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 10px 12px 14px;
+      gap: 10px;
+    }
+
+    .header-area {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .title-box h1 { margin: 0; font-size: 30px; line-height: 1.1; }
+    .title-box p { margin: 6px 0 0 0; color: var(--muted); font-size: 15px; }
+
+    .hud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .pill {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .game-layout {
+      flex: 1;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 290px minmax(520px, 1fr) 310px;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 22px;
+      padding: 16px;
+      backdrop-filter: blur(4px);
+      min-height: 0;
+    }
+
+    .left-panel,
+    .right-panel { display: flex; flex-direction: column; gap: 14px; }
+
+    .section-title { margin: 0; font-size: 18px; font-weight: bold; }
+    .sub { color: var(--muted); font-size: 14px; line-height: 1.5; margin: 0; }
+
+    .material-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      font-size: 14px;
+      width: fit-content;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .action-group { display: flex; flex-direction: column; gap: 10px; }
+
+    button {
+      border: 0;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      transition: 0.18s ease;
+      width: 100%;
+    }
+
+    .btn-blue { background: var(--blue); }
+    .btn-blue:hover { background: var(--blue-hover); }
+    .btn-green { background: var(--green); }
+    .btn-green:hover { background: var(--green-hover); }
+    .btn-orange { background: var(--orange); }
+    .btn-orange:hover { filter: brightness(1.05); }
+
+    .hint-box, .result-box, .summary-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .hint-box p, .result-box p, .summary-box p {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 14px;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .result-title, .summary-title { margin: 0 0 8px 0; font-size: 16px; font-weight: bold; }
+
+    .canvas-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      background: linear-gradient(180deg, #7dc4ff 0%, #8fd4ff 56%, #98d068 56%, #79b84a 100%);
+      border-radius: 20px;
+      border: 3px solid rgba(255,255,255,0.14);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 14px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat-row:last-child { border-bottom: 0; }
+
+    .small-note { font-size: 13px; color: rgba(255,255,255,0.68); line-height: 1.5; }
+
+    @media (max-width: 1180px) {
+      html, body { overflow: auto; }
+      .game-layout { grid-template-columns: 1fr; }
+      .canvas-panel { min-height: 420px; }
+    }
+
+    @media (max-width: 760px) {
+      :root { --topbar-h: 68px; }
+      .topbar { padding: 0 14px; }
+      .back-link { font-size: 13px; padding: 8px 12px; }
+      .brand { font-size: 16px; }
+      .title-box h1 { font-size: 24px; }
+      .title-box p { font-size: 14px; }
+      .pill { font-size: 13px; padding: 8px 12px; }
+      .panel { padding: 14px; }
+      .canvas-panel { min-height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a class="back-link" href="/araba-oyunlari/">← Araba Oyunlarına Dön</a>
+    <div class="brand">Katovia</div>
+  </div>
+
+  <div class="page">
+    <div class="header-area">
+      <div class="title-box">
+        <h1>Yük Ustası</h1>
+        <p>Kum, çakıl ve su yükle. Dozeri hizala, kepçeyi ayarla, isabetli yük bırak ve doğru anda gönder.</p>
+      </div>
+
+      <div class="hud">
+        <div class="pill">Bölüm: <span id="stageLabel">1 / 3</span></div>
+        <div class="pill">Kazanç: <span id="totalMoney">0 ₺</span></div>
+        <div class="pill">En İyi: <span id="bestMoney">0 ₺</span></div>
+      </div>
+    </div>
+
+    <div class="game-layout">
+      <div class="panel left-panel">
+        <div>
+          <h2 class="section-title">Yükleme Kontrolü</h2>
+          <p class="sub" id="stageDesc">1. bölüm: Kum. Dozeri kamyona yaklaştır, kepçeyi ayarla ve doğru yere dök.</p>
+        </div>
+
+        <div class="material-badge">
+          <span class="dot" id="materialDot" style="background:#d6b36a;"></span>
+          <strong id="materialName">Kum</strong>
+        </div>
+
+        <div class="action-group">
+          <button id="loadBtn" class="btn-blue">Yük Bırak</button>
+          <button id="sendBtn" class="btn-green">Gönder</button>
+          <button id="restartBtn" class="btn-orange">Baştan Başla</button>
+        </div>
+
+        <div class="hint-box">
+          <p id="hintText">Sadece doldurmak yetmez. Yakınlık ve yükseklik de önemli. İsabet kötü olursa malzemenin bir kısmı yere gider.</p>
+        </div>
+
+        <div class="small-note" id="controlNote">
+          ← → dozeri hareket ettir. ↑ ↓ kepçe yüksekliğini ayarla. Space ile bırak. Enter ile gönder.
+        </div>
+      </div>
+
+      <div class="panel canvas-panel">
+        <canvas id="game" width="960" height="540"></canvas>
+      </div>
+
+      <div class="panel right-panel">
+        <div class="result-box">
+          <h3 class="result-title">Sonuç</h3>
+          <p id="resultText">Henüz sevkiyat yapılmadı. Dozeri hizala, doğru yere dök ve sonra gönder.</p>
+        </div>
+
+        <div class="summary-box">
+          <h3 class="summary-title">İş Özeti</h3>
+          <div class="stat-row"><span>Hedef Yük</span><strong id="targetStat">1000 kg</strong></div>
+          <div class="stat-row"><span>Kalan Stok</span><strong id="stockStat">1350 kg</strong></div>
+          <div class="stat-row"><span>Gönderilen</span><strong id="actualStat">-</strong></div>
+          <div class="stat-row"><span>Fark</span><strong id="diffStat">-</strong></div>
+          <div class="stat-row"><span>Bu Bölüm</span><strong id="earnedStat">-</strong></div>
+          <div class="stat-row"><span>Toplam</span><strong id="totalStat">0 ₺</strong></div>
+        </div>
+
+        <div class="summary-box">
+          <h3 class="summary-title">Bölümler</h3>
+          <div class="stat-row"><span>1. Kum</span><strong id="progress1">Bekliyor</strong></div>
+          <div class="stat-row"><span>2. Çakıl</span><strong id="progress2">Bekliyor</strong></div>
+          <div class="stat-row"><span>3. Su</span><strong id="progress3">Bekliyor</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+
+    const stageLabelEl = document.getElementById('stageLabel');
+    const totalMoneyEl = document.getElementById('totalMoney');
+    const bestMoneyEl = document.getElementById('bestMoney');
+    const stageDescEl = document.getElementById('stageDesc');
+    const materialNameEl = document.getElementById('materialName');
+    const materialDotEl = document.getElementById('materialDot');
+    const hintTextEl = document.getElementById('hintText');
+    const controlNoteEl = document.getElementById('controlNote');
+    const resultTextEl = document.getElementById('resultText');
+    const targetStatEl = document.getElementById('targetStat');
+    const stockStatEl = document.getElementById('stockStat');
+    const actualStatEl = document.getElementById('actualStat');
+    const diffStatEl = document.getElementById('diffStat');
+    const earnedStatEl = document.getElementById('earnedStat');
+    const totalStatEl = document.getElementById('totalStat');
+    const loadBtn = document.getElementById('loadBtn');
+    const sendBtn = document.getElementById('sendBtn');
+    const restartBtn = document.getElementById('restartBtn');
+    const progress1El = document.getElementById('progress1');
+    const progress2El = document.getElementById('progress2');
+    const progress3El = document.getElementById('progress3');
+
+    const W = canvas.width;
+    const H = canvas.height;
+
+    const stages = [
+      {
+        id: 'sand',
+        label: 'Kum',
+        color: '#d6b36a',
+        target: 1000,
+        stock: 1350,
+        unit: 'kg',
+        pricePerUnit: 1.25,
+        tolerance: 120,
+        desc: '1. bölüm: Kum. Dozeri kamyona yaklaştır, kepçeyi ayarla ve doğru yere dök.',
+        hint: 'Kum affedicidir ama yanlış hizayla dökersen yarısı yere saçılır. Patron bunu görür.',
+        controlNote: '← → yaklaş. ↑ ↓ ile kepçe yüksekliği. Space ile kumu bırak. Enter ile gönder.',
+        scoopAmount: [90, 125],
+        liquid: false
+      },
+      {
+        id: 'gravel',
+        label: 'Çakıl',
+        color: '#9da3af',
+        target: 1200,
+        stock: 1600,
+        unit: 'kg',
+        pricePerUnit: 1.45,
+        tolerance: 100,
+        desc: '2. bölüm: Çakıl. Düşüş daha serttir. Biraz şaşarsa kamyon yerine yere sekebilir.',
+        hint: 'Çakıl daha inatçıdır. Hem mesafe hem yükseklik daha hassas. Yamuk bırakırsan dağıtır.',
+        controlNote: 'Kumla aynı kontroller. Ama çakılda iyi hizalama daha önemli.',
+        scoopAmount: [95, 130],
+        liquid: false
+      },
+      {
+        id: 'water',
+        label: 'Su',
+        color: '#5bc0ff',
+        target: 900,
+        stock: 1200,
+        unit: 'lt',
+        pricePerUnit: 1.8,
+        tolerance: 80,
+        desc: '3. bölüm: Su. Boruyu kasa üstüne getir, vanayı aç ve taşırmadan doldur.',
+        hint: 'Suda hem isabet hem taşırken dökülme var. Çok özgüven bazen ıslak bir pişmanlık getirir.',
+        controlNote: '← → yaklaş. ↑ ↓ boru yüksekliği. Space basılı tutarak akıt. Enter ile gönder.',
+        scoopAmount: [5.0, 7.8],
+        liquid: true
+      }
+    ];
+
+    let bestMoney = Number(localStorage.getItem('yukUstasiBest') || 0);
+    bestMoneyEl.textContent = money(bestMoney);
+
+    let game;
+
+    function money(v) { return `${Math.round(v)} ₺`; }
+    function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
+    function rand(min, max) { return Math.random() * (max - min) + min; }
+
+    function resetGame() {
+      game = {
+        stageIndex: 0,
+        totalMoney: 0,
+        doneStages: [],
+        over: false,
+        keys: { left: false, right: false, up: false, down: false, space: false },
+        current: createStageState(0)
+      };
+      applyStageToUi();
+      updateHud();
+      updateProgress();
+      clearResultPanel();
+    }
+
+    function createStageState(index) {
+      const cfg = stages[index];
+      return {
+        cfg,
+        remainingStock: cfg.stock,
+        visibleFill: 0,
+        realLoad: 0,
+        sent: false,
+        waterLossPercent: 0,
+        particles: [],
+        misses: [],
+        truckShake: 0,
+        truckOffsetX: 0,
+        movingTruck: false,
+        moveProgress: 0,
+        earned: 0,
+        displayedAmount: '-',
+        loaderX: 170,
+        armY: 195,
+        pourCooldown: 0,
+        pipeFlowOn: false,
+        messageFlash: '',
+        flashTimer: 0
+      };
+    }
+
+    function applyStageToUi() {
+      const c = game.current.cfg;
+      stageLabelEl.textContent = `${game.stageIndex + 1} / ${stages.length}`;
+      stageDescEl.textContent = c.desc;
+      materialNameEl.textContent = c.label;
+      materialDotEl.style.background = c.color;
+      hintTextEl.textContent = c.hint;
+      controlNoteEl.textContent = c.controlNote;
+      targetStatEl.textContent = `${c.target} ${c.unit}`;
+      stockStatEl.textContent = `${Math.round(game.current.remainingStock)} ${c.unit}`;
+      loadBtn.textContent = c.liquid ? 'Vanayı Aç / Kapat' : 'Yük Bırak';
+    }
+
+    function updateHud() {
+      totalMoneyEl.textContent = money(game.totalMoney);
+      if (game && game.current) {
+        stockStatEl.textContent = `${Math.max(0, Math.round(game.current.remainingStock))} ${game.current.cfg.unit}`;
+      }
+      bestMoneyEl.textContent = money(bestMoney);
+      totalStatEl.textContent = money(game.totalMoney);
+    }
+
+    function updateProgress() {
+      [progress1El, progress2El, progress3El].forEach((el, i) => {
+        if (i < game.doneStages.length) {
+          el.textContent = `${Math.round(game.doneStages[i].earned)} ₺`;
+        } else if (i === game.stageIndex && !game.over) {
+          el.textContent = 'Aktif';
+        } else {
+          el.textContent = 'Bekliyor';
+        }
+      });
+    }
+
+    function clearResultPanel() {
+      resultTextEl.textContent = 'Henüz sevkiyat yapılmadı. Dozeri hizala, doğru yere dök ve sonra gönder.';
+      actualStatEl.textContent = '-';
+      diffStatEl.textContent = '-';
+      earnedStatEl.textContent = '-';
+    }
+
+    function loaderTip() {
+      return { x: game.current.loaderX + 168, y: game.current.armY };
+    }
+
+    function truckCargoRect() {
+      const moveX = game.current.movingTruck ? game.current.moveProgress * 260 : 0;
+      const x = 490 + game.current.truckOffsetX + moveX;
+      const y = 232;
+      return { x: x + 25, y: y - 58, w: 182, h: 72 };
+    }
+
+    function alignmentQuality() {
+      const tip = loaderTip();
+      const cargo = truckCargoRect();
+      const targetX = cargo.x + cargo.w * 0.5;
+      const targetY = cargo.y + 12;
+      const dx = Math.abs(tip.x - targetX);
+      const dy = Math.abs(tip.y - targetY);
+      const xScore = clamp(1 - dx / 150, 0, 1);
+      const yScore = clamp(1 - dy / 90, 0, 1);
+      const score = xScore * 0.62 + yScore * 0.38;
+      return clamp(score, 0, 1);
+    }
+
+    function doDumpAction() {
+      if (game.current.sent || game.over) return;
+      const c = game.current.cfg;
+      if (c.liquid) {
+        game.current.pipeFlowOn = !game.current.pipeFlowOn;
+        game.current.messageFlash = game.current.pipeFlowOn ? 'Vana açıldı' : 'Vana kapandı';
+        game.current.flashTimer = 36;
+        return;
+      }
+
+      if (game.current.pourCooldown > 0) return;
+      const quality = alignmentQuality();
+      if (game.current.remainingStock <= 0) {
+        flashMessage('Stok bitti');
+        return;
+      }
+      const rawAmount = rand(c.scoopAmount[0], c.scoopAmount[1]);
+      const amount = Math.min(rawAmount, game.current.remainingStock);
+      const deliveredRatio = quality < 0.18 ? 0 : quality < 0.45 ? rand(0.20, 0.50) : quality < 0.72 ? rand(0.55, 0.82) : rand(0.88, 1.0);
+      const delivered = amount * deliveredRatio;
+      const visible = delivered * (c.id === 'gravel' ? rand(0.84, 0.94) : rand(0.95, 1.02));
+      const wasted = Math.max(0, amount - delivered);
+      game.current.remainingStock -= amount;
+
+      game.current.realLoad += delivered;
+      game.current.visibleFill += visible;
+      game.current.truckShake = delivered > 0 ? 8 : 2;
+      game.current.pourCooldown = 18;
+
+      spawnDumpParticles(c.id, c.color, delivered, wasted);
+
+      if (game.current.remainingStock <= 0) {
+        flashMessage('Malzeme bitti');
+      } else if (deliveredRatio < 0.15) {
+        flashMessage('Iskaladın');
+      } else if (deliveredRatio < 0.5) {
+        flashMessage('Yarım isabet');
+      } else {
+        flashMessage('Güzel döküş');
+      }
+    }
+
+    function flashMessage(text) {
+      game.current.messageFlash = text;
+      game.current.flashTimer = 40;
+    }
+
+    function spawnDumpParticles(kind, color, delivered, wasted) {
+      const tip = loaderTip();
+      const cargo = truckCargoRect();
+      const hitX = clamp(tip.x + rand(-20, 20), cargo.x + 8, cargo.x + cargo.w - 8);
+      const hitY = cargo.y + rand(4, 18);
+      const wasteDir = tip.x < cargo.x ? -1 : (tip.x > cargo.x + cargo.w ? 1 : (Math.random() < 0.5 ? -1 : 1));
+
+      const hitCount = Math.max(4, Math.round(delivered / 10));
+      const missCount = Math.max(3, Math.round(wasted / 12));
+
+      for (let i = 0; i < hitCount; i++) {
+        game.current.particles.push({
+          x: tip.x + rand(-8, 8),
+          y: tip.y + rand(-4, 4),
+          targetX: hitX + rand(-28, 28),
+          targetY: hitY + rand(-8, 8),
+          vx: rand(3.0, 5.4),
+          vy: rand(0.5, 2.3),
+          size: kind === 'gravel' ? rand(4, 8) : rand(3, 6),
+          color,
+          gravity: kind === 'gravel' ? 0.22 : 0.16,
+          life: 70,
+          kind,
+          toCargo: true
+        });
+      }
+
+      for (let i = 0; i < missCount; i++) {
+        game.current.misses.push({
+          x: tip.x + rand(-10, 10),
+          y: tip.y + rand(-5, 5),
+          vx: rand(2.0, 4.6) * wasteDir,
+          vy: rand(0.5, 2.2),
+          size: kind === 'gravel' ? rand(4, 7) : rand(3, 6),
+          color,
+          gravity: kind === 'gravel' ? 0.28 : 0.18,
+          life: 76,
+          kind
+        });
+      }
+    }
+
+    function spawnWaterFlow() {
+      const c = game.current.cfg;
+      const quality = alignmentQuality();
+      if (game.current.remainingStock <= 0) {
+        game.current.pipeFlowOn = false;
+        flashMessage('Su bitti');
+        return;
+      }
+      const rawBase = rand(c.scoopAmount[0], c.scoopAmount[1]);
+      const base = Math.min(rawBase, game.current.remainingStock);
+      const deliveredRatio = quality < 0.20 ? 0.05 : quality < 0.45 ? rand(0.18, 0.45) : quality < 0.75 ? rand(0.55, 0.82) : rand(0.88, 1.0);
+      const delivered = base * deliveredRatio;
+      const visible = delivered * rand(0.96, 1.03);
+      const wasted = Math.max(0, base - delivered);
+      game.current.remainingStock -= base;
+
+      game.current.realLoad += delivered;
+      game.current.visibleFill += visible;
+      game.current.truckShake = delivered > 0 ? 4 : 1.5;
+
+      const tip = loaderTip();
+      const cargo = truckCargoRect();
+      for (let i = 0; i < 6; i++) {
+        game.current.particles.push({
+          x: tip.x + rand(-4, 4),
+          y: tip.y + rand(-2, 2),
+          vx: rand(2.4, 4.6),
+          vy: rand(0.2, 1.2),
+          size: rand(4, 7),
+          color: '#66d9ff',
+          gravity: 0.12,
+          life: 55,
+          kind: 'water',
+          toCargo: true,
+          targetX: clamp(tip.x + rand(-26, 26), cargo.x + 6, cargo.x + cargo.w - 6),
+          targetY: cargo.y + rand(6, 16)
+        });
+      }
+
+      for (let i = 0; i < Math.max(1, Math.round(wasted / 3)); i++) {
+        game.current.misses.push({
+          x: tip.x + rand(-3, 3),
+          y: tip.y + rand(-1, 1),
+          vx: rand(-1.6, 1.6),
+          vy: rand(0.8, 2.0),
+          size: rand(3, 5),
+          color: '#66d9ff',
+          gravity: 0.12,
+          life: 42,
+          kind: 'water'
+        });
+      }
+    }
+
+    function finalizeStage() {
+      if (game.current.sent || game.over) return;
+      game.current.pipeFlowOn = false;
+      const c = game.current.cfg;
+      game.current.sent = true;
+      game.current.movingTruck = true;
+      game.current.moveProgress = 0;
+
+      let delivered = game.current.realLoad;
+      let resultLine = '';
+
+      if (c.id === 'water') {
+        let lossPercent = 0;
+        if (delivered > c.target * 1.05) lossPercent = rand(0.18, 0.34);
+        else if (delivered > c.target * 0.9) lossPercent = rand(0.08, 0.18);
+        else lossPercent = rand(0.03, 0.10);
+        game.current.waterLossPercent = lossPercent;
+        delivered *= (1 - lossPercent);
+        resultLine = `Yolda suyun bir kısmı döküldü. Kayıp: %${Math.round(lossPercent * 100)}.`;
+      }
+
+      const diff = Math.round(delivered - c.target);
+      const absDiff = Math.abs(diff);
+      const baseMoney = delivered * c.pricePerUnit;
+      const penalty = absDiff * (c.id === 'water' ? 1.15 : 0.95);
+      let earned = Math.max(0, Math.round(baseMoney - penalty));
+
+      if (absDiff <= c.tolerance * 0.35) {
+        earned += 220;
+        resultLine = resultLine ? `${resultLine} Tam kıvamında iş çıkardın.` : 'Tam kıvamında yükledin. Usta senden memnun.';
+      } else if (diff < -c.tolerance) {
+        resultLine = resultLine ? `${resultLine} Biraz eksik kaldı.` : 'Kamyon eksik kalmış. Patron kaşını kaldırdı.';
+      } else if (diff > c.tolerance) {
+        resultLine = resultLine ? `${resultLine} Bir tık fazla bastın.` : 'Biraz fazla yükledin. Kamyon içinden homurdandı.';
+      } else if (!resultLine) {
+        resultLine = 'İdare eder. Ne rezil oldun ne efsane.';
+      }
+
+      game.current.earned = earned;
+      game.current.displayedAmount = `${Math.round(delivered)} ${c.unit}`;
+      game.totalMoney += earned;
+      game.doneStages.push({ earned, delivered, diff, id: c.id });
+
+      if (game.totalMoney > bestMoney) {
+        bestMoney = game.totalMoney;
+        localStorage.setItem('yukUstasiBest', String(bestMoney));
+      }
+
+      resultTextEl.textContent = resultLine;
+      actualStatEl.textContent = `${Math.round(delivered)} ${c.unit}`;
+      diffStatEl.textContent = diff === 0 ? 'Tam hedef' : `${diff > 0 ? '+' : ''}${diff} ${c.unit}`;
+      earnedStatEl.textContent = money(earned);
+      updateHud();
+      updateProgress();
+
+      setTimeout(() => {
+        if (game.stageIndex < stages.length - 1) {
+          game.stageIndex += 1;
+          game.current = createStageState(game.stageIndex);
+          applyStageToUi();
+          updateProgress();
+          clearResultPanel();
+        } else {
+          game.over = true;
+          resultTextEl.textContent = `Gün bitti. Toplam kazanç: ${money(game.totalMoney)}. İstersen yeniden başla ve bu kez patronu daha da mutlu et.`;
+          stageDescEl.textContent = 'Tüm bölümler tamamlandı. Baştan başla butonuyla yeniden oynayabilirsin.';
+          hintTextEl.textContent = 'Kum, çakıl ve su bitti. Bugünlük şantiye kapandı.';
+          controlNoteEl.textContent = 'Yeni turda hizalamayı daha iyi yap ve kazancı yükselt.';
+          updateProgress();
+        }
+      }, 1700);
+    }
+
+    function update() {
+      const s = game.current;
+      if (!game.over && !s.sent) {
+        if (game.keys.left) s.loaderX -= 3.2;
+        if (game.keys.right) s.loaderX += 3.2;
+        if (game.keys.up) s.armY -= 2.7;
+        if (game.keys.down) s.armY += 2.7;
+
+        s.loaderX = clamp(s.loaderX, 110, 420);
+        s.armY = clamp(s.armY, 132, 240);
+
+        if (s.cfg.liquid && s.pipeFlowOn) {
+          spawnWaterFlow();
+        }
+      }
+
+      if (s.pourCooldown > 0) s.pourCooldown -= 1;
+
+      if (s.truckShake > 0) {
+        s.truckShake -= 0.35;
+        s.truckOffsetX = Math.sin(performance.now() * 0.04) * s.truckShake;
+      } else {
+        s.truckOffsetX = 0;
+      }
+
+      if (s.movingTruck) {
+        s.moveProgress += 0.02;
+        if (s.moveProgress >= 1) s.movingTruck = false;
+      }
+
+      if (s.flashTimer > 0) s.flashTimer -= 1;
+      updateParticles();
+    }
+
+    function updateParticles() {
+      for (const p of game.current.particles) {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += p.gravity;
+        p.life -= 1;
+        if (p.kind === 'water') p.size *= 0.992;
+      }
+      game.current.particles = game.current.particles.filter(p => p.life > 0 && p.y < H - 20 && p.size > 1.3);
+
+      for (const p of game.current.misses) {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += p.gravity;
+        p.life -= 1;
+      }
+      game.current.misses = game.current.misses.filter(p => p.life > 0 && p.y < H - 10);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      drawBackground();
+      drawGround();
+      drawLoaderVehicle();
+      drawTruck();
+      drawParticles();
+      drawMisses();
+      drawOverlayInfo();
+      if (game.current.flashTimer > 0) drawFlashMessage();
+      if (game.over) drawGameOverBadge();
+    }
+
+    function drawBackground() {
+      const sky = ctx.createLinearGradient(0, 0, 0, H);
+      sky.addColorStop(0, '#78bffc');
+      sky.addColorStop(0.55, '#9bd6ff');
+      sky.addColorStop(0.55, '#9aca69');
+      sky.addColorStop(1, '#79b84a');
+      ctx.fillStyle = sky;
+      ctx.fillRect(0, 0, W, H);
+
+      ctx.fillStyle = 'rgba(255, 236, 120, 0.85)';
+      ctx.beginPath();
+      ctx.arc(120, 92, 36, 0, Math.PI * 2);
+      ctx.fill();
+      drawCloud(180, 90, 1.0);
+      drawCloud(760, 70, 0.85);
+      drawCloud(610, 120, 0.7);
+    }
+
+    function drawCloud(x, y, scale) {
+      ctx.fillStyle = 'rgba(255,255,255,0.72)';
+      ctx.beginPath();
+      ctx.arc(x, y, 24 * scale, 0, Math.PI * 2);
+      ctx.arc(x + 28 * scale, y - 8 * scale, 30 * scale, 0, Math.PI * 2);
+      ctx.arc(x + 58 * scale, y, 24 * scale, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawGround() {
+      ctx.fillStyle = '#92c85f';
+      ctx.fillRect(0, H - 120, W, 120);
+      ctx.fillStyle = '#a37137';
+      ctx.fillRect(0, H - 95, W, 95);
+      ctx.fillStyle = '#c78d49';
+      for (let i = 0; i < W; i += 36) {
+        ctx.fillRect(i, H - 78 + (i % 72 === 0 ? 0 : 10), 20, 8);
+      }
+    }
+
+    function drawLoaderVehicle() {
+      const s = game.current;
+      const x = s.loaderX;
+      const bodyY = 300;
+      const armBaseY = 248;
+      const tip = loaderTip();
+
+      ctx.save();
+
+      // body
+      ctx.fillStyle = '#f59e0b';
+      ctx.fillRect(x, bodyY, 112, 40);
+      ctx.fillRect(x + 18, bodyY - 40, 48, 44);
+      ctx.fillRect(x + 12, bodyY - 10, 28, 26);
+
+      // cabin
+      ctx.fillStyle = '#1f2937';
+      ctx.fillRect(x + 26, bodyY - 32, 30, 24);
+      ctx.fillStyle = '#bfe4ff';
+      ctx.fillRect(x + 30, bodyY - 28, 22, 16);
+
+      // arm joints
+      const joint1X = x + 86;
+      const joint1Y = armBaseY;
+      const joint2X = x + 144;
+      const joint2Y = s.armY + 18;
+      const bucketBaseX = x + 178;
+      const bucketBaseY = s.armY + 8;
+
+      drawArmSegment(joint1X, joint1Y, joint2X, joint2Y, 16, '#eab308');
+      drawArmSegment(joint2X, joint2Y, bucketBaseX, bucketBaseY, 14, '#f59e0b');
+
+      // bucket
+      ctx.fillStyle = '#d1a857';
+      ctx.beginPath();
+      ctx.moveTo(bucketBaseX - 8, bucketBaseY - 2);
+      ctx.lineTo(bucketBaseX + 34, bucketBaseY - 2);
+      ctx.lineTo(bucketBaseX + 25, bucketBaseY + 28);
+      ctx.lineTo(bucketBaseX - 2, bucketBaseY + 28);
+      ctx.closePath();
+      ctx.fill();
+
+      // joints
+      ctx.fillStyle = '#374151';
+      circle(joint1X, joint1Y, 7);
+      circle(joint2X, joint2Y, 6);
+
+      // wheels
+      drawWheel(x + 28, bodyY + 48, 20);
+      drawWheel(x + 92, bodyY + 48, 20);
+
+      ctx.restore();
+    }
+
+    function drawArmSegment(x1, y1, x2, y2, width, color) {
+      const dx = x2 - x1;
+      const dy = y2 - y1;
+      const len = Math.hypot(dx, dy);
+      const angle = Math.atan2(dy, dx);
+      ctx.save();
+      ctx.translate(x1, y1);
+      ctx.rotate(angle);
+      ctx.fillStyle = color;
+      ctx.fillRect(0, -width / 2, len, width);
+      ctx.restore();
+    }
+
+    function drawTruck() {
+      const c = game.current.cfg;
+      const moveX = game.current.movingTruck ? game.current.moveProgress * 260 : 0;
+      const x = 490 + game.current.truckOffsetX + moveX;
+      const y = 286;
+      const bodyW = 320;
+      const bodyH = 88;
+      const cargoX = x + 25;
+      const cargoY = y - 58;
+      const cargoW = 182;
+      const cargoH = 72;
+
+      // shadow
+      ctx.fillStyle = 'rgba(0,0,0,0.18)';
+      ctx.fillRect(x + 20, y + 84, bodyW - 10, 16);
+
+      // cargo box
+      ctx.fillStyle = '#5b6778';
+      ctx.fillRect(cargoX, cargoY, cargoW, cargoH);
+      ctx.strokeStyle = 'rgba(255,255,255,0.28)';
+      ctx.lineWidth = 3;
+      ctx.strokeRect(cargoX, cargoY, cargoW, cargoH);
+
+      const targetCapacity = c.target * 1.25;
+      const visibleRatio = clamp(game.current.visibleFill / targetCapacity, 0, 1.12);
+      drawCargo(c.id, cargoX, cargoY, cargoW, cargoH, visibleRatio, c.color);
+
+      // body
+      ctx.fillStyle = '#ef2020';
+      ctx.fillRect(x, y, bodyW, bodyH);
+      ctx.fillRect(x + 214, y - 46, 84, 54);
+      ctx.fillStyle = '#cbd5e1';
+      ctx.fillRect(x + 236, y - 30, 44, 24);
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(x + 288, y + 16, 14, 12);
+
+      drawWheel(x + 70, y + 96, 24);
+      drawWheel(x + 176, y + 96, 24);
+      drawWheel(x + 284, y + 96, 24);
+
+      ctx.fillStyle = 'rgba(255,255,255,0.12)';
+      ctx.fillRect(cargoX, cargoY, cargoW, cargoH * 0.14);
+    }
+
+    function drawCargo(type, x, y, w, h, ratio, color) {
+      if (ratio <= 0) return;
+      const fillH = Math.min(h * ratio, h * 1.08);
+      const topY = y + h - fillH;
+
+      if (type === 'sand') {
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(x + 2, y + h - 4);
+        ctx.lineTo(x + 2, topY + 16);
+        for (let i = 0; i <= 10; i++) {
+          const px = x + (w / 10) * i;
+          const py = topY + Math.sin(i * 0.8 + performance.now() * 0.001) * 4;
+          ctx.lineTo(px, py);
+        }
+        ctx.lineTo(x + w - 2, y + h - 4);
+        ctx.closePath();
+        ctx.fill();
+      } else if (type === 'gravel') {
+        for (let row = 0; row < 7; row++) {
+          for (let col = 0; col < 13; col++) {
+            const stoneX = x + 10 + col * 14 + (row % 2 ? 4 : 0);
+            const stoneY = y + h - 12 - row * 10;
+            if (stoneY > topY + 5) {
+              ctx.fillStyle = row % 2 === 0 ? '#a8afb9' : '#8d949e';
+              circle(stoneX, stoneY, 5);
+            }
+          }
+        }
+      } else if (type === 'water') {
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(x, y + h);
+        ctx.lineTo(x, topY + 8);
+        for (let i = 0; i <= 12; i++) {
+          const px = x + (w / 12) * i;
+          const py = topY + Math.sin(i * 0.75 + performance.now() * 0.008) * 4;
+          ctx.lineTo(px, py);
+        }
+        ctx.lineTo(x + w, y + h);
+        ctx.closePath();
+        ctx.fill();
+        ctx.fillStyle = 'rgba(255,255,255,0.28)';
+        ctx.fillRect(x + 12, topY + 12, w - 24, 6);
+      }
+    }
+
+    function drawParticles() {
+      for (const p of game.current.particles) {
+        ctx.globalAlpha = Math.max(0, p.life / 70);
+        ctx.fillStyle = p.color;
+        if (p.kind === 'gravel') ctx.fillRect(p.x, p.y, p.size, p.size);
+        else circle(p.x, p.y, p.size);
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    function drawMisses() {
+      for (const p of game.current.misses) {
+        ctx.globalAlpha = Math.max(0, p.life / 76);
+        ctx.fillStyle = p.color;
+        if (p.kind === 'gravel') ctx.fillRect(p.x, p.y, p.size, p.size);
+        else circle(p.x, p.y, p.size);
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    function drawOverlayInfo() {
+      const c = game.current.cfg;
+      const quality = alignmentQuality();
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.66)';
+      ctx.fillRect(18, 16, 320, 124);
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 22px Arial';
+      ctx.fillText(c.label + ' Bölümü', 34, 45);
+      ctx.font = '16px Arial';
+      ctx.fillText('Hedef: ' + c.target + ' ' + c.unit, 34, 74);
+      ctx.fillText('Kalan stok: ' + Math.max(0, Math.round(game.current.remainingStock)) + ' ' + c.unit, 34, 100);
+      ctx.fillText('Hizalama: ' + alignmentLabel(quality), 34, 126);
+    }
+
+    function alignmentLabel(q) {
+      if (q > 0.82) return 'Harika';
+      if (q > 0.58) return 'İyi';
+      if (q > 0.32) return 'Riskli';
+      return 'Kötü';
+    }
+
+    function drawFlashMessage() {
+      ctx.globalAlpha = Math.min(1, game.current.flashTimer / 20);
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.78)';
+      ctx.fillRect(W / 2 - 90, 30, 180, 42);
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 20px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText(game.current.messageFlash, W / 2, 58);
+      ctx.textAlign = 'left';
+      ctx.globalAlpha = 1;
+    }
+
+    function drawGameOverBadge() {
+      ctx.fillStyle = 'rgba(0,0,0,0.48)';
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = '#ffffff';
+      ctx.textAlign = 'center';
+      ctx.font = 'bold 42px Arial';
+      ctx.fillText('Mesai Bitti', W / 2, 210);
+      ctx.font = '24px Arial';
+      ctx.fillText('Toplam Kazanç: ' + money(game.totalMoney), W / 2, 255);
+      ctx.font = '18px Arial';
+      ctx.fillText('Baştan Başla ile yeni bir tur at.', W / 2, 292);
+      ctx.textAlign = 'left';
+    }
+
+    function circle(x, y, r) {
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawWheel(x, y, r) {
+      ctx.fillStyle = '#111827';
+      circle(x, y, r);
+      ctx.fillStyle = '#6b7280';
+      circle(x, y, r * 0.45);
+    }
+
+    loadBtn.addEventListener('click', () => {
+      if (game.current.remainingStock <= 0 && !game.current.cfg.liquid) {
+        flashMessage('Stok bitti');
+        return;
+      }
+      if (!game.current.cfg.liquid) doDumpAction();
+      else {
+        if (game.current.sent || game.over) return;
+        game.current.pipeFlowOn = !game.current.pipeFlowOn;
+        flashMessage(game.current.pipeFlowOn ? 'Vana açıldı' : 'Vana kapandı');
+      }
+    });
+
+    sendBtn.addEventListener('click', () => {
+      if (!game.current.sent && !game.over) finalizeStage();
+    });
+
+    restartBtn.addEventListener('click', () => {
+      resetGame();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.code === 'ArrowLeft') { e.preventDefault(); game.keys.left = true; }
+      if (e.code === 'ArrowRight') { e.preventDefault(); game.keys.right = true; }
+      if (e.code === 'ArrowUp') { e.preventDefault(); game.keys.up = true; }
+      if (e.code === 'ArrowDown') { e.preventDefault(); game.keys.down = true; }
+      if (e.code === 'Enter') {
+        e.preventDefault();
+        if (!game.current.sent && !game.over) finalizeStage();
+      }
+      if (e.code === 'Space') {
+        e.preventDefault();
+        if (game.current.cfg.liquid) {
+          if (game.current.remainingStock > 0) game.current.pipeFlowOn = true;
+          else flashMessage('Su bitti');
+        }
+        else doDumpAction();
+      }
+    });
+
+    window.addEventListener('keyup', (e) => {
+      if (e.code === 'ArrowLeft') game.keys.left = false;
+      if (e.code === 'ArrowRight') game.keys.right = false;
+      if (e.code === 'ArrowUp') game.keys.up = false;
+      if (e.code === 'ArrowDown') game.keys.down = false;
+      if (e.code === 'Space' && game.current.cfg.liquid) game.current.pipeFlowOn = false;
+    });
+
+    function loop() {
+      update();
+      draw();
+      requestAnimationFrame(loop);
+    }
+
+    resetGame();
+    updateHud();
+    loop();
+  </script>
+</body>
+</html>

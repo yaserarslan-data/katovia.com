@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Katovia Mock</title>
+  <title>Katovia</title>
   <style>
     :root{
       --bg:#030813;
@@ -29,11 +29,11 @@
     }
     a{color:inherit;text-decoration:none}
     .topbar{
-      height:72px;
+      height:64px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding:0 56px;
+      padding:0 48px;
       background:rgba(2,7,17,.86);
       border-bottom:1px solid var(--line);
       position:sticky;
@@ -41,51 +41,51 @@
       z-index:10;
       backdrop-filter:blur(14px);
     }
-    .brand{display:flex;align-items:center;gap:14px;font-weight:800;font-size:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px}
     .mark{
-      width:34px;height:34px;border-radius:9px;
+      width:32px;height:32px;border-radius:8px;
       background:linear-gradient(135deg,var(--blue),var(--violet));
       display:grid;place-items:center;
       box-shadow:0 0 28px rgba(74,129,255,.42);
       font-weight:900;
     }
-    .nav{display:flex;gap:26px;align-items:center;color:#c6d0e8;font-weight:650;font-size:15px}
-    .nav a{padding:26px 0 21px;border-bottom:3px solid transparent}
+    .nav{display:flex;gap:20px;align-items:center;color:#c6d0e8;font-weight:650;font-size:14px}
+    .nav a{padding:23px 0 18px;border-bottom:3px solid transparent}
     .nav a.active{color:white;border-color:var(--blue)}
     .actions{display:flex;align-items:center;gap:12px}
     .iconBtn,.starBtn{
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
       color:white;
-      height:38px;
+      height:34px;
       border-radius:9px;
       display:grid;
       place-items:center;
     }
-    .iconBtn{width:38px}
-    .starBtn{padding:0 16px;font-weight:700;gap:8px;display:flex}
+    .iconBtn{width:34px}
+    .starBtn{padding:0 14px;font-weight:700;gap:8px;display:flex}
     .hero{
-      min-height:450px;
+      min-height:360px;
       display:grid;
       grid-template-columns:1fr 1.1fr;
       gap:28px;
-      padding:70px 56px 46px;
+      padding:46px 48px 34px;
       position:relative;
       overflow:hidden;
       border-bottom:1px solid rgba(132,166,255,.12);
     }
     .hero h1{
-      font-size:54px;
+      font-size:46px;
       line-height:1.06;
-      margin:0 0 18px;
+      margin:0 0 14px;
       letter-spacing:-.4px;
     }
     .gradientText{background:linear-gradient(90deg,var(--blue),var(--violet));-webkit-background-clip:text;color:transparent}
-    .hero p{max-width:560px;color:#b7c3dc;font-size:18px;line-height:1.55;margin:0 0 26px}
+    .hero p{max-width:540px;color:#b7c3dc;font-size:16px;line-height:1.5;margin:0 0 22px}
     .buttons{display:flex;gap:16px;flex-wrap:wrap}
     .btn{
-      height:52px;
-      padding:0 23px;
+      height:46px;
+      padding:0 20px;
       border-radius:10px;
       border:1px solid var(--line);
       display:flex;
@@ -94,11 +94,13 @@
       font-weight:800;
       cursor:pointer;
       background:rgba(255,255,255,.05);
+      color:white;
     }
     .btn.primary{border:0;background:linear-gradient(135deg,#28a9ff,#9b35ff);box-shadow:0 12px 36px rgba(91,88,255,.35)}
-    .orbWrap{position:relative;min-height:330px;display:grid;place-items:center}
+    .btn:not(.primary){background:rgba(255,255,255,.07);color:#eaf1ff}
+    .orbWrap{position:relative;min-height:280px;display:grid;place-items:center}
     .galaxy{
-      position:absolute;width:520px;height:250px;border-radius:50%;
+      position:absolute;width:440px;height:210px;border-radius:50%;
       background:radial-gradient(circle,rgba(75,160,255,.45),transparent 28%),
                  conic-gradient(from 20deg,transparent,rgba(87,128,255,.55),transparent,rgba(149,59,255,.5),transparent);
       filter:blur(.2px);
@@ -106,10 +108,10 @@
       transform:rotate(-8deg);
     }
     .kCube{
-      width:165px;height:165px;border-radius:30px;
+      width:140px;height:140px;border-radius:26px;
       background:linear-gradient(145deg,#143a92,#10225c 45%,#7e3dff);
       display:grid;place-items:center;
-      font-size:96px;
+      font-size:80px;
       font-weight:950;
       box-shadow:0 0 60px rgba(48,145,255,.75),inset 0 0 30px rgba(255,255,255,.16);
       z-index:2;
@@ -117,17 +119,17 @@
     .floatIcon{
       position:absolute;
       z-index:3;
-      width:58px;height:58px;border-radius:15px;
+      width:50px;height:50px;border-radius:13px;
       display:grid;place-items:center;
       border:1px solid rgba(117,162,255,.24);
       background:rgba(10,24,52,.78);
       box-shadow:0 0 24px rgba(62,129,255,.22);
       color:#b8cbff;
-      font-size:25px;
+      font-size:22px;
     }
     .i1{left:17%;top:22%}.i2{left:25%;bottom:20%}.i3{right:19%;top:18%}.i4{right:14%;bottom:28%}
-    main{padding:28px 56px 42px}
-    .quickGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:-8px}
+    main{padding:24px 48px 42px}
+    .quickGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-8px}
     .quick{
       border:1px solid var(--line);
       background:linear-gradient(180deg,rgba(13,27,58,.82),rgba(7,15,31,.82));
@@ -177,6 +179,13 @@
       place-items:center;
       font-size:42px;
       background:linear-gradient(135deg,rgba(51,151,255,.42),rgba(151,67,255,.25));
+      overflow:hidden;
+    }
+    .cover img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
     .project:nth-child(2) .cover{background:linear-gradient(135deg,#2f6b42,#0c2d61)}
     .project:nth-child(3) .cover{background:linear-gradient(135deg,#1d284c,#3c4169)}
@@ -222,7 +231,23 @@
     .soon h2{margin:0 0 8px}
     .soon p{color:var(--muted);margin:0 0 18px;line-height:1.55}
     .soonList{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .soonItem{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:10px;padding:16px}
+    .soonItem{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:10px;padding:16px;transition:.18s transform,.18s border-color}
+    .appThumb{
+  height:120px;
+  margin:-16px -16px 14px;
+  overflow:hidden;
+  border-radius:10px 10px 0 0;
+  background:rgba(255,255,255,.04);
+}
+
+.appThumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+    .soonItem[data-url]{cursor:pointer}
+    .soonItem[data-url]:hover{transform:translateY(-3px);border-color:rgba(89,159,255,.55)}
     .soonItem b{display:block;margin-bottom:6px}
     .soonItem span{color:var(--muted);font-size:13px}
     footer{
@@ -235,7 +260,7 @@
     }
     footer .brand{font-size:20px}
     .hide{display:none}
-    @media(max-width:1050px){
+    @media(max-width:760px){
       .topbar{padding:0 20px}.nav{display:none}.hero{grid-template-columns:1fr;padding:48px 22px}.hero h1{font-size:42px}
       main{padding:22px}.quickGrid{grid-template-columns:repeat(2,1fr)}.projectGrid{grid-template-columns:repeat(2,1fr)}
       .labPanel{grid-template-columns:1fr}.codeGrid{grid-template-columns:1fr}.soonList{grid-template-columns:1fr}
@@ -326,54 +351,70 @@
     ];
 
     const categories = [
-      { route:"uygulamalar", icon:"▦", title:"Uygulamalar", text:"Günlük işler için kullanışlı mini uygulamalar.", color:"linear-gradient(135deg,#1d72ff,#16316f)" },
-      { route:"laboratuvar", icon:"🛠", title:"Mini Araçlar", text:"İşi hızlıca halleden HTML5 araçları.", color:"linear-gradient(135deg,#2be28d,#124b2f)" },
+      { route:"uygulamalar", icon:"▦", title:"Uygulamalar", text:"Katovia'nın Play Store'daki mobil uygulamaları.", color:"linear-gradient(135deg,#1d72ff,#16316f)" },
+      { route:"laboratuvar", icon:"🛠", title:"Laboratuvar", text:"HTML5 araçlar, mesaj üreticiler ve mini APK prototipleri.", color:"linear-gradient(135deg,#2be28d,#124b2f)" },
       { route:"oyunlar", icon:"🎮", title:"Mini Oyunlar", text:"Saniyeler içinde oynanabilecek gündelik oyunlar.", color:"linear-gradient(135deg,#9b54ff,#44207a)" },
-      { route:"kodlar", icon:"</>", title:"Açık Kod", text:"Kaynak kodu görülebilen açık projeler.", color:"linear-gradient(135deg,#ff8a2b,#5a240b)" },
-      { route:"laboratuvar", icon:"🤖", title:"APK Lab", text:"Deneysel APK’lar ve mobil prototipler.", color:"linear-gradient(135deg,#00d6b0,#06484c)" }
+      { route:"kodlar", icon:"</>", title:"Açık Kod", text:"Demo, kaynak kod ve kısa geliştirme notları.", color:"linear-gradient(135deg,#ff8a2b,#5a240b)" }
     ];
 
     const projects = [
-  {
-    title: "Balonlubum",
-    text: "Kelime ve refleks odaklı galaksi oyunu",
-    icon: "🎈",
-    route: "uygulamalar",
-    url: "https://play.google.com/store/apps/details?id=com.katovia.balonlubum"
-  },
-  {
-    title: "Kare Savaşları",
-    text: "Izgara üzerinde taktik savaşlar",
-    icon: "⚔️",
-    route: "uygulamalar",
-    url: "https://play.google.com/store/apps/details?id=com.katovia.karesavaslari"
-  },
-  {
-    title: "İletişim Analizi",
-    text: "İlişkilerini ve konuşmalarını analiz et",
-    icon: "📊",
-    route: "uygulamalar",
-    url: "https://play.google.com/store/apps/details?id=com.katovia.iletisim_analizi"
-  },
-  {
-    title: "Mental Detox",
-    text: "Odaklan. Nefes al. Yenilen.",
-    icon: "🧘",
-    route: "uygulamalar",
-    url: "https://play.google.com/store/apps/details?id=com.katovia.mental_detox"
-  },
-  {
-    title: "Cuma Mesajı Oluşturucu",
-    text: "Yakında: güzel cuma mesajları oluştur",
-    icon: "💌",
-    route: "laboratuvar"
-  },
-  {
-    title: "Fal Yorumu",
-    text: "Yakında: günlük fal ve rehberlik",
-    icon: "🪙",
-    route: "laboratuvar"
-  }
+      {
+        title: "Balonlubum",
+        text: "Kelime ve refleks odaklı galaksi oyunu",
+        icon: "🎈",
+        image: "assets/apps/balonlubum.jpg",
+        route: "uygulamalar",
+        url: "https://play.google.com/store/apps/details?id=com.katovia.balonlubum"
+      },
+      {
+        title: "Kare Savaşları",
+        text: "Izgara üzerinde taktik savaşlar",
+        icon: "⚔️",
+        image: "assets/apps/kare-savaslari.jpg",
+        route: "uygulamalar",
+        url: "https://play.google.com/store/apps/details?id=com.katovia.karesavaslari"
+      },
+      {
+        title: "İletişim Analizi",
+        text: "İlişkilerini ve konuşmalarını analiz et",
+        icon: "📊",
+        image: "assets/apps/iletisim-analizi.jpg",
+        route: "uygulamalar",
+        url: "https://play.google.com/store/apps/details?id=com.katovia.iletisim_analizi"
+      },
+      {
+        title: "Mental Detox",
+        text: "Odaklan. Nefes al. Yenilen.",
+        icon: "🧘",
+        image: "assets/apps/mental-detox.jpg",
+        route: "uygulamalar",
+        url: "https://play.google.com/store/apps/details?id=com.katovia.mental_detox"
+      },
+      {
+        title: "Cuma Mesajı Oluşturucu",
+        text: "Yakında: güzel cuma mesajları oluştur",
+        icon: "💌",
+        route: "laboratuvar"
+      },
+      {
+        title: "Fal Yorumu",
+        text: "Yakında: günlük fal ve rehberlik",
+        icon: "🪙",
+        route: "laboratuvar"
+      }
+    ];
+
+    const games = [
+  { title:"Yük Ustası", text:"Dengeyi koru, yükü düşürmeden ilerle.", icon:"📦", url:"oyunlar/yuk-ustasi.html" },
+  { title:"Taş Yağmuru", text:"Düşen taşlardan kaç, refleksini test et.", icon:"🪨", url:"oyunlar/tas-yagmuru.html" },
+  { title:"Süt Gol", text:"Topu hedefe gönder, eğlenceli mini gol denemesi.", icon:"🥛", url:"oyunlar/sut-gol.html" },
+  { title:"Şerit Kaçışı", text:"Şeritler arasında doğru zamanda kaç.", icon:"🏁", url:"oyunlar/serit-kacisi.html" },
+  { title:"Kuş Fotoğrafçısı", text:"Kuşları kadraja al ve doğru anda yakala.", icon:"📷", url:"oyunlar/kus-fotografcisi.html" },
+  { title:"Golf Mini Oyun", text:"Kısa vuruşlarla hedefe ulaş.", icon:"⛳", url:"oyunlar/golf-mini-oyun.html" },
+  { title:"Falso Süt", text:"Falso ver, hedefe ulaş.", icon:"🥛", url:"oyunlar/falso-sut.html" },
+  { title:"Buz Hokeyi", text:"Diski kontrol et, kaleye gönder.", icon:"🏒", url:"oyunlar/buz-hokeyi.html" },
+  { title:"Bilardo", text:"Açı hesapla, topu deliğe gönder.", icon:"🎱", url:"oyunlar/bilardo.html" },
+  { title:"Araba Fırlat", text:"Arabayı fırlat, en uzağa git.", icon:"🚗", url:"oyunlar/araba-firlat.html" }
 ];
 
     const codes = [
@@ -403,7 +444,7 @@
       "laboratuvar": {
         title:"Laboratuvar",
         text:"Mini HTML5 araçlar, APK denemeleri, mesaj üreticiler, fal yorumları ve prototipler burada büyüyecek.",
-        items:["Cuma Mesajı Oluşturucu","Kandil Mesajı Oluşturucu","Fal Yorumu","Mini APK Denemeleri"]
+        items:["Cuma Mesajı Oluşturucu","Kandil Mesajı Oluşturucu","Bayram Mesajı Oluşturucu","Fal Yorumu","Mini APK Denemeleri"]
       },
       "oyunlar": {
         title:"Oyunlar",
@@ -442,7 +483,7 @@
 
       document.getElementById("projectGrid").innerHTML = projects.map(p => `
         <article class="project" data-route="${p.route}" ${p.url ? `data-url="${p.url}"` : ""}>
-          <div class="cover">${p.icon}</div>
+          <div class="cover">${p.image ? `<img src="${p.image}" alt="${p.title}" onerror="this.remove();this.parentElement.textContent='${p.icon}'">` : p.icon}</div>
           <div class="body"><h3>${p.title}</h3><p>${p.text}</p></div>
         </article>
       `).join("");
@@ -473,14 +514,27 @@
   const apps = projects.filter(p => p.route === "uygulamalar" && p.url);
 
   document.getElementById("routeItems").innerHTML = apps.map(app => `
-    <div class="soonItem" data-url="${app.url}" style="cursor:pointer">
-      <b>${app.icon} ${app.title}</b>
+    <div class="soonItem" data-url="${app.url}">
+      <div class="appThumb">
+        <img src="${app.image}" alt="${app.title}" onerror="this.remove();this.parentElement.textContent='${app.icon}'">
+      </div>
+      <b>${app.title}</b>
       <span>${app.text}<br>Google Play'de görüntülemek için tıkla.</span>
+    </div>
+  `).join("");
+} else if (route === "oyunlar") {
+  document.getElementById("routeItems").innerHTML = games.map(game => `
+    <div class="soonItem" data-url="${game.url}">
+      <b>${game.icon} ${game.title}</b>
+      <span>${game.text}<br>Oyunu açmak için tıkla.</span>
     </div>
   `).join("");
 } else {
   document.getElementById("routeItems").innerHTML = content.items.map(item => `
-    <div class="soonItem"><b>${item}</b><span>Yakında aktif bağlantı, demo ve kaynak kod formatı eklenecek.</span></div>
+    <div class="soonItem">
+      <b>${item}</b>
+      <span>Yakında aktif bağlantı, demo ve kaynak kod formatı eklenecek.</span>
+    </div>
   `).join("");
 }
       }
@@ -488,18 +542,18 @@
     }
 
     document.addEventListener("click", e => {
-  const linkCard = e.target.closest("[data-url]");
-  if (linkCard && linkCard.dataset.url) {
-    window.open(linkCard.dataset.url, "_blank");
-    return;
-  }
+      const linkCard = e.target.closest("[data-url]");
+      if (linkCard && linkCard.dataset.url) {
+        window.open(linkCard.dataset.url, "_blank");
+        return;
+      }
 
-  const target = e.target.closest("[data-route]");
-  if(target){
-    e.preventDefault();
-    setRoute(target.dataset.route);
-  }
-});s
+      const target = e.target.closest("[data-route]");
+      if(target){
+        e.preventDefault();
+        setRoute(target.dataset.route);
+      }
+    });
 
     renderNav();
     renderHome();

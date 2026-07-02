@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katovia - Buz Hokeyi</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, #1f4d7a 0%, #0e2238 45%, #07131f 100%);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      background: rgba(0, 0, 0, 0.28);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(6px);
+    }
+
+    .back-btn {
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,0.18);
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+    }
+
+    .page-wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+    .hero {
+      text-align: center;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      padding: 18px 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
+
+    .hero p {
+      margin: 0;
+      color: rgba(255,255,255,0.82);
+      font-size: 15px;
+    }
+
+    .hud {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .hud-box {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    }
+
+    .hud-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.72);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .hud-value {
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    .game-panel {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 26px;
+      padding: 14px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+    }
+
+    canvas {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  background:
+    linear-gradient(to bottom, #eef7ff 0%, #dbefff 100%);
+  border-radius: 20px;
+  border: 3px solid rgba(255,255,255,0.2);
+}
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .control-btn {
+      border: none;
+      border-radius: 16px;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(180deg, #3e78b9 0%, #255387 100%);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+      transition: transform 0.12s ease, opacity 0.12s ease;
+    }
+
+    .control-btn:active {
+      transform: scale(0.97);
+    }
+
+    .shoot-btn {
+      background: linear-gradient(180deg, #ff6a6a 0%, #cf2c2c 100%);
+    }
+
+    .bottom-info {
+      text-align: center;
+      color: rgba(255,255,255,0.78);
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 10, 18, 0.74);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .overlay.hidden {
+      display: none;
+    }
+
+    .overlay-card {
+      width: 100%;
+      max-width: 460px;
+      background: linear-gradient(180deg, #15324f 0%, #0d1e31 100%);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 24px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+
+    .overlay-card h2 {
+      margin: 0 0 10px;
+      font-size: 32px;
+    }
+
+    .overlay-card p {
+      margin: 8px 0;
+      color: rgba(255,255,255,0.85);
+      font-size: 16px;
+    }
+
+    .restart-btn {
+      margin-top: 16px;
+      border: none;
+      border-radius: 16px;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(180deg, #63c16a 0%, #2f9343 100%);
+    }
+
+    @media (max-width: 700px) {
+      .hud {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .hud-value {
+        font-size: 22px;
+      }
+
+      .controls {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a class="back-btn" href="/games">← Geri Dön</a>
+    <div class="brand">Katovia</div>
+  </div>
+
+  <main class="page-wrap">
+    <section class="hero">
+      <h1>Buz Hokeyi</h1>
+      <p>Kaleciyi geç, diski kaleye gönder, süre bitmeden en yüksek skoru yap.</p>
+    </section>
+
+    <section class="hud">
+      <div class="hud-box">
+        <div class="hud-label">Skor</div>
+        <div class="hud-value" id="scoreEl">0</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-label">Süre</div>
+        <div class="hud-value" id="timeEl">45</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-label">Şut</div>
+        <div class="hud-value" id="shotsEl">0</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-label">Kurtarış</div>
+        <div class="hud-value" id="savesEl">0</div>
+      </div>
+    </section>
+
+    <section class="game-panel">
+      <canvas id="gameCanvas" width="1100" height="620"></canvas>
+
+      <div class="controls">
+        <button class="control-btn" id="leftBtn">⬅ Sol</button>
+        <button class="control-btn shoot-btn" id="shootBtn">🏒 Şut</button>
+        <button class="control-btn" id="rightBtn">Sağ ➡</button>
+      </div>
+    </section>
+
+    <div class="bottom-info">
+      Klavye ile de oynanır: <strong>A / ←</strong>, <strong>D / →</strong>, <strong>Boşluk</strong>
+    </div>
+  </main>
+
+  <div class="overlay" id="gameOverOverlay">
+    <div class="overlay-card">
+      <h2>Oyun Bitti</h2>
+      <p id="finalScoreText">Skorun: 0</p>
+      <p id="finalStatsText">İstatistikler</p>
+      <button class="restart-btn" id="restartBtn">Tekrar Oyna</button>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const scoreEl = document.getElementById("scoreEl");
+    const timeEl = document.getElementById("timeEl");
+    const shotsEl = document.getElementById("shotsEl");
+    const savesEl = document.getElementById("savesEl");
+
+    const overlay = document.getElementById("gameOverOverlay");
+    const finalScoreText = document.getElementById("finalScoreText");
+    const finalStatsText = document.getElementById("finalStatsText");
+    const restartBtn = document.getElementById("restartBtn");
+
+    const leftBtn = document.getElementById("leftBtn");
+    const rightBtn = document.getElementById("rightBtn");
+    const shootBtn = document.getElementById("shootBtn");
+
+    const W = canvas.width;
+    const H = canvas.height;
+
+    let keys = {};
+    let score = 0;
+    let timeLeft = 45;
+    let shots = 0;
+    let saves = 0;
+    let gameRunning = true;
+    let lastTimeTick = 0;
+
+    const rink = {
+  left: 90,
+  right: W - 90,
+  top: 50,
+  bottom: H - 40,
+  goalWidth: 390,
+  goalHeight: 34
+};
+
+    const player = {
+      x: W / 2,
+      y: H - 85,
+      w: 90,
+      h: 18,
+      speed: 7
+    };
+
+    const goalie = {
+      x: W / 2,
+      y: 118,
+      w: 140,
+      h: 22,
+      speed: 4.6,
+      dir: 1
+    };
+
+    const puck = {
+      x: W / 2,
+      y: H - 115,
+      r: 12,
+      vx: 0,
+      vy: 0,
+      active: false
+    };
+
+    function resetPuck() {
+      puck.x = player.x;
+      puck.y = player.y - 26;
+      puck.vx = 0;
+      puck.vy = 0;
+      puck.active = false;
+    }
+
+    function resetGame() {
+      score = 0;
+      timeLeft = 45;
+      shots = 0;
+      saves = 0;
+      gameRunning = true;
+      lastTimeTick = 0;
+
+      player.x = W / 2;
+      goalie.x = W / 2;
+      goalie.dir = 1;
+
+      resetPuck();
+      overlay.classList.add("hidden");
+      updateHUD();
+    }
+
+    function updateHUD() {
+      scoreEl.textContent = score;
+      timeEl.textContent = timeLeft;
+      shotsEl.textContent = shots;
+      savesEl.textContent = saves;
+    }
+
+    function shootPuck() {
+      if (!gameRunning) return;
+      if (puck.active) return;
+
+      shots++;
+      puck.active = true;
+
+      const targetBias = (Math.random() * 4) - 2;
+      puck.vx = targetBias;
+      puck.vy = -9.5;
+
+      updateHUD();
+    }
+
+    function endGame() {
+      gameRunning = false;
+      finalScoreText.textContent = "Skorun: " + score;
+      finalStatsText.textContent = "Toplam şut: " + shots + " | Kaleci kurtarışı: " + saves;
+      overlay.classList.remove("hidden");
+    }
+
+    function movePlayer() {
+      if (!gameRunning) return;
+
+      if (keys["ArrowLeft"] || keys["a"] || keys["A"]) {
+        player.x -= player.speed;
+      }
+      if (keys["ArrowRight"] || keys["d"] || keys["D"]) {
+        player.x += player.speed;
+      }
+
+      const minX = rink.left + player.w / 2;
+      const maxX = rink.right - player.w / 2;
+
+      if (player.x < minX) player.x = minX;
+      if (player.x > maxX) player.x = maxX;
+
+      if (!puck.active) {
+        puck.x = player.x;
+        puck.y = player.y - 26;
+      }
+    }
+
+    function moveGoalie() {
+      goalie.x += goalie.speed * goalie.dir;
+
+      const leftLimit = W / 2 - rink.goalWidth / 2 + goalie.w / 2 - 8;
+      const rightLimit = W / 2 + rink.goalWidth / 2 - goalie.w / 2 + 8;
+
+      if (goalie.x <= leftLimit) {
+        goalie.x = leftLimit;
+        goalie.dir = 1;
+      }
+      if (goalie.x >= rightLimit) {
+        goalie.x = rightLimit;
+        goalie.dir = -1;
+      }
+    }
+
+    function updatePuck() {
+      if (!puck.active) return;
+
+      puck.x += puck.vx;
+      puck.y += puck.vy;
+
+      // hafif sürtünme / yön dengesi
+      puck.vx *= 0.995;
+
+      // yan duvar sekmesi
+      if (puck.x - puck.r <= rink.left) {
+        puck.x = rink.left + puck.r;
+        puck.vx *= -0.9;
+      }
+      if (puck.x + puck.r >= rink.right) {
+        puck.x = rink.right - puck.r;
+        puck.vx *= -0.9;
+      }
+
+      // üst bölgedeki kaleci çarpışması
+      const goalieLeft = goalie.x - goalie.w / 2;
+      const goalieRight = goalie.x + goalie.w / 2;
+      const goalieTop = goalie.y - goalie.h / 2;
+      const goalieBottom = goalie.y + goalie.h / 2;
+
+      const puckHitsGoalie =
+        puck.x + puck.r > goalieLeft &&
+        puck.x - puck.r < goalieRight &&
+        puck.y + puck.r > goalieTop &&
+        puck.y - puck.r < goalieBottom &&
+        puck.vy < 0;
+
+      if (puckHitsGoalie) {
+        puck.y = goalieBottom + puck.r + 1;
+        puck.vy = Math.abs(puck.vy) * 0.92;
+        puck.vx += (puck.x - goalie.x) * 0.06;
+        saves++;
+        updateHUD();
+      }
+
+      // alt tarafa geri düşerse şut boşa gider
+      if (puck.y - puck.r > H) {
+        resetPuck();
+      }
+
+      // kale kontrolü
+      const goalLeft = W / 2 - rink.goalWidth / 2;
+      const goalRight = W / 2 + rink.goalWidth / 2;
+      const goalLineY = rink.top + rink.goalHeight;
+
+      if (puck.y - puck.r <= goalLineY) {
+        if (puck.x > goalLeft && puck.x < goalRight) {
+          score++;
+          updateHUD();
+          resetPuck();
+        } else {
+          // direk üst çerçeve sekmesi gibi davran
+          puck.y = goalLineY + puck.r + 2;
+          puck.vy = Math.abs(puck.vy) * 0.85;
+        }
+      }
+    }
+
+    function updateTimer(timestamp) {
+      if (!gameRunning) return;
+
+      if (!lastTimeTick) lastTimeTick = timestamp;
+      const delta = timestamp - lastTimeTick;
+
+      if (delta >= 1000) {
+        timeLeft--;
+        lastTimeTick = timestamp;
+        updateHUD();
+
+        if (timeLeft <= 0) {
+          timeLeft = 0;
+          updateHUD();
+          endGame();
+        }
+      }
+    }
+
+    function drawRink() {
+      // zemin
+      ctx.fillStyle = "#e9f5ff";
+      ctx.fillRect(0, 0, W, H);
+
+      // ana saha çerçevesi
+      ctx.strokeStyle = "#c7dff0";
+      ctx.lineWidth = 6;
+      ctx.strokeRect(rink.left, rink.top, rink.right - rink.left, rink.bottom - rink.top);
+
+      // orta çizgi
+      ctx.strokeStyle = "#d84d4d";
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(rink.left, H / 2);
+      ctx.lineTo(rink.right, H / 2);
+      ctx.stroke();
+
+      // orta daire
+      ctx.strokeStyle = "#7bb7de";
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.arc(W / 2, H / 2, 58, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // kale
+      const goalLeft = W / 2 - rink.goalWidth / 2;
+      ctx.fillStyle = "#d93c3c";
+      ctx.fillRect(goalLeft, rink.top, rink.goalWidth, 10);
+
+      ctx.strokeStyle = "#d93c3c";
+      ctx.lineWidth = 4;
+      ctx.strokeRect(goalLeft, rink.top, rink.goalWidth, rink.goalHeight);
+    }
+
+    function drawPlayer() {
+      // gövde
+      ctx.fillStyle = "#1e3e66";
+      ctx.fillRect(player.x - player.w / 2, player.y - player.h / 2, player.w, player.h);
+
+      // oyuncu
+      ctx.fillStyle = "#17304d";
+      ctx.fillRect(player.x - 18, player.y - 40, 36, 28);
+
+      // kafa
+      ctx.beginPath();
+      ctx.fillStyle = "#f0c6a4";
+      ctx.arc(player.x, player.y - 48, 12, 0, Math.PI * 2);
+      ctx.fill();
+
+      // sopa
+      ctx.strokeStyle = "#6d4c2f";
+      ctx.lineWidth = 6;
+      ctx.beginPath();
+      ctx.moveTo(player.x + 16, player.y - 8);
+      ctx.lineTo(player.x + 42, player.y + 24);
+      ctx.stroke();
+
+      ctx.strokeStyle = "#111";
+      ctx.lineWidth = 7;
+      ctx.beginPath();
+      ctx.moveTo(player.x + 40, player.y + 24);
+      ctx.lineTo(player.x + 18, player.y + 24);
+      ctx.stroke();
+    }
+
+    function drawGoalie() {
+      // kale önü alanı
+      ctx.fillStyle = "rgba(217,60,60,0.08)";
+      ctx.fillRect(W / 2 - rink.goalWidth / 2, 85, rink.goalWidth, 65);
+
+      // kaleci
+      ctx.fillStyle = "#d64545";
+      ctx.fillRect(goalie.x - goalie.w / 2, goalie.y - goalie.h / 2, goalie.w, goalie.h);
+
+      ctx.fillStyle = "#b52f2f";
+      ctx.fillRect(goalie.x - 20, goalie.y - 30, 40, 22);
+
+      ctx.beginPath();
+      ctx.fillStyle = "#f0c6a4";
+      ctx.arc(goalie.x, goalie.y - 36, 11, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawPuck() {
+      ctx.beginPath();
+      ctx.fillStyle = "#111";
+      ctx.arc(puck.x, puck.y, puck.r, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "rgba(255,255,255,0.22)";
+      ctx.lineWidth = 2;
+      ctx.arc(puck.x - 2, puck.y - 2, puck.r - 4, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    function drawShotGuide() {
+      if (puck.active || !gameRunning) return;
+
+      ctx.setLineDash([8, 10]);
+      ctx.strokeStyle = "rgba(30, 62, 102, 0.28)";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(player.x, player.y - 26);
+      ctx.lineTo(W / 2, 95);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      drawRink();
+      drawGoalie();
+      drawShotGuide();
+      drawPlayer();
+      drawPuck();
+    }
+
+    function gameLoop(timestamp) {
+      movePlayer();
+      moveGoalie();
+      updatePuck();
+      updateTimer(timestamp);
+      draw();
+      requestAnimationFrame(gameLoop);
+    }
+
+    window.addEventListener("keydown", (e) => {
+      keys[e.key] = true;
+
+      if (e.code === "Space") {
+        e.preventDefault();
+        shootPuck();
+      }
+    });
+
+    window.addEventListener("keyup", (e) => {
+      keys[e.key] = false;
+    });
+
+    let leftInterval = null;
+    let rightInterval = null;
+
+    function startHold(direction) {
+      stopHold(direction === "left" ? "right" : "left");
+
+      if (direction === "left") {
+        keys["ArrowLeft"] = true;
+        leftInterval = setInterval(() => {
+          keys["ArrowLeft"] = true;
+        }, 16);
+      } else {
+        keys["ArrowRight"] = true;
+        rightInterval = setInterval(() => {
+          keys["ArrowRight"] = true;
+        }, 16);
+      }
+    }
+
+    function stopHold(direction) {
+      if (direction === "left") {
+        keys["ArrowLeft"] = false;
+        if (leftInterval) clearInterval(leftInterval);
+        leftInterval = null;
+      } else {
+        keys["ArrowRight"] = false;
+        if (rightInterval) clearInterval(rightInterval);
+        rightInterval = null;
+      }
+    }
+
+    leftBtn.addEventListener("mousedown", () => startHold("left"));
+    leftBtn.addEventListener("mouseup", () => stopHold("left"));
+    leftBtn.addEventListener("mouseleave", () => stopHold("left"));
+    leftBtn.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      startHold("left");
+    }, { passive: false });
+    leftBtn.addEventListener("touchend", () => stopHold("left"));
+
+    rightBtn.addEventListener("mousedown", () => startHold("right"));
+    rightBtn.addEventListener("mouseup", () => stopHold("right"));
+    rightBtn.addEventListener("mouseleave", () => stopHold("right"));
+    rightBtn.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      startHold("right");
+    }, { passive: false });
+    rightBtn.addEventListener("touchend", () => stopHold("right"));
+
+    shootBtn.addEventListener("click", shootPuck);
+    restartBtn.addEventListener("click", resetGame);
+
+    resetGame();
+    requestAnimationFrame(gameLoop);
+  </script>
+</body>
+</html>

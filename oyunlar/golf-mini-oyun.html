@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katovia - Mini Golf</title>
+  <style>
+    :root {
+      --bg1: #0f172a;
+      --bg2: #111827;
+      --panel: rgba(255,255,255,0.08);
+      --panel-strong: rgba(255,255,255,0.12);
+      --line: rgba(255,255,255,0.12);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #22c55e;
+      --accent2: #facc15;
+      --danger: #fb7185;
+      --shadow: 0 20px 45px rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(34,197,94,0.20), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(250,204,21,0.12), transparent 26%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      overflow: hidden;
+    }
+
+    .app {
+      width: min(1100px, 100%);
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: 74px 1fr 140px;
+      padding: 12px;
+      gap: 12px;
+    }
+
+    .topbar,
+    .controls,
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+    }
+
+    .back-btn,
+    .action-btn {
+      border: 0;
+      border-radius: 16px;
+      padding: 12px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      color: white;
+      background: var(--panel-strong);
+      transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+    }
+
+    .back-btn:hover,
+    .action-btn:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.18);
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 12px;
+      min-height: 0;
+    }
+
+    .panel {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 0.98rem;
+    }
+
+    .hud-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .hud-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 18px;
+      padding: 14px;
+    }
+
+    .hud-label {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 6px;
+    }
+
+    .hud-value {
+      font-size: 1.45rem;
+      font-weight: 800;
+    }
+
+    .tips {
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.18);
+      border-radius: 18px;
+      padding: 14px;
+      line-height: 1.55;
+      color: #dcfce7;
+      font-size: 0.95rem;
+    }
+
+    .game-wrap {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)),
+        linear-gradient(180deg, #14532d, #166534 40%, #14532d);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      min-height: 0;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .message {
+      position: absolute;
+      left: 50%;
+      top: 22px;
+      transform: translateX(-50%);
+      padding: 12px 18px;
+      border-radius: 18px;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-weight: 800;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .message.show { opacity: 1; }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr auto auto;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+    }
+
+    .slider-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .slider-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent2);
+      cursor: pointer;
+    }
+
+    .power-readout {
+      font-weight: 900;
+      color: var(--accent2);
+    }
+
+    .action-btn.primary {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #052e16;
+    }
+
+    .action-btn.secondary {
+      background: linear-gradient(135deg, #facc15, #f59e0b);
+      color: #3b2f00;
+    }
+
+    .mini-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 920px) {
+      .app {
+        grid-template-rows: 68px 1fr 190px;
+      }
+
+      .main {
+        grid-template-columns: 1fr;
+      }
+
+      .controls {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <button class="back-btn" onclick="history.back()">← Siteye Dön</button>
+      <div class="brand">
+        <div class="brand-badge">K</div>
+        <div>Katovia</div>
+      </div>
+      <button class="back-btn" id="restartTop">Yeniden Başlat</button>
+    </header>
+
+    <section class="main">
+      <aside class="panel">
+        <div>
+          <h1>Mini Golf</h1>
+          <div class="subtitle">
+            Topu deliğe en az vuruşla sok. Güç ayarını yap, yönünü seç ve atışını bırak.
+            Engel yüzeylerinden sekebilir, fazla güçte deliği kaçırabilirsin.
+          </div>
+        </div>
+
+        <div class="hud-grid">
+          <div class="hud-card">
+            <div class="hud-label">Vuruş</div>
+            <div class="hud-value" id="shotsValue">0</div>
+          </div>
+          <div class="hud-card">
+            <div class="hud-label">Seviye</div>
+            <div class="hud-value" id="levelValue">1</div>
+          </div>
+          <div class="hud-card">
+            <div class="hud-label">En İyi</div>
+            <div class="hud-value" id="bestValue">-</div>
+          </div>
+          <div class="hud-card">
+            <div class="hud-label">Durum</div>
+            <div class="hud-value" id="statusValue">Hazır</div>
+          </div>
+        </div>
+
+        <div class="tips">
+          <strong>Nasıl oynanır?</strong><br />
+          Fareyle ya da parmağınla topun ters yönüne doğru sürükle. Bıraktığında atış yapılır.<br /><br />
+          Alt panelden güç ayarı da kullanabilirsin. “Sonraki Saha” ile yeni düzen açılır.
+        </div>
+
+        <div class="mini-note">
+          Bu sürüm tek dosyalık, siteye gömülebilir bir HTML mini oyundur. İstersen bir sonraki turda buna rüzgâr, kum havuzu, su engeli, skor yıldızı ve mobil titreşim de ekleriz.
+        </div>
+      </aside>
+
+      <div class="game-wrap">
+        <canvas id="gameCanvas" width="900" height="600"></canvas>
+        <div class="message" id="messageBox">Harika atış!</div>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <div class="slider-wrap">
+        <div class="slider-head">
+          <span>Atış Gücü</span>
+          <span class="power-readout" id="powerLabel">65%</span>
+        </div>
+        <input type="range" min="20" max="100" value="65" id="powerRange" />
+      </div>
+
+      <div class="mini-note">
+        Sürükle-bırak oynayış aktif. Güç çubuğu özellikle mobilde daha kontrollü atış için var.
+      </div>
+
+      <button class="action-btn primary" id="nextBtn">Sonraki Saha</button>
+      <button class="action-btn secondary" id="restartBtn">Sahayı Sıfırla</button>
+    </footer>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const shotsValue = document.getElementById('shotsValue');
+    const levelValue = document.getElementById('levelValue');
+    const bestValue = document.getElementById('bestValue');
+    const statusValue = document.getElementById('statusValue');
+    const messageBox = document.getElementById('messageBox');
+    const powerRange = document.getElementById('powerRange');
+    const powerLabel = document.getElementById('powerLabel');
+    const nextBtn = document.getElementById('nextBtn');
+    const restartBtn = document.getElementById('restartBtn');
+    const restartTop = document.getElementById('restartTop');
+
+    const COURSE_PRESETS = [
+      {
+        ball: { x: 120, y: 470 },
+        hole: { x: 760, y: 160, r: 18 },
+        obstacles: [
+          { x: 280, y: 380, w: 180, h: 24 },
+          { x: 520, y: 250, w: 32, h: 170 },
+          { x: 200, y: 190, w: 160, h: 26 }
+        ]
+      },
+      {
+        ball: { x: 105, y: 95 },
+        hole: { x: 805, y: 505, r: 18 },
+        obstacles: [
+          { x: 170, y: 70, w: 24, h: 380 },
+          { x: 170, y: 450, w: 300, h: 24 },
+          { x: 446, y: 165, w: 24, h: 309 },
+          { x: 446, y: 165, w: 210, h: 24 },
+          { x: 632, y: 165, w: 24, h: 250 },
+          { x: 632, y: 392, w: 165, h: 24 },
+          { x: 772, y: 392, w: 24, h: 130 },
+          { x: 280, y: 220, w: 100, h: 24 },
+          { x: 280, y: 220, w: 24, h: 150 }
+        ]
+      },
+      {
+        ball: { x: 150, y: 500 },
+        hole: { x: 760, y: 100, r: 18 },
+        obstacles: [
+          { x: 220, y: 420, w: 220, h: 24 },
+          { x: 470, y: 250, w: 28, h: 220 },
+          { x: 600, y: 140, w: 160, h: 24 },
+          { x: 260, y: 170, w: 28, h: 120 }
+        ]
+      }
+    ];
+
+    let level = 0;
+    let shots = 0;
+    let bestScore = localStorage.getItem('katoviaGolfBest') || null;
+    let dragging = false;
+    let mouse = { x: 0, y: 0 };
+    let aim = { x: 0, y: 0 };
+    let isWon = false;
+
+    const ball = {
+      x: 120,
+      y: 470,
+      r: 12,
+      vx: 0,
+      vy: 0,
+      moving: false
+    };
+
+    const hole = { x: 760, y: 160, r: 18 };
+    let obstacles = [];
+
+    function updateBest() {
+      bestValue.textContent = bestScore ? bestScore : '-';
+    }
+
+    function showMessage(text) {
+      messageBox.textContent = text;
+      messageBox.classList.add('show');
+      clearTimeout(showMessage._t);
+      showMessage._t = setTimeout(() => messageBox.classList.remove('show'), 1500);
+    }
+
+    function syncHud() {
+      shotsValue.textContent = shots;
+      levelValue.textContent = level + 1;
+      statusValue.textContent = isWon ? 'Tamamlandı' : (ball.moving ? 'Top hareket ediyor' : 'Nişan al');
+      powerLabel.textContent = powerRange.value + '%';
+      updateBest();
+    }
+
+    function loadCourse(index) {
+      const course = COURSE_PRESETS[index % COURSE_PRESETS.length];
+      ball.x = course.ball.x;
+      ball.y = course.ball.y;
+      ball.vx = 0;
+      ball.vy = 0;
+      ball.moving = false;
+      hole.x = course.hole.x;
+      hole.y = course.hole.y;
+      hole.r = course.hole.r;
+      obstacles = course.obstacles.map(o => ({ ...o }));
+      shots = 0;
+      isWon = false;
+      syncHud();
+    }
+
+    function resetCourse() {
+      loadCourse(level);
+      showMessage('Saha sıfırlandı');
+    }
+
+    function nextCourse() {
+      level = (level + 1) % COURSE_PRESETS.length;
+      loadCourse(level);
+      showMessage('Yeni saha yüklendi');
+    }
+
+    function getPointerPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      return {
+        x: (clientX - rect.left) * (canvas.width / rect.width),
+        y: (clientY - rect.top) * (canvas.height / rect.height)
+      };
+    }
+
+    function distance(ax, ay, bx, by) {
+      return Math.hypot(ax - bx, ay - by);
+    }
+
+    function pointInBall(px, py) {
+      return distance(px, py, ball.x, ball.y) <= ball.r + 10;
+    }
+
+    function shootFromAim() {
+      if (ball.moving || isWon) return;
+      const dx = ball.x - aim.x;
+      const dy = ball.y - aim.y;
+      const len = Math.hypot(dx, dy);
+      if (len < 8) return;
+
+      const strength = Number(powerRange.value) / 100;
+      const capped = Math.min(len, 140);
+      const speed = (capped / 10) * strength;
+
+      ball.vx = (dx / len) * speed;
+      ball.vy = (dy / len) * speed;
+      ball.moving = true;
+      shots += 1;
+      syncHud();
+    }
+
+    function handleDown(e) {
+      const p = getPointerPos(e);
+      if (!ball.moving && pointInBall(p.x, p.y) && !isWon) {
+        dragging = true;
+        mouse = p;
+        aim = p;
+      }
+    }
+
+    function handleMove(e) {
+      const p = getPointerPos(e);
+      mouse = p;
+      if (dragging) {
+        aim = p;
+      }
+    }
+
+    function handleUp() {
+      if (dragging) {
+        dragging = false;
+        shootFromAim();
+      }
+    }
+
+    function resolveWallCollision() {
+      if (ball.x - ball.r < 0) {
+        ball.x = ball.r;
+        ball.vx *= -0.88;
+      }
+      if (ball.x + ball.r > canvas.width) {
+        ball.x = canvas.width - ball.r;
+        ball.vx *= -0.88;
+      }
+      if (ball.y - ball.r < 0) {
+        ball.y = ball.r;
+        ball.vy *= -0.88;
+      }
+      if (ball.y + ball.r > canvas.height) {
+        ball.y = canvas.height - ball.r;
+        ball.vy *= -0.88;
+      }
+    }
+
+    function circleRectCollision(circle, rect) {
+      const closestX = Math.max(rect.x, Math.min(circle.x, rect.x + rect.w));
+      const closestY = Math.max(rect.y, Math.min(circle.y, rect.y + rect.h));
+      const dx = circle.x - closestX;
+      const dy = circle.y - closestY;
+      return { hit: (dx * dx + dy * dy) < circle.r * circle.r, dx, dy, closestX, closestY };
+    }
+
+    function resolveObstacleCollision() {
+      for (const ob of obstacles) {
+        const col = circleRectCollision(ball, ob);
+        if (!col.hit) continue;
+
+        const overlapX = ball.r - Math.abs(ball.x - col.closestX);
+        const overlapY = ball.r - Math.abs(ball.y - col.closestY);
+
+        if (overlapX < overlapY) {
+          if (ball.x < col.closestX) ball.x -= overlapX;
+          else ball.x += overlapX;
+          ball.vx *= -0.9;
+        } else {
+          if (ball.y < col.closestY) ball.y -= overlapY;
+          else ball.y += overlapY;
+          ball.vy *= -0.9;
+        }
+      }
+    }
+
+    function updateBall() {
+      if (!ball.moving) return;
+
+      ball.x += ball.vx;
+      ball.y += ball.vy;
+
+      ball.vx *= 0.985;
+      ball.vy *= 0.985;
+
+      resolveWallCollision();
+      resolveObstacleCollision();
+
+      const speed = Math.hypot(ball.vx, ball.vy);
+      const holeDist = distance(ball.x, ball.y, hole.x, hole.y);
+
+      if (holeDist < hole.r - 2 && speed < 2.6) {
+        ball.x = hole.x;
+        ball.y = hole.y;
+        ball.vx = 0;
+        ball.vy = 0;
+        ball.moving = false;
+        isWon = true;
+        statusValue.textContent = 'Tamamlandı';
+        if (!bestScore || shots < Number(bestScore)) {
+          bestScore = String(shots);
+          localStorage.setItem('katoviaGolfBest', bestScore);
+        }
+        updateBest();
+        showMessage('Delik! Çok iyi vuruş.');
+        return;
+      }
+
+      if (speed < 0.12) {
+        ball.vx = 0;
+        ball.vy = 0;
+        ball.moving = false;
+      }
+    }
+
+    function drawBackgroundPattern() {
+      ctx.save();
+      ctx.globalAlpha = 0.08;
+      for (let x = 0; x < canvas.width; x += 36) {
+        for (let y = 0; y < canvas.height; y += 36) {
+          ctx.beginPath();
+          ctx.arc(x + 8, y + 8, 2.2, 0, Math.PI * 2);
+          ctx.fillStyle = '#ffffff';
+          ctx.fill();
+        }
+      }
+      ctx.restore();
+    }
+
+    function drawCourse() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      grad.addColorStop(0, '#1f7a3f');
+      grad.addColorStop(1, '#14532d');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      drawBackgroundPattern();
+
+      ctx.save();
+      ctx.fillStyle = 'rgba(255,255,255,0.06)';
+      for (let i = 0; i < 5; i++) {
+        ctx.beginPath();
+        ctx.ellipse(130 + i * 160, 90 + (i % 2) * 120, 78, 28, -0.25, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+
+      ctx.beginPath();
+      ctx.arc(hole.x, hole.y, hole.r, 0, Math.PI * 2);
+      ctx.fillStyle = '#0f172a';
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(hole.x, hole.y - hole.r - 38);
+      ctx.lineTo(hole.x, hole.y - 3);
+      ctx.strokeStyle = '#e5e7eb';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(hole.x, hole.y - hole.r - 38);
+      ctx.lineTo(hole.x + 32, hole.y - hole.r - 26);
+      ctx.lineTo(hole.x, hole.y - hole.r - 13);
+      ctx.closePath();
+      ctx.fillStyle = '#ef4444';
+      ctx.fill();
+
+      for (const ob of obstacles) {
+        const obstacleGrad = ctx.createLinearGradient(ob.x, ob.y, ob.x, ob.y + ob.h);
+        obstacleGrad.addColorStop(0, '#ca8a04');
+        obstacleGrad.addColorStop(1, '#92400e');
+        ctx.fillStyle = obstacleGrad;
+        roundRect(ctx, ob.x, ob.y, ob.w, ob.h, 12, true, false);
+
+        ctx.fillStyle = 'rgba(255,255,255,0.18)';
+        roundRect(ctx, ob.x + 4, ob.y + 4, ob.w - 8, 6, 4, true, false);
+      }
+
+      if (dragging && !ball.moving) {
+        ctx.beginPath();
+        ctx.moveTo(ball.x, ball.y);
+        ctx.lineTo(aim.x, aim.y);
+        ctx.strokeStyle = 'rgba(250,204,21,0.95)';
+        ctx.lineWidth = 4;
+        ctx.setLineDash([10, 10]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        const arrowAngle = Math.atan2(aim.y - ball.y, aim.x - ball.x);
+        const headX = aim.x;
+        const headY = aim.y;
+        ctx.beginPath();
+        ctx.moveTo(headX, headY);
+        ctx.lineTo(headX - 16 * Math.cos(arrowAngle - 0.45), headY - 16 * Math.sin(arrowAngle - 0.45));
+        ctx.lineTo(headX - 16 * Math.cos(arrowAngle + 0.45), headY - 16 * Math.sin(arrowAngle + 0.45));
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(250,204,21,0.95)';
+        ctx.fill();
+      }
+
+      const ballGrad = ctx.createRadialGradient(ball.x - 4, ball.y - 4, 2, ball.x, ball.y, ball.r + 4);
+      ballGrad.addColorStop(0, '#ffffff');
+      ballGrad.addColorStop(1, '#d1d5db');
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
+      ctx.fillStyle = ballGrad;
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(15,23,42,0.18)';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(ball.x - 4, ball.y - 4, 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.fill();
+    }
+
+    function roundRect(ctx, x, y, w, h, r, fill, stroke) {
+      const radius = Math.min(r, w / 2, h / 2);
+      ctx.beginPath();
+      ctx.moveTo(x + radius, y);
+      ctx.arcTo(x + w, y, x + w, y + h, radius);
+      ctx.arcTo(x + w, y + h, x, y + h, radius);
+      ctx.arcTo(x, y + h, x, y, radius);
+      ctx.arcTo(x, y, x + w, y, radius);
+      ctx.closePath();
+      if (fill) ctx.fill();
+      if (stroke) ctx.stroke();
+    }
+
+    function loop() {
+      updateBall();
+      syncHud();
+      drawCourse();
+      requestAnimationFrame(loop);
+    }
+
+    powerRange.addEventListener('input', syncHud);
+    nextBtn.addEventListener('click', nextCourse);
+    restartBtn.addEventListener('click', resetCourse);
+    restartTop.addEventListener('click', resetCourse);
+
+    canvas.addEventListener('mousedown', handleDown);
+    canvas.addEventListener('mousemove', handleMove);
+    window.addEventListener('mouseup', handleUp);
+
+    canvas.addEventListener('touchstart', (e) => { e.preventDefault(); handleDown(e); }, { passive: false });
+    canvas.addEventListener('touchmove', (e) => { e.preventDefault(); handleMove(e); }, { passive: false });
+    window.addEventListener('touchend', handleUp, { passive: true });
+
+    loadCourse(level);
+    syncHud();
+    loop();
+  </script>
+</body>
+</html>

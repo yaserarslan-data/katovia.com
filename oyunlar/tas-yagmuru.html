@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katovia - Dağ Tırmanma</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    body {
+      margin: 0;
+      background: #1b1f2a;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+      background: linear-gradient(#87ceeb 0%, #cfefff 55%, #dfe9f3 100%);
+    }
+
+    .hud {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .panel {
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 14px;
+      padding: 10px 14px;
+      backdrop-filter: blur(4px);
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .centerMessage {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 14px;
+      background: rgba(0,0,0,0.35);
+      z-index: 20;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .centerMessage h1 {
+      margin: 0;
+      font-size: 42px;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+    }
+
+    .centerMessage p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .centerMessage button {
+      border: none;
+      border-radius: 14px;
+      padding: 14px 22px;
+      font-size: 18px;
+      cursor: pointer;
+      background: #ffd54a;
+      color: #111;
+      font-weight: bold;
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 14px;
+      z-index: 15;
+    }
+
+    .controls button {
+      width: 90px;
+      height: 90px;
+      border: none;
+      border-radius: 18px;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      background: rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      touch-action: manipulation;
+    }
+
+    .controls button:active {
+      transform: scale(0.97);
+    }
+
+    .help {
+      position: fixed;
+      bottom: 12px;
+      right: 12px;
+      z-index: 12;
+      background: rgba(0,0,0,0.4);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .controls button {
+        width: 78px;
+        height: 78px;
+        font-size: 24px;
+      }
+
+      .centerMessage h1 {
+        font-size: 34px;
+      }
+
+      .centerMessage p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div class="hud">
+    <div class="panel" id="hudLeft">Level 1</div>
+    <div class="panel" id="hudRight">0 / 1000 m</div>
+  </div>
+
+  <div class="help">
+    Klavye: ← Fren/Geri | → İleri | Boşluk Zıplama
+  </div>
+
+  <div class="controls">
+    <button id="leftBtn">◀</button>
+    <button id="jumpBtn">⤒</button>
+    <button id="rightBtn">▶</button>
+  </div>
+
+  <div class="centerMessage" id="messageBox">
+    <h1 id="messageTitle">Hazır</h1>
+    <p id="messageText">Oyunu başlat</p>
+    <button id="messageBtn">Başlat</button>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("game");
+    const ctx = canvas.getContext("2d");
+
+    const hudLeft = document.getElementById("hudLeft");
+    const hudRight = document.getElementById("hudRight");
+
+    const messageBox = document.getElementById("messageBox");
+    const messageTitle = document.getElementById("messageTitle");
+    const messageText = document.getElementById("messageText");
+    const messageBtn = document.getElementById("messageBtn");
+
+    const leftBtn = document.getElementById("leftBtn");
+    const rightBtn = document.getElementById("rightBtn");
+    const jumpBtn = document.getElementById("jumpBtn");
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener("resize", resize);
+
+    const LEVELS = [
+      { target: 10000, rockInterval: 900, rockSpeedMin: 4, rockSpeedMax: 6 },
+      { target: 12000, rockInterval: 600, rockSpeedMin: 4.5, rockSpeedMax: 6.8 },
+      { target: 15000, rockInterval: 550, rockSpeedMin: 5, rockSpeedMax: 7.2 },
+      { target: 18000, rockInterval: 440,  rockSpeedMin: 5.5, rockSpeedMax: 7.8 },
+      { target: 20000, rockInterval: 350,  rockSpeedMin: 6, rockSpeedMax: 8.5 }
+    ];
+
+    let gameState = "menu"; // menu, playing, gameover, levelclear, win
+    let levelIndex = 0;
+    let worldDistance = 0;
+    let lastTime = 0;
+    let lastRockSpawn = 0;
+
+    const keys = {
+      left: false,
+      right: false,
+      jump: false
+    };
+
+    const car = {
+      x: 180,
+      y: 0,
+      w: 78,
+      h: 34,
+      speed: 0.8,        // yavaş başlar
+      maxSpeed: 6.5,
+      minReverse: -1.6,
+      accel: 0.045,
+      brake: 0.08,
+      gravity: 0.45,
+      vy: 0,
+      jumpPower: -9.5,
+      onGround: false
+    };
+
+    let rocks = [];
+
+    const terrain = {
+      segmentWidth: 320,
+      points: []
+    };
+
+    function generateTerrain() {
+      terrain.points = [];
+      let x = -400;
+      let y = canvas.height * 0.74;
+
+      // Düz + dağ + düz + dağ + düz karışık bir rota
+      const patterns = [
+        { type: "flat", len: 5 },
+        { type: "up", len: 4 },
+        { type: "flat", len: 3 },
+        { type: "down", len: 3 },
+        { type: "flat", len: 4 },
+        { type: "up", len: 5 },
+        { type: "flat", len: 3 },
+        { type: "down", len: 4 },
+        { type: "flat", len: 5 },
+      ];
+
+      let pi = 0;
+      while (terrain.points.length < 80) {
+        const p = patterns[pi % patterns.length];
+        for (let i = 0; i < p.len; i++) {
+          terrain.points.push({ x, y });
+
+          x += terrain.segmentWidth;
+
+          if (p.type === "flat") {
+            y += 0;
+          } else if (p.type === "up") {
+            y -= 42;
+          } else if (p.type === "down") {
+            y += 42;
+          }
+
+          // ekran dışına taşmasın
+          y = Math.max(canvas.height * 0.38, Math.min(canvas.height * 0.82, y));
+        }
+        pi++;
+      }
+    }
+
+    function terrainYAt(worldX) {
+      for (let i = 0; i < terrain.points.length - 1; i++) {
+        const a = terrain.points[i];
+        const b = terrain.points[i + 1];
+        if (worldX >= a.x && worldX <= b.x) {
+          const t = (worldX - a.x) / (b.x - a.x);
+          return a.y + (b.y - a.y) * t;
+        }
+      }
+      return canvas.height * 0.75;
+    }
+
+    function terrainSlopeAt(worldX) {
+      for (let i = 0; i < terrain.points.length - 1; i++) {
+        const a = terrain.points[i];
+        const b = terrain.points[i + 1];
+        if (worldX >= a.x && worldX <= b.x) {
+          return (b.y - a.y) / (b.x - a.x);
+        }
+      }
+      return 0;
+    }
+
+    function resetLevel() {
+      worldDistance = 0;
+      rocks = [];
+      lastRockSpawn = 0;
+      car.speed = 0.8;
+      car.vy = 0;
+      car.onGround = false;
+      generateTerrain();
+      gameState = "playing";
+      hideMessage();
+    }
+
+    function nextLevel() {
+      levelIndex++;
+      if (levelIndex >= LEVELS.length) {
+        gameState = "win";
+        showMessage("Tebrikler!", "5 level bitti. Oyunu tamamladın.", "Başa Dön");
+      } else {
+        resetLevel();
+      }
+    }
+
+    function restartGame() {
+      levelIndex = 0;
+      resetLevel();
+    }
+
+    function showMessage(title, text, btnText) {
+      messageTitle.textContent = title;
+      messageText.textContent = text;
+      messageBtn.textContent = btnText;
+      messageBox.style.display = "flex";
+    }
+
+    function hideMessage() {
+      messageBox.style.display = "none";
+    }
+
+    function spawnRock(now) {
+      const level = LEVELS[levelIndex];
+      if (now - lastRockSpawn < level.rockInterval) return;
+
+      lastRockSpawn = now;
+
+      const spawnAhead = 400 + Math.random() * 600;
+      const rockWorldX = worldDistance + car.x + spawnAhead;
+      const rockScreenY = -40 - Math.random() * 120;
+      const radius = 16 + Math.random() * 18;
+      const speed = level.rockSpeedMin + Math.random() * (level.rockSpeedMax - level.rockSpeedMin);
+
+      rocks.push({
+        worldX: rockWorldX,
+        y: rockScreenY,
+        r: radius,
+        vy: speed,
+        rot: Math.random() * Math.PI * 2
+      });
+    }
+
+    function update(dt, now) {
+      if (gameState !== "playing") return;
+
+      const level = LEVELS[levelIndex];
+
+      // Kontroller
+      if (keys.right) {
+        car.speed += car.accel;
+      }
+
+      if (keys.left) {
+        if (car.speed > 0) {
+          car.speed -= car.brake;
+        } else {
+          car.speed -= car.accel * 0.55;
+        }
+      }
+
+      // Tuşa basılmıyorsa hafif sürtünme
+      if (!keys.left && !keys.right) {
+        car.speed *= 0.992;
+      }
+
+      // Hız limitleri
+      if (car.speed > car.maxSpeed) car.speed = car.maxSpeed;
+      if (car.speed < car.minReverse) car.speed = car.minReverse;
+
+      // Yokuş etkisi
+      const slope = terrainSlopeAt(worldDistance + car.x + car.w * 0.5);
+      if (slope < -0.02) {
+        car.speed -= 0.018; // yukarı tırmanırken biraz bayılsın
+      } else if (slope > 0.02) {
+        car.speed += 0.008; // aşağı doğru az rahatlasın
+      }
+
+      // Çok küçük hızları 0 yap
+      if (Math.abs(car.speed) < 0.03) car.speed = 0;
+
+      // Zıplama
+      if (keys.jump && car.onGround) {
+        car.vy = car.jumpPower;
+        car.onGround = false;
+      }
+      keys.jump = false; // space tek basış gibi davransın
+
+      // Düşey fizik
+      car.vy += car.gravity;
+      car.y += car.vy;
+
+      // Dünya ilerlesin
+      worldDistance += car.speed * dt * 0.06;
+      if (worldDistance < 0) worldDistance = 0;
+
+      // Zemin teması
+      const groundY = terrainYAt(worldDistance + car.x + car.w * 0.5);
+      const carBaseY = groundY - 14;
+      if (car.y > carBaseY) {
+        car.y = carBaseY;
+        car.vy = 0;
+        car.onGround = true;
+      }
+
+      spawnRock(now);
+
+      // Taş güncelle
+      for (let i = rocks.length - 1; i >= 0; i--) {
+        const rock = rocks[i];
+        rock.y += rock.vy;
+        rock.rot += 0.05;
+
+        const rockGroundY = terrainYAt(rock.worldX);
+        if (rock.y > rockGroundY + 100) {
+          rocks.splice(i, 1);
+          continue;
+        }
+
+        // Çarpışma
+        const rockScreenX = rock.worldX - worldDistance;
+        const carCenterX = car.x + car.w / 2;
+        const carCenterY = car.y - car.h / 2;
+
+        const closestX = Math.max(car.x, Math.min(rockScreenX, car.x + car.w));
+        const closestY = Math.max(car.y - car.h, Math.min(rock.y, car.y));
+        const dx = rockScreenX - closestX;
+        const dy = rock.y - closestY;
+
+        if ((dx * dx + dy * dy) < rock.r * rock.r) {
+          gameState = "gameover";
+          showMessage("Game Over", "Taşa çarptın. Tekrar dene.", "Tekrar Başlat");
+          return;
+        }
+      }
+
+      // Level tamamlandı
+      if (worldDistance >= level.target) {
+        gameState = "levelclear";
+        if (levelIndex === LEVELS.length - 1) {
+          showMessage("Bölüm Tamam!", "Son leveli geçtin.", "Oyunu Bitir");
+        } else {
+          showMessage(
+            "Bölüm Tamam!",
+            `Level ${levelIndex + 1} bitti. Sıradaki levele geç.`,
+            "Sonraki Level"
+          );
+        }
+      }
+    }
+
+    function drawBackground() {
+      // Güneş
+      ctx.beginPath();
+      ctx.arc(canvas.width - 120, 100, 42, 0, Math.PI * 2);
+      ctx.fillStyle = "#ffd45c";
+      ctx.fill();
+
+      // Uzak dağlar
+      ctx.fillStyle = "#8aa0b3";
+      ctx.beginPath();
+      ctx.moveTo(0, canvas.height * 0.63);
+      for (let x = 0; x <= canvas.width; x += 120) {
+        const peak = canvas.height * (0.42 + Math.random() * 0.08);
+        ctx.lineTo(x + 60, peak);
+        ctx.lineTo(x + 120, canvas.height * 0.63);
+      }
+      ctx.lineTo(canvas.width, canvas.height);
+      ctx.lineTo(0, canvas.height);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    function drawTerrain() {
+      ctx.beginPath();
+      ctx.moveTo(0, canvas.height);
+
+      for (let i = 0; i < terrain.points.length; i++) {
+        const p = terrain.points[i];
+        const sx = p.x - worldDistance;
+        ctx.lineTo(sx, p.y);
+      }
+
+      ctx.lineTo(canvas.width, canvas.height);
+      ctx.closePath();
+
+      const grad = ctx.createLinearGradient(0, canvas.height * 0.4, 0, canvas.height);
+      grad.addColorStop(0, "#7e6b54");
+      grad.addColorStop(1, "#4e3e2d");
+      ctx.fillStyle = grad;
+      ctx.fill();
+
+      // Yol çizgisi
+      ctx.beginPath();
+      for (let i = 0; i < terrain.points.length; i++) {
+        const p = terrain.points[i];
+        const sx = p.x - worldDistance;
+        const sy = p.y - 8;
+        if (i === 0) ctx.moveTo(sx, sy);
+        else ctx.lineTo(sx, sy);
+      }
+      ctx.strokeStyle = "#d9c28a";
+      ctx.lineWidth = 6;
+      ctx.stroke();
+    }
+
+    function drawFinishFlag() {
+      const target = LEVELS[levelIndex].target;
+      const flagX = target - worldDistance + 80;
+      const flagY = terrainYAt(target + 80);
+
+      if (flagX > -50 && flagX < canvas.width + 50) {
+        ctx.strokeStyle = "#222";
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(flagX, flagY - 80);
+        ctx.lineTo(flagX, flagY - 10);
+        ctx.stroke();
+
+        ctx.fillStyle = "#ff3b3b";
+        ctx.fillRect(flagX, flagY - 80, 34, 20);
+      }
+    }
+
+    function drawCar() {
+      const wheelY = car.y - 2;
+
+      // gövde
+      ctx.fillStyle = "#d62d2d";
+      ctx.fillRect(car.x + 8, car.y - car.h, car.w - 16, car.h - 8);
+
+      // kabin
+      ctx.fillStyle = "#a81d1d";
+      ctx.fillRect(car.x + 22, car.y - car.h - 10, 28, 16);
+
+      // cam
+      ctx.fillStyle = "#9ed8ff";
+      ctx.fillRect(car.x + 26, car.y - car.h - 7, 20, 10);
+
+      // tekerler
+      ctx.fillStyle = "#1b1b1b";
+      ctx.beginPath();
+      ctx.arc(car.x + 20, wheelY, 10, 0, Math.PI * 2);
+      ctx.arc(car.x + car.w - 20, wheelY, 10, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = "#777";
+      ctx.beginPath();
+      ctx.arc(car.x + 20, wheelY, 4, 0, Math.PI * 2);
+      ctx.arc(car.x + car.w - 20, wheelY, 4, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawRocks() {
+      for (const rock of rocks) {
+        const x = rock.worldX - worldDistance;
+
+        ctx.save();
+        ctx.translate(x, rock.y);
+        ctx.rotate(rock.rot);
+
+        ctx.beginPath();
+        ctx.moveTo(-rock.r, -rock.r * 0.2);
+        ctx.lineTo(-rock.r * 0.2, -rock.r);
+        ctx.lineTo(rock.r * 0.8, -rock.r * 0.4);
+        ctx.lineTo(rock.r, rock.r * 0.3);
+        ctx.lineTo(rock.r * 0.2, rock.r);
+        ctx.lineTo(-rock.r * 0.9, rock.r * 0.5);
+        ctx.closePath();
+
+        ctx.fillStyle = "#6e6e6e";
+        ctx.fill();
+        ctx.strokeStyle = "#4a4a4a";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.restore();
+      }
+    }
+
+    function drawDistanceBar() {
+      const level = LEVELS[levelIndex];
+      const x = canvas.width * 0.5 - 180;
+      const y = 58;
+      const w = 360;
+      const h = 12;
+
+      ctx.fillStyle = "rgba(255,255,255,0.2)";
+      ctx.fillRect(x, y, w, h);
+
+      const progress = Math.max(0, Math.min(1, worldDistance / level.target));
+      ctx.fillStyle = "#ffd54a";
+      ctx.fillRect(x, y, w * progress, h);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      drawBackground();
+      drawTerrain();
+      drawFinishFlag();
+      drawRocks();
+      drawCar();
+      drawDistanceBar();
+
+      hudLeft.textContent = `Level ${Math.min(levelIndex + 1, 5)}  |  Hız: ${Math.max(0, car.speed).toFixed(1)}`;
+      hudRight.textContent = `${Math.floor(worldDistance)} / ${LEVELS[levelIndex].target} m`;
+    }
+
+    function gameLoop(timestamp) {
+      if (!lastTime) lastTime = timestamp;
+      const dt = Math.min(24, timestamp - lastTime);
+      lastTime = timestamp;
+
+      update(dt, timestamp);
+      draw();
+      requestAnimationFrame(gameLoop);
+    }
+
+    // Klavye
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "ArrowLeft") {
+        keys.left = true;
+        e.preventDefault();
+      }
+      if (e.code === "ArrowRight") {
+        keys.right = true;
+        e.preventDefault();
+      }
+      if (e.code === "Space") {
+        keys.jump = true;
+        e.preventDefault();
+      }
+    });
+
+    window.addEventListener("keyup", (e) => {
+      if (e.code === "ArrowLeft") {
+        keys.left = false;
+        e.preventDefault();
+      }
+      if (e.code === "ArrowRight") {
+        keys.right = false;
+        e.preventDefault();
+      }
+    });
+
+    // Mobil butonlar
+    function bindHoldButton(btn, keyName) {
+      const onPress = (e) => {
+        e.preventDefault();
+        keys[keyName] = true;
+      };
+      const onRelease = (e) => {
+        e.preventDefault();
+        keys[keyName] = false;
+      };
+
+      btn.addEventListener("mousedown", onPress);
+      btn.addEventListener("mouseup", onRelease);
+      btn.addEventListener("mouseleave", onRelease);
+
+      btn.addEventListener("touchstart", onPress, { passive: false });
+      btn.addEventListener("touchend", onRelease, { passive: false });
+      btn.addEventListener("touchcancel", onRelease, { passive: false });
+    }
+
+    bindHoldButton(leftBtn, "left");
+    bindHoldButton(rightBtn, "right");
+
+    function bindTapButton(btn, keyName) {
+      const trigger = (e) => {
+        e.preventDefault();
+        keys[keyName] = true;
+      };
+      btn.addEventListener("mousedown", trigger);
+      btn.addEventListener("touchstart", trigger, { passive: false });
+    }
+
+    bindTapButton(jumpBtn, "jump");
+
+    messageBtn.addEventListener("click", () => {
+      if (gameState === "menu") {
+        resetLevel();
+      } else if (gameState === "gameover") {
+        resetLevel();
+      } else if (gameState === "levelclear") {
+        if (levelIndex === LEVELS.length - 1) {
+          gameState = "win";
+          showMessage("Tebrikler!", "5 leveli de bitirdin.", "Başa Dön");
+        } else {
+          nextLevel();
+        }
+      } else if (gameState === "win") {
+        restartGame();
+      }
+    });
+
+    // İlk açılış
+    generateTerrain();
+    showMessage(
+      "Dağ Tırmanma",
+      "Sağ ile hızlan, sol ile fren yap veya geri git, boşluk ile zıpla. Taşlara çarpmadan hedef metreye ulaş.",
+      "Başlat"
+    );
+
+    requestAnimationFrame(gameLoop);
+  </script>
+</body>
+</html>

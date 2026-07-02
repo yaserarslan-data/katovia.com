@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katovia | Bilardo</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, #1d2a35 0%, #0e141a 45%, #070b0f 100%);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 18px;
+      background: rgba(10, 14, 18, 0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .back-btn {
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,0.14);
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      font-weight: 900;
+    }
+
+    .hero p {
+      margin: 0;
+      color: rgba(255,255,255,0.78);
+      font-size: 15px;
+    }
+
+    .hud {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .hud-box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .hud-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hud-value {
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .game-wrap {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    }
+
+    .canvas-box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      overflow: auto;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.12);
+      padding: 10px;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100%;
+      border-radius: 18px;
+      background: #145e36;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      touch-action: none;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 12px;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    .info-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 14px;
+      color: rgba(255,255,255,0.84);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f5c84a, #dca61e);
+      color: #151515;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.04);
+    }
+
+    .btn-dark {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .btn-dark:hover {
+      background: rgba(255,255,255,0.16);
+    }
+
+    .bottom-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    .panel-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .panel-card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .panel-card p {
+      margin: 0;
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .hud {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .controls {
+        grid-template-columns: 1fr;
+      }
+
+      .bottom-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-left">
+      <a class="back-btn" href="/oyunlar">← Oyunlara Dön</a>
+      <div class="brand">Katovia</div>
+    </div>
+  </div>
+
+  <main class="page">
+    <section class="hero">
+      <h1>Bilardo</h1>
+      <p>Doğru açıyı bul, gücü ayarla, masayı temizle.</p>
+    </section>
+
+    <section class="hud">
+      <div class="hud-box">
+        <div class="hud-label">Skor</div>
+        <div class="hud-value" id="score">0</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-label">Kalan Top</div>
+        <div class="hud-value" id="remaining">10</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-label">Atış</div>
+        <div class="hud-value" id="shots">0</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-label">Durum</div>
+        <div class="hud-value" id="status">Hazır</div>
+      </div>
+    </section>
+
+    <section class="game-wrap">
+      <div class="canvas-box">
+        <canvas id="gameCanvas" width="1000" height="560"></canvas>
+      </div>
+
+      <div class="controls">
+        <div class="info-box">
+          <strong>Kontrol:</strong> Beyaz topun üzerinden fareyi çekip yön ver.  
+          Uzağa çekersen daha güçlü vurursun. Tüm renkli topları ceplere sok.
+        </div>
+        <button class="btn btn-dark" id="resetBtn">Sıfırla</button>
+        <button class="btn btn-primary" id="newGameBtn">Yeni Oyun</button>
+      </div>
+    </section>
+
+    <section class="bottom-panel">
+      <div class="panel-card">
+        <h3>Oyun Mantığı</h3>
+        <p>Her renkli top cebe girince skor kazanırsın. Beyaz top girerse tekrar başlangıç noktasına döner ve puan cezası yersin.</p>
+      </div>
+      <div class="panel-card">
+        <h3>İpucu</h3>
+        <p>Çok sert vuruşlar her zaman iyi değildir. Dar açıyla yavaş vuruş bazen daha temiz sonuç verir.</p>
+      </div>
+      <div class="panel-card">
+        <h3>Hedef</h3>
+        <p>En az atışla masayı temizlemeye çalış. İstersen sonra buna seviye sistemi de ekleriz.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const scoreEl = document.getElementById("score");
+    const remainingEl = document.getElementById("remaining");
+    const shotsEl = document.getElementById("shots");
+    const statusEl = document.getElementById("status");
+    const resetBtn = document.getElementById("resetBtn");
+    const newGameBtn = document.getElementById("newGameBtn");
+
+    const table = {
+      x: 60,
+      y: 60,
+      w: 880,
+      h: 440,
+      cushion: 24,
+      pocketR: 24
+    };
+
+    const friction = 0.992;
+    const minSpeed = 0.03;
+    const ballR = 12;
+
+    let score = 0;
+    let shots = 0;
+    let aiming = false;
+    let dragStart = null;
+    let dragCurrent = null;
+    let gameOver = false;
+
+    const cueBallStart = { x: table.x + table.w * 0.27, y: table.y + table.h / 2 };
+
+    const pockets = [
+      { x: table.x, y: table.y },
+      { x: table.x + table.w / 2, y: table.y },
+      { x: table.x + table.w, y: table.y },
+      { x: table.x, y: table.y + table.h },
+      { x: table.x + table.w / 2, y: table.y + table.h },
+      { x: table.x + table.w, y: table.y + table.h }
+    ];
+
+    const ballColors = [
+      "#f44336", "#ff9800", "#ffeb3b", "#4caf50", "#00bcd4",
+      "#2196f3", "#9c27b0", "#e91e63", "#8bc34a", "#ffc107"
+    ];
+
+    let cueBall;
+    let objectBalls = [];
+
+    function createBall(x, y, color, isCue = false) {
+      return {
+        x, y,
+        vx: 0, vy: 0,
+        r: ballR,
+        color,
+        isCue,
+        active: true
+      };
+    }
+
+    function setupBalls() {
+      cueBall = createBall(cueBallStart.x, cueBallStart.y, "#ffffff", true);
+      objectBalls = [];
+
+      const startX = table.x + table.w * 0.72;
+      const startY = table.y + table.h / 2;
+      let colorIndex = 0;
+
+      for (let row = 0; row < 4; row++) {
+        for (let col = 0; col <= row; col++) {
+          if (colorIndex >= 10) break;
+          const x = startX + row * (ballR * 2.05);
+          const y = startY - row * ballR + col * (ballR * 2);
+          objectBalls.push(createBall(x, y, ballColors[colorIndex]));
+          colorIndex++;
+        }
+      }
+    }
+
+    function resetGame(full = true) {
+      if (full) {
+        score = 0;
+        shots = 0;
+      }
+      aiming = false;
+      dragStart = null;
+      dragCurrent = null;
+      gameOver = false;
+      setupBalls();
+      updateHUD();
+      statusEl.textContent = "Hazır";
+    }
+
+    function updateHUD() {
+      const remaining = objectBalls.filter(b => b.active).length;
+      scoreEl.textContent = score;
+      remainingEl.textContent = remaining;
+      shotsEl.textContent = shots;
+    }
+
+    function drawTable() {
+      // dış gövde
+      ctx.fillStyle = "#4e2d16";
+      roundRect(table.x - 28, table.y - 28, table.w + 56, table.h + 56, 28);
+      ctx.fill();
+
+      // iç saha
+      ctx.fillStyle = "#156c3e";
+      roundRect(table.x, table.y, table.w, table.h, 18);
+      ctx.fill();
+
+      // band çizgileri
+      ctx.strokeStyle = "rgba(255,255,255,0.08)";
+      ctx.lineWidth = 2;
+      roundRect(table.x + 8, table.y + 8, table.w - 16, table.h - 16, 14);
+      ctx.stroke();
+
+      // cepler
+      for (const p of pockets) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, table.pocketR, 0, Math.PI * 2);
+        ctx.fillStyle = "#0a0a0a";
+        ctx.fill();
+      }
+    }
+
+    function drawBall(ball) {
+      if (!ball.active) return;
+
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
+      ctx.fillStyle = ball.color;
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(ball.x - ball.r * 0.28, ball.y - ball.r * 0.28, ball.r * 0.35, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(255,255,255,0.35)";
+      ctx.fill();
+
+      if (ball.isCue) {
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, ball.r * 0.22, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(0,0,0,0.16)";
+        ctx.fill();
+      }
+    }
+
+    function drawAim() {
+      if (!aiming || !dragCurrent) return;
+      if (ballsMoving()) return;
+
+      const dx = dragCurrent.x - cueBall.x;
+      const dy = dragCurrent.y - cueBall.y;
+
+      ctx.beginPath();
+      ctx.moveTo(cueBall.x, cueBall.y);
+      ctx.lineTo(cueBall.x + dx, cueBall.y + dy);
+      ctx.strokeStyle = "rgba(255,255,255,0.75)";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([10, 8]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      const power = Math.min(Math.hypot(dx, dy), 160);
+      ctx.fillStyle = "rgba(255,255,255,0.9)";
+      ctx.font = "bold 16px Arial";
+      ctx.fillText("Güç: " + Math.round(power), cueBall.x + 18, cueBall.y - 18);
+    }
+
+    function roundRect(x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.lineTo(x + w - r, y);
+      ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+      ctx.lineTo(x + w, y + h - r);
+      ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+      ctx.lineTo(x + r, y + h);
+      ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+      ctx.lineTo(x, y + r);
+      ctx.quadraticCurveTo(x, y, x + r, y);
+      ctx.closePath();
+    }
+
+    function allBalls() {
+      return [cueBall, ...objectBalls.filter(b => b.active)];
+    }
+
+    function ballsMoving() {
+      return allBalls().some(b => Math.abs(b.vx) > minSpeed || Math.abs(b.vy) > minSpeed);
+    }
+
+    function updateBall(ball) {
+      if (!ball.active) return;
+
+      ball.x += ball.vx;
+      ball.y += ball.vy;
+
+      ball.vx *= friction;
+      ball.vy *= friction;
+
+      if (Math.abs(ball.vx) < minSpeed) ball.vx = 0;
+      if (Math.abs(ball.vy) < minSpeed) ball.vy = 0;
+
+      const left = table.x + table.cushion + ball.r;
+      const right = table.x + table.w - table.cushion - ball.r;
+      const top = table.y + table.cushion + ball.r;
+      const bottom = table.y + table.h - table.cushion - ball.r;
+
+      if (ball.x < left) {
+        ball.x = left;
+        ball.vx *= -1;
+      }
+      if (ball.x > right) {
+        ball.x = right;
+        ball.vx *= -1;
+      }
+      if (ball.y < top) {
+        ball.y = top;
+        ball.vy *= -1;
+      }
+      if (ball.y > bottom) {
+        ball.y = bottom;
+        ball.vy *= -1;
+      }
+
+      for (const p of pockets) {
+        const dx = ball.x - p.x;
+        const dy = ball.y - p.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < table.pocketR - 3) {
+          pocketBall(ball);
+          break;
+        }
+      }
+    }
+
+    function pocketBall(ball) {
+      if (!ball.active) return;
+
+      if (ball.isCue) {
+        ball.x = cueBallStart.x;
+        ball.y = cueBallStart.y;
+        ball.vx = 0;
+        ball.vy = 0;
+        score = Math.max(0, score - 5);
+        statusEl.textContent = "Beyaz top cebe girdi";
+      } else {
+        ball.active = false;
+        ball.vx = 0;
+        ball.vy = 0;
+        score += 10;
+        statusEl.textContent = "Top cebe girdi";
+      }
+
+      updateHUD();
+      checkWin();
+    }
+
+    function resolveCollisions() {
+      const balls = allBalls();
+
+      for (let i = 0; i < balls.length; i++) {
+        for (let j = i + 1; j < balls.length; j++) {
+          const a = balls[i];
+          const b = balls[j];
+          if (!a.active || !b.active) continue;
+
+          const dx = b.x - a.x;
+          const dy = b.y - a.y;
+          const dist = Math.hypot(dx, dy);
+          const minDist = a.r + b.r;
+
+          if (dist > 0 && dist < minDist) {
+            const nx = dx / dist;
+            const ny = dy / dist;
+            const overlap = minDist - dist;
+
+            a.x -= nx * overlap / 2;
+            a.y -= ny * overlap / 2;
+            b.x += nx * overlap / 2;
+            b.y += ny * overlap / 2;
+
+            const dvx = a.vx - b.vx;
+            const dvy = a.vy - b.vy;
+            const impact = dvx * nx + dvy * ny;
+
+            if (impact < 0) continue;
+
+            const impulse = impact;
+            a.vx -= impulse * nx;
+            a.vy -= impulse * ny;
+            b.vx += impulse * nx;
+            b.vy += impulse * ny;
+          }
+        }
+      }
+    }
+
+    function checkWin() {
+      const remaining = objectBalls.filter(b => b.active).length;
+      if (remaining === 0) {
+        gameOver = true;
+        statusEl.textContent = "Bölüm temizlendi!";
+      }
+    }
+
+    function update() {
+      updateBall(cueBall);
+      for (const ball of objectBalls) updateBall(ball);
+      resolveCollisions();
+
+      if (!ballsMoving() && !gameOver && shots > 0) {
+        if (statusEl.textContent !== "Hazır") {
+          statusEl.textContent = "Hazır";
+        }
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawTable();
+      for (const ball of objectBalls) drawBall(ball);
+      drawBall(cueBall);
+      drawAim();
+    }
+
+    function loop() {
+      update();
+      draw();
+      requestAnimationFrame(loop);
+    }
+
+    function getPointerPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+
+      let clientX, clientY;
+
+      if (e.touches && e.touches[0]) {
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY;
+      } else if (e.changedTouches && e.changedTouches[0]) {
+        clientX = e.changedTouches[0].clientX;
+        clientY = e.changedTouches[0].clientY;
+      } else {
+        clientX = e.clientX;
+        clientY = e.clientY;
+      }
+
+      return {
+        x: (clientX - rect.left) * scaleX,
+        y: (clientY - rect.top) * scaleY
+      };
+    }
+
+    function canShoot() {
+      return !ballsMoving() && !gameOver;
+    }
+
+    function pointerDown(e) {
+      if (!canShoot()) return;
+      const pos = getPointerPos(e);
+      const dist = Math.hypot(pos.x - cueBall.x, pos.y - cueBall.y);
+
+      if (dist <= 40) {
+        aiming = true;
+        dragStart = { x: cueBall.x, y: cueBall.y };
+        dragCurrent = pos;
+        statusEl.textContent = "Nişan alınıyor";
+      }
+    }
+
+    function pointerMove(e) {
+      if (!aiming) return;
+      dragCurrent = getPointerPos(e);
+    }
+
+    function pointerUp(e) {
+      if (!aiming) return;
+
+      dragCurrent = getPointerPos(e);
+
+      const dx = cueBall.x - dragCurrent.x;
+      const dy = cueBall.y - dragCurrent.y;
+      const power = Math.min(Math.hypot(dx, dy), 160);
+      const angle = Math.atan2(dy, dx);
+      const speed = power * 0.12;
+
+      cueBall.vx = Math.cos(angle) * speed;
+      cueBall.vy = Math.sin(angle) * speed;
+
+      shots++;
+      aiming = false;
+      dragStart = null;
+      dragCurrent = null;
+      statusEl.textContent = "Toplar hareket ediyor";
+      updateHUD();
+    }
+
+    canvas.addEventListener("mousedown", pointerDown);
+    canvas.addEventListener("mousemove", pointerMove);
+    canvas.addEventListener("mouseup", pointerUp);
+    canvas.addEventListener("mouseleave", pointerUp);
+
+    canvas.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      pointerDown(e);
+    }, { passive: false });
+
+    canvas.addEventListener("touchmove", (e) => {
+      e.preventDefault();
+      pointerMove(e);
+    }, { passive: false });
+
+    canvas.addEventListener("touchend", (e) => {
+      e.preventDefault();
+      pointerUp(e);
+    }, { passive: false });
+
+    resetBtn.addEventListener("click", () => resetGame(false));
+    newGameBtn.addEventListener("click", () => resetGame(true));
+
+    resetGame(true);
+    loop();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katovia - Tampon Gol</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --bg1: #020817;
+      --bg2: #071c4d;
+      --panel: rgba(15, 23, 42, 0.80);
+      --panel-border: rgba(255,255,255,0.12);
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.84);
+      --gold: #f7c948;
+      --green: #22c55e;
+      --red: #ef4444;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(35, 82, 205, 0.20), transparent 34%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      overflow-x: hidden;
+    }
+
+    .topbar {
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 28px;
+      background: rgba(0,0,0,0.28);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .back-btn,
+    .brand-box,
+    .hud-pill,
+    .control-btn,
+    .shoot-btn,
+    .message-btn,
+    .power-box {
+      border: 1px solid var(--panel-border);
+      background: var(--panel);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--text);
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .brand-box {
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .page-wrap {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 18px 18px 100px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      color: rgba(255,255,255,0.78);
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: rgba(255,255,255,0.88);
+      font-size: 18px;
+      margin: 0 0 10px;
+      line-height: 1.5;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 50px;
+      font-weight: 800;
+      text-shadow: 0 8px 24px rgba(0,0,0,0.32);
+    }
+
+    .hud {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 18px 0 16px;
+    }
+
+    .hud-pill {
+      padding: 14px 18px;
+      border-radius: 999px;
+      min-width: 120px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .game-shell {
+      position: relative;
+      width: min(96vw, 1500px);
+      margin: 0 auto;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+      background: rgba(255,255,255,0.04);
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 8.5;
+      background: linear-gradient(#8fcfff 0%, #8fd4ff 57%, #58b751 57%, #44a941 100%);
+    }
+
+    .overlay-message {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.32);
+      z-index: 4;
+      padding: 20px;
+    }
+
+    .overlay-card {
+      background: rgba(8, 15, 33, 0.84);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      padding: 28px 24px;
+      min-width: 320px;
+      max-width: 560px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .overlay-card h2 {
+      margin: 0 0 12px;
+      font-size: 44px;
+    }
+
+    .overlay-card p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .message-btn {
+      border-radius: 16px;
+      padding: 14px 22px;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+      background: var(--gold);
+      color: #111;
+    }
+
+    .controls-wrap {
+      width: min(96vw, 1500px);
+      margin: 18px auto 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .controls-left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .control-btn,
+    .shoot-btn {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      font-size: 32px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .shoot-btn {
+      width: 120px;
+      background: var(--gold);
+      color: #111;
+      font-size: 24px;
+    }
+
+    .power-box {
+      width: 170px;
+      height: 88px;
+      border-radius: 20px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .power-label {
+      font-size: 14px;
+      color: rgba(255,255,255,0.86);
+      font-weight: 700;
+    }
+
+    .power-track {
+      height: 16px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .power-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #22c55e, #facc15, #ef4444);
+      border-radius: 999px;
+    }
+
+    .help-box {
+      color: rgba(255,255,255,0.84);
+      background: rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 14px 16px;
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 470px;
+    }
+
+    @media (max-width: 900px) {
+      .topbar {
+        padding: 14px;
+        height: auto;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .hud-pill {
+        min-width: auto;
+        font-size: 14px;
+        padding: 12px 14px;
+      }
+
+      .control-btn,
+      .shoot-btn {
+        width: 74px;
+        height: 74px;
+        font-size: 26px;
+      }
+
+      .shoot-btn {
+        width: 100px;
+        font-size: 20px;
+      }
+
+      .power-box {
+        width: 150px;
+        height: 74px;
+      }
+
+      .overlay-card h2 {
+        font-size: 34px;
+      }
+
+      .overlay-card p {
+        font-size: 16px;
+      }
+
+      .controls-wrap {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page-wrap {
+        padding: 14px 10px 120px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .controls-wrap {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .controls-left {
+        justify-content: center;
+      }
+
+      .help-box {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="back-btn" href="/oyunlar/araba-oyunlari/">← Araba Oyunlarına Dön</a>
+    <div class="brand-box">Katovia</div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="hero">
+      <div class="eyebrow">Katovia Araba Oyunları</div>
+      <p class="subtitle">Açıyı ayarla, şutu doldur ve topu sabit gidip gelen kalecinin yanından köşeye gönder.</p>
+      <h1>Tampon Gol</h1>
+    </section>
+
+    <section class="hud">
+      <div class="hud-pill" id="scoreHud">Skor: 0</div>
+      <div class="hud-pill" id="shotsHud">Şut: 0</div>
+      <div class="hud-pill" id="goalsHud">Gol: 0</div>
+      <div class="hud-pill" id="bestHud">En İyi: 0</div>
+      <div class="hud-pill" id="angleHud">Açı: -8°</div>
+    </section>
+
+    <section class="game-shell">
+      <canvas id="gameCanvas" width="1600" height="850"></canvas>
+
+      <div class="overlay-message" id="overlay">
+        <div class="overlay-card">
+          <h2 id="overlayTitle">Tampon Gol</h2>
+          <p id="overlayText">
+            Sağ ve sol ile yer al. Yukarı ve aşağı ile açıyı ayarla.
+            Şut tuşuna basılı tut, bırakınca vur. Kalecinin olduğu anda top geri seker.
+          </p>
+          <button class="message-btn" id="overlayBtn">Başlat</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls-wrap">
+      <div class="controls-left">
+        <button class="control-btn" id="leftBtn">◀</button>
+        <button class="control-btn" id="upBtn">▲</button>
+        <button class="control-btn" id="downBtn">▼</button>
+        <button class="control-btn" id="rightBtn">▶</button>
+        <button class="shoot-btn" id="shootBtn">ŞUT</button>
+
+        <div class="power-box">
+          <div class="power-label">Şut Gücü</div>
+          <div class="power-track">
+            <div class="power-fill" id="powerFill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-box">
+        Klavye: ← Geri | → İleri | ↑ Açı Yukarı | ↓ Açı Aşağı | Boşluk Basılı Tut = Güç / Bırak = Şut
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const overlay = document.getElementById("overlay");
+    const overlayTitle = document.getElementById("overlayTitle");
+    const overlayText = document.getElementById("overlayText");
+    const overlayBtn = document.getElementById("overlayBtn");
+
+    const scoreHud = document.getElementById("scoreHud");
+    const shotsHud = document.getElementById("shotsHud");
+    const goalsHud = document.getElementById("goalsHud");
+    const bestHud = document.getElementById("bestHud");
+    const angleHud = document.getElementById("angleHud");
+    const powerFill = document.getElementById("powerFill");
+
+    const leftBtn = document.getElementById("leftBtn");
+    const rightBtn = document.getElementById("rightBtn");
+    const upBtn = document.getElementById("upBtn");
+    const downBtn = document.getElementById("downBtn");
+    const shootBtn = document.getElementById("shootBtn");
+
+    const STORAGE_KEY = "katovia_tampon_gol_best_v4";
+
+    const keys = {
+      left: false,
+      right: false,
+      up: false,
+      down: false,
+      charging: false
+    };
+
+    const game = {
+      state: "menu", // menu, playing, goal, save, miss
+      score: 0,
+      shots: 0,
+      goals: 0,
+      best: Number(localStorage.getItem(STORAGE_KEY) || 0),
+      resetTimer: 0
+    };
+
+    const field = {
+      x: 110,
+      y: 165,
+      w: 1320,
+      h: 560
+    };
+
+    const goal = {
+      x: 1210,
+      y: 260,
+      w: 205,
+      h: 290
+    };
+
+    const player = {
+      x: 240,
+      y: 530,
+      w: 100,
+      h: 56,
+      speed: 0,
+      accel: 0.22,
+      brake: 0.24,
+      friction: 0.90,
+      maxSpeed: 4.8,
+      minX: 165,
+      maxX: 960
+    };
+
+    const ball = {
+      x: 420,
+      y: 530,
+      r: 24,
+      vx: 0,
+      vy: 0,
+      friction: 0.992,
+      prevX: 420,
+      prevY: 530
+    };
+
+    const aim = {
+      angle: -8,
+      min: -38,
+      max: 38,
+      power: 0,
+      maxPower: 100
+    };
+
+    const keeper = {
+      x: 1282,
+      y: 340,
+      w: 50,
+      h: 170,
+      speed: 2.8,
+      dir: 1,
+      minY: 275,
+      maxY: 385
+    };
+
+    function clamp(v, min, max) {
+      return Math.max(min, Math.min(max, v));
+    }
+
+    function degToRad(d) {
+      return d * Math.PI / 180;
+    }
+
+    function dist(ax, ay, bx, by) {
+      return Math.hypot(ax - bx, ay - by);
+    }
+
+    function updateHud() {
+      scoreHud.textContent = `Skor: ${game.score}`;
+      shotsHud.textContent = `Şut: ${game.shots}`;
+      goalsHud.textContent = `Gol: ${game.goals}`;
+      bestHud.textContent = `En İyi: ${game.best}`;
+      angleHud.textContent = `Açı: ${aim.angle}°`;
+      powerFill.style.width = `${aim.power}%`;
+    }
+
+    function saveBest() {
+      if (game.score > game.best) {
+        game.best = game.score;
+        localStorage.setItem(STORAGE_KEY, String(game.best));
+      }
+    }
+
+    function showOverlay(title, text, btnText) {
+      overlayTitle.textContent = title;
+      overlayText.textContent = text;
+      overlayBtn.textContent = btnText;
+      overlay.style.display = "flex";
+    }
+
+    function hideOverlay() {
+      overlay.style.display = "none";
+    }
+
+    function resetRound() {
+      player.x = 240;
+      player.speed = 0;
+
+      ball.x = 420;
+      ball.y = 530;
+      ball.prevX = 420;
+      ball.prevY = 530;
+      ball.vx = 0;
+      ball.vy = 0;
+
+      aim.angle = -8;
+      aim.power = 0;
+
+      keeper.y = 340;
+      keeper.dir = 1;
+
+      updateHud();
+    }
+
+    function fullReset() {
+      game.score = 0;
+      game.shots = 0;
+      game.goals = 0;
+      game.resetTimer = 0;
+      resetRound();
+    }
+
+    function startGame() {
+      fullReset();
+      game.state = "playing";
+      hideOverlay();
+    }
+
+    function nextRound(type) {
+      game.state = type;
+      game.resetTimer = 90;
+      keys.charging = false;
+      aim.power = 0;
+      updateHud();
+    }
+
+    function ballIsMoving() {
+      return Math.abs(ball.vx) > 0.15 || Math.abs(ball.vy) > 0.15;
+    }
+
+    function playerBallAligned() {
+      const px = player.x + player.w + 8;
+      return dist(px, player.y - 2, ball.x, ball.y) < 78;
+    }
+
+    function updatePlayer() {
+      if (ballIsMoving()) {
+        player.speed *= 0.82;
+        player.x += player.speed;
+        player.x = clamp(player.x, player.minX, player.maxX);
+        return;
+      }
+
+      if (keys.right) player.speed += player.accel;
+      if (keys.left) {
+        if (player.speed > 0) player.speed -= player.brake;
+        else player.speed -= player.accel * 0.7;
+      }
+      if (!keys.left && !keys.right) player.speed *= player.friction;
+
+      player.speed = clamp(player.speed, -2.2, player.maxSpeed);
+      if (Math.abs(player.speed) < 0.03) player.speed = 0;
+
+      player.x += player.speed;
+      player.x = clamp(player.x, player.minX, player.maxX);
+    }
+
+    function keepBallNearPlayerBeforeShot() {
+      if (ballIsMoving()) return;
+
+      const targetX = player.x + player.w + 58;
+      const targetY = 530;
+      ball.x += (targetX - ball.x) * 0.18;
+      ball.y += (targetY - ball.y) * 0.18;
+    }
+
+    function updateAim() {
+      if (ballIsMoving()) return;
+
+      if (keys.up) aim.angle -= 1;
+      if (keys.down) aim.angle += 1;
+
+      aim.angle = clamp(aim.angle, aim.min, aim.max);
+
+      if (keys.charging && playerBallAligned()) {
+        aim.power += 1.4;
+        if (aim.power > aim.maxPower) aim.power = aim.maxPower;
+      }
+    }
+
+    function releaseShot() {
+      if (game.state !== "playing") return;
+      if (!playerBallAligned()) return;
+      if (ballIsMoving()) return;
+
+      const powerRatio = clamp(aim.power / 100, 0.15, 1);
+      const shotSpeed = 8 + powerRatio * 12;
+      const rad = degToRad(aim.angle);
+
+      ball.vx = Math.cos(rad) * shotSpeed;
+      ball.vy = Math.sin(rad) * shotSpeed;
+
+      game.shots += 1;
+      aim.power = 0;
+      updateHud();
+    }
+
+    function updateBall() {
+      ball.prevX = ball.x;
+      ball.prevY = ball.y;
+
+      ball.x += ball.vx;
+      ball.y += ball.vy;
+
+      ball.vx *= ball.friction;
+      ball.vy *= ball.friction;
+
+      if (Math.abs(ball.vx) < 0.03) ball.vx = 0;
+      if (Math.abs(ball.vy) < 0.03) ball.vy = 0;
+
+      if (ball.y - ball.r < field.y) {
+        ball.y = field.y + ball.r;
+        ball.vy *= -0.72;
+      }
+
+      if (ball.y + ball.r > field.y + field.h) {
+        ball.y = field.y + field.h - ball.r;
+        ball.vy *= -0.72;
+      }
+
+      if (ball.x - ball.r < field.x) {
+        ball.x = field.x + ball.r;
+        ball.vx *= -0.55;
+      }
+
+      const outsideGoalHeight = ball.y < goal.y || ball.y > goal.y + goal.h;
+      if (outsideGoalHeight && ball.x + ball.r > field.x + field.w) {
+        ball.x = field.x + field.w - ball.r;
+        ball.vx *= -0.6;
+      }
+    }
+
+    function updateKeeper() {
+      keeper.y += keeper.speed * keeper.dir;
+
+      if (keeper.y <= keeper.minY || keeper.y >= keeper.maxY) {
+        keeper.dir *= -1;
+      }
+
+      keeper.y = clamp(keeper.y, keeper.minY, keeper.maxY);
+    }
+
+    function checkCollisions() {
+      const keeperLineX = keeper.x + keeper.w / 2;
+
+      const prevFront = ball.prevX + ball.r;
+      const currFront = ball.x + ball.r;
+
+      const crossedKeeperLine =
+        ball.vx > 0 &&
+        prevFront < keeperLineX &&
+        currFront >= keeperLineX;
+
+      if (crossedKeeperLine) {
+        const t = (keeperLineX - prevFront) / (currFront - prevFront);
+        const yAtKeeperLine = ball.prevY + (ball.y - ball.prevY) * t;
+
+        const keeperTop = keeper.y;
+        const keeperBottom = keeper.y + keeper.h;
+
+        const touchedKeeper =
+          yAtKeeperLine >= keeperTop &&
+          yAtKeeperLine <= keeperBottom;
+
+        if (touchedKeeper) {
+          const keeperCenterY = keeper.y + keeper.h / 2;
+
+          ball.x = keeperLineX - ball.r - 6;
+          ball.y = yAtKeeperLine;
+          ball.vx = -Math.max(5.8, Math.abs(ball.vx) * 0.82);
+          ball.vy += (yAtKeeperLine - keeperCenterY) * 0.24;
+
+          saveBest();
+          updateHud();
+          nextRound("save");
+          return;
+        }
+      }
+
+      const goalLineX = goal.x + 8;
+      const crossedGoalLine =
+        ball.vx > 0 &&
+        prevFront < goalLineX &&
+        currFront >= goalLineX;
+
+      if (crossedGoalLine) {
+        const t = (goalLineX - prevFront) / (currFront - prevFront);
+        const yAtGoalLine = ball.prevY + (ball.y - ball.prevY) * t;
+
+        const withinGoalHeight =
+          yAtGoalLine >= goal.y &&
+          yAtGoalLine <= goal.y + goal.h;
+
+        if (withinGoalHeight) {
+          game.goals += 1;
+          game.score += 100;
+          saveBest();
+          updateHud();
+          nextRound("goal");
+          return;
+        }
+      }
+
+      if (ball.x - ball.r > field.x + field.w + 40) {
+        saveBest();
+        updateHud();
+        nextRound("miss");
+      }
+    }
+
+    function updateRoundState() {
+      if (game.state === "goal" || game.state === "save" || game.state === "miss") {
+        game.resetTimer--;
+        if (game.resetTimer <= 0) {
+          resetRound();
+          game.state = "playing";
+        }
+      }
+    }
+
+    function update() {
+      if (game.state !== "playing" && game.state !== "goal" && game.state !== "save" && game.state !== "miss") {
+        return;
+      }
+
+      if (game.state === "playing") {
+        updatePlayer();
+        keepBallNearPlayerBeforeShot();
+        updateAim();
+        updateBall();
+        updateKeeper();
+        checkCollisions();
+      } else {
+        updateBall();
+        updateKeeper();
+        updateRoundState();
+      }
+
+      updateHud();
+    }
+
+    function drawSky() {
+      ctx.fillStyle = "#89cdfa";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const clouds = [
+        [390, 118, 34],
+        [580, 92, 24],
+        [1230, 140, 28],
+        [1395, 105, 22]
+      ];
+
+      ctx.fillStyle = "rgba(255,255,255,0.85)";
+      for (const [x, y, r] of clouds) {
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.arc(x + 28, y - 8, r * 0.84, 0, Math.PI * 2);
+        ctx.arc(x + 58, y, r * 0.70, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function drawField() {
+      ctx.fillStyle = "#57ad4a";
+      ctx.fillRect(field.x, field.y, field.w, field.h);
+
+      ctx.fillStyle = "#6bc05f";
+      ctx.fillRect(field.x + 10, field.y + 10, field.w - 20, field.h - 20);
+
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 7;
+      ctx.strokeRect(field.x, field.y, field.w, field.h);
+
+      ctx.beginPath();
+      ctx.moveTo(field.x + field.w / 2, field.y);
+      ctx.lineTo(field.x + field.w / 2, field.y + field.h);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(field.x + field.w / 2, field.y + field.h / 2, 85, 0, Math.PI * 2);
+      ctx.stroke();
+
+      ctx.strokeRect(goal.x - 115, goal.y - 52, 115, goal.h + 104);
+    }
+
+    function drawGoal() {
+      const gx = goal.x;
+      const gy = goal.y;
+      const gw = goal.w;
+      const gh = goal.h;
+      const depth = 70;
+
+      ctx.strokeStyle = "#f8fafc";
+      ctx.lineWidth = 10;
+
+      ctx.strokeRect(gx, gy, gw, gh);
+      ctx.strokeRect(gx + depth, gy + 28, 10, gh - 56);
+
+      ctx.beginPath();
+      ctx.moveTo(gx + gw, gy);
+      ctx.lineTo(gx + gw + depth, gy + 28);
+      ctx.moveTo(gx + gw, gy + gh);
+      ctx.lineTo(gx + gw + depth, gy + gh - 28);
+      ctx.stroke();
+
+      ctx.strokeStyle = "rgba(255,255,255,0.32)";
+      ctx.lineWidth = 3;
+
+      for (let i = 1; i <= 7; i++) {
+        const yy = gy + (gh / 8) * i;
+        ctx.beginPath();
+        ctx.moveTo(gx + 8, yy);
+        ctx.lineTo(gx + gw + depth - 8, yy + ((i - 4) * 2));
+        ctx.stroke();
+      }
+
+      for (let i = 1; i <= 7; i++) {
+        const xx = gx + (gw / 8) * i;
+        ctx.beginPath();
+        ctx.moveTo(xx, gy + 8);
+        ctx.lineTo(xx + depth * 0.92, gy + gh - 8);
+        ctx.stroke();
+      }
+    }
+
+    function drawKeeper() {
+      const x = keeper.x;
+      const y = keeper.y;
+
+      ctx.fillStyle = "#0f172a";
+      ctx.fillRect(x + 14, y + 34, 22, 78);
+
+      ctx.beginPath();
+      ctx.arc(x + 25, y + 18, 18, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = "#facc15";
+      ctx.fillRect(x - 2, y + 52, 54, 16);
+
+      ctx.fillRect(x + 2, y + 98, 12, 32);
+      ctx.fillRect(x + 36, y + 98, 12, 32);
+
+      ctx.fillStyle = "#f8fafc";
+      ctx.fillRect(x - 6, y + 50, 10, 12);
+      ctx.fillRect(x + 48, y + 50, 10, 12);
+    }
+
+    function drawCar() {
+      const x = player.x;
+      const y = player.y;
+
+      ctx.fillStyle = "#d62828";
+      ctx.fillRect(x + 10, y - 44, 74, 32);
+      ctx.fillRect(x + 28, y - 64, 30, 20);
+
+      ctx.fillStyle = "#9bd5ff";
+      ctx.fillRect(x + 33, y - 60, 18, 10);
+
+      ctx.fillStyle = "#111827";
+      ctx.beginPath();
+      ctx.arc(x + 28, y, 14, 0, Math.PI * 2);
+      ctx.arc(x + 72, y, 14, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = "#94a3b8";
+      ctx.beginPath();
+      ctx.arc(x + 28, y, 6, 0, Math.PI * 2);
+      ctx.arc(x + 72, y, 6, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawBall() {
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
+      ctx.fillStyle = "#ffffff";
+      ctx.fill();
+      ctx.strokeStyle = "#111827";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, 7, 0, Math.PI * 2);
+      ctx.fillStyle = "#111827";
+      ctx.fill();
+    }
+
+    function drawAimArrow() {
+      if (ballIsMoving()) return;
+      if (!playerBallAligned()) return;
+
+      const startX = ball.x;
+      const startY = ball.y;
+      const len = 110;
+      const rad = degToRad(aim.angle);
+      const endX = startX + Math.cos(rad) * len;
+      const endY = startY + Math.sin(rad) * len;
+
+      ctx.save();
+      ctx.strokeStyle = "rgba(255,255,255,0.95)";
+      ctx.lineWidth = 6;
+      ctx.beginPath();
+      ctx.moveTo(startX, startY);
+      ctx.lineTo(endX, endY);
+      ctx.stroke();
+
+      ctx.fillStyle = "#f7c948";
+      const head = 18;
+      const angle = Math.atan2(endY - startY, endX - startX);
+      ctx.beginPath();
+      ctx.moveTo(endX, endY);
+      ctx.lineTo(
+        endX - head * Math.cos(angle - Math.PI / 6),
+        endY - head * Math.sin(angle - Math.PI / 6)
+      );
+      ctx.lineTo(
+        endX - head * Math.cos(angle + Math.PI / 6),
+        endY - head * Math.sin(angle + Math.PI / 6)
+      );
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawPowerHint() {
+      if (!keys.charging || ballIsMoving()) return;
+
+      ctx.save();
+      ctx.fillStyle = "rgba(0,0,0,0.55)";
+      ctx.fillRect(canvas.width / 2 - 150, 35, 300, 52);
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 26px Arial";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("Şut Gücü Doluyor", canvas.width / 2, 61);
+      ctx.restore();
+    }
+
+    function drawBanner(text, color) {
+      ctx.save();
+      ctx.globalAlpha = 0.95;
+      ctx.fillStyle = color;
+      ctx.fillRect(canvas.width / 2 - 180, 30, 360, 58);
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 30px Arial";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(text, canvas.width / 2, 59);
+      ctx.restore();
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawSky();
+      drawField();
+      drawGoal();
+      drawKeeper();
+      drawCar();
+      drawBall();
+      drawAimArrow();
+      drawPowerHint();
+
+      if (game.state === "goal") drawBanner("GOL!", "rgba(34,197,94,0.90)");
+      if (game.state === "save") drawBanner("Kaleci Kurtardı", "rgba(239,68,68,0.90)");
+      if (game.state === "miss") drawBanner("Dışarı Gitti", "rgba(245,158,11,0.92)");
+    }
+
+    function loop() {
+      update();
+      draw();
+      requestAnimationFrame(loop);
+    }
+
+    function setKey(name, state) {
+      keys[name] = state;
+    }
+
+    function bindHold(btn, keyName) {
+      const down = (e) => {
+        e.preventDefault();
+        setKey(keyName, true);
+      };
+      const up = (e) => {
+        e.preventDefault();
+        setKey(keyName, false);
+      };
+
+      btn.addEventListener("mousedown", down);
+      btn.addEventListener("mouseup", up);
+      btn.addEventListener("mouseleave", up);
+
+      btn.addEventListener("touchstart", down, { passive: false });
+      btn.addEventListener("touchend", up, { passive: false });
+      btn.addEventListener("touchcancel", up, { passive: false });
+    }
+
+    bindHold(leftBtn, "left");
+    bindHold(rightBtn, "right");
+    bindHold(upBtn, "up");
+    bindHold(downBtn, "down");
+
+    function shootDown(e) {
+      e.preventDefault();
+      if (game.state !== "playing") return;
+      if (!ballIsMoving() && playerBallAligned()) {
+        keys.charging = true;
+      }
+    }
+
+    function shootUp(e) {
+      e.preventDefault();
+      if (keys.charging) {
+        keys.charging = false;
+        releaseShot();
+      }
+    }
+
+    shootBtn.addEventListener("mousedown", shootDown);
+    shootBtn.addEventListener("mouseup", shootUp);
+    shootBtn.addEventListener("mouseleave", shootUp);
+    shootBtn.addEventListener("touchstart", shootDown, { passive: false });
+    shootBtn.addEventListener("touchend", shootUp, { passive: false });
+    shootBtn.addEventListener("touchcancel", shootUp, { passive: false });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "ArrowLeft") {
+        keys.left = true;
+        e.preventDefault();
+      }
+      if (e.code === "ArrowRight") {
+        keys.right = true;
+        e.preventDefault();
+      }
+      if (e.code === "ArrowUp") {
+        keys.up = true;
+        e.preventDefault();
+      }
+      if (e.code === "ArrowDown") {
+        keys.down = true;
+        e.preventDefault();
+      }
+      if (e.code === "Space") {
+        if (!keys.charging && !ballIsMoving() && playerBallAligned() && game.state === "playing") {
+          keys.charging = true;
+        }
+        e.preventDefault();
+      }
+    });
+
+    window.addEventListener("keyup", (e) => {
+      if (e.code === "ArrowLeft") {
+        keys.left = false;
+        e.preventDefault();
+      }
+      if (e.code === "ArrowRight") {
+        keys.right = false;
+        e.preventDefault();
+      }
+      if (e.code === "ArrowUp") {
+        keys.up = false;
+        e.preventDefault();
+      }
+      if (e.code === "ArrowDown") {
+        keys.down = false;
+        e.preventDefault();
+      }
+      if (e.code === "Space") {
+        if (keys.charging) {
+          keys.charging = false;
+          releaseShot();
+        }
+        e.preventDefault();
+      }
+    });
+
+    overlayBtn.addEventListener("click", startGame);
+
+    updateHud();
+    showOverlay(
+      "Tampon Gol",
+      "Sağ ve sol ile yer al. Yukarı ve aşağı ile açıyı ayarla. Şut tuşuna basılı tut, bırakınca vur. Kalecinin olduğu anda top geri seker.",
+      "Başlat"
+    );
+
+    loop();
+  </script>
+</body>
+</html>

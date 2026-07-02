@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katovia - Falso Şut</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg1: #07150d;
+      --bg2: #0d2417;
+      --panel: rgba(255, 255, 255, 0.08);
+      --panelBorder: rgba(255, 255, 255, 0.14);
+      --soft: rgba(255, 255, 255, 0.72);
+      --gold1: #ffd54a;
+      --gold2: #ffb300;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at top, #183f29 0%, #0b1f14 45%, #050d08 100%);
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 18px;
+      background: rgba(0, 0, 0, 0.28);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .back-btn {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.08);
+      transition: 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 0.4px;
+    }
+
+    .page {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding: 12px 12px 18px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 900;
+      letter-spacing: 0.4px;
+    }
+
+    .hero p {
+      margin: 6px 0 0;
+      color: var(--soft);
+      font-size: 14px;
+    }
+
+    .hud {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .hud-card {
+      background: var(--panel);
+      border: 1px solid var(--panelBorder);
+      border-radius: 16px;
+      padding: 10px 12px;
+      text-align: center;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+      min-height: 88px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hud-card small {
+      display: block;
+      color: rgba(255,255,255,0.7);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .hud-card strong {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .game-panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid var(--panelBorder);
+      border-radius: 22px;
+      padding: 10px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+    }
+
+    canvas {
+      width: 100%;
+      height: min(58vh, 620px);
+      display: block;
+      border-radius: 18px;
+      border: 2px solid rgba(255,255,255,0.12);
+      background:
+        linear-gradient(180deg, #a8d8ff 0%, #d7efff 21%, #4fb166 21.2%, #2f8d48 63%, #226835 100%);
+      object-fit: contain;
+    }
+
+    .bottom-controls {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap: 10px;
+    }
+
+    .control-box {
+      background: var(--panel);
+      border: 1px solid var(--panelBorder);
+      border-radius: 18px;
+      padding: 12px;
+    }
+
+    .control-box h3 {
+      margin: 0 0 10px;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .control-box p {
+      margin: 6px 0;
+      color: rgba(255,255,255,0.82);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .value-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 14px;
+    }
+
+    .value-line span:last-child {
+      font-weight: 900;
+      color: #fff;
+      text-align: right;
+    }
+
+    .action-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    button {
+      border: none;
+      border-radius: 14px;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg, var(--gold1), var(--gold2));
+      color: #1b1b1b;
+      box-shadow: 0 10px 20px rgba(255,179,0,0.28);
+    }
+
+    .soft-btn {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .message-bar {
+      margin-top: 10px;
+      text-align: center;
+      min-height: 24px;
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 900;
+      letter-spacing: 0.3px;
+    }
+
+    .tip {
+      margin-top: 6px;
+      text-align: center;
+      color: rgba(255,255,255,0.72);
+      font-size: 13px;
+    }
+
+    @media (max-width: 1200px) {
+      .hud {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .bottom-controls {
+        grid-template-columns: 1fr;
+      }
+
+      canvas {
+        height: min(52vh, 560px);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        padding: 12px;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .page {
+        padding: 10px 10px 16px;
+      }
+
+      .hud {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hud-card {
+        min-height: 80px;
+      }
+
+      canvas {
+        height: min(46vh, 460px);
+      }
+    }
+
+    @media (max-width: 460px) {
+      .hud {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 24px;
+      }
+
+      .hero p {
+        font-size: 13px;
+      }
+
+      .control-box p,
+      .value-line {
+        font-size: 13px;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .action-row {
+        flex-direction: column;
+      }
+
+      canvas {
+        height: min(42vh, 360px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-left">
+      <a class="back-btn" href="javascript:history.back()">← Geri Dön</a>
+      <div class="brand">Katovia</div>
+    </div>
+  </div>
+
+  <main class="page">
+    <section class="hero">
+      <h1>⚽ Falso Şut</h1>
+      <p>Yön ver, falsoyu hisset, barajı aş, kaleciyi geç. Gol attıkça yeni seviyeye çık.</p>
+    </section>
+
+    <section class="hud">
+      <div class="hud-card">
+        <small>Seviye</small>
+        <strong id="levelText">1</strong>
+      </div>
+      <div class="hud-card">
+        <small>Gol</small>
+        <strong id="scoreText">0</strong>
+      </div>
+      <div class="hud-card">
+        <small>Deneme</small>
+        <strong id="shotsText">0</strong>
+      </div>
+      <div class="hud-card">
+        <small>Yön</small>
+        <strong id="angleText">0°</strong>
+      </div>
+      <div class="hud-card">
+        <small>Güç</small>
+        <strong id="powerText">72</strong>
+      </div>
+      <div class="hud-card">
+        <small>Falso</small>
+        <strong id="curveText">0</strong>
+      </div>
+    </section>
+
+    <section class="game-panel">
+      <canvas id="gameCanvas" width="1100" height="650"></canvas>
+
+      <div class="bottom-controls">
+        <div class="control-box">
+          <h3>Kontroller</h3>
+          <p><strong>← / →</strong> yön değiştirir.</p>
+          <p><strong>↑ / ↓</strong> güç ayarlar.</p>
+          <p><strong>A / D</strong> falsoyu sola / sağa verir.</p>
+          <p><strong>SPACE</strong> şut çeker.</p>
+          <p><strong>R</strong> pozisyonu sıfırlar.</p>
+          <div class="action-row">
+            <button id="shootBtn" class="gold-btn">Şut Çek</button>
+            <button id="resetBtn" class="soft-btn">Pozisyon Sıfırla</button>
+          </div>
+        </div>
+
+        <div class="control-box">
+          <h3>Anlık Değerler</h3>
+          <div class="value-line">
+            <span>Açı</span>
+            <span id="angleTextBox">0°</span>
+          </div>
+          <div class="value-line">
+            <span>Güç</span>
+            <span id="powerTextBox">72</span>
+          </div>
+          <div class="value-line">
+            <span>Falso</span>
+            <span id="curveTextBox">0</span>
+          </div>
+          <div class="value-line">
+            <span>Sonuç</span>
+            <span id="resultTextBox">Hazır</span>
+          </div>
+        </div>
+
+        <div class="control-box">
+          <h3>Seviye Mantığı</h3>
+          <p>Gol attıkça bir sonraki seviyeye geçersin.</p>
+          <p>Yeni seviyede mesafe, baraj dizilimi ve kaleci zorluğu değişir.</p>
+          <p>Aynı sistem kalır ama vuruş hissi her levelda yeniden okunur.</p>
+        </div>
+      </div>
+
+      <div class="message-bar" id="messageBar">Şut çizgisine bak. Falsoyu gör, sonra vur.</div>
+      <div class="tip">İpucu: küçük falsolar daha kontrollü, yüksek güç ise daha riskli olur.</div>
+    </section>
+  </main>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const levelText = document.getElementById("levelText");
+    const scoreText = document.getElementById("scoreText");
+    const shotsText = document.getElementById("shotsText");
+    const angleText = document.getElementById("angleText");
+    const powerText = document.getElementById("powerText");
+    const curveText = document.getElementById("curveText");
+    const angleTextBox = document.getElementById("angleTextBox");
+    const powerTextBox = document.getElementById("powerTextBox");
+    const curveTextBox = document.getElementById("curveTextBox");
+    const resultTextBox = document.getElementById("resultTextBox");
+    const messageBar = document.getElementById("messageBar");
+    const shootBtn = document.getElementById("shootBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    let score = 0;
+    let shots = 0;
+    let currentLevelIndex = 0;
+
+    let shotFinished = false;
+    let resetTimer = null;
+
+    const levels = [
+      { ballX: 0,   ballY: 0,  distance: 1.00, wallCount: 3, keeperSpeed: 1.10, keeperWidth: 78, angleBias: 0,   wallOffset: 0,  goalTightness: 0 },
+      { ballX: -35, ballY: 10, distance: 1.12, wallCount: 4, keeperSpeed: 1.28, keeperWidth: 76, angleBias: 2,   wallOffset: -15, goalTightness: 4 },
+      { ballX: 38,  ballY: 18, distance: 1.18, wallCount: 5, keeperSpeed: 1.42, keeperWidth: 74, angleBias: -3,  wallOffset: 18, goalTightness: 6 },
+      { ballX: -68, ballY: 28, distance: 1.28, wallCount: 5, keeperSpeed: 1.62, keeperWidth: 72, angleBias: 6,   wallOffset: 35, goalTightness: 9 },
+      { ballX: 74,  ballY: 34, distance: 1.36, wallCount: 6, keeperSpeed: 1.82, keeperWidth: 70, angleBias: -8,  wallOffset: -32, goalTightness: 12 },
+      { ballX: 0,   ballY: 42, distance: 1.46, wallCount: 6, keeperSpeed: 2.00, keeperWidth: 68, angleBias: 0,   wallOffset: 0,  goalTightness: 15 }
+    ];
+
+    const world = {
+      nearGoalLeft: 350,
+      nearGoalRight: 750,
+      nearGoalTop: 100,
+      nearGoalBottom: 188,
+
+      farGoalLeft: 465,
+      farGoalRight: 635,
+      farGoalTop: 66,
+      farGoalBottom: 116,
+
+      shootPointX: 550,
+      shootPointY: 560
+    };
+
+    const state = {
+      aimAngle: 0,
+      power: 72,
+      curve: 0
+    };
+
+    const ball = {
+      x: world.shootPointX,
+      y: world.shootPointY,
+      z: 0,
+      vx: 0,
+      vy: 0,
+      vz: 0,
+      spin: 0,
+      active: false,
+      trail: []
+    };
+
+    const keeper = {
+      x: 0,
+      y: 0,
+      w: 74,
+      h: 24,
+      dir: 1,
+      speed: 1.2,
+      leftBound: 0,
+      rightBound: 0
+    };
+
+    let wallPlayers = [];
+    let projectedGoal = null;
+
+    function clamp(value, min, max) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function lerp(a, b, t) {
+      return a + (b - a) * t;
+    }
+
+    function projectGround(x, y, z = 0) {
+      const horizon = 72;
+      const depth = clamp((y - horizon) / (world.shootPointY - horizon), 0, 1);
+      const scale = 0.32 + depth * 0.82;
+      const px = canvas.width / 2 + (x - canvas.width / 2) * scale;
+      const py = horizon + depth * 500 - z;
+      return { x: px, y: py, scale };
+    }
+
+    function updateHud() {
+      levelText.textContent = currentLevelIndex + 1;
+      scoreText.textContent = score;
+      shotsText.textContent = shots;
+
+      const angleLabel = `${Math.round(state.aimAngle)}°`;
+      angleText.textContent = angleLabel;
+      powerText.textContent = Math.round(state.power);
+      curveText.textContent = Math.round(state.curve);
+
+      angleTextBox.textContent = angleLabel;
+      powerTextBox.textContent = Math.round(state.power);
+      curveTextBox.textContent = Math.round(state.curve);
+    }
+
+    function setMessage(text) {
+      messageBar.textContent = text;
+      resultTextBox.textContent = text;
+    }
+
+    function getCurrentLevel() {
+      return levels[Math.min(currentLevelIndex, levels.length - 1)];
+    }
+
+    function buildLevel() {
+      const level = getCurrentLevel();
+
+      const baseShootX = world.shootPointX + level.ballX;
+      const baseShootY = world.shootPointY + level.ballY;
+
+      ball.x = baseShootX;
+      ball.y = baseShootY;
+      ball.z = 0;
+      ball.vx = 0;
+      ball.vy = 0;
+      ball.vz = 0;
+      ball.spin = 0;
+      ball.active = false;
+      ball.trail = [];
+
+      state.aimAngle = level.angleBias;
+      state.power = clamp(72 - currentLevelIndex * 2, 48, 90);
+      state.curve = 0;
+
+      const t = clamp((level.distance - 1.0) / 0.55, 0, 1);
+
+      const goalLeft = lerp(world.nearGoalLeft, world.farGoalLeft, t);
+      const goalRight = lerp(world.nearGoalRight, world.farGoalRight, t);
+      const goalTop = lerp(world.nearGoalTop, world.farGoalTop, t);
+      const goalBottom = lerp(world.nearGoalBottom, world.farGoalBottom, t);
+
+      projectedGoal = {
+        left: goalLeft,
+        right: goalRight,
+        top: goalTop,
+        bottom: goalBottom,
+        width: goalRight - goalLeft,
+        height: goalBottom - goalTop
+      };
+
+      keeper.w = level.keeperWidth;
+      keeper.h = 22 + Math.max(0, 6 - currentLevelIndex);
+      keeper.speed = level.keeperSpeed;
+      keeper.x = (goalLeft + goalRight) / 2 - keeper.w / 2;
+      keeper.y = goalTop + projectedGoal.height * 0.42;
+      keeper.leftBound = goalLeft + 12;
+      keeper.rightBound = goalRight - keeper.w - 12;
+      keeper.dir = Math.random() > 0.5 ? 1 : -1;
+
+      buildWall(level, t);
+      shotFinished = false;
+      clearTimeout(resetTimer);
+      updateHud();
+      setMessage(`Seviye ${currentLevelIndex + 1} hazır. Çizgiyi okuyup vur.`);
+    }
+
+    function buildWall(level, t) {
+      wallPlayers = [];
+
+      const wallY = lerp(360, 248, t);
+      const startX = canvas.width / 2 + level.wallOffset - ((level.wallCount - 1) * 22);
+      for (let i = 0; i < level.wallCount; i++) {
+        const gx = startX + i * 44;
+        const p = projectGround(gx, wallY);
+        wallPlayers.push({
+          x: p.x - 9,
+          y: p.y - 42,
+          w: 18,
+          h: 42
+        });
+      }
+    }
+
+    function resetPosition() {
+      buildLevel();
+    }
+
+    function drawSkyAndField() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const sky = ctx.createLinearGradient(0, 0, 0, 180);
+      sky.addColorStop(0, "#9ad5ff");
+      sky.addColorStop(1, "#dff3ff");
+      ctx.fillStyle = sky;
+      ctx.fillRect(0, 0, canvas.width, 180);
+
+      const field = ctx.createLinearGradient(0, 180, 0, canvas.height);
+      field.addColorStop(0, "#4daf62");
+      field.addColorStop(0.7, "#2e8a45");
+      field.addColorStop(1, "#1f6531");
+      ctx.fillStyle = field;
+      ctx.fillRect(0, 180, canvas.width, canvas.height - 180);
+
+      ctx.fillStyle = "rgba(0,0,0,0.08)";
+      ctx.beginPath();
+      ctx.moveTo(0, 180);
+      ctx.lineTo(canvas.width, 180);
+      ctx.lineTo(canvas.width, 220);
+      ctx.lineTo(0, 250);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    function drawPitchPerspective() {
+      ctx.strokeStyle = "rgba(255,255,255,0.28)";
+      ctx.lineWidth = 2;
+
+      const linesY = [220, 290, 370, 470, 580];
+      linesY.forEach(y => {
+        const left = projectGround(330, y).x;
+        const right = projectGround(770, y).x;
+        const py = projectGround(550, y).y;
+        ctx.beginPath();
+        ctx.moveTo(left, py);
+        ctx.lineTo(right, py);
+        ctx.stroke();
+      });
+
+      const leftNear = projectGround(330, 580);
+      const leftFar = projectGround(430, 190);
+      const rightNear = projectGround(770, 580);
+      const rightFar = projectGround(670, 190);
+
+      ctx.beginPath();
+      ctx.moveTo(leftNear.x, leftNear.y);
+      ctx.lineTo(leftFar.x, leftFar.y);
+      ctx.moveTo(rightNear.x, rightNear.y);
+      ctx.lineTo(rightFar.x, rightFar.y);
+      ctx.stroke();
+
+      const boxNearLeft = projectGround(410, 420);
+      const boxNearRight = projectGround(690, 420);
+      const boxFarLeft = projectGround(455, 240);
+      const boxFarRight = projectGround(645, 240);
+
+      ctx.beginPath();
+      ctx.moveTo(boxNearLeft.x, boxNearLeft.y);
+      ctx.lineTo(boxFarLeft.x, boxFarLeft.y);
+      ctx.lineTo(boxFarRight.x, boxFarRight.y);
+      ctx.lineTo(boxNearRight.x, boxNearRight.y);
+      ctx.closePath();
+      ctx.stroke();
+    }
+
+    function drawGoal() {
+      const g = projectedGoal;
+
+      ctx.fillStyle = "#e9ecef";
+      ctx.fillRect(g.left - 6, g.top - 4, 6, g.height + 8);
+      ctx.fillRect(g.right, g.top - 4, 6, g.height + 8);
+      ctx.fillRect(g.left - 6, g.top - 4, g.width + 12, 6);
+
+      ctx.strokeStyle = "rgba(255,255,255,0.16)";
+      ctx.lineWidth = 1;
+
+      for (let x = g.left + 12; x < g.right; x += 16) {
+        ctx.beginPath();
+        ctx.moveTo(x, g.top);
+        ctx.lineTo(x, g.bottom);
+        ctx.stroke();
+      }
+
+      for (let y = g.top + 10; y < g.bottom; y += 12) {
+        ctx.beginPath();
+        ctx.moveTo(g.left, y);
+        ctx.lineTo(g.right, y);
+        ctx.stroke();
+      }
+    }
+
+    function drawWall() {
+      wallPlayers.forEach((p, i) => {
+        ctx.fillStyle = i % 2 === 0 ? "#1c2530" : "#263445";
+        ctx.fillRect(p.x, p.y, p.w, p.h);
+
+        ctx.fillStyle = "#f1d1ad";
+        ctx.beginPath();
+        ctx.arc(p.x + p.w / 2, p.y - 7, 8, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#dce5ef";
+        ctx.fillRect(p.x + 2, p.y + 8, p.w - 4, 12);
+      });
+    }
+
+    function drawKeeper() {
+      ctx.fillStyle = "#ffcf33";
+      ctx.fillRect(keeper.x, keeper.y + 10, keeper.w, keeper.h);
+
+      ctx.fillStyle = "#111";
+      ctx.beginPath();
+      ctx.arc(keeper.x + keeper.w / 2, keeper.y + 4, 10, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.strokeStyle = "#ffcf33";
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.moveTo(keeper.x + 8, keeper.y + 14);
+      ctx.lineTo(keeper.x - 10, keeper.y + 1);
+      ctx.moveTo(keeper.x + keeper.w - 8, keeper.y + 14);
+      ctx.lineTo(keeper.x + keeper.w + 10, keeper.y + 1);
+      ctx.stroke();
+    }
+
+    function drawBallShadow() {
+      const p = projectGround(ball.x, ball.y);
+      const shadowSize = 14 * p.scale + ball.z * 0.01;
+      ctx.beginPath();
+      ctx.ellipse(p.x, p.y + 5, shadowSize, shadowSize * 0.45, 0, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(0,0,0,0.22)";
+      ctx.fill();
+    }
+
+    function drawTrail() {
+      for (let i = 0; i < ball.trail.length; i++) {
+        const t = ball.trail[i];
+        const alpha = ((i + 1) / ball.trail.length) * 0.22;
+        ctx.beginPath();
+        ctx.arc(t.x, t.y, t.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+        ctx.fill();
+      }
+    }
+
+    function drawBall() {
+      drawBallShadow();
+      drawTrail();
+
+      const p = projectGround(ball.x, ball.y, ball.z);
+      const radius = clamp(7 + p.scale * 9, 7, 17);
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
+      ctx.fillStyle = "#ffffff";
+      ctx.fill();
+
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = "#202020";
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, radius * 0.26, 0, Math.PI * 2);
+      ctx.fillStyle = "#1d1d1d";
+      ctx.fill();
+    }
+
+    function drawAimGuide() {
+      if (ball.active) return;
+
+      const start = projectGround(ball.x, ball.y, 0);
+      const angleRad = state.aimAngle * Math.PI / 180;
+      const guidePoints = [];
+
+      let simX = ball.x;
+      let simY = ball.y;
+      let simZ = 0;
+
+      let vx = Math.sin(angleRad) * (state.power * 0.14);
+      let vy = -(state.power * 0.92);
+      let vz = state.power * 0.34;
+      const spin = state.curve * 0.010;
+
+      for (let i = 0; i < 32; i++) {
+        vx += spin;
+        vy += 0.24;
+        vz -= 0.48;
+
+        simX += vx;
+        simY += vy;
+        simZ += vz;
+
+        if (simY < 40 || simZ < -20) break;
+
+        const p = projectGround(simX, simY, Math.max(0, simZ));
+        guidePoints.push(p);
+      }
+
+      if (guidePoints.length < 2) return;
+
+      ctx.beginPath();
+      ctx.moveTo(start.x, start.y);
+      for (const pt of guidePoints) {
+        ctx.lineTo(pt.x, pt.y);
+      }
+      ctx.strokeStyle = "rgba(255, 213, 74, 0.92)";
+      ctx.lineWidth = 3;
+      ctx.setLineDash([10, 8]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      const last = guidePoints[guidePoints.length - 1];
+      const prev = guidePoints[guidePoints.length - 2] || start;
+      const ang = Math.atan2(last.y - prev.y, last.x - prev.x);
+
+      ctx.save();
+      ctx.translate(last.x, last.y);
+      ctx.rotate(ang);
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(-14, 7);
+      ctx.lineTo(-14, -7);
+      ctx.closePath();
+      ctx.fillStyle = "rgba(255, 213, 74, 0.96)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function updateKeeper() {
+      keeper.x += keeper.speed * keeper.dir;
+      if (keeper.x <= keeper.leftBound || keeper.x >= keeper.rightBound) {
+        keeper.dir *= -1;
+      }
+    }
+
+    function circleRectCollision(cx, cy, cr, rect) {
+      const closestX = Math.max(rect.x, Math.min(cx, rect.x + rect.w));
+      const closestY = Math.max(rect.y, Math.min(cy, rect.y + rect.h));
+      const dx = cx - closestX;
+      const dy = cy - closestY;
+      return dx * dx + dy * dy <= cr * cr;
+    }
+
+    function finishShot(result) {
+      if (!ball.active || shotFinished) return;
+
+      ball.active = false;
+      shotFinished = true;
+      setMessage(result);
+
+      if (result === "GOL!") {
+        score++;
+        updateHud();
+
+        resetTimer = setTimeout(() => {
+          if (currentLevelIndex < levels.length - 1) {
+            currentLevelIndex++;
+            buildLevel();
+          } else {
+            buildLevel();
+            setMessage("GOL! Son seviyede ustalık devam ediyor.");
+          }
+        }, 1200);
+      } else {
+        resetTimer = setTimeout(() => {
+          buildLevel();
+        }, 1200);
+      }
+    }
+
+    function shoot() {
+      if (ball.active) return;
+
+      shots++;
+      updateHud();
+      shotFinished = false;
+
+      const angleRad = state.aimAngle * Math.PI / 180;
+      ball.vx = Math.sin(angleRad) * (state.power * 0.14);
+      ball.vy = -(state.power * 0.92);
+      ball.vz = state.power * 0.34;
+      ball.spin = state.curve * 0.010;
+      ball.active = true;
+      ball.trail = [];
+      setMessage("Top havada...");
+    }
+
+    function updateBall() {
+      if (!ball.active) return;
+
+      ball.vx += ball.spin;
+      ball.vy += 0.24;
+      ball.vz -= 0.48;
+
+      ball.x += ball.vx;
+      ball.y += ball.vy;
+      ball.z += ball.vz;
+
+      const bp = projectGround(ball.x, ball.y, Math.max(0, ball.z));
+      const br = clamp(7 + bp.scale * 9, 7, 17) * 0.9;
+
+      ball.trail.push({ x: bp.x, y: bp.y, r: br * 0.55 });
+      if (ball.trail.length > 12) ball.trail.shift();
+
+      for (const p of wallPlayers) {
+        if (circleRectCollision(bp.x, bp.y, br, p)) {
+          finishShot("Baraja çarptı!");
+          return;
+        }
+      }
+
+      if (circleRectCollision(bp.x, bp.y, br, keeper)) {
+        finishShot("Kaleci kurtardı!");
+        return;
+      }
+
+      const level = getCurrentLevel();
+      const toleranceX = 8 - Math.min(6, level.goalTightness * 0.25);
+      const toleranceY = 7 - Math.min(5, level.goalTightness * 0.22);
+
+      const isInGoalX = bp.x > projectedGoal.left - toleranceX && bp.x < projectedGoal.right + toleranceX;
+      const isInGoalY = bp.y > projectedGoal.top - toleranceY && bp.y < projectedGoal.bottom + toleranceY;
+
+      if (isInGoalX && isInGoalY) {
+        finishShot("GOL!");
+        return;
+      }
+
+      if (bp.x < 40 || bp.x > canvas.width - 40 || bp.y < 28) {
+        finishShot("Dışarı gitti!");
+        return;
+      }
+
+      if (ball.z < -12 && ball.y < 250) {
+        finishShot("Üstten auta çıktı!");
+        return;
+      }
+
+      if (ball.y > canvas.height + 40 || bp.y > canvas.height + 20) {
+        finishShot("Kaçtı!");
+      }
+    }
+
+    function drawCrowd() {
+      const y = 158;
+      for (let i = 0; i < canvas.width; i += 16) {
+        ctx.fillStyle = i % 3 === 0 ? "#153220" : i % 3 === 1 ? "#244833" : "#102518";
+        ctx.fillRect(i, y + Math.sin(i * 0.05) * 3, 16, 28);
+      }
+    }
+
+    function render() {
+      drawSkyAndField();
+      drawCrowd();
+      drawPitchPerspective();
+      drawGoal();
+      drawAimGuide();
+      drawWall();
+      drawKeeper();
+      drawBall();
+    }
+
+    function loop() {
+      updateKeeper();
+      updateBall();
+      render();
+      requestAnimationFrame(loop);
+    }
+
+    function handleKeyDown(e) {
+      const key = e.key.toLowerCase();
+
+      if (key === "arrowleft") {
+        e.preventDefault();
+        state.aimAngle = clamp(state.aimAngle - 3.2, -52, 52);
+        updateHud();
+      } else if (key === "arrowright") {
+        e.preventDefault();
+        state.aimAngle = clamp(state.aimAngle + 3.2, -52, 52);
+        updateHud();
+      } else if (key === "arrowup") {
+        e.preventDefault();
+        state.power = clamp(state.power + 1.4, 48, 100);
+        updateHud();
+      } else if (key === "arrowdown") {
+        e.preventDefault();
+        state.power = clamp(state.power - 1.4, 48, 100);
+        updateHud();
+      } else if (key === "a") {
+        e.preventDefault();
+        state.curve = clamp(state.curve - 2, -32, 32);
+        updateHud();
+      } else if (key === "d") {
+        e.preventDefault();
+        state.curve = clamp(state.curve + 2, -32, 32);
+        updateHud();
+      } else if (key === " ") {
+        e.preventDefault();
+        shoot();
+      } else if (key === "r") {
+        e.preventDefault();
+        resetPosition();
+      }
+    }
+
+    shootBtn.addEventListener("click", shoot);
+    resetBtn.addEventListener("click", resetPosition);
+    window.addEventListener("keydown", handleKeyDown);
+
+    buildLevel();
+    loop();
+  </script>
+</body>
+</html>

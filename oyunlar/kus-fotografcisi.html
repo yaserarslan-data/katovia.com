@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katovia - Kuş Fotoğrafçısı</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background:
+        linear-gradient(to bottom, #5db7ff 0%, #8ad6ff 38%, #bff0ff 68%, #74c365 68%, #4f9547 100%);
+      overflow: hidden;
+    }
+
+    .topbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      background: rgba(0,0,0,0.22);
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(6px);
+      z-index: 5;
+    }
+
+    .back-btn {
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .page-wrap {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+      z-index: 2;
+    }
+
+    .hero {
+      text-align: center;
+      background: rgba(0,0,0,0.16);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 22px;
+      padding: 18px 16px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
+
+    .hero p {
+      margin: 0;
+      color: rgba(255,255,255,0.9);
+      font-size: 15px;
+    }
+
+    .hud {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .hud-box {
+      background: rgba(0,0,0,0.16);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 18px;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+    }
+
+    .hud-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.8);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .hud-value {
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    .game-panel {
+      background: rgba(0,0,0,0.16);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 26px;
+      padding: 14px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    }
+
+    canvas {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      border-radius: 20px;
+      background:
+        linear-gradient(to bottom, #7fd0ff 0%, #c7f1ff 65%, #7dc96b 65%, #5aa94f 100%);
+      border: 3px solid rgba(255,255,255,0.2);
+      cursor: none;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .control-btn {
+      border: none;
+      border-radius: 16px;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(180deg, #3d7ad6 0%, #2555a8 100%);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    }
+
+    .shoot-btn {
+      background: linear-gradient(180deg, #ff8748 0%, #d94f1f 100%);
+    }
+
+    .bottom-info {
+      text-align: center;
+      color: rgba(255,255,255,0.95);
+      font-size: 14px;
+      padding-bottom: 8px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.28);
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 16, 23, 0.72);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 15;
+    }
+
+    .overlay.hidden { display: none; }
+
+    .overlay-card {
+      width: 100%;
+      max-width: 480px;
+      background: linear-gradient(180deg, #163652 0%, #102739 100%);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 24px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+
+    .overlay-card h2 {
+      margin: 0 0 10px;
+      font-size: 32px;
+    }
+
+    .overlay-card p {
+      margin: 8px 0;
+      color: rgba(255,255,255,0.88);
+      font-size: 16px;
+    }
+
+    .restart-btn {
+      margin-top: 16px;
+      border: none;
+      border-radius: 16px;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(180deg, #6bcf63 0%, #339a34 100%);
+    }
+
+    @media (max-width: 700px) {
+      .hud { grid-template-columns: 1fr 1fr; }
+      .hero h1 { font-size: 26px; }
+      .hud-value { font-size: 22px; }
+      .controls { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a class="back-btn" href="/games">← Geri Dön</a>
+    <div class="brand">Katovia</div>
+  </div>
+
+  <main class="page-wrap">
+    <section class="hero">
+      <h1>Kuş Fotoğrafçısı</h1>
+      <p>Uçan kuşları kadraja al, doğru anda fotoğraf çek, süre dolmadan en yüksek puanı topla.</p>
+    </section>
+
+    <section class="hud">
+      <div class="hud-box">
+        <div class="hud-label">Puan</div>
+        <div class="hud-value" id="scoreEl">0</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-label">Süre</div>
+        <div class="hud-value" id="timeEl">45</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-label">Çekim</div>
+        <div class="hud-value" id="shotsEl">0</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-label">İsabet</div>
+        <div class="hud-value" id="hitsEl">0</div>
+      </div>
+    </section>
+
+    <section class="game-panel">
+      <canvas id="gameCanvas" width="900" height="560"></canvas>
+
+      <div class="controls">
+        <button class="control-btn" id="leftBtn">⬅ Sol</button>
+        <button class="control-btn shoot-btn" id="shootBtn">📸 Fotoğraf Çek</button>
+        <button class="control-btn" id="rightBtn">Sağ ➡</button>
+      </div>
+    </section>
+
+    <div class="bottom-info">
+      Klavye ile de oynanır: <strong>A / ←</strong>, <strong>D / →</strong>, <strong>Boşluk</strong> veya <strong>Enter</strong>
+    </div>
+  </main>
+
+  <div class="overlay" id="gameOverOverlay">
+    <div class="overlay-card">
+      <h2>Çekim Bitti</h2>
+      <p id="finalScoreText">Puanın: 0</p>
+      <p id="finalStatsText">İstatistikler</p>
+      <button class="restart-btn" id="restartBtn">Tekrar Oyna</button>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const scoreEl = document.getElementById("scoreEl");
+    const timeEl = document.getElementById("timeEl");
+    const shotsEl = document.getElementById("shotsEl");
+    const hitsEl = document.getElementById("hitsEl");
+
+    const overlay = document.getElementById("gameOverOverlay");
+    const finalScoreText = document.getElementById("finalScoreText");
+    const finalStatsText = document.getElementById("finalStatsText");
+    const restartBtn = document.getElementById("restartBtn");
+
+    const leftBtn = document.getElementById("leftBtn");
+    const rightBtn = document.getElementById("rightBtn");
+    const shootBtn = document.getElementById("shootBtn");
+
+    const W = canvas.width;
+    const H = canvas.height;
+
+    let keys = {};
+    let score = 0;
+    let timeLeft = 45;
+    let shots = 0;
+    let hits = 0;
+    let gameRunning = true;
+    let lastTimeTick = 0;
+    let spawnTimer = 0;
+    let nextSpawn = 45;
+    let flashTimer = 0;
+    let floatingTexts = [];
+
+    const camera = {
+      x: W / 2,
+      y: H - 110,
+      w: 90,
+      h: 32,
+      speed: 7
+    };
+
+    const crosshair = {
+      x: W / 2,
+      y: H / 2
+    };
+
+    const birds = [];
+
+    function rand(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function randInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function updateHUD() {
+      scoreEl.textContent = score;
+      timeEl.textContent = timeLeft;
+      shotsEl.textContent = shots;
+      hitsEl.textContent = hits;
+    }
+
+    function resetGame() {
+      score = 0;
+      timeLeft = 45;
+      shots = 0;
+      hits = 0;
+      gameRunning = true;
+      lastTimeTick = 0;
+      spawnTimer = 0;
+      nextSpawn = 40;
+      flashTimer = 0;
+
+      birds.length = 0;
+      floatingTexts = [];
+
+      camera.x = W / 2;
+      crosshair.x = W / 2;
+      crosshair.y = H / 2;
+
+      overlay.classList.add("hidden");
+      updateHUD();
+    }
+
+    function createBird() {
+      const fromLeft = Math.random() > 0.5;
+      const golden = Math.random() < 0.12;
+
+      const bird = {
+        x: fromLeft ? -60 : W + 60,
+        y: rand(90, H * 0.62),
+        vx: fromLeft ? rand(2.6, 5.2) : -rand(2.6, 5.2),
+        vy: rand(-0.4, 0.4),
+        size: golden ? rand(18, 24) : rand(20, 28),
+        wing: rand(0, Math.PI * 2),
+        wingSpeed: rand(0.18, 0.3),
+        golden,
+        alive: true,
+        score: golden ? 3 : 1
+      };
+
+      birds.push(bird);
+    }
+
+    function moveCamera() {
+      if (!gameRunning) return;
+
+      if (keys["ArrowLeft"] || keys["a"] || keys["A"]) {
+        camera.x -= camera.speed;
+      }
+      if (keys["ArrowRight"] || keys["d"] || keys["D"]) {
+        camera.x += camera.speed;
+      }
+
+      if (camera.x < 60) camera.x = 60;
+      if (camera.x > W - 60) camera.x = W - 60;
+
+      crosshair.x += (camera.x - crosshair.x) * 0.2;
+    }
+
+    function updateBirds() {
+      for (let i = birds.length - 1; i >= 0; i--) {
+        const b = birds[i];
+        b.x += b.vx;
+        b.y += b.vy;
+        b.wing += b.wingSpeed;
+
+        if (Math.random() < 0.015) {
+          b.vy += rand(-0.25, 0.25);
+        }
+
+        if (b.y < 70) b.y = 70;
+        if (b.y > H * 0.66) b.y = H * 0.66;
+
+        if (b.x < -120 || b.x > W + 120) {
+          birds.splice(i, 1);
+        }
+      }
+    }
+
+    function updateSpawns() {
+      spawnTimer++;
+      if (spawnTimer >= nextSpawn) {
+        createBird();
+        spawnTimer = 0;
+        nextSpawn = randInt(28, 65);
+      }
+    }
+
+    function addFloatingText(text, x, y, color = "#ffffff") {
+      floatingTexts.push({
+        text,
+        x,
+        y,
+        alpha: 1,
+        dy: -0.7,
+        color
+      });
+    }
+
+    function updateFloatingTexts() {
+      for (let i = floatingTexts.length - 1; i >= 0; i--) {
+        const t = floatingTexts[i];
+        t.y += t.dy;
+        t.alpha -= 0.02;
+        if (t.alpha <= 0) floatingTexts.splice(i, 1);
+      }
+    }
+
+    function takePhoto() {
+      if (!gameRunning) return;
+
+      shots++;
+      flashTimer = 7;
+
+      let hitSomething = false;
+
+      for (let i = birds.length - 1; i >= 0; i--) {
+        const b = birds[i];
+        const dx = b.x - crosshair.x;
+        const dy = b.y - crosshair.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        const hitRadius = b.size + 18;
+
+        if (dist <= hitRadius) {
+          hitSomething = true;
+          hits++;
+          score += b.score;
+          addFloatingText(b.golden ? "+3 NADİR!" : "+1", b.x, b.y - 20, b.golden ? "#ffd54a" : "#ffffff");
+          birds.splice(i, 1);
+        }
+      }
+
+      if (!hitSomething) {
+        addFloatingText("Kaçtı", crosshair.x + 14, crosshair.y - 10, "#ffe5e5");
+      }
+
+      updateHUD();
+    }
+
+    function updateTimer(timestamp) {
+      if (!gameRunning) return;
+
+      if (!lastTimeTick) lastTimeTick = timestamp;
+      const delta = timestamp - lastTimeTick;
+
+      if (delta >= 1000) {
+        timeLeft--;
+        lastTimeTick = timestamp;
+        updateHUD();
+
+        if (timeLeft <= 0) {
+          timeLeft = 0;
+          updateHUD();
+          endGame();
+        }
+      }
+    }
+
+    function endGame() {
+      gameRunning = false;
+      finalScoreText.textContent = "Puanın: " + score;
+      finalStatsText.textContent = "Toplam çekim: " + shots + " | İsabet: " + hits;
+      overlay.classList.remove("hidden");
+    }
+
+    function drawBackground() {
+      // güneş
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(255, 235, 150, 0.95)";
+      ctx.arc(760, 90, 42, 0, Math.PI * 2);
+      ctx.fill();
+
+      // bulutlar
+      drawCloud(150, 95, 1);
+      drawCloud(330, 125, 0.85);
+      drawCloud(630, 150, 1.1);
+
+      // ağaç sırası
+      for (let i = 0; i < 7; i++) {
+        const x = 70 + i * 130;
+        drawTree(x, 365 + (i % 2) * 8, 0.9 + (i % 3) * 0.08);
+      }
+
+      // çimen alan
+      ctx.fillStyle = "#5eac4f";
+      ctx.fillRect(0, H * 0.67, W, H * 0.33);
+    }
+
+    function drawCloud(x, y, s) {
+      ctx.fillStyle = "rgba(255,255,255,0.92)";
+      ctx.beginPath();
+      ctx.arc(x, y, 24 * s, 0, Math.PI * 2);
+      ctx.arc(x + 28 * s, y - 8 * s, 20 * s, 0, Math.PI * 2);
+      ctx.arc(x + 52 * s, y, 24 * s, 0, Math.PI * 2);
+      ctx.arc(x + 28 * s, y + 10 * s, 24 * s, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawTree(x, y, s) {
+      ctx.fillStyle = "#6e4424";
+      ctx.fillRect(x - 8 * s, y, 16 * s, 54 * s);
+
+      ctx.beginPath();
+      ctx.fillStyle = "#2d8f3d";
+      ctx.arc(x, y - 10 * s, 28 * s, 0, Math.PI * 2);
+      ctx.arc(x - 18 * s, y + 6 * s, 22 * s, 0, Math.PI * 2);
+      ctx.arc(x + 18 * s, y + 6 * s, 22 * s, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawBird(b) {
+      const flap = Math.sin(b.wing) * b.size * 0.45;
+      const dir = b.vx > 0 ? 1 : -1;
+
+      ctx.save();
+      ctx.translate(b.x, b.y);
+
+      // gölge
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(0,0,0,0.12)";
+      ctx.ellipse(0, b.size + 16, b.size * 0.9, 8, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // kanat
+      ctx.fillStyle = b.golden ? "#f3c542" : "#2d3a4a";
+      ctx.beginPath();
+      ctx.ellipse(-b.size * 0.55, -flap * 0.18, b.size * 0.95, b.size * 0.42, -0.45, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.ellipse(b.size * 0.55, flap * 0.18, b.size * 0.95, b.size * 0.42, 0.45, 0, Math.PI * 2);
+      ctx.fill();
+
+      // gövde
+      ctx.beginPath();
+      ctx.fillStyle = b.golden ? "#ffd34d" : "#3d4858";
+      ctx.ellipse(0, 0, b.size, b.size * 0.7, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // kafa
+      ctx.beginPath();
+      ctx.arc(b.size * 0.82 * dir, -b.size * 0.16, b.size * 0.34, 0, Math.PI * 2);
+      ctx.fill();
+
+      // gaga
+      ctx.beginPath();
+      ctx.fillStyle = "#ff9f2e";
+      ctx.moveTo(b.size * 1.1 * dir, -b.size * 0.14);
+      ctx.lineTo(b.size * 1.48 * dir, 0);
+      ctx.lineTo(b.size * 1.1 * dir, b.size * 0.08);
+      ctx.closePath();
+      ctx.fill();
+
+      // göz
+      ctx.beginPath();
+      ctx.fillStyle = "#111";
+      ctx.arc(b.size * 0.9 * dir, -b.size * 0.22, 2.2, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.restore();
+    }
+
+    function drawBirds() {
+      birds.forEach(drawBird);
+    }
+
+    function drawCamera() {
+      ctx.save();
+      ctx.translate(camera.x, camera.y);
+
+      // tripod ayaklar
+      ctx.strokeStyle = "#2f2f2f";
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.moveTo(-18, 20);
+      ctx.lineTo(-34, 52);
+      ctx.moveTo(18, 20);
+      ctx.lineTo(34, 52);
+      ctx.moveTo(0, 18);
+      ctx.lineTo(0, 56);
+      ctx.stroke();
+
+      // gövde
+      ctx.fillStyle = "#1f2530";
+      ctx.fillRect(-45, -18, 90, 36);
+
+      // lens
+      ctx.beginPath();
+      ctx.fillStyle = "#303846";
+      ctx.arc(0, 0, 13, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.fillStyle = "#65c7ff";
+      ctx.arc(0, 0, 7, 0, Math.PI * 2);
+      ctx.fill();
+
+      // vizör
+      ctx.fillStyle = "#181d24";
+      ctx.fillRect(16, -28, 24, 10);
+
+      ctx.restore();
+    }
+
+    function drawCrosshair() {
+      ctx.save();
+      ctx.translate(crosshair.x, crosshair.y);
+
+      ctx.strokeStyle = "rgba(255,255,255,0.95)";
+      ctx.lineWidth = 2.6;
+
+      ctx.beginPath();
+      ctx.arc(0, 0, 24, 0, Math.PI * 2);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(-36, 0);
+      ctx.lineTo(-10, 0);
+      ctx.moveTo(10, 0);
+      ctx.lineTo(36, 0);
+      ctx.moveTo(0, -36);
+      ctx.lineTo(0, -10);
+      ctx.moveTo(0, 10);
+      ctx.lineTo(0, 36);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(0, 0, 3, 0, Math.PI * 2);
+      ctx.fillStyle = "#fff";
+      ctx.fill();
+
+      ctx.restore();
+    }
+
+    function drawFloatingTexts() {
+      floatingTexts.forEach(t => {
+        ctx.save();
+        ctx.globalAlpha = t.alpha;
+        ctx.fillStyle = t.color;
+        ctx.font = "bold 22px Arial";
+        ctx.fillText(t.text, t.x, t.y);
+        ctx.restore();
+      });
+    }
+
+    function drawFlash() {
+      if (flashTimer > 0) {
+        ctx.save();
+        ctx.globalAlpha = flashTimer / 10;
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, W, H);
+        ctx.restore();
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      drawBackground();
+      drawBirds();
+      drawCamera();
+      drawCrosshair();
+      drawFloatingTexts();
+      drawFlash();
+    }
+
+    function updateCrosshairVertical() {
+      crosshair.y = H * 0.46 + Math.sin(Date.now() * 0.002) * 6;
+    }
+
+    function gameLoop(timestamp) {
+      moveCamera();
+      updateBirds();
+      updateSpawns();
+      updateFloatingTexts();
+      updateCrosshairVertical();
+      updateTimer(timestamp);
+
+      if (flashTimer > 0) flashTimer--;
+
+      draw();
+      requestAnimationFrame(gameLoop);
+    }
+
+    window.addEventListener("keydown", (e) => {
+      keys[e.key] = true;
+
+      if (e.code === "Space" || e.key === "Enter") {
+        e.preventDefault();
+        takePhoto();
+      }
+    });
+
+    window.addEventListener("keyup", (e) => {
+      keys[e.key] = false;
+    });
+
+    let leftInterval = null;
+    let rightInterval = null;
+
+    function startHold(direction) {
+      stopHold(direction === "left" ? "right" : "left");
+
+      if (direction === "left") {
+        keys["ArrowLeft"] = true;
+        leftInterval = setInterval(() => {
+          keys["ArrowLeft"] = true;
+        }, 16);
+      } else {
+        keys["ArrowRight"] = true;
+        rightInterval = setInterval(() => {
+          keys["ArrowRight"] = true;
+        }, 16);
+      }
+    }
+
+    function stopHold(direction) {
+      if (direction === "left") {
+        keys["ArrowLeft"] = false;
+        if (leftInterval) clearInterval(leftInterval);
+        leftInterval = null;
+      } else {
+        keys["ArrowRight"] = false;
+        if (rightInterval) clearInterval(rightInterval);
+        rightInterval = null;
+      }
+    }
+
+    leftBtn.addEventListener("mousedown", () => startHold("left"));
+    leftBtn.addEventListener("mouseup", () => stopHold("left"));
+    leftBtn.addEventListener("mouseleave", () => stopHold("left"));
+    leftBtn.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      startHold("left");
+    }, { passive: false });
+    leftBtn.addEventListener("touchend", () => stopHold("left"));
+
+    rightBtn.addEventListener("mousedown", () => startHold("right"));
+    rightBtn.addEventListener("mouseup", () => stopHold("right"));
+    rightBtn.addEventListener("mouseleave", () => stopHold("right"));
+    rightBtn.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      startHold("right");
+    }, { passive: false });
+    rightBtn.addEventListener("touchend", () => stopHold("right"));
+
+    shootBtn.addEventListener("click", takePhoto);
+    restartBtn.addEventListener("click", resetGame);
+
+    canvas.addEventListener("mousemove", (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = W / rect.width;
+      crosshair.x = (e.clientX - rect.left) * scaleX;
+      if (crosshair.x < 40) crosshair.x = 40;
+      if (crosshair.x > W - 40) crosshair.x = W - 40;
+      camera.x += (crosshair.x - camera.x) * 0.35;
+    });
+
+    resetGame();
+    requestAnimationFrame(gameLoop);
+  </script>
+</body>
+</html>
