@@ -3,35 +3,456 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Katovia</title>
+  <title>Katovia Mock</title>
   <style>
+    :root{
+      --bg:#030813;
+      --panel:#081224;
+      --panel2:#0b1730;
+      --line:rgba(132,166,255,.18);
+      --text:#f3f7ff;
+      --muted:#9aa8c7;
+      --blue:#38a6ff;
+      --violet:#9b5cff;
+      --green:#25d98b;
+      --orange:#ff8a2b;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
     body{
       margin:0;
-      min-height:100vh;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+      background:radial-gradient(circle at 70% 12%,rgba(68,112,255,.26),transparent 32%),
+                 radial-gradient(circle at 42% 28%,rgba(149,59,255,.18),transparent 28%),
+                 linear-gradient(180deg,#020711 0%,#051020 52%,#030813 100%);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .topbar{
+      height:72px;
       display:flex;
       align-items:center;
-      justify-content:center;
-      background:#070b18;
+      justify-content:space-between;
+      padding:0 56px;
+      background:rgba(2,7,17,.86);
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter:blur(14px);
+    }
+    .brand{display:flex;align-items:center;gap:14px;font-weight:800;font-size:24px}
+    .mark{
+      width:34px;height:34px;border-radius:9px;
+      background:linear-gradient(135deg,var(--blue),var(--violet));
+      display:grid;place-items:center;
+      box-shadow:0 0 28px rgba(74,129,255,.42);
+      font-weight:900;
+    }
+    .nav{display:flex;gap:26px;align-items:center;color:#c6d0e8;font-weight:650;font-size:15px}
+    .nav a{padding:26px 0 21px;border-bottom:3px solid transparent}
+    .nav a.active{color:white;border-color:var(--blue)}
+    .actions{display:flex;align-items:center;gap:12px}
+    .iconBtn,.starBtn{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
       color:white;
-      font-family:Arial,sans-serif;
-      text-align:center;
+      height:38px;
+      border-radius:9px;
+      display:grid;
+      place-items:center;
     }
-    h1{
-      font-size:52px;
-      letter-spacing:6px;
-      margin:0 0 14px;
+    .iconBtn{width:38px}
+    .starBtn{padding:0 16px;font-weight:700;gap:8px;display:flex}
+    .hero{
+      min-height:450px;
+      display:grid;
+      grid-template-columns:1fr 1.1fr;
+      gap:28px;
+      padding:70px 56px 46px;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid rgba(132,166,255,.12);
     }
-    p{
-      font-size:22px;
-      color:#b9c3d8;
-      margin:0;
+    .hero h1{
+      font-size:54px;
+      line-height:1.06;
+      margin:0 0 18px;
+      letter-spacing:-.4px;
+    }
+    .gradientText{background:linear-gradient(90deg,var(--blue),var(--violet));-webkit-background-clip:text;color:transparent}
+    .hero p{max-width:560px;color:#b7c3dc;font-size:18px;line-height:1.55;margin:0 0 26px}
+    .buttons{display:flex;gap:16px;flex-wrap:wrap}
+    .btn{
+      height:52px;
+      padding:0 23px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      cursor:pointer;
+      background:rgba(255,255,255,.05);
+    }
+    .btn.primary{border:0;background:linear-gradient(135deg,#28a9ff,#9b35ff);box-shadow:0 12px 36px rgba(91,88,255,.35)}
+    .orbWrap{position:relative;min-height:330px;display:grid;place-items:center}
+    .galaxy{
+      position:absolute;width:520px;height:250px;border-radius:50%;
+      background:radial-gradient(circle,rgba(75,160,255,.45),transparent 28%),
+                 conic-gradient(from 20deg,transparent,rgba(87,128,255,.55),transparent,rgba(149,59,255,.5),transparent);
+      filter:blur(.2px);
+      opacity:.8;
+      transform:rotate(-8deg);
+    }
+    .kCube{
+      width:165px;height:165px;border-radius:30px;
+      background:linear-gradient(145deg,#143a92,#10225c 45%,#7e3dff);
+      display:grid;place-items:center;
+      font-size:96px;
+      font-weight:950;
+      box-shadow:0 0 60px rgba(48,145,255,.75),inset 0 0 30px rgba(255,255,255,.16);
+      z-index:2;
+    }
+    .floatIcon{
+      position:absolute;
+      z-index:3;
+      width:58px;height:58px;border-radius:15px;
+      display:grid;place-items:center;
+      border:1px solid rgba(117,162,255,.24);
+      background:rgba(10,24,52,.78);
+      box-shadow:0 0 24px rgba(62,129,255,.22);
+      color:#b8cbff;
+      font-size:25px;
+    }
+    .i1{left:17%;top:22%}.i2{left:25%;bottom:20%}.i3{right:19%;top:18%}.i4{right:14%;bottom:28%}
+    main{padding:28px 56px 42px}
+    .quickGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:-8px}
+    .quick{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,rgba(13,27,58,.82),rgba(7,15,31,.82));
+      border-radius:12px;
+      padding:17px;
+      min-height:98px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      cursor:pointer;
+      transition:.18s transform,.18s border-color;
+    }
+    .quick:hover{transform:translateY(-3px);border-color:rgba(77,152,255,.56)}
+    .quick .qIcon{
+      width:54px;height:54px;border-radius:13px;
+      display:grid;place-items:center;
+      font-size:25px;
+      flex:0 0 auto;
+    }
+    .quick h3{margin:0 0 5px;font-size:16px}
+    .quick p{margin:0;color:var(--muted);font-size:13px;line-height:1.35}
+    .sectionHead{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      margin:26px 0 14px;
+      border-top:1px solid rgba(132,166,255,.13);
+      padding-top:18px;
+    }
+    .sectionHead h2{margin:0;font-size:24px}
+    .sectionHead p{margin:5px 0 0;color:var(--muted)}
+    .allLink{color:#c7d4f2;font-weight:750}
+    .projectGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+    .project{
+      border:1px solid var(--line);
+      background:rgba(9,19,39,.82);
+      border-radius:10px;
+      overflow:hidden;
+      cursor:pointer;
+      min-height:210px;
+      transition:.18s transform,.18s border-color;
+    }
+    .project:hover{transform:translateY(-4px);border-color:rgba(89,159,255,.55)}
+    .cover{
+      height:118px;
+      display:grid;
+      place-items:center;
+      font-size:42px;
+      background:linear-gradient(135deg,rgba(51,151,255,.42),rgba(151,67,255,.25));
+    }
+    .project:nth-child(2) .cover{background:linear-gradient(135deg,#2f6b42,#0c2d61)}
+    .project:nth-child(3) .cover{background:linear-gradient(135deg,#1d284c,#3c4169)}
+    .project:nth-child(4) .cover{background:linear-gradient(135deg,#173c4a,#87a96b)}
+    .project:nth-child(5) .cover{background:linear-gradient(135deg,#70441f,#e0b36f)}
+    .project:nth-child(6) .cover{background:linear-gradient(135deg,#11182e,#8b5b22)}
+    .project .body{padding:12px 14px}
+    .project h3{margin:0 0 5px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:13px;line-height:1.35}
+    .labPanel{
+      margin-top:16px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:linear-gradient(180deg,rgba(11,23,48,.92),rgba(6,14,29,.92));
+      display:grid;
+      grid-template-columns:1fr 2.6fr;
+      overflow:hidden;
+    }
+    .labText{padding:24px}
+    .labText h2{margin:0 0 8px}
+    .labText p{color:var(--muted);line-height:1.5;margin:0 0 18px}
+    .codeGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:18px}
+    .codeCard{
+      background:#071020;
+      border:1px solid rgba(132,166,255,.15);
+      border-radius:10px;
+      overflow:hidden;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:12px;
+    }
+    .codeTop{height:34px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;background:#0d1931;color:#91a4cd}
+    .dots{display:flex;gap:6px}.dots span{width:8px;height:8px;border-radius:50%;display:block}.r{background:#ff5d5d}.y{background:#ffbd44}.g{background:#33d17a}
+    pre{margin:0;padding:13px;color:#8fc3ff;line-height:1.55;white-space:pre-wrap}
+    .soon{
+      display:none;
+      margin-top:18px;
+      border:1px solid rgba(56,166,255,.26);
+      background:rgba(8,20,44,.88);
+      border-radius:14px;
+      padding:28px;
+    }
+    .soon.active{display:block}
+    .soon h2{margin:0 0 8px}
+    .soon p{color:var(--muted);margin:0 0 18px;line-height:1.55}
+    .soonList{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .soonItem{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:10px;padding:16px}
+    .soonItem b{display:block;margin-bottom:6px}
+    .soonItem span{color:var(--muted);font-size:13px}
+    footer{
+      border-top:1px solid var(--line);
+      padding:22px 56px;
+      display:flex;
+      justify-content:space-between;
+      color:#aab7d3;
+      background:rgba(2,7,17,.72);
+    }
+    footer .brand{font-size:20px}
+    .hide{display:none}
+    @media(max-width:1050px){
+      .topbar{padding:0 20px}.nav{display:none}.hero{grid-template-columns:1fr;padding:48px 22px}.hero h1{font-size:42px}
+      main{padding:22px}.quickGrid{grid-template-columns:repeat(2,1fr)}.projectGrid{grid-template-columns:repeat(2,1fr)}
+      .labPanel{grid-template-columns:1fr}.codeGrid{grid-template-columns:1fr}.soonList{grid-template-columns:1fr}
+      footer{padding:22px;display:block}.actions{display:none}
     }
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <a class="brand" href="#ana-sayfa" data-route="ana-sayfa">
+      <span class="mark">K</span>
+      <span>Katovia</span>
+    </a>
+
+    <nav class="nav" id="nav"></nav>
+
+    <div class="actions">
+      <button class="iconBtn" title="GitHub">⌘</button>
+      <button class="starBtn">☆ GitHub'da Yıldızla</button>
+    </div>
+  </header>
+
+  <section class="hero" id="homeHero">
+    <div>
+      <h1>Mini uygulamalar. Hızlı oyunlar.<br><span class="gradientText">Açık kodlar.</span></h1>
+      <p>Katovia bağımsız bir dijital stüdyo ve yaratıcı üretim merkezidir. Mini uygulamalar, HTML5 araçları, gündelik oyunlar ve açık kaynaklı mobil deneyler geliştiriyoruz.</p>
+      <div class="buttons">
+        <button class="btn primary" data-route="laboratuvar">🚀 Laboratuvarı Keşfet</button>
+        <button class="btn" data-route="uygulamalar">▦ Uygulamaları Gör</button>
+      </div>
+    </div>
+
+    <div class="orbWrap" aria-label="Katovia görsel alanı">
+      <div class="galaxy"></div>
+      <div class="kCube">K</div>
+      <div class="floatIcon i1">🎮</div>
+      <div class="floatIcon i2">&lt;/&gt;</div>
+      <div class="floatIcon i3">▣</div>
+      <div class="floatIcon i4">📱</div>
+    </div>
+  </section>
+
   <main>
-    <h1>KATOVIA</h1>
-    <p>Yakında açılacak.</p>
+    <section id="homeContent">
+      <div class="quickGrid" id="quickGrid"></div>
+
+      <div class="sectionHead">
+        <div>
+          <h2>⭐ Öne Çıkan Projeler</h2>
+          <p>Özenle seçilmiş mini uygulamalar, oyunlar ve deneyler.</p>
+        </div>
+        <a class="allLink" href="#laboratuvar" data-route="laboratuvar">Tüm projeleri gör →</a>
+      </div>
+
+      <div class="projectGrid" id="projectGrid"></div>
+
+      <section class="labPanel">
+        <div class="labText">
+          <h2>Üret, oyna ve kodu keşfet.</h2>
+          <p>Katovia’da her proje zamanla çalışan demo, kaynak kod ve kısa açıklama formatıyla yayınlanacak.</p>
+          <button class="btn" data-route="kodlar">⌘ Kodları İncele</button>
+        </div>
+        <div class="codeGrid" id="codeGrid"></div>
+      </section>
+    </section>
+
+    <section class="soon" id="routePanel">
+      <h2 id="routeTitle">Yakında</h2>
+      <p id="routeText">Bu alan için iskelet hazır. İçerik eklendikçe kartlar, demolar ve kaynak kodlar buraya bağlanacak.</p>
+      <div class="soonList" id="routeItems"></div>
+    </section>
   </main>
+
+  <footer>
+    <div class="brand"><span class="mark">K</span><span>Katovia</span></div>
+    <div>Gizlilik Politikası · GitHub · İletişim</div>
+  </footer>
+
+  <script>
+    const navItems = [
+      { id:"ana-sayfa", label:"Ana Sayfa" },
+      { id:"uygulamalar", label:"Uygulamalar" },
+      { id:"laboratuvar", label:"Laboratuvar" },
+      { id:"oyunlar", label:"Oyunlar" },
+      { id:"kodlar", label:"Kodlar" },
+      { id:"gizlilik", label:"Gizlilik" },
+      { id:"iletisim", label:"İletişim" }
+    ];
+
+    const categories = [
+      { route:"uygulamalar", icon:"▦", title:"Uygulamalar", text:"Günlük işler için kullanışlı mini uygulamalar.", color:"linear-gradient(135deg,#1d72ff,#16316f)" },
+      { route:"laboratuvar", icon:"🛠", title:"Mini Araçlar", text:"İşi hızlıca halleden HTML5 araçları.", color:"linear-gradient(135deg,#2be28d,#124b2f)" },
+      { route:"oyunlar", icon:"🎮", title:"Mini Oyunlar", text:"Saniyeler içinde oynanabilecek gündelik oyunlar.", color:"linear-gradient(135deg,#9b54ff,#44207a)" },
+      { route:"kodlar", icon:"</>", title:"Açık Kod", text:"Kaynak kodu görülebilen açık projeler.", color:"linear-gradient(135deg,#ff8a2b,#5a240b)" },
+      { route:"laboratuvar", icon:"🤖", title:"APK Lab", text:"Deneysel APK’lar ve mobil prototipler.", color:"linear-gradient(135deg,#00d6b0,#06484c)" }
+    ];
+
+    const projects = [
+      { title:"Balonlubum", text:"Rahatlatıcı balon oyunu", icon:"🎈", route:"uygulamalar" },
+      { title:"Kare Savaşları", text:"Izgara üzerinde taktik savaşlar", icon:"⚔️", route:"uygulamalar" },
+      { title:"İletişim Analizi", text:"Konuşmalarını analiz et", icon:"📊", route:"uygulamalar" },
+      { title:"Mental Detox", text:"Odaklan. Nefes al. Yenilen.", icon:"🧘", route:"uygulamalar" },
+      { title:"Cuma Mesajı Oluşturucu", text:"Güzel cuma mesajları oluştur", icon:"💌", route:"laboratuvar" },
+      { title:"Fal Yorumu", text:"Günlük fal ve rehberlik", icon:"🪙", route:"laboratuvar" }
+    ];
+
+    const codes = [
+      {
+        title:"mini-araclar/url-kisaltici",
+        lang:"JavaScript",
+        code:"export function kisalt(url) {\n  const id = Math.random().toString(36)\n  return `https://k.tv/${id}`\n}"
+      },
+      {
+        title:"oyunlar/kare-savaslari",
+        lang:"TypeScript",
+        code:"class Savas {\n  constructor(harita) {\n    this.harita = harita\n  }\n}"
+      },
+      {
+        title:"uygulamalar/iletisim-analizi",
+        lang:"Flutter",
+        code:"final analiz = MesajAnalizi(\n  duygu: 'sakin',\n  guven: 82,\n);"
+      }
+    ];
+
+    const routeContent = {
+      "uygulamalar": {
+        title:"Uygulamalar",
+        text:"Katovia’nın Play Store’da yayınlanan veya yayınlanacak ana mobil uygulamaları burada listelenecek.",
+        items:["Balonlubum","Kare Savaşları","İletişim Analizi","Mental Detox"]
+      },
+      "laboratuvar": {
+        title:"Laboratuvar",
+        text:"Mini HTML5 araçlar, APK denemeleri, mesaj üreticiler, fal yorumları ve prototipler burada büyüyecek.",
+        items:["Cuma Mesajı Oluşturucu","Kandil Mesajı Oluşturucu","Fal Yorumu","Mini APK Denemeleri"]
+      },
+      "oyunlar": {
+        title:"Oyunlar",
+        text:"Kısa sürede açılan, telefonda hemen oynanan hafif HTML5 oyunlar burada olacak.",
+        items:["Mini Kelime Oyunu","Renk Eşleştir","Refleks Testi","Galaksi Savunma"]
+      },
+      "kodlar": {
+        title:"Kodlar",
+        text:"Her projenin çalışan demosu yanında kaynak kodu, açıklaması ve geliştirme notu burada listelenecek.",
+        items:["HTML5 Araç Kodları","Mini Oyun Kodları","Flutter APK Kodları","Tasarım Şablonları"]
+      },
+      "gizlilik": {
+        title:"Gizlilik",
+        text:"Katovia uygulamaları ve mini araçları için gizlilik politikaları bu alanda toplanacak.",
+        items:["Balonlubum Gizlilik","Kare Savaşları Gizlilik","İletişim Analizi Gizlilik","Mental Detox Gizlilik"]
+      },
+      "iletisim": {
+        title:"İletişim",
+        text:"Destek, iş birliği, proje önerileri ve geri bildirim için iletişim alanı burada hazırlanacak.",
+        items:["E-posta","GitHub","Play Store Geliştirici Sayfası","Geri Bildirim"]
+      }
+    };
+
+    function renderNav(){
+      const nav = document.getElementById("nav");
+      nav.innerHTML = navItems.map(item => `<a href="#${item.id}" data-route="${item.id}">${item.label}</a>`).join("");
+    }
+
+    function renderHome(){
+      document.getElementById("quickGrid").innerHTML = categories.map(c => `
+        <article class="quick" data-route="${c.route}">
+          <div class="qIcon" style="background:${c.color}">${c.icon}</div>
+          <div><h3>${c.title}</h3><p>${c.text}</p></div>
+        </article>
+      `).join("");
+
+      document.getElementById("projectGrid").innerHTML = projects.map(p => `
+        <article class="project" data-route="${p.route}">
+          <div class="cover">${p.icon}</div>
+          <div class="body"><h3>${p.title}</h3><p>${p.text}</p></div>
+        </article>
+      `).join("");
+
+      document.getElementById("codeGrid").innerHTML = codes.map(c => `
+        <article class="codeCard">
+          <div class="codeTop">
+            <span class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></span>
+            <span>${c.lang}</span>
+          </div>
+          <pre>${c.title}\n\n${c.code}</pre>
+        </article>
+      `).join("");
+    }
+
+    function setRoute(route){
+      const isHome = route === "ana-sayfa";
+      document.querySelectorAll("[data-route]").forEach(el => el.classList.toggle("active", el.dataset.route === route && el.tagName === "A"));
+      document.getElementById("homeHero").classList.toggle("hide", !isHome);
+      document.getElementById("homeContent").classList.toggle("hide", !isHome);
+      document.getElementById("routePanel").classList.toggle("active", !isHome);
+
+      if(!isHome){
+        const content = routeContent[route] || {title:"Yakında", text:"Bu alan hazırlanıyor.", items:["Demo","Kaynak Kod","Açıklama"]};
+        document.getElementById("routeTitle").textContent = content.title;
+        document.getElementById("routeText").textContent = content.text;
+        document.getElementById("routeItems").innerHTML = content.items.map(item => `
+          <div class="soonItem"><b>${item}</b><span>Yakında aktif bağlantı, demo ve kaynak kod formatı eklenecek.</span></div>
+        `).join("");
+      }
+      location.hash = route;
+    }
+
+    document.addEventListener("click", e => {
+      const target = e.target.closest("[data-route]");
+      if(target){
+        e.preventDefault();
+        setRoute(target.dataset.route);
+      }
+    });
+
+    renderNav();
+    renderHome();
+    setRoute(location.hash.replace("#","") || "ana-sayfa");
+  </script>
 </body>
 </html>
