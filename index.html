@@ -334,13 +334,47 @@
     ];
 
     const projects = [
-      { title:"Balonlubum", text:"Rahatlatıcı balon oyunu", icon:"🎈", route:"uygulamalar" },
-      { title:"Kare Savaşları", text:"Izgara üzerinde taktik savaşlar", icon:"⚔️", route:"uygulamalar" },
-      { title:"İletişim Analizi", text:"Konuşmalarını analiz et", icon:"📊", route:"uygulamalar" },
-      { title:"Mental Detox", text:"Odaklan. Nefes al. Yenilen.", icon:"🧘", route:"uygulamalar" },
-      { title:"Cuma Mesajı Oluşturucu", text:"Güzel cuma mesajları oluştur", icon:"💌", route:"laboratuvar" },
-      { title:"Fal Yorumu", text:"Günlük fal ve rehberlik", icon:"🪙", route:"laboratuvar" }
-    ];
+  {
+    title: "Balonlubum",
+    text: "Kelime ve refleks odaklı galaksi oyunu",
+    icon: "🎈",
+    route: "uygulamalar",
+    url: "https://play.google.com/store/apps/details?id=com.katovia.balonlubum"
+  },
+  {
+    title: "Kare Savaşları",
+    text: "Izgara üzerinde taktik savaşlar",
+    icon: "⚔️",
+    route: "uygulamalar",
+    url: "https://play.google.com/store/apps/details?id=com.katovia.karesavaslari"
+  },
+  {
+    title: "İletişim Analizi",
+    text: "İlişkilerini ve konuşmalarını analiz et",
+    icon: "📊",
+    route: "uygulamalar",
+    url: "https://play.google.com/store/apps/details?id=com.katovia.iletisim_analizi"
+  },
+  {
+    title: "Mental Detox",
+    text: "Odaklan. Nefes al. Yenilen.",
+    icon: "🧘",
+    route: "uygulamalar",
+    url: "https://play.google.com/store/apps/details?id=com.katovia.mental_detox"
+  },
+  {
+    title: "Cuma Mesajı Oluşturucu",
+    text: "Yakında: güzel cuma mesajları oluştur",
+    icon: "💌",
+    route: "laboratuvar"
+  },
+  {
+    title: "Fal Yorumu",
+    text: "Yakında: günlük fal ve rehberlik",
+    icon: "🪙",
+    route: "laboratuvar"
+  }
+];
 
     const codes = [
       {
@@ -407,7 +441,7 @@
       `).join("");
 
       document.getElementById("projectGrid").innerHTML = projects.map(p => `
-        <article class="project" data-route="${p.route}">
+        <article class="project" data-route="${p.route}" ${p.url ? `data-url="${p.url}"` : ""}>
           <div class="cover">${p.icon}</div>
           <div class="body"><h3>${p.title}</h3><p>${p.text}</p></div>
         </article>
@@ -443,12 +477,18 @@
     }
 
     document.addEventListener("click", e => {
-      const target = e.target.closest("[data-route]");
-      if(target){
-        e.preventDefault();
-        setRoute(target.dataset.route);
-      }
-    });
+  const project = e.target.closest(".project");
+  if (project && project.dataset.url) {
+    window.open(project.dataset.url, "_blank");
+    return;
+  }
+
+  const target = e.target.closest("[data-route]");
+  if(target){
+    e.preventDefault();
+    setRoute(target.dataset.route);
+  }
+});
 
     renderNav();
     renderHome();
