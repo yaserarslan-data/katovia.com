@@ -469,17 +469,28 @@
         const content = routeContent[route] || {title:"Yakında", text:"Bu alan hazırlanıyor.", items:["Demo","Kaynak Kod","Açıklama"]};
         document.getElementById("routeTitle").textContent = content.title;
         document.getElementById("routeText").textContent = content.text;
-        document.getElementById("routeItems").innerHTML = content.items.map(item => `
-          <div class="soonItem"><b>${item}</b><span>Yakında aktif bağlantı, demo ve kaynak kod formatı eklenecek.</span></div>
-        `).join("");
+        if (route === "uygulamalar") {
+  const apps = projects.filter(p => p.route === "uygulamalar" && p.url);
+
+  document.getElementById("routeItems").innerHTML = apps.map(app => `
+    <div class="soonItem" data-url="${app.url}" style="cursor:pointer">
+      <b>${app.icon} ${app.title}</b>
+      <span>${app.text}<br>Google Play'de görüntülemek için tıkla.</span>
+    </div>
+  `).join("");
+} else {
+  document.getElementById("routeItems").innerHTML = content.items.map(item => `
+    <div class="soonItem"><b>${item}</b><span>Yakında aktif bağlantı, demo ve kaynak kod formatı eklenecek.</span></div>
+  `).join("");
+}
       }
       location.hash = route;
     }
 
     document.addEventListener("click", e => {
-  const project = e.target.closest(".project");
-  if (project && project.dataset.url) {
-    window.open(project.dataset.url, "_blank");
+  const linkCard = e.target.closest("[data-url]");
+  if (linkCard && linkCard.dataset.url) {
+    window.open(linkCard.dataset.url, "_blank");
     return;
   }
 
@@ -488,7 +499,7 @@
     e.preventDefault();
     setRoute(target.dataset.route);
   }
-});
+});s
 
     renderNav();
     renderHome();
