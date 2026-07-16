@@ -64,6 +64,34 @@
     }
     .iconBtn{width:34px}
     .starBtn{padding:0 14px;font-weight:700;gap:8px;display:flex}
+    .mobileMenuBtn,.mobileNav{display:none}
+    .mobileMenuBtn{
+      width:44px;
+      height:44px;
+      padding:0;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:rgba(255,255,255,.05);
+      color:white;
+      place-items:center;
+      cursor:pointer;
+    }
+    .menuIcon{width:20px;display:grid;gap:4px}
+    .menuIcon span{
+      display:block;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:currentColor;
+      transition:transform .18s ease,opacity .18s ease;
+    }
+    .mobileMenuBtn[aria-expanded="true"] .menuIcon span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .mobileMenuBtn[aria-expanded="true"] .menuIcon span:nth-child(2){opacity:0}
+    .mobileMenuBtn[aria-expanded="true"] .menuIcon span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    .nav a:focus-visible,.mobileNav a:focus-visible,.mobileMenuBtn:focus-visible{
+      outline:3px solid rgba(56,166,255,.72);
+      outline-offset:3px;
+    }
     .hero{
       min-height:360px;
       display:grid;
@@ -246,6 +274,91 @@
   object-fit:cover;
   display:block;
 }
+    .soonList.appShowcaseGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .appShowcaseCard{min-width:0}
+    .appShowcaseLink{
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      border:1px solid rgba(132,166,255,.22);
+      border-radius:14px;
+      background:linear-gradient(180deg,rgba(13,28,59,.94),rgba(6,15,31,.96));
+      box-shadow:0 16px 38px rgba(0,0,0,.2);
+      transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+    }
+    .appShowcaseLink:focus-visible{
+      outline:3px solid rgba(56,166,255,.78);
+      outline-offset:3px;
+      border-color:rgba(56,166,255,.72);
+    }
+    .appShowcaseMedia{
+      position:relative;
+      height:clamp(190px,22vw,260px);
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      border-bottom:1px solid rgba(132,166,255,.16);
+      background:radial-gradient(circle at 50% 45%,rgba(56,166,255,.18),transparent 42%),
+                 linear-gradient(135deg,rgba(30,73,139,.42),rgba(68,35,126,.28));
+    }
+    .appShowcaseMedia img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+    }
+    .appShowcaseFallback{
+      width:100%;
+      height:100%;
+      display:grid;
+      place-items:center;
+      font-size:64px;
+      background:linear-gradient(135deg,rgba(56,166,255,.2),rgba(155,92,255,.22));
+    }
+    .appShowcaseFallback[hidden]{display:none}
+    .appShowcaseContent{
+      flex:1;
+      min-width:0;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      padding:20px;
+    }
+    .appPlatform{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-bottom:10px;
+      color:#9fc8ff;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.35px;
+      text-transform:uppercase;
+    }
+    .appShowcaseContent h3{margin:0 0 8px;font-size:21px;line-height:1.2}
+    .appShowcaseContent p{margin:0 0 18px;color:var(--muted);font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+    .appShowcaseCta{
+      min-height:44px;
+      margin-top:auto;
+      padding:0 15px;
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      border:1px solid rgba(56,166,255,.32);
+      border-radius:10px;
+      background:linear-gradient(135deg,rgba(40,169,255,.18),rgba(155,53,255,.2));
+      color:#f3f7ff;
+      font-size:13px;
+      font-weight:850;
+    }
+    @media(hover:hover){
+      .appShowcaseLink:hover{
+        transform:translateY(-4px);
+        border-color:rgba(89,159,255,.58);
+        box-shadow:0 20px 46px rgba(0,0,0,.3),0 0 24px rgba(56,166,255,.08);
+      }
+    }
     .soonItem[data-url]{cursor:pointer}
     .soonItem[data-url]:hover{transform:translateY(-3px);border-color:rgba(89,159,255,.55)}
     .soonItem b{display:block;margin-bottom:6px}
@@ -260,11 +373,166 @@
     }
     footer .brand{font-size:20px}
     .hide{display:none}
+    @media(max-width:1023px) and (min-width:761px){
+      .topbar{padding:0 24px}
+      .nav{gap:14px;font-size:13px}
+      .actions{display:none}
+      .hero{
+        min-height:340px;
+        grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);
+        gap:20px;
+        padding:40px 32px 32px;
+      }
+      .hero h1{font-size:clamp(38px,4.5vw,44px)}
+      .hero > div{min-width:0}
+      .orbWrap{min-height:250px}
+      .galaxy{width:360px;height:180px}
+      .kCube{width:120px;height:120px;font-size:68px}
+      .floatIcon{width:44px;height:44px;font-size:20px}
+      main{padding:24px 32px 38px}
+      .quickGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .projectGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .project{min-width:0}
+      .cover{height:auto;aspect-ratio:1}
+      .labPanel{grid-template-columns:1fr}
+    }
+    @media(max-width:900px){
+      .soonList.appShowcaseGrid{grid-template-columns:1fr}
+    }
     @media(max-width:760px){
-      .topbar{padding:0 20px}.nav{display:none}.hero{grid-template-columns:1fr;padding:48px 22px}.hero h1{font-size:42px}
-      main{padding:22px}.quickGrid{grid-template-columns:repeat(2,1fr)}.projectGrid{grid-template-columns:repeat(2,1fr)}
-      .labPanel{grid-template-columns:1fr}.codeGrid{grid-template-columns:1fr}.soonList{grid-template-columns:1fr}
-      footer{padding:22px;display:block}.actions{display:none}
+      .topbar{padding:0 20px}
+      .nav,.actions{display:none}
+      .mobileMenuBtn{display:grid;flex:0 0 auto}
+      .mobileNav:not([hidden]){
+        position:absolute;
+        top:calc(100% + 8px);
+        left:12px;
+        right:12px;
+        display:grid;
+        gap:4px;
+        max-height:calc(100vh - 88px);
+        padding:10px;
+        overflow-y:auto;
+        overscroll-behavior:contain;
+        border:1px solid rgba(132,166,255,.24);
+        border-radius:14px;
+        background:linear-gradient(180deg,rgba(11,23,48,.98),rgba(4,11,24,.98));
+        box-shadow:0 20px 54px rgba(0,0,0,.5),0 0 32px rgba(56,166,255,.12);
+        z-index:20;
+      }
+      .mobileNav a{
+        position:relative;
+        min-height:48px;
+        display:flex;
+        align-items:center;
+        padding:0 16px;
+        border:1px solid transparent;
+        border-radius:10px;
+        color:#c6d0e8;
+        font-size:15px;
+        font-weight:750;
+      }
+      .mobileNav a:hover{background:rgba(255,255,255,.05)}
+      .mobileNav a.active{
+        padding-left:20px;
+        border-color:rgba(56,166,255,.2);
+        background:linear-gradient(90deg,rgba(56,166,255,.16),rgba(155,92,255,.08));
+        color:white;
+      }
+      .mobileNav a.active::before{
+        content:"";
+        position:absolute;
+        left:8px;
+        width:4px;
+        height:24px;
+        border-radius:999px;
+        background:linear-gradient(180deg,var(--blue),var(--violet));
+      }
+      .hero{
+        min-height:auto;
+        grid-template-columns:minmax(0,1fr);
+        gap:20px;
+        padding:32px 20px 24px;
+      }
+      .hero > div{min-width:0}
+      .hero h1{
+        font-size:clamp(32px,9.5vw,40px);
+        line-height:1.08;
+        margin-bottom:12px;
+        letter-spacing:-.3px;
+      }
+      .hero h1 br{display:none}
+      .hero p{
+        max-width:none;
+        margin-bottom:18px;
+        font-size:15px;
+        line-height:1.55;
+      }
+      .buttons{
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px;
+      }
+      .btn{
+        width:100%;
+        min-height:48px;
+        height:auto;
+        padding:10px 16px;
+        justify-content:center;
+        line-height:1.25;
+        text-align:center;
+      }
+      .orbWrap{min-height:170px}
+      .galaxy{width:min(320px,100%);height:150px}
+      .kCube{
+        width:96px;
+        height:96px;
+        border-radius:20px;
+        font-size:56px;
+        box-shadow:0 0 44px rgba(48,145,255,.62),inset 0 0 24px rgba(255,255,255,.16);
+      }
+      .floatIcon{width:40px;height:40px;border-radius:11px;font-size:18px}
+      .i1{left:12%;top:18%}.i2{left:20%;bottom:12%}.i3{right:14%;top:14%}.i4{right:10%;bottom:20%}
+      main{padding:20px 20px 32px;min-width:0}
+      .quickGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:0}
+      .quick{min-width:0;min-height:92px;padding:14px;gap:12px}
+      .quick > div:last-child{min-width:0}
+      .quick .qIcon{width:48px;height:48px;border-radius:12px;font-size:23px}
+      .quick h3{font-size:15px}
+      .quick p{font-size:12.5px;overflow-wrap:anywhere}
+      .sectionHead{align-items:flex-start;gap:12px;margin:22px 0 12px;padding-top:16px}
+      .sectionHead > div{min-width:0}
+      .sectionHead h2{font-size:21px}
+      .sectionHead p{font-size:14px;line-height:1.4}
+      .allLink{min-height:44px;display:flex;align-items:center;flex:0 0 auto}
+      .projectGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+      .project{min-width:0;min-height:0}
+      .cover{height:auto;aspect-ratio:1}
+      .project .body{padding:12px}
+      .project h3{font-size:15px;overflow-wrap:anywhere}
+      .project p{font-size:12.5px;overflow-wrap:anywhere}
+      .labPanel{grid-template-columns:1fr}
+      .labText{padding:20px}
+      .codeGrid{grid-template-columns:1fr;padding:14px}
+      .soonList{grid-template-columns:1fr}
+      .soon.appsRoute{padding:18px 14px}
+      .soon.appsRoute > p{margin-bottom:16px}
+      .appShowcaseMedia{height:clamp(170px,48vw,230px)}
+      .appShowcaseContent{padding:16px}
+      .appShowcaseContent h3{font-size:20px}
+      .appShowcaseContent p{font-size:13.5px;margin-bottom:16px}
+      footer{padding:20px;display:block}
+      footer .brand{margin-bottom:12px}
+    }
+    @media(max-width:480px){
+      .buttons{grid-template-columns:1fr}
+      .quickGrid{grid-template-columns:1fr}
+      .quick{min-height:88px}
+      .sectionHead{display:block}
+      .allLink{margin-top:6px;width:max-content;max-width:100%}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .menuIcon span,.appShowcaseLink{transition:none}
     }
   </style>
 </head>
@@ -281,6 +549,12 @@
       <button class="iconBtn" title="GitHub">⌘</button>
       <button class="starBtn">☆ GitHub'da Yıldızla</button>
     </div>
+
+    <button class="mobileMenuBtn" id="mobileMenuBtn" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileNav">
+      <span class="menuIcon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+
+    <nav class="mobileNav" id="mobileNav" aria-label="Mobil navigasyon" hidden></nav>
   </header>
 
   <section class="hero" id="homeHero">
@@ -470,7 +744,10 @@
 
     function renderNav(){
       const nav = document.getElementById("nav");
-      nav.innerHTML = navItems.map(item => `<a href="#${item.id}" data-route="${item.id}">${item.label}</a>`).join("");
+      const mobileNav = document.getElementById("mobileNav");
+      const links = navItems.map(item => `<a href="#${item.id}" data-route="${item.id}">${item.label}</a>`).join("");
+      nav.innerHTML = links;
+      mobileNav.innerHTML = links;
     }
 
     function renderHome(){
@@ -499,38 +776,87 @@
       `).join("");
     }
 
-    function setRoute(route){
+    const validRoutes = new Set(navItems.map(item => item.id));
+    const mobileMenuButton = document.getElementById("mobileMenuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+    const mobileViewport = window.matchMedia("(max-width: 760px)");
+
+    function isMobileMenuOpen(){
+      return mobileMenuButton.getAttribute("aria-expanded") === "true";
+    }
+
+    function setMobileMenu(open){
+      const shouldOpen = Boolean(open && mobileViewport.matches);
+      mobileMenuButton.setAttribute("aria-expanded", String(shouldOpen));
+      mobileMenuButton.setAttribute("aria-label", shouldOpen ? "Menüyü kapat" : "Menüyü aç");
+      mobileNav.hidden = !shouldOpen;
+    }
+
+    function getRouteFromHash(){
+      return location.hash.slice(1).trim();
+    }
+
+    function getSafeRoute(route){
+      return validRoutes.has(route) ? route : "ana-sayfa";
+    }
+
+    function updateActiveRoute(route){
+      document.querySelectorAll("#nav a[data-route], #mobileNav a[data-route]").forEach(link => {
+        const isActive = link.dataset.route === route;
+        link.classList.toggle("active", isActive);
+        if(isActive){
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    function setRoute(route,{scrollToTop=false}={}){
       const isHome = route === "ana-sayfa";
-      document.querySelectorAll("[data-route]").forEach(el => el.classList.toggle("active", el.dataset.route === route && el.tagName === "A"));
+      const routePanel = document.getElementById("routePanel");
+      const routeItems = document.getElementById("routeItems");
+      updateActiveRoute(route);
       document.getElementById("homeHero").classList.toggle("hide", !isHome);
       document.getElementById("homeContent").classList.toggle("hide", !isHome);
-      document.getElementById("routePanel").classList.toggle("active", !isHome);
+      routePanel.classList.toggle("active", !isHome);
+      routePanel.classList.toggle("appsRoute", route === "uygulamalar");
+      routeItems.classList.toggle("appShowcaseGrid", route === "uygulamalar");
 
-      if(!isHome){
-        const content = routeContent[route] || {title:"Yakında", text:"Bu alan hazırlanıyor.", items:["Demo","Kaynak Kod","Açıklama"]};
+      if(isHome){
+        routeItems.replaceChildren();
+      } else {
+        const content = routeContent[route];
         document.getElementById("routeTitle").textContent = content.title;
         document.getElementById("routeText").textContent = content.text;
         if (route === "uygulamalar") {
   const apps = projects.filter(p => p.route === "uygulamalar" && p.url);
 
-  document.getElementById("routeItems").innerHTML = apps.map(app => `
-    <div class="soonItem" data-url="${app.url}">
-      <div class="appThumb">
-        <img src="${app.image}" alt="${app.title}" onerror="this.remove();this.parentElement.textContent='${app.icon}'">
-      </div>
-      <b>${app.title}</b>
-      <span>${app.text}<br>Google Play'de görüntülemek için tıkla.</span>
-    </div>
+  routeItems.innerHTML = apps.map(app => `
+    <article class="appShowcaseCard">
+      <a class="appShowcaseLink" href="${app.url}" target="_blank" rel="noopener noreferrer" aria-label="${app.title}: Google Play'de Gör">
+        <span class="appShowcaseMedia">
+          <img src="${app.image}" alt="${app.title} uygulama görseli" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+          <span class="appShowcaseFallback" role="img" aria-label="${app.title} görseli" hidden>${app.icon}</span>
+        </span>
+        <span class="appShowcaseContent">
+          <span class="appPlatform"><span aria-hidden="true">▦</span> Android · Google Play</span>
+          <h3>${app.title}</h3>
+          <p>${app.text}</p>
+          <span class="appShowcaseCta">Google Play'de Gör <span aria-hidden="true">↗</span></span>
+        </span>
+      </a>
+    </article>
   `).join("");
 } else if (route === "oyunlar") {
-  document.getElementById("routeItems").innerHTML = games.map(game => `
+  routeItems.innerHTML = games.map(game => `
     <div class="soonItem" data-url="${game.url}">
       <b>${game.icon} ${game.title}</b>
       <span>${game.text}<br>Oyunu açmak için tıkla.</span>
     </div>
   `).join("");
 } else {
-  document.getElementById("routeItems").innerHTML = content.items.map(item => `
+  routeItems.innerHTML = content.items.map(item => `
     <div class="soonItem">
       <b>${item}</b>
       <span>Yakında aktif bağlantı, demo ve kaynak kod formatı eklenecek.</span>
@@ -538,10 +864,60 @@
   `).join("");
 }
       }
-      location.hash = route;
+      setMobileMenu(false);
+      if(scrollToTop){
+        window.scrollTo({top:0,left:0,behavior:"auto"});
+      }
     }
 
+    function syncRouteFromHash({scrollToTop=false}={}){
+      const hashRoute = getRouteFromHash();
+      const route = getSafeRoute(hashRoute);
+      setRoute(route,{scrollToTop});
+      if(hashRoute !== route){
+        location.replace(`#${route}`);
+      }
+    }
+
+    function navigateToRoute(route){
+      const safeRoute = getSafeRoute(route);
+      if(getRouteFromHash() === safeRoute){
+        setRoute(safeRoute,{scrollToTop:true});
+        return;
+      }
+      location.hash = safeRoute;
+    }
+
+    mobileMenuButton.addEventListener("click", () => setMobileMenu(!isMobileMenuOpen()));
+    mobileMenuButton.addEventListener("keydown", e => {
+      if(e.key === "Enter" || e.key === " "){
+        e.preventDefault();
+        setMobileMenu(!isMobileMenuOpen());
+      }
+    });
+    mobileNav.addEventListener("keydown", e => {
+      const target = e.target.closest("a[data-route]");
+      if(e.key === "Enter" && target){
+        e.preventDefault();
+        navigateToRoute(target.dataset.route);
+      }
+    });
+
+    document.addEventListener("keydown", e => {
+      if(e.key === "Escape" && isMobileMenuOpen()){
+        setMobileMenu(false);
+        mobileMenuButton.focus();
+      }
+    });
+
+    mobileViewport.addEventListener("change", () => setMobileMenu(false));
+    window.addEventListener("hashchange", () => syncRouteFromHash({scrollToTop:true}));
+
     document.addEventListener("click", e => {
+      if(isMobileMenuOpen() && !mobileNav.contains(e.target) && !mobileMenuButton.contains(e.target)){
+        setMobileMenu(false);
+      }
+
       const linkCard = e.target.closest("[data-url]");
       if (linkCard && linkCard.dataset.url) {
         window.open(linkCard.dataset.url, "_blank");
@@ -551,13 +927,13 @@
       const target = e.target.closest("[data-route]");
       if(target){
         e.preventDefault();
-        setRoute(target.dataset.route);
+        navigateToRoute(target.dataset.route);
       }
     });
 
     renderNav();
     renderHome();
-    setRoute(location.hash.replace("#","") || "ana-sayfa");
+    syncRouteFromHash();
   </script>
 </body>
 </html>
