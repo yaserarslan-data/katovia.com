@@ -706,6 +706,13 @@
         url: "laboratuvar/dogum-gunu-mesaji.html"
       },
       {
+        title: "Güzel Sözler Koleksiyonu",
+        text: "Özgün sözleri keşfet, filtrele ve favorilerine ekle.",
+        icon: "❝",
+        route: "laboratuvar",
+        url: "laboratuvar/guzel-sozler.html"
+      },
+      {
         title: "Fal Yorumu",
         text: "Yakında: günlük fal ve rehberlik",
         icon: "🪙",
@@ -888,7 +895,7 @@
   const activeTools = projects.filter(project => project.route === "laboratuvar" && project.url);
   const pendingTools = content.items
     .filter(item => !activeTools.some(tool => tool.title === item))
-    .slice(0,Math.max(0,4-activeTools.length));
+    .slice(0,Math.max(0,5-activeTools.length));
   routeItems.innerHTML = `
     ${activeTools.map(tool => `
       <article>
