@@ -16,7 +16,7 @@
       flex-direction: column;
       background:
         linear-gradient(to bottom, #5db7ff 0%, #8ad6ff 38%, #bff0ff 68%, #74c365 68%, #4f9547 100%);
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     .topbar {
@@ -31,13 +31,9 @@
       z-index: 5;
     }
 
-    .back-btn {
-      text-decoration: none;
-      color: #fff;
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.16);
-      padding: 10px 14px;
-      border-radius: 12px;
+    .topbar-status {
+      color: rgba(255,255,255,0.86);
+      font-size: 14px;
       font-weight: 700;
     }
 
@@ -81,7 +77,7 @@
 
     .hud {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 12px;
     }
 
@@ -105,6 +101,18 @@
     .hud-value {
       font-size: 26px;
       font-weight: 800;
+    }
+
+    .pause-btn {
+      width: 100%;
+      min-height: 44px;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 14px;
+      color: #fff;
+      background: rgba(12, 35, 53, 0.58);
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
     }
 
     .game-panel {
@@ -136,7 +144,8 @@
     .control-btn {
       border: none;
       border-radius: 16px;
-      padding: 16px;
+      min-height: 52px;
+      padding: 12px;
       font-size: 18px;
       font-weight: 800;
       cursor: pointer;
@@ -164,8 +173,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 16px;
       z-index: 15;
+      overflow-y: auto;
+      transition: opacity 160ms ease;
     }
 
     .overlay.hidden { display: none; }
@@ -181,6 +192,17 @@
       box-shadow: 0 20px 50px rgba(0,0,0,0.35);
     }
 
+    .overlay-card.hidden { display: none; }
+
+    .overlay-kicker {
+      margin: 0 0 8px;
+      color: #9fdbff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
     .overlay-card h2 {
       margin: 0 0 10px;
       font-size: 32px;
@@ -192,30 +214,103 @@
       font-size: 16px;
     }
 
-    .restart-btn {
-      margin-top: 16px;
+    .overlay-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .return-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 48px;
       border: none;
       border-radius: 16px;
-      padding: 14px 20px;
+      padding: 12px 18px;
       font-size: 16px;
       font-weight: 800;
       cursor: pointer;
       color: #fff;
+      text-decoration: none;
+    }
+
+    .primary-btn {
       background: linear-gradient(180deg, #6bcf63 0%, #339a34 100%);
     }
 
+    .secondary-btn {
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .return-link {
+      color: rgba(255,255,255,0.9);
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #fff0a6;
+      outline-offset: 3px;
+    }
+
+    button:disabled {
+      cursor: default;
+      opacity: 0.55;
+    }
+
     @media (max-width: 700px) {
-      .hud { grid-template-columns: 1fr 1fr; }
-      .hero h1 { font-size: 26px; }
-      .hud-value { font-size: 22px; }
-      .controls { grid-template-columns: 1fr; }
+      .topbar { padding: 10px 12px; }
+      .page-wrap { padding: 10px; gap: 8px; }
+      .hero { padding: 10px 12px; border-radius: 16px; }
+      .hero h1 { margin-bottom: 4px; font-size: 23px; }
+      .hero p { font-size: 13px; }
+      .hud { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; }
+      .hud-box { padding: 7px 3px; border-radius: 12px; }
+      .hud-box:last-child { padding: 4px 2px; }
+      .hud-label { margin-bottom: 3px; font-size: 9px; letter-spacing: .4px; }
+      .hud-value { font-size: 18px; }
+      .pause-btn { min-height: 44px; padding: 4px; font-size: 11px; }
+      .game-panel { padding: 7px; border-radius: 18px; }
+      canvas { border-width: 2px; border-radius: 14px; touch-action: none; }
+      .controls { grid-template-columns: 1fr 1.35fr 1fr; gap: 6px; margin-top: 7px; }
+      .control-btn { min-height: 48px; padding: 8px 4px; border-radius: 12px; font-size: 14px; touch-action: manipulation; }
+      .bottom-info { font-size: 11px; padding-bottom: 2px; }
+      .overlay { align-items: flex-start; padding: 12px; }
+      .overlay-card { max-width: 420px; margin: auto; padding: 22px 18px; border-radius: 20px; }
+      .overlay-card h2 { font-size: 27px; }
+      .overlay-card p { font-size: 14px; }
+      .overlay-actions { margin-top: 16px; }
+    }
+
+    @media (max-height: 700px) and (max-width: 700px) {
+      .hero p, .bottom-info { display: none; }
+      .hero h1 { margin: 0; font-size: 20px; }
+      .overlay-card { padding-block: 16px; }
+      .overlay-card h2 { font-size: 24px; }
+      .overlay-card p { margin: 5px 0; }
+      .overlay-actions { gap: 7px; margin-top: 12px; }
+      .primary-btn, .secondary-btn, .return-link { min-height: 44px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
 <body>
   <div class="topbar">
-    <a class="back-btn" href="../index.html#oyunlar">← Geri Dön</a>
     <div class="brand">Katovia</div>
+    <div class="topbar-status" id="stateText" aria-live="polite">Hazır</div>
   </div>
 
   <main class="page-wrap">
@@ -241,15 +336,18 @@
         <div class="hud-label">İsabet</div>
         <div class="hud-value" id="hitsEl">0</div>
       </div>
+      <div class="hud-box">
+        <button class="pause-btn" id="pauseBtn" type="button" disabled>Duraklat</button>
+      </div>
     </section>
 
     <section class="game-panel">
-      <canvas id="gameCanvas" width="900" height="560"></canvas>
+      <canvas id="gameCanvas" width="900" height="560" role="img" aria-label="Uçan kuşları kadraja alarak fotoğraf çektiğiniz oyun alanı"></canvas>
 
       <div class="controls">
-        <button class="control-btn" id="leftBtn">⬅ Sol</button>
-        <button class="control-btn shoot-btn" id="shootBtn">📸 Fotoğraf Çek</button>
-        <button class="control-btn" id="rightBtn">Sağ ➡</button>
+        <button class="control-btn" id="leftBtn" type="button">⬅ Sol</button>
+        <button class="control-btn shoot-btn" id="shootBtn" type="button">📸 Fotoğraf Çek</button>
+        <button class="control-btn" id="rightBtn" type="button">Sağ ➡</button>
       </div>
     </section>
 
@@ -258,12 +356,40 @@
     </div>
   </main>
 
-  <div class="overlay" id="gameOverOverlay">
-    <div class="overlay-card">
-      <h2>Çekim Bitti</h2>
-      <p id="finalScoreText">Puanın: 0</p>
-      <p id="finalStatsText">İstatistikler</p>
-      <button class="restart-btn" id="restartBtn">Tekrar Oyna</button>
+  <div class="overlay" id="gameOverlay" role="dialog" aria-modal="true" aria-labelledby="overlayTitle">
+    <div class="overlay-card" id="readyCard">
+      <p class="overlay-kicker">Katovia Mini Oyun</p>
+      <h2 id="overlayTitle">Kuş Fotoğrafçısı</h2>
+      <p>Kuşları kadraja al, doğru anda fotoğraf çek.</p>
+      <p><strong>Nasıl oynanır:</strong> Sol ve sağ ile kadrajı taşı; süre dolmadan mümkün olduğunca çok kuş yakala.</p>
+      <div class="overlay-actions">
+        <button class="primary-btn" id="startBtn" type="button">Başlat</button>
+        <a class="return-link" href="../index.html#oyunlar">Katovia Oyunlarına Dön</a>
+      </div>
+    </div>
+
+    <div class="overlay-card hidden" id="pauseCard">
+      <p class="overlay-kicker">Fotoğraf Turu</p>
+      <h2 id="pauseTitle">Oyun Duraklatıldı</h2>
+      <p>Süren ve skorun kaldığın yerde bekliyor.</p>
+      <div class="overlay-actions">
+        <button class="primary-btn" id="resumeBtn" type="button">Devam Et</button>
+        <button class="secondary-btn" id="restartFromPauseBtn" type="button">Yeniden Başlat</button>
+        <a class="return-link" href="../index.html#oyunlar">Katovia'ya Dön</a>
+      </div>
+    </div>
+
+    <div class="overlay-card hidden" id="finishedCard">
+      <p class="overlay-kicker">Tur Tamamlandı</p>
+      <h2 id="finishedTitle">Süre Doldu</h2>
+      <p id="finalScoreText">Final skorun: 0</p>
+      <p id="finalStatsText">Toplam çekim: 0 · İsabet: 0</p>
+      <p id="performanceText">Güzel başlangıç.</p>
+      <p id="bestScoreText">En iyi skor: 0</p>
+      <div class="overlay-actions">
+        <button class="primary-btn" id="restartBtn" type="button">Tekrar Oyna</button>
+        <a class="return-link" href="../index.html#oyunlar">Katovia Oyunlarına Dön</a>
+      </div>
     </div>
   </div>
 
@@ -276,10 +402,20 @@
     const shotsEl = document.getElementById("shotsEl");
     const hitsEl = document.getElementById("hitsEl");
 
-    const overlay = document.getElementById("gameOverOverlay");
+    const overlay = document.getElementById("gameOverlay");
+    const readyCard = document.getElementById("readyCard");
+    const pauseCard = document.getElementById("pauseCard");
+    const finishedCard = document.getElementById("finishedCard");
+    const startBtn = document.getElementById("startBtn");
+    const pauseBtn = document.getElementById("pauseBtn");
+    const resumeBtn = document.getElementById("resumeBtn");
+    const restartFromPauseBtn = document.getElementById("restartFromPauseBtn");
     const finalScoreText = document.getElementById("finalScoreText");
     const finalStatsText = document.getElementById("finalStatsText");
+    const performanceText = document.getElementById("performanceText");
+    const bestScoreText = document.getElementById("bestScoreText");
     const restartBtn = document.getElementById("restartBtn");
+    const stateText = document.getElementById("stateText");
 
     const leftBtn = document.getElementById("leftBtn");
     const rightBtn = document.getElementById("rightBtn");
@@ -287,18 +423,24 @@
 
     const W = canvas.width;
     const H = canvas.height;
+    const GAME_DURATION_MS = 45000;
+    const BEST_SCORE_KEY = "katovia.kusFotografcisi.bestScore";
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     let keys = {};
     let score = 0;
     let timeLeft = 45;
     let shots = 0;
     let hits = 0;
-    let gameRunning = true;
-    let lastTimeTick = 0;
+    let gameState = "ready";
+    let roundEndsAt = 0;
+    let remainingMs = GAME_DURATION_MS;
+    let animationFrameId = null;
     let spawnTimer = 0;
     let nextSpawn = 45;
     let flashTimer = 0;
     let floatingTexts = [];
+    let bestScore = readBestScore();
 
     const camera = {
       x: W / 2,
@@ -330,13 +472,67 @@
       hitsEl.textContent = hits;
     }
 
-    function resetGame() {
+    function readBestScore() {
+      try {
+        const storedScore = Number(localStorage.getItem(BEST_SCORE_KEY));
+        return Number.isFinite(storedScore) && storedScore >= 0 ? Math.floor(storedScore) : 0;
+      } catch (error) {
+        return 0;
+      }
+    }
+
+    function saveBestScore(value) {
+      try {
+        localStorage.setItem(BEST_SCORE_KEY, String(value));
+      } catch (error) {
+        // Yerel depolama kapalıysa oyun kesintisiz devam eder.
+      }
+    }
+
+    function setControlsEnabled(enabled) {
+      leftBtn.disabled = !enabled;
+      rightBtn.disabled = !enabled;
+      shootBtn.disabled = !enabled;
+      pauseBtn.disabled = !enabled;
+    }
+
+    function stopMovement() {
+      keys = {};
+    }
+
+    function showOverlay(card, focusTarget) {
+      [readyCard, pauseCard, finishedCard].forEach(item => item.classList.add("hidden"));
+      card.classList.remove("hidden");
+      overlay.classList.remove("hidden");
+      overlay.setAttribute("aria-hidden", "false");
+      overlay.setAttribute("aria-labelledby", card.querySelector("h2").id);
+      focusTarget.focus();
+    }
+
+    function hideOverlay() {
+      overlay.classList.add("hidden");
+      overlay.setAttribute("aria-hidden", "true");
+    }
+
+    function setState(nextState) {
+      gameState = nextState;
+      const labels = {
+        ready: "Hazır",
+        playing: "Oynanıyor",
+        paused: "Duraklatıldı",
+        finished: "Tamamlandı"
+      };
+      stateText.textContent = labels[nextState];
+      setControlsEnabled(nextState === "playing");
+    }
+
+    function resetRoundData() {
       score = 0;
       timeLeft = 45;
       shots = 0;
       hits = 0;
-      gameRunning = true;
-      lastTimeTick = 0;
+      remainingMs = GAME_DURATION_MS;
+      roundEndsAt = 0;
       spawnTimer = 0;
       nextSpawn = 40;
       flashTimer = 0;
@@ -348,8 +544,51 @@
       crosshair.x = W / 2;
       crosshair.y = H / 2;
 
-      overlay.classList.add("hidden");
+      stopMovement();
       updateHUD();
+      draw();
+    }
+
+    function cancelGameLoop() {
+      if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+    }
+
+    function startGameLoop() {
+      cancelGameLoop();
+      animationFrameId = requestAnimationFrame(gameLoop);
+    }
+
+    function startGame() {
+      cancelGameLoop();
+      resetRoundData();
+      setState("playing");
+      hideOverlay();
+      roundEndsAt = performance.now() + remainingMs;
+      startGameLoop();
+      pauseBtn.focus();
+    }
+
+    function pauseGame() {
+      if (gameState !== "playing") return;
+      remainingMs = Math.max(0, roundEndsAt - performance.now());
+      timeLeft = Math.ceil(remainingMs / 1000);
+      updateHUD();
+      cancelGameLoop();
+      stopMovement();
+      setState("paused");
+      showOverlay(pauseCard, resumeBtn);
+    }
+
+    function resumeGame() {
+      if (gameState !== "paused") return;
+      setState("playing");
+      hideOverlay();
+      roundEndsAt = performance.now() + remainingMs;
+      startGameLoop();
+      pauseBtn.focus();
     }
 
     function createBird() {
@@ -373,7 +612,7 @@
     }
 
     function moveCamera() {
-      if (!gameRunning) return;
+      if (gameState !== "playing") return;
 
       if (keys["ArrowLeft"] || keys["a"] || keys["A"]) {
         camera.x -= camera.speed;
@@ -438,7 +677,7 @@
     }
 
     function takePhoto() {
-      if (!gameRunning) return;
+      if (gameState !== "playing") return;
 
       shots++;
       flashTimer = 7;
@@ -470,29 +709,47 @@
     }
 
     function updateTimer(timestamp) {
-      if (!gameRunning) return;
+      if (gameState !== "playing") return;
+      remainingMs = Math.max(0, roundEndsAt - timestamp);
+      const nextTimeLeft = Math.ceil(remainingMs / 1000);
 
-      if (!lastTimeTick) lastTimeTick = timestamp;
-      const delta = timestamp - lastTimeTick;
-
-      if (delta >= 1000) {
-        timeLeft--;
-        lastTimeTick = timestamp;
+      if (nextTimeLeft !== timeLeft) {
+        timeLeft = nextTimeLeft;
         updateHUD();
+      }
 
-        if (timeLeft <= 0) {
-          timeLeft = 0;
-          updateHUD();
-          endGame();
-        }
+      if (remainingMs <= 0) {
+        timeLeft = 0;
+        updateHUD();
+        finishGame();
       }
     }
 
-    function endGame() {
-      gameRunning = false;
-      finalScoreText.textContent = "Puanın: " + score;
-      finalStatsText.textContent = "Toplam çekim: " + shots + " | İsabet: " + hits;
-      overlay.classList.remove("hidden");
+    function getPerformanceMessage(value) {
+      if (value >= 12) return "Harika bir fotoğraf turu.";
+      if (value >= 6) return "İyi kareler yakaladın.";
+      return "Güzel başlangıç.";
+    }
+
+    function finishGame() {
+      if (gameState !== "playing") return;
+      cancelGameLoop();
+      stopMovement();
+      setState("finished");
+
+      const isNewBest = score > bestScore;
+      if (isNewBest) {
+        bestScore = score;
+        saveBestScore(bestScore);
+      }
+
+      finalScoreText.textContent = "Final skorun: " + score;
+      finalStatsText.textContent = "Toplam çekim: " + shots + " · İsabet: " + hits;
+      performanceText.textContent = getPerformanceMessage(score);
+      bestScoreText.textContent = isNewBest
+        ? "Yeni en iyi skor: " + bestScore
+        : "En iyi skor: " + bestScore;
+      showOverlay(finishedCard, restartBtn);
     }
 
     function drawBackground() {
@@ -696,10 +953,13 @@
     }
 
     function updateCrosshairVertical() {
-      crosshair.y = H * 0.46 + Math.sin(Date.now() * 0.002) * 6;
+      crosshair.y = H * 0.46 + (reducedMotion.matches ? 0 : Math.sin(Date.now() * 0.002) * 6);
     }
 
     function gameLoop(timestamp) {
+      animationFrameId = null;
+      if (gameState !== "playing") return;
+
       moveCamera();
       updateBirds();
       updateSpawns();
@@ -710,13 +970,25 @@
       if (flashTimer > 0) flashTimer--;
 
       draw();
-      requestAnimationFrame(gameLoop);
+      if (gameState === "playing") {
+        animationFrameId = requestAnimationFrame(gameLoop);
+      }
     }
 
     window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        if (gameState === "playing") pauseGame();
+        else if (gameState === "paused") resumeGame();
+        return;
+      }
+
+      if (gameState !== "playing") return;
       keys[e.key] = true;
 
-      if (e.code === "Space" || e.key === "Enter") {
+      const interactiveTarget = e.target instanceof Element
+        ? e.target.closest("button, a")
+        : null;
+      if (!interactiveTarget && (e.code === "Space" || e.key === "Enter")) {
         e.preventDefault();
         takePhoto();
       }
@@ -726,57 +998,45 @@
       keys[e.key] = false;
     });
 
-    let leftInterval = null;
-    let rightInterval = null;
-
     function startHold(direction) {
+      if (gameState !== "playing") return;
       stopHold(direction === "left" ? "right" : "left");
 
       if (direction === "left") {
         keys["ArrowLeft"] = true;
-        leftInterval = setInterval(() => {
-          keys["ArrowLeft"] = true;
-        }, 16);
       } else {
         keys["ArrowRight"] = true;
-        rightInterval = setInterval(() => {
-          keys["ArrowRight"] = true;
-        }, 16);
       }
     }
 
     function stopHold(direction) {
       if (direction === "left") {
         keys["ArrowLeft"] = false;
-        if (leftInterval) clearInterval(leftInterval);
-        leftInterval = null;
       } else {
         keys["ArrowRight"] = false;
-        if (rightInterval) clearInterval(rightInterval);
-        rightInterval = null;
       }
     }
 
-    leftBtn.addEventListener("mousedown", () => startHold("left"));
-    leftBtn.addEventListener("mouseup", () => stopHold("left"));
-    leftBtn.addEventListener("mouseleave", () => stopHold("left"));
-    leftBtn.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-      startHold("left");
-    }, { passive: false });
-    leftBtn.addEventListener("touchend", () => stopHold("left"));
+    function bindHoldControl(button, direction) {
+      button.addEventListener("pointerdown", (e) => {
+        e.preventDefault();
+        button.setPointerCapture(e.pointerId);
+        startHold(direction);
+      });
+      ["pointerup", "pointercancel", "lostpointercapture"].forEach(eventName => {
+        button.addEventListener(eventName, () => stopHold(direction));
+      });
+    }
 
-    rightBtn.addEventListener("mousedown", () => startHold("right"));
-    rightBtn.addEventListener("mouseup", () => stopHold("right"));
-    rightBtn.addEventListener("mouseleave", () => stopHold("right"));
-    rightBtn.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-      startHold("right");
-    }, { passive: false });
-    rightBtn.addEventListener("touchend", () => stopHold("right"));
+    bindHoldControl(leftBtn, "left");
+    bindHoldControl(rightBtn, "right");
 
     shootBtn.addEventListener("click", takePhoto);
-    restartBtn.addEventListener("click", resetGame);
+    startBtn.addEventListener("click", startGame);
+    pauseBtn.addEventListener("click", pauseGame);
+    resumeBtn.addEventListener("click", resumeGame);
+    restartFromPauseBtn.addEventListener("click", startGame);
+    restartBtn.addEventListener("click", startGame);
 
     canvas.addEventListener("mousemove", (e) => {
       const rect = canvas.getBoundingClientRect();
@@ -787,8 +1047,15 @@
       camera.x += (crosshair.x - camera.x) * 0.35;
     });
 
-    resetGame();
-    requestAnimationFrame(gameLoop);
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden && gameState === "playing") pauseGame();
+    });
+
+    window.addEventListener("blur", stopMovement);
+
+    setState("ready");
+    resetRoundData();
+    showOverlay(readyCard, startBtn);
   </script>
 </body>
 </html>

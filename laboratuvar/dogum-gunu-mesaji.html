@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="İsim, hitap, ton ve uzunluk seçerek kişisel doğum günü mesajları oluşturun.">
+  <title>Doğum Günü Mesajı Oluşturucu | Katovia Laboratuvarı</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050817;
+      --panel: rgba(13, 22, 48, .88);
+      --panel-strong: #0d1730;
+      --line: rgba(154, 171, 215, .18);
+      --text: #f5f7ff;
+      --muted: #aeb9d7;
+      --pink: #ff6fae;
+      --violet: #9b7cff;
+      --blue: #45b8ff;
+      --success: #71e6b1;
+      --danger: #ff9aa8;
+      --focus: #f8d66d;
+      --shadow: 0 22px 64px rgba(0, 0, 0, .34);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(155, 124, 255, .18), transparent 30rem),
+        radial-gradient(circle at 90% 24%, rgba(255, 111, 174, .13), transparent 27rem),
+        linear-gradient(155deg, #050817 0%, #071126 55%, #050817 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    button, input { font: inherit; }
+    button, label { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px clamp(14px, 4vw, 52px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(5, 8, 23, .78);
+      backdrop-filter: blur(16px);
+    }
+    .brand, .back-link { min-height: 44px; display: inline-flex; align-items: center; }
+    .brand { gap: 10px; font-weight: 850; letter-spacing: -.02em; }
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--pink), var(--violet));
+      box-shadow: 0 8px 24px rgba(155, 124, 255, .28);
+    }
+    .back-link {
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    main { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 34px 0 54px; }
+    .intro { max-width: 770px; margin-bottom: 24px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffc2dc;
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 10px 0 8px; font-size: clamp(30px, 4vw, 48px); line-height: 1.08; letter-spacing: -.045em; }
+    .intro p { margin: 0; color: var(--muted); line-height: 1.65; }
+
+    .workspace { display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(350px, .9fr); gap: 20px; align-items: start; }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: linear-gradient(155deg, rgba(17, 29, 61, .94), rgba(8, 16, 37, .94));
+      box-shadow: var(--shadow);
+    }
+    .controls { padding: 24px; }
+    .name-field {
+      margin-bottom: 22px;
+      padding: 18px;
+      border: 1px solid rgba(255, 111, 174, .24);
+      border-radius: 16px;
+      background: rgba(255, 111, 174, .055);
+    }
+    .name-field label { display: block; margin-bottom: 8px; font-weight: 850; }
+    .name-field input {
+      width: 100%;
+      min-height: 48px;
+      padding: 0 14px;
+      border: 1px solid rgba(174, 185, 215, .28);
+      border-radius: 12px;
+      color: var(--text);
+      background: rgba(4, 10, 25, .7);
+      outline: none;
+    }
+    .name-field input::placeholder { color: #7784a9; }
+    .name-field input[aria-invalid="true"] { border-color: var(--danger); }
+    .field-hint { margin: 7px 0 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+    .selection-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 18px; }
+    fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+    fieldset.length-group { grid-column: 1 / -1; }
+    legend { width: 100%; margin-bottom: 10px; padding: 0; font-size: 14px; font-weight: 850; }
+    .choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .choice-grid.lengths { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .choice { position: relative; min-width: 0; cursor: pointer; }
+    .choice input { position: absolute; opacity: 0; pointer-events: none; }
+    .choice span {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 9px 11px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      color: var(--muted);
+      background: rgba(7, 14, 33, .64);
+      font-size: 13px;
+      font-weight: 760;
+      line-height: 1.2;
+      transition: border-color .16s ease, background .16s ease, transform .16s ease;
+    }
+    .choice span::after {
+      width: 10px;
+      height: 10px;
+      flex: 0 0 auto;
+      border: 2px solid #657293;
+      border-radius: 50%;
+      content: "";
+    }
+    .choice input:checked + span {
+      color: #fff;
+      border-color: rgba(255, 111, 174, .72);
+      background: linear-gradient(135deg, rgba(255, 111, 174, .15), rgba(155, 124, 255, .13));
+    }
+    .choice input:checked + span::after { border-color: #ffd0e4; background: var(--pink); box-shadow: 0 0 0 3px rgba(255, 111, 174, .15); }
+    .form-actions, .result-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+    .form-actions { margin-top: 24px; }
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 17px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: 850;
+      cursor: pointer;
+    }
+    .button.primary { flex: 1 1 230px; background: linear-gradient(120deg, #f05eaa, #876ff2 58%, #36adf4); box-shadow: 0 10px 28px rgba(155, 124, 255, .26); }
+    .button.ghost, .button.secondary { border-color: var(--line); background: rgba(17, 29, 57, .78); }
+    .button.ghost { flex: 0 1 120px; }
+    .button.secondary { flex: 1 1 130px; }
+    .privacy-note { display: flex; gap: 8px; margin: 15px 0 0; color: #8996b8; font-size: 12px; line-height: 1.5; }
+
+    .result-panel { position: sticky; top: 20px; min-height: 410px; padding: 24px; }
+    .empty-state { min-height: 350px; display: grid; place-content: center; gap: 12px; text-align: center; color: var(--muted); }
+    .empty-state[hidden], .result-content[hidden] { display: none; }
+    .empty-icon { font-size: 44px; filter: drop-shadow(0 8px 18px rgba(255, 111, 174, .28)); }
+    .empty-state p { max-width: 290px; margin: 0; line-height: 1.6; }
+    .result-label { margin: 0 0 14px; color: #ffc2dc; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+    .message-box {
+      min-height: 208px;
+      display: flex;
+      align-items: center;
+      padding: 21px;
+      border: 1px solid rgba(155, 124, 255, .25);
+      border-radius: 16px;
+      background: rgba(4, 10, 25, .7);
+      overflow-wrap: anywhere;
+    }
+    #messageText { width: 100%; margin: 0; color: #f8f9ff; font-size: 17px; line-height: 1.68; white-space: pre-wrap; user-select: text; }
+    .result-actions { margin-top: 14px; }
+    .status { min-height: 22px; margin: 13px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .status.success { color: var(--success); }
+    .status.error { color: var(--danger); }
+
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .name-field input:focus-visible { border-color: var(--focus); outline-offset: 2px; }
+    @media (hover: hover) {
+      .choice span:hover, .button:hover, .back-link:hover { transform: translateY(-1px); }
+    }
+    @media (max-width: 980px) {
+      main { max-width: 760px; }
+      .workspace { grid-template-columns: 1fr; }
+      .result-panel { position: static; min-height: 0; }
+      .empty-state { min-height: 220px; }
+    }
+    @media (max-width: 600px) {
+      .topbar { padding-inline: 14px; }
+      .brand > span:last-child { display: none; }
+      .back-link { padding-inline: 11px; font-size: 13px; }
+      main { width: min(100% - 28px, 760px); padding: 27px 0 40px; }
+      .intro { margin-bottom: 20px; }
+      .intro p { font-size: 15px; }
+      .controls, .result-panel { padding: 17px; border-radius: 18px; }
+      .name-field { padding: 15px; }
+      .selection-groups { grid-template-columns: 1fr; gap: 20px; }
+      fieldset.length-group { grid-column: auto; }
+      .choice-grid.lengths { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .form-actions .button, .result-actions .button { width: 100%; flex-basis: 100%; }
+      .message-box { min-height: 170px; padding: 18px; }
+      #messageText { font-size: 16px; }
+    }
+    @media (max-width: 350px) {
+      .choice-grid.lengths { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html#laboratuvar" aria-label="Katovia Laboratuvarına dön">
+      <span class="brand-mark" aria-hidden="true">K</span><span>Katovia</span>
+    </a>
+    <a class="back-link" href="../index.html#laboratuvar">← Laboratuvara dön</a>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="pageTitle">
+      <span class="eyebrow"><span aria-hidden="true">✦</span> Katovia Laboratuvarı</span>
+      <h1 id="pageTitle">Doğum Günü Mesajı Oluşturucu</h1>
+      <p>İsterseniz bir isim ekleyin; hitap, ton ve uzunluğu seçerek gerçekten gönderebileceğiniz kişisel bir doğum günü mesajı oluşturun.</p>
+    </section>
+
+    <div class="workspace">
+      <form class="panel controls" id="messageForm" novalidate>
+        <div class="name-field">
+          <label for="recipientName">Mesaj kimin için? <span class="field-hint">(isteğe bağlı)</span></label>
+          <input id="recipientName" name="recipientName" type="text" maxlength="48" autocomplete="off" placeholder="Örneğin: Ayşe" aria-describedby="nameHint">
+          <p class="field-hint" id="nameHint">Türkçe karakterler kullanılabilir. En fazla 48 karakter.</p>
+        </div>
+
+        <div class="selection-groups">
+          <fieldset>
+            <legend>1. Hitap türü</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="audience" value="friend" checked><span>Arkadaş</span></label>
+              <label class="choice"><input type="radio" name="audience" value="partner"><span>Sevgili</span></label>
+              <label class="choice"><input type="radio" name="audience" value="family"><span>Aileden biri</span></label>
+              <label class="choice"><input type="radio" name="audience" value="colleague"><span>İş arkadaşı</span></label>
+              <label class="choice"><input type="radio" name="audience" value="child"><span>Çocuk</span></label>
+              <label class="choice"><input type="radio" name="audience" value="general"><span>Genel</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Mesajın tonu</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="tone" value="friendly" checked><span>Samimi</span></label>
+              <label class="choice"><input type="radio" name="tone" value="emotional"><span>Duygusal</span></label>
+              <label class="choice"><input type="radio" name="tone" value="fun"><span>Eğlenceli</span></label>
+              <label class="choice"><input type="radio" name="tone" value="simple"><span>Sade</span></label>
+              <label class="choice"><input type="radio" name="tone" value="heartfelt"><span>İçten</span></label>
+              <label class="choice"><input type="radio" name="tone" value="formal"><span>Resmî</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="length-group">
+            <legend>3. Ne kadar uzun olsun?</legend>
+            <div class="choice-grid lengths">
+              <label class="choice"><input type="radio" name="length" value="single"><span>Tek cümle</span></label>
+              <label class="choice"><input type="radio" name="length" value="short" checked><span>Kısa</span></label>
+              <label class="choice"><input type="radio" name="length" value="medium"><span>Orta</span></label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-actions">
+          <button class="button primary" id="generateButton" type="submit"><span aria-hidden="true">✦</span> Mesaj Oluştur</button>
+          <button class="button ghost" id="resetButton" type="button">Sıfırla</button>
+        </div>
+        <p class="privacy-note"><span aria-hidden="true">◉</span><span>İsim ve mesaj yalnız bu sayfada kullanılır; kaydedilmez veya bir sunucuya gönderilmez.</span></p>
+      </form>
+
+      <section class="panel result-panel" id="resultPanel" aria-labelledby="resultTitle">
+        <div class="empty-state" id="emptyState">
+          <span class="empty-icon" aria-hidden="true">🎂</span>
+          <p>Seçimlerinizi yaptıktan sonra <strong>Mesaj Oluştur</strong> düğmesine basın.</p>
+        </div>
+        <div class="result-content" id="resultContent" hidden>
+          <h2 class="result-label" id="resultTitle">Doğum günü mesajınız hazır</h2>
+          <div class="message-box"><p id="messageText"></p></div>
+          <div class="result-actions">
+            <button class="button secondary" id="regenerateButton" type="button">↻ Yeniden Oluştur</button>
+            <button class="button secondary" id="copyButton" type="button">▣ Kopyala</button>
+            <button class="button secondary" id="shareButton" type="button" hidden>↗ Paylaş</button>
+          </div>
+        </div>
+        <p class="status" id="statusMessage" role="status" aria-live="polite"></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="data/dogum-gunu-mesajlari.js"></script>
+  <script>
+    (function () {
+      "use strict";
+
+      const STORAGE_KEY = "katovia.birthdayMessage.history.v1";
+      const MAX_NAME_LENGTH = 48;
+      const defaults = { audience: "friend", tone: "friendly", length: "short" };
+      const validValues = {
+        audience: new Set(["friend", "partner", "family", "colleague", "child", "general"]),
+        tone: new Set(["friendly", "emotional", "fun", "simple", "heartfelt", "formal"]),
+        length: new Set(["single", "short", "medium"])
+      };
+      const form = document.getElementById("messageForm");
+      const nameInput = document.getElementById("recipientName");
+      const generateButton = document.getElementById("generateButton");
+      const resetButton = document.getElementById("resetButton");
+      const regenerateButton = document.getElementById("regenerateButton");
+      const copyButton = document.getElementById("copyButton");
+      const shareButton = document.getElementById("shareButton");
+      const resultPanel = document.getElementById("resultPanel");
+      const emptyState = document.getElementById("emptyState");
+      const resultContent = document.getElementById("resultContent");
+      const messageText = document.getElementById("messageText");
+      const statusMessage = document.getElementById("statusMessage");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const messages = Array.isArray(window.KATOVIA_BIRTHDAY_MESSAGES) ? window.KATOVIA_BIRTHDAY_MESSAGES : [];
+      let history = readHistory();
+      let currentMessage = null;
+
+      shareButton.hidden = typeof navigator.share !== "function";
+
+      function setStatus(text, type) {
+        statusMessage.textContent = text || "";
+        statusMessage.className = "status" + (type ? " " + type : "");
+      }
+
+      function readHistory() {
+        try {
+          const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+          if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return {};
+          return Object.keys(parsed).slice(0, 200).reduce(function (safe, key) {
+            if (Array.isArray(parsed[key])) {
+              safe[key] = parsed[key].filter(function (id) { return typeof id === "string"; }).slice(-3);
+            }
+            return safe;
+          }, {});
+        } catch (error) {
+          return {};
+        }
+      }
+
+      function saveHistory() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+        } catch (error) {
+          // Depolama kapalıysa tekrar kontrolü oturum belleğinde sürer.
+        }
+      }
+
+      function clearStoredHistory() {
+        history = {};
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch (error) {
+          // Depolama kapalı olsa da arayüz sıfırlanır.
+        }
+      }
+
+      function normalizeName() {
+        const normalized = nameInput.value.trim().replace(/\s+/g, " ");
+        if (normalized.length > MAX_NAME_LENGTH) {
+          nameInput.setAttribute("aria-invalid", "true");
+          setStatus("İsim en fazla 48 karakter olabilir. Lütfen daha kısa bir isim yazın.", "error");
+          nameInput.focus();
+          return null;
+        }
+        nameInput.removeAttribute("aria-invalid");
+        nameInput.value = normalized;
+        return normalized;
+      }
+
+      function getSelections() {
+        const data = new FormData(form);
+        return {
+          audience: String(data.get("audience") || ""),
+          tone: String(data.get("tone") || ""),
+          length: String(data.get("length") || "")
+        };
+      }
+
+      function selectionsAreValid(selection) {
+        return validValues.audience.has(selection.audience) &&
+          validValues.tone.has(selection.tone) && validValues.length.has(selection.length);
+      }
+
+      function randomIndex(max) {
+        if (max <= 1) return 0;
+        if (window.crypto && typeof window.crypto.getRandomValues === "function") {
+          const values = new Uint32Array(1);
+          window.crypto.getRandomValues(values);
+          return values[0] % max;
+        }
+        return Math.floor(Math.random() * max);
+      }
+
+      function chooseMessage(selection) {
+        if (!selectionsAreValid(selection)) return null;
+        const pool = messages.filter(function (message) {
+          return message && message.audience === selection.audience &&
+            message.tone === selection.tone && message.length === selection.length &&
+            typeof message.withName === "string" && typeof message.withoutName === "string";
+        });
+        if (!pool.length) return null;
+
+        const combinationKey = [selection.audience, selection.tone, selection.length].join("|");
+        const recentIds = Array.isArray(history[combinationKey]) ? history[combinationKey].slice(-3) : [];
+        let candidates = pool.filter(function (message) { return !recentIds.includes(message.id); });
+        if (!candidates.length) {
+          const lastId = recentIds[recentIds.length - 1];
+          candidates = pool.filter(function (message) { return message.id !== lastId; });
+        }
+        if (!candidates.length) candidates = pool.slice();
+
+        const selected = candidates[randomIndex(candidates.length)];
+        history[combinationKey] = recentIds.concat(selected.id).slice(-3);
+        saveHistory();
+        return selected;
+      }
+
+      function buildText(message, name) {
+        if (!name) return message.withoutName;
+        return message.withName.replace("{name}", name);
+      }
+
+      function showMessage(message, name, shouldScroll) {
+        const text = buildText(message, name);
+        if (!text || !text.trim()) {
+          setStatus("Mesaj şu anda oluşturulamadı. Lütfen yeniden deneyin.", "error");
+          return;
+        }
+        currentMessage = { id: message.id, text: text };
+        messageText.textContent = text;
+        emptyState.hidden = true;
+        resultContent.hidden = false;
+        setStatus("");
+        if (shouldScroll && window.matchMedia("(max-width: 980px)").matches) {
+          resultPanel.scrollIntoView({ behavior: prefersReducedMotion.matches ? "auto" : "smooth", block: "start" });
+        }
+      }
+
+      function generate(shouldScroll) {
+        const name = normalizeName();
+        if (name === null) return;
+        const selected = chooseMessage(getSelections());
+        if (!selected) {
+          setStatus("Bu seçim için şu anda mesaj oluşturulamadı. Lütfen başka bir seçim deneyin.", "error");
+          return;
+        }
+        showMessage(selected, name, shouldScroll);
+      }
+
+      function selectMessageForManualCopy() {
+        try {
+          const selection = window.getSelection();
+          const range = document.createRange();
+          range.selectNodeContents(messageText);
+          selection.removeAllRanges();
+          selection.addRange(range);
+        } catch (error) {
+          // Seçim API'si yoksa metin görünür kalır.
+        }
+      }
+
+      function legacyCopy(text) {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        textarea.style.pointerEvents = "none";
+        document.body.appendChild(textarea);
+        textarea.select();
+        textarea.setSelectionRange(0, textarea.value.length);
+        let copied = false;
+        try {
+          copied = Boolean(document.execCommand && document.execCommand("copy"));
+        } catch (error) {
+          copied = false;
+        }
+        textarea.remove();
+        return copied;
+      }
+
+      async function copyCurrentMessage() {
+        if (!currentMessage) return;
+        let copied = false;
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+          try {
+            await navigator.clipboard.writeText(currentMessage.text);
+            copied = true;
+          } catch (error) {
+            copied = false;
+          }
+        }
+        if (!copied) copied = legacyCopy(currentMessage.text);
+        if (copied) {
+          setStatus("Mesaj panoya kopyalandı.", "success");
+        } else {
+          selectMessageForManualCopy();
+          setStatus("Mesaj otomatik olarak kopyalanamadı. Metni seçerek elle kopyalayabilirsiniz.", "error");
+        }
+      }
+
+      async function shareCurrentMessage() {
+        if (!currentMessage || typeof navigator.share !== "function") return;
+        try {
+          await navigator.share({ title: "Doğum günü mesajı", text: currentMessage.text });
+          setStatus("Paylaşım tamamlandı.", "success");
+        } catch (error) {
+          if (error && error.name === "AbortError") {
+            setStatus("Paylaşım iptal edildi.");
+            return;
+          }
+          setStatus("Mesaj paylaşılamadı. Kopyala seçeneğini kullanabilirsiniz.", "error");
+        }
+      }
+
+      function resetTool() {
+        nameInput.value = "";
+        nameInput.removeAttribute("aria-invalid");
+        Object.keys(defaults).forEach(function (name) {
+          const input = form.querySelector('input[name="' + name + '"][value="' + defaults[name] + '"]');
+          if (input) input.checked = true;
+        });
+        currentMessage = null;
+        messageText.textContent = "";
+        resultContent.hidden = true;
+        emptyState.hidden = false;
+        clearStoredHistory();
+        setStatus("");
+        nameInput.focus();
+      }
+
+      nameInput.addEventListener("input", function () {
+        nameInput.removeAttribute("aria-invalid");
+        if (statusMessage.classList.contains("error")) setStatus("");
+      });
+      form.addEventListener("submit", function (event) { event.preventDefault(); generate(true); });
+      regenerateButton.addEventListener("click", function () { generate(false); });
+      copyButton.addEventListener("click", copyCurrentMessage);
+      shareButton.addEventListener("click", shareCurrentMessage);
+      resetButton.addEventListener("click", resetTool);
+    }());
+  </script>
+</body>
+</html>

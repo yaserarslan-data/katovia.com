@@ -363,6 +363,25 @@
     .soonItem[data-url]:hover{transform:translateY(-3px);border-color:rgba(89,159,255,.55)}
     .soonItem b{display:block;margin-bottom:6px}
     .soonItem span{color:var(--muted);font-size:13px}
+    .soonList.labShowcaseGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .labToolLink{
+      min-height:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      padding:20px;
+      border:1px solid rgba(49,217,154,.42);
+      border-radius:12px;
+      background:linear-gradient(135deg,rgba(37,217,139,.14),rgba(56,166,255,.12));
+      box-shadow:0 14px 34px rgba(0,0,0,.18);
+      transition:.18s transform,.18s border-color;
+    }
+    .labToolLink:focus-visible{outline:3px solid rgba(56,166,255,.78);outline-offset:3px}
+    .labToolStatus{color:#83ebbd;font-size:12px;font-weight:850;letter-spacing:.35px;text-transform:uppercase}
+    .labToolLink h3{margin:11px 0 7px;font-size:20px}
+    .labToolLink p{margin:0 0 18px;color:var(--muted);font-size:14px;line-height:1.5}
+    .labToolCta{min-height:44px;margin-top:auto;display:inline-flex;align-items:center;color:#effff8;font-weight:850}
+    @media(hover:hover){.labToolLink:hover{transform:translateY(-3px);border-color:rgba(49,217,154,.7)}}
     footer{
       border-top:1px solid var(--line);
       padding:22px 56px;
@@ -515,6 +534,7 @@
       .labText{padding:20px}
       .codeGrid{grid-template-columns:1fr;padding:14px}
       .soonList{grid-template-columns:1fr}
+      .soonList.labShowcaseGrid{grid-template-columns:1fr}
       .soon.appsRoute{padding:18px 14px}
       .soon.appsRoute > p{margin-bottom:16px}
       .appShowcaseMedia{height:clamp(170px,48vw,230px)}
@@ -666,9 +686,24 @@
       },
       {
         title: "Cuma Mesajı Oluşturucu",
-        text: "Yakında: güzel cuma mesajları oluştur",
+        text: "Hitap, ton ve uzunluk seçerek gönderilebilir Cuma mesajları oluştur.",
         icon: "💌",
-        route: "laboratuvar"
+        route: "laboratuvar",
+        url: "laboratuvar/cuma-mesaji.html"
+      },
+      {
+        title: "Kandil Mesajı Oluşturucu",
+        text: "Kandil türü, hitap, ton ve uzunluğa uygun mesajlar oluştur.",
+        icon: "✦",
+        route: "laboratuvar",
+        url: "laboratuvar/kandil-mesaji.html"
+      },
+      {
+        title: "Doğum Günü Mesajı Oluşturucu",
+        text: "İsim, hitap, ton ve uzunlukla kişisel doğum günü mesajları oluştur.",
+        icon: "🎂",
+        route: "laboratuvar",
+        url: "laboratuvar/dogum-gunu-mesaji.html"
       },
       {
         title: "Fal Yorumu",
@@ -717,8 +752,8 @@
       },
       "laboratuvar": {
         title:"Laboratuvar",
-        text:"Mini HTML5 araçlar, APK denemeleri, mesaj üreticiler, fal yorumları ve prototipler burada büyüyecek.",
-        items:["Cuma Mesajı Oluşturucu","Kandil Mesajı Oluşturucu","Bayram Mesajı Oluşturucu","Fal Yorumu","Mini APK Denemeleri"]
+        text:"Deneysel ama gerçekten kullanılabilir mini araçlar ve prototipler burada büyüyor.",
+        items:["Kandil Mesajı Oluşturucu","Bayram Mesajı Oluşturucu","Fal Yorumu","Mini APK Denemeleri"]
       },
       "oyunlar": {
         title:"Oyunlar",
@@ -758,7 +793,7 @@
         </article>
       `).join("");
 
-      document.getElementById("projectGrid").innerHTML = projects.map(p => `
+      document.getElementById("projectGrid").innerHTML = projects.slice(0,6).map(p => `
         <article class="project" data-route="${p.route}" ${p.url ? `data-url="${p.url}"` : ""}>
           <div class="cover">${p.image ? `<img src="${p.image}" alt="${p.title}" onerror="this.remove();this.parentElement.textContent='${p.icon}'">` : p.icon}</div>
           <div class="body"><h3>${p.title}</h3><p>${p.text}</p></div>
@@ -822,6 +857,7 @@
       routePanel.classList.toggle("active", !isHome);
       routePanel.classList.toggle("appsRoute", route === "uygulamalar");
       routeItems.classList.toggle("appShowcaseGrid", route === "uygulamalar");
+      routeItems.classList.toggle("labShowcaseGrid", route === "laboratuvar");
 
       if(isHome){
         routeItems.replaceChildren();
@@ -848,6 +884,29 @@
       </a>
     </article>
   `).join("");
+} else if (route === "laboratuvar") {
+  const activeTools = projects.filter(project => project.route === "laboratuvar" && project.url);
+  const pendingTools = content.items
+    .filter(item => !activeTools.some(tool => tool.title === item))
+    .slice(0,Math.max(0,4-activeTools.length));
+  routeItems.innerHTML = `
+    ${activeTools.map(tool => `
+      <article>
+        <a class="labToolLink" href="${tool.url}">
+          <span class="labToolStatus">● Aktif araç</span>
+          <h3>${tool.icon} ${tool.title}</h3>
+          <p>${tool.text}</p>
+          <span class="labToolCta">Aracı aç →</span>
+        </a>
+      </article>
+    `).join("")}
+    ${pendingTools.map(item => `
+      <div class="soonItem">
+        <b>${item}</b>
+        <span>Hazırlanıyor; henüz aktif değil.</span>
+      </div>
+    `).join("")}
+  `;
 } else if (route === "oyunlar") {
   routeItems.innerHTML = games.map(game => `
     <div class="soonItem" data-url="${game.url}">
