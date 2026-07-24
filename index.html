@@ -363,25 +363,336 @@
     .soonItem[data-url]:hover{transform:translateY(-3px);border-color:rgba(89,159,255,.55)}
     .soonItem b{display:block;margin-bottom:6px}
     .soonItem span{color:var(--muted);font-size:13px}
-    .soonList.labShowcaseGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .labRoute{
+      width:100%;
+      max-width:1240px;
+      margin-inline:auto;
+      padding:24px;
+      overflow:visible;
+      border-color:rgba(70,184,211,.24);
+      background:linear-gradient(180deg,rgba(7,18,39,.94),rgba(4,12,27,.95));
+    }
+    .labRoute > #routeTitle,.labRoute > #routeText{display:none}
+    .soonList.labShowcaseGrid{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+    .labIntro{
+      position:relative;
+      isolation:isolate;
+      grid-column:1/-1;
+      min-height:142px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      align-items:center;
+      gap:24px;
+      padding:14px 24px;
+      overflow:hidden;
+      border:1px solid rgba(89,187,221,.28);
+      border-radius:16px;
+      background:linear-gradient(135deg,rgba(12,34,59,.92),rgba(10,21,48,.94) 54%,rgba(28,20,63,.88));
+      box-shadow:0 18px 44px rgba(0,0,0,.24);
+    }
+    .labIntro::before{
+      content:"";
+      position:absolute;
+      inset:-28px;
+      z-index:-2;
+      opacity:.24;
+      background-image:linear-gradient(rgba(83,190,218,.16) 1px,transparent 1px),
+                       linear-gradient(90deg,rgba(83,190,218,.16) 1px,transparent 1px);
+      background-size:28px 28px;
+      animation:labGridDrift 26s linear infinite;
+    }
+    .labIntro::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:radial-gradient(circle at 86% 42%,rgba(48,205,197,.16),transparent 24%),
+                 radial-gradient(circle at 14% 0%,rgba(86,118,255,.12),transparent 30%);
+      pointer-events:none;
+    }
+    .labIntroCopy{position:relative;z-index:2;min-width:0}
+    .labIntroEyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-bottom:3px;
+      color:#9edfea;
+      font-size:11px;
+      font-weight:850;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+    }
+    .labIntroEyebrow::before{
+      content:"";
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#54d6c9;
+      box-shadow:0 0 12px rgba(84,214,201,.5);
+    }
+    .labIntro h1{
+      margin:0;
+      font-size:clamp(27px,3vw,35px);
+      line-height:1.08;
+      letter-spacing:-.35px;
+    }
+    .labTitleAccent{
+      color:transparent;
+      background:linear-gradient(100deg,#67d9ee,#6ea8ff 46%,#a878ff,#67d9ee);
+      background-size:220% 100%;
+      -webkit-background-clip:text;
+      background-clip:text;
+      animation:labTitleFlow 12s ease-in-out infinite;
+    }
+    .labIntro .labIntroText{
+      max-width:680px;
+      margin:4px 0 0;
+      color:#b6c6df;
+      font-size:14px;
+      line-height:1.45;
+    }
+    .labFeatureTags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .labFeatureTag{
+      min-height:26px;
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:0 10px;
+      border:1px solid rgba(128,176,221,.2);
+      border-radius:999px;
+      background:rgba(4,15,32,.58);
+      color:#c9d7eb;
+      font-size:11px;
+      font-weight:720;
+      opacity:0;
+      animation:labTagReveal .42s ease-out forwards;
+      animation-delay:calc(110ms + var(--lab-tag-index) * 85ms);
+    }
+    .labFeatureTag::before{
+      content:"";
+      width:5px;
+      height:5px;
+      border-radius:50%;
+      background:#61cdd4;
+    }
+    .labFlaskWrap{
+      position:relative;
+      z-index:2;
+      width:82px;
+      height:82px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(87,218,214,.25);
+      border-radius:23px;
+      background:linear-gradient(145deg,rgba(17,59,75,.72),rgba(13,27,59,.68));
+      color:#72e2dc;
+      box-shadow:0 0 32px rgba(44,205,199,.13),inset 0 0 20px rgba(97,220,218,.06);
+      animation:labFlaskBreathe 5.5s ease-in-out infinite;
+    }
+    .labFlaskWrap svg{width:46px;height:46px}
+    .labParticles{position:absolute;inset:0;z-index:1;pointer-events:none}
+    .labParticle{
+      position:absolute;
+      width:4px;
+      height:4px;
+      border-radius:50%;
+      background:#82e8e1;
+      opacity:.16;
+      animation:labParticleFloat var(--lab-particle-duration) ease-in-out infinite;
+      animation-delay:var(--lab-particle-delay);
+    }
+    .labParticle:nth-child(1){left:58%;top:22%;--lab-particle-duration:7s;--lab-particle-delay:-2s}
+    .labParticle:nth-child(2){left:72%;top:70%;--lab-particle-duration:8.5s;--lab-particle-delay:-5s}
+    .labParticle:nth-child(3){left:84%;top:18%;--lab-particle-duration:6.5s;--lab-particle-delay:-3s}
+    .labParticle:nth-child(4){left:48%;top:78%;--lab-particle-duration:9s;--lab-particle-delay:-6s}
+    .labParticle:nth-child(5){left:92%;top:62%;--lab-particle-duration:7.5s;--lab-particle-delay:-1s}
+    .labToolCard{
+      min-width:0;
+      display:flex;
+      opacity:0;
+      transform:translateY(10px);
+      animation:labCardReveal .52s cubic-bezier(.2,.75,.25,1) forwards;
+      animation-delay:calc(var(--lab-index) * 70ms);
+    }
     .labToolLink{
+      position:relative;
+      min-width:0;
       min-height:100%;
+      flex:1;
       display:flex;
       flex-direction:column;
-      align-items:flex-start;
-      padding:20px;
-      border:1px solid rgba(49,217,154,.42);
-      border-radius:12px;
-      background:linear-gradient(135deg,rgba(37,217,139,.14),rgba(56,166,255,.12));
-      box-shadow:0 14px 34px rgba(0,0,0,.18);
-      transition:.18s transform,.18s border-color;
+      align-items:stretch;
+      padding:22px;
+      overflow:hidden;
+      border:1px solid rgba(var(--lab-accent),.3);
+      border-radius:15px;
+      background:linear-gradient(145deg,rgba(var(--lab-accent),.075),transparent 44%),
+                 linear-gradient(180deg,rgba(10,23,46,.96),rgba(5,14,29,.98));
+      box-shadow:0 15px 36px rgba(0,0,0,.2);
+      transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background-color .22s ease;
     }
-    .labToolLink:focus-visible{outline:3px solid rgba(56,166,255,.78);outline-offset:3px}
-    .labToolStatus{color:#83ebbd;font-size:12px;font-weight:850;letter-spacing:.35px;text-transform:uppercase}
-    .labToolLink h3{margin:11px 0 7px;font-size:20px}
-    .labToolLink p{margin:0 0 18px;color:var(--muted);font-size:14px;line-height:1.5}
-    .labToolCta{min-height:44px;margin-top:auto;display:inline-flex;align-items:center;color:#effff8;font-weight:850}
-    @media(hover:hover){.labToolLink:hover{transform:translateY(-3px);border-color:rgba(49,217,154,.7)}}
+    .labToolLink::before{
+      content:"";
+      position:absolute;
+      inset:0 auto 0 0;
+      width:2px;
+      background:linear-gradient(180deg,transparent,rgba(var(--lab-accent),.8),transparent);
+      opacity:.72;
+    }
+    .labToolGlow{
+      position:absolute;
+      width:180px;
+      height:180px;
+      right:-72px;
+      top:-82px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(var(--lab-accent),.15),transparent 67%);
+      opacity:.42;
+      pointer-events:none;
+      transition:opacity .22s ease,transform .22s ease;
+    }
+    .labToolTop{
+      position:relative;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .labToolCategory{
+      min-height:27px;
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:0 10px;
+      border:1px solid rgba(var(--lab-accent),.28);
+      border-radius:999px;
+      background:rgba(var(--lab-accent),.08);
+      color:rgb(var(--lab-accent));
+      font-size:11px;
+      font-weight:850;
+      letter-spacing:.35px;
+      text-transform:uppercase;
+    }
+    .labStatusDot{
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:currentColor;
+      box-shadow:0 0 8px rgba(var(--lab-accent),.38);
+    }
+    .labToolIcon{
+      width:54px;
+      height:54px;
+      flex:0 0 auto;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(var(--lab-accent),.28);
+      border-radius:14px;
+      background:linear-gradient(145deg,rgba(var(--lab-accent),.18),rgba(var(--lab-accent),.06));
+      color:rgb(var(--lab-accent));
+      box-shadow:inset 0 0 18px rgba(var(--lab-accent),.06);
+    }
+    .labToolIcon svg{width:30px;height:30px;overflow:visible}
+    .labToolIcon svg *{
+      transform-box:fill-box;
+      transform-origin:center;
+      transition:transform .22s ease,opacity .22s ease;
+    }
+    .labToolContent{position:relative;display:flex;flex:1;flex-direction:column}
+    .labToolLink h2{
+      margin:16px 0 7px;
+      font-size:20px;
+      line-height:1.22;
+      overflow-wrap:anywhere;
+    }
+    .labToolLink p{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+      overflow-wrap:anywhere;
+    }
+    .labToolFeatures{
+      display:grid;
+      gap:8px;
+      margin:0 0 18px;
+      padding:0;
+      list-style:none;
+    }
+    .labToolFeature{
+      min-width:0;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:#c0cee2;
+      font-size:12px;
+      line-height:1.35;
+    }
+    .labToolFeature svg{width:14px;height:14px;flex:0 0 auto;color:rgb(var(--lab-accent))}
+    .labToolCta{
+      min-height:44px;
+      width:max-content;
+      max-width:100%;
+      margin-top:auto;
+      display:inline-flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:0 14px;
+      border:1px solid rgba(var(--lab-accent),.32);
+      border-radius:10px;
+      background:rgba(var(--lab-accent),.085);
+      color:#f2f8ff;
+      font-size:13px;
+      font-weight:850;
+    }
+    .labToolCtaArrow{
+      width:17px;
+      height:17px;
+      color:rgb(var(--lab-accent));
+      transition:transform .22s ease;
+    }
+    .labToolLink:focus-visible{
+      outline:3px solid #91d9ff;
+      outline-offset:4px;
+      border-color:rgba(var(--lab-accent),.76);
+      transform:translateY(-3px);
+      box-shadow:0 20px 44px rgba(0,0,0,.28),0 0 22px rgba(var(--lab-accent),.09);
+    }
+    .labToolLink:focus-visible .labToolGlow{opacity:.9;transform:scale(1.06)}
+    .labToolLink:focus-visible .labToolCtaArrow{transform:translateX(4px)}
+    .labToolLink:focus-visible .labIconHeart{transform:scale(1.12)}
+    .labToolLink:focus-visible .labIconGlow{opacity:1;transform:scale(1.08)}
+    .labToolLink:focus-visible .labIconFlame{transform:translateY(-1.5px) scale(1.06)}
+    .labToolLink:focus-visible .labQuoteLeft{transform:translateX(-2px)}
+    .labToolLink:focus-visible .labQuoteRight{transform:translateX(2px)}
+    .labToolLink:focus-visible .labIconRibbon{transform:translateY(-2px)}
+    .labToolLink:focus-visible .labIconNeedle{transform:rotate(12deg)}
+    @media(hover:hover){
+      .labToolLink:hover{
+        transform:translateY(-3px);
+        border-color:rgba(var(--lab-accent),.72);
+        box-shadow:0 20px 44px rgba(0,0,0,.28),0 0 22px rgba(var(--lab-accent),.09);
+      }
+      .labToolLink:hover .labToolGlow{opacity:.9;transform:scale(1.06)}
+      .labToolLink:hover .labToolCtaArrow{transform:translateX(4px)}
+      .labToolLink:hover .labIconHeart{transform:scale(1.12)}
+      .labToolLink:hover .labIconGlow{opacity:1;transform:scale(1.08)}
+      .labToolLink:hover .labIconFlame{transform:translateY(-1.5px) scale(1.06)}
+      .labToolLink:hover .labQuoteLeft{transform:translateX(-2px)}
+      .labToolLink:hover .labQuoteRight{transform:translateX(2px)}
+      .labToolLink:hover .labIconRibbon{transform:translateY(-2px)}
+      .labToolLink:hover .labIconNeedle{transform:rotate(12deg)}
+    }
+    @keyframes labGridDrift{to{background-position:28px 28px}}
+    @keyframes labTitleFlow{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+    @keyframes labTagReveal{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+    @keyframes labFlaskBreathe{0%,100%{transform:scale(1);opacity:.88}50%{transform:scale(1.025);opacity:1}}
+    @keyframes labParticleFloat{0%,100%{transform:translate3d(0,4px,0);opacity:.12}50%{transform:translate3d(4px,-8px,0);opacity:.46}}
+    @keyframes labCardReveal{to{opacity:1;transform:none}}
     footer{
       border-top:1px solid var(--line);
       padding:22px 56px;
@@ -535,6 +846,35 @@
       .codeGrid{grid-template-columns:1fr;padding:14px}
       .soonList{grid-template-columns:1fr}
       .soonList.labShowcaseGrid{grid-template-columns:1fr}
+      .labRoute{padding:18px}
+      .labIntro{
+        min-height:0;
+        display:block;
+        padding:18px;
+        border-radius:14px;
+      }
+      .labIntroCopy{padding-right:0}
+      .labIntroEyebrow,.labIntro h1,.labIntroText{max-width:calc(100% - 62px)}
+      .labIntro h1{font-size:clamp(24px,7.4vw,30px)}
+      .labIntroText{font-size:13.5px}
+      .labFeatureTags{gap:7px;margin-top:12px}
+      .labFeatureTag{padding-inline:9px}
+      .labFlaskWrap{
+        position:absolute;
+        top:16px;
+        right:16px;
+        width:54px;
+        height:54px;
+        border-radius:16px;
+      }
+      .labFlaskWrap svg{width:31px;height:31px}
+      .labParticle:nth-child(n+4){display:none}
+      .labToolLink{padding:18px}
+      .labToolIcon{width:48px;height:48px;border-radius:13px}
+      .labToolIcon svg{width:27px;height:27px}
+      .labToolLink h2{font-size:19px}
+      .labToolCta{width:100%}
+      .labToolLink:active{transform:scale(.995)}
       .soon.appsRoute{padding:18px 14px}
       .soon.appsRoute > p{margin-bottom:16px}
       .appShowcaseMedia{height:clamp(170px,48vw,230px)}
@@ -553,6 +893,34 @@
     }
     @media(prefers-reduced-motion:reduce){
       .menuIcon span,.appShowcaseLink{transition:none}
+      .labIntro::before,
+      .labTitleAccent,
+      .labFeatureTag,
+      .labFlaskWrap,
+      .labParticle,
+      .labToolCard{
+        animation:none!important;
+      }
+      .labFeatureTag,.labToolCard{opacity:1;transform:none}
+      .labToolLink,
+      .labToolGlow,
+      .labToolCtaArrow,
+      .labToolIcon svg *{
+        transition:none!important;
+      }
+      .labToolLink:hover,
+      .labToolLink:focus-visible,
+      .labToolLink:active{
+        transform:none!important;
+      }
+      .labToolLink:hover .labToolGlow,
+      .labToolLink:focus-visible .labToolGlow,
+      .labToolLink:hover .labToolCtaArrow,
+      .labToolLink:focus-visible .labToolCtaArrow,
+      .labToolLink:hover .labToolIcon svg *,
+      .labToolLink:focus-visible .labToolIcon svg *{
+        transform:none!important;
+      }
     }
   </style>
 </head>
@@ -688,6 +1056,11 @@
         title: "Cuma Mesajı Oluşturucu",
         text: "Hitap, ton ve uzunluk seçerek gönderilebilir Cuma mesajları oluştur.",
         icon: "💌",
+        category: "Mesaj Aracı",
+        accent: "73,205,198",
+        featureOne: "Hitap ve ton seçimi",
+        featureTwo: "Hızlı oluşturma",
+        iconKey: "messageHeart",
         route: "laboratuvar",
         url: "laboratuvar/cuma-mesaji.html"
       },
@@ -695,6 +1068,11 @@
         title: "Kandil Mesajı Oluşturucu",
         text: "Kandil türü, hitap, ton ve uzunluğa uygun mesajlar oluştur.",
         icon: "✦",
+        category: "Mesaj Aracı",
+        accent: "91,160,255",
+        featureOne: "Altı kandil türü",
+        featureTwo: "Ton ve uzunluk seçimi",
+        iconKey: "lantern",
         route: "laboratuvar",
         url: "laboratuvar/kandil-mesaji.html"
       },
@@ -702,6 +1080,11 @@
         title: "Doğum Günü Mesajı Oluşturucu",
         text: "İsim, hitap, ton ve uzunlukla kişisel doğum günü mesajları oluştur.",
         icon: "🎂",
+        category: "Mesaj Aracı",
+        accent: "154,205,96",
+        featureOne: "İsimle kişiselleştirme",
+        featureTwo: "Farklı hitap türleri",
+        iconKey: "birthdayCake",
         route: "laboratuvar",
         url: "laboratuvar/dogum-gunu-mesaji.html"
       },
@@ -709,6 +1092,11 @@
         title: "Güzel Sözler Koleksiyonu",
         text: "Özgün sözleri keşfet, filtrele ve favorilerine ekle.",
         icon: "❝",
+        category: "Koleksiyon",
+        accent: "143,126,255",
+        featureOne: "50 özgün söz",
+        featureTwo: "Filtre ve favoriler",
+        iconKey: "quotes",
         route: "laboratuvar",
         url: "laboratuvar/guzel-sozler.html"
       },
@@ -716,6 +1104,11 @@
         title: "Bayram Mesajı Oluşturucu",
         text: "Bayram türü, ton ve uzunluk seçerek paylaşmaya hazır mesajlar oluştur.",
         icon: "🎁",
+        category: "Mesaj Aracı",
+        accent: "187,119,255",
+        featureOne: "Üç bayram türü",
+        featureTwo: "Paylaşmaya hazır metinler",
+        iconKey: "gift",
         route: "laboratuvar",
         url: "laboratuvar/bayram-mesaji.html"
       },
@@ -723,6 +1116,11 @@
         title: "Karar Pusulası",
         text: "Seçeneklerini ölçütlerine göre karşılaştır, önceliklerini görünür hâle getir.",
         icon: "⌖",
+        category: "Karar Aracı",
+        accent: "84,201,225",
+        featureOne: "Ağırlıklı karşılaştırma",
+        featureTwo: "Şeffaf sonuç analizi",
+        iconKey: "compass",
         route: "laboratuvar",
         url: "laboratuvar/karar-pusulasi.html"
       },
@@ -764,6 +1162,58 @@
         code:"final analiz = MesajAnalizi(\n  duygu: 'sakin',\n  guven: 82,\n);"
       }
     ];
+
+    const labToolIcons = {
+      messageHeart: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M4 5.5h16v10H9l-5 3v-13Z"/>
+          <path class="labIconHeart" d="M12 13.1 9.6 11c-1.5-1.3.6-3.7 2.4-1.8 1.8-1.9 3.9.5 2.4 1.8L12 13.1Z"/>
+        </svg>`,
+      lantern: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M9 4h6M8 7h8l1.5 10h-11L8 7ZM9 20h6"/>
+          <path d="M10 4a2 2 0 0 1 4 0"/>
+          <path class="labIconGlow" d="M9.5 10.5h5l-.5 4h-4l-.5-4Z" opacity=".58"/>
+        </svg>`,
+      birthdayCake: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path class="labIconFlame" d="M12 2.7c1.3 1.2 1.6 2.2 0 3.6-1.6-1.4-1.3-2.4 0-3.6Z"/>
+          <path d="M12 6.4V9M6 13h12M5 17.5h14M6 9h12v11H6V9Z"/>
+          <path d="M6 13c1.3 1.2 2.7 1.2 4 0 1.3 1.2 2.7 1.2 4 0 1.3 1.2 2.7 1.2 4 0"/>
+        </svg>`,
+      quotes: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path class="labQuoteLeft" d="M10 7H6.5A2.5 2.5 0 0 0 4 9.5V13h5v4H5.5"/>
+          <path class="labQuoteRight" d="M20 7h-3.5A2.5 2.5 0 0 0 14 9.5V13h5v4h-3.5"/>
+        </svg>`,
+      gift: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M4 10h16v10H4V10ZM3 7h18v4H3V7ZM12 7v13"/>
+          <g class="labIconRibbon">
+            <path d="M12 7C8.5 7 7 6 7 4.5 7 3.6 7.7 3 8.7 3 10.4 3 12 7 12 7Z"/>
+            <path d="M12 7c3.5 0 5-1 5-2.5 0-.9-.7-1.5-1.7-1.5C13.6 3 12 7 12 7Z"/>
+          </g>
+        </svg>`,
+      compass: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="8.5"/>
+          <path d="M12 3.5V5M12 19v1.5M3.5 12H5M19 12h1.5"/>
+          <g class="labIconNeedle">
+            <path d="m15.7 8.3-2.1 5.3-5.3 2.1 2.1-5.3 5.3-2.1Z"/>
+            <circle cx="12" cy="12" r=".7" fill="currentColor" stroke="none"/>
+          </g>
+        </svg>`
+    };
+
+    const labFeatureIcon = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="8.5"/>
+        <path d="m8.5 12 2.2 2.2 4.8-4.8"/>
+      </svg>`;
+
+    function getLabToolIcon(iconKey){
+      return labToolIcons[iconKey] || labToolIcons.compass;
+    }
 
     const routeContent = {
       "uygulamalar": {
@@ -877,6 +1327,7 @@
       document.getElementById("homeContent").classList.toggle("hide", !isHome);
       routePanel.classList.toggle("active", !isHome);
       routePanel.classList.toggle("appsRoute", route === "uygulamalar");
+      routePanel.classList.toggle("labRoute", route === "laboratuvar");
       routeItems.classList.toggle("appShowcaseGrid", route === "uygulamalar");
       routeItems.classList.toggle("labShowcaseGrid", route === "laboratuvar");
 
@@ -907,25 +1358,57 @@
   `).join("");
 } else if (route === "laboratuvar") {
   const activeTools = projects.filter(project => project.route === "laboratuvar" && project.url);
-  const pendingTools = content.items
-    .filter(item => !activeTools.some(tool => tool.title === item))
-    .slice(0,Math.max(0,5-activeTools.length));
   routeItems.innerHTML = `
-    ${activeTools.map(tool => `
-      <article>
-        <a class="labToolLink" href="${tool.url}">
-          <span class="labToolStatus">● Aktif araç</span>
-          <h3>${tool.icon} ${tool.title}</h3>
-          <p>${tool.text}</p>
-          <span class="labToolCta">Aracı aç →</span>
+    <section class="labIntro" aria-labelledby="labIntroTitle">
+      <div class="labIntroCopy">
+        <span class="labIntroEyebrow">Dijital deney alanı</span>
+        <h1 id="labIntroTitle">Katovia <span class="labTitleAccent">Laboratuvarı</span></h1>
+        <p class="labIntroText">Hızlı, kullanışlı ve deneysel dijital araçların üretildiği yer.</p>
+        <div class="labFeatureTags" aria-label="Laboratuvar özellikleri">
+          <span class="labFeatureTag" style="--lab-tag-index:0">Deneysel ve yenilikçi</span>
+          <span class="labFeatureTag" style="--lab-tag-index:1">Hızlı ve kullanışlı</span>
+          <span class="labFeatureTag" style="--lab-tag-index:2">Sürekli gelişen</span>
+        </div>
+      </div>
+      <span class="labFlaskWrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+          <path d="M9 3h6M10 3v5.3l-5 8.4A2.8 2.8 0 0 0 7.4 21h9.2a2.8 2.8 0 0 0 2.4-4.3l-5-8.4V3"/>
+          <path d="M7.2 15h9.6"/>
+          <path d="M9.2 17.4h.01M13 18.7h.01M14.8 16.5h.01"/>
+        </svg>
+      </span>
+      <span class="labParticles" aria-hidden="true">
+        <span class="labParticle"></span>
+        <span class="labParticle"></span>
+        <span class="labParticle"></span>
+        <span class="labParticle"></span>
+        <span class="labParticle"></span>
+      </span>
+    </section>
+    ${activeTools.map((tool,index) => `
+      <article class="labToolCard" style="--lab-accent:${tool.accent};--lab-index:${index}">
+        <a class="labToolLink" href="${tool.url}" aria-label="${tool.title} aracını aç">
+          <span class="labToolGlow" aria-hidden="true"></span>
+          <span class="labToolTop">
+            <span class="labToolCategory"><span class="labStatusDot" aria-hidden="true"></span>${tool.category}</span>
+            <span class="labToolIcon" aria-hidden="true">${getLabToolIcon(tool.iconKey)}</span>
+          </span>
+          <span class="labToolContent">
+            <h2>${tool.title}</h2>
+            <p>${tool.text}</p>
+            <span class="labToolFeatures">
+              <span class="labToolFeature">${labFeatureIcon}<span>${tool.featureOne}</span></span>
+              <span class="labToolFeature">${labFeatureIcon}<span>${tool.featureTwo}</span></span>
+            </span>
+            <span class="labToolCta">
+              <span>Aracı Aç</span>
+              <svg class="labToolCtaArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M5 12h13M14 7l5 5-5 5"/>
+              </svg>
+            </span>
+          </span>
         </a>
       </article>
-    `).join("")}
-    ${pendingTools.map(item => `
-      <div class="soonItem">
-        <b>${item}</b>
-        <span>Hazırlanıyor; henüz aktif değil.</span>
-      </div>
     `).join("")}
   `;
 } else if (route === "oyunlar") {
