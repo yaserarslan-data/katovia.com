@@ -41,7 +41,7 @@
       z-index:10;
       backdrop-filter:blur(14px);
     }
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px}
+    .brand{min-height:44px;display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px}
     .mark{
       width:32px;height:32px;border-radius:8px;
       background:linear-gradient(135deg,var(--blue),var(--violet));
@@ -49,21 +49,9 @@
       box-shadow:0 0 28px rgba(74,129,255,.42);
       font-weight:900;
     }
-    .nav{display:flex;gap:20px;align-items:center;color:#c6d0e8;font-weight:650;font-size:14px}
+    .nav{display:flex;gap:20px;align-items:center;margin-left:auto;color:#c6d0e8;font-weight:650;font-size:14px}
     .nav a{padding:23px 0 18px;border-bottom:3px solid transparent}
     .nav a.active{color:white;border-color:var(--blue)}
-    .actions{display:flex;align-items:center;gap:12px}
-    .iconBtn,.starBtn{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:white;
-      height:34px;
-      border-radius:9px;
-      display:grid;
-      place-items:center;
-    }
-    .iconBtn{width:34px}
-    .starBtn{padding:0 14px;font-weight:700;gap:8px;display:flex}
     .mobileMenuBtn,.mobileNav{display:none}
     .mobileMenuBtn{
       width:44px;
@@ -102,6 +90,16 @@
       overflow:hidden;
       border-bottom:1px solid rgba(132,166,255,.12);
     }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(90deg,rgba(56,166,255,.04),transparent 38%,rgba(155,92,255,.035));
+    }
+    .heroCopy,.heroVisual{position:relative;z-index:1;min-width:0}
+    .heroCopy{align-self:center;animation:homeReveal .62s cubic-bezier(.2,.75,.25,1) both}
+    .heroVisual{animation:homeReveal .72s .12s cubic-bezier(.2,.75,.25,1) both}
     .hero h1{
       font-size:46px;
       line-height:1.06;
@@ -109,7 +107,7 @@
       letter-spacing:-.4px;
     }
     .gradientText{background:linear-gradient(90deg,var(--blue),var(--violet));-webkit-background-clip:text;color:transparent}
-    .hero p{max-width:540px;color:#b7c3dc;font-size:16px;line-height:1.5;margin:0 0 22px}
+    .hero p{max-width:510px;color:#b7c3dc;font-size:16px;line-height:1.55;margin:0 0 22px}
     .buttons{display:flex;gap:16px;flex-wrap:wrap}
     .btn{
       height:46px;
@@ -127,6 +125,30 @@
     .btn.primary{border:0;background:linear-gradient(135deg,#28a9ff,#9b35ff);box-shadow:0 12px 36px rgba(91,88,255,.35)}
     .btn:not(.primary){background:rgba(255,255,255,.07);color:#eaf1ff}
     .orbWrap{position:relative;min-height:280px;display:grid;place-items:center}
+    .orbWrap::before{
+      content:"";
+      position:absolute;
+      width:min(500px,92%);
+      height:238px;
+      border-radius:50%;
+      opacity:.2;
+      background-image:linear-gradient(rgba(111,153,255,.22) 1px,transparent 1px),
+                       linear-gradient(90deg,rgba(111,153,255,.22) 1px,transparent 1px);
+      background-size:26px 26px;
+      mask-image:radial-gradient(ellipse,black 22%,transparent 72%);
+      -webkit-mask-image:radial-gradient(ellipse,black 22%,transparent 72%);
+      animation:heroGridDrift 22s linear infinite;
+    }
+    .orbWrap::after{
+      content:"";
+      position:absolute;
+      width:310px;
+      height:168px;
+      border:1px solid rgba(115,156,255,.18);
+      border-radius:50%;
+      transform:rotate(-8deg);
+      box-shadow:0 0 36px rgba(87,105,255,.08);
+    }
     .galaxy{
       position:absolute;width:440px;height:210px;border-radius:50%;
       background:radial-gradient(circle,rgba(75,160,255,.45),transparent 28%),
@@ -143,6 +165,7 @@
       font-weight:950;
       box-shadow:0 0 60px rgba(48,145,255,.75),inset 0 0 30px rgba(255,255,255,.16);
       z-index:2;
+      animation:heroKBreathe 6.5s ease-in-out infinite;
     }
     .floatIcon{
       position:absolute;
@@ -154,8 +177,23 @@
       box-shadow:0 0 24px rgba(62,129,255,.22);
       color:#b8cbff;
       font-size:22px;
+      animation:heroIconFloat 8s ease-in-out infinite;
     }
-    .i1{left:17%;top:22%}.i2{left:25%;bottom:20%}.i3{right:19%;top:18%}.i4{right:14%;bottom:28%}
+    .i1{left:17%;top:22%;animation-delay:-1s}.i2{left:25%;bottom:20%;animation-delay:-5s}.i3{right:19%;top:18%;animation-delay:-3s}.i4{right:14%;bottom:28%;animation-delay:-6.5s}
+    .heroLink{
+      position:absolute;
+      z-index:1;
+      height:1px;
+      width:92px;
+      opacity:.32;
+      background:linear-gradient(90deg,transparent,rgba(111,166,255,.72),transparent);
+      transform-origin:left center;
+    }
+    .heroLink.l1{left:25%;top:37%;transform:rotate(18deg)}
+    .heroLink.l2{right:23%;top:39%;transform:rotate(-20deg)}
+    .heroLink.l3{left:30%;bottom:31%;transform:rotate(-14deg)}
+    .heroLink.l4{right:18%;bottom:35%;transform:rotate(15deg)}
+    .homeContent .quick{opacity:0;animation:homeReveal .52s cubic-bezier(.2,.75,.25,1) forwards;animation-delay:calc(220ms + var(--home-index) * 70ms)}
     main{padding:24px 48px 42px}
     .quickGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-8px}
     .quick{
@@ -168,15 +206,25 @@
       gap:14px;
       align-items:center;
       cursor:pointer;
-      transition:.18s transform,.18s border-color;
+      transition:.2s transform,.2s border-color,.2s box-shadow;
     }
-    .quick:hover{transform:translateY(-3px);border-color:rgba(77,152,255,.56)}
+    .quick:hover,.quick:focus-visible{
+      transform:translateY(-3px);
+      border-color:rgba(var(--quick-accent),.62);
+      box-shadow:0 16px 34px rgba(0,0,0,.2),0 0 22px rgba(var(--quick-accent),.08);
+    }
+    .quick:focus-visible,.project:focus-visible,.allLink:focus-visible,.btn:focus-visible{
+      outline:3px solid rgba(56,166,255,.78);
+      outline-offset:3px;
+    }
     .quick .qIcon{
       width:54px;height:54px;border-radius:13px;
       display:grid;place-items:center;
       font-size:25px;
       flex:0 0 auto;
+      transition:transform .2s ease,box-shadow .2s ease;
     }
+    .quick:hover .qIcon,.quick:focus-visible .qIcon{transform:translateY(-2px) scale(1.035);box-shadow:0 8px 20px rgba(var(--quick-accent),.18)}
     .quick h3{margin:0 0 5px;font-size:16px}
     .quick p{margin:0;color:var(--muted);font-size:13px;line-height:1.35}
     .sectionHead{
@@ -189,7 +237,7 @@
     }
     .sectionHead h2{margin:0;font-size:24px}
     .sectionHead p{margin:5px 0 0;color:var(--muted)}
-    .allLink{color:#c7d4f2;font-weight:750}
+    .allLink{min-height:44px;display:flex;align-items:center;color:#c7d4f2;font-weight:750}
     .projectGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
     .project{
       border:1px solid var(--line);
@@ -198,9 +246,14 @@
       overflow:hidden;
       cursor:pointer;
       min-height:210px;
-      transition:.18s transform,.18s border-color;
+      display:flex;
+      flex-direction:column;
+      opacity:0;
+      animation:homeReveal .48s cubic-bezier(.2,.75,.25,1) forwards;
+      animation-delay:calc(400ms + var(--home-index) * 45ms);
+      transition:.2s transform,.2s border-color,.2s box-shadow;
     }
-    .project:hover{transform:translateY(-4px);border-color:rgba(89,159,255,.55)}
+    .project:hover,.project:focus-visible{transform:translateY(-4px);border-color:rgba(89,159,255,.55);box-shadow:0 18px 36px rgba(0,0,0,.22)}
     .cover{
       height:118px;
       display:grid;
@@ -220,7 +273,7 @@
     .project:nth-child(4) .cover{background:linear-gradient(135deg,#173c4a,#87a96b)}
     .project:nth-child(5) .cover{background:linear-gradient(135deg,#70441f,#e0b36f)}
     .project:nth-child(6) .cover{background:linear-gradient(135deg,#11182e,#8b5b22)}
-    .project .body{padding:12px 14px}
+    .project .body{padding:12px 14px;flex:1}
     .project h3{margin:0 0 5px;font-size:16px}
     .project p{margin:0;color:var(--muted);font-size:13px;line-height:1.35}
     .labPanel{
@@ -231,22 +284,75 @@
       display:grid;
       grid-template-columns:1fr 2.6fr;
       overflow:hidden;
+      position:relative;
     }
-    .labText{padding:24px}
+    .labText{padding:28px 24px;align-self:center}
     .labText h2{margin:0 0 8px}
     .labText p{color:var(--muted);line-height:1.5;margin:0 0 18px}
-    .codeGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:18px}
+    .codeGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:18px}
     .codeCard{
-      background:#071020;
-      border:1px solid rgba(132,166,255,.15);
-      border-radius:10px;
+      min-width:0;
+      height:248px;
+      background:linear-gradient(180deg,#071122,#050b17);
+      border:1px solid rgba(132,166,255,.19);
+      border-radius:12px;
       overflow:hidden;
       font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-      font-size:12px;
+      font-size:11px;
+      box-shadow:inset 0 0 26px rgba(55,108,204,.045),0 14px 30px rgba(0,0,0,.2);
+      opacity:0;
+      animation:homeReveal .48s cubic-bezier(.2,.75,.25,1) forwards;
+      animation-delay:calc(580ms + var(--code-index) * 60ms);
+      transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;
     }
-    .codeTop{height:34px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;background:#0d1931;color:#91a4cd}
+    .codeCard:hover,.codeCard:focus-within{border-color:rgba(var(--code-accent),.48);box-shadow:inset 0 0 28px rgba(var(--code-accent),.055),0 18px 36px rgba(0,0,0,.25)}
+    .codeCard:focus-visible{outline:3px solid rgba(var(--code-accent),.72);outline-offset:3px}
+    .codeTop{height:40px;display:flex;align-items:center;justify-content:space-between;gap:9px;padding:0 11px;background:#0d1931;color:#91a4cd;border-bottom:1px solid rgba(132,166,255,.1)}
+    .codeMeta{min-width:0;display:flex;align-items:center;gap:8px}
+    .codePath{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#7589b5}
+    .codeLang{flex:0 0 auto;padding:3px 7px;border:1px solid rgba(var(--code-accent),.28);border-radius:999px;background:rgba(var(--code-accent),.07);color:rgb(var(--code-accent));font-size:9px;font-weight:800;letter-spacing:.35px;text-transform:uppercase}
     .dots{display:flex;gap:6px}.dots span{width:8px;height:8px;border-radius:50%;display:block}.r{background:#ff5d5d}.y{background:#ffbd44}.g{background:#33d17a}
-    pre{margin:0;padding:13px;color:#8fc3ff;line-height:1.55;white-space:pre-wrap}
+    .codeViewport{
+      position:relative;
+      height:208px;
+      overflow:hidden;
+      mask-image:linear-gradient(180deg,transparent 0,black 12%,black 88%,transparent 100%);
+      -webkit-mask-image:linear-gradient(180deg,transparent 0,black 12%,black 88%,transparent 100%);
+    }
+    .codeFlow{display:block;padding:18px 0;animation:codeFlowUp 18s ease-in-out infinite alternate}
+    .codeCard:nth-child(2) .codeFlow{animation-name:codeFlowDown;animation-duration:21s}
+    .codeCard:nth-child(3) .codeFlow{animation-name:codeFlowPause;animation-duration:16s}
+    .codeCard:hover .codeFlow,.codeCard:focus-within .codeFlow{animation-play-state:paused}
+    .codeLine{
+      position:relative;
+      min-height:20px;
+      display:grid;
+      grid-template-columns:28px minmax(0,1fr);
+      padding:0 9px 0 5px;
+      line-height:1.65;
+      white-space:pre;
+    }
+    .codeLine.active{background:linear-gradient(90deg,rgba(var(--code-accent),.1),transparent)}
+    .codeLine.active::after{
+      content:"";
+      width:1px;
+      height:13px;
+      margin-left:2px;
+      align-self:center;
+      background:rgb(var(--code-accent));
+      animation:codeCursor 1.25s steps(1,end) infinite;
+    }
+    .lineNo{padding-right:9px;color:#415172;text-align:right;user-select:none}
+    .lineCode{min-width:0;color:#b9c8e5}
+    .syn-key{color:#c89cff}.syn-name{color:#73c8ff}.syn-string{color:#a8db91}.syn-tag{color:#ff91ae}.syn-attr{color:#f0c879}.syn-type{color:#75d8cf}.syn-comment{color:#687b9d;font-style:italic}
+    @keyframes homeReveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    @keyframes heroGridDrift{to{background-position:26px 26px}}
+    @keyframes heroKBreathe{0%,100%{transform:scale(1);filter:saturate(.96)}50%{transform:scale(1.025);filter:saturate(1.08)}}
+    @keyframes heroIconFloat{0%,100%{transform:translate3d(0,3px,0)}50%{transform:translate3d(3px,-6px,0)}}
+    @keyframes codeFlowUp{from{transform:translateY(8px)}to{transform:translateY(-18px)}}
+    @keyframes codeFlowDown{from{transform:translateY(-17px)}to{transform:translateY(8px)}}
+    @keyframes codeFlowPause{0%,28%{transform:translateY(5px)}58%,82%{transform:translateY(-14px)}100%{transform:translateY(-3px)}}
+    @keyframes codeCursor{0%,48%{opacity:1}49%,100%{opacity:0}}
     .soon{
       display:none;
       margin-top:18px;
@@ -274,90 +380,150 @@
   object-fit:cover;
   display:block;
 }
-    .soonList.appShowcaseGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-    .appShowcaseCard{min-width:0}
-    .appShowcaseLink{
-      height:100%;
-      display:flex;
-      flex-direction:column;
-      overflow:hidden;
-      border:1px solid rgba(132,166,255,.22);
-      border-radius:14px;
-      background:linear-gradient(180deg,rgba(13,28,59,.94),rgba(6,15,31,.96));
-      box-shadow:0 16px 38px rgba(0,0,0,.2);
-      transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+    .appsRoute{
+      width:100%;
+      max-width:1240px;
+      margin-inline:auto;
+      padding:24px;
     }
-    .appShowcaseLink:focus-visible{
-      outline:3px solid rgba(56,166,255,.78);
-      outline-offset:3px;
-      border-color:rgba(56,166,255,.72);
+    .appsRoute > #routeTitle{margin-bottom:6px}
+    .appsRoute > #routeText{max-width:680px;margin-bottom:20px}
+    .soonList.appShowcaseGrid{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+    }
+    .appShowcaseCard{
+      --app-accent:56,166,255;
+      min-width:0;
+      min-height:252px;
+      display:grid;
+      grid-template-columns:132px minmax(0,1fr);
+      gap:20px;
+      padding:20px;
+      border:1px solid rgba(var(--app-accent),.28);
+      border-radius:16px;
+      background:
+        radial-gradient(circle at 8% 16%,rgba(var(--app-accent),.12),transparent 38%),
+        linear-gradient(145deg,rgba(13,28,59,.96),rgba(6,15,31,.98));
+      box-shadow:0 16px 38px rgba(0,0,0,.2);
+      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    }
+    .appShowcaseCard:focus-within{
+      border-color:rgba(var(--app-accent),.68);
+      box-shadow:0 18px 42px rgba(0,0,0,.28),0 0 24px rgba(var(--app-accent),.1);
     }
     .appShowcaseMedia{
       position:relative;
-      height:clamp(190px,22vw,260px);
+      width:132px;
+      height:132px;
+      align-self:center;
       display:grid;
       place-items:center;
       overflow:hidden;
-      border-bottom:1px solid rgba(132,166,255,.16);
-      background:radial-gradient(circle at 50% 45%,rgba(56,166,255,.18),transparent 42%),
-                 linear-gradient(135deg,rgba(30,73,139,.42),rgba(68,35,126,.28));
+      border:1px solid rgba(var(--app-accent),.26);
+      border-radius:22px;
+      background:
+        radial-gradient(circle at 50% 45%,rgba(var(--app-accent),.2),transparent 52%),
+        rgba(3,10,23,.62);
     }
     .appShowcaseMedia img{
       width:100%;
       height:100%;
       object-fit:contain;
       display:block;
+      transition:transform .2s ease;
     }
     .appShowcaseFallback{
       width:100%;
       height:100%;
       display:grid;
       place-items:center;
-      font-size:64px;
-      background:linear-gradient(135deg,rgba(56,166,255,.2),rgba(155,92,255,.22));
+      font-size:48px;
+      background:linear-gradient(135deg,rgba(var(--app-accent),.18),rgba(155,92,255,.18));
     }
     .appShowcaseFallback[hidden]{display:none}
     .appShowcaseContent{
-      flex:1;
       min-width:0;
       display:flex;
       flex-direction:column;
       align-items:flex-start;
-      padding:20px;
     }
     .appPlatform{
       display:inline-flex;
       align-items:center;
       gap:7px;
-      margin-bottom:10px;
-      color:#9fc8ff;
-      font-size:12px;
+      margin-bottom:7px;
+      color:rgb(var(--app-accent));
+      font-size:11px;
       font-weight:800;
       letter-spacing:.35px;
       text-transform:uppercase;
     }
-    .appShowcaseContent h3{margin:0 0 8px;font-size:21px;line-height:1.2}
-    .appShowcaseContent p{margin:0 0 18px;color:var(--muted);font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+    .appShowcaseContent h3{margin:0 0 7px;font-size:21px;line-height:1.2}
+    .appShowcaseContent p{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.45;
+      overflow-wrap:anywhere;
+    }
+    .appFeatures{
+      display:grid;
+      gap:4px;
+      margin:0 0 12px;
+      padding:0;
+      list-style:none;
+      color:#c7d4ed;
+      font-size:12px;
+      line-height:1.35;
+    }
+    .appFeatures li{
+      position:relative;
+      padding-left:14px;
+      overflow-wrap:anywhere;
+    }
+    .appFeatures li::before{
+      content:"";
+      position:absolute;
+      top:.48em;
+      left:0;
+      width:5px;
+      height:5px;
+      border-radius:50%;
+      background:rgb(var(--app-accent));
+      box-shadow:0 0 8px rgba(var(--app-accent),.5);
+    }
     .appShowcaseCta{
       min-height:44px;
       margin-top:auto;
       padding:0 15px;
       display:inline-flex;
       align-items:center;
+      justify-content:center;
       gap:9px;
-      border:1px solid rgba(56,166,255,.32);
+      border:1px solid rgba(var(--app-accent),.38);
       border-radius:10px;
-      background:linear-gradient(135deg,rgba(40,169,255,.18),rgba(155,53,255,.2));
+      background:linear-gradient(135deg,rgba(var(--app-accent),.18),rgba(155,53,255,.16));
       color:#f3f7ff;
       font-size:13px;
       font-weight:850;
+      transition:border-color .2s ease,background-color .2s ease;
+    }
+    .appShowcaseCta:focus-visible{
+      outline:3px solid rgba(var(--app-accent),.82);
+      outline-offset:3px;
+    }
+    .appShowcaseCtaArrow{
+      transition:transform .2s ease;
     }
     @media(hover:hover){
-      .appShowcaseLink:hover{
-        transform:translateY(-4px);
-        border-color:rgba(89,159,255,.58);
-        box-shadow:0 20px 46px rgba(0,0,0,.3),0 0 24px rgba(56,166,255,.08);
+      .appShowcaseCard:hover{
+        transform:translateY(-3px);
+        border-color:rgba(var(--app-accent),.58);
+        box-shadow:0 20px 46px rgba(0,0,0,.3),0 0 24px rgba(var(--app-accent),.1);
       }
+      .appShowcaseCard:hover .appShowcaseMedia img{transform:scale(1.02)}
+      .appShowcaseCta:hover .appShowcaseCtaArrow{transform:translateX(4px)}
     }
     .soonItem[data-url]{cursor:pointer}
     .soonItem[data-url]:hover{transform:translateY(-3px);border-color:rgba(89,159,255,.55)}
@@ -702,11 +868,16 @@
       background:rgba(2,7,17,.72);
     }
     footer .brand{font-size:20px}
+    .footerLinks{display:flex;align-items:center;gap:16px}
+    .footerLinks a{min-height:44px;display:inline-flex;align-items:center;font-weight:700}
+    .footerLinks a:focus-visible{
+      outline:3px solid rgba(56,166,255,.78);
+      outline-offset:3px;
+    }
     .hide{display:none}
-    @media(max-width:1023px) and (min-width:761px){
+    @media(max-width:1100px) and (min-width:761px){
       .topbar{padding:0 24px}
       .nav{gap:14px;font-size:13px}
-      .actions{display:none}
       .hero{
         min-height:340px;
         grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);
@@ -725,13 +896,23 @@
       .project{min-width:0}
       .cover{height:auto;aspect-ratio:1}
       .labPanel{grid-template-columns:1fr}
+      .codeCard{height:236px}
+      .codeViewport{height:196px}
     }
-    @media(max-width:900px){
-      .soonList.appShowcaseGrid{grid-template-columns:1fr}
+    @media(max-width:1100px) and (min-width:761px){
+      .appShowcaseCard{
+        min-height:244px;
+        grid-template-columns:104px minmax(0,1fr);
+        gap:14px;
+        padding:16px;
+      }
+      .appShowcaseMedia{width:104px;height:104px;border-radius:18px}
+      .appShowcaseContent h3{font-size:19px}
+      .appShowcaseContent p{font-size:13px}
     }
     @media(max-width:760px){
       .topbar{padding:0 20px}
-      .nav,.actions{display:none}
+      .nav{display:none}
       .mobileMenuBtn{display:grid;flex:0 0 auto}
       .mobileNav:not([hidden]){
         position:absolute;
@@ -786,7 +967,7 @@
       }
       .hero > div{min-width:0}
       .hero h1{
-        font-size:clamp(32px,9.5vw,40px);
+        font-size:clamp(31px,8.8vw,38px);
         line-height:1.08;
         margin-bottom:12px;
         letter-spacing:-.3px;
@@ -813,6 +994,8 @@
         text-align:center;
       }
       .orbWrap{min-height:170px}
+      .orbWrap::before{height:155px;background-size:22px 22px}
+      .orbWrap::after{width:220px;height:116px}
       .galaxy{width:min(320px,100%);height:150px}
       .kCube{
         width:96px;
@@ -844,6 +1027,11 @@
       .labPanel{grid-template-columns:1fr}
       .labText{padding:20px}
       .codeGrid{grid-template-columns:1fr;padding:14px}
+      .codeCard{height:210px;font-size:10.5px}
+      .codeViewport{height:170px}
+      .codeLine{min-height:19px}
+      .codeCard:nth-child(3){height:188px}
+      .codeCard:nth-child(3) .codeViewport{height:148px}
       .soonList{grid-template-columns:1fr}
       .soonList.labShowcaseGrid{grid-template-columns:1fr}
       .labRoute{padding:18px}
@@ -877,12 +1065,20 @@
       .labToolLink:active{transform:scale(.995)}
       .soon.appsRoute{padding:18px 14px}
       .soon.appsRoute > p{margin-bottom:16px}
-      .appShowcaseMedia{height:clamp(170px,48vw,230px)}
-      .appShowcaseContent{padding:16px}
-      .appShowcaseContent h3{font-size:20px}
-      .appShowcaseContent p{font-size:13.5px;margin-bottom:16px}
+      .soonList.appShowcaseGrid{grid-template-columns:1fr;gap:12px}
+      .appShowcaseCard{
+        min-height:226px;
+        grid-template-columns:96px minmax(0,1fr);
+        gap:14px;
+        padding:16px;
+      }
+      .appShowcaseMedia{width:96px;height:96px;border-radius:18px}
+      .appShowcaseContent h3{font-size:19px}
+      .appShowcaseContent p{font-size:13px}
+      .appShowcaseCta{width:100%}
       footer{padding:20px;display:block}
       footer .brand{margin-bottom:12px}
+      .footerLinks{min-height:44px}
     }
     @media(max-width:480px){
       .buttons{grid-template-columns:1fr}
@@ -892,7 +1088,29 @@
       .allLink{margin-top:6px;width:max-content;max-width:100%}
     }
     @media(prefers-reduced-motion:reduce){
-      .menuIcon span,.appShowcaseLink{transition:none}
+      .menuIcon span,
+      .appShowcaseCard,
+      .appShowcaseMedia img,
+      .appShowcaseCta,
+      .appShowcaseCtaArrow{transition:none!important}
+      .heroCopy,
+      .heroVisual,
+      .kCube,
+      .floatIcon,
+      .orbWrap::before,
+      .homeContent .quick,
+      .homeContent .project,
+      .codeCard,
+      .codeFlow,
+      .codeLine.active::after{
+        animation:none!important;
+      }
+      .homeContent .quick,.homeContent .project,.codeCard{opacity:1;transform:none}
+      .quick,.quick .qIcon,.project,.codeCard{transition:none!important}
+      .quick:hover,.quick:focus-visible,.project:hover,.project:focus-visible{transform:none!important}
+      .appShowcaseCard:hover,
+      .appShowcaseCard:hover .appShowcaseMedia img,
+      .appShowcaseCta:hover .appShowcaseCtaArrow{transform:none!important}
       .labIntro::before,
       .labTitleAccent,
       .labFeatureTag,
@@ -933,11 +1151,6 @@
 
     <nav class="nav" id="nav"></nav>
 
-    <div class="actions">
-      <button class="iconBtn" title="GitHub">⌘</button>
-      <button class="starBtn">☆ GitHub'da Yıldızla</button>
-    </div>
-
     <button class="mobileMenuBtn" id="mobileMenuBtn" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileNav">
       <span class="menuIcon" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
@@ -946,27 +1159,30 @@
   </header>
 
   <section class="hero" id="homeHero">
-    <div>
-      <h1>Mini uygulamalar. Hızlı oyunlar.<br><span class="gradientText">Açık kodlar.</span></h1>
-      <p>Katovia bağımsız bir dijital stüdyo ve yaratıcı üretim merkezidir. Mini uygulamalar, HTML5 araçları, gündelik oyunlar ve açık kaynaklı mobil deneyler geliştiriyoruz.</p>
+    <div class="heroCopy">
+      <h1>Mini uygulamalar. Hızlı oyunlar.<br> <span class="gradientText">Açık kodlar.</span></h1>
+      <p>Katovia; mini uygulamalar, HTML5 deneyler, hızlı oyunlar ve açık kaynak projeler üreten bağımsız bir dijital stüdyodur.</p>
       <div class="buttons">
-        <button class="btn primary" data-route="laboratuvar">🚀 Laboratuvarı Keşfet</button>
-        <button class="btn" data-route="uygulamalar">▦ Uygulamaları Gör</button>
+        <a class="btn primary" href="#laboratuvar" data-route="laboratuvar">🚀 Laboratuvarı Keşfet</a>
+        <a class="btn" href="#uygulamalar" data-route="uygulamalar">▦ Uygulamaları Gör</a>
       </div>
     </div>
 
-    <div class="orbWrap" aria-label="Katovia görsel alanı">
-      <div class="galaxy"></div>
-      <div class="kCube">K</div>
-      <div class="floatIcon i1">🎮</div>
-      <div class="floatIcon i2">&lt;/&gt;</div>
-      <div class="floatIcon i3">▣</div>
-      <div class="floatIcon i4">📱</div>
+    <div class="orbWrap heroVisual" role="img" aria-label="Uygulama, oyun, kod ve laboratuvar alanlarını birleştiren Katovia ekosistemi">
+      <div aria-hidden="true">
+        <div class="galaxy"></div>
+        <div class="heroLink l1"></div><div class="heroLink l2"></div><div class="heroLink l3"></div><div class="heroLink l4"></div>
+        <div class="kCube">K</div>
+        <div class="floatIcon i1">🎮</div>
+        <div class="floatIcon i2">&lt;/&gt;</div>
+        <div class="floatIcon i3">⌁</div>
+        <div class="floatIcon i4">▦</div>
+      </div>
     </div>
   </section>
 
   <main>
-    <section id="homeContent">
+    <section class="homeContent" id="homeContent">
       <div class="quickGrid" id="quickGrid"></div>
 
       <div class="sectionHead">
@@ -979,11 +1195,11 @@
 
       <div class="projectGrid" id="projectGrid"></div>
 
-      <section class="labPanel">
+      <section class="labPanel" aria-labelledby="codeShowcaseTitle">
         <div class="labText">
-          <h2>Üret, oyna ve kodu keşfet.</h2>
-          <p>Katovia’da her proje zamanla çalışan demo, kaynak kod ve kısa açıklama formatıyla yayınlanacak.</p>
-          <button class="btn" data-route="kodlar">⌘ Kodları İncele</button>
+          <h2 id="codeShowcaseTitle">Üret, oyna ve kodu keşfet.</h2>
+          <p>Katovia’daki projeler çalışan demo, açık kaynak kod ve kısa geliştirme notlarıyla büyür.</p>
+          <a class="btn" href="#kodlar" data-route="kodlar">⌘ Kodları İncele</a>
         </div>
         <div class="codeGrid" id="codeGrid"></div>
       </section>
@@ -998,7 +1214,9 @@
 
   <footer>
     <div class="brand"><span class="mark">K</span><span>Katovia</span></div>
-    <div>Gizlilik Politikası · GitHub · İletişim</div>
+    <nav class="footerLinks" aria-label="Alt bilgi bağlantıları">
+      <a href="#gizlilik" data-route="gizlilik">Gizlilik Politikası</a>
+    </nav>
   </footer>
 
   <script>
@@ -1007,22 +1225,25 @@
       { id:"uygulamalar", label:"Uygulamalar" },
       { id:"laboratuvar", label:"Laboratuvar" },
       { id:"oyunlar", label:"Oyunlar" },
-      { id:"kodlar", label:"Kodlar" },
-      { id:"gizlilik", label:"Gizlilik" },
-      { id:"iletisim", label:"İletişim" }
+      { id:"kodlar", label:"Kodlar" }
     ];
 
     const categories = [
-      { route:"uygulamalar", icon:"▦", title:"Uygulamalar", text:"Katovia'nın Play Store'daki mobil uygulamaları.", color:"linear-gradient(135deg,#1d72ff,#16316f)" },
-      { route:"laboratuvar", icon:"🛠", title:"Laboratuvar", text:"HTML5 araçlar, mesaj üreticiler ve mini APK prototipleri.", color:"linear-gradient(135deg,#2be28d,#124b2f)" },
-      { route:"oyunlar", icon:"🎮", title:"Mini Oyunlar", text:"Saniyeler içinde oynanabilecek gündelik oyunlar.", color:"linear-gradient(135deg,#9b54ff,#44207a)" },
-      { route:"kodlar", icon:"</>", title:"Açık Kod", text:"Demo, kaynak kod ve kısa geliştirme notları.", color:"linear-gradient(135deg,#ff8a2b,#5a240b)" }
+      { route:"uygulamalar", icon:"▦", title:"Uygulamalar", text:"Play Store’daki mobil projeler.", color:"linear-gradient(135deg,#1d72ff,#16316f)", accent:"48,139,255" },
+      { route:"laboratuvar", icon:"🛠", title:"Laboratuvar", text:"HTML araçlar, üreticiler ve deneysel fikirler.", color:"linear-gradient(135deg,#2be28d,#124b2f)", accent:"43,226,141" },
+      { route:"oyunlar", icon:"🎮", title:"Mini Oyunlar", text:"Hızlı, hafif ve anında oynanabilir oyunlar.", color:"linear-gradient(135deg,#9b54ff,#44207a)", accent:"155,84,255" },
+      { route:"kodlar", icon:"</>", title:"Açık Kod", text:"Demo, kaynak kod ve geliştirme notları.", color:"linear-gradient(135deg,#ff8a2b,#5a240b)", accent:"255,138,43" }
     ];
 
     const projects = [
       {
         title: "Balonlubum",
         text: "Kelime ve refleks odaklı galaksi oyunu",
+        homeText: "Kelime ve refleks oyunu",
+        appText: "Kelime bilginle reflekslerini birleştiren hızlı ve renkli bir mobil oyun.",
+        appFeatureOne: "Kelime ve refleks",
+        appFeatureTwo: "Kısa oyun turları",
+        appAccent: "79,178,255",
         icon: "🎈",
         image: "assets/apps/balonlubum.jpg",
         route: "uygulamalar",
@@ -1031,6 +1252,11 @@
       {
         title: "Kare Savaşları",
         text: "Izgara üzerinde taktik savaşlar",
+        homeText: "Taktik tabanlı ızgara savaşı",
+        appText: "Izgara üzerinde hamleni planla ve rakibine üstünlük kur.",
+        appFeatureOne: "Taktik savaşlar",
+        appFeatureTwo: "Izgara tabanlı oynanış",
+        appAccent: "239,109,103",
         icon: "⚔️",
         image: "assets/apps/kare-savaslari.jpg",
         route: "uygulamalar",
@@ -1039,6 +1265,11 @@
       {
         title: "İletişim Analizi",
         text: "İlişkilerini ve konuşmalarını analiz et",
+        homeText: "Konuşma ve ilişki analizi",
+        appText: "Konuşmalarındaki iletişim biçimlerini ve ilişki dinamiklerini daha görünür hâle getir.",
+        appFeatureOne: "İletişim değerlendirmesi",
+        appFeatureTwo: "Anlaşılır sonuçlar",
+        appAccent: "203,119,236",
         icon: "📊",
         image: "assets/apps/iletisim-analizi.jpg",
         route: "uygulamalar",
@@ -1047,6 +1278,11 @@
       {
         title: "Mental Detox",
         text: "Odaklan. Nefes al. Yenilen.",
+        homeText: "Odak, nefes ve zihinsel denge",
+        appText: "Kısa nefes, odaklanma ve rahatlama pratikleriyle zihinsel bir mola ver.",
+        appFeatureOne: "Kısa pratikler",
+        appFeatureTwo: "Sade ve çevrimdışı deneyim",
+        appAccent: "73,205,164",
         icon: "🧘",
         image: "assets/apps/mental-detox.jpg",
         route: "uygulamalar",
@@ -1055,6 +1291,7 @@
       {
         title: "Cuma Mesajı Oluşturucu",
         text: "Hitap, ton ve uzunluk seçerek gönderilebilir Cuma mesajları oluştur.",
+        homeText: "Hazır Cuma mesajı üretici",
         icon: "💌",
         category: "Mesaj Aracı",
         accent: "73,205,198",
@@ -1067,6 +1304,7 @@
       {
         title: "Kandil Mesajı Oluşturucu",
         text: "Kandil türü, hitap, ton ve uzunluğa uygun mesajlar oluştur.",
+        homeText: "Kandil mesajı oluşturucu",
         icon: "✦",
         category: "Mesaj Aracı",
         accent: "91,160,255",
@@ -1147,19 +1385,57 @@
 
     const codes = [
       {
-        title:"mini-araclar/url-kisaltici",
+        title:"laboratuvar/cuma-mesaji.js",
         lang:"JavaScript",
-        code:"export function kisalt(url) {\n  const id = Math.random().toString(36)\n  return `https://k.tv/${id}`\n}"
+        accent:"92,174,255",
+        lines:[
+          `<span class="syn-key">const</span> <span class="syn-name">secimler</span> = {`,
+          `  hitap: <span class="syn-string">'general'</span>,`,
+          `  ton: <span class="syn-string">'friendly'</span>,`,
+          `  uzunluk: <span class="syn-string">'short'</span>`,
+          `};`,
+          ``,
+          `<span class="syn-key">const</span> <span class="syn-name">mesaj</span> =`,
+          `  <span class="syn-name">mesajOlustur</span>(secimler);`,
+          ``,
+          `<span class="syn-comment">// Göndermeye hazır.</span>`
+        ],
+        activeLine:8
       },
       {
-        title:"oyunlar/kare-savaslari",
-        lang:"TypeScript",
-        code:"class Savas {\n  constructor(harita) {\n    this.harita = harita\n  }\n}"
+        title:"index.html · laboratuvar",
+        lang:"HTML",
+        accent:"232,135,173",
+        lines:[
+          `<span class="syn-tag">&lt;section</span> <span class="syn-attr">class</span>=<span class="syn-string">"lab-card"</span><span class="syn-tag">&gt;</span>`,
+          `  <span class="syn-tag">&lt;span</span> <span class="syn-attr">class</span>=<span class="syn-string">"status"</span><span class="syn-tag">&gt;</span>`,
+          `    Kullanıma hazır`,
+          `  <span class="syn-tag">&lt;/span&gt;</span>`,
+          `  <span class="syn-tag">&lt;h3&gt;</span>Karar Pusulası<span class="syn-tag">&lt;/h3&gt;</span>`,
+          `  <span class="syn-tag">&lt;a</span> <span class="syn-attr">href</span>=<span class="syn-string">"#laboratuvar"</span><span class="syn-tag">&gt;</span>`,
+          `    Aracı aç`,
+          `  <span class="syn-tag">&lt;/a&gt;</span>`,
+          `<span class="syn-tag">&lt;/section&gt;</span>`
+        ],
+        activeLine:6
       },
       {
-        title:"uygulamalar/iletisim-analizi",
+        title:"apps/mental_detox.dart",
         lang:"Flutter",
-        code:"final analiz = MesajAnalizi(\n  duygu: 'sakin',\n  guven: 82,\n);"
+        accent:"88,214,198",
+        lines:[
+          `<span class="syn-key">final</span> <span class="syn-name">project</span> =`,
+          `  <span class="syn-type">KatoviaProject</span>(`,
+          `    name: <span class="syn-string">'Mental Detox'</span>,`,
+          `    type: <span class="syn-type">ProjectType</span>.app,`,
+          `    focus: [`,
+          `      <span class="syn-string">'nefes'</span>,`,
+          `      <span class="syn-string">'odak'</span>,`,
+          `      <span class="syn-string">'denge'</span>,`,
+          `    ],`,
+          `  );`
+        ],
+        activeLine:3
       }
     ];
 
@@ -1218,7 +1494,7 @@
     const routeContent = {
       "uygulamalar": {
         title:"Uygulamalar",
-        text:"Katovia’nın Play Store’da yayınlanan veya yayınlanacak ana mobil uygulamaları burada listelenecek.",
+        text:"Katovia’nın geliştirdiği mobil deneyimleri keşfet.",
         items:["Balonlubum","Kare Savaşları","İletişim Analizi","Mental Detox"]
       },
       "laboratuvar": {
@@ -1257,32 +1533,32 @@
     }
 
     function renderHome(){
-      document.getElementById("quickGrid").innerHTML = categories.map(c => `
-        <article class="quick" data-route="${c.route}">
+      document.getElementById("quickGrid").innerHTML = categories.map((c,index) => `
+        <a class="quick" href="#${c.route}" data-route="${c.route}" style="--home-index:${index};--quick-accent:${c.accent}" aria-label="${c.title}: ${c.text}">
           <div class="qIcon" style="background:${c.color}">${c.icon}</div>
           <div><h3>${c.title}</h3><p>${c.text}</p></div>
-        </article>
+        </a>
       `).join("");
 
-      document.getElementById("projectGrid").innerHTML = projects.slice(0,6).map(p => `
-        <article class="project" data-route="${p.route}" ${p.url ? `data-url="${p.url}"` : ""}>
+      document.getElementById("projectGrid").innerHTML = projects.slice(0,6).map((p,index) => `
+        <a class="project" href="${p.url || `#${p.route}`}" ${p.url ? `data-url="${p.url}" target="_blank" rel="noopener noreferrer"` : `data-route="${p.route}"`} style="--home-index:${index}" aria-label="${p.title}: ${p.homeText || p.text}">
           <div class="cover">${p.image ? `<img src="${p.image}" alt="${p.title}" onerror="this.remove();this.parentElement.textContent='${p.icon}'">` : p.icon}</div>
-          <div class="body"><h3>${p.title}</h3><p>${p.text}</p></div>
-        </article>
+          <div class="body"><h3>${p.title}</h3><p>${p.homeText || p.text}</p></div>
+        </a>
       `).join("");
 
-      document.getElementById("codeGrid").innerHTML = codes.map(c => `
-        <article class="codeCard">
+      document.getElementById("codeGrid").innerHTML = codes.map((c,index) => `
+        <article class="codeCard" tabindex="0" style="--code-accent:${c.accent};--code-index:${index}" aria-label="${c.lang} kod örneği: ${c.title}">
           <div class="codeTop">
             <span class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></span>
-            <span>${c.lang}</span>
+            <span class="codeMeta"><span class="codePath">${c.title}</span><span class="codeLang">${c.lang}</span></span>
           </div>
-          <pre>${c.title}\n\n${c.code}</pre>
+          <pre class="codeViewport"><code class="codeFlow">${c.lines.map((line,lineIndex) => `<span class="codeLine${lineIndex + 1 === c.activeLine ? " active" : ""}"><span class="lineNo" aria-hidden="true">${lineIndex + 1}</span><span class="lineCode">${line || " "}</span></span>`).join("")}</code></pre>
         </article>
       `).join("");
     }
 
-    const validRoutes = new Set(navItems.map(item => item.id));
+    const validRoutes = new Set([...navItems.map(item => item.id),"gizlilik"]);
     const mobileMenuButton = document.getElementById("mobileMenuBtn");
     const mobileNav = document.getElementById("mobileNav");
     const mobileViewport = window.matchMedia("(max-width: 760px)");
@@ -1337,23 +1613,28 @@
         const content = routeContent[route];
         document.getElementById("routeTitle").textContent = content.title;
         document.getElementById("routeText").textContent = content.text;
-        if (route === "uygulamalar") {
+if (route === "uygulamalar") {
   const apps = projects.filter(p => p.route === "uygulamalar" && p.url);
 
   routeItems.innerHTML = apps.map(app => `
-    <article class="appShowcaseCard">
-      <a class="appShowcaseLink" href="${app.url}" target="_blank" rel="noopener noreferrer" aria-label="${app.title}: Google Play'de Gör">
-        <span class="appShowcaseMedia">
-          <img src="${app.image}" alt="${app.title} uygulama görseli" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-          <span class="appShowcaseFallback" role="img" aria-label="${app.title} görseli" hidden>${app.icon}</span>
-        </span>
-        <span class="appShowcaseContent">
-          <span class="appPlatform"><span aria-hidden="true">▦</span> Android · Google Play</span>
-          <h3>${app.title}</h3>
-          <p>${app.text}</p>
-          <span class="appShowcaseCta">Google Play'de Gör <span aria-hidden="true">↗</span></span>
-        </span>
-      </a>
+    <article class="appShowcaseCard" style="--app-accent:${app.appAccent}">
+      <div class="appShowcaseMedia">
+        <img src="${app.image}" alt="${app.title} uygulama görseli" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="appShowcaseFallback" role="img" aria-label="${app.title} görseli" hidden>${app.icon}</div>
+      </div>
+      <div class="appShowcaseContent">
+        <span class="appPlatform"><span aria-hidden="true">▦</span> Android · Google Play</span>
+        <h3>${app.title}</h3>
+        <p>${app.appText}</p>
+        <ul class="appFeatures">
+          <li>${app.appFeatureOne}</li>
+          <li>${app.appFeatureTwo}</li>
+        </ul>
+        <a class="appShowcaseCta" href="${app.url}" target="_blank" rel="noopener noreferrer" aria-label="${app.title}: Google Play'de Gör">
+          <span>Google Play'de Gör</span>
+          <span class="appShowcaseCtaArrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
     </article>
   `).join("");
 } else if (route === "laboratuvar") {
@@ -1483,6 +1764,7 @@
 
       const linkCard = e.target.closest("[data-url]");
       if (linkCard && linkCard.dataset.url) {
+        e.preventDefault();
         window.open(linkCard.dataset.url, "_blank");
         return;
       }
