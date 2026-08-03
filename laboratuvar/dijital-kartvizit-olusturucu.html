@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bilgilerinizi cihazınızda işleyerek dijital kartvizit, vCard QR kodu ve indirilebilir dosyalar oluşturun.">
+  <title>Dijital Kartvizit Oluşturucu | Katovia Laboratuvarı</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #030916;
+      --panel: rgba(10, 23, 47, .86);
+      --panel-soft: rgba(12, 29, 57, .68);
+      --line: rgba(126, 159, 226, .24);
+      --text: #f4f7ff;
+      --muted: #a7b6d1;
+      --blue: #43b8ff;
+      --violet: #8b5cf6;
+      --danger: #ff9aab;
+      --success: #83ecc2;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { min-width: 320px; scroll-behavior: smooth; }
+    body {
+      min-width: 320px;
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(52, 124, 255, .18), transparent 30%),
+        radial-gradient(circle at 88% 26%, rgba(139, 92, 246, .14), transparent 32%),
+        linear-gradient(180deg, #030815, #061126 56%, #030916);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    button, input, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { border: 0; }
+
+    .topbar {
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 max(18px, calc((100vw - 1240px) / 2));
+      border-bottom: 1px solid rgba(129, 158, 219, .16);
+      background: rgba(2, 8, 20, .8);
+      backdrop-filter: blur(14px);
+    }
+    .brand, .back-link {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .brand { gap: 10px; font-size: 20px; }
+    .brand-mark {
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #3aafff, #8d4ff3);
+      box-shadow: 0 8px 25px rgba(77, 112, 255, .32);
+    }
+    .back-link {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      color: #cdd8ed;
+      font-size: 13px;
+    }
+
+    main { width: min(100% - 36px, 1240px); margin: 0 auto; padding: 42px 0 54px; }
+    .intro { max-width: 790px; margin-bottom: 28px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #9fd9ff;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 10px 0 12px; font-size: clamp(34px, 5vw, 58px); line-height: 1.02; letter-spacing: -.04em; }
+    .intro p { max-width: 720px; margin: 0; color: #b8c5da; font-size: clamp(15px, 2vw, 18px); line-height: 1.65; }
+
+    .workspace { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: 20px; align-items: start; }
+    .panel {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(13, 29, 57, .91), rgba(6, 17, 37, .94));
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .24);
+    }
+    .form-panel { padding: 22px; }
+    .preview-panel { position: sticky; top: 20px; padding: 20px; }
+    .section-title { margin: 0; font-size: 20px; letter-spacing: -.02em; }
+    .section-copy { margin: 6px 0 20px; color: var(--muted); font-size: 13.5px; line-height: 1.55; }
+
+    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 15px 13px; }
+    .field { min-width: 0; }
+    .field.full { grid-column: 1 / -1; }
+    label, legend { color: #dce7f8; font-size: 13px; font-weight: 800; }
+    label { display: inline-block; margin-bottom: 7px; }
+    input, textarea {
+      width: 100%;
+      min-height: 46px;
+      padding: 10px 12px;
+      border: 1px solid rgba(130, 163, 227, .3);
+      border-radius: 11px;
+      background: rgba(3, 11, 26, .7);
+      color: var(--text);
+      outline: none;
+    }
+    textarea { min-height: 92px; resize: vertical; line-height: 1.5; }
+    input::placeholder, textarea::placeholder { color: #73839f; }
+    input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: rgba(255, 130, 151, .78); }
+    .help, .field-error, .counter { margin: 6px 0 0; font-size: 12px; line-height: 1.45; }
+    .help, .counter { color: #8293af; }
+    .field-error { color: var(--danger); }
+    .field-error[hidden] { display: none; }
+    .counter { text-align: right; }
+
+    fieldset { min-width: 0; margin: 22px 0 0; padding: 0; border: 0; }
+    legend { margin-bottom: 10px; }
+    .theme-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+    .theme-button {
+      min-height: 70px;
+      display: grid;
+      justify-items: start;
+      align-content: center;
+      gap: 7px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .035);
+      color: #d9e5f7;
+      cursor: pointer;
+      text-align: left;
+    }
+    .theme-button[aria-pressed="true"] { border-color: #61c6ff; box-shadow: inset 0 0 0 1px #61c6ff, 0 0 24px rgba(68, 177, 255, .14); }
+    .theme-swatch { width: 100%; height: 15px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .18); }
+    .theme-button[data-theme="night"] .theme-swatch { background: linear-gradient(90deg, #07142e, #4667ff, #8a55ed); }
+    .theme-button[data-theme="clean"] .theme-swatch { background: linear-gradient(90deg, #f8fafc, #dce8f6); }
+    .theme-button[data-theme="purple"] .theme-swatch { background: linear-gradient(90deg, #33236b, #6656d8, #447dd9); }
+    .theme-name { font-size: 12px; font-weight: 850; line-height: 1.25; }
+
+    .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 22px; }
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 13px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: rgba(255, 255, 255, .055);
+      color: var(--text);
+      font-weight: 850;
+      line-height: 1.25;
+      cursor: pointer;
+    }
+    .button.primary { grid-column: 1 / -1; border-color: transparent; background: linear-gradient(135deg, #29a9ed, #8150ec); box-shadow: 0 13px 32px rgba(68, 94, 255, .24); }
+    .button.ghost { color: #c7d3e7; }
+    .button:disabled { cursor: not-allowed; opacity: .44; box-shadow: none; }
+
+    .privacy-note {
+      display: flex;
+      gap: 9px;
+      margin: 17px 0 0;
+      padding: 12px 13px;
+      border: 1px solid rgba(54, 216, 158, .2);
+      border-radius: 12px;
+      background: rgba(54, 216, 158, .055);
+      color: #a4b7d3;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+
+    .preview-top { display: flex; align-items: start; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+    .preview-badge { padding: 6px 9px; border: 1px solid rgba(82, 184, 255, .34); border-radius: 999px; color: #a9dcff; font-size: 11px; font-weight: 850; }
+    .card-stage { padding: 15px; border: 1px solid rgba(126, 159, 226, .18); border-radius: 16px; background: rgba(2, 9, 22, .66); }
+    .business-card {
+      aspect-ratio: 7 / 4;
+      min-width: 0;
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 29%;
+      gap: 4%;
+      overflow: hidden;
+      padding: clamp(18px, 3.4vw, 34px);
+      border-radius: 17px;
+      box-shadow: 0 22px 48px rgba(0, 0, 0, .28);
+    }
+    .business-card::before { position: absolute; inset: 0; pointer-events: none; content: ""; opacity: .7; }
+    .business-card[data-theme="night"] { background: linear-gradient(145deg, #07142d, #0c2148 65%, #19184c); color: #f4f7ff; }
+    .business-card[data-theme="night"]::before { background: radial-gradient(circle at 90% 10%, rgba(126, 82, 244, .38), transparent 34%), linear-gradient(115deg, transparent 55%, rgba(63, 184, 255, .12)); }
+    .business-card[data-theme="clean"] { background: linear-gradient(145deg, #ffffff, #eaf1f8); color: #122039; }
+    .business-card[data-theme="clean"]::before { background: linear-gradient(135deg, rgba(54, 133, 204, .08), transparent 45%), radial-gradient(circle at 95% 8%, rgba(62, 116, 213, .13), transparent 34%); }
+    .business-card[data-theme="purple"] { background: linear-gradient(140deg, #211848, #4c398d 56%, #285f9d); color: #fff; }
+    .business-card[data-theme="purple"]::before { background: radial-gradient(circle at 18% 10%, rgba(137, 112, 255, .4), transparent 37%), linear-gradient(118deg, transparent 57%, rgba(72, 195, 255, .14)); }
+    .card-copy, .card-side { min-width: 0; position: relative; z-index: 1; overflow: hidden; }
+    .identity { display: flex; align-items: center; gap: clamp(10px, 2vw, 18px); min-width: 0; }
+    .identity-copy { min-width: 0; }
+    .monogram {
+      width: clamp(48px, 8vw, 74px);
+      height: clamp(48px, 8vw, 74px);
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 18px;
+      background: linear-gradient(135deg, #35b9f5, #8058ed);
+      color: #fff;
+      font-size: clamp(19px, 3.6vw, 30px);
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+    .card-name { margin: 0; overflow: hidden; font-size: clamp(20px, 3.6vw, 34px); line-height: 1.05; text-overflow: ellipsis; white-space: nowrap; }
+    .card-role { margin: 6px 0 0; overflow: hidden; color: currentColor; font-size: clamp(10px, 1.65vw, 14px); opacity: .76; text-overflow: ellipsis; white-space: nowrap; }
+    .card-company { font-weight: 800; }
+    .card-contact { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; margin-top: clamp(13px, 2.8vw, 27px); }
+    .contact-item { min-width: 0; overflow: hidden; font-size: clamp(8px, 1.35vw, 12px); opacity: .88; text-overflow: ellipsis; white-space: nowrap; }
+    .contact-item[hidden] { display: none; }
+    .card-description { display: -webkit-box; margin: clamp(12px, 2.2vw, 22px) 0 0; overflow: hidden; font-size: clamp(9px, 1.45vw, 12.5px); line-height: 1.45; opacity: .76; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+    .card-description[hidden] { display: none; }
+    .card-side { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; }
+    .card-qr-shell { width: 100%; aspect-ratio: 1; display: grid; place-items: center; padding: 8%; border-radius: 12px; background: #fff; }
+    .card-qr-shell canvas { width: 100% !important; max-width: 100%; height: auto !important; display: block; image-rendering: pixelated; }
+    .card-qr-placeholder { width: 100%; aspect-ratio: 1; display: grid; place-items: center; border: 1px dashed rgba(135, 166, 225, .4); border-radius: 12px; color: currentColor; font-size: clamp(8px, 1.25vw, 11px); line-height: 1.35; opacity: .68; text-align: center; }
+    .card-qr-shell[hidden], .card-qr-placeholder[hidden], .qr-empty[hidden] { display: none; }
+    .card-qr-label { font-size: clamp(7px, 1vw, 10px); font-weight: 800; opacity: .7; text-align: center; }
+
+    .qr-panel { display: grid; grid-template-columns: 142px minmax(0, 1fr); gap: 16px; align-items: center; margin-top: 16px; padding: 14px; border: 1px solid rgba(126, 159, 226, .18); border-radius: 15px; background: rgba(3, 11, 26, .54); }
+    .qr-preview { width: 142px; height: 142px; display: grid; place-items: center; padding: 11px; overflow: hidden; border-radius: 12px; background: #fff; }
+    .qr-preview canvas { width: 100% !important; max-width: 100%; height: auto !important; display: block; image-rendering: pixelated; }
+    .qr-empty { width: 100%; height: 100%; display: grid; place-items: center; border: 1px dashed #b6c1ce; border-radius: 8px; color: #526174; font-size: 11px; text-align: center; }
+    .qr-copy h3 { margin: 0 0 6px; font-size: 16px; }
+    .qr-copy p { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.55; }
+    .status { min-height: 23px; margin: 14px 0 0; color: #b7c5db; font-size: 13px; line-height: 1.5; }
+    .status.success { color: var(--success); }
+    .status.error { color: var(--danger); }
+
+    .privacy-details { margin-top: 20px; overflow: hidden; border: 1px solid rgba(114, 142, 255, .24); border-radius: 14px; background: rgba(8, 19, 39, .72); }
+    .privacy-details summary { min-height: 46px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 15px; color: #dce7fb; font-weight: 800; line-height: 1.35; cursor: pointer; list-style: none; }
+    .privacy-details summary::-webkit-details-marker { display: none; }
+    .privacy-details summary::after { width: 9px; height: 9px; flex: 0 0 auto; border-right: 2px solid #83c9ff; border-bottom: 2px solid #83c9ff; content: ""; transform: rotate(45deg); transition: transform .18s ease; }
+    .privacy-details[open] summary::after { transform: rotate(225deg); }
+    .privacy-content { padding: 0 15px 15px; border-top: 1px solid rgba(112, 139, 255, .16); color: #aebed8; font-size: 13.5px; line-height: 1.65; }
+    .privacy-content p { margin: 13px 0 0; }
+
+    .theme-button:focus-visible, .button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visible, .privacy-details summary:focus-visible { outline: 3px solid rgba(84, 185, 255, .92); outline-offset: 3px; }
+    @media (hover: hover) { .theme-button:hover, .button:not(:disabled):hover, .back-link:hover { border-color: rgba(82, 181, 255, .66); } }
+    @media (max-width: 900px) {
+      main { max-width: 760px; }
+      .workspace { grid-template-columns: 1fr; }
+      .preview-panel { position: static; }
+    }
+    @media (max-width: 570px) {
+      .topbar { padding-inline: 14px; }
+      .brand { font-size: 18px; }
+      .back-link { padding-inline: 10px; font-size: 12px; }
+      main { width: min(100% - 28px, 760px); padding: 28px 0 42px; }
+      .form-panel, .preview-panel { padding: 17px; }
+      .fields { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .theme-grid { grid-template-columns: 1fr; }
+      .theme-button { min-height: 54px; }
+      .actions { grid-template-columns: 1fr; }
+      .button.primary { grid-column: auto; }
+      .qr-panel { grid-template-columns: 112px minmax(0, 1fr); gap: 12px; }
+      .qr-preview { width: 112px; height: 112px; }
+      .business-card { padding: 18px; border-radius: 13px; }
+      .card-contact { gap: 4px 9px; }
+    }
+    @media (max-width: 355px) {
+      .brand span:last-child { display: none; }
+      .qr-panel { grid-template-columns: 1fr; }
+      .qr-preview { width: 132px; height: 132px; }
+      .business-card { padding: 14px; }
+      .monogram { border-radius: 12px; }
+      .card-contact { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html#laboratuvar" aria-label="Katovia Laboratuvarına dön"><span class="brand-mark" aria-hidden="true">K</span><span>Katovia</span></a>
+    <a class="back-link" href="../index.html#laboratuvar">← Laboratuvara dön</a>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <span class="eyebrow"><span aria-hidden="true">✦</span> Katovia Laboratuvarı</span>
+      <h1 id="page-title">Dijital Kartvizit Oluşturucu</h1>
+      <p>Bilgilerini gir, kartvizitini tasarla, iletişim QR kodunu oluştur ve kartını cihazına indir.</p>
+    </section>
+
+    <div class="workspace">
+      <form class="panel form-panel" id="card-form" novalidate>
+        <h2 class="section-title">Kartvizit bilgileri</h2>
+        <p class="section-copy">Yalnız ad soyad zorunludur. Boş bıraktığınız bilgiler kartta gösterilmez.</p>
+
+        <div class="fields">
+          <div class="field full">
+            <label for="full-name">Ad soyad <span aria-hidden="true">*</span></label>
+            <input id="full-name" name="fullName" type="text" autocomplete="name" maxlength="80" placeholder="Alex Morgan" required aria-describedby="full-name-help full-name-error">
+            <p class="help" id="full-name-help">Kart, QR ve vCard dosyasının ana kişi adı.</p>
+            <p class="field-error" id="full-name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="job-title">Meslek / unvan</label>
+            <input id="job-title" name="jobTitle" type="text" autocomplete="organization-title" maxlength="100" placeholder="Ürün geliştirici">
+          </div>
+          <div class="field">
+            <label for="company">Şirket veya marka</label>
+            <input id="company" name="company" type="text" autocomplete="organization" maxlength="100" placeholder="Katovia">
+          </div>
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" placeholder="+90 555 123 45 67" aria-describedby="phone-error">
+            <p class="field-error" id="phone-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email">E-posta</label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="120" placeholder="merhaba@example.com" aria-describedby="email-error">
+            <p class="field-error" id="email-error" hidden></p>
+          </div>
+          <div class="field full">
+            <label for="website">İnternet sitesi</label>
+            <input id="website" name="website" type="url" autocomplete="url" maxlength="200" placeholder="https://katovia.com" aria-describedby="website-help website-error">
+            <p class="help" id="website-help">Adres http:// veya https:// ile başlamalıdır.</p>
+            <p class="field-error" id="website-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="instagram">Instagram</label>
+            <input id="instagram" name="instagram" type="text" maxlength="120" placeholder="@kullanici veya tam bağlantı" aria-describedby="instagram-error">
+            <p class="field-error" id="instagram-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="linkedin">LinkedIn</label>
+            <input id="linkedin" name="linkedin" type="text" maxlength="120" placeholder="kullanıcı adı veya tam bağlantı" aria-describedby="linkedin-error">
+            <p class="field-error" id="linkedin-error" hidden></p>
+          </div>
+          <div class="field full">
+            <label for="github">GitHub</label>
+            <input id="github" name="github" type="text" maxlength="120" placeholder="kullanıcı adı veya tam bağlantı" aria-describedby="github-error">
+            <p class="field-error" id="github-error" hidden></p>
+          </div>
+          <div class="field full">
+            <label for="description">Kısa açıklama</label>
+            <textarea id="description" name="description" maxlength="180" placeholder="Kendinizi veya yaptığınız işi kısaca anlatın." aria-describedby="description-counter"></textarea>
+            <p class="counter" id="description-counter">0 / 180</p>
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Kartvizit teması</legend>
+          <div class="theme-grid" aria-label="Kartvizit temaları">
+            <button class="theme-button" type="button" data-theme="night" aria-pressed="true"><span class="theme-swatch" aria-hidden="true"></span><span class="theme-name">Katovia Gece</span></button>
+            <button class="theme-button" type="button" data-theme="clean" aria-pressed="false"><span class="theme-swatch" aria-hidden="true"></span><span class="theme-name">Temiz Beyaz</span></button>
+            <button class="theme-button" type="button" data-theme="purple" aria-pressed="false"><span class="theme-swatch" aria-hidden="true"></span><span class="theme-name">Modern Mor</span></button>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button class="button primary" id="generate-button" type="submit">Kartviziti Oluştur / Güncelle</button>
+          <button class="button" id="card-download-button" type="button" disabled>Kartviziti PNG İndir</button>
+          <button class="button" id="qr-download-button" type="button" disabled>QR Kodu İndir</button>
+          <button class="button" id="vcard-download-button" type="button" disabled>vCard İndir</button>
+          <button class="button ghost" id="clear-button" type="button">Temizle</button>
+        </div>
+
+        <p class="privacy-note"><span aria-hidden="true">◉</span><span>Kartvizit bilgileriniz yalnızca bu tarayıcı sekmesinde işlenir. Katovia bu bilgileri kaydetmez veya sunucuya göndermez.</span></p>
+      </form>
+
+      <section class="panel preview-panel" aria-labelledby="preview-title">
+        <div class="preview-top">
+          <div><h2 class="section-title" id="preview-title">Canlı önizleme</h2><p class="section-copy">Bilgileriniz yazdıkça kartta görünür.</p></div>
+          <span class="preview-badge">1050 × 600 PNG</span>
+        </div>
+
+        <div class="card-stage">
+          <article class="business-card" id="business-card" data-theme="night" role="img" aria-label="Dijital kartvizit önizlemesi">
+            <div class="card-copy">
+              <div class="identity">
+                <span class="monogram" id="preview-monogram" aria-hidden="true">K</span>
+                <div class="identity-copy"><h3 class="card-name" id="preview-name">Ad Soyad</h3><p class="card-role"><span id="preview-title-text">Meslek / unvan</span><span id="preview-company-wrap" hidden> · <span class="card-company" id="preview-company"></span></span></p></div>
+              </div>
+              <div class="card-contact" id="preview-contact">
+                <span class="contact-item" id="preview-phone" hidden></span>
+                <span class="contact-item" id="preview-email" hidden></span>
+                <span class="contact-item" id="preview-website" hidden></span>
+                <span class="contact-item" id="preview-instagram" hidden></span>
+                <span class="contact-item" id="preview-linkedin" hidden></span>
+                <span class="contact-item" id="preview-github" hidden></span>
+              </div>
+              <p class="card-description" id="preview-description" hidden></p>
+            </div>
+            <div class="card-side">
+              <div class="card-qr-shell" id="card-qr-shell" hidden><canvas id="card-qr-canvas" width="256" height="256" aria-hidden="true"></canvas></div>
+              <div class="card-qr-placeholder" id="card-qr-placeholder">Oluşturunca<br>QR burada</div>
+              <span class="card-qr-label">İletişim bilgilerini kaydet</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="qr-panel">
+          <div class="qr-preview" id="qr-preview" role="img" aria-label="vCard iletişim QR kodu önizlemesi"><div class="qr-empty" id="qr-empty">Henüz QR oluşturulmadı</div></div>
+          <div class="qr-copy"><h3>İletişim QR kodu</h3><p id="qr-summary">Kartviziti oluşturduğunuzda vCard 3.0 QR kodu burada görünür.</p></div>
+        </div>
+
+        <p class="status" id="status-message" role="status" aria-live="polite"></p>
+      </section>
+    </div>
+
+    <details class="privacy-details">
+      <summary>Gizlilik ve Kullanım Bilgisi</summary>
+      <div class="privacy-content">
+        <p>Girdiğiniz ad, telefon, e-posta, sosyal medya ve diğer iletişim bilgileri yalnızca tarayıcınızda işlenir. Katovia bu bilgileri saklamaz veya sunucuya göndermez.</p>
+        <p>Oluşturulan kartvizit PNG’si, QR kodu ve vCard dosyası girdiğiniz iletişim bilgilerini içerir. Paylaşmadan önce bilgilerin doğruluğunu kontrol edin.</p>
+        <p>Oluşturduğunuz dosyaları kimlerle ve nerede paylaştığınız sizin kontrolünüzdedir.</p>
+      </div>
+    </details>
+  </main>
+
+  <script src="vendor/kjua-0.10.0.min.js"></script>
+  <script src="js/dijital-kartvizit-olusturucu.js"></script>
+</body>
+</html>
