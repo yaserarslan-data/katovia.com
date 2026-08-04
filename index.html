@@ -81,11 +81,11 @@
       outline-offset:3px;
     }
     .hero{
-      min-height:360px;
+      min-height:344px;
       display:grid;
       grid-template-columns:1fr 1.1fr;
-      gap:28px;
-      padding:46px 48px 34px;
+      gap:34px;
+      padding:40px 48px 30px;
       position:relative;
       overflow:hidden;
       border-bottom:1px solid rgba(132,166,255,.12);
@@ -101,13 +101,13 @@
     .heroCopy{align-self:center;animation:homeReveal .62s cubic-bezier(.2,.75,.25,1) both}
     .heroVisual{animation:homeReveal .72s .12s cubic-bezier(.2,.75,.25,1) both}
     .hero h1{
-      font-size:46px;
-      line-height:1.06;
+      font-size:43px;
+      line-height:1.04;
       margin:0 0 14px;
-      letter-spacing:-.4px;
+      letter-spacing:-.65px;
     }
     .gradientText{background:linear-gradient(90deg,var(--blue),var(--violet));-webkit-background-clip:text;color:transparent}
-    .hero p{max-width:510px;color:#b7c3dc;font-size:16px;line-height:1.55;margin:0 0 22px}
+    .hero p{max-width:480px;color:#b7c3dc;font-size:15.5px;line-height:1.52;margin:0 0 21px}
     .buttons{display:flex;gap:16px;flex-wrap:wrap}
     .btn{
       height:46px;
@@ -124,7 +124,7 @@
     }
     .btn.primary{border:0;background:linear-gradient(135deg,#28a9ff,#9b35ff);box-shadow:0 12px 36px rgba(91,88,255,.35)}
     .btn:not(.primary){background:rgba(255,255,255,.07);color:#eaf1ff}
-    .orbWrap{position:relative;min-height:280px;display:grid;place-items:center}
+    .orbWrap{position:relative;min-height:274px;display:grid;place-items:center}
     .orbWrap::before{
       content:"";
       position:absolute;
@@ -167,32 +167,46 @@
       z-index:2;
       animation:heroKBreathe 6.5s ease-in-out infinite;
     }
-    .floatIcon{
+    .heroCodeScene{
+      position:relative;
+      width:min(100%,560px);
+      height:274px;
+      display:grid;
+      place-items:center;
+    }
+    .miniCodePanel{
       position:absolute;
       z-index:3;
-      width:50px;height:50px;border-radius:13px;
-      display:grid;place-items:center;
-      border:1px solid rgba(117,162,255,.24);
-      background:rgba(10,24,52,.78);
-      box-shadow:0 0 24px rgba(62,129,255,.22);
-      color:#b8cbff;
-      font-size:22px;
-      animation:heroIconFloat 8s ease-in-out infinite;
+      width:132px;
+      overflow:hidden;
+      border:1px solid rgba(var(--panel-accent),.32);
+      border-radius:10px;
+      background:linear-gradient(180deg,rgba(11,25,51,.96),rgba(5,13,29,.94));
+      box-shadow:0 14px 32px rgba(0,0,0,.28),0 0 20px rgba(var(--panel-accent),.09);
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      transition:border-color .25s ease,box-shadow .25s ease,filter .25s ease;
     }
-    .i1{left:17%;top:22%;animation-delay:-1s}.i2{left:25%;bottom:20%;animation-delay:-5s}.i3{right:19%;top:18%;animation-delay:-3s}.i4{right:14%;bottom:28%;animation-delay:-6.5s}
-    .heroLink{
-      position:absolute;
-      z-index:1;
-      height:1px;
-      width:92px;
-      opacity:.32;
-      background:linear-gradient(90deg,transparent,rgba(111,166,255,.72),transparent);
-      transform-origin:left center;
+    .miniCodePanel:hover{border-color:rgba(var(--panel-accent),.58);box-shadow:0 18px 36px rgba(0,0,0,.34),0 0 24px rgba(var(--panel-accent),.15);filter:brightness(1.06)}
+    .miniCodeTop{
+      height:27px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:8px;
+      padding:0 8px;
+      border-bottom:1px solid rgba(132,166,255,.12);
+      background:rgba(17,35,68,.88);
     }
-    .heroLink.l1{left:25%;top:37%;transform:rotate(18deg)}
-    .heroLink.l2{right:23%;top:39%;transform:rotate(-20deg)}
-    .heroLink.l3{left:30%;bottom:31%;transform:rotate(-14deg)}
-    .heroLink.l4{right:18%;bottom:35%;transform:rotate(15deg)}
+    .miniCodeDots{display:flex;gap:4px}
+    .miniCodeDots i{width:5px;height:5px;border-radius:50%;background:#ff6670}
+    .miniCodeDots i:nth-child(2){background:#f7bd4e}.miniCodeDots i:nth-child(3){background:#45d48b}
+    .miniCodeLabel{color:rgb(var(--panel-accent));font-size:8px;font-weight:850;letter-spacing:.7px;text-transform:uppercase}
+    .miniCodeBody{display:grid;gap:6px;padding:9px 10px 10px}
+    .miniCodeLine{height:4px;border-radius:999px;background:linear-gradient(90deg,rgba(var(--panel-accent),.78),rgba(var(--panel-accent),.12));opacity:.78}
+    .miniCodeLine:nth-child(2){width:72%}.miniCodeLine:nth-child(3){width:88%}.miniCodeLine:nth-child(4){width:54%}
+    .panelHtml{--panel-accent:235,129,166;left:2%;top:18px;animation:orbitHtml 14s ease-in-out infinite}
+    .panelJs{--panel-accent:93,177,255;right:0;top:56px;animation:orbitJs 17s ease-in-out infinite}
+    .panelDart{--panel-accent:86,215,198;left:12%;bottom:10px;animation:orbitDart 19s ease-in-out infinite}
     .homeContent .quick{opacity:0;animation:homeReveal .52s cubic-bezier(.2,.75,.25,1) forwards;animation-delay:calc(220ms + var(--home-index) * 70ms)}
     main{padding:24px 48px 42px}
     .quickGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-8px}
@@ -238,14 +252,14 @@
     .sectionHead h2{margin:0;font-size:24px}
     .sectionHead p{margin:5px 0 0;color:var(--muted)}
     .allLink{min-height:44px;display:flex;align-items:center;color:#c7d4f2;font-weight:750}
-    .projectGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+    .projectGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
     .project{
       border:1px solid var(--line);
       background:rgba(9,19,39,.82);
       border-radius:10px;
       overflow:hidden;
       cursor:pointer;
-      min-height:210px;
+      min-height:196px;
       display:flex;
       flex-direction:column;
       opacity:0;
@@ -255,7 +269,7 @@
     }
     .project:hover,.project:focus-visible{transform:translateY(-4px);border-color:rgba(89,159,255,.55);box-shadow:0 18px 36px rgba(0,0,0,.22)}
     .cover{
-      height:118px;
+      height:108px;
       display:grid;
       place-items:center;
       font-size:42px;
@@ -268,6 +282,35 @@
       object-fit:cover;
       display:block;
     }
+    .featuredVisual{position:relative;width:72px;height:72px;display:grid;place-items:center;color:#eaf4ff}
+    .featuredQr{
+      grid-template-columns:repeat(5,8px);
+      grid-auto-rows:8px;
+      gap:3px;
+      padding:8px;
+      border:1px solid rgba(129,205,255,.45);
+      border-radius:12px;
+      background:rgba(2,10,23,.72);
+      box-shadow:0 0 24px rgba(72,173,255,.2);
+    }
+    .featuredQr i{width:8px;height:8px;border-radius:2px;background:rgba(225,242,255,.16)}
+    .featuredQr i:nth-child(1),.featuredQr i:nth-child(2),.featuredQr i:nth-child(5),.featuredQr i:nth-child(7),.featuredQr i:nth-child(9),.featuredQr i:nth-child(11),.featuredQr i:nth-child(12),.featuredQr i:nth-child(14),.featuredQr i:nth-child(16),.featuredQr i:nth-child(18),.featuredQr i:nth-child(20),.featuredQr i:nth-child(22),.featuredQr i:nth-child(23),.featuredQr i:nth-child(25){background:#dff4ff;box-shadow:0 0 8px rgba(109,199,255,.22)}
+    .featuredCard{
+      width:82px;
+      height:52px;
+      display:grid;
+      grid-template-columns:21px 1fr 18px;
+      gap:7px;
+      align-items:center;
+      padding:8px;
+      border:1px solid rgba(132,169,255,.44);
+      border-radius:9px;
+      background:linear-gradient(135deg,rgba(15,42,86,.95),rgba(60,34,115,.9));
+      box-shadow:0 0 25px rgba(109,102,255,.2);
+    }
+    .featuredCardAvatar{width:21px;height:21px;border-radius:7px;background:linear-gradient(135deg,#48c5ff,#8d55ff)}
+    .featuredCardLines{display:grid;gap:4px}.featuredCardLines i{height:3px;border-radius:99px;background:rgba(233,242,255,.8)}.featuredCardLines i:last-child{width:65%;opacity:.45}
+    .featuredCardCode{width:18px;height:18px;border:3px dotted rgba(240,247,255,.82);border-radius:3px}
     .project:nth-child(2) .cover{background:linear-gradient(135deg,#2f6b42,#0c2d61)}
     .project:nth-child(3) .cover{background:linear-gradient(135deg,#1d284c,#3c4169)}
     .project:nth-child(4) .cover{background:linear-gradient(135deg,#173c4a,#87a96b)}
@@ -348,7 +391,9 @@
     @keyframes homeReveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
     @keyframes heroGridDrift{to{background-position:26px 26px}}
     @keyframes heroKBreathe{0%,100%{transform:scale(1);filter:saturate(.96)}50%{transform:scale(1.025);filter:saturate(1.08)}}
-    @keyframes heroIconFloat{0%,100%{transform:translate3d(0,3px,0)}50%{transform:translate3d(3px,-6px,0)}}
+    @keyframes orbitHtml{0%,100%{transform:translate3d(0,3px,0) rotate(-2deg)}50%{transform:translate3d(18px,-7px,0) rotate(1deg)}}
+    @keyframes orbitJs{0%,100%{transform:translate3d(-3px,-5px,0) rotate(2deg)}50%{transform:translate3d(-20px,9px,0) rotate(-1deg)}}
+    @keyframes orbitDart{0%,100%{transform:translate3d(4px,0,0) rotate(1deg)}50%{transform:translate3d(25px,-12px,0) rotate(-2deg)}}
     @keyframes codeFlowUp{from{transform:translateY(8px)}to{transform:translateY(-18px)}}
     @keyframes codeFlowDown{from{transform:translateY(-17px)}to{transform:translateY(8px)}}
     @keyframes codeFlowPause{0%,28%{transform:translateY(5px)}58%,82%{transform:translateY(-14px)}100%{transform:translateY(-3px)}}
@@ -530,29 +575,53 @@
     .soonItem b{display:block;margin-bottom:6px}
     .soonItem span{color:var(--muted);font-size:13px}
     .labRoute{
+      position:relative;
+      isolation:isolate;
       width:100%;
       max-width:1240px;
       margin-inline:auto;
-      padding:24px;
-      overflow:visible;
+      padding:20px;
+      overflow:hidden;
       border-color:rgba(70,184,211,.24);
-      background:linear-gradient(180deg,rgba(7,18,39,.94),rgba(4,12,27,.95));
+      background:linear-gradient(180deg,rgba(7,18,39,.96),rgba(4,12,27,.97));
+    }
+    .labRoute::before,.labRoute::after{content:"";position:absolute;pointer-events:none;z-index:-1}
+    .labRoute::before{
+      inset:0;
+      opacity:.2;
+      background-image:linear-gradient(rgba(76,184,211,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(76,184,211,.12) 1px,transparent 1px);
+      background-size:34px 34px;
+      mask-image:linear-gradient(180deg,black,transparent 86%);
+      -webkit-mask-image:linear-gradient(180deg,black,transparent 86%);
+    }
+    .labRoute::after{
+      width:76%;
+      height:58%;
+      right:-16%;
+      top:-12%;
+      border-radius:50%;
+      opacity:.36;
+      filter:blur(38px);
+      background:radial-gradient(circle at 35% 55%,rgba(44,205,199,.28),transparent 34%),radial-gradient(circle at 67% 42%,rgba(134,83,255,.3),transparent 38%);
+      animation:labMistDrift 20s ease-in-out infinite alternate;
     }
     .labRoute > #routeTitle,.labRoute > #routeText{display:none}
     .soonList.labShowcaseGrid{
+      position:relative;
+      z-index:1;
       grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:18px;
+      gap:13px;
     }
     .labIntro{
       position:relative;
       isolation:isolate;
       grid-column:1/-1;
-      min-height:142px;
+      min-height:120px;
       display:grid;
       grid-template-columns:minmax(0,1fr) auto;
       align-items:center;
       gap:24px;
-      padding:14px 24px;
+      padding:12px 20px;
       overflow:hidden;
       border:1px solid rgba(89,187,221,.28);
       border-radius:16px;
@@ -691,7 +760,7 @@
       display:flex;
       flex-direction:column;
       align-items:stretch;
-      padding:22px;
+      padding:16px;
       overflow:hidden;
       border:1px solid rgba(var(--lab-accent),.3);
       border-radius:15px;
@@ -710,8 +779,8 @@
     }
     .labToolGlow{
       position:absolute;
-      width:180px;
-      height:180px;
+      width:150px;
+      height:150px;
       right:-72px;
       top:-82px;
       border-radius:50%;
@@ -725,10 +794,10 @@
       display:flex;
       align-items:flex-start;
       justify-content:space-between;
-      gap:14px;
+      gap:10px;
     }
     .labToolCategory{
-      min-height:27px;
+      min-height:25px;
       display:inline-flex;
       align-items:center;
       gap:7px;
@@ -750,8 +819,8 @@
       box-shadow:0 0 8px rgba(var(--lab-accent),.38);
     }
     .labToolIcon{
-      width:54px;
-      height:54px;
+      width:46px;
+      height:46px;
       flex:0 0 auto;
       display:grid;
       place-items:center;
@@ -761,7 +830,7 @@
       color:rgb(var(--lab-accent));
       box-shadow:inset 0 0 18px rgba(var(--lab-accent),.06);
     }
-    .labToolIcon svg{width:30px;height:30px;overflow:visible}
+    .labToolIcon svg{width:26px;height:26px;overflow:visible}
     .labToolIcon svg *{
       transform-box:fill-box;
       transform-origin:center;
@@ -769,22 +838,23 @@
     }
     .labToolContent{position:relative;display:flex;flex:1;flex-direction:column}
     .labToolLink h2{
-      margin:16px 0 7px;
-      font-size:20px;
+      margin:11px 0 5px;
+      font-size:18px;
       line-height:1.22;
       overflow-wrap:anywhere;
     }
     .labToolLink p{
-      margin:0 0 16px;
+      margin:0 0 10px;
       color:var(--muted);
-      font-size:14px;
-      line-height:1.5;
+      font-size:13px;
+      line-height:1.42;
       overflow-wrap:anywhere;
     }
     .labToolFeatures{
       display:grid;
-      gap:8px;
-      margin:0 0 18px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:6px 12px;
+      margin:0 0 12px;
       padding:0;
       list-style:none;
     }
@@ -859,6 +929,63 @@
     @keyframes labFlaskBreathe{0%,100%{transform:scale(1);opacity:.88}50%{transform:scale(1.025);opacity:1}}
     @keyframes labParticleFloat{0%,100%{transform:translate3d(0,4px,0);opacity:.12}50%{transform:translate3d(4px,-8px,0);opacity:.46}}
     @keyframes labCardReveal{to{opacity:1;transform:none}}
+    @keyframes labMistDrift{from{transform:translate3d(-4%,0,0) scale(.98)}to{transform:translate3d(5%,7%,0) scale(1.06)}}
+    .gamesRoute{
+      position:relative;
+      isolation:isolate;
+      width:100%;
+      max-width:1040px;
+      margin:8px auto 0;
+      padding:22px 10px 28px;
+      overflow:hidden;
+      border:0;
+      background:transparent;
+    }
+    .gamesRoute::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      opacity:.24;
+      background:radial-gradient(circle at 82% 12%,rgba(155,92,255,.22),transparent 28%),radial-gradient(circle at 12% 54%,rgba(56,166,255,.14),transparent 32%),linear-gradient(rgba(101,135,210,.08) 1px,transparent 1px);
+      background-size:auto,auto,100% 32px;
+      animation:gameEnergyShift 18s ease-in-out infinite alternate;
+    }
+    .gamesRoute > #routeTitle{margin:0 0 6px;font-size:clamp(28px,3vw,38px)}
+    .gamesRoute > #routeText{max-width:660px;margin:0 0 20px;color:#aebbd5}
+    .soonList.gameList{display:grid;grid-template-columns:1fr;gap:7px}
+    .gameRow{
+      --game-accent:56,166,255;
+      min-width:0;
+      min-height:76px;
+      display:grid;
+      grid-template-columns:52px minmax(0,1fr) auto;
+      align-items:center;
+      gap:15px;
+      padding:10px 15px 10px 10px;
+      border:1px solid rgba(var(--game-accent),.2);
+      border-radius:13px;
+      background:linear-gradient(90deg,rgba(var(--game-accent),.085),rgba(7,16,33,.7) 38%,rgba(7,16,33,.48));
+      transition:transform .2s ease,border-color .2s ease,background-color .2s ease;
+    }
+    .gameIcon{
+      width:52px;
+      height:52px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(var(--game-accent),.28);
+      border-radius:13px;
+      background:rgba(var(--game-accent),.1);
+      font-size:25px;
+      box-shadow:inset 0 0 18px rgba(var(--game-accent),.05);
+    }
+    .gameCopy{min-width:0}.gameCopy h3{margin:0 0 4px;font-size:16px}.gameCopy p{margin:0;color:var(--muted);font-size:13px;line-height:1.35;overflow-wrap:anywhere}
+    .gameCta{min-height:44px;display:inline-flex;align-items:center;gap:8px;color:rgb(var(--game-accent));font-size:12px;font-weight:850;white-space:nowrap}
+    .gameCtaArrow{font-size:18px;transition:transform .2s ease}
+    .gameRow:focus-visible{outline:3px solid rgba(var(--game-accent),.72);outline-offset:3px;border-color:rgba(var(--game-accent),.62);transform:translateX(3px)}
+    @media(hover:hover){.gameRow:hover{transform:translateX(4px);border-color:rgba(var(--game-accent),.54);background:linear-gradient(90deg,rgba(var(--game-accent),.13),rgba(8,18,38,.76) 42%,rgba(8,18,38,.52))}.gameRow:hover .gameCtaArrow{transform:translateX(3px)}}
+    @keyframes gameEnergyShift{from{background-position:0 0,0 0,0 0}to{background-position:18px 10px,-14px -8px,0 32px}}
     footer{
       border-top:1px solid var(--line);
       padding:22px 56px;
@@ -887,14 +1014,15 @@
       .hero h1{font-size:clamp(38px,4.5vw,44px)}
       .hero > div{min-width:0}
       .orbWrap{min-height:250px}
+      .heroCodeScene{height:250px}
       .galaxy{width:360px;height:180px}
       .kCube{width:120px;height:120px;font-size:68px}
-      .floatIcon{width:44px;height:44px;font-size:20px}
+      .miniCodePanel{width:116px}
       main{padding:24px 32px 38px}
       .quickGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .projectGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
       .project{min-width:0}
-      .cover{height:auto;aspect-ratio:1}
+      .cover{height:104px;aspect-ratio:auto}
       .labPanel{grid-template-columns:1fr}
       .codeCard{height:236px}
       .codeViewport{height:196px}
@@ -994,6 +1122,7 @@
         text-align:center;
       }
       .orbWrap{min-height:170px}
+      .heroCodeScene{height:180px}
       .orbWrap::before{height:155px;background-size:22px 22px}
       .orbWrap::after{width:220px;height:116px}
       .galaxy{width:min(320px,100%);height:150px}
@@ -1004,8 +1133,9 @@
         font-size:56px;
         box-shadow:0 0 44px rgba(48,145,255,.62),inset 0 0 24px rgba(255,255,255,.16);
       }
-      .floatIcon{width:40px;height:40px;border-radius:11px;font-size:18px}
-      .i1{left:12%;top:18%}.i2{left:20%;bottom:12%}.i3{right:14%;top:14%}.i4{right:10%;bottom:20%}
+      .miniCodePanel{width:104px;animation:none!important}
+      .miniCodeTop{height:23px;padding-inline:7px}.miniCodeBody{gap:5px;padding:7px 8px 8px}.miniCodeLine{height:3px}
+      .panelHtml{left:0;top:4px}.panelJs{right:0;top:auto;bottom:4px}.panelDart{display:none}
       main{padding:20px 20px 32px;min-width:0}
       .quickGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:0}
       .quick{min-width:0;min-height:92px;padding:14px;gap:12px}
@@ -1020,7 +1150,7 @@
       .allLink{min-height:44px;display:flex;align-items:center;flex:0 0 auto}
       .projectGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
       .project{min-width:0;min-height:0}
-      .cover{height:auto;aspect-ratio:1}
+      .cover{height:94px;aspect-ratio:auto}
       .project .body{padding:12px}
       .project h3{font-size:15px;overflow-wrap:anywhere}
       .project p{font-size:12.5px;overflow-wrap:anywhere}
@@ -1057,10 +1187,10 @@
       }
       .labFlaskWrap svg{width:31px;height:31px}
       .labParticle:nth-child(n+4){display:none}
-      .labToolLink{padding:18px}
+      .labToolLink{padding:15px}
       .labToolIcon{width:48px;height:48px;border-radius:13px}
       .labToolIcon svg{width:27px;height:27px}
-      .labToolLink h2{font-size:19px}
+      .labToolLink h2{font-size:18px}
       .labToolCta{width:100%}
       .labToolLink:active{transform:scale(.995)}
       .soon.appsRoute{padding:18px 14px}
@@ -1076,6 +1206,10 @@
       .appShowcaseContent h3{font-size:19px}
       .appShowcaseContent p{font-size:13px}
       .appShowcaseCta{width:100%}
+      .gamesRoute{margin-top:0;padding:18px 0 22px}
+      .gameRow{min-height:72px;grid-template-columns:48px minmax(0,1fr) auto;gap:12px;padding:10px 11px 10px 8px}
+      .gameIcon{width:48px;height:48px;font-size:23px}
+      .gameCta span:first-child{display:none}
       footer{padding:20px;display:block}
       footer .brand{margin-bottom:12px}
       .footerLinks{min-height:44px}
@@ -1086,6 +1220,11 @@
       .quick{min-height:88px}
       .sectionHead{display:block}
       .allLink{margin-top:6px;width:max-content;max-width:100%}
+      .labToolFeatures{grid-template-columns:1fr}
+      .gameRow{grid-template-columns:44px minmax(0,1fr) auto;gap:8px}
+      .gameIcon{width:44px;height:44px;font-size:21px}
+      .gameCta{grid-column:auto;min-height:44px;margin:0;justify-self:end}
+      .gameCta span:first-child{display:none}
     }
     @media(prefers-reduced-motion:reduce){
       .menuIcon span,
@@ -1096,7 +1235,7 @@
       .heroCopy,
       .heroVisual,
       .kCube,
-      .floatIcon,
+      .miniCodePanel,
       .orbWrap::before,
       .homeContent .quick,
       .homeContent .project,
@@ -1112,6 +1251,7 @@
       .appShowcaseCard:hover .appShowcaseMedia img,
       .appShowcaseCta:hover .appShowcaseCtaArrow{transform:none!important}
       .labIntro::before,
+      .labRoute::after,
       .labTitleAccent,
       .labFeatureTag,
       .labFlaskWrap,
@@ -1139,6 +1279,9 @@
       .labToolLink:focus-visible .labToolIcon svg *{
         transform:none!important;
       }
+      .gamesRoute::before{animation:none!important}
+      .gameRow,.gameCtaArrow{transition:none!important}
+      .gameRow:hover,.gameRow:focus-visible,.gameRow:hover .gameCtaArrow{transform:none!important}
     }
   </style>
 </head>
@@ -1168,15 +1311,22 @@
       </div>
     </div>
 
-    <div class="orbWrap heroVisual" role="img" aria-label="Uygulama, oyun, kod ve laboratuvar alanlarını birleştiren Katovia ekosistemi">
-      <div aria-hidden="true">
+    <div class="orbWrap heroVisual" role="img" aria-label="Katovia K işareti çevresinde HTML, JavaScript ve Flutter kod panelleri">
+      <div class="heroCodeScene" aria-hidden="true">
         <div class="galaxy"></div>
-        <div class="heroLink l1"></div><div class="heroLink l2"></div><div class="heroLink l3"></div><div class="heroLink l4"></div>
         <div class="kCube">K</div>
-        <div class="floatIcon i1">🎮</div>
-        <div class="floatIcon i2">&lt;/&gt;</div>
-        <div class="floatIcon i3">⌁</div>
-        <div class="floatIcon i4">▦</div>
+        <div class="miniCodePanel panelHtml">
+          <div class="miniCodeTop"><span class="miniCodeDots"><i></i><i></i><i></i></span><span class="miniCodeLabel">HTML</span></div>
+          <div class="miniCodeBody"><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span></div>
+        </div>
+        <div class="miniCodePanel panelJs">
+          <div class="miniCodeTop"><span class="miniCodeDots"><i></i><i></i><i></i></span><span class="miniCodeLabel">JavaScript</span></div>
+          <div class="miniCodeBody"><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span></div>
+        </div>
+        <div class="miniCodePanel panelDart">
+          <div class="miniCodeTop"><span class="miniCodeDots"><i></i><i></i><i></i></span><span class="miniCodeLabel">Flutter · Dart</span></div>
+          <div class="miniCodeBody"><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -1539,7 +1689,7 @@
       },
       "oyunlar": {
         title:"Oyunlar",
-        text:"Kısa sürede açılan, telefonda hemen oynanan hafif HTML5 oyunlar burada olacak.",
+        text:"Kısa sürede açılan, telefonda hemen oynanan hafif HTML5 oyunları keşfet.",
         items:["Mini Kelime Oyunu","Renk Eşleştir","Refleks Testi","Galaksi Savunma"]
       },
       "kodlar": {
@@ -1567,6 +1717,40 @@
       mobileNav.innerHTML = links;
     }
 
+    const featuredProjectTitles = [
+      "Balonlubum",
+      "İletişim Analizi",
+      "QR Kod Oluşturucu",
+      "Dijital Kartvizit Oluşturucu",
+      "Cuma Mesajı Oluşturucu"
+    ];
+
+    const labToolTitles = [
+      "QR Kod Oluşturucu",
+      "Dijital Kartvizit Oluşturucu",
+      "Cuma Mesajı Oluşturucu",
+      "Doğum Günü Mesajı Oluşturucu",
+      "Güzel Sözler Koleksiyonu",
+      "Kandil Mesajı Oluşturucu",
+      "Bayram Mesajı Oluşturucu",
+      "Karar Pusulası"
+    ];
+
+    const gameAccents = ["66,174,255","155,92,255","62,207,187","255,145,69","80,205,139"];
+
+    function renderFeaturedCover(project){
+      if(project.image){
+        return `<img src="${project.image}" alt="${project.title}" onerror="this.remove();this.parentElement.textContent='${project.icon}'">`;
+      }
+      if(project.iconKey === "qrCode"){
+        return `<span class="featuredVisual featuredQr" aria-hidden="true">${Array.from({length:25},() => "<i></i>").join("")}</span>`;
+      }
+      if(project.iconKey === "businessCard"){
+        return `<span class="featuredVisual featuredCard" aria-hidden="true"><i class="featuredCardAvatar"></i><span class="featuredCardLines"><i></i><i></i></span><i class="featuredCardCode"></i></span>`;
+      }
+      return `<span class="featuredVisual" aria-hidden="true">${project.icon}</span>`;
+    }
+
     function renderHome(){
       document.getElementById("quickGrid").innerHTML = categories.map((c,index) => `
         <a class="quick" href="#${c.route}" data-route="${c.route}" style="--home-index:${index};--quick-accent:${c.accent}" aria-label="${c.title}: ${c.text}">
@@ -1575,9 +1759,10 @@
         </a>
       `).join("");
 
-      document.getElementById("projectGrid").innerHTML = projects.slice(0,6).map((p,index) => `
+      const featuredProjects = featuredProjectTitles.map(title => projects.find(project => project.title === title)).filter(Boolean);
+      document.getElementById("projectGrid").innerHTML = featuredProjects.map((p,index) => `
         <a class="project" href="${p.url || `#${p.route}`}" ${p.url ? `data-url="${p.url}" target="_blank" rel="noopener noreferrer"` : `data-route="${p.route}"`} style="--home-index:${index}" aria-label="${p.title}: ${p.homeText || p.text}">
-          <div class="cover">${p.image ? `<img src="${p.image}" alt="${p.title}" onerror="this.remove();this.parentElement.textContent='${p.icon}'">` : p.icon}</div>
+          <div class="cover">${renderFeaturedCover(p)}</div>
           <div class="body"><h3>${p.title}</h3><p>${p.homeText || p.text}</p></div>
         </a>
       `).join("");
@@ -1639,8 +1824,10 @@
       routePanel.classList.toggle("active", !isHome);
       routePanel.classList.toggle("appsRoute", route === "uygulamalar");
       routePanel.classList.toggle("labRoute", route === "laboratuvar");
+      routePanel.classList.toggle("gamesRoute", route === "oyunlar");
       routeItems.classList.toggle("appShowcaseGrid", route === "uygulamalar");
       routeItems.classList.toggle("labShowcaseGrid", route === "laboratuvar");
+      routeItems.classList.toggle("gameList", route === "oyunlar");
 
       if(isHome){
         routeItems.replaceChildren();
@@ -1673,7 +1860,7 @@ if (route === "uygulamalar") {
     </article>
   `).join("");
 } else if (route === "laboratuvar") {
-  const activeTools = projects.filter(project => project.route === "laboratuvar" && project.url);
+  const activeTools = labToolTitles.map(title => projects.find(project => project.title === title && project.url)).filter(Boolean);
   routeItems.innerHTML = `
     <section class="labIntro" aria-labelledby="labIntroTitle">
       <div class="labIntroCopy">
@@ -1728,11 +1915,12 @@ if (route === "uygulamalar") {
     `).join("")}
   `;
 } else if (route === "oyunlar") {
-  routeItems.innerHTML = games.map(game => `
-    <div class="soonItem" data-url="${game.url}">
-      <b>${game.icon} ${game.title}</b>
-      <span>${game.text}<br>Oyunu açmak için tıkla.</span>
-    </div>
+  routeItems.innerHTML = games.map((game,index) => `
+    <a class="gameRow" href="${game.url}" target="_blank" rel="noopener noreferrer" style="--game-accent:${gameAccents[index % gameAccents.length]}" aria-label="${game.title}: Oyunu aç">
+      <span class="gameIcon" aria-hidden="true">${game.icon}</span>
+      <span class="gameCopy"><h3>${game.title}</h3><p>${game.text}</p></span>
+      <span class="gameCta"><span>Oyunu Aç</span><span class="gameCtaArrow" aria-hidden="true">→</span></span>
+    </a>
   `).join("");
 } else {
   routeItems.innerHTML = content.items.map(item => `
