@@ -2,9 +2,11 @@
 
 ## Final Status
 
-READY FOR FINAL PUBLICATION — A–E are production live-verified; final home/journey/SEO artifact has passed 39 Node / 46 Chrome tests and development smoke. Final live publication is pending.
+COMPLETE — requested browser-based V1 and all five product journeys are implemented, QA-passed and production live-verified.
 
 Completion describes the explicitly bounded casual V1 below, not a server-persisted/private/authoritative UGC platform. Search Console account verification and physical-device QA remain external follow-ups.
+
+Tested final source: `5771e51` on `codex/katovia-v2-foundation`. Final production: `9ffd39567ac0243be653a1276551adc1f64ac4f8`; ready exact-tree rollback: `ff18ab0c109eabbaf36e8bda0fe7fae9de632a59` on `codex/katovia-master-final-rollback`. Post-deploy Pages SHA, all served bytes and functional live QA passed; rollback was not needed. Extra TR/EN probes confirmed START within the first 844px screen at widths 360/390/430.
 
 ## Releases Completed
 
@@ -15,7 +17,7 @@ Completion describes the explicitly bounded casual V1 below, not a server-persis
 | C | Five Tools + SEO | 35 / 39 | `2811d2e` | `a5c6920` | published |
 | D | Quiz Creator V1 | 37 / 41 | `2eeb3fe` | `2960b13` | published |
 | E | Casual Reaction Duel + share/mobile quality | 38 / 44 | `2ade122` | `0574086` | published |
-| Final | Home composition + journeys + SEO audit | 39 / 46 | `pending` | `pending` | baseline_verified |
+| Final | Home composition + journeys + SEO audit | 39 / 46 | `9ffd395` | `ff18ab0` | published |
 
 All packages passed build, legacy/artifact checks, responsive Chrome QA and cost/license review before publication. Source branch: `codex/katovia-v2-foundation`; artifact-only `main` publication retains other existing production paths. Root cutover was already complete and retained.
 
@@ -124,11 +126,11 @@ None. No future paid solution implemented. A future paid service remains report-
 
 Existing public GitHub Pages `main` / root, CNAME/domain and HTTPS settings reused. Each release verifies exact Pages build SHA, all served Git-blob bytes, root/new feature routes and 18 legacy HTML pages including working QR generation. Historical hashed assets remain available for cached clients. No force push/reset/clean.
 
-Latest verified production: `2ade1222a35c14f8381805a23c8c1df7817b41de`. Final artifact publication/live QA pending.
+Latest verified production: `9ffd39567ac0243be653a1276551adc1f64ac4f8`. Final live QA passed.
 
 ## Rollback State
 
-Remote `codex/katovia-master-a/b/c/d/e/final-rollback` branches are created per package (final after prepare); exact prior production trees are retained. Latest verified rollback: `057408677aed65c53d2f86aaefb6d3d5805e9a3a`. Local `.cache/releases/*/known-good.tar` and plan files retain full hashes and evidence. `scripts/release-pages.py` pushes rollback branch before main; build/live failure rolls forward to its exact prior tree and re-verifies served bytes. No rollback was needed for A–E; no forced deployment failure was injected.
+Remote `codex/katovia-master-a/b/c/d/e/final-rollback` branches are created per package (final after prepare); exact prior production trees are retained. Latest verified rollback: `ff18ab0c109eabbaf36e8bda0fe7fae9de632a59`. Local `.cache/releases/*/known-good.tar` and plan files retain full hashes and evidence. `scripts/release-pages.py` pushes rollback branch before main; build/live failure rolls forward to its exact prior tree and re-verifies served bytes. No rollback was needed for A–E or Final; no forced deployment failure was injected.
 
 ## Legacy Preservation
 
