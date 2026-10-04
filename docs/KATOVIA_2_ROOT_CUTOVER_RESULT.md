@@ -2,7 +2,7 @@
 
 ## Status
 
-Implementation and pre-deploy QA COMPLETE; production publication pending final live verification. Explicit user authorization replaces the old root showcase, while preserving other legacy paths and cost constraints.
+COMPLETE — root cutover published and live QA verified on 4 October 2026. Explicit user authorization replaces the old root showcase, while preserving other legacy paths and cost constraints.
 
 ## Routes and Behavior
 
@@ -38,7 +38,19 @@ Known-good production commit: `95afe999ae5190e31d8226a3f70866feb6cd06ab`, Pages 
 
 Candidate release is composed onto that production tree with only root/section/404/compatibility HTML and new shell assets allowed to change. A forward rollback commit with the exact known-good tree is prepared before push. Release runner verifies remote HEAD and artifact hashes before push, watches Pages build, then checks live artifact/legacy bytes, root browser QA and legacy browser QA. Failure triggers the prepared rollback, waits for Pages, and verifies the prior root/v2/legacy bytes. No force-push or destructive workspace reset.
 
-Live root QA is necessarily post-deploy; the candidate build/local browser suite and existing live baseline pass before publication, then the new live routes are checked immediately with rollback armed. Final evidence will be recorded below after completion.
+Live root QA is necessarily post-deploy; the candidate build/local browser suite and existing live baseline passed before publication, then the new live routes were checked immediately with rollback armed.
+
+## Final Production Evidence
+
+- Source snapshot: `5953566ec7e06ee9369ad1095391bbe22e322b93` on `codex/katovia-v2-foundation`; final evidence is a separate documentation commit on that branch.
+- Production commit: `3889775e5a3badb7acda263d0c231ea3dc4ea4d7` on `main`. Pages reported **built** for that exact commit. Only 17 reviewed artifact paths changed; no legacy path was deleted.
+- Rollback commit: `6aa5f7dec039c717fc615c0d393567279cc41544`, retained locally and remotely as `codex/katovia-root-rollback`. Its tree equals the prior production tree exactly; local rollback artifact browser smoke passed. Rollback was **not required or applied** because deployment and live QA succeeded.
+- Live bytes: all 17 candidate root/section/404/compatibility/asset files matched the tested artifact. All 35 public legacy files other than the replaced root matched the previous production bytes; CNAME/domain verified separately. Previous hashed v2 assets also matched and were retained.
+- Live Chrome: all seven root routes loaded and refreshed directly; TR/EN choice/persistence, mobile navigation/overflow, canonical metadata, a real five-second START/STOP attempt, result persistence across root/TODAY and canonical share URL passed. Old preview query/hash links and real HTTP 404 also passed. Browser testing used an isolated context and did not change the user's browser profile or send a result to anyone.
+- Post-deploy legacy Chrome: all 18 game/tool HTML URLs returned 200 with **zero runtime errors**, matching pre-deploy baseline; QR generation passed.
+- Pages `main` / root source, `katovia.com` domain and HTTPS settings remain unchanged. No new service/dependency, billing/cloud activation or payment requirement. `tanitim/` hashes remain unchanged and the directory is neither staged nor published.
+
+Public routes: [Home](https://katovia.com/), [TODAY](https://katovia.com/today/), [PLAY](https://katovia.com/play/), [CHALLENGE](https://katovia.com/challenge/), [CREATE](https://katovia.com/create/), [TOOLS](https://katovia.com/tools/), [LAB](https://katovia.com/lab/).
 
 ## Known Limits
 
