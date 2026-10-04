@@ -1,5 +1,9 @@
 # Cost & License Guardrail Record
 
+## Master Release A
+
+Memory Grid and Reaction use original DOM/CSS and native performance/crypto/browser APIs. Shared ledger/share/i18n reused. New dependencies: none; existing package/lockfile unchanged. No external media/audio/fonts, paid service, cloud resource, hosting/billing/payment change. Existing public Pages is reused; releases retain exact rollback trees and legacy paths.
+
 ## Root cutover update — 4 October 2026
 
 The user explicitly authorized replacing only the legacy production root showcase with the tested Katovia 2.0 static MPA. Existing GitHub Pages/domain/source settings are reused. No dependency, paid API/SaaS, hosting plan, external media/font, payment method, cloud resource, billing or Blaze activation was introduced. Existing legacy assets and license notices are retained; new shell assets use the separate `katovia-assets/` path to avoid overwriting legacy assets.

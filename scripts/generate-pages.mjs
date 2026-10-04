@@ -3,6 +3,8 @@ import { dirname, posix } from 'node:path';
 import { sections, entries } from '../src/catalog/registry.js';
 import { siteRoot } from './paths.mjs';
 import { gameMarkup } from '../src/games/stop-at-five/markup.js';
+import { markup as memoryMarkup } from '../src/games/memory-grid/mount.js';
+import { markup as reactionMarkup } from '../src/games/reaction/mount.js';
 import { translate } from '../src/i18n/index.js';
 
 const escape = (text) => String(text).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
@@ -42,7 +44,7 @@ function sectionPage(section) {
   const available = entries.filter((entry) => entry.type === section.type);
   return `<main id="main-content" class="container section-page${section.id === 'today' ? ' daily-page' : ''}" tabindex="-1">
     <header class="section-intro"><p class="eyebrow">KATOVIA / ${txt(`nav.${section.id}`)}</p>${txt(`section.${section.id}.label`, 'h1')}${txt(`section.${section.id}.description`, 'p')}</header>
-    ${section.id === 'today' ? daily(section.route) : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
+    ${section.id === 'today' ? daily(section.route) + `<div id="memory-grid">${memoryMarkup()}</div><div id="reaction">${reactionMarkup()}</div>` : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
     ${available.length ? `<section aria-labelledby="collection-title"><div class="section-heading">${txt(section.id === 'tools' ? 'tools.collection' : 'lab.collection', 'h2', 'id="collection-title"')}<span class="eyebrow"><span>${available.length}</span> ${txt('common.projects')}</span></div><div class="section-grid">${available.map((entry) => card(entry, section.route)).join('\n')}</div></section>` : ''}
     ${section.id === 'lab' ? `<p class="legacy-note">${txt('lab.legacyIntro')} <a href="${hrefFrom(section.route, '/lab/')}" data-i18n="lab.legacyLink">${escape(translate('en', 'lab.legacyLink'))}</a>.</p>` : ''}
   </main>`;

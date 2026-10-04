@@ -45,6 +45,12 @@ Kullanıcının sonraki açık root cutover talimatı önceki “root değişmez
 
 ### COST & LICENSE GUARDRAIL — kullanıcı kısıtı
 
+### Onaylanmış MASTER BUILD — sıralı release kapsamı
+
+Kullanıcı Master Build görevi TODAY, procedural PLAY, browser-side TOOLS, SEO, safe Creator ve güvenli ücretsiz altyapı uygunsa Duel implementasyonunu ve mantıksal A/B/C/D/E production release paketlerini yetkilendirir. Her aşama build/test/responsive/regression/cost kontrolünden geçer; her release tam QA, legacy kontrolü ve exact-tree forward rollback ile yayınlanır. Mevcut no-op analytics korunur. Ücretli servis/billing/hosting değişimi ve Google Search Console ownership hesabına işlem yetkisi yoktur. Gerekli backend ücretsiz/güvenilir mümkün değilse editor/local preview tamamlanır ve publish/duel blocker açık raporlanır. User content safe text olarak render edilir, otomatik çevrilmez; doğru skor doğrulaması lokal ve non-authoritative sınırını aşmış gibi sunulmaz. [Master build raporu](docs/KATOVIA_2_MASTER_BUILD_RESULT.md) aşama ve release kanıtını kaydeder.
+
+### COST & LICENSE GUARDRAIL — devamı
+
 Bu milestone’da ücretli API/SaaS/hosting, lisans ücreti gerektiren font/asset/library veya ödeme yöntemi isteyen servis eklenmez. Yeni dependency eklenmeden önce paket ve transitive bağımlılık lisansları kontrol edilir; yalnız ticari kullanıma uygun açık kaynak lisansları, bildirim ve dağıtım koşulları korunarak kullanılır. Harici görsel, ses, ikon veya medya alınmaz; yalnız mevcut repository assetleri veya özgün kodla üretilmiş görseller kullanılır.
 
 Firebase/Google Cloud billing, Blaze veya ödeme hesabı etkinleştirilmez; production üzerinde maliyet yaratabilecek kaynak oluşturulmaz. Gelecekte ücretli servis gerektiren bir çözüm implement edilmez; raporda ayrı, uygulanmamış öneri olarak belirtilir. “Free tier” veya kredi mevcut olması ödeme/billing gerektiren servisi bu kısıtın dışına çıkarmaz. Mevcut foundation lisans incelemesi: [Cost & License Record](docs/COST_LICENSE_RECORD.md).

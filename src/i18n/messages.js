@@ -1,4 +1,4 @@
-// UI text only. IDs, routes, score, dates and enums stay in their owning modules.
+// UI text only.
 export const messages = {
   "en": {
     "error.retry": "This action could not be completed. Please try again.",
@@ -140,7 +140,24 @@ export const messages = {
     "entry.dogum-gunu.title": "Birthday Message",
     "entry.dogum-gunu.description": "Prepare a personal birthday message.",
     "entry.bayram.title": "Eid Message",
-    "entry.bayram.description": "Create a short Eid message."
+    "entry.bayram.description": "Create a short Eid message.",
+    "memory.title": "MEMORY GRID",
+    "memory.instructions": "Remember the glowing cells. Select them after they disappear and submit.",
+    "memory.submit": "SUBMIT",
+    "memory.cell": "Cell {value}",
+    "memory.idle": "One daily pattern. Start when ready.",
+    "memory.showing": "Remember these cells: {cells}",
+    "memory.selecting": "Select the cells you remember.",
+    "memory.result": "{hits} correct · {wrong} wrong · {missed} missed · {accuracy}% accuracy · Score {score}/{total}",
+    "reaction.title": "REACTION",
+    "reaction.instructions": "Wait for the signal, then tap fast. Early taps do not consume your daily.",
+    "reaction.ready": "READY",
+    "reaction.waiting": "WAIT…",
+    "reaction.signal": "TAP!",
+    "reaction.early": "TOO EARLY — RETRY",
+    "reaction.interrupted": "INTERRUPTED — RETRY",
+    "reaction.completed": "RESULT",
+    "memory.saving": "Saving result…"
   },
   "tr": {
     "error.retry": "Bu işlem tamamlanamadı. Yeniden deneyebilirsin.",
@@ -282,6 +299,23 @@ export const messages = {
     "entry.dogum-gunu.title": "Doğum Günü Mesajı",
     "entry.dogum-gunu.description": "Kişisel bir doğum günü mesajı hazırla.",
     "entry.bayram.title": "Bayram Mesajı",
-    "entry.bayram.description": "Bayram için kısa bir mesaj hazırla."
+    "entry.bayram.description": "Bayram için kısa bir mesaj hazırla.",
+    "memory.title": "HAFIZA IZGARASI",
+    "memory.instructions": "Parlayan hücreleri hatırla. Gizlendikten sonra seç ve gönder.",
+    "memory.submit": "GÖNDER",
+    "memory.cell": "Hücre {value}",
+    "memory.idle": "Bir günlük desen. Hazır olduğunda başla.",
+    "memory.showing": "Bu hücreleri hatırla: {cells}",
+    "memory.selecting": "Hatırladığın hücreleri seç.",
+    "memory.result": "{hits} doğru · {wrong} yanlış · {missed} kaçırılan · %{accuracy} doğruluk · Skor {score}/{total}",
+    "reaction.title": "TEPKİ",
+    "reaction.instructions": "Sinyali bekle, sonra hızla dokun. Erken dokunma günlük hakkını tüketmez.",
+    "reaction.ready": "HAZIR",
+    "reaction.waiting": "BEKLE…",
+    "reaction.signal": "DOKUN!",
+    "reaction.early": "ÇOK ERKEN — TEKRAR",
+    "reaction.interrupted": "KESİLDİ — TEKRAR",
+    "reaction.completed": "SONUÇ",
+    "memory.saving": "Sonuç kaydediliyor…"
   }
 };
