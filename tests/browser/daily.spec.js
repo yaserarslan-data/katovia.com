@@ -25,7 +25,7 @@ async function finish(page, actualMs = 5070) {
 }
 
 test('home mouse play, hidden timer, saved result on refresh and dedicated TODAY', async ({ page }) => {
-  await fakeTime(page); await page.goto('/v2/');
+  await fakeTime(page); await page.goto('/');
   await page.locator('[data-game-action]').click();
   await expect(page.locator('[data-game-action]')).toHaveText('STOP');
   await expect(page.locator('[data-target-number]')).toHaveText('STOP AT 5.00');
@@ -37,12 +37,12 @@ test('home mouse play, hidden timer, saved result on refresh and dedicated TODAY
   await page.reload();
   await expect(page.locator('[data-actual]')).toHaveText('5.07');
   await expect(page.locator('[data-game-action]')).toBeHidden();
-  await page.goto('/v2/today/');
+  await page.goto('/today/');
   await expect(page.locator('[data-actual]')).toHaveText('5.07');
   await expect(page.locator('[data-streak]')).toContainText('1 DAY');
 });
 test('keyboard exact score and native share; opt out of raw score', async ({ page }, testInfo) => {
-  await fakeTime(page, { nativeShare: true }); await page.goto('/v2/today/');
+  await fakeTime(page, { nativeShare: true }); await page.goto('/today/');
   await page.locator('[data-game-action]').focus(); await page.keyboard.press('Space');
   await tick(page, 6000); await page.keyboard.press('Enter');
   await expect(page.locator('[data-quality]')).toHaveText('PERFECT 5.00');
@@ -58,7 +58,7 @@ test('keyboard exact score and native share; opt out of raw score', async ({ pag
 test.describe('touch', () => {
   test.use({ hasTouch: true });
   for (const width of [360, 390, 430]) test(`touch, CTA visibility, result and landscape at ${width}px`, async ({ page }, testInfo) => {
-    await page.setViewportSize({ width, height: 844 }); await fakeTime(page); await page.goto('/v2/');
+    await page.setViewportSize({ width, height: 844 }); await fakeTime(page); await page.goto('/');
     const button = page.locator('[data-game-action]'); const box = await button.boundingBox();
     expect(box.y + box.height).toBeLessThan(844); expect(box.height).toBeGreaterThanOrEqual(72);
     await button.tap(); await tick(page, 5980); await button.tap();
@@ -72,7 +72,7 @@ test.describe('touch', () => {
   });
 });
 test('blur/visibility interruptions preserve daily attempt; UTC rollover is safe', async ({ page }) => {
-  await fakeTime(page); await page.goto('/v2/today/');
+  await fakeTime(page); await page.goto('/today/');
   await page.locator('[data-game-action]').click();
   await page.evaluate(() => window.dispatchEvent(new Event('blur')));
   await expect(page.locator('[data-daily-mount]')).toHaveAttribute('data-state', 'interrupted');
@@ -91,7 +91,7 @@ test('blur/visibility interruptions preserve daily attempt; UTC rollover is safe
 });
 test('unavailable storage still plays/shares; selectable text fallback and reduced motion', async ({ page }) => {
   await fakeTime(page, { deniedStorage: true, manualShare: true });
-  await page.emulateMedia({ reducedMotion: 'reduce' }); await page.goto('/v2/today/');
+  await page.emulateMedia({ reducedMotion: 'reduce' }); await page.goto('/today/');
   await finish(page);
   await expect(page.locator('[data-feedback]')).toContainText('Browser storage failed');
   expect(await page.locator('[data-result]').evaluate((el) => getComputedStyle(el).animationName)).toBe('none');
@@ -101,7 +101,7 @@ test('unavailable storage still plays/shares; selectable text fallback and reduc
   await page.reload(); await expect(page.locator('[data-game-action]')).toBeVisible();
 });
 test('native unavailable uses clipboard; cancellation does not claim completion', async ({ page }) => {
-  await fakeTime(page); await page.goto('/v2/today/'); await finish(page);
+  await fakeTime(page); await page.goto('/today/'); await finish(page);
   await page.locator('[data-share]').click();
   await expect(page.locator('[data-share-feedback]')).toHaveText('Result copied.');
   expect(await page.evaluate(() => window.__copied)).toContain('KATOVIA DAILY #001');

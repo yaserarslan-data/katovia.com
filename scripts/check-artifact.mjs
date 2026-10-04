@@ -15,17 +15,18 @@ export async function artifactFiles(root = distRoot, prefix = '') {
   return result;
 }
 export async function checkArtifact() {
-  const counts = await checkLegacy(distRoot);
-  const htmlEntries = ['v2/index.html', ...sections.map((item) => `v2/${item.id}/index.html`), '404.html'];
+  const counts = await checkLegacy(distRoot, { rootCutover: true });
+  const htmlEntries = ['index.html', ...sections.map((item) => `${item.id}/index.html`), 'v2/index.html', ...sections.map((item) => `v2/${item.id}/index.html`), '404.html'];
   const allowed = new Set([...manifest.files.map((file) => file.path), ...htmlEntries]);
   for (const name of await artifactFiles()) {
-    if (!allowed.has(name) && !/^v2\/assets\/[a-zA-Z0-9_-]+\.(js|css)$/.test(name)) throw new Error(`Unexpected file leaked into artifact: ${name}`);
+    if (!allowed.has(name) && !/^katovia-assets\/[a-zA-Z0-9_-]+\.(js|css)$/.test(name)) throw new Error(`Unexpected file leaked into artifact: ${name}`);
   }
   for (const name of htmlEntries) {
     const html = await readFile(resolve(distRoot, name), 'utf8');
     for (const match of html.matchAll(/(?:href|src)="([^"#]+)"/g)) {
       if (/^https?:/.test(match[1]) || match[1] === '/') continue;
-      const path = resolve(distRoot, name, '..', match[1].split('#')[0]);
+      const target = match[1].split('#')[0];
+      const path = target.startsWith('/') ? resolve(distRoot, `.${target}`) : resolve(distRoot, name, '..', target);
       await readFile(match[1].endsWith('/') ? resolve(path, 'index.html') : path);
     }
   }

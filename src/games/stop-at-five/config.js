@@ -1,8 +1,8 @@
 export const gameConfig = Object.freeze({
   id: 'stop-at-five', version: '1', targetMs: 5000,
   previewEpoch: '2026-10-04', schemaVersion: 1,
-  // Public parallel preview route; legacy root stays unchanged.
-  shareUrl: 'https://katovia.com/v2/today/',
+  // Canonical production game route; existing daily storage/version stays unchanged.
+  shareUrl: 'https://katovia.com/today/',
   maxDurationMs: 3600000,
   qualities: Object.freeze([
     { maxMs: 20, label: 'PERFECT', tiles: '🟩🟩🟩🟩🟩' },

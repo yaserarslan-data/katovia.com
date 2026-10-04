@@ -44,35 +44,35 @@ function sectionPage(section) {
     <header class="section-intro"><p class="eyebrow">KATOVIA / ${txt(`nav.${section.id}`)}</p>${txt(`section.${section.id}.label`, 'h1')}${txt(`section.${section.id}.description`, 'p')}</header>
     ${section.id === 'today' ? daily(section.route) : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
     ${available.length ? `<section aria-labelledby="collection-title"><div class="section-heading">${txt(section.id === 'tools' ? 'tools.collection' : 'lab.collection', 'h2', 'id="collection-title"')}<span class="eyebrow"><span>${available.length}</span> ${txt('common.projects')}</span></div><div class="section-grid">${available.map((entry) => card(entry, section.route)).join('\n')}</div></section>` : ''}
-    ${section.id === 'lab' ? `<p class="legacy-note">${txt('lab.legacyIntro')} <a href="${hrefFrom(section.route, '/index.html')}#uygulamalar" data-i18n="lab.legacyLink">${escape(translate('en', 'lab.legacyLink'))}</a>.</p>` : ''}
+    ${section.id === 'lab' ? `<p class="legacy-note">${txt('lab.legacyIntro')} <a href="${hrefFrom(section.route, '/lab/')}" data-i18n="lab.legacyLink">${escape(translate('en', 'lab.legacyLink'))}</a>.</p>` : ''}
   </main>`;
 }
 
 function documentPage(section) {
-  const route = section?.route || '/v2/';
+  const route = section?.route || '/';
   const titleKey = section ? `page.${section.id}.title` : 'home.title';
   const descriptionKey = section ? `section.${section.id}.description` : 'home.meta';
   // Paths below are relative to the source HTML, so Vite can resolve out-of-root modules.
-  const sourceScript = section ? '../../../src/shell/main.js' : '../../src/shell/main.js';
+  const sourceScript = section ? '../../src/shell/main.js' : '../src/shell/main.js';
   return `<!doctype html>
 <!-- Generated from src/catalog/registry.js by scripts/generate-pages.mjs. -->
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title data-i18n="${titleKey}">${escape(translate('en', titleKey))}</title><meta name="description" data-i18n-content="${descriptionKey}" content="${escape(translate('en', descriptionKey))}">
-  <meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#0c0e10">
+  <link rel="canonical" href="https://katovia.com${route}"><meta name="robots" content="${section?.status === 'planned' ? 'noindex, follow' : 'index, follow'}"><meta name="theme-color" content="#0c0e10">
   <script type="module" src="${sourceScript}"></script>
 </head>
 <body data-page="${section?.id || 'home'}">
   ${txt('common.skip', 'a', 'class="skip-link" href="#main-content"')}
   <header class="site-header"><div class="container header-inner">
-    <a class="wordmark" href="${hrefFrom(route, '/v2/')}" data-i18n-label="common.homeLabel" aria-label="Katovia V2 homepage"><svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3v18M8 12l11-9M8 12l11 9" stroke="currentColor" stroke-width="3.5"/></svg>KATOVIA</a>
+    <a class="wordmark" href="${hrefFrom(route, '/')}" data-i18n-label="common.homeLabel" aria-label="Katovia homepage"><svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3v18M8 12l11-9M8 12l11 9" stroke="currentColor" stroke-width="3.5"/></svg>KATOVIA</a>
     <div class="language-control" role="group" data-i18n-label="common.language" aria-label="Language selection"><button type="button" data-locale="tr" data-i18n-label="common.tr" aria-label="Switch language to Turkish" aria-pressed="false" lang="tr">TR</button><button type="button" data-locale="en" data-i18n-label="common.en" aria-label="Switch language to English" aria-pressed="true" lang="en">EN</button></div>
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>${txt('common.menu')} <span aria-hidden="true">☰</span></button>
     <nav id="primary-navigation" class="navigation" data-i18n-label="common.navigation" aria-label="Main navigation" data-navigation>${sections.map((item) => `<a class="nav-link" data-i18n="nav.${item.id}" href="${hrefFrom(route, item.route)}"${section?.id === item.id ? ' aria-current="page"' : ''}>${escape(translate('en', `nav.${item.id}`))}</a>`).join('')}</nav>
   </div></header>
   ${section ? sectionPage(section) : home(route)}
-  <footer class="site-footer"><div class="container footer-inner"><p class="eyebrow">KATOVIA / ${txt('common.motto')}</p><a class="footer-link" href="${hrefFrom(route, '/index.html')}">${txt('common.return')} <span aria-hidden="true">&nbsp;↗</span></a></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><p class="eyebrow">KATOVIA / ${txt('common.motto')}</p><a class="footer-link" href="${hrefFrom(route, '/lab/')}">${txt('common.return')} <span aria-hidden="true">&nbsp;↗</span></a></div></footer>
 </body>
 </html>
 `;
@@ -81,7 +81,15 @@ function documentPage(section) {
 const notFound = `<!doctype html>
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>404 — Katovia</title><style>html{color-scheme:dark;background:#0c0e10;color:#f0f2ec;font:18px/1.6 system-ui}body{max-width:40rem;margin:12vh auto;padding:24px}p{color:#acb4b4}a{display:inline-flex;align-items:center;min-height:44px;color:#cdfc7b}a:focus-visible{outline:3px solid #cdfc7b;outline-offset:5px}h1{font-size:3rem}</style></head><body><main><p>404 / KATOVIA</p><h1>Bu köşe henüz yok.</h1><p>Bağlantıyı kontrol et veya ana sayfaya dön.</p><a href="/">Katovia ana sayfa</a></main></body></html>
 `;
-const pages = [{ path: 'v2/index.html', html: documentPage() }, ...sections.map((section) => ({ path: `v2/${section.id}/index.html`, html: documentPage(section) })), { path: '404.html', html: notFound }];
+// Keep previously shared preview URLs usable without duplicating the production UI.
+// Pages has no configurable HTTP redirects: meta refresh plus a query/hash-preserving JS replace.
+const compatibilityPages = [{ id: '', route: '/' }, ...sections].map(({ id, route }) => ({
+  path: `v2/${id ? id + '/' : ''}index.html`,
+  html: `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Katovia — Moved</title><link rel="canonical" href="https://katovia.com${route}"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0;url=${route}"><script>location.replace(${JSON.stringify(route)} + location.search + location.hash);</script></head><body><a href="${route}">Katovia / Devam et / Continue</a></body></html>
+`
+}));
+const pages = [{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), { path: '404.html', html: notFound }, ...compatibilityPages];
 for (const page of pages) {
   const path = `${siteRoot}/${page.path}`;
   if (process.argv.includes('--check')) {

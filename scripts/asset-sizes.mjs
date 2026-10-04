@@ -4,8 +4,8 @@ import { resolve } from 'node:path';
 import { artifactFiles } from './check-artifact.mjs';
 import { distRoot } from './paths.mjs';
 const sizes = { js: 0, css: 0 };
-console.log('V2 asset budget (bytes: raw / gzip / brotli):');
-for (const file of (await artifactFiles()).filter((name) => name.startsWith('v2/assets/'))) {
+console.log('Production shell asset budget (bytes: raw / gzip / brotli):');
+for (const file of (await artifactFiles()).filter((name) => name.startsWith('katovia-assets/'))) {
   const buffer = await readFile(resolve(distRoot, file));
   const gzip = gzipSync(buffer).length;
   const type = file.split('.').at(-1);

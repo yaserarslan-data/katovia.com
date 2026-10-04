@@ -1,5 +1,9 @@
 # Cost & License Guardrail Record
 
+## Root cutover update — 4 October 2026
+
+The user explicitly authorized replacing only the legacy production root showcase with the tested Katovia 2.0 static MPA. Existing GitHub Pages/domain/source settings are reused. No dependency, paid API/SaaS, hosting plan, external media/font, payment method, cloud resource, billing or Blaze activation was introduced. Existing legacy assets and license notices are retained; new shell assets use the separate `katovia-assets/` path to avoid overwriting legacy assets.
+
 ## i18n update — 4 October 2026
 
 TR/EN translation is local repository data with a custom browser module and native Intl formatting. No localization dependency, package/lockfile change, external translation API, AI service or SaaS was introduced. Publishing uses the existing public GitHub Pages site and source settings; no new hosting subscription, cloud resource, payment method, billing or Blaze activation. Media/font policy remains unchanged. The explicit deploy instruction overrides only the earlier no-deploy restriction, not cost/legacy protections.

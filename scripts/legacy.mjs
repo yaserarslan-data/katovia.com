@@ -13,10 +13,11 @@ export function safePath(root, path) {
 }
 export const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 
-export async function checkLegacy(root = repoRoot) {
+export async function checkLegacy(root = repoRoot, { rootCutover = false } = {}) {
   const counts = {};
   const seen = new Set();
   for (const file of manifest.files) {
+    if (rootCutover && file.path === 'index.html') continue; // Only the authorized showcase replacement.
     if (seen.has(file.path)) throw new Error('Duplicate manifest path');
     seen.add(file.path);
     const path = safePath(root, file.path);

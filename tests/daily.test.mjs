@@ -82,8 +82,8 @@ test('malformed JSON, previous schema and tampered results are rejected', () => 
 });
 test('daily share format and optional raw score, using one preview epoch', () => {
   const share = resultShare(result('2026-10-04'), { locale: 'en' });
-  assert.equal(share.text, 'KATOVIA DAILY #001\nPREVIEW · 2026-10-04\n\n🟩🟩🟩🟩⬜\n⚡ GREAT\n⏱️ 5.07 SEC\n+0.07s');
-  assert.equal(share.url, 'https://katovia.com/v2/today/');
+  assert.equal(share.text, 'KATOVIA DAILY #001\n2026-10-04\n\n🟩🟩🟩🟩⬜\n⚡ GREAT\n⏱️ 5.07 SEC\n+0.07s');
+  assert.equal(share.url, 'https://katovia.com/today/');
   assert.doesNotMatch(resultShare(result('2026-10-04'), { includeScore: false }).text, /5\.07|0\.07/);
   assert.match(resultShare(result('2026-10-05', 5000), { locale: 'en' }).text, /#002[\s\S]*PERFECT 5\.00/);
 });

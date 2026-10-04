@@ -1,0 +1,77 @@
+<!doctype html>
+<!-- Generated from src/catalog/registry.js by scripts/generate-pages.mjs. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="home.title">Katovia — Play something</title><meta name="description" data-i18n-content="home.meta" content="Katovia 2.0: play, create, challenge.">
+  <link rel="canonical" href="https://katovia.com/"><meta name="robots" content="index, follow"><meta name="theme-color" content="#0c0e10">
+  <script type="module" src="../src/shell/main.js"></script>
+</head>
+<body data-page="home">
+  <a data-i18n="common.skip" class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="wordmark" href="./" data-i18n-label="common.homeLabel" aria-label="Katovia homepage"><svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3v18M8 12l11-9M8 12l11 9" stroke="currentColor" stroke-width="3.5"/></svg>KATOVIA</a>
+    <div class="language-control" role="group" data-i18n-label="common.language" aria-label="Language selection"><button type="button" data-locale="tr" data-i18n-label="common.tr" aria-label="Switch language to Turkish" aria-pressed="false" lang="tr">TR</button><button type="button" data-locale="en" data-i18n-label="common.en" aria-label="Switch language to English" aria-pressed="true" lang="en">EN</button></div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle><span data-i18n="common.menu" >MENU</span> <span aria-hidden="true">☰</span></button>
+    <nav id="primary-navigation" class="navigation" data-i18n-label="common.navigation" aria-label="Main navigation" data-navigation><a class="nav-link" data-i18n="nav.today" href="today/">TODAY</a><a class="nav-link" data-i18n="nav.play" href="play/">PLAY</a><a class="nav-link" data-i18n="nav.challenge" href="challenge/">CHALLENGE</a><a class="nav-link" data-i18n="nav.create" href="create/">CREATE</a><a class="nav-link" data-i18n="nav.tools" href="tools/">TOOLS</a><a class="nav-link" data-i18n="nav.lab" href="lab/">LAB</a></nav>
+  </div></header>
+  <main id="main-content" class="container has-daily" tabindex="-1">
+    <section class="hero" aria-labelledby="home-title"><div class="hero-top"><p data-i18n="home.eyebrow" class="eyebrow">Creative technology playground</p><span class="pill"><span class="status-dot" aria-hidden="true"></span><span data-i18n="home.preview" >KATOVIA 2.0</span></span></div>
+      <h1 id="home-title"><span data-i18n="home.play" >PLAY</span><br><span data-i18n="home.something" >SOMETHING.</span></h1>
+      <div class="hero-bottom"><p data-i18n="home.description" >The internet was made for more than scrolling.</p><span data-i18n="common.motto" class="index-label">PLAY. CREATE. CHALLENGE.</span></div>
+    </section>
+    <section class="daily-panel game-panel" data-daily-mount data-state="idle" aria-labelledby="game-title">
+    <div class="game-topline"><span class="eyebrow"><span data-i18n="nav.today">TODAY</span> <span data-game-day><span data-i18n="daily.utc">UTC DAILY</span></span></span><span class="pill"><span data-i18n="daily.single">ONE DAILY RESULT</span></span></div>
+    <div class="game-stage">
+      <div class="game-halo" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="game-content">
+        <h2 id="game-title" class="game-title"><span data-target-number data-i18n="game.title">STOP AT 5.00</span></h2>
+        <p id="game-instructions" class="game-instructions" data-instructions><span data-i18n="game.instructions.idle">Stop at exactly five seconds. The timer is hidden.</span></p>
+        <div class="game-result" data-result hidden>
+          <p class="result-number" data-actual></p><p class="result-difference" data-difference></p>
+          <p class="result-quality" data-quality></p><p class="result-precision" data-precision></p>
+        </div>
+        <button class="game-action" type="button" data-game-action aria-describedby="game-instructions" disabled><span data-i18n="game.start">START</span> <span aria-hidden="true">↗</span></button>
+        <p class="game-feedback" data-feedback role="status" aria-live="polite" aria-atomic="true"><span data-i18n="game.preparing">Preparing the game.</span></p>
+        <noscript><p><span data-i18n="game.noscript">Enable JavaScript to play this game.</span></p></noscript>
+      </div>
+    </div>
+    <div class="game-bottomline"><span class="eyebrow" data-streak>LOCAL STREAK / 0 DAYS</span><span class="eyebrow" data-return><span data-i18n="daily.return">A new attempt every day at 00:00 UTC</span></span></div>
+    <div class="result-actions" data-result-actions hidden>
+      <label class="score-option"><input type="checkbox" data-include-score checked> <span data-i18n="share.includeScore">Include my time in the share</span></label>
+      <div class="share-buttons"><button class="button button-accent" type="button" data-share><span data-i18n="share.result">SHARE RESULT</span> <span aria-hidden="true">↗</span></button><button class="button" type="button" data-copy><span data-i18n="share.copy">COPY</span></button></div>
+      <p class="share-feedback" data-share-feedback role="status" aria-live="polite"></p>
+      <label class="manual-share" data-manual hidden><span data-i18n="share.manualLabel">Share text</span><textarea data-share-text readonly rows="8" data-i18n-label="share.textLabel" aria-label="Copyable result text"></textarea></label>
+    </div>
+  </section>
+    <section aria-labelledby="worlds-title"><div class="section-heading"><h2 data-i18n="home.worlds" id="worlds-title">Start somewhere.</h2><span data-i18n="home.universe" class="eyebrow">The Katovia universe</span></div>
+      <div class="section-grid"><a class="section-card" href="play/">
+        <div class="section-card-top"><span data-i18n="common.play" class="eyebrow">PLAY</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="nav.play" >PLAY</h3><p data-i18n="section.play.description" >Digital toys you can touch and change.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.planned" >PLANNED</span></span></div>
+      </a>
+<a class="section-card" href="challenge/">
+        <div class="section-card-top"><span data-i18n="common.challenge" class="eyebrow">CHALLENGE</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="nav.challenge" >CHALLENGE</h3><p data-i18n="section.challenge.description" >One score. One link. A new challenge.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.planned" >PLANNED</span></span></div>
+      </a>
+<a class="section-card" href="create/">
+        <div class="section-card-top"><span data-i18n="common.create" class="eyebrow">CREATE</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="nav.create" >CREATE</h3><p data-i18n="section.create.description" >Write your own questions. Create your own mini experience.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.planned" >PLANNED</span></span></div>
+      </a>
+<a class="section-card" href="tools/">
+        <div class="section-card-top"><span data-i18n="common.tool" class="eyebrow">TOOL</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="nav.tools" >TOOLS</h3><p data-i18n="section.tools.description" >Use existing tools that run in your browser.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.legacy" >EXISTING PROJECT</span></span></div>
+      </a>
+<a class="section-card" href="lab/">
+        <div class="section-card-top"><span data-i18n="common.lab" class="eyebrow">LAB</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="nav.lab" >LAB</h3><p data-i18n="section.lab.description" >Katovia’s earlier games and small experiments.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.legacy" >EXISTING PROJECT</span></span></div>
+      </a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p class="eyebrow">KATOVIA / <span data-i18n="common.motto" >PLAY. CREATE. CHALLENGE.</span></p><a class="footer-link" href="lab/"><span data-i18n="common.return" >Explore the lab</span> <span aria-hidden="true">&nbsp;↗</span></a></div></footer>
+</body>
+</html>

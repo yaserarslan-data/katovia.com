@@ -43,7 +43,7 @@ test('fallback/interpolation is safe, debug friendly and dictionaries have parit
 
 test('every generated v2 UI key resolves in both dictionaries', async () => {
   for (const route of ['home', ...sections.map((section) => section.id)]) {
-    const html = await readFile(`site/v2/${route === 'home' ? '' : route + '/'}index.html`, 'utf8');
+    const html = await readFile(`site/${route === 'home' ? '' : route + '/'}index.html`, 'utf8');
     for (const match of html.matchAll(/data-i18n(?:-label|-content)?="([^"]+)"/g)) {
       for (const locale of ['tr', 'en']) assert.ok(Object.hasOwn(messages[locale], match[1]), `${locale}: ${match[1]}`);
     }
@@ -54,5 +54,5 @@ test('sharing translates UI, preserving scores, day, brand and URL', () => {
   const en = resultShare(result, { locale: 'en' }); const tr = resultShare(result, { locale: 'tr' });
   assert.match(en.text, /KATOVIA DAILY #001[\s\S]*GREAT/);
   assert.match(tr.text, /KATOVIA GÜNLÜK #001[\s\S]*HARİKA/);
-  for (const value of [en, tr]) { assert.match(value.text, /2026-10-04[\s\S]*5.07[\s\S]*\+0.07/); assert.equal(value.url, 'https://katovia.com/v2/today/'); }
+  for (const value of [en, tr]) { assert.match(value.text, /2026-10-04[\s\S]*5.07[\s\S]*\+0.07/); assert.equal(value.url, 'https://katovia.com/today/'); }
 });

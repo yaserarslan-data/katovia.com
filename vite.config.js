@@ -7,7 +7,7 @@ import { repoRoot, siteRoot, distRoot } from './scripts/paths.mjs';
 import { mimeTypes } from './scripts/server.mjs';
 
 function legacyDevFiles() {
-  const allowed = new Set(manifest.files.map((file) => `/${file.path}`));
+  const allowed = new Set(manifest.files.filter((file) => file.path !== 'index.html').map((file) => `/${file.path}`));
   return {
     name: 'explicit-legacy-dev-files',
     configureServer(server) {
@@ -36,10 +36,10 @@ export default defineConfig({
   build: {
     outDir: distRoot,
     emptyOutDir: true,
-    assetsDir: 'v2/assets',
+    assetsDir: 'katovia-assets',
     target: ['es2022', 'safari16'],
     rolldownOptions: {
-      input: [resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
+      input: [resolve(siteRoot, 'index.html'), ...sections.map((section) => resolve(siteRoot, `${section.id}/index.html`)), resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
     },
   },
 });

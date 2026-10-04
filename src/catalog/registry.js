@@ -1,10 +1,10 @@
 export const sections = Object.freeze([
-  { id: 'today', type: 'daily', title: 'TODAY', route: '/v2/today/', status: 'available' },
-  { id: 'play', type: 'play', title: 'PLAY', route: '/v2/play/', status: 'planned' },
-  { id: 'challenge', type: 'challenge', title: 'CHALLENGE', route: '/v2/challenge/', status: 'planned' },
-  { id: 'create', type: 'create', title: 'CREATE', route: '/v2/create/', status: 'planned' },
-  { id: 'tools', type: 'tool', title: 'TOOLS', route: '/v2/tools/', status: 'legacy' },
-  { id: 'lab', type: 'lab', title: 'LAB', route: '/v2/lab/', status: 'legacy' },
+  { id: 'today', type: 'daily', title: 'TODAY', route: '/today/', status: 'available' },
+  { id: 'play', type: 'play', title: 'PLAY', route: '/play/', status: 'planned' },
+  { id: 'challenge', type: 'challenge', title: 'CHALLENGE', route: '/challenge/', status: 'planned' },
+  { id: 'create', type: 'create', title: 'CREATE', route: '/create/', status: 'planned' },
+  { id: 'tools', type: 'tool', title: 'TOOLS', route: '/tools/', status: 'legacy' },
+  { id: 'lab', type: 'lab', title: 'LAB', route: '/lab/', status: 'legacy' },
 ]);
 
 export const entries = Object.freeze([

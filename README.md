@@ -1,5 +1,9 @@
 # katovia.com
-Official website of Katovia.
+Official website of Katovia. **Current root cutover:** authoritative shell sources are `site/index.html` and `site/{today,play,challenge,create,tools,lab}/index.html`; `npm run dev` and `npm run preview` now open `/`. Existing `/v2/` URLs forward to root equivalents, retaining query/hash with JS and meta refresh without JS (HTTP 200 compatibility documents, not server 301s). Share URL: `https://katovia.com/today/`.
+
+The repository's old root `index.html` remains a preservation fixture/history, while built production root is the new shell. All other 36 manifest paths remain byte-identical. New shell assets use `katovia-assets/`; publication retains prior `/v2/assets/` files and all other production paths. Locale/daily keys and epoch are unchanged. Build alone never deploys. Compose artifact-only release trees and retain a verified forward rollback commit; do not merge development files directly into Pages. See [root cutover report](docs/KATOVIA_2_ROOT_CUTOVER_RESULT.md).
+
+The following notes record earlier parallel-preview milestones; their `/v2/` entry paths are superseded by the root layout above.
 
 ## Katovia 2.0 foundation
 

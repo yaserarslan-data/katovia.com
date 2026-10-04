@@ -7,7 +7,7 @@ for (const width of [360, 390, 430, 768, 1024, 1440]) {
     const errors = []; const external = [];
     page.on('pageerror', (error) => errors.push(error.message));
     page.on('request', (request) => { if (!request.url().startsWith('http://127.0.0.1:4173')) external.push(request.url()); });
-    await page.goto('/v2/');
+    await page.goto('/');
     await expect(page.locator('h1')).toHaveText('PLAYSOMETHING.');
     await expect(page.locator('[data-daily-mount]')).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -53,7 +53,7 @@ for (const section of sections) {
     await expect(page.locator('[aria-current="page"]')).toHaveText(section.title);
     const target = section.id === 'today' ? 'PLAY' : 'TODAY';
     await page.getByRole('navigation').getByRole('link', { name: target, exact: true }).click();
-    await expect(page).toHaveURL(new RegExp(`/v2/${target.toLowerCase()}/$`));
+    await expect(page).toHaveURL(new RegExp(`/${target.toLowerCase()}/$`));
     await page.goBack();
     await expect(page).toHaveURL(new RegExp(section.route));
   });
@@ -61,7 +61,7 @@ for (const section of sections) {
 
 test('mobile menu supports keyboard, outside click and viewport changes', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto('/v2/');
+  await page.goto('/');
   const toggle = page.locator('[data-menu-toggle]');
   await toggle.focus(); await page.keyboard.press('Enter');
   await page.keyboard.press('Tab');
@@ -78,24 +78,23 @@ test('mobile menu supports keyboard, outside click and viewport changes', async 
 
 test('reduced motion disables transitions; navigation works without JS', async ({ page, browser }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/v2/');
+  await page.goto('/');
   expect(await page.locator('.section-card').first().evaluate((element) => getComputedStyle(element).transitionDuration)).toBe('0s');
   const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   const plain = await context.newPage();
-  await plain.goto('http://127.0.0.1:4173/v2/');
+  await plain.goto('http://127.0.0.1:4173/');
   await expect(plain.getByRole('navigation')).toBeVisible();
   await plain.getByRole('navigation').getByRole('link', { name: 'TOOLS', exact: true }).click();
   await expect(plain.getByRole('heading', { level: 1 })).toHaveText('Small tasks. Clean solutions.');
   await context.close();
 });
 
-test('legacy hashes and QR generator remain functional', async ({ page }) => {
+test('root index and old bookmarks show new shell; legacy QR generator remains functional', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   for (const hash of ['ana-sayfa', 'uygulamalar', 'laboratuvar', 'oyunlar', 'kodlar', 'gizlilik', 'iletisim']) {
     await page.goto(`/index.html#${hash}`);
-    // Legacy validRoutes never included iletisim: preserve the existing fallback.
-    await expect(page).toHaveURL(new RegExp(`#${hash === 'iletisim' ? 'ana-sayfa' : hash}$`));
-    expect(await page.evaluate(() => document.body.innerText.includes('Katovia'))).toBe(true);
+    await expect(page.locator('[data-daily-mount]')).toBeVisible();
+    await expect(page.locator('h1')).toHaveText('PLAYSOMETHING.');
   }
   await page.goto('/laboratuvar/qr-kod-olusturucu.html');
   await page.locator('#link-url').fill('https://katovia.com/');
@@ -104,13 +103,13 @@ test('legacy hashes and QR generator remain functional', async ({ page }) => {
 });
 
 test('unknown artifact route is a real 404', async ({ page }) => {
-  const response = await page.goto('/v2/not-a-page/');
+  const response = await page.goto('/not-a-page/');
   expect(response.status()).toBe(404);
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Bu köşe henüz yok.');
 });
 
 test('body, muted labels and accent buttons meet normal-text contrast', async ({ page }) => {
-  await page.goto('/v2/');
+  await page.goto('/');
   const colors = await page.evaluate(() => {
     const style = getComputedStyle(document.documentElement);
     return Object.fromEntries(['bg', 'surface', 'text', 'muted', 'accent', 'accent-ink'].map((key) => [key, style.getPropertyValue(`--${key}`).trim()]));
