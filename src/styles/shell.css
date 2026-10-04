@@ -18,6 +18,7 @@
 .hero-top { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); margin-bottom: var(--space-7); }
 .hero h1 { font-size: var(--text-display); font-weight: 750; letter-spacing: -.065em; max-width: 11ch; }
 .hero h1 span { color: var(--accent); }
+.has-daily .hero{padding-block:clamp(1.5rem,4vw,3rem) 1rem}.has-daily .hero-top{margin-bottom:1rem}.has-daily .hero h1{font-size:clamp(2.5rem,7vw,4.5rem)}.has-daily .hero-bottom{margin-top:1rem;padding-top:1rem}.daily-links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:-1rem;margin-bottom:2rem}.home-cta{border:1px solid var(--border);border-radius:var(--radius-md);padding:clamp(1rem,4vw,2rem);margin-block:1rem 2rem;display:grid;gap:1rem;background:var(--surface)}.home-cta .button{justify-self:start}.code-art{height:100px;border-radius:.5rem;background:#081921}.code-art-particle-universe{background:radial-gradient(ellipse at 50% 50%,#b9f0d4 0 2%,transparent 3% 18%,#549ca1 19% 20%,transparent 21% 33%,#47748e 34% 35%,transparent 36%),#081921}.code-art-pixel-piano{background:repeating-linear-gradient(90deg,#7db3cf 0 9%,#142333 9% 10%,#8bd5bc 10% 19%,#142333 19% 20%,#cfb8e9 20% 29%,#142333 29% 30%)}.code-art-koi-pond{background:radial-gradient(ellipse 14px 32px at 40% 55%,#ffe9b9 45%,#e98f76 46% 65%,transparent 66%),radial-gradient(ellipse 12px 26px at 62% 45%,#f9debd 40%,#efae88 41% 65%,transparent 66%),radial-gradient(ellipse at center,#20494d,#071f2d)}
 .hero-bottom { display: flex; justify-content: space-between; gap: var(--space-5); margin-top: var(--space-6); border-top: 1px solid var(--border); padding-top: var(--space-5); }
 .hero-bottom p { max-width: 36ch; }
 .index-label { font: var(--text-sm)/1.5 var(--font-mono); color: var(--muted); }
@@ -61,6 +62,7 @@
   .section-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 767px) {
+  .has-daily .hero{padding-top:1rem}.has-daily section[aria-labelledby="home-daily"]>.section-heading{padding-block:.25rem}
   .container { padding-inline: max(1.25rem, env(safe-area-inset-left)) max(1.25rem, env(safe-area-inset-right)); }
   .header-inner { flex-wrap: wrap; min-height: 76px; padding-block: var(--space-3); gap: var(--space-2); }
   .js .menu-toggle { display: inline-flex; }

@@ -21,7 +21,7 @@ export const messages = {
     "home.worlds": "Start somewhere.",
     "home.universe": "The Katovia universe",
     "home.title": "Katovia — Play something",
-    "home.meta": "Katovia 2.0: play, create, challenge.",
+    "home.meta": "Three daily mini games, Particle Universe, Pixel Piano and Koi Pond. Create a quiz, challenge a friend and use free browser tools.",
     "status.planned": "PLANNED",
     "status.legacy": "EXISTING PROJECT",
     "status.available": "AVAILABLE",
@@ -273,7 +273,17 @@ export const messages = {
     "duel.tie": "TIE",
     "duel.playerTitle": "Reaction Duel — Challenge a friend | Katovia",
     "duel.playerDescription": "Beat your friend’s reaction time, get a result and rematch. Casual and measured on your device.",
-    "common.share": "SHARE"
+    "common.share": "SHARE",
+    "home.dailyHint": "Three little games each day",
+    "home.allDaily": "ALL DAILY GAMES",
+    "home.playNow": "PLAY NOW",
+    "home.now": "Touch and explore",
+    "home.create": "CREATE SOMETHING",
+    "home.createCopy": "Who knows you well? Write a few questions, choose a theme and send a quiz link to your friends.",
+    "home.challenge": "CHALLENGE SOMEONE",
+    "home.challengeCopy": "Wait for the signal. Tap fast. Can your friend beat your reaction time?",
+    "home.tools": "USEFUL TOOLS",
+    "home.browserOnly": "No login, on your device"
   },
   "tr": {
     "error.retry": "Bu işlem tamamlanamadı. Yeniden deneyebilirsin.",
@@ -296,7 +306,7 @@ export const messages = {
     "home.worlds": "Bir yerden başla.",
     "home.universe": "Katovia’nın evreni",
     "home.title": "Katovia — Bir şey oyna",
-    "home.meta": "Katovia 2.0: oyna, üret, meydan oku.",
+    "home.meta": "Her gün üç mini oyun; Parçacık Evreni, Piksel Piyano ve Koi Göleti. Quiz oluştur, arkadaşına meydan oku ve ücretsiz araçları kullan.",
     "status.planned": "PLANLANDI",
     "status.legacy": "MEVCUT PROJE",
     "status.available": "KULLANIMA AÇIK",
@@ -548,6 +558,16 @@ export const messages = {
     "duel.tie": "BERABERE",
     "duel.playerTitle": "Reaction Düello — Bir arkadaşına meydan oku | Katovia",
     "duel.playerDescription": "Arkadaşının tepki süresini geç, sonuç al ve rövanş yap. Eğlencelik ve cihazında ölçülen.",
-    "common.share": "PAYLAŞ"
+    "common.share": "PAYLAŞ",
+    "home.dailyHint": "Her gün üç küçük oyun",
+    "home.allDaily": "TÜM DAILY OYUNLARI",
+    "home.playNow": "HEMEN OYNA",
+    "home.now": "Dokun ve keşfet",
+    "home.create": "BİR ŞEY OLUŞTUR",
+    "home.createCopy": "Seni kim iyi tanıyor? Birkaç soru yaz, temayı seç ve quiz bağlantısını arkadaşlarına gönder.",
+    "home.challenge": "BİRİNE MEYDAN OKU",
+    "home.challengeCopy": "İşareti bekle. Hızlı dokun. Arkadaşın tepki süreni geçebilecek mi?",
+    "home.tools": "İŞE YARAYAN ARAÇLAR",
+    "home.browserOnly": "Girişsiz, cihazında"
   }
 };

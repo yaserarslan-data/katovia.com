@@ -24,7 +24,8 @@ const txt = (key, tag = 'span', attrs = '') => `<${tag} data-i18n="${key}" ${att
 const statusLabel = (status) => txt(`status.${status}`);
 
 function card(entry, route, heading = 'h3') {
-  return `<a class="section-card" href="${hrefFrom(route, entry.route)}">
+  return `<a class="section-card" data-card-id="${entry.id}" href="${hrefFrom(route, entry.route)}">
+        ${entry.activity?`<div class="code-art code-art-${entry.id}" aria-hidden="true"></div>`:''}
         <div class="section-card-top">${txt(`common.${entry.type}`, 'span', 'class="eyebrow"')}<span class="card-arrow" aria-hidden="true">↗</span></div>
         ${txt(entry.titleKey || `entry.${entry.id}.title`, heading)}${txt(entry.descriptionKey || `entry.${entry.id}.description`, 'p')}
         <div class="section-card-bottom"><span class="pill">${statusLabel(entry.status)}</span></div>
@@ -41,15 +42,17 @@ function home(route) {
       <h1 id="home-title">${txt('home.play')}<br>${txt('home.something')}</h1>
       <div class="hero-bottom">${txt('home.description', 'p')}${txt('common.motto', 'span', 'class="index-label"')}</div>
     </section>
-    ${daily(route, true)}
-    <section aria-labelledby="worlds-title"><div class="section-heading">${txt('home.worlds', 'h2', 'id="worlds-title"')}${txt('home.universe', 'span', 'class="eyebrow"')}</div>
-      <div class="section-grid">${sections.filter((section) => section.id !== 'today').map((section) => card({ ...section, titleKey: `nav.${section.id}`, descriptionKey: `section.${section.id}.description` }, route)).join('\n')}</div>
-    </section>
+    <section aria-labelledby="home-daily"><div class="section-heading">${txt('nav.today','h2','id="home-daily"')}${txt('home.dailyHint','span','class="eyebrow"')}</div>${daily(route,true)}<div class="daily-links"><a class="button" href="/today/#memory-grid" data-i18n="memory.title">MEMORY GRID</a><a class="button" href="/today/#reaction" data-i18n="reaction.title">REACTION</a><a class="button" href="/today/" data-i18n="home.allDaily">ALL DAILY GAMES</a></div></section>
+    <section aria-labelledby="home-play"><div class="section-heading">${txt('home.playNow','h2','id="home-play"')}${txt('home.now','span','class="eyebrow"')}</div><div class="section-grid">${experiences.map(entry=>card(entry,route)).join('\n')}</div></section>
+    <section class="home-cta" aria-labelledby="home-create">${txt('home.create','h2','id="home-create"')}${txt('home.createCopy','p')}<a class="button button-accent" href="/create/" data-i18n="creator.own">CREATE YOUR OWN</a></section>
+    <section class="home-cta" aria-labelledby="home-challenge">${txt('home.challenge','h2','id="home-challenge"')}${txt('home.challengeCopy','p')}<a class="button" href="/challenge/" data-i18n="duel.own">CREATE A CHALLENGE</a></section>
+    <section aria-labelledby="home-tools"><div class="section-heading">${txt('home.tools','h2','id="home-tools"')}${txt('home.browserOnly','span','class="eyebrow"')}</div><div class="section-grid">${tools.map(entry=>card(entry,route)).join('\n')}</div></section>
+    <section aria-labelledby="home-lab"><div class="section-heading">${txt('lab.collection','h2','id="home-lab"')}<a class="button" href="/lab/" data-i18n="common.return">Explore the lab</a></div><div class="section-grid">${entries.filter(entry=>['qr','golf','yuk-ustasi'].includes(entry.id)).map(entry=>card(entry,route)).join('\n')}</div></section>
   </main>`;
 }
 
 function sectionPage(section) {
-  const available = section.tool || section.id==='tools' ? tools.filter((entry)=>entry.id!==section.id) : section.id === 'play' || section.activity ? experiences.filter((entry)=>entry.id!==section.id) : entries.filter((entry) => entry.type === section.type);
+  const available = section.tool || section.id==='tools' ? tools.filter((entry)=>entry.id!==section.id) : section.id === 'play' || section.activity ? experiences.filter((entry)=>entry.id!==section.id) : section.id==='lab'?entries:entries.filter((entry) => entry.type === section.type);
   return `<main id="main-content" class="container section-page${section.id === 'today' ? ' daily-page' : ''}" tabindex="-1">
     <header class="section-intro"><p class="eyebrow">KATOVIA / ${txt(`nav.${section.id==='d' ? 'challenge' : section.personal ? 'create' : section.tool ? 'tools' : section.activity ? 'play' : section.id}`)}</p>${txt(section.activity || section.tool || section.personal ? section.titleKey : `section.${section.id}.label`, 'h1')}${txt(section.activity || section.tool || section.personal ? section.descriptionKey : `section.${section.id}.description`, 'p')}</header>
     ${section.id==='d' ? duelMarkup('play') : section.personal ? creationMarkup() : section.id==='create' ? creatorMarkup()+txt('section.create.note','p') : section.id==='challenge' ? `${duelMarkup()}<section class="activity-panel">${txt('challenge.heading','h2')}${txt('challenge.guide','p')}<a class="button" href="/today/#reaction" data-i18n="challenge.train">Try Reaction Daily</a><p>${txt('challenge.future')}</p></section>` : section.tool ? toolMarkup(section)+txt(`tool.${section.id}.about`,'p','class="experience-guide"') : section.activity ? experienceMarkup(section) + txt(`play.${section.id}.about`, 'p', 'class="experience-guide"') : section.id === 'today' ? daily(section.route) + `<div id="memory-grid">${memoryMarkup()}</div><div id="reaction">${reactionMarkup()}</div>` : ['play','tools'].includes(section.id) ? '' : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
@@ -109,11 +112,12 @@ const robots='User-agent: *\nAllow: /\nDisallow: /v2/\n# Personal player pages u
 const pages = [{path:'sitemap.xml',html:sitemap},{path:'robots.txt',html:robots},{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), ...[...experiences,...tools,...personalPages].map((entry) => ({ path:`${entry.route.slice(1)}index.html`, html:documentPage(entry) })), { path: '404.html', html: notFound }, ...compatibilityPages];
 for (const page of pages) {
   const path = `${siteRoot}/${page.path}`;
+  const html=page.html.replace(/[ \t]+$/gm,'');
   if (process.argv.includes('--check')) {
-    if (await readFile(path, 'utf8') !== page.html) throw new Error(`Generated page out of date: ${page.path}`);
+    if (await readFile(path, 'utf8') !== html) throw new Error(`Generated page out of date: ${page.path}`);
   } else {
     await mkdir(dirname(path), { recursive: true });
-    await writeFile(path, page.html);
+    await writeFile(path, html);
   }
 }
 console.log(`${process.argv.includes('--check') ? 'Checked' : 'Generated'} ${pages.length} static HTML entries.`);

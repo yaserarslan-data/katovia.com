@@ -9,6 +9,7 @@ try {
   const context = await browser.newContext({ locale: 'en-US', viewport: { width: 390, height: 844 } });
   await context.addInitScript(() => Object.defineProperty(navigator, 'clipboard', { value: { writeText: async (text) => { window.__qaShare = text; } } }));
   const page = await context.newPage(); const errors = []; page.on('pageerror', (error) => errors.push(error.message));
+  if(process.argv[2]==='Final'){await page.goto(base);await page.waitForSelector('html.js');for(const id of ['home-daily','home-play','home-create','home-challenge','home-tools','home-lab'])assert.ok(await page.locator('#'+id).isVisible());const box=await page.locator('[data-game-action]').boundingBox();assert.ok(box.y+box.height<844);await page.goto(base+'/play/particle-universe/');await page.waitForSelector('[data-ready="true"]');await page.locator('[data-card-id="koi-pond"]').click();await page.waitForSelector('[data-experience="koi-pond"][data-ready="true"]');}
   for (const route of ['/', '/today/', '/play/', '/challenge/', '/create/', '/tools/', '/lab/']) {
     const response = await page.goto(base+route); assert.equal(response.status(), 200); await page.waitForSelector('html.js');
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));

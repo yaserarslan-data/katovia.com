@@ -25,3 +25,7 @@ export function track(eventName, payload) {
   // Deliberately no-op; validation result is useful for caller tests.
   return sanitizeEvent(eventName, payload) !== null;
 }
+export function trackShareOutcome(result,payload={}){
+  if(['copied','handoff'].includes(result.status))track('share_completed',{...payload,channel:result.status==='copied'?'clipboard':'native',outcome:result.status});
+  else if(result.status==='cancelled')track('share_cancelled',payload);
+}
