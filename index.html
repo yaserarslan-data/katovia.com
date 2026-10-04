@@ -3,12 +3,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title data-i18n="home.title">Katovia — Play something</title><meta name="description" data-i18n-content="home.meta" content="Katovia 2.0: play, create, challenge.">
+  <title data-i18n="home.title">Katovia — Play something</title><meta name="description" data-i18n-content="home.meta" content="Three daily mini games, Particle Universe, Pixel Piano and Koi Pond. Create a quiz, challenge a friend and use free browser tools.">
   <link rel="canonical" href="https://katovia.com/"><meta name="robots" content="index, follow"><meta name="theme-color" content="#0c0e10">
-  <meta property="og:type" content="website"><meta property="og:title" data-i18n-content="home.title" content="Katovia — Play something"><meta property="og:description" data-i18n-content="home.meta" content="Katovia 2.0: play, create, challenge."><meta property="og:url" content="https://katovia.com/"><meta property="og:site_name" content="Katovia"><meta property="og:locale" data-i18n-content="seo.locale" content="en_US"><meta name="twitter:card" content="summary">
-  
-  <script type="module" crossorigin src="./katovia-assets/main-BM2ykBCS.js"></script>
-  <link rel="stylesheet" crossorigin href="./katovia-assets/main-DYyxl0Qs.css">
+  <meta property="og:type" content="website"><meta property="og:title" data-i18n-content="home.title" content="Katovia — Play something"><meta property="og:description" data-i18n-content="home.meta" content="Three daily mini games, Particle Universe, Pixel Piano and Koi Pond. Create a quiz, challenge a friend and use free browser tools."><meta property="og:url" content="https://katovia.com/"><meta property="og:site_name" content="Katovia"><meta property="og:locale" data-i18n-content="seo.locale" content="en_US"><meta name="twitter:card" content="summary">
+
+  <script type="module" crossorigin src="./katovia-assets/main-BFgEzIf8.js"></script>
+  <link rel="stylesheet" crossorigin href="./katovia-assets/main-DfzjD7Sw.css">
 </head>
 <body data-page="home">
   <a data-i18n="common.skip" class="skip-link" href="#main-content">Skip to content</a>
@@ -23,7 +23,7 @@
       <h1 id="home-title"><span data-i18n="home.play" >PLAY</span><br><span data-i18n="home.something" >SOMETHING.</span></h1>
       <div class="hero-bottom"><p data-i18n="home.description" >The internet was made for more than scrolling.</p><span data-i18n="common.motto" class="index-label">PLAY. CREATE. CHALLENGE.</span></div>
     </section>
-    <section class="daily-panel game-panel" data-daily-mount data-state="idle" aria-labelledby="game-title">
+    <section aria-labelledby="home-daily"><div class="section-heading"><h2 data-i18n="nav.today" id="home-daily">TODAY</h2><span data-i18n="home.dailyHint" class="eyebrow">Three little games each day</span></div><section class="daily-panel game-panel" data-daily-mount data-state="idle" aria-labelledby="game-title">
     <div class="game-topline"><span class="eyebrow"><span data-i18n="nav.today">TODAY</span> <span data-game-day><span data-i18n="daily.utc">UTC DAILY</span></span></span><span class="pill"><span data-i18n="daily.single">ONE DAILY RESULT</span></span></div>
     <div class="game-stage">
       <div class="game-halo" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -46,34 +46,75 @@
       <p class="share-feedback" data-share-feedback role="status" aria-live="polite"></p>
       <label class="manual-share" data-manual hidden><span data-i18n="share.manualLabel">Share text</span><textarea data-share-text readonly rows="8" data-i18n-label="share.textLabel" aria-label="Copyable result text"></textarea></label>
     </div>
-  </section>
-    <section aria-labelledby="worlds-title"><div class="section-heading"><h2 data-i18n="home.worlds" id="worlds-title">Start somewhere.</h2><span data-i18n="home.universe" class="eyebrow">The Katovia universe</span></div>
-      <div class="section-grid"><a class="section-card" href="play/">
+  </section><div class="daily-links"><a class="button" href="/today/#memory-grid" data-i18n="memory.title">MEMORY GRID</a><a class="button" href="/today/#reaction" data-i18n="reaction.title">REACTION</a><a class="button" href="/today/" data-i18n="home.allDaily">ALL DAILY GAMES</a></div></section>
+    <section aria-labelledby="home-play"><div class="section-heading"><h2 data-i18n="home.playNow" id="home-play">PLAY NOW</h2><span data-i18n="home.now" class="eyebrow">Touch and explore</span></div><div class="section-grid"><a class="section-card" data-card-id="particle-universe" href="play/particle-universe/">
+        <div class="code-art code-art-particle-universe" aria-hidden="true"></div>
         <div class="section-card-top"><span data-i18n="common.play" class="eyebrow">PLAY</span><span class="card-arrow" aria-hidden="true">↗</span></div>
-        <h3 data-i18n="nav.play" >PLAY</h3><p data-i18n="section.play.description" >Particle Universe, Pixel Piano and Koi Pond. Touch, explore and make a tiny moment of your own.</p>
+        <h3 data-i18n="play.particle-universe.title" >PARTICLE UNIVERSE</h3><p data-i18n="play.particle-universe.description" >A tiny universe made of light. Touch, attract, scatter and shape your own orbit.</p>
         <div class="section-card-bottom"><span class="pill"><span data-i18n="status.available" >AVAILABLE</span></span></div>
       </a>
-<a class="section-card" href="challenge/">
-        <div class="section-card-top"><span data-i18n="common.challenge" class="eyebrow">CHALLENGE</span><span class="card-arrow" aria-hidden="true">↗</span></div>
-        <h3 data-i18n="nav.challenge" >CHALLENGE</h3><p data-i18n="section.challenge.description" >One score. One link. A new challenge.</p>
+<a class="section-card" data-card-id="pixel-piano" href="play/pixel-piano/">
+        <div class="code-art code-art-pixel-piano" aria-hidden="true"></div>
+        <div class="section-card-top"><span data-i18n="common.play" class="eyebrow">PLAY</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="play.pixel-piano.title" >PIXEL PIANO</h3><p data-i18n="play.pixel-piano.description" >Touch and hear colors. Make a tiny melody with pentatonic notes and pixel ripples.</p>
         <div class="section-card-bottom"><span class="pill"><span data-i18n="status.available" >AVAILABLE</span></span></div>
       </a>
-<a class="section-card" href="create/">
-        <div class="section-card-top"><span data-i18n="common.create" class="eyebrow">CREATE</span><span class="card-arrow" aria-hidden="true">↗</span></div>
-        <h3 data-i18n="nav.create" >CREATE</h3><p data-i18n="section.create.description" >Write your own questions. Create your own mini experience.</p>
+<a class="section-card" data-card-id="koi-pond" href="play/koi-pond/">
+        <div class="code-art code-art-koi-pond" aria-hidden="true"></div>
+        <div class="section-card-top"><span data-i18n="common.play" class="eyebrow">PLAY</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="play.koi-pond.title" >KOI POND</h3><p data-i18n="play.koi-pond.description" >Take a moment. Touch the water, feed the fish and explore a calm pond.</p>
         <div class="section-card-bottom"><span class="pill"><span data-i18n="status.available" >AVAILABLE</span></span></div>
-      </a>
-<a class="section-card" href="tools/">
+      </a></div></section>
+    <section class="home-cta" aria-labelledby="home-create"><h2 data-i18n="home.create" id="home-create">CREATE SOMETHING</h2><p data-i18n="home.createCopy" >Who knows you well? Write a few questions, choose a theme and send a quiz link to your friends.</p><a class="button button-accent" href="/create/" data-i18n="creator.own">CREATE YOUR OWN</a></section>
+    <section class="home-cta" aria-labelledby="home-challenge"><h2 data-i18n="home.challenge" id="home-challenge">CHALLENGE SOMEONE</h2><p data-i18n="home.challengeCopy" >Wait for the signal. Tap fast. Can your friend beat your reaction time?</p><a class="button" href="/challenge/" data-i18n="duel.own">CREATE A CHALLENGE</a></section>
+    <section aria-labelledby="home-tools"><div class="section-heading"><h2 data-i18n="home.tools" id="home-tools">USEFUL TOOLS</h2><span data-i18n="home.browserOnly" class="eyebrow">No login, on your device</span></div><div class="section-grid"><a class="section-card" data-card-id="json-formatter" href="tools/json-formatter/">
+
         <div class="section-card-top"><span data-i18n="common.tool" class="eyebrow">TOOL</span><span class="card-arrow" aria-hidden="true">↗</span></div>
-        <h3 data-i18n="nav.tools" >TOOLS</h3><p data-i18n="section.tools.description" >Useful little tools for JSON, text differences, regex, gradients and color palettes. Free, no login, processed on your device.</p>
+        <h3 data-i18n="tool.json-formatter.title" >JSON Formatter</h3><p data-i18n="tool.json-formatter.description" >Validate JSON data and format it for readability.</p>
         <div class="section-card-bottom"><span class="pill"><span data-i18n="status.available" >AVAILABLE</span></span></div>
       </a>
-<a class="section-card" href="lab/">
-        <div class="section-card-top"><span data-i18n="common.lab" class="eyebrow">LAB</span><span class="card-arrow" aria-hidden="true">↗</span></div>
-        <h3 data-i18n="nav.lab" >LAB</h3><p data-i18n="section.lab.description" >Katovia’s earlier games and small experiments.</p>
+<a class="section-card" data-card-id="text-diff" href="tools/text-diff/">
+
+        <div class="section-card-top"><span data-i18n="common.tool" class="eyebrow">TOOL</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="tool.text-diff.title" >Text Diff Checker</h3><p data-i18n="tool.text-diff.description" >Compare two texts line by line and see added and removed lines.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.available" >AVAILABLE</span></span></div>
+      </a>
+<a class="section-card" data-card-id="regex-tester" href="tools/regex-tester/">
+
+        <div class="section-card-top"><span data-i18n="common.tool" class="eyebrow">TOOL</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="tool.regex-tester.title" >Regex Tester</h3><p data-i18n="tool.regex-tester.description" >Try JavaScript regular expressions on sample text in an isolated worker.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.available" >AVAILABLE</span></span></div>
+      </a>
+<a class="section-card" data-card-id="css-gradient" href="tools/css-gradient/">
+
+        <div class="section-card-top"><span data-i18n="common.tool" class="eyebrow">TOOL</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="tool.css-gradient.title" >CSS Gradient Generator</h3><p data-i18n="tool.css-gradient.description" >Choose two colors and an angle to generate a CSS linear gradient with a live preview.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.available" >AVAILABLE</span></span></div>
+      </a>
+<a class="section-card" data-card-id="color-palette" href="tools/color-palette/">
+
+        <div class="section-card-top"><span data-i18n="common.tool" class="eyebrow">TOOL</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="tool.color-palette.title" >Color Palette Generator</h3><p data-i18n="tool.color-palette.description" >Generate five lighter shades from a base color and copy their HEX codes.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.available" >AVAILABLE</span></span></div>
+      </a></div></section>
+    <section aria-labelledby="home-lab"><div class="section-heading"><h2 data-i18n="lab.collection" id="home-lab">From the lab</h2><a class="button" href="/lab/" data-i18n="common.return">Explore the lab</a></div><div class="section-grid"><a class="section-card" data-card-id="qr" href="laboratuvar/qr-kod-olusturucu.html">
+
+        <div class="section-card-top"><span data-i18n="common.tool" class="eyebrow">TOOL</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="entry.qr.title" >QR Code Generator</h3><p data-i18n="entry.qr.description" >QR for links, text, Wi-Fi and WhatsApp.</p>
         <div class="section-card-bottom"><span class="pill"><span data-i18n="status.legacy" >EXISTING PROJECT</span></span></div>
-      </a></div>
-    </section>
+      </a>
+<a class="section-card" data-card-id="yuk-ustasi" href="oyunlar/yuk-ustasi.html">
+
+        <div class="section-card-top"><span data-i18n="common.lab" class="eyebrow">LAB</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="entry.yuk-ustasi.title" >Yük Ustası</h3><p data-i18n="entry.yuk-ustasi.description" >Set your load and finish the shift.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.legacy" >EXISTING PROJECT</span></span></div>
+      </a>
+<a class="section-card" data-card-id="golf" href="oyunlar/golf-mini-oyun.html">
+
+        <div class="section-card-top"><span data-i18n="common.lab" class="eyebrow">LAB</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <h3 data-i18n="entry.golf.title" >Mini Golf</h3><p data-i18n="entry.golf.description" >A short golf break.</p>
+        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.legacy" >EXISTING PROJECT</span></span></div>
+      </a></div></section>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><p class="eyebrow">KATOVIA / <span data-i18n="common.motto" >PLAY. CREATE. CHALLENGE.</span></p><a class="footer-link" href="lab/"><span data-i18n="common.return" >Explore the lab</span> <span aria-hidden="true">&nbsp;↗</span></a></div></footer>
 </body>
