@@ -26,7 +26,7 @@ Five implemented native browser tools: JSON Formatter (128 Ki-character limit), 
 
 ## Creator
 
-Pending editor, safe text rendering and publish/storage evaluation.
+HOW WELL DO YOU KNOW ME editor, 1–8 questions, title/question/option limits, correct answer and three themes, local draft/preview, share-link creation, standalone `/p/` player, result and CREATE YOUR OWN loop. User content remains in its selected contentLocale and uses safe textContent. Small quizzes use bounded versioned fragment links without a backend; arbitrary-size/server-persisted/private publication is not implemented. See CREATOR_STORAGE_DECISION.md. Answers are readable by link holders; links are immutable copies and scores are local/non-authoritative. Oversized share payloads fail with a clear message while preview remains available.
 
 ## Duel
 

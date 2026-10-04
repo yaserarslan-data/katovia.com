@@ -1,0 +1,8 @@
+export const limits=Object.freeze({questions:8,title:60,question:120,option:60,link:1800});
+export function validateQuiz(value,{draft=false}={}){
+ if(!value||value.version!==1||!['tr','en'].includes(value.contentLocale)||!['lime','ocean','rose'].includes(value.theme)||!Array.isArray(value.questions)||value.questions.length<1||value.questions.length>limits.questions)throw new TypeError('quiz');
+ const text=(value,max)=>{if(typeof value!=='string'||value.length>max||(!draft&&!value.trim()))throw new TypeError('text');return value;};
+ return {version:1,title:text(value.title,limits.title),contentLocale:value.contentLocale,theme:value.theme,questions:value.questions.map(q=>{if(!q||!Array.isArray(q.options)||q.options.length<2||q.options.length>4||!Number.isInteger(q.correct)||q.correct<0||q.correct>=q.options.length)throw new TypeError('question');return {text:text(q.text,limits.question),options:q.options.map(x=>text(x,limits.option)),correct:q.correct};})};
+}
+export function encodeQuiz(value){const clean=validateQuiz(value),bytes=new TextEncoder().encode(JSON.stringify(clean));const encoded=btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');if(encoded.length>limits.link)throw new RangeError('link');return encoded;}
+export function decodeQuiz(encoded){if(typeof encoded!=='string'||encoded.length>limits.link||!/^[A-Za-z0-9_-]+$/.test(encoded))throw new TypeError('link');return validateQuiz(JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(Uint8Array.from(atob(encoded.replace(/-/g,'+').replace(/_/g,'/')),c=>c.charCodeAt(0)))));}

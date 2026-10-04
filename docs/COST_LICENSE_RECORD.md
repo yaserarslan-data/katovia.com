@@ -1,5 +1,9 @@
 # Cost & License Guardrail Record
 
+## Master Release D
+
+Creator uses existing local storage and bounded self-contained share links on a real static player route. No backend/public-write API, paid/free SaaS account, cloud resource, billing or hosting change. Original safe DOM/text and native UTF-8/base64 encoding; no package/lockfile change. Server-persisted/private/authoritative UGC remains unimplemented; see CREATOR_STORAGE_DECISION.md.
+
 ## Master Release C
 
 Five original browser-side tools, bounded LCS diff, regex worker with 750 ms hard termination, static sitemap/robots/metadata/schema generator. No package or lockfile change; no external media, network processing, new service or billing. Reuses public Pages. Chosen tools cover developer/design intent with small native implementations; image conversions and larger editing tools deferred.

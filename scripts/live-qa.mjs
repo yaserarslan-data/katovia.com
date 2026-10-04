@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { experiences } from '../src/catalog/experiences.js';
 import { tools } from '../src/catalog/tools.js';
+import {encodeQuiz} from '../src/creator/model.js';
 const base = 'https://katovia.com'; const browser = await chromium.launch({ channel: 'chrome', headless: true });
 try {
   const context = await browser.newContext({ locale: 'en-US', viewport: { width: 390, height: 844 } });
@@ -27,6 +28,7 @@ try {
   await page.locator('[data-locale="tr"]').click(); assert.equal(await page.locator('html').getAttribute('lang'), 'tr');
   if(process.argv[2]!=='A')for(const entry of experiences){const response=await page.goto(base+entry.route);assert.equal(response.status(),200);await page.waitForSelector('[data-experience][data-ready="true"]');await page.locator('canvas').click();await page.locator('[data-motion-toggle]').click();assert.equal(await page.locator('[data-motion-toggle]').getAttribute('aria-pressed'),'true');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
   if(!['A','B'].includes(process.argv[2])){for(const entry of tools){const response=await page.goto(base+entry.route);assert.equal(response.status(),200);await page.waitForSelector('[data-tool][data-ready="true"]');if(entry.id==='json-formatter')await page.locator('[data-tool-input]').fill('{"live":true}');if(entry.id==='regex-tester')await page.locator('[data-tool-input]').fill('live 123');await page.locator('[data-tool-run]').click();await page.waitForFunction(()=>document.querySelector('[data-tool-output]').value.length>0);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}for(const path of ['/sitemap.xml','/robots.txt'])assert.equal((await context.request.get(base+path)).status(),200);}
+  if(['D','E','Final'].includes(process.argv[2])){const encoded=encodeQuiz({version:1,title:'Canlı QA',contentLocale:'tr',theme:'lime',questions:[{text:'A?',options:['A','B'],correct:0}]});const response=await page.goto(base+'/p/#'+encoded);assert.equal(response.status(),200);await page.waitForSelector('[data-answer]');await page.locator('[data-answer="0"]').click();assert.equal(await page.locator('[data-quiz-result]').textContent(),'1 / 1');await page.locator('[data-creator-player] a').click();await page.waitForSelector('[data-creator][data-ready="true"]');assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),'index, follow');}
   const manifest = JSON.parse(await readFile('scripts/legacy-manifest.json','utf8'));
   for (const item of manifest.files.filter((item) => item.category==='html' && item.path!=='index.html')) {
     const response=await page.goto(base+'/'+item.path); assert.equal(response.status(),200);
