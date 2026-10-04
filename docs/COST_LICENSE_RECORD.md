@@ -1,5 +1,9 @@
 # Cost & License Guardrail Record
 
+## Master Release E
+
+Casual Reaction Duel reuses native performance/crypto and existing game/share logic. Strict bounded targets use a real static `/d/` route; no backend or paid/free SaaS provisioning. Backlog is documentation only. Shared PLAY sharing, Search Console instructions and Chrome touch/DPR/orientation/lifecycle QA add no production dependency/media/service. Package/lockfile unchanged. No actual Google account/DNS verification action. Exact-tree rollback prepared before publication.
+
 ## Master Release D
 
 Creator uses existing local storage and bounded self-contained share links on a real static player route. No backend/public-write API, paid/free SaaS account, cloud resource, billing or hosting change. Original safe DOM/text and native UTF-8/base64 encoding; no package/lockfile change. Server-persisted/private/authoritative UGC remains unimplemented; see CREATOR_STORAGE_DECISION.md.

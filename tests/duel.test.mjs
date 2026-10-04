@@ -1,0 +1,2 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {encodeTarget,decodeTarget,compareTarget} from '../src/duel/model.js';
+test('casual duel target is bounded, versioned, and comparison is deterministic',()=>{assert.equal(decodeTarget(encodeTarget(340)),340);for(const token of ['v2.10','v1.060','v1.60001','v1.NaN','javascript:1','v1.-2'])assert.throws(()=>decodeTarget(token));assert.equal(compareTarget(200,300),'win');assert.equal(compareTarget(300,200),'lose');assert.equal(compareTarget(300,300),'tie');});

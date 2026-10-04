@@ -30,7 +30,7 @@ HOW WELL DO YOU KNOW ME editor, 1–8 questions, title/question/option limits, c
 
 ## Duel
 
-Pending safe free-storage feasibility assessment and Reaction reuse.
+Casual Reaction Duel implemented on real static `/d/?id=v1.N`, using shared Reaction logic. Bounded target validation, random real signal, early retry, interruption, WIN/LOSE/TIE, own target share and same-target rematch; Daily storage untouched. No server, secret target or authoritative competition is claimed. Personal page noindex; generic OG only. See DUEL_ARCHITECTURE_DECISION.md. Duel/share/accessibility/mobile candidate: 38 Node/44 Chrome tests, full build and dev smoke passed.
 
 ## SEO
 

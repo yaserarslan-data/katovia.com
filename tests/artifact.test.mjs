@@ -23,7 +23,7 @@ test('allowlist rejects traversal and absolute paths', () => {
 test('registry has unique IDs, honest status and existing legacy targets', async () => {
   assert.equal(new Set(entries.map((entry) => entry.id)).size, entries.length);
   assert.equal(sections.length, 6);
-  assert.deepEqual(sections.filter((section) => section.status === 'available').map((section) => section.id), ['today', 'play', 'create', 'tools']);
+  assert.deepEqual(sections.filter((section) => section.status === 'available').map((section) => section.id), ['today', 'play', 'challenge', 'create', 'tools']);
   for (const entry of entries) {
     assert.equal(entry.status, 'legacy');
     await readFile(resolve(distRoot, entry.route.slice(1)));

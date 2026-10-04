@@ -1,1 +1,1 @@
-export const personalPages=Object.freeze([{id:'p',route:'/p/',personal:true,titleKey:'creator.playerTitle',descriptionKey:'creator.playerDescription'}]);
+export const personalPages=Object.freeze([{id:'d',route:'/d/',personal:true,titleKey:'duel.title',seoTitleKey:'duel.playerTitle',descriptionKey:'duel.playerDescription'},{id:'p',route:'/p/',personal:true,titleKey:'creator.template',seoTitleKey:'creator.playerTitle',descriptionKey:'creator.playerDescription'}]);
