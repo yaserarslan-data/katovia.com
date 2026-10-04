@@ -2,7 +2,7 @@ import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { resolve, relative, isAbsolute } from 'node:path';
 
-export const mimeTypes = { html: 'text/html; charset=utf-8', js: 'text/javascript; charset=utf-8', css: 'text/css; charset=utf-8', json: 'application/json; charset=utf-8', jpg: 'image/jpeg', png: 'image/png', svg: 'image/svg+xml', txt: 'text/plain; charset=utf-8' };
+export const mimeTypes = { xml:'application/xml; charset=utf-8', html: 'text/html; charset=utf-8', js: 'text/javascript; charset=utf-8', css: 'text/css; charset=utf-8', json: 'application/json; charset=utf-8', jpg: 'image/jpeg', png: 'image/png', svg: 'image/svg+xml', txt: 'text/plain; charset=utf-8' };
 
 // Plain static serving: no history fallback. Used by preview and direct-route QA.
 export function createStaticServer(root) {

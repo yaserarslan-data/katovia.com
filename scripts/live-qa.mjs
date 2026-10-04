@@ -2,6 +2,7 @@ import { chromium } from '@playwright/test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { experiences } from '../src/catalog/experiences.js';
+import { tools } from '../src/catalog/tools.js';
 const base = 'https://katovia.com'; const browser = await chromium.launch({ channel: 'chrome', headless: true });
 try {
   const context = await browser.newContext({ locale: 'en-US', viewport: { width: 390, height: 844 } });
@@ -25,6 +26,7 @@ try {
   assert.ok(await memory.locator('[data-memory-start]').isHidden()); assert.ok(await action.isHidden());
   await page.locator('[data-locale="tr"]').click(); assert.equal(await page.locator('html').getAttribute('lang'), 'tr');
   if(process.argv[2]!=='A')for(const entry of experiences){const response=await page.goto(base+entry.route);assert.equal(response.status(),200);await page.waitForSelector('[data-experience][data-ready="true"]');await page.locator('canvas').click();await page.locator('[data-motion-toggle]').click();assert.equal(await page.locator('[data-motion-toggle]').getAttribute('aria-pressed'),'true');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
+  if(!['A','B'].includes(process.argv[2])){for(const entry of tools){const response=await page.goto(base+entry.route);assert.equal(response.status(),200);await page.waitForSelector('[data-tool][data-ready="true"]');if(entry.id==='json-formatter')await page.locator('[data-tool-input]').fill('{"live":true}');if(entry.id==='regex-tester')await page.locator('[data-tool-input]').fill('live 123');await page.locator('[data-tool-run]').click();await page.waitForFunction(()=>document.querySelector('[data-tool-output]').value.length>0);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}for(const path of ['/sitemap.xml','/robots.txt'])assert.equal((await context.request.get(base+path)).status(),200);}
   const manifest = JSON.parse(await readFile('scripts/legacy-manifest.json','utf8'));
   for (const item of manifest.files.filter((item) => item.category==='html' && item.path!=='index.html')) {
     const response=await page.goto(base+'/'+item.path); assert.equal(response.status(),200);

@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { sections } from './src/catalog/registry.js';
+import { tools } from './src/catalog/tools.js';
 import { experiences } from './src/catalog/experiences.js';
 import { manifest, safePath } from './scripts/legacy.mjs';
 import { repoRoot, siteRoot, distRoot } from './scripts/paths.mjs';
@@ -40,7 +41,7 @@ export default defineConfig({
     assetsDir: 'katovia-assets',
     target: ['es2022', 'safari16'],
     rolldownOptions: {
-      input: [resolve(siteRoot, 'index.html'), ...sections.map((section) => resolve(siteRoot, `${section.id}/index.html`)), ...experiences.map((entry) => resolve(siteRoot, `${entry.route.slice(1)}index.html`)), resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
+      input: [resolve(siteRoot, 'index.html'), ...sections.map((section) => resolve(siteRoot, `${section.id}/index.html`)), ...[...experiences,...tools].map((entry) => resolve(siteRoot, `${entry.route.slice(1)}index.html`)), resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
     },
   },
 });

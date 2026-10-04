@@ -1,4 +1,4 @@
-const eventNames = new Set(['play_experience_opened', 'home_view', 'daily_view', 'page_view', 'game_start', 'game_complete', 'share_opened', 'share_completed', 'share_cancelled', 'share_failed', 'duel_created', 'duel_opened', 'duel_completed', 'rematch_clicked', 'creator_started', 'creator_published', 'creation_opened', 'tool_opened', 'returning_user', 'daily_streak']);
+const eventNames = new Set(['tool_opened', 'play_experience_opened', 'home_view', 'daily_view', 'page_view', 'game_start', 'game_complete', 'share_opened', 'share_completed', 'share_cancelled', 'share_failed', 'duel_created', 'duel_opened', 'duel_completed', 'rematch_clicked', 'creator_started', 'creator_published', 'creation_opened', 'tool_opened', 'returning_user', 'daily_streak']);
 const enumFields = {
   mode: new Set(['daily', 'practice', 'duel']),
   channel: new Set(['native', 'clipboard', 'manual']),

@@ -1,5 +1,9 @@
 # Cost & License Guardrail Record
 
+## Master Release C
+
+Five original browser-side tools, bounded LCS diff, regex worker with 750 ms hard termination, static sitemap/robots/metadata/schema generator. No package or lockfile change; no external media, network processing, new service or billing. Reuses public Pages. Chosen tools cover developer/design intent with small native implementations; image conversions and larger editing tools deferred.
+
 ## Master Release B
 
 Three PLAY experiences use original Canvas 2D and browser-generated Web Audio. No third-party asset, sound, font, new dependency, API/service, cloud resource, hosting/billing/payment change. Existing package/lockfile unchanged and legacy licenses retained. Reused public Pages with exact-tree rollback and served-byte verification. Responsive Chrome emulation is not physical-device QA.

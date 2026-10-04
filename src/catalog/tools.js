@@ -1,0 +1,2 @@
+import { translate } from '../i18n/index.js';
+export const tools=Object.freeze(['json-formatter','text-diff','regex-tester','css-gradient','color-palette'].map(id=>Object.freeze({id,slug:id,category:['css-gradient','color-palette'].includes(id)?'design':'developer',type:'tool',status:'available',route:`/tools/${id}/`,titles:{tr:translate('tr',`tool.${id}.title`),en:translate('en',`tool.${id}.title`)},titleKey:`tool.${id}.title`,descriptionKey:`tool.${id}.description`,seoTitleKey:`tool.${id}.seoTitle`,module:'client',tool:true})));

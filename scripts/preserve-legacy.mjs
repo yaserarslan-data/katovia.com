@@ -1,7 +1,7 @@
 import { mkdir, copyFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { manifest, checkLegacy, safePath } from './legacy.mjs';
-import { repoRoot, distRoot } from './paths.mjs';
+import { repoRoot, distRoot, siteRoot } from './paths.mjs';
 
 // Validate every source before copying anything. Never copy the repository root.
 await checkLegacy();
@@ -12,3 +12,4 @@ for (const file of manifest.files) {
   await copyFile(safePath(repoRoot, file.path), destination);
 }
 console.log('Legacy preserved byte-for-byte:', await checkLegacy(distRoot, { rootCutover: true }));
+for(const name of ['sitemap.xml','robots.txt'])await copyFile(safePath(siteRoot,name),safePath(distRoot,name));

@@ -1,0 +1,12 @@
+import {formatJSON,diffLines,palette,gradient} from './logic.js';
+import {copyText} from '../core/share.js';
+import {t} from '../i18n/index.js';
+import {track} from '../core/analytics.js';
+import '../styles/tools.css';
+export function mount(root){let worker,timer,dead=false;const get=name=>root.querySelector(`[data-tool-${name}]`);const output=get('output'),status=get('status'),run=get('run'),preview=get('preview');
+ function stop(){worker?.terminate();worker=null;clearTimeout(timer);run.disabled=false;}
+ function complete(text){if(dead)return;output.value=text;status.textContent=t('tool.done');stop();}
+ function failure(key='tool.error'){stop();output.value='';preview.replaceChildren();status.textContent=t(key);}
+ const execute=()=>{stop();status.textContent='';try{if(root.dataset.tool==='json-formatter')complete(formatJSON(get('input').value));else if(root.dataset.tool==='text-diff')complete(diffLines(get('input').value,get('second').value));else if(root.dataset.tool==='regex-tester'){if(get('input').value.length>10000||get('pattern').value.length>500)return failure('tool.limit');run.disabled=true;worker=new Worker(new URL('./regex-worker.js',import.meta.url),{type:'module'});worker.onmessage=({data})=>data.error?failure():complete(data.output);worker.onerror=()=>failure();timer=setTimeout(()=>failure('tool.timeout'),750);worker.postMessage({pattern:get('pattern').value,flags:get('flags').value,input:get('input').value});}else if(root.dataset.tool==='css-gradient'){const result=gradient(get('color1').value,get('color2').value,Number(get('angle').value));preview.style.background=result.slice(12,-1);complete(result);}else{const colors=palette(get('color1').value);preview.replaceChildren(...colors.map(color=>{const swatch=document.createElement('span');swatch.style.background=color;swatch.title=color;return swatch;}));complete(colors.join('\n'));}}catch(error){failure(error instanceof RangeError?'tool.limit':'tool.error');}};
+ const copy=async()=>{if(!output.value)return;const result=await copyText(output.value);if(dead)return;if(result.status==='manual'){output.focus();output.select();}status.textContent=t(result.status==='copied'?'tool.copied':'tool.manual');};run.addEventListener('click',execute);get('copy').addEventListener('click',copy);root.dataset.ready='true';track('tool_opened',{tool_id:root.dataset.tool});return {dispose(){dead=true;stop();run.removeEventListener('click',execute);get('copy').removeEventListener('click',copy);}};
+}

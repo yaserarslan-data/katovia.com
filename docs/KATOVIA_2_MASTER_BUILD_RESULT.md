@@ -6,7 +6,7 @@ IN PROGRESS. Work follows the ordered phases and logical release packages; earli
 
 ## Releases Completed
 
-Release A published and live-verified: `4e6b0ff84737fd447d9bafb04cc759bac1822d0e`; exact-tree rollback `e1f6e19852b4631c001feb796a42e865d88e3144` on `codex/katovia-master-a-rollback`. 31 Node/35 Chrome tests and dev smoke passed; live QA covered root routes, daily results, sharing, locale, persistence and 18 legacy HTML pages. Release B final QA passed: 32 Node/38 Chrome tests and dev smoke. B publication and C/D/E remain pending.
+Release A published and live-verified: `4e6b0ff84737fd447d9bafb04cc759bac1822d0e`; rollback `e1f6e19852b4631c001feb796a42e865d88e3144`. Release B published and live-verified: `f825e5625ebffbb4f4ff3f5f8c1a25df567137e0`; rollback `e3097902dd7587d99296966dcb7737f88d296198`. Remote branches `codex/katovia-master-a-rollback` and `codex/katovia-master-b-rollback` retain exact prior trees. A: 31 Node/35 Chrome; B: 32/38; C candidate: 35/39, all with full build and development smoke. Served-byte/live functional checks passed A/B including 18 legacy HTML pages. C/D/E publication pending.
 
 ## Live Routes
 
@@ -22,7 +22,7 @@ Particle Universe has attract/repel/orbit, burst and trails. Pixel Piano uses pe
 
 ## Tools
 
-Pending selection and implementation.
+Five implemented native browser tools: JSON Formatter (128 Ki-character limit), Text Diff (LCS, 200 lines/text), Regex Tester (isolated worker, 750 ms timeout, bounded input/output), CSS Gradient and Color Palette (RGB tints). Chosen for developer/design SEO intent, low implementation cost and browser-only privacy. Static routes/metadata/guides come from the single tool registry. No login, upload, ad gate or new dependency.
 
 ## Creator
 
@@ -34,7 +34,7 @@ Pending safe free-storage feasibility assessment and Reaction reuse.
 
 ## SEO
 
-Root canonical/index strategy already exists; registry SEO, sitemap, robots, OG and schema audit pending.
+Registry produces unique static titles/descriptions, canonical and OG URL/title/description, sitemap and robots. Real tools have WebApplication schema; PLAY has SoftwareApplication schema, with only observable facts and no ratings/reviews/counts. Locale switches update UI and OG metadata; server HTML is English, TR UI is client-selected rather than separate locale routes. General pages index; preview compatibility/404/personal creation and duel pages noindex. Personal URLs are excluded from sitemap.
 
 ## Search Console Readiness
 

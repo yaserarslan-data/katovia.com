@@ -6,6 +6,8 @@ import { gameMarkup } from '../src/games/stop-at-five/markup.js';
 import { markup as memoryMarkup } from '../src/games/memory-grid/mount.js';
 import { markup as reactionMarkup } from '../src/games/reaction/mount.js';
 import { translate } from '../src/i18n/index.js';
+import { tools } from '../src/catalog/tools.js';
+import { toolMarkup } from '../src/features/tools.js';
 import { experiences } from '../src/catalog/experiences.js';
 import { experienceMarkup } from '../src/features/activities.js';
 
@@ -43,28 +45,31 @@ function home(route) {
 }
 
 function sectionPage(section) {
-  const available = section.id === 'play' || section.activity ? experiences.filter((entry)=>entry.id!==section.id) : entries.filter((entry) => entry.type === section.type);
+  const available = section.tool || section.id==='tools' ? tools.filter((entry)=>entry.id!==section.id) : section.id === 'play' || section.activity ? experiences.filter((entry)=>entry.id!==section.id) : entries.filter((entry) => entry.type === section.type);
   return `<main id="main-content" class="container section-page${section.id === 'today' ? ' daily-page' : ''}" tabindex="-1">
-    <header class="section-intro"><p class="eyebrow">KATOVIA / ${txt(`nav.${section.activity ? 'play' : section.id}`)}</p>${txt(section.activity ? section.titleKey : `section.${section.id}.label`, 'h1')}${txt(section.activity ? section.descriptionKey : `section.${section.id}.description`, 'p')}</header>
-    ${section.activity ? experienceMarkup(section) + txt(`play.${section.id}.about`, 'p', 'class="experience-guide"') : section.id === 'today' ? daily(section.route) + `<div id="memory-grid">${memoryMarkup()}</div><div id="reaction">${reactionMarkup()}</div>` : section.id === 'play' ? '' : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
-    ${available.length ? `<section aria-labelledby="collection-title"><div class="section-heading">${txt(section.id === 'tools' ? 'tools.collection' : section.id === 'play' ? 'play.collection' : 'lab.collection', 'h2', 'id="collection-title"')}<span class="eyebrow"><span>${available.length}</span> ${txt('common.projects')}</span></div><div class="section-grid">${available.map((entry) => card(entry, section.route)).join('\n')}</div></section>` : ''}
+    <header class="section-intro"><p class="eyebrow">KATOVIA / ${txt(`nav.${section.tool ? 'tools' : section.activity ? 'play' : section.id}`)}</p>${txt(section.activity || section.tool ? section.titleKey : `section.${section.id}.label`, 'h1')}${txt(section.activity || section.tool ? section.descriptionKey : `section.${section.id}.description`, 'p')}</header>
+    ${section.tool ? toolMarkup(section)+txt(`tool.${section.id}.about`,'p','class="experience-guide"') : section.activity ? experienceMarkup(section) + txt(`play.${section.id}.about`, 'p', 'class="experience-guide"') : section.id === 'today' ? daily(section.route) + `<div id="memory-grid">${memoryMarkup()}</div><div id="reaction">${reactionMarkup()}</div>` : ['play','tools'].includes(section.id) ? '' : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
+    ${available.length ? `<section aria-labelledby="collection-title"><div class="section-heading">${txt(section.id === 'tools' || section.tool ? 'tools.collection' : section.id === 'play' || section.activity ? 'play.collection' : 'lab.collection', 'h2', 'id="collection-title"')}<span class="eyebrow"><span>${available.length}</span> ${txt('common.projects')}</span></div><div class="section-grid">${available.map((entry) => card(entry, section.route)).join('\n')}</div></section>` : ''}
     ${section.id === 'lab' ? `<p class="legacy-note">${txt('lab.legacyIntro')} <a href="${hrefFrom(section.route, '/lab/')}" data-i18n="lab.legacyLink">${escape(translate('en', 'lab.legacyLink'))}</a>.</p>` : ''}
   </main>`;
 }
 
 function documentPage(section) {
   const route = section?.route || '/';
-  const titleKey = section?.activity ? section.seoTitleKey : section ? `page.${section.id}.title` : 'home.title';
-  const descriptionKey = section?.activity ? section.descriptionKey : section ? `section.${section.id}.description` : 'home.meta';
+  const titleKey = section?.activity || section?.tool ? section.seoTitleKey : section ? `page.${section.id}.title` : 'home.title';
+  const descriptionKey = section?.activity || section?.tool ? section.descriptionKey : section ? `section.${section.id}.description` : 'home.meta';
   // Paths below are relative to the source HTML, so Vite can resolve out-of-root modules.
   const sourceScript = '../'.repeat(route.split('/').filter(Boolean).length + 1) + 'src/shell/main.js';
+  const schema=section?.tool||section?.activity?JSON.stringify({'@context':'https://schema.org','@type':section.tool?'WebApplication':'SoftwareApplication',name:translate('en',section.titleKey),description:translate('en',descriptionKey),url:`https://katovia.com${route}`,applicationCategory:section.tool?'UtilitiesApplication':'EntertainmentApplication',operatingSystem:'Web browser',isAccessibleForFree:true,inLanguage:['en','tr']}).replace(/</g,'\\u003c'):null;
   return `<!doctype html>
 <!-- Generated from src/catalog/registry.js by scripts/generate-pages.mjs. -->
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title data-i18n="${titleKey}">${escape(translate('en', titleKey))}</title><meta name="description" data-i18n-content="${descriptionKey}" content="${escape(translate('en', descriptionKey))}">
-  <link rel="canonical" href="https://katovia.com${route}"><meta name="robots" content="${section?.status === 'planned' ? 'noindex, follow' : 'index, follow'}"><meta name="theme-color" content="#0c0e10">
+  <link rel="canonical" href="https://katovia.com${route}"><meta name="robots" content="index, follow"><meta name="theme-color" content="#0c0e10">
+  <meta property="og:type" content="website"><meta property="og:title" data-i18n-content="${titleKey}" content="${escape(translate('en', titleKey))}"><meta property="og:description" data-i18n-content="${descriptionKey}" content="${escape(translate('en', descriptionKey))}"><meta property="og:url" content="https://katovia.com${route}"><meta property="og:site_name" content="Katovia"><meta property="og:locale" data-i18n-content="seo.locale" content="en_US"><meta name="twitter:card" content="summary">
+  ${schema?`<script type="application/ld+json">${schema}</script>`:''}
   <script type="module" src="${sourceScript}"></script>
 </head>
 <body data-page="${section?.id || 'home'}">
@@ -93,7 +98,10 @@ const compatibilityPages = [{ id: '', route: '/' }, ...sections].map(({ id, rout
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Katovia — Moved</title><link rel="canonical" href="https://katovia.com${route}"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0;url=${route}"><script>location.replace(${JSON.stringify(route)} + location.search + location.hash);</script></head><body><a href="${route}">Katovia / Devam et / Continue</a></body></html>
 `
 }));
-const pages = [{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), ...experiences.map((entry) => ({ path:`${entry.route.slice(1)}index.html`, html:documentPage(entry) })), { path: '404.html', html: notFound }, ...compatibilityPages];
+const indexable = ['/', ...sections.map(entry=>entry.route), ...experiences.map(entry=>entry.route),...tools.map(entry=>entry.route)];
+const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexable.map(route=>`  <url><loc>https://katovia.com${route}</loc></url>`).join('\n')}\n</urlset>\n`;
+const robots='User-agent: *\nAllow: /\nDisallow: /v2/\nDisallow: /p/\nDisallow: /d/\nSitemap: https://katovia.com/sitemap.xml\n';
+const pages = [{path:'sitemap.xml',html:sitemap},{path:'robots.txt',html:robots},{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), ...[...experiences,...tools].map((entry) => ({ path:`${entry.route.slice(1)}index.html`, html:documentPage(entry) })), { path: '404.html', html: notFound }, ...compatibilityPages];
 for (const page of pages) {
   const path = `${siteRoot}/${page.path}`;
   if (process.argv.includes('--check')) {
