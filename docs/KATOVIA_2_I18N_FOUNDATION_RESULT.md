@@ -2,7 +2,7 @@
 
 ## Status
 
-Implementation and local QA COMPLETE. Production publication is prepared; final deployment evidence will be appended after live verification. The user's explicit deploy instruction supersedes the pasted brief's no-deploy clause for this task only.
+COMPLETE — implementation, local QA and production publication verified on 4 October 2026. The user's explicit deploy instruction supersedes the pasted brief's no-deploy clause for this task only.
 
 ## Languages
 
@@ -82,7 +82,13 @@ External translation services: **none**. New dependencies: **none**. Paid servic
 
 Pre-deploy verification: Pages source is `main` / `/`, legacy build type, custom domain `katovia.com`, HTTPS enforced. Last successful build: `4afd0a1751905558bdc0ebf05ee5a509932f9139`. Live 36 served legacy files match that commit exactly; CNAME is intentionally not publicly served by Pages and its domain is verified through the Pages API. Source/artifact preservation covers all 37 files. Worktree CRLF and production Git-blob LF were distinguished rather than rewriting legacy files.
 
-Only compiled `v2/` HTML/assets will be added to the existing production tree. Root HTML, games, tools, data, vendor, assets, app-ads.txt, CNAME and original 404 behavior remain unchanged. Source/docs/dependencies/test output and `tanitim/` are excluded. Both `tanitim/` files match their pre-work hashes. Known-good live bytes are retained locally, and a rollback commit with the exact prior tree is prepared before publication. Rollback uses a forward commit, never force-push/reset/clean.
+Only compiled `v2/` HTML/assets were added to the existing production tree. Root HTML, games, tools, data, vendor, assets, app-ads.txt, CNAME and original 404 behavior remain unchanged. Source/docs/dependencies/test output and `tanitim/` are excluded from the Pages publication tree. Both `tanitim/` files match their pre-work hashes. Known-good live bytes are retained locally, and a rollback commit with the exact prior tree was prepared before publication. Rollback uses a forward commit, never force-push/reset/clean.
+
+Production deploy: **YES**, successful existing GitHub Pages publication. Source snapshot: `71716b040a344deae076ae9df35fff69f6e8c208` on `codex/katovia-v2-foundation`. Publication commit: `95afe999ae5190e31d8226a3f70866feb6cd06ab` on `main`, containing exactly nine added `v2/` files and no other tree changes. Pages reported `built` for that exact commit. The retained rollback commit is `562815ce6bec64ca3309365ca66be210b31fa8e2`; its tree exactly equals the known-good legacy tree. It was not applied because publication and QA succeeded. No rollback drill was run against production.
+
+Post-deploy verification passed: all 36 publicly served legacy files matched their pre-deploy Git-blob bytes; CNAME remained configured to `katovia.com` in Pages, and all 37 repository/artifact legacy files remained preserved. All nine live v2 files matched the tested artifact byte-for-byte. Live Chrome smoke passed all seven v2 routes, Turkish browser detection, English switching/persistence, mobile overflow/navigation and the existing legacy QR generator. Pages source/domain settings remained unchanged. The release runner would have pushed and verified the prepared rollback on build or live QA failure; no failure occurred.
+
+Public preview: [Katovia V2](https://katovia.com/v2/) and [TODAY](https://katovia.com/v2/today/). Existing [root Katovia](https://katovia.com/) remains legacy. Source and final report are retained separately on the development branch; merging that branch directly into the Pages source would publish development files and is not the release procedure used here. Future releases should continue to compose an artifact-only tree and retain a verified rollback tree.
 
 ## Next Recommended Step
 
