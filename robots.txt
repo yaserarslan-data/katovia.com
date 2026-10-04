@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /v2/
-Disallow: /p/
-Disallow: /d/
-Sitemap: https://katovia.com/sitemap.xml
