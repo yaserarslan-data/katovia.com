@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /v2/
-# Personal player pages use HTML noindex and are excluded from the sitemap.
+Disallow: /p/
+Disallow: /d/
 Sitemap: https://katovia.com/sitemap.xml
