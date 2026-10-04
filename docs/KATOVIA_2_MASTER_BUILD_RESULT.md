@@ -6,7 +6,7 @@ IN PROGRESS. Work follows the ordered phases and logical release packages; earli
 
 ## Releases Completed
 
-Root cutover was already verified before this task. Release A (Memory Grid + Reaction) is implemented; release QA/publication evidence is recorded below as it completes. B/C/D/E remain pending.
+Release A published and live-verified: `4e6b0ff84737fd447d9bafb04cc759bac1822d0e`; exact-tree rollback `e1f6e19852b4631c001feb796a42e865d88e3144` on `codex/katovia-master-a-rollback`. 31 Node/35 Chrome tests and dev smoke passed; live QA covered root routes, daily results, sharing, locale, persistence and 18 legacy HTML pages. Release B final QA passed: 32 Node/38 Chrome tests and dev smoke. B publication and C/D/E remain pending.
 
 ## Live Routes
 
@@ -18,7 +18,7 @@ STOP AT 5.00 preserved. Memory Grid reuses the existing ledger engine with per-g
 
 ## Play Experiences
 
-Pending: Particle Universe, Pixel Piano, Koi Pond.
+Particle Universe has attract/repel/orbit, burst and trails. Pixel Piano uses pentatonic Web Audio tones, capped voices, keyboard and independent pointer gestures, mute and hidden-tab audio suspension. Koi Pond has procedural fish, food attraction and ripples. Canvas runtime adapts viewport/DPR/frame-time, caps DPR at 2, targets 60 fps with 30 fps fallback, pauses hidden/reduced-motion and disposes RAF/listeners/observers. Targets are policy, not a physical-device benchmark. Three dedicated static routes contain unique metadata, usage guides and links to other experiences. All rendering/audio is original browser-generated code; no new dependency.
 
 ## Tools
 

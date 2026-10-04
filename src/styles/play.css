@@ -1,0 +1,4 @@
+.experience-controls {display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;}
+.experience-controls select {min-height:44px;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:.5rem;padding:.5rem;}
+.experience-canvas {display:block;width:100%;height:clamp(340px,55svh,600px);border-radius:1rem;background:#050c14;touch-action:none;}
+.experience {padding:clamp(.8rem,2vw,1.5rem);}

@@ -1,5 +1,9 @@
 # Cost & License Guardrail Record
 
+## Master Release B
+
+Three PLAY experiences use original Canvas 2D and browser-generated Web Audio. No third-party asset, sound, font, new dependency, API/service, cloud resource, hosting/billing/payment change. Existing package/lockfile unchanged and legacy licenses retained. Reused public Pages with exact-tree rollback and served-byte verification. Responsive Chrome emulation is not physical-device QA.
+
 ## Master Release A
 
 Memory Grid and Reaction use original DOM/CSS and native performance/crypto/browser APIs. Shared ledger/share/i18n reused. New dependencies: none; existing package/lockfile unchanged. No external media/audio/fonts, paid service, cloud resource, hosting/billing/payment change. Existing public Pages is reused; releases retain exact rollback trees and legacy paths.

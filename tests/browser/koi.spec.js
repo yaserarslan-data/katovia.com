@@ -1,0 +1,5 @@
+import {test,expect} from '@playwright/test';
+test('Koi feeding, ripples, keyboard, responsive layout and reduced motion',async({page},info)=>{
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/play/koi-pond/');const host=page.locator('[data-experience]');await expect(host).toHaveAttribute('data-ready','true');const canvas=host.locator('canvas');await canvas.click();await expect(host).toHaveAttribute('data-feed-count','1');await canvas.focus();await page.keyboard.press('Space');await expect(host).toHaveAttribute('data-feed-count','2');
+ for(const width of [360,390,430,768,1024,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);}await page.setViewportSize({width:390,height:844});await page.screenshot({path:info.outputPath('koi-mobile.png'),fullPage:true});await page.emulateMedia({reducedMotion:'reduce'});await page.reload();await expect(host.locator('[data-motion-toggle]')).toHaveAttribute('aria-pressed','true');expect(errors).toEqual([]);
+});

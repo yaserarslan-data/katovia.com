@@ -1,6 +1,6 @@
 export const sections = Object.freeze([
   { id: 'today', type: 'daily', title: 'TODAY', route: '/today/', status: 'available' },
-  { id: 'play', type: 'play', title: 'PLAY', route: '/play/', status: 'planned' },
+  { id: 'play', type: 'play', title: 'PLAY', route: '/play/', status: 'available' },
   { id: 'challenge', type: 'challenge', title: 'CHALLENGE', route: '/challenge/', status: 'planned' },
   { id: 'create', type: 'create', title: 'CREATE', route: '/create/', status: 'planned' },
   { id: 'tools', type: 'tool', title: 'TOOLS', route: '/tools/', status: 'legacy' },

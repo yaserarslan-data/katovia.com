@@ -6,6 +6,8 @@ import { gameMarkup } from '../src/games/stop-at-five/markup.js';
 import { markup as memoryMarkup } from '../src/games/memory-grid/mount.js';
 import { markup as reactionMarkup } from '../src/games/reaction/mount.js';
 import { translate } from '../src/i18n/index.js';
+import { experiences } from '../src/catalog/experiences.js';
+import { experienceMarkup } from '../src/features/activities.js';
 
 const escape = (text) => String(text).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const hrefFrom = (from, to) => {
@@ -41,21 +43,21 @@ function home(route) {
 }
 
 function sectionPage(section) {
-  const available = entries.filter((entry) => entry.type === section.type);
+  const available = section.id === 'play' || section.activity ? experiences.filter((entry)=>entry.id!==section.id) : entries.filter((entry) => entry.type === section.type);
   return `<main id="main-content" class="container section-page${section.id === 'today' ? ' daily-page' : ''}" tabindex="-1">
-    <header class="section-intro"><p class="eyebrow">KATOVIA / ${txt(`nav.${section.id}`)}</p>${txt(`section.${section.id}.label`, 'h1')}${txt(`section.${section.id}.description`, 'p')}</header>
-    ${section.id === 'today' ? daily(section.route) + `<div id="memory-grid">${memoryMarkup()}</div><div id="reaction">${reactionMarkup()}</div>` : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
-    ${available.length ? `<section aria-labelledby="collection-title"><div class="section-heading">${txt(section.id === 'tools' ? 'tools.collection' : 'lab.collection', 'h2', 'id="collection-title"')}<span class="eyebrow"><span>${available.length}</span> ${txt('common.projects')}</span></div><div class="section-grid">${available.map((entry) => card(entry, section.route)).join('\n')}</div></section>` : ''}
+    <header class="section-intro"><p class="eyebrow">KATOVIA / ${txt(`nav.${section.activity ? 'play' : section.id}`)}</p>${txt(section.activity ? section.titleKey : `section.${section.id}.label`, 'h1')}${txt(section.activity ? section.descriptionKey : `section.${section.id}.description`, 'p')}</header>
+    ${section.activity ? experienceMarkup(section) + txt(`play.${section.id}.about`, 'p', 'class="experience-guide"') : section.id === 'today' ? daily(section.route) + `<div id="memory-grid">${memoryMarkup()}</div><div id="reaction">${reactionMarkup()}</div>` : section.id === 'play' ? '' : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
+    ${available.length ? `<section aria-labelledby="collection-title"><div class="section-heading">${txt(section.id === 'tools' ? 'tools.collection' : section.id === 'play' ? 'play.collection' : 'lab.collection', 'h2', 'id="collection-title"')}<span class="eyebrow"><span>${available.length}</span> ${txt('common.projects')}</span></div><div class="section-grid">${available.map((entry) => card(entry, section.route)).join('\n')}</div></section>` : ''}
     ${section.id === 'lab' ? `<p class="legacy-note">${txt('lab.legacyIntro')} <a href="${hrefFrom(section.route, '/lab/')}" data-i18n="lab.legacyLink">${escape(translate('en', 'lab.legacyLink'))}</a>.</p>` : ''}
   </main>`;
 }
 
 function documentPage(section) {
   const route = section?.route || '/';
-  const titleKey = section ? `page.${section.id}.title` : 'home.title';
-  const descriptionKey = section ? `section.${section.id}.description` : 'home.meta';
+  const titleKey = section?.activity ? section.seoTitleKey : section ? `page.${section.id}.title` : 'home.title';
+  const descriptionKey = section?.activity ? section.descriptionKey : section ? `section.${section.id}.description` : 'home.meta';
   // Paths below are relative to the source HTML, so Vite can resolve out-of-root modules.
-  const sourceScript = section ? '../../src/shell/main.js' : '../src/shell/main.js';
+  const sourceScript = '../'.repeat(route.split('/').filter(Boolean).length + 1) + 'src/shell/main.js';
   return `<!doctype html>
 <!-- Generated from src/catalog/registry.js by scripts/generate-pages.mjs. -->
 <html lang="en">
@@ -91,7 +93,7 @@ const compatibilityPages = [{ id: '', route: '/' }, ...sections].map(({ id, rout
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Katovia — Moved</title><link rel="canonical" href="https://katovia.com${route}"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0;url=${route}"><script>location.replace(${JSON.stringify(route)} + location.search + location.hash);</script></head><body><a href="${route}">Katovia / Devam et / Continue</a></body></html>
 `
 }));
-const pages = [{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), { path: '404.html', html: notFound }, ...compatibilityPages];
+const pages = [{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), ...experiences.map((entry) => ({ path:`${entry.route.slice(1)}index.html`, html:documentPage(entry) })), { path: '404.html', html: notFound }, ...compatibilityPages];
 for (const page of pages) {
   const path = `${siteRoot}/${page.path}`;
   if (process.argv.includes('--check')) {
