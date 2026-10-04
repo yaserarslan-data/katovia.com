@@ -1,78 +1,2006 @@
-<!doctype html>
-<!-- Generated from src/catalog/registry.js by scripts/generate-pages.mjs. -->
-<html lang="en">
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title data-i18n="home.title">Katovia — Play something</title><meta name="description" data-i18n-content="home.meta" content="Katovia 2.0: play, create, challenge.">
-  <link rel="canonical" href="https://katovia.com/"><meta name="robots" content="index, follow"><meta name="theme-color" content="#0c0e10">
-  <script type="module" crossorigin src="./katovia-assets/main-DgCapjr6.js"></script>
-  <link rel="stylesheet" crossorigin href="./katovia-assets/main-DYkO8tFs.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katovia</title>
+  <style>
+    :root{
+      --bg:#030813;
+      --panel:#081224;
+      --panel2:#0b1730;
+      --line:rgba(132,166,255,.18);
+      --text:#f3f7ff;
+      --muted:#9aa8c7;
+      --blue:#38a6ff;
+      --violet:#9b5cff;
+      --green:#25d98b;
+      --orange:#ff8a2b;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+      background:radial-gradient(circle at 70% 12%,rgba(68,112,255,.26),transparent 32%),
+                 radial-gradient(circle at 42% 28%,rgba(149,59,255,.18),transparent 28%),
+                 linear-gradient(180deg,#020711 0%,#051020 52%,#030813 100%);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .topbar{
+      height:64px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 48px;
+      background:rgba(2,7,17,.86);
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter:blur(14px);
+    }
+    .brand{min-height:44px;display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px}
+    .mark{
+      width:32px;height:32px;border-radius:8px;
+      background:linear-gradient(135deg,var(--blue),var(--violet));
+      display:grid;place-items:center;
+      box-shadow:0 0 28px rgba(74,129,255,.42);
+      font-weight:900;
+    }
+    .nav{display:flex;gap:20px;align-items:center;margin-left:auto;color:#c6d0e8;font-weight:650;font-size:14px}
+    .nav a{padding:23px 0 18px;border-bottom:3px solid transparent}
+    .nav a.active{color:white;border-color:var(--blue)}
+    .mobileMenuBtn,.mobileNav{display:none}
+    .mobileMenuBtn{
+      width:44px;
+      height:44px;
+      padding:0;
+      border:1px solid var(--line);
+      border-radius:11px;
+      background:rgba(255,255,255,.05);
+      color:white;
+      place-items:center;
+      cursor:pointer;
+    }
+    .menuIcon{width:20px;display:grid;gap:4px}
+    .menuIcon span{
+      display:block;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:currentColor;
+      transition:transform .18s ease,opacity .18s ease;
+    }
+    .mobileMenuBtn[aria-expanded="true"] .menuIcon span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .mobileMenuBtn[aria-expanded="true"] .menuIcon span:nth-child(2){opacity:0}
+    .mobileMenuBtn[aria-expanded="true"] .menuIcon span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    .nav a:focus-visible,.mobileNav a:focus-visible,.mobileMenuBtn:focus-visible{
+      outline:3px solid rgba(56,166,255,.72);
+      outline-offset:3px;
+    }
+    .hero{
+      min-height:344px;
+      display:grid;
+      grid-template-columns:1fr 1.1fr;
+      gap:34px;
+      padding:40px 48px 30px;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid rgba(132,166,255,.12);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(90deg,rgba(56,166,255,.04),transparent 38%,rgba(155,92,255,.035));
+    }
+    .heroCopy,.heroVisual{position:relative;z-index:1;min-width:0}
+    .heroCopy{align-self:center;animation:homeReveal .62s cubic-bezier(.2,.75,.25,1) both}
+    .heroVisual{animation:homeReveal .72s .12s cubic-bezier(.2,.75,.25,1) both}
+    .hero h1{
+      font-size:43px;
+      line-height:1.04;
+      margin:0 0 14px;
+      letter-spacing:-.65px;
+    }
+    .gradientText{background:linear-gradient(90deg,var(--blue),var(--violet));-webkit-background-clip:text;color:transparent}
+    .hero p{max-width:480px;color:#b7c3dc;font-size:15.5px;line-height:1.52;margin:0 0 21px}
+    .buttons{display:flex;gap:16px;flex-wrap:wrap}
+    .btn{
+      height:46px;
+      padding:0 20px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      cursor:pointer;
+      background:rgba(255,255,255,.05);
+      color:white;
+    }
+    .btn.primary{border:0;background:linear-gradient(135deg,#28a9ff,#9b35ff);box-shadow:0 12px 36px rgba(91,88,255,.35)}
+    .btn:not(.primary){background:rgba(255,255,255,.07);color:#eaf1ff}
+    .orbWrap{position:relative;min-height:274px;display:grid;place-items:center}
+    .orbWrap::before{
+      content:"";
+      position:absolute;
+      width:min(500px,92%);
+      height:238px;
+      border-radius:50%;
+      opacity:.2;
+      background-image:linear-gradient(rgba(111,153,255,.22) 1px,transparent 1px),
+                       linear-gradient(90deg,rgba(111,153,255,.22) 1px,transparent 1px);
+      background-size:26px 26px;
+      mask-image:radial-gradient(ellipse,black 22%,transparent 72%);
+      -webkit-mask-image:radial-gradient(ellipse,black 22%,transparent 72%);
+      animation:heroGridDrift 22s linear infinite;
+    }
+    .orbWrap::after{
+      content:"";
+      position:absolute;
+      width:310px;
+      height:168px;
+      border:1px solid rgba(115,156,255,.18);
+      border-radius:50%;
+      transform:rotate(-8deg);
+      box-shadow:0 0 36px rgba(87,105,255,.08);
+    }
+    .galaxy{
+      position:absolute;width:440px;height:210px;border-radius:50%;
+      background:radial-gradient(circle,rgba(75,160,255,.45),transparent 28%),
+                 conic-gradient(from 20deg,transparent,rgba(87,128,255,.55),transparent,rgba(149,59,255,.5),transparent);
+      filter:blur(.2px);
+      opacity:.8;
+      transform:rotate(-8deg);
+    }
+    .kCube{
+      width:140px;height:140px;border-radius:26px;
+      background:linear-gradient(145deg,#143a92,#10225c 45%,#7e3dff);
+      display:grid;place-items:center;
+      font-size:80px;
+      font-weight:950;
+      box-shadow:0 0 60px rgba(48,145,255,.75),inset 0 0 30px rgba(255,255,255,.16);
+      z-index:2;
+      animation:heroKBreathe 6.5s ease-in-out infinite;
+    }
+    .heroCodeScene{
+      position:relative;
+      width:min(100%,560px);
+      height:274px;
+      display:grid;
+      place-items:center;
+    }
+    .miniCodePanel{
+      position:absolute;
+      z-index:3;
+      width:132px;
+      overflow:hidden;
+      border:1px solid rgba(var(--panel-accent),.32);
+      border-radius:10px;
+      background:linear-gradient(180deg,rgba(11,25,51,.96),rgba(5,13,29,.94));
+      box-shadow:0 14px 32px rgba(0,0,0,.28),0 0 20px rgba(var(--panel-accent),.09);
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      transition:border-color .25s ease,box-shadow .25s ease,filter .25s ease;
+    }
+    .miniCodePanel:hover{border-color:rgba(var(--panel-accent),.58);box-shadow:0 18px 36px rgba(0,0,0,.34),0 0 24px rgba(var(--panel-accent),.15);filter:brightness(1.06)}
+    .miniCodeTop{
+      height:27px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:8px;
+      padding:0 8px;
+      border-bottom:1px solid rgba(132,166,255,.12);
+      background:rgba(17,35,68,.88);
+    }
+    .miniCodeDots{display:flex;gap:4px}
+    .miniCodeDots i{width:5px;height:5px;border-radius:50%;background:#ff6670}
+    .miniCodeDots i:nth-child(2){background:#f7bd4e}.miniCodeDots i:nth-child(3){background:#45d48b}
+    .miniCodeLabel{color:rgb(var(--panel-accent));font-size:8px;font-weight:850;letter-spacing:.7px;text-transform:uppercase}
+    .miniCodeBody{display:grid;gap:6px;padding:9px 10px 10px}
+    .miniCodeLine{height:4px;border-radius:999px;background:linear-gradient(90deg,rgba(var(--panel-accent),.78),rgba(var(--panel-accent),.12));opacity:.78}
+    .miniCodeLine:nth-child(2){width:72%}.miniCodeLine:nth-child(3){width:88%}.miniCodeLine:nth-child(4){width:54%}
+    .panelHtml{--panel-accent:235,129,166;left:2%;top:18px;animation:orbitHtml 14s ease-in-out infinite}
+    .panelJs{--panel-accent:93,177,255;right:0;top:56px;animation:orbitJs 17s ease-in-out infinite}
+    .panelDart{--panel-accent:86,215,198;left:12%;bottom:10px;animation:orbitDart 19s ease-in-out infinite}
+    .homeContent .quick{opacity:0;animation:homeReveal .52s cubic-bezier(.2,.75,.25,1) forwards;animation-delay:calc(220ms + var(--home-index) * 70ms)}
+    main{padding:24px 48px 42px}
+    .quickGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-8px}
+    .quick{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,rgba(13,27,58,.82),rgba(7,15,31,.82));
+      border-radius:12px;
+      padding:17px;
+      min-height:98px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      cursor:pointer;
+      transition:.2s transform,.2s border-color,.2s box-shadow;
+    }
+    .quick:hover,.quick:focus-visible{
+      transform:translateY(-3px);
+      border-color:rgba(var(--quick-accent),.62);
+      box-shadow:0 16px 34px rgba(0,0,0,.2),0 0 22px rgba(var(--quick-accent),.08);
+    }
+    .quick:focus-visible,.project:focus-visible,.allLink:focus-visible,.btn:focus-visible{
+      outline:3px solid rgba(56,166,255,.78);
+      outline-offset:3px;
+    }
+    .quick .qIcon{
+      width:54px;height:54px;border-radius:13px;
+      display:grid;place-items:center;
+      font-size:25px;
+      flex:0 0 auto;
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .quick:hover .qIcon,.quick:focus-visible .qIcon{transform:translateY(-2px) scale(1.035);box-shadow:0 8px 20px rgba(var(--quick-accent),.18)}
+    .quick h3{margin:0 0 5px;font-size:16px}
+    .quick p{margin:0;color:var(--muted);font-size:13px;line-height:1.35}
+    .sectionHead{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      margin:26px 0 14px;
+      border-top:1px solid rgba(132,166,255,.13);
+      padding-top:18px;
+    }
+    .sectionHead h2{margin:0;font-size:24px}
+    .sectionHead p{margin:5px 0 0;color:var(--muted)}
+    .allLink{min-height:44px;display:flex;align-items:center;color:#c7d4f2;font-weight:750}
+    .projectGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+    .project{
+      border:1px solid var(--line);
+      background:rgba(9,19,39,.82);
+      border-radius:10px;
+      overflow:hidden;
+      cursor:pointer;
+      min-height:196px;
+      display:flex;
+      flex-direction:column;
+      opacity:0;
+      animation:homeReveal .48s cubic-bezier(.2,.75,.25,1) forwards;
+      animation-delay:calc(400ms + var(--home-index) * 45ms);
+      transition:.2s transform,.2s border-color,.2s box-shadow;
+    }
+    .project:hover,.project:focus-visible{transform:translateY(-4px);border-color:rgba(89,159,255,.55);box-shadow:0 18px 36px rgba(0,0,0,.22)}
+    .cover{
+      height:108px;
+      display:grid;
+      place-items:center;
+      font-size:42px;
+      background:linear-gradient(135deg,rgba(51,151,255,.42),rgba(151,67,255,.25));
+      overflow:hidden;
+    }
+    .cover img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .featuredVisual{position:relative;width:72px;height:72px;display:grid;place-items:center;color:#eaf4ff}
+    .featuredQr{
+      grid-template-columns:repeat(5,8px);
+      grid-auto-rows:8px;
+      gap:3px;
+      padding:8px;
+      border:1px solid rgba(129,205,255,.45);
+      border-radius:12px;
+      background:rgba(2,10,23,.72);
+      box-shadow:0 0 24px rgba(72,173,255,.2);
+    }
+    .featuredQr i{width:8px;height:8px;border-radius:2px;background:rgba(225,242,255,.16)}
+    .featuredQr i:nth-child(1),.featuredQr i:nth-child(2),.featuredQr i:nth-child(5),.featuredQr i:nth-child(7),.featuredQr i:nth-child(9),.featuredQr i:nth-child(11),.featuredQr i:nth-child(12),.featuredQr i:nth-child(14),.featuredQr i:nth-child(16),.featuredQr i:nth-child(18),.featuredQr i:nth-child(20),.featuredQr i:nth-child(22),.featuredQr i:nth-child(23),.featuredQr i:nth-child(25){background:#dff4ff;box-shadow:0 0 8px rgba(109,199,255,.22)}
+    .featuredCard{
+      width:82px;
+      height:52px;
+      display:grid;
+      grid-template-columns:21px 1fr 18px;
+      gap:7px;
+      align-items:center;
+      padding:8px;
+      border:1px solid rgba(132,169,255,.44);
+      border-radius:9px;
+      background:linear-gradient(135deg,rgba(15,42,86,.95),rgba(60,34,115,.9));
+      box-shadow:0 0 25px rgba(109,102,255,.2);
+    }
+    .featuredCardAvatar{width:21px;height:21px;border-radius:7px;background:linear-gradient(135deg,#48c5ff,#8d55ff)}
+    .featuredCardLines{display:grid;gap:4px}.featuredCardLines i{height:3px;border-radius:99px;background:rgba(233,242,255,.8)}.featuredCardLines i:last-child{width:65%;opacity:.45}
+    .featuredCardCode{width:18px;height:18px;border:3px dotted rgba(240,247,255,.82);border-radius:3px}
+    .project:nth-child(2) .cover{background:linear-gradient(135deg,#2f6b42,#0c2d61)}
+    .project:nth-child(3) .cover{background:linear-gradient(135deg,#1d284c,#3c4169)}
+    .project:nth-child(4) .cover{background:linear-gradient(135deg,#173c4a,#87a96b)}
+    .project:nth-child(5) .cover{background:linear-gradient(135deg,#70441f,#e0b36f)}
+    .project:nth-child(6) .cover{background:linear-gradient(135deg,#11182e,#8b5b22)}
+    .project .body{padding:12px 14px;flex:1}
+    .project h3{margin:0 0 5px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:13px;line-height:1.35}
+    .labPanel{
+      margin-top:16px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:linear-gradient(180deg,rgba(11,23,48,.92),rgba(6,14,29,.92));
+      display:grid;
+      grid-template-columns:1fr 2.6fr;
+      overflow:hidden;
+      position:relative;
+    }
+    .labText{padding:28px 24px;align-self:center}
+    .labText h2{margin:0 0 8px}
+    .labText p{color:var(--muted);line-height:1.5;margin:0 0 18px}
+    .codeGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:18px}
+    .codeCard{
+      min-width:0;
+      height:248px;
+      background:linear-gradient(180deg,#071122,#050b17);
+      border:1px solid rgba(132,166,255,.19);
+      border-radius:12px;
+      overflow:hidden;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:11px;
+      box-shadow:inset 0 0 26px rgba(55,108,204,.045),0 14px 30px rgba(0,0,0,.2);
+      opacity:0;
+      animation:homeReveal .48s cubic-bezier(.2,.75,.25,1) forwards;
+      animation-delay:calc(580ms + var(--code-index) * 60ms);
+      transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;
+    }
+    .codeCard:hover,.codeCard:focus-within{border-color:rgba(var(--code-accent),.48);box-shadow:inset 0 0 28px rgba(var(--code-accent),.055),0 18px 36px rgba(0,0,0,.25)}
+    .codeCard:focus-visible{outline:3px solid rgba(var(--code-accent),.72);outline-offset:3px}
+    .codeTop{height:40px;display:flex;align-items:center;justify-content:space-between;gap:9px;padding:0 11px;background:#0d1931;color:#91a4cd;border-bottom:1px solid rgba(132,166,255,.1)}
+    .codeMeta{min-width:0;display:flex;align-items:center;gap:8px}
+    .codePath{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#7589b5}
+    .codeLang{flex:0 0 auto;padding:3px 7px;border:1px solid rgba(var(--code-accent),.28);border-radius:999px;background:rgba(var(--code-accent),.07);color:rgb(var(--code-accent));font-size:9px;font-weight:800;letter-spacing:.35px;text-transform:uppercase}
+    .dots{display:flex;gap:6px}.dots span{width:8px;height:8px;border-radius:50%;display:block}.r{background:#ff5d5d}.y{background:#ffbd44}.g{background:#33d17a}
+    .codeViewport{
+      position:relative;
+      height:208px;
+      overflow:hidden;
+      mask-image:linear-gradient(180deg,transparent 0,black 12%,black 88%,transparent 100%);
+      -webkit-mask-image:linear-gradient(180deg,transparent 0,black 12%,black 88%,transparent 100%);
+    }
+    .codeFlow{display:block;padding:18px 0;animation:codeFlowUp 18s ease-in-out infinite alternate}
+    .codeCard:nth-child(2) .codeFlow{animation-name:codeFlowDown;animation-duration:21s}
+    .codeCard:nth-child(3) .codeFlow{animation-name:codeFlowPause;animation-duration:16s}
+    .codeCard:hover .codeFlow,.codeCard:focus-within .codeFlow{animation-play-state:paused}
+    .codeLine{
+      position:relative;
+      min-height:20px;
+      display:grid;
+      grid-template-columns:28px minmax(0,1fr);
+      padding:0 9px 0 5px;
+      line-height:1.65;
+      white-space:pre;
+    }
+    .codeLine.active{background:linear-gradient(90deg,rgba(var(--code-accent),.1),transparent)}
+    .codeLine.active::after{
+      content:"";
+      width:1px;
+      height:13px;
+      margin-left:2px;
+      align-self:center;
+      background:rgb(var(--code-accent));
+      animation:codeCursor 1.25s steps(1,end) infinite;
+    }
+    .lineNo{padding-right:9px;color:#415172;text-align:right;user-select:none}
+    .lineCode{min-width:0;color:#b9c8e5}
+    .syn-key{color:#c89cff}.syn-name{color:#73c8ff}.syn-string{color:#a8db91}.syn-tag{color:#ff91ae}.syn-attr{color:#f0c879}.syn-type{color:#75d8cf}.syn-comment{color:#687b9d;font-style:italic}
+    @keyframes homeReveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    @keyframes heroGridDrift{to{background-position:26px 26px}}
+    @keyframes heroKBreathe{0%,100%{transform:scale(1);filter:saturate(.96)}50%{transform:scale(1.025);filter:saturate(1.08)}}
+    @keyframes orbitHtml{0%,100%{transform:translate3d(0,3px,0) rotate(-2deg)}50%{transform:translate3d(18px,-7px,0) rotate(1deg)}}
+    @keyframes orbitJs{0%,100%{transform:translate3d(-3px,-5px,0) rotate(2deg)}50%{transform:translate3d(-20px,9px,0) rotate(-1deg)}}
+    @keyframes orbitDart{0%,100%{transform:translate3d(4px,0,0) rotate(1deg)}50%{transform:translate3d(25px,-12px,0) rotate(-2deg)}}
+    @keyframes codeFlowUp{from{transform:translateY(8px)}to{transform:translateY(-18px)}}
+    @keyframes codeFlowDown{from{transform:translateY(-17px)}to{transform:translateY(8px)}}
+    @keyframes codeFlowPause{0%,28%{transform:translateY(5px)}58%,82%{transform:translateY(-14px)}100%{transform:translateY(-3px)}}
+    @keyframes codeCursor{0%,48%{opacity:1}49%,100%{opacity:0}}
+    .soon{
+      display:none;
+      margin-top:18px;
+      border:1px solid rgba(56,166,255,.26);
+      background:rgba(8,20,44,.88);
+      border-radius:14px;
+      padding:28px;
+    }
+    .soon.active{display:block}
+    .soon h2{margin:0 0 8px}
+    .soon p{color:var(--muted);margin:0 0 18px;line-height:1.55}
+    .soonList{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .soonItem{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:10px;padding:16px;transition:.18s transform,.18s border-color}
+    .appThumb{
+  height:120px;
+  margin:-16px -16px 14px;
+  overflow:hidden;
+  border-radius:10px 10px 0 0;
+  background:rgba(255,255,255,.04);
+}
+
+.appThumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+    .appsRoute{
+      width:100%;
+      max-width:1240px;
+      margin-inline:auto;
+      padding:24px;
+    }
+    .appsRoute > #routeTitle{margin-bottom:6px}
+    .appsRoute > #routeText{max-width:680px;margin-bottom:20px}
+    .soonList.appShowcaseGrid{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+    }
+    .appShowcaseCard{
+      --app-accent:56,166,255;
+      min-width:0;
+      min-height:252px;
+      display:grid;
+      grid-template-columns:132px minmax(0,1fr);
+      gap:20px;
+      padding:20px;
+      border:1px solid rgba(var(--app-accent),.28);
+      border-radius:16px;
+      background:
+        radial-gradient(circle at 8% 16%,rgba(var(--app-accent),.12),transparent 38%),
+        linear-gradient(145deg,rgba(13,28,59,.96),rgba(6,15,31,.98));
+      box-shadow:0 16px 38px rgba(0,0,0,.2);
+      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    }
+    .appShowcaseCard:focus-within{
+      border-color:rgba(var(--app-accent),.68);
+      box-shadow:0 18px 42px rgba(0,0,0,.28),0 0 24px rgba(var(--app-accent),.1);
+    }
+    .appShowcaseMedia{
+      position:relative;
+      width:132px;
+      height:132px;
+      align-self:center;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      border:1px solid rgba(var(--app-accent),.26);
+      border-radius:22px;
+      background:
+        radial-gradient(circle at 50% 45%,rgba(var(--app-accent),.2),transparent 52%),
+        rgba(3,10,23,.62);
+    }
+    .appShowcaseMedia img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+      transition:transform .2s ease;
+    }
+    .appShowcaseFallback{
+      width:100%;
+      height:100%;
+      display:grid;
+      place-items:center;
+      font-size:48px;
+      background:linear-gradient(135deg,rgba(var(--app-accent),.18),rgba(155,92,255,.18));
+    }
+    .appShowcaseFallback[hidden]{display:none}
+    .appShowcaseContent{
+      min-width:0;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+    }
+    .appPlatform{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-bottom:7px;
+      color:rgb(var(--app-accent));
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.35px;
+      text-transform:uppercase;
+    }
+    .appShowcaseContent h3{margin:0 0 7px;font-size:21px;line-height:1.2}
+    .appShowcaseContent p{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.45;
+      overflow-wrap:anywhere;
+    }
+    .appFeatures{
+      display:grid;
+      gap:4px;
+      margin:0 0 12px;
+      padding:0;
+      list-style:none;
+      color:#c7d4ed;
+      font-size:12px;
+      line-height:1.35;
+    }
+    .appFeatures li{
+      position:relative;
+      padding-left:14px;
+      overflow-wrap:anywhere;
+    }
+    .appFeatures li::before{
+      content:"";
+      position:absolute;
+      top:.48em;
+      left:0;
+      width:5px;
+      height:5px;
+      border-radius:50%;
+      background:rgb(var(--app-accent));
+      box-shadow:0 0 8px rgba(var(--app-accent),.5);
+    }
+    .appShowcaseCta{
+      min-height:44px;
+      margin-top:auto;
+      padding:0 15px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      border:1px solid rgba(var(--app-accent),.38);
+      border-radius:10px;
+      background:linear-gradient(135deg,rgba(var(--app-accent),.18),rgba(155,53,255,.16));
+      color:#f3f7ff;
+      font-size:13px;
+      font-weight:850;
+      transition:border-color .2s ease,background-color .2s ease;
+    }
+    .appShowcaseCta:focus-visible{
+      outline:3px solid rgba(var(--app-accent),.82);
+      outline-offset:3px;
+    }
+    .appShowcaseCtaArrow{
+      transition:transform .2s ease;
+    }
+    @media(hover:hover){
+      .appShowcaseCard:hover{
+        transform:translateY(-3px);
+        border-color:rgba(var(--app-accent),.58);
+        box-shadow:0 20px 46px rgba(0,0,0,.3),0 0 24px rgba(var(--app-accent),.1);
+      }
+      .appShowcaseCard:hover .appShowcaseMedia img{transform:scale(1.02)}
+      .appShowcaseCta:hover .appShowcaseCtaArrow{transform:translateX(4px)}
+    }
+    .soonItem[data-url]{cursor:pointer}
+    .soonItem[data-url]:hover{transform:translateY(-3px);border-color:rgba(89,159,255,.55)}
+    .soonItem b{display:block;margin-bottom:6px}
+    .soonItem span{color:var(--muted);font-size:13px}
+    .labRoute{
+      position:relative;
+      isolation:isolate;
+      width:100%;
+      max-width:1240px;
+      margin-inline:auto;
+      padding:20px;
+      overflow:hidden;
+      border-color:rgba(70,184,211,.24);
+      background:linear-gradient(180deg,rgba(7,18,39,.96),rgba(4,12,27,.97));
+    }
+    .labRoute::before,.labRoute::after{content:"";position:absolute;pointer-events:none;z-index:-1}
+    .labRoute::before{
+      inset:0;
+      opacity:.2;
+      background-image:linear-gradient(rgba(76,184,211,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(76,184,211,.12) 1px,transparent 1px);
+      background-size:34px 34px;
+      mask-image:linear-gradient(180deg,black,transparent 86%);
+      -webkit-mask-image:linear-gradient(180deg,black,transparent 86%);
+    }
+    .labRoute::after{
+      width:76%;
+      height:58%;
+      right:-16%;
+      top:-12%;
+      border-radius:50%;
+      opacity:.36;
+      filter:blur(38px);
+      background:radial-gradient(circle at 35% 55%,rgba(44,205,199,.28),transparent 34%),radial-gradient(circle at 67% 42%,rgba(134,83,255,.3),transparent 38%);
+      animation:labMistDrift 20s ease-in-out infinite alternate;
+    }
+    .labRoute > #routeTitle,.labRoute > #routeText{display:none}
+    .soonList.labShowcaseGrid{
+      position:relative;
+      z-index:1;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:13px;
+    }
+    .labIntro{
+      position:relative;
+      isolation:isolate;
+      grid-column:1/-1;
+      min-height:120px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      align-items:center;
+      gap:24px;
+      padding:12px 20px;
+      overflow:hidden;
+      border:1px solid rgba(89,187,221,.28);
+      border-radius:16px;
+      background:linear-gradient(135deg,rgba(12,34,59,.92),rgba(10,21,48,.94) 54%,rgba(28,20,63,.88));
+      box-shadow:0 18px 44px rgba(0,0,0,.24);
+    }
+    .labIntro::before{
+      content:"";
+      position:absolute;
+      inset:-28px;
+      z-index:-2;
+      opacity:.24;
+      background-image:linear-gradient(rgba(83,190,218,.16) 1px,transparent 1px),
+                       linear-gradient(90deg,rgba(83,190,218,.16) 1px,transparent 1px);
+      background-size:28px 28px;
+      animation:labGridDrift 26s linear infinite;
+    }
+    .labIntro::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:radial-gradient(circle at 86% 42%,rgba(48,205,197,.16),transparent 24%),
+                 radial-gradient(circle at 14% 0%,rgba(86,118,255,.12),transparent 30%);
+      pointer-events:none;
+    }
+    .labIntroCopy{position:relative;z-index:2;min-width:0}
+    .labIntroEyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-bottom:3px;
+      color:#9edfea;
+      font-size:11px;
+      font-weight:850;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+    }
+    .labIntroEyebrow::before{
+      content:"";
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#54d6c9;
+      box-shadow:0 0 12px rgba(84,214,201,.5);
+    }
+    .labIntro h1{
+      margin:0;
+      font-size:clamp(27px,3vw,35px);
+      line-height:1.08;
+      letter-spacing:-.35px;
+    }
+    .labTitleAccent{
+      color:transparent;
+      background:linear-gradient(100deg,#67d9ee,#6ea8ff 46%,#a878ff,#67d9ee);
+      background-size:220% 100%;
+      -webkit-background-clip:text;
+      background-clip:text;
+      animation:labTitleFlow 12s ease-in-out infinite;
+    }
+    .labIntro .labIntroText{
+      max-width:680px;
+      margin:4px 0 0;
+      color:#b6c6df;
+      font-size:14px;
+      line-height:1.45;
+    }
+    .labFeatureTags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .labFeatureTag{
+      min-height:26px;
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:0 10px;
+      border:1px solid rgba(128,176,221,.2);
+      border-radius:999px;
+      background:rgba(4,15,32,.58);
+      color:#c9d7eb;
+      font-size:11px;
+      font-weight:720;
+      opacity:0;
+      animation:labTagReveal .42s ease-out forwards;
+      animation-delay:calc(110ms + var(--lab-tag-index) * 85ms);
+    }
+    .labFeatureTag::before{
+      content:"";
+      width:5px;
+      height:5px;
+      border-radius:50%;
+      background:#61cdd4;
+    }
+    .labFlaskWrap{
+      position:relative;
+      z-index:2;
+      width:82px;
+      height:82px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(87,218,214,.25);
+      border-radius:23px;
+      background:linear-gradient(145deg,rgba(17,59,75,.72),rgba(13,27,59,.68));
+      color:#72e2dc;
+      box-shadow:0 0 32px rgba(44,205,199,.13),inset 0 0 20px rgba(97,220,218,.06);
+      animation:labFlaskBreathe 5.5s ease-in-out infinite;
+    }
+    .labFlaskWrap svg{width:46px;height:46px}
+    .labParticles{position:absolute;inset:0;z-index:1;pointer-events:none}
+    .labParticle{
+      position:absolute;
+      width:4px;
+      height:4px;
+      border-radius:50%;
+      background:#82e8e1;
+      opacity:.16;
+      animation:labParticleFloat var(--lab-particle-duration) ease-in-out infinite;
+      animation-delay:var(--lab-particle-delay);
+    }
+    .labParticle:nth-child(1){left:58%;top:22%;--lab-particle-duration:7s;--lab-particle-delay:-2s}
+    .labParticle:nth-child(2){left:72%;top:70%;--lab-particle-duration:8.5s;--lab-particle-delay:-5s}
+    .labParticle:nth-child(3){left:84%;top:18%;--lab-particle-duration:6.5s;--lab-particle-delay:-3s}
+    .labParticle:nth-child(4){left:48%;top:78%;--lab-particle-duration:9s;--lab-particle-delay:-6s}
+    .labParticle:nth-child(5){left:92%;top:62%;--lab-particle-duration:7.5s;--lab-particle-delay:-1s}
+    .labToolCard{
+      min-width:0;
+      display:flex;
+      opacity:0;
+      transform:translateY(10px);
+      animation:labCardReveal .52s cubic-bezier(.2,.75,.25,1) forwards;
+      animation-delay:calc(var(--lab-index) * 70ms);
+    }
+    .labToolLink{
+      position:relative;
+      min-width:0;
+      min-height:100%;
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      padding:16px;
+      overflow:hidden;
+      border:1px solid rgba(var(--lab-accent),.3);
+      border-radius:15px;
+      background:linear-gradient(145deg,rgba(var(--lab-accent),.075),transparent 44%),
+                 linear-gradient(180deg,rgba(10,23,46,.96),rgba(5,14,29,.98));
+      box-shadow:0 15px 36px rgba(0,0,0,.2);
+      transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background-color .22s ease;
+    }
+    .labToolLink::before{
+      content:"";
+      position:absolute;
+      inset:0 auto 0 0;
+      width:2px;
+      background:linear-gradient(180deg,transparent,rgba(var(--lab-accent),.8),transparent);
+      opacity:.72;
+    }
+    .labToolGlow{
+      position:absolute;
+      width:150px;
+      height:150px;
+      right:-72px;
+      top:-82px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(var(--lab-accent),.15),transparent 67%);
+      opacity:.42;
+      pointer-events:none;
+      transition:opacity .22s ease,transform .22s ease;
+    }
+    .labToolTop{
+      position:relative;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .labToolCategory{
+      min-height:25px;
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:0 10px;
+      border:1px solid rgba(var(--lab-accent),.28);
+      border-radius:999px;
+      background:rgba(var(--lab-accent),.08);
+      color:rgb(var(--lab-accent));
+      font-size:11px;
+      font-weight:850;
+      letter-spacing:.35px;
+      text-transform:uppercase;
+    }
+    .labStatusDot{
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:currentColor;
+      box-shadow:0 0 8px rgba(var(--lab-accent),.38);
+    }
+    .labToolIcon{
+      width:46px;
+      height:46px;
+      flex:0 0 auto;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(var(--lab-accent),.28);
+      border-radius:14px;
+      background:linear-gradient(145deg,rgba(var(--lab-accent),.18),rgba(var(--lab-accent),.06));
+      color:rgb(var(--lab-accent));
+      box-shadow:inset 0 0 18px rgba(var(--lab-accent),.06);
+    }
+    .labToolIcon svg{width:26px;height:26px;overflow:visible}
+    .labToolIcon svg *{
+      transform-box:fill-box;
+      transform-origin:center;
+      transition:transform .22s ease,opacity .22s ease;
+    }
+    .labToolContent{position:relative;display:flex;flex:1;flex-direction:column}
+    .labToolLink h2{
+      margin:11px 0 5px;
+      font-size:18px;
+      line-height:1.22;
+      overflow-wrap:anywhere;
+    }
+    .labToolLink p{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.42;
+      overflow-wrap:anywhere;
+    }
+    .labToolFeatures{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:6px 12px;
+      margin:0 0 12px;
+      padding:0;
+      list-style:none;
+    }
+    .labToolFeature{
+      min-width:0;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:#c0cee2;
+      font-size:12px;
+      line-height:1.35;
+    }
+    .labToolFeature svg{width:14px;height:14px;flex:0 0 auto;color:rgb(var(--lab-accent))}
+    .labToolCta{
+      min-height:44px;
+      width:max-content;
+      max-width:100%;
+      margin-top:auto;
+      display:inline-flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:0 14px;
+      border:1px solid rgba(var(--lab-accent),.32);
+      border-radius:10px;
+      background:rgba(var(--lab-accent),.085);
+      color:#f2f8ff;
+      font-size:13px;
+      font-weight:850;
+    }
+    .labToolCtaArrow{
+      width:17px;
+      height:17px;
+      color:rgb(var(--lab-accent));
+      transition:transform .22s ease;
+    }
+    .labToolLink:focus-visible{
+      outline:3px solid #91d9ff;
+      outline-offset:4px;
+      border-color:rgba(var(--lab-accent),.76);
+      transform:translateY(-3px);
+      box-shadow:0 20px 44px rgba(0,0,0,.28),0 0 22px rgba(var(--lab-accent),.09);
+    }
+    .labToolLink:focus-visible .labToolGlow{opacity:.9;transform:scale(1.06)}
+    .labToolLink:focus-visible .labToolCtaArrow{transform:translateX(4px)}
+    .labToolLink:focus-visible .labIconHeart{transform:scale(1.12)}
+    .labToolLink:focus-visible .labIconGlow{opacity:1;transform:scale(1.08)}
+    .labToolLink:focus-visible .labIconFlame{transform:translateY(-1.5px) scale(1.06)}
+    .labToolLink:focus-visible .labQuoteLeft{transform:translateX(-2px)}
+    .labToolLink:focus-visible .labQuoteRight{transform:translateX(2px)}
+    .labToolLink:focus-visible .labIconRibbon{transform:translateY(-2px)}
+    .labToolLink:focus-visible .labIconNeedle{transform:rotate(12deg)}
+    @media(hover:hover){
+      .labToolLink:hover{
+        transform:translateY(-3px);
+        border-color:rgba(var(--lab-accent),.72);
+        box-shadow:0 20px 44px rgba(0,0,0,.28),0 0 22px rgba(var(--lab-accent),.09);
+      }
+      .labToolLink:hover .labToolGlow{opacity:.9;transform:scale(1.06)}
+      .labToolLink:hover .labToolCtaArrow{transform:translateX(4px)}
+      .labToolLink:hover .labIconHeart{transform:scale(1.12)}
+      .labToolLink:hover .labIconGlow{opacity:1;transform:scale(1.08)}
+      .labToolLink:hover .labIconFlame{transform:translateY(-1.5px) scale(1.06)}
+      .labToolLink:hover .labQuoteLeft{transform:translateX(-2px)}
+      .labToolLink:hover .labQuoteRight{transform:translateX(2px)}
+      .labToolLink:hover .labIconRibbon{transform:translateY(-2px)}
+      .labToolLink:hover .labIconNeedle{transform:rotate(12deg)}
+    }
+    @keyframes labGridDrift{to{background-position:28px 28px}}
+    @keyframes labTitleFlow{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+    @keyframes labTagReveal{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+    @keyframes labFlaskBreathe{0%,100%{transform:scale(1);opacity:.88}50%{transform:scale(1.025);opacity:1}}
+    @keyframes labParticleFloat{0%,100%{transform:translate3d(0,4px,0);opacity:.12}50%{transform:translate3d(4px,-8px,0);opacity:.46}}
+    @keyframes labCardReveal{to{opacity:1;transform:none}}
+    @keyframes labMistDrift{from{transform:translate3d(-4%,0,0) scale(.98)}to{transform:translate3d(5%,7%,0) scale(1.06)}}
+    .gamesRoute{
+      position:relative;
+      isolation:isolate;
+      width:100%;
+      max-width:1040px;
+      margin:8px auto 0;
+      padding:22px 10px 28px;
+      overflow:hidden;
+      border:0;
+      background:transparent;
+    }
+    .gamesRoute::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      opacity:.24;
+      background:radial-gradient(circle at 82% 12%,rgba(155,92,255,.22),transparent 28%),radial-gradient(circle at 12% 54%,rgba(56,166,255,.14),transparent 32%),linear-gradient(rgba(101,135,210,.08) 1px,transparent 1px);
+      background-size:auto,auto,100% 32px;
+      animation:gameEnergyShift 18s ease-in-out infinite alternate;
+    }
+    .gamesRoute > #routeTitle{margin:0 0 6px;font-size:clamp(28px,3vw,38px)}
+    .gamesRoute > #routeText{max-width:660px;margin:0 0 20px;color:#aebbd5}
+    .soonList.gameList{display:grid;grid-template-columns:1fr;gap:7px}
+    .gameRow{
+      --game-accent:56,166,255;
+      min-width:0;
+      min-height:76px;
+      display:grid;
+      grid-template-columns:52px minmax(0,1fr) auto;
+      align-items:center;
+      gap:15px;
+      padding:10px 15px 10px 10px;
+      border:1px solid rgba(var(--game-accent),.2);
+      border-radius:13px;
+      background:linear-gradient(90deg,rgba(var(--game-accent),.085),rgba(7,16,33,.7) 38%,rgba(7,16,33,.48));
+      transition:transform .2s ease,border-color .2s ease,background-color .2s ease;
+    }
+    .gameIcon{
+      width:52px;
+      height:52px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(var(--game-accent),.28);
+      border-radius:13px;
+      background:rgba(var(--game-accent),.1);
+      font-size:25px;
+      box-shadow:inset 0 0 18px rgba(var(--game-accent),.05);
+    }
+    .gameCopy{min-width:0}.gameCopy h3{margin:0 0 4px;font-size:16px}.gameCopy p{margin:0;color:var(--muted);font-size:13px;line-height:1.35;overflow-wrap:anywhere}
+    .gameCta{min-height:44px;display:inline-flex;align-items:center;gap:8px;color:rgb(var(--game-accent));font-size:12px;font-weight:850;white-space:nowrap}
+    .gameCtaArrow{font-size:18px;transition:transform .2s ease}
+    .gameRow:focus-visible{outline:3px solid rgba(var(--game-accent),.72);outline-offset:3px;border-color:rgba(var(--game-accent),.62);transform:translateX(3px)}
+    @media(hover:hover){.gameRow:hover{transform:translateX(4px);border-color:rgba(var(--game-accent),.54);background:linear-gradient(90deg,rgba(var(--game-accent),.13),rgba(8,18,38,.76) 42%,rgba(8,18,38,.52))}.gameRow:hover .gameCtaArrow{transform:translateX(3px)}}
+    @keyframes gameEnergyShift{from{background-position:0 0,0 0,0 0}to{background-position:18px 10px,-14px -8px,0 32px}}
+    footer{
+      border-top:1px solid var(--line);
+      padding:22px 56px;
+      display:flex;
+      justify-content:space-between;
+      color:#aab7d3;
+      background:rgba(2,7,17,.72);
+    }
+    footer .brand{font-size:20px}
+    .footerLinks{display:flex;align-items:center;gap:16px}
+    .footerLinks a{min-height:44px;display:inline-flex;align-items:center;font-weight:700}
+    .footerLinks a:focus-visible{
+      outline:3px solid rgba(56,166,255,.78);
+      outline-offset:3px;
+    }
+    .hide{display:none}
+    @media(max-width:1100px) and (min-width:761px){
+      .topbar{padding:0 24px}
+      .nav{gap:14px;font-size:13px}
+      .hero{
+        min-height:340px;
+        grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);
+        gap:20px;
+        padding:40px 32px 32px;
+      }
+      .hero h1{font-size:clamp(38px,4.5vw,44px)}
+      .hero > div{min-width:0}
+      .orbWrap{min-height:250px}
+      .heroCodeScene{height:250px}
+      .galaxy{width:360px;height:180px}
+      .kCube{width:120px;height:120px;font-size:68px}
+      .miniCodePanel{width:116px}
+      main{padding:24px 32px 38px}
+      .quickGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .projectGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .project{min-width:0}
+      .cover{height:104px;aspect-ratio:auto}
+      .labPanel{grid-template-columns:1fr}
+      .codeCard{height:236px}
+      .codeViewport{height:196px}
+    }
+    @media(max-width:1100px) and (min-width:761px){
+      .appShowcaseCard{
+        min-height:244px;
+        grid-template-columns:104px minmax(0,1fr);
+        gap:14px;
+        padding:16px;
+      }
+      .appShowcaseMedia{width:104px;height:104px;border-radius:18px}
+      .appShowcaseContent h3{font-size:19px}
+      .appShowcaseContent p{font-size:13px}
+    }
+    @media(max-width:760px){
+      .topbar{padding:0 20px}
+      .nav{display:none}
+      .mobileMenuBtn{display:grid;flex:0 0 auto}
+      .mobileNav:not([hidden]){
+        position:absolute;
+        top:calc(100% + 8px);
+        left:12px;
+        right:12px;
+        display:grid;
+        gap:4px;
+        max-height:calc(100vh - 88px);
+        padding:10px;
+        overflow-y:auto;
+        overscroll-behavior:contain;
+        border:1px solid rgba(132,166,255,.24);
+        border-radius:14px;
+        background:linear-gradient(180deg,rgba(11,23,48,.98),rgba(4,11,24,.98));
+        box-shadow:0 20px 54px rgba(0,0,0,.5),0 0 32px rgba(56,166,255,.12);
+        z-index:20;
+      }
+      .mobileNav a{
+        position:relative;
+        min-height:48px;
+        display:flex;
+        align-items:center;
+        padding:0 16px;
+        border:1px solid transparent;
+        border-radius:10px;
+        color:#c6d0e8;
+        font-size:15px;
+        font-weight:750;
+      }
+      .mobileNav a:hover{background:rgba(255,255,255,.05)}
+      .mobileNav a.active{
+        padding-left:20px;
+        border-color:rgba(56,166,255,.2);
+        background:linear-gradient(90deg,rgba(56,166,255,.16),rgba(155,92,255,.08));
+        color:white;
+      }
+      .mobileNav a.active::before{
+        content:"";
+        position:absolute;
+        left:8px;
+        width:4px;
+        height:24px;
+        border-radius:999px;
+        background:linear-gradient(180deg,var(--blue),var(--violet));
+      }
+      .hero{
+        min-height:auto;
+        grid-template-columns:minmax(0,1fr);
+        gap:20px;
+        padding:32px 20px 24px;
+      }
+      .hero > div{min-width:0}
+      .hero h1{
+        font-size:clamp(31px,8.8vw,38px);
+        line-height:1.08;
+        margin-bottom:12px;
+        letter-spacing:-.3px;
+      }
+      .hero h1 br{display:none}
+      .hero p{
+        max-width:none;
+        margin-bottom:18px;
+        font-size:15px;
+        line-height:1.55;
+      }
+      .buttons{
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px;
+      }
+      .btn{
+        width:100%;
+        min-height:48px;
+        height:auto;
+        padding:10px 16px;
+        justify-content:center;
+        line-height:1.25;
+        text-align:center;
+      }
+      .orbWrap{min-height:170px}
+      .heroCodeScene{height:180px}
+      .orbWrap::before{height:155px;background-size:22px 22px}
+      .orbWrap::after{width:220px;height:116px}
+      .galaxy{width:min(320px,100%);height:150px}
+      .kCube{
+        width:96px;
+        height:96px;
+        border-radius:20px;
+        font-size:56px;
+        box-shadow:0 0 44px rgba(48,145,255,.62),inset 0 0 24px rgba(255,255,255,.16);
+      }
+      .miniCodePanel{width:104px;animation:none!important}
+      .miniCodeTop{height:23px;padding-inline:7px}.miniCodeBody{gap:5px;padding:7px 8px 8px}.miniCodeLine{height:3px}
+      .panelHtml{left:0;top:4px}.panelJs{right:0;top:auto;bottom:4px}.panelDart{display:none}
+      main{padding:20px 20px 32px;min-width:0}
+      .quickGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:0}
+      .quick{min-width:0;min-height:92px;padding:14px;gap:12px}
+      .quick > div:last-child{min-width:0}
+      .quick .qIcon{width:48px;height:48px;border-radius:12px;font-size:23px}
+      .quick h3{font-size:15px}
+      .quick p{font-size:12.5px;overflow-wrap:anywhere}
+      .sectionHead{align-items:flex-start;gap:12px;margin:22px 0 12px;padding-top:16px}
+      .sectionHead > div{min-width:0}
+      .sectionHead h2{font-size:21px}
+      .sectionHead p{font-size:14px;line-height:1.4}
+      .allLink{min-height:44px;display:flex;align-items:center;flex:0 0 auto}
+      .projectGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+      .project{min-width:0;min-height:0}
+      .cover{height:94px;aspect-ratio:auto}
+      .project .body{padding:12px}
+      .project h3{font-size:15px;overflow-wrap:anywhere}
+      .project p{font-size:12.5px;overflow-wrap:anywhere}
+      .labPanel{grid-template-columns:1fr}
+      .labText{padding:20px}
+      .codeGrid{grid-template-columns:1fr;padding:14px}
+      .codeCard{height:210px;font-size:10.5px}
+      .codeViewport{height:170px}
+      .codeLine{min-height:19px}
+      .codeCard:nth-child(3){height:188px}
+      .codeCard:nth-child(3) .codeViewport{height:148px}
+      .soonList{grid-template-columns:1fr}
+      .soonList.labShowcaseGrid{grid-template-columns:1fr}
+      .labRoute{padding:18px}
+      .labIntro{
+        min-height:0;
+        display:block;
+        padding:18px;
+        border-radius:14px;
+      }
+      .labIntroCopy{padding-right:0}
+      .labIntroEyebrow,.labIntro h1,.labIntroText{max-width:calc(100% - 62px)}
+      .labIntro h1{font-size:clamp(24px,7.4vw,30px)}
+      .labIntroText{font-size:13.5px}
+      .labFeatureTags{gap:7px;margin-top:12px}
+      .labFeatureTag{padding-inline:9px}
+      .labFlaskWrap{
+        position:absolute;
+        top:16px;
+        right:16px;
+        width:54px;
+        height:54px;
+        border-radius:16px;
+      }
+      .labFlaskWrap svg{width:31px;height:31px}
+      .labParticle:nth-child(n+4){display:none}
+      .labToolLink{padding:15px}
+      .labToolIcon{width:48px;height:48px;border-radius:13px}
+      .labToolIcon svg{width:27px;height:27px}
+      .labToolLink h2{font-size:18px}
+      .labToolCta{width:100%}
+      .labToolLink:active{transform:scale(.995)}
+      .soon.appsRoute{padding:18px 14px}
+      .soon.appsRoute > p{margin-bottom:16px}
+      .soonList.appShowcaseGrid{grid-template-columns:1fr;gap:12px}
+      .appShowcaseCard{
+        min-height:226px;
+        grid-template-columns:96px minmax(0,1fr);
+        gap:14px;
+        padding:16px;
+      }
+      .appShowcaseMedia{width:96px;height:96px;border-radius:18px}
+      .appShowcaseContent h3{font-size:19px}
+      .appShowcaseContent p{font-size:13px}
+      .appShowcaseCta{width:100%}
+      .gamesRoute{margin-top:0;padding:18px 0 22px}
+      .gameRow{min-height:72px;grid-template-columns:48px minmax(0,1fr) auto;gap:12px;padding:10px 11px 10px 8px}
+      .gameIcon{width:48px;height:48px;font-size:23px}
+      .gameCta span:first-child{display:none}
+      footer{padding:20px;display:block}
+      footer .brand{margin-bottom:12px}
+      .footerLinks{min-height:44px}
+    }
+    @media(max-width:480px){
+      .buttons{grid-template-columns:1fr}
+      .quickGrid{grid-template-columns:1fr}
+      .quick{min-height:88px}
+      .sectionHead{display:block}
+      .allLink{margin-top:6px;width:max-content;max-width:100%}
+      .labToolFeatures{grid-template-columns:1fr}
+      .gameRow{grid-template-columns:44px minmax(0,1fr) auto;gap:8px}
+      .gameIcon{width:44px;height:44px;font-size:21px}
+      .gameCta{grid-column:auto;min-height:44px;margin:0;justify-self:end}
+      .gameCta span:first-child{display:none}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .menuIcon span,
+      .appShowcaseCard,
+      .appShowcaseMedia img,
+      .appShowcaseCta,
+      .appShowcaseCtaArrow{transition:none!important}
+      .heroCopy,
+      .heroVisual,
+      .kCube,
+      .miniCodePanel,
+      .orbWrap::before,
+      .homeContent .quick,
+      .homeContent .project,
+      .codeCard,
+      .codeFlow,
+      .codeLine.active::after{
+        animation:none!important;
+      }
+      .homeContent .quick,.homeContent .project,.codeCard{opacity:1;transform:none}
+      .quick,.quick .qIcon,.project,.codeCard{transition:none!important}
+      .quick:hover,.quick:focus-visible,.project:hover,.project:focus-visible{transform:none!important}
+      .appShowcaseCard:hover,
+      .appShowcaseCard:hover .appShowcaseMedia img,
+      .appShowcaseCta:hover .appShowcaseCtaArrow{transform:none!important}
+      .labIntro::before,
+      .labRoute::after,
+      .labTitleAccent,
+      .labFeatureTag,
+      .labFlaskWrap,
+      .labParticle,
+      .labToolCard{
+        animation:none!important;
+      }
+      .labFeatureTag,.labToolCard{opacity:1;transform:none}
+      .labToolLink,
+      .labToolGlow,
+      .labToolCtaArrow,
+      .labToolIcon svg *{
+        transition:none!important;
+      }
+      .labToolLink:hover,
+      .labToolLink:focus-visible,
+      .labToolLink:active{
+        transform:none!important;
+      }
+      .labToolLink:hover .labToolGlow,
+      .labToolLink:focus-visible .labToolGlow,
+      .labToolLink:hover .labToolCtaArrow,
+      .labToolLink:focus-visible .labToolCtaArrow,
+      .labToolLink:hover .labToolIcon svg *,
+      .labToolLink:focus-visible .labToolIcon svg *{
+        transform:none!important;
+      }
+      .gamesRoute::before{animation:none!important}
+      .gameRow,.gameCtaArrow{transition:none!important}
+      .gameRow:hover,.gameRow:focus-visible,.gameRow:hover .gameCtaArrow{transform:none!important}
+    }
+  </style>
 </head>
-<body data-page="home">
-  <a data-i18n="common.skip" class="skip-link" href="#main-content">Skip to content</a>
-  <header class="site-header"><div class="container header-inner">
-    <a class="wordmark" href="./" data-i18n-label="common.homeLabel" aria-label="Katovia homepage"><svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3v18M8 12l11-9M8 12l11 9" stroke="currentColor" stroke-width="3.5"/></svg>KATOVIA</a>
-    <div class="language-control" role="group" data-i18n-label="common.language" aria-label="Language selection"><button type="button" data-locale="tr" data-i18n-label="common.tr" aria-label="Switch language to Turkish" aria-pressed="false" lang="tr">TR</button><button type="button" data-locale="en" data-i18n-label="common.en" aria-label="Switch language to English" aria-pressed="true" lang="en">EN</button></div>
-    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle><span data-i18n="common.menu" >MENU</span> <span aria-hidden="true">☰</span></button>
-    <nav id="primary-navigation" class="navigation" data-i18n-label="common.navigation" aria-label="Main navigation" data-navigation><a class="nav-link" data-i18n="nav.today" href="today/">TODAY</a><a class="nav-link" data-i18n="nav.play" href="play/">PLAY</a><a class="nav-link" data-i18n="nav.challenge" href="challenge/">CHALLENGE</a><a class="nav-link" data-i18n="nav.create" href="create/">CREATE</a><a class="nav-link" data-i18n="nav.tools" href="tools/">TOOLS</a><a class="nav-link" data-i18n="nav.lab" href="lab/">LAB</a></nav>
-  </div></header>
-  <main id="main-content" class="container has-daily" tabindex="-1">
-    <section class="hero" aria-labelledby="home-title"><div class="hero-top"><p data-i18n="home.eyebrow" class="eyebrow">Creative technology playground</p><span class="pill"><span class="status-dot" aria-hidden="true"></span><span data-i18n="home.preview" >KATOVIA 2.0</span></span></div>
-      <h1 id="home-title"><span data-i18n="home.play" >PLAY</span><br><span data-i18n="home.something" >SOMETHING.</span></h1>
-      <div class="hero-bottom"><p data-i18n="home.description" >The internet was made for more than scrolling.</p><span data-i18n="common.motto" class="index-label">PLAY. CREATE. CHALLENGE.</span></div>
-    </section>
-    <section class="daily-panel game-panel" data-daily-mount data-state="idle" aria-labelledby="game-title">
-    <div class="game-topline"><span class="eyebrow"><span data-i18n="nav.today">TODAY</span> <span data-game-day><span data-i18n="daily.utc">UTC DAILY</span></span></span><span class="pill"><span data-i18n="daily.single">ONE DAILY RESULT</span></span></div>
-    <div class="game-stage">
-      <div class="game-halo" aria-hidden="true"><i></i><i></i><i></i></div>
-      <div class="game-content">
-        <h2 id="game-title" class="game-title"><span data-target-number data-i18n="game.title">STOP AT 5.00</span></h2>
-        <p id="game-instructions" class="game-instructions" data-instructions><span data-i18n="game.instructions.idle">Stop at exactly five seconds. The timer is hidden.</span></p>
-        <div class="game-result" data-result hidden>
-          <p class="result-number" data-actual></p><p class="result-difference" data-difference></p>
-          <p class="result-quality" data-quality></p><p class="result-precision" data-precision></p>
-        </div>
-        <button class="game-action" type="button" data-game-action aria-describedby="game-instructions" disabled><span data-i18n="game.start">START</span> <span aria-hidden="true">↗</span></button>
-        <p class="game-feedback" data-feedback role="status" aria-live="polite" aria-atomic="true"><span data-i18n="game.preparing">Preparing the game.</span></p>
-        <noscript><p><span data-i18n="game.noscript">Enable JavaScript to play this game.</span></p></noscript>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#ana-sayfa" data-route="ana-sayfa">
+      <span class="mark">K</span>
+      <span>Katovia</span>
+    </a>
+
+    <nav class="nav" id="nav"></nav>
+
+    <button class="mobileMenuBtn" id="mobileMenuBtn" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileNav">
+      <span class="menuIcon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+
+    <nav class="mobileNav" id="mobileNav" aria-label="Mobil navigasyon" hidden></nav>
+  </header>
+
+  <section class="hero" id="homeHero">
+    <div class="heroCopy">
+      <h1>Mini uygulamalar. Hızlı oyunlar.<br> <span class="gradientText">Açık kodlar.</span></h1>
+      <p>Katovia; mini uygulamalar, HTML5 deneyler, hızlı oyunlar ve açık kaynak projeler üreten bağımsız bir dijital stüdyodur.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#laboratuvar" data-route="laboratuvar">🚀 Laboratuvarı Keşfet</a>
+        <a class="btn" href="#uygulamalar" data-route="uygulamalar">▦ Uygulamaları Gör</a>
       </div>
     </div>
-    <div class="game-bottomline"><span class="eyebrow" data-streak>LOCAL STREAK / 0 DAYS</span><span class="eyebrow" data-return><span data-i18n="daily.return">A new attempt every day at 00:00 UTC</span></span></div>
-    <div class="result-actions" data-result-actions hidden>
-      <label class="score-option"><input type="checkbox" data-include-score checked> <span data-i18n="share.includeScore">Include my time in the share</span></label>
-      <div class="share-buttons"><button class="button button-accent" type="button" data-share><span data-i18n="share.result">SHARE RESULT</span> <span aria-hidden="true">↗</span></button><button class="button" type="button" data-copy><span data-i18n="share.copy">COPY</span></button></div>
-      <p class="share-feedback" data-share-feedback role="status" aria-live="polite"></p>
-      <label class="manual-share" data-manual hidden><span data-i18n="share.manualLabel">Share text</span><textarea data-share-text readonly rows="8" data-i18n-label="share.textLabel" aria-label="Copyable result text"></textarea></label>
+
+    <div class="orbWrap heroVisual" role="img" aria-label="Katovia K işareti çevresinde HTML, JavaScript ve Flutter kod panelleri">
+      <div class="heroCodeScene" aria-hidden="true">
+        <div class="galaxy"></div>
+        <div class="kCube">K</div>
+        <div class="miniCodePanel panelHtml">
+          <div class="miniCodeTop"><span class="miniCodeDots"><i></i><i></i><i></i></span><span class="miniCodeLabel">HTML</span></div>
+          <div class="miniCodeBody"><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span></div>
+        </div>
+        <div class="miniCodePanel panelJs">
+          <div class="miniCodeTop"><span class="miniCodeDots"><i></i><i></i><i></i></span><span class="miniCodeLabel">JavaScript</span></div>
+          <div class="miniCodeBody"><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span></div>
+        </div>
+        <div class="miniCodePanel panelDart">
+          <div class="miniCodeTop"><span class="miniCodeDots"><i></i><i></i><i></i></span><span class="miniCodeLabel">Flutter · Dart</span></div>
+          <div class="miniCodeBody"><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span><span class="miniCodeLine"></span></div>
+        </div>
+      </div>
     </div>
   </section>
-    <section aria-labelledby="worlds-title"><div class="section-heading"><h2 data-i18n="home.worlds" id="worlds-title">Start somewhere.</h2><span data-i18n="home.universe" class="eyebrow">The Katovia universe</span></div>
-      <div class="section-grid"><a class="section-card" href="play/">
-        <div class="section-card-top"><span data-i18n="common.play" class="eyebrow">PLAY</span><span class="card-arrow" aria-hidden="true">↗</span></div>
-        <h3 data-i18n="nav.play" >PLAY</h3><p data-i18n="section.play.description" >Digital toys you can touch and change.</p>
-        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.planned" >PLANNED</span></span></div>
-      </a>
-<a class="section-card" href="challenge/">
-        <div class="section-card-top"><span data-i18n="common.challenge" class="eyebrow">CHALLENGE</span><span class="card-arrow" aria-hidden="true">↗</span></div>
-        <h3 data-i18n="nav.challenge" >CHALLENGE</h3><p data-i18n="section.challenge.description" >One score. One link. A new challenge.</p>
-        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.planned" >PLANNED</span></span></div>
-      </a>
-<a class="section-card" href="create/">
-        <div class="section-card-top"><span data-i18n="common.create" class="eyebrow">CREATE</span><span class="card-arrow" aria-hidden="true">↗</span></div>
-        <h3 data-i18n="nav.create" >CREATE</h3><p data-i18n="section.create.description" >Write your own questions. Create your own mini experience.</p>
-        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.planned" >PLANNED</span></span></div>
-      </a>
-<a class="section-card" href="tools/">
-        <div class="section-card-top"><span data-i18n="common.tool" class="eyebrow">TOOL</span><span class="card-arrow" aria-hidden="true">↗</span></div>
-        <h3 data-i18n="nav.tools" >TOOLS</h3><p data-i18n="section.tools.description" >Use existing tools that run in your browser.</p>
-        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.legacy" >EXISTING PROJECT</span></span></div>
-      </a>
-<a class="section-card" href="lab/">
-        <div class="section-card-top"><span data-i18n="common.lab" class="eyebrow">LAB</span><span class="card-arrow" aria-hidden="true">↗</span></div>
-        <h3 data-i18n="nav.lab" >LAB</h3><p data-i18n="section.lab.description" >Katovia’s earlier games and small experiments.</p>
-        <div class="section-card-bottom"><span class="pill"><span data-i18n="status.legacy" >EXISTING PROJECT</span></span></div>
-      </a></div>
+
+  <main>
+    <section class="homeContent" id="homeContent">
+      <div class="quickGrid" id="quickGrid"></div>
+
+      <div class="sectionHead">
+        <div>
+          <h2>⭐ Öne Çıkan Projeler</h2>
+          <p>Özenle seçilmiş mini uygulamalar, oyunlar ve deneyler.</p>
+        </div>
+        <a class="allLink" href="#laboratuvar" data-route="laboratuvar">Tüm projeleri gör →</a>
+      </div>
+
+      <div class="projectGrid" id="projectGrid"></div>
+
+      <section class="labPanel" aria-labelledby="codeShowcaseTitle">
+        <div class="labText">
+          <h2 id="codeShowcaseTitle">Üret, oyna ve kodu keşfet.</h2>
+          <p>Katovia’daki projeler çalışan demo, açık kaynak kod ve kısa geliştirme notlarıyla büyür.</p>
+          <a class="btn" href="#kodlar" data-route="kodlar">⌘ Kodları İncele</a>
+        </div>
+        <div class="codeGrid" id="codeGrid"></div>
+      </section>
+    </section>
+
+    <section class="soon" id="routePanel">
+      <h2 id="routeTitle">Yakında</h2>
+      <p id="routeText">Bu alan için iskelet hazır. İçerik eklendikçe kartlar, demolar ve kaynak kodlar buraya bağlanacak.</p>
+      <div class="soonList" id="routeItems"></div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><p class="eyebrow">KATOVIA / <span data-i18n="common.motto" >PLAY. CREATE. CHALLENGE.</span></p><a class="footer-link" href="lab/"><span data-i18n="common.return" >Explore the lab</span> <span aria-hidden="true">&nbsp;↗</span></a></div></footer>
+
+  <footer>
+    <div class="brand"><span class="mark">K</span><span>Katovia</span></div>
+    <nav class="footerLinks" aria-label="Alt bilgi bağlantıları">
+      <a href="#gizlilik" data-route="gizlilik">Gizlilik Politikası</a>
+    </nav>
+  </footer>
+
+  <script>
+    const navItems = [
+      { id:"ana-sayfa", label:"Ana Sayfa" },
+      { id:"uygulamalar", label:"Uygulamalar" },
+      { id:"laboratuvar", label:"Laboratuvar" },
+      { id:"oyunlar", label:"Oyunlar" },
+      { id:"kodlar", label:"Kodlar" }
+    ];
+
+    const categories = [
+      { route:"uygulamalar", icon:"▦", title:"Uygulamalar", text:"Play Store’daki mobil projeler.", color:"linear-gradient(135deg,#1d72ff,#16316f)", accent:"48,139,255" },
+      { route:"laboratuvar", icon:"🛠", title:"Laboratuvar", text:"HTML araçlar, üreticiler ve deneysel fikirler.", color:"linear-gradient(135deg,#2be28d,#124b2f)", accent:"43,226,141" },
+      { route:"oyunlar", icon:"🎮", title:"Mini Oyunlar", text:"Hızlı, hafif ve anında oynanabilir oyunlar.", color:"linear-gradient(135deg,#9b54ff,#44207a)", accent:"155,84,255" },
+      { route:"kodlar", icon:"</>", title:"Açık Kod", text:"Demo, kaynak kod ve geliştirme notları.", color:"linear-gradient(135deg,#ff8a2b,#5a240b)", accent:"255,138,43" }
+    ];
+
+    const projects = [
+      {
+        title: "Balonlubum",
+        text: "Kelime ve refleks odaklı galaksi oyunu",
+        homeText: "Kelime ve refleks oyunu",
+        appText: "Kelime bilginle reflekslerini birleştiren hızlı ve renkli bir mobil oyun.",
+        appFeatureOne: "Kelime ve refleks",
+        appFeatureTwo: "Kısa oyun turları",
+        appAccent: "79,178,255",
+        icon: "🎈",
+        image: "assets/apps/balonlubum.jpg",
+        route: "uygulamalar",
+        url: "https://play.google.com/store/apps/details?id=com.katovia.balonlubum"
+      },
+      {
+        title: "Kare Savaşları",
+        text: "Izgara üzerinde taktik savaşlar",
+        homeText: "Taktik tabanlı ızgara savaşı",
+        appText: "Izgara üzerinde hamleni planla ve rakibine üstünlük kur.",
+        appFeatureOne: "Taktik savaşlar",
+        appFeatureTwo: "Izgara tabanlı oynanış",
+        appAccent: "239,109,103",
+        icon: "⚔️",
+        image: "assets/apps/kare-savaslari.jpg",
+        route: "uygulamalar",
+        url: "https://play.google.com/store/apps/details?id=com.katovia.karesavaslari"
+      },
+      {
+        title: "İletişim Analizi",
+        text: "İlişkilerini ve konuşmalarını analiz et",
+        homeText: "Konuşma ve ilişki analizi",
+        appText: "Konuşmalarındaki iletişim biçimlerini ve ilişki dinamiklerini daha görünür hâle getir.",
+        appFeatureOne: "İletişim değerlendirmesi",
+        appFeatureTwo: "Anlaşılır sonuçlar",
+        appAccent: "203,119,236",
+        icon: "📊",
+        image: "assets/apps/iletisim-analizi.jpg",
+        route: "uygulamalar",
+        url: "https://play.google.com/store/apps/details?id=com.katovia.iletisim_analizi"
+      },
+      {
+        title: "Mental Detox",
+        text: "Odaklan. Nefes al. Yenilen.",
+        homeText: "Odak, nefes ve zihinsel denge",
+        appText: "Kısa nefes, odaklanma ve rahatlama pratikleriyle zihinsel bir mola ver.",
+        appFeatureOne: "Kısa pratikler",
+        appFeatureTwo: "Sade ve çevrimdışı deneyim",
+        appAccent: "73,205,164",
+        icon: "🧘",
+        image: "assets/apps/mental-detox.jpg",
+        route: "uygulamalar",
+        url: "https://play.google.com/store/apps/details?id=com.katovia.mental_detox"
+      },
+      {
+        title: "Cuma Mesajı Oluşturucu",
+        text: "Hitap, ton ve uzunluk seçerek gönderilebilir Cuma mesajları oluştur.",
+        homeText: "Hazır Cuma mesajı üretici",
+        icon: "💌",
+        category: "Mesaj Aracı",
+        accent: "73,205,198",
+        featureOne: "Hitap ve ton seçimi",
+        featureTwo: "Hızlı oluşturma",
+        iconKey: "messageHeart",
+        route: "laboratuvar",
+        url: "laboratuvar/cuma-mesaji.html"
+      },
+      {
+        title: "Kandil Mesajı Oluşturucu",
+        text: "Kandil türü, hitap, ton ve uzunluğa uygun mesajlar oluştur.",
+        homeText: "Kandil mesajı oluşturucu",
+        icon: "✦",
+        category: "Mesaj Aracı",
+        accent: "91,160,255",
+        featureOne: "Altı kandil türü",
+        featureTwo: "Ton ve uzunluk seçimi",
+        iconKey: "lantern",
+        route: "laboratuvar",
+        url: "laboratuvar/kandil-mesaji.html"
+      },
+      {
+        title: "Doğum Günü Mesajı Oluşturucu",
+        text: "İsim, hitap, ton ve uzunlukla kişisel doğum günü mesajları oluştur.",
+        icon: "🎂",
+        category: "Mesaj Aracı",
+        accent: "154,205,96",
+        featureOne: "İsimle kişiselleştirme",
+        featureTwo: "Farklı hitap türleri",
+        iconKey: "birthdayCake",
+        route: "laboratuvar",
+        url: "laboratuvar/dogum-gunu-mesaji.html"
+      },
+      {
+        title: "Güzel Sözler Koleksiyonu",
+        text: "Özgün sözleri keşfet, filtrele ve favorilerine ekle.",
+        icon: "❝",
+        category: "Koleksiyon",
+        accent: "143,126,255",
+        featureOne: "50 özgün söz",
+        featureTwo: "Filtre ve favoriler",
+        iconKey: "quotes",
+        route: "laboratuvar",
+        url: "laboratuvar/guzel-sozler.html"
+      },
+      {
+        title: "Bayram Mesajı Oluşturucu",
+        text: "Bayram türü, ton ve uzunluk seçerek paylaşmaya hazır mesajlar oluştur.",
+        icon: "🎁",
+        category: "Mesaj Aracı",
+        accent: "187,119,255",
+        featureOne: "Üç bayram türü",
+        featureTwo: "Paylaşmaya hazır metinler",
+        iconKey: "gift",
+        route: "laboratuvar",
+        url: "laboratuvar/bayram-mesaji.html"
+      },
+      {
+        title: "Karar Pusulası",
+        text: "Seçeneklerini ölçütlerine göre karşılaştır, önceliklerini görünür hâle getir.",
+        icon: "⌖",
+        category: "Karar Aracı",
+        accent: "84,201,225",
+        featureOne: "Ağırlıklı karşılaştırma",
+        featureTwo: "Şeffaf sonuç analizi",
+        iconKey: "compass",
+        route: "laboratuvar",
+        url: "laboratuvar/karar-pusulasi.html"
+      },
+      {
+        title: "QR Kod Oluşturucu",
+        text: "Bağlantı, metin, Wi-Fi ve WhatsApp bilgilerini cihazınızda QR koda dönüştürün.",
+        icon: "▦",
+        category: "Web Aracı",
+        accent: "84,184,255",
+        featureOne: "4 QR türü",
+        featureTwo: "PNG indirme",
+        iconKey: "qrCode",
+        route: "laboratuvar",
+        url: "laboratuvar/qr-kod-olusturucu.html"
+      },
+      {
+        title: "Dijital Kartvizit Oluşturucu",
+        text: "Bilgilerinizi girin; kartvizitinizi, iletişim QR kodunuzu ve vCard dosyanızı cihazınızda oluşturun.",
+        icon: "▤",
+        category: "Web Aracı",
+        accent: "111,145,255",
+        featureOne: "3 hazır tema",
+        featureTwo: "PNG + vCard",
+        iconKey: "businessCard",
+        route: "laboratuvar",
+        url: "laboratuvar/dijital-kartvizit-olusturucu.html"
+      },
+      {
+        title: "Fal Yorumu",
+        text: "Yakında: günlük fal ve rehberlik",
+        icon: "🪙",
+        route: "laboratuvar"
+      }
+    ];
+
+    const games = [
+  { title:"Yük Ustası", text:"Dengeyi koru, yükü düşürmeden ilerle.", icon:"📦", url:"oyunlar/yuk-ustasi.html" },
+  { title:"Taş Yağmuru", text:"Düşen taşlardan kaç, refleksini test et.", icon:"🪨", url:"oyunlar/tas-yagmuru.html" },
+  { title:"Süt Gol", text:"Topu hedefe gönder, eğlenceli mini gol denemesi.", icon:"🥛", url:"oyunlar/sut-gol.html" },
+  { title:"Şerit Kaçışı", text:"Şeritler arasında doğru zamanda kaç.", icon:"🏁", url:"oyunlar/serit-kacisi.html" },
+  { title:"Kuş Fotoğrafçısı", text:"Kuşları kadraja al ve doğru anda yakala.", icon:"📷", url:"oyunlar/kus-fotografcisi.html" },
+  { title:"Golf Mini Oyun", text:"Kısa vuruşlarla hedefe ulaş.", icon:"⛳", url:"oyunlar/golf-mini-oyun.html" },
+  { title:"Falso Süt", text:"Falso ver, hedefe ulaş.", icon:"🥛", url:"oyunlar/falso-sut.html" },
+  { title:"Buz Hokeyi", text:"Diski kontrol et, kaleye gönder.", icon:"🏒", url:"oyunlar/buz-hokeyi.html" },
+  { title:"Bilardo", text:"Açı hesapla, topu deliğe gönder.", icon:"🎱", url:"oyunlar/bilardo.html" },
+  { title:"Araba Fırlat", text:"Arabayı fırlat, en uzağa git.", icon:"🚗", url:"oyunlar/araba-firlat.html" }
+];
+
+    const codes = [
+      {
+        title:"laboratuvar/cuma-mesaji.js",
+        lang:"JavaScript",
+        accent:"92,174,255",
+        lines:[
+          `<span class="syn-key">const</span> <span class="syn-name">secimler</span> = {`,
+          `  hitap: <span class="syn-string">'general'</span>,`,
+          `  ton: <span class="syn-string">'friendly'</span>,`,
+          `  uzunluk: <span class="syn-string">'short'</span>`,
+          `};`,
+          ``,
+          `<span class="syn-key">const</span> <span class="syn-name">mesaj</span> =`,
+          `  <span class="syn-name">mesajOlustur</span>(secimler);`,
+          ``,
+          `<span class="syn-comment">// Göndermeye hazır.</span>`
+        ],
+        activeLine:8
+      },
+      {
+        title:"index.html · laboratuvar",
+        lang:"HTML",
+        accent:"232,135,173",
+        lines:[
+          `<span class="syn-tag">&lt;section</span> <span class="syn-attr">class</span>=<span class="syn-string">"lab-card"</span><span class="syn-tag">&gt;</span>`,
+          `  <span class="syn-tag">&lt;span</span> <span class="syn-attr">class</span>=<span class="syn-string">"status"</span><span class="syn-tag">&gt;</span>`,
+          `    Kullanıma hazır`,
+          `  <span class="syn-tag">&lt;/span&gt;</span>`,
+          `  <span class="syn-tag">&lt;h3&gt;</span>Karar Pusulası<span class="syn-tag">&lt;/h3&gt;</span>`,
+          `  <span class="syn-tag">&lt;a</span> <span class="syn-attr">href</span>=<span class="syn-string">"#laboratuvar"</span><span class="syn-tag">&gt;</span>`,
+          `    Aracı aç`,
+          `  <span class="syn-tag">&lt;/a&gt;</span>`,
+          `<span class="syn-tag">&lt;/section&gt;</span>`
+        ],
+        activeLine:6
+      },
+      {
+        title:"apps/mental_detox.dart",
+        lang:"Flutter",
+        accent:"88,214,198",
+        lines:[
+          `<span class="syn-key">final</span> <span class="syn-name">project</span> =`,
+          `  <span class="syn-type">KatoviaProject</span>(`,
+          `    name: <span class="syn-string">'Mental Detox'</span>,`,
+          `    type: <span class="syn-type">ProjectType</span>.app,`,
+          `    focus: [`,
+          `      <span class="syn-string">'nefes'</span>,`,
+          `      <span class="syn-string">'odak'</span>,`,
+          `      <span class="syn-string">'denge'</span>,`,
+          `    ],`,
+          `  );`
+        ],
+        activeLine:3
+      }
+    ];
+
+    const labToolIcons = {
+      messageHeart: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M4 5.5h16v10H9l-5 3v-13Z"/>
+          <path class="labIconHeart" d="M12 13.1 9.6 11c-1.5-1.3.6-3.7 2.4-1.8 1.8-1.9 3.9.5 2.4 1.8L12 13.1Z"/>
+        </svg>`,
+      lantern: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M9 4h6M8 7h8l1.5 10h-11L8 7ZM9 20h6"/>
+          <path d="M10 4a2 2 0 0 1 4 0"/>
+          <path class="labIconGlow" d="M9.5 10.5h5l-.5 4h-4l-.5-4Z" opacity=".58"/>
+        </svg>`,
+      birthdayCake: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path class="labIconFlame" d="M12 2.7c1.3 1.2 1.6 2.2 0 3.6-1.6-1.4-1.3-2.4 0-3.6Z"/>
+          <path d="M12 6.4V9M6 13h12M5 17.5h14M6 9h12v11H6V9Z"/>
+          <path d="M6 13c1.3 1.2 2.7 1.2 4 0 1.3 1.2 2.7 1.2 4 0 1.3 1.2 2.7 1.2 4 0"/>
+        </svg>`,
+      quotes: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path class="labQuoteLeft" d="M10 7H6.5A2.5 2.5 0 0 0 4 9.5V13h5v4H5.5"/>
+          <path class="labQuoteRight" d="M20 7h-3.5A2.5 2.5 0 0 0 14 9.5V13h5v4h-3.5"/>
+        </svg>`,
+      gift: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M4 10h16v10H4V10ZM3 7h18v4H3V7ZM12 7v13"/>
+          <g class="labIconRibbon">
+            <path d="M12 7C8.5 7 7 6 7 4.5 7 3.6 7.7 3 8.7 3 10.4 3 12 7 12 7Z"/>
+            <path d="M12 7c3.5 0 5-1 5-2.5 0-.9-.7-1.5-1.7-1.5C13.6 3 12 7 12 7Z"/>
+          </g>
+        </svg>`,
+      compass: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="8.5"/>
+          <path d="M12 3.5V5M12 19v1.5M3.5 12H5M19 12h1.5"/>
+          <g class="labIconNeedle">
+            <path d="m15.7 8.3-2.1 5.3-5.3 2.1 2.1-5.3 5.3-2.1Z"/>
+            <circle cx="12" cy="12" r=".7" fill="currentColor" stroke="none"/>
+          </g>
+        </svg>`,
+      qrCode: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Z"/>
+          <path d="M6 6h2v2H6V6Zm10 0h2v2h-2V6ZM6 16h2v2H6v-2Zm8-2h2v2h-2v-2Zm4 0h2v4h-2v-4Zm-4 4h4v2h-4v-2Z" fill="currentColor" stroke="none"/>
+        </svg>`,
+      businessCard: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <rect x="3" y="5.5" width="18" height="13" rx="2"/>
+          <circle cx="8" cy="11" r="2.1"/>
+          <path d="M5.3 16c.7-1.7 1.6-2.5 2.7-2.5s2 .8 2.7 2.5M13.5 9.5h4.5M13.5 12.5h4.5M13.5 15.5h3"/>
+        </svg>`
+    };
+
+    const labFeatureIcon = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="8.5"/>
+        <path d="m8.5 12 2.2 2.2 4.8-4.8"/>
+      </svg>`;
+
+    function getLabToolIcon(iconKey){
+      return labToolIcons[iconKey] || labToolIcons.compass;
+    }
+
+    const routeContent = {
+      "uygulamalar": {
+        title:"Uygulamalar",
+        text:"Katovia’nın geliştirdiği mobil deneyimleri keşfet.",
+        items:["Balonlubum","Kare Savaşları","İletişim Analizi","Mental Detox"]
+      },
+      "laboratuvar": {
+        title:"Laboratuvar",
+        text:"Deneysel ama gerçekten kullanılabilir mini araçlar ve prototipler burada büyüyor.",
+        items:["Kandil Mesajı Oluşturucu","Bayram Mesajı Oluşturucu","Fal Yorumu","Mini APK Denemeleri"]
+      },
+      "oyunlar": {
+        title:"Oyunlar",
+        text:"Kısa sürede açılan, telefonda hemen oynanan hafif HTML5 oyunları keşfet.",
+        items:["Mini Kelime Oyunu","Renk Eşleştir","Refleks Testi","Galaksi Savunma"]
+      },
+      "kodlar": {
+        title:"Kodlar",
+        text:"Her projenin çalışan demosu yanında kaynak kodu, açıklaması ve geliştirme notu burada listelenecek.",
+        items:["HTML5 Araç Kodları","Mini Oyun Kodları","Flutter APK Kodları","Tasarım Şablonları"]
+      },
+      "gizlilik": {
+        title:"Gizlilik",
+        text:"Katovia uygulamaları ve mini araçları için gizlilik politikaları bu alanda toplanacak.",
+        items:["Balonlubum Gizlilik","Kare Savaşları Gizlilik","İletişim Analizi Gizlilik","Mental Detox Gizlilik"]
+      },
+      "iletisim": {
+        title:"İletişim",
+        text:"Destek, iş birliği, proje önerileri ve geri bildirim için iletişim alanı burada hazırlanacak.",
+        items:["E-posta","GitHub","Play Store Geliştirici Sayfası","Geri Bildirim"]
+      }
+    };
+
+    function renderNav(){
+      const nav = document.getElementById("nav");
+      const mobileNav = document.getElementById("mobileNav");
+      const links = navItems.map(item => `<a href="#${item.id}" data-route="${item.id}">${item.label}</a>`).join("");
+      nav.innerHTML = links;
+      mobileNav.innerHTML = links;
+    }
+
+    const featuredProjectTitles = [
+      "Balonlubum",
+      "İletişim Analizi",
+      "QR Kod Oluşturucu",
+      "Dijital Kartvizit Oluşturucu",
+      "Cuma Mesajı Oluşturucu"
+    ];
+
+    const labToolTitles = [
+      "QR Kod Oluşturucu",
+      "Dijital Kartvizit Oluşturucu",
+      "Cuma Mesajı Oluşturucu",
+      "Doğum Günü Mesajı Oluşturucu",
+      "Kandil Mesajı Oluşturucu",
+      "Bayram Mesajı Oluşturucu",
+      "Karar Pusulası"
+    ];
+
+    const gameAccents = ["66,174,255","155,92,255","62,207,187","255,145,69","80,205,139"];
+
+    function renderFeaturedCover(project){
+      if(project.image){
+        return `<img src="${project.image}" alt="${project.title}" onerror="this.remove();this.parentElement.textContent='${project.icon}'">`;
+      }
+      if(project.iconKey === "qrCode"){
+        return `<span class="featuredVisual featuredQr" aria-hidden="true">${Array.from({length:25},() => "<i></i>").join("")}</span>`;
+      }
+      if(project.iconKey === "businessCard"){
+        return `<span class="featuredVisual featuredCard" aria-hidden="true"><i class="featuredCardAvatar"></i><span class="featuredCardLines"><i></i><i></i></span><i class="featuredCardCode"></i></span>`;
+      }
+      return `<span class="featuredVisual" aria-hidden="true">${project.icon}</span>`;
+    }
+
+    function renderHome(){
+      document.getElementById("quickGrid").innerHTML = categories.map((c,index) => `
+        <a class="quick" href="#${c.route}" data-route="${c.route}" style="--home-index:${index};--quick-accent:${c.accent}" aria-label="${c.title}: ${c.text}">
+          <div class="qIcon" style="background:${c.color}">${c.icon}</div>
+          <div><h3>${c.title}</h3><p>${c.text}</p></div>
+        </a>
+      `).join("");
+
+      const featuredProjects = featuredProjectTitles.map(title => projects.find(project => project.title === title)).filter(Boolean);
+      document.getElementById("projectGrid").innerHTML = featuredProjects.map((p,index) => `
+        <a class="project" href="${p.url || `#${p.route}`}" ${p.url ? `data-url="${p.url}" target="_blank" rel="noopener noreferrer"` : `data-route="${p.route}"`} style="--home-index:${index}" aria-label="${p.title}: ${p.homeText || p.text}">
+          <div class="cover">${renderFeaturedCover(p)}</div>
+          <div class="body"><h3>${p.title}</h3><p>${p.homeText || p.text}</p></div>
+        </a>
+      `).join("");
+
+      document.getElementById("codeGrid").innerHTML = codes.map((c,index) => `
+        <article class="codeCard" tabindex="0" style="--code-accent:${c.accent};--code-index:${index}" aria-label="${c.lang} kod örneği: ${c.title}">
+          <div class="codeTop">
+            <span class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></span>
+            <span class="codeMeta"><span class="codePath">${c.title}</span><span class="codeLang">${c.lang}</span></span>
+          </div>
+          <pre class="codeViewport"><code class="codeFlow">${c.lines.map((line,lineIndex) => `<span class="codeLine${lineIndex + 1 === c.activeLine ? " active" : ""}"><span class="lineNo" aria-hidden="true">${lineIndex + 1}</span><span class="lineCode">${line || " "}</span></span>`).join("")}</code></pre>
+        </article>
+      `).join("");
+    }
+
+    const validRoutes = new Set([...navItems.map(item => item.id),"gizlilik"]);
+    const mobileMenuButton = document.getElementById("mobileMenuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+    const mobileViewport = window.matchMedia("(max-width: 760px)");
+
+    function isMobileMenuOpen(){
+      return mobileMenuButton.getAttribute("aria-expanded") === "true";
+    }
+
+    function setMobileMenu(open){
+      const shouldOpen = Boolean(open && mobileViewport.matches);
+      mobileMenuButton.setAttribute("aria-expanded", String(shouldOpen));
+      mobileMenuButton.setAttribute("aria-label", shouldOpen ? "Menüyü kapat" : "Menüyü aç");
+      mobileNav.hidden = !shouldOpen;
+    }
+
+    function getRouteFromHash(){
+      return location.hash.slice(1).trim();
+    }
+
+    function getSafeRoute(route){
+      return validRoutes.has(route) ? route : "ana-sayfa";
+    }
+
+    function updateActiveRoute(route){
+      document.querySelectorAll("#nav a[data-route], #mobileNav a[data-route]").forEach(link => {
+        const isActive = link.dataset.route === route;
+        link.classList.toggle("active", isActive);
+        if(isActive){
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    function setRoute(route,{scrollToTop=false}={}){
+      const isHome = route === "ana-sayfa";
+      const routePanel = document.getElementById("routePanel");
+      const routeItems = document.getElementById("routeItems");
+      updateActiveRoute(route);
+      document.getElementById("homeHero").classList.toggle("hide", !isHome);
+      document.getElementById("homeContent").classList.toggle("hide", !isHome);
+      routePanel.classList.toggle("active", !isHome);
+      routePanel.classList.toggle("appsRoute", route === "uygulamalar");
+      routePanel.classList.toggle("labRoute", route === "laboratuvar");
+      routePanel.classList.toggle("gamesRoute", route === "oyunlar");
+      routeItems.classList.toggle("appShowcaseGrid", route === "uygulamalar");
+      routeItems.classList.toggle("labShowcaseGrid", route === "laboratuvar");
+      routeItems.classList.toggle("gameList", route === "oyunlar");
+
+      if(isHome){
+        routeItems.replaceChildren();
+      } else {
+        const content = routeContent[route];
+        document.getElementById("routeTitle").textContent = content.title;
+        document.getElementById("routeText").textContent = content.text;
+if (route === "uygulamalar") {
+  const apps = projects.filter(p => p.route === "uygulamalar" && p.url);
+
+  routeItems.innerHTML = apps.map(app => `
+    <article class="appShowcaseCard" style="--app-accent:${app.appAccent}">
+      <div class="appShowcaseMedia">
+        <img src="${app.image}" alt="${app.title} uygulama görseli" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="appShowcaseFallback" role="img" aria-label="${app.title} görseli" hidden>${app.icon}</div>
+      </div>
+      <div class="appShowcaseContent">
+        <span class="appPlatform"><span aria-hidden="true">▦</span> Android · Google Play</span>
+        <h3>${app.title}</h3>
+        <p>${app.appText}</p>
+        <ul class="appFeatures">
+          <li>${app.appFeatureOne}</li>
+          <li>${app.appFeatureTwo}</li>
+        </ul>
+        <a class="appShowcaseCta" href="${app.url}" target="_blank" rel="noopener noreferrer" aria-label="${app.title}: Google Play'de Gör">
+          <span>Google Play'de Gör</span>
+          <span class="appShowcaseCtaArrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </article>
+  `).join("");
+} else if (route === "laboratuvar") {
+  const activeTools = labToolTitles.map(title => projects.find(project => project.title === title && project.url)).filter(Boolean);
+  routeItems.innerHTML = `
+    <section class="labIntro" aria-labelledby="labIntroTitle">
+      <div class="labIntroCopy">
+        <span class="labIntroEyebrow">Dijital deney alanı</span>
+        <h1 id="labIntroTitle">Katovia <span class="labTitleAccent">Laboratuvarı</span></h1>
+        <p class="labIntroText">Hızlı, kullanışlı ve deneysel dijital araçların üretildiği yer.</p>
+        <div class="labFeatureTags" aria-label="Laboratuvar özellikleri">
+          <span class="labFeatureTag" style="--lab-tag-index:0">Deneysel ve yenilikçi</span>
+          <span class="labFeatureTag" style="--lab-tag-index:1">Hızlı ve kullanışlı</span>
+          <span class="labFeatureTag" style="--lab-tag-index:2">Sürekli gelişen</span>
+        </div>
+      </div>
+      <span class="labFlaskWrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+          <path d="M9 3h6M10 3v5.3l-5 8.4A2.8 2.8 0 0 0 7.4 21h9.2a2.8 2.8 0 0 0 2.4-4.3l-5-8.4V3"/>
+          <path d="M7.2 15h9.6"/>
+          <path d="M9.2 17.4h.01M13 18.7h.01M14.8 16.5h.01"/>
+        </svg>
+      </span>
+      <span class="labParticles" aria-hidden="true">
+        <span class="labParticle"></span>
+        <span class="labParticle"></span>
+        <span class="labParticle"></span>
+        <span class="labParticle"></span>
+        <span class="labParticle"></span>
+      </span>
+    </section>
+    ${activeTools.map((tool,index) => `
+      <article class="labToolCard" style="--lab-accent:${tool.accent};--lab-index:${index}">
+        <a class="labToolLink" href="${tool.url}" aria-label="${tool.title} aracını aç">
+          <span class="labToolGlow" aria-hidden="true"></span>
+          <span class="labToolTop">
+            <span class="labToolCategory"><span class="labStatusDot" aria-hidden="true"></span>${tool.category}</span>
+            <span class="labToolIcon" aria-hidden="true">${getLabToolIcon(tool.iconKey)}</span>
+          </span>
+          <span class="labToolContent">
+            <h2>${tool.title}</h2>
+            <p>${tool.text}</p>
+            <span class="labToolFeatures">
+              <span class="labToolFeature">${labFeatureIcon}<span>${tool.featureOne}</span></span>
+              <span class="labToolFeature">${labFeatureIcon}<span>${tool.featureTwo}</span></span>
+            </span>
+            <span class="labToolCta">
+              <span>Aracı Aç</span>
+              <svg class="labToolCtaArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M5 12h13M14 7l5 5-5 5"/>
+              </svg>
+            </span>
+          </span>
+        </a>
+      </article>
+    `).join("")}
+  `;
+} else if (route === "oyunlar") {
+  routeItems.innerHTML = games.map((game,index) => `
+    <a class="gameRow" href="${game.url}" target="_blank" rel="noopener noreferrer" style="--game-accent:${gameAccents[index % gameAccents.length]}" aria-label="${game.title}: Oyunu aç">
+      <span class="gameIcon" aria-hidden="true">${game.icon}</span>
+      <span class="gameCopy"><h3>${game.title}</h3><p>${game.text}</p></span>
+      <span class="gameCta"><span>Oyunu Aç</span><span class="gameCtaArrow" aria-hidden="true">→</span></span>
+    </a>
+  `).join("");
+} else {
+  routeItems.innerHTML = content.items.map(item => `
+    <div class="soonItem">
+      <b>${item}</b>
+      <span>Yakında aktif bağlantı, demo ve kaynak kod formatı eklenecek.</span>
+    </div>
+  `).join("");
+}
+      }
+      setMobileMenu(false);
+      if(scrollToTop){
+        window.scrollTo({top:0,left:0,behavior:"auto"});
+      }
+    }
+
+    function syncRouteFromHash({scrollToTop=false}={}){
+      const hashRoute = getRouteFromHash();
+      const route = getSafeRoute(hashRoute);
+      setRoute(route,{scrollToTop});
+      if(hashRoute !== route){
+        location.replace(`#${route}`);
+      }
+    }
+
+    function navigateToRoute(route){
+      const safeRoute = getSafeRoute(route);
+      if(getRouteFromHash() === safeRoute){
+        setRoute(safeRoute,{scrollToTop:true});
+        return;
+      }
+      location.hash = safeRoute;
+    }
+
+    mobileMenuButton.addEventListener("click", () => setMobileMenu(!isMobileMenuOpen()));
+    mobileMenuButton.addEventListener("keydown", e => {
+      if(e.key === "Enter" || e.key === " "){
+        e.preventDefault();
+        setMobileMenu(!isMobileMenuOpen());
+      }
+    });
+    mobileNav.addEventListener("keydown", e => {
+      const target = e.target.closest("a[data-route]");
+      if(e.key === "Enter" && target){
+        e.preventDefault();
+        navigateToRoute(target.dataset.route);
+      }
+    });
+
+    document.addEventListener("keydown", e => {
+      if(e.key === "Escape" && isMobileMenuOpen()){
+        setMobileMenu(false);
+        mobileMenuButton.focus();
+      }
+    });
+
+    mobileViewport.addEventListener("change", () => setMobileMenu(false));
+    window.addEventListener("hashchange", () => syncRouteFromHash({scrollToTop:true}));
+
+    document.addEventListener("click", e => {
+      if(isMobileMenuOpen() && !mobileNav.contains(e.target) && !mobileMenuButton.contains(e.target)){
+        setMobileMenu(false);
+      }
+
+      const linkCard = e.target.closest("[data-url]");
+      if (linkCard && linkCard.dataset.url) {
+        e.preventDefault();
+        window.open(linkCard.dataset.url, "_blank");
+        return;
+      }
+
+      const target = e.target.closest("[data-route]");
+      if(target){
+        e.preventDefault();
+        navigateToRoute(target.dataset.route);
+      }
+    });
+
+    renderNav();
+    renderHome();
+    syncRouteFromHash();
+  </script>
 </body>
 </html>
