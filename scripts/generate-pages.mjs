@@ -1,0 +1,94 @@
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, posix } from 'node:path';
+import { sections, entries } from '../src/catalog/registry.js';
+import { siteRoot } from './paths.mjs';
+import { gameMarkup } from '../src/games/stop-at-five/markup.js';
+import { translate } from '../src/i18n/index.js';
+
+const escape = (text) => String(text).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+const hrefFrom = (from, to) => {
+  const relative = posix.relative(from, to);
+  return relative ? relative + (to.endsWith('/') ? '/' : '') : './';
+};
+const txt = (key, tag = 'span', attrs = '') => `<${tag} data-i18n="${key}" ${attrs}>${escape(translate('en', key))}</${tag}>`;
+const statusLabel = (status) => txt(`status.${status}`);
+
+function card(entry, route, heading = 'h3') {
+  return `<a class="section-card" href="${hrefFrom(route, entry.route)}">
+        <div class="section-card-top">${txt(`common.${entry.type}`, 'span', 'class="eyebrow"')}<span class="card-arrow" aria-hidden="true">↗</span></div>
+        ${txt(entry.titleKey || `entry.${entry.id}.title`, heading)}${txt(entry.descriptionKey || `entry.${entry.id}.description`, 'p')}
+        <div class="section-card-bottom"><span class="pill">${statusLabel(entry.status)}</span></div>
+      </a>`;
+}
+
+function daily(route, isHome = false) {
+  return gameMarkup();
+}
+
+function home(route) {
+  return `<main id="main-content" class="container has-daily" tabindex="-1">
+    <section class="hero" aria-labelledby="home-title"><div class="hero-top">${txt('home.eyebrow', 'p', 'class="eyebrow"')}<span class="pill"><span class="status-dot" aria-hidden="true"></span>${txt('home.preview')}</span></div>
+      <h1 id="home-title">${txt('home.play')}<br>${txt('home.something')}</h1>
+      <div class="hero-bottom">${txt('home.description', 'p')}${txt('common.motto', 'span', 'class="index-label"')}</div>
+    </section>
+    ${daily(route, true)}
+    <section aria-labelledby="worlds-title"><div class="section-heading">${txt('home.worlds', 'h2', 'id="worlds-title"')}${txt('home.universe', 'span', 'class="eyebrow"')}</div>
+      <div class="section-grid">${sections.filter((section) => section.id !== 'today').map((section) => card({ ...section, titleKey: `nav.${section.id}`, descriptionKey: `section.${section.id}.description` }, route)).join('\n')}</div>
+    </section>
+  </main>`;
+}
+
+function sectionPage(section) {
+  const available = entries.filter((entry) => entry.type === section.type);
+  return `<main id="main-content" class="container section-page${section.id === 'today' ? ' daily-page' : ''}" tabindex="-1">
+    <header class="section-intro"><p class="eyebrow">KATOVIA / ${txt(`nav.${section.id}`)}</p>${txt(`section.${section.id}.label`, 'h1')}${txt(`section.${section.id}.description`, 'p')}</header>
+    ${section.id === 'today' ? daily(section.route) : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
+    ${available.length ? `<section aria-labelledby="collection-title"><div class="section-heading">${txt(section.id === 'tools' ? 'tools.collection' : 'lab.collection', 'h2', 'id="collection-title"')}<span class="eyebrow"><span>${available.length}</span> ${txt('common.projects')}</span></div><div class="section-grid">${available.map((entry) => card(entry, section.route)).join('\n')}</div></section>` : ''}
+    ${section.id === 'lab' ? `<p class="legacy-note">${txt('lab.legacyIntro')} <a href="${hrefFrom(section.route, '/index.html')}#uygulamalar" data-i18n="lab.legacyLink">${escape(translate('en', 'lab.legacyLink'))}</a>.</p>` : ''}
+  </main>`;
+}
+
+function documentPage(section) {
+  const route = section?.route || '/v2/';
+  const titleKey = section ? `page.${section.id}.title` : 'home.title';
+  const descriptionKey = section ? `section.${section.id}.description` : 'home.meta';
+  // Paths below are relative to the source HTML, so Vite can resolve out-of-root modules.
+  const sourceScript = section ? '../../../src/shell/main.js' : '../../src/shell/main.js';
+  return `<!doctype html>
+<!-- Generated from src/catalog/registry.js by scripts/generate-pages.mjs. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="${titleKey}">${escape(translate('en', titleKey))}</title><meta name="description" data-i18n-content="${descriptionKey}" content="${escape(translate('en', descriptionKey))}">
+  <meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#0c0e10">
+  <script type="module" src="${sourceScript}"></script>
+</head>
+<body data-page="${section?.id || 'home'}">
+  ${txt('common.skip', 'a', 'class="skip-link" href="#main-content"')}
+  <header class="site-header"><div class="container header-inner">
+    <a class="wordmark" href="${hrefFrom(route, '/v2/')}" data-i18n-label="common.homeLabel" aria-label="Katovia V2 homepage"><svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3v18M8 12l11-9M8 12l11 9" stroke="currentColor" stroke-width="3.5"/></svg>KATOVIA</a>
+    <div class="language-control" role="group" data-i18n-label="common.language" aria-label="Language selection"><button type="button" data-locale="tr" data-i18n-label="common.tr" aria-label="Switch language to Turkish" aria-pressed="false" lang="tr">TR</button><button type="button" data-locale="en" data-i18n-label="common.en" aria-label="Switch language to English" aria-pressed="true" lang="en">EN</button></div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>${txt('common.menu')} <span aria-hidden="true">☰</span></button>
+    <nav id="primary-navigation" class="navigation" data-i18n-label="common.navigation" aria-label="Main navigation" data-navigation>${sections.map((item) => `<a class="nav-link" data-i18n="nav.${item.id}" href="${hrefFrom(route, item.route)}"${section?.id === item.id ? ' aria-current="page"' : ''}>${escape(translate('en', `nav.${item.id}`))}</a>`).join('')}</nav>
+  </div></header>
+  ${section ? sectionPage(section) : home(route)}
+  <footer class="site-footer"><div class="container footer-inner"><p class="eyebrow">KATOVIA / ${txt('common.motto')}</p><a class="footer-link" href="${hrefFrom(route, '/index.html')}">${txt('common.return')} <span aria-hidden="true">&nbsp;↗</span></a></div></footer>
+</body>
+</html>
+`;
+}
+
+const notFound = `<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>404 — Katovia</title><style>html{color-scheme:dark;background:#0c0e10;color:#f0f2ec;font:18px/1.6 system-ui}body{max-width:40rem;margin:12vh auto;padding:24px}p{color:#acb4b4}a{display:inline-flex;align-items:center;min-height:44px;color:#cdfc7b}a:focus-visible{outline:3px solid #cdfc7b;outline-offset:5px}h1{font-size:3rem}</style></head><body><main><p>404 / KATOVIA</p><h1>Bu köşe henüz yok.</h1><p>Bağlantıyı kontrol et veya ana sayfaya dön.</p><a href="/">Katovia ana sayfa</a></main></body></html>
+`;
+const pages = [{ path: 'v2/index.html', html: documentPage() }, ...sections.map((section) => ({ path: `v2/${section.id}/index.html`, html: documentPage(section) })), { path: '404.html', html: notFound }];
+for (const page of pages) {
+  const path = `${siteRoot}/${page.path}`;
+  if (process.argv.includes('--check')) {
+    if (await readFile(path, 'utf8') !== page.html) throw new Error(`Generated page out of date: ${page.path}`);
+  } else {
+    await mkdir(dirname(path), { recursive: true });
+    await writeFile(path, page.html);
+  }
+}
+console.log(`${process.argv.includes('--check') ? 'Checked' : 'Generated'} ${pages.length} static HTML entries.`);

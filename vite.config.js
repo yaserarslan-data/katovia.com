@@ -1,0 +1,45 @@
+import { defineConfig } from 'vite';
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { sections } from './src/catalog/registry.js';
+import { manifest, safePath } from './scripts/legacy.mjs';
+import { repoRoot, siteRoot, distRoot } from './scripts/paths.mjs';
+import { mimeTypes } from './scripts/server.mjs';
+
+function legacyDevFiles() {
+  const allowed = new Set(manifest.files.map((file) => `/${file.path}`));
+  return {
+    name: 'explicit-legacy-dev-files',
+    configureServer(server) {
+      server.middlewares.use(async (req, res, next) => {
+        const path = new URL(req.url, 'http://localhost').pathname;
+        const legacyPath = path === '/' ? '/index.html' : path;
+        if (!allowed.has(legacyPath)) return next();
+        try {
+          const bytes = await readFile(safePath(repoRoot, legacyPath.slice(1)));
+          res.setHeader('Content-Type', mimeTypes[legacyPath.split('.').at(-1)] || 'application/octet-stream');
+          res.end(bytes);
+        } catch (error) { next(error); }
+      });
+    },
+  };
+}
+
+export default defineConfig({
+  root: siteRoot,
+  publicDir: false,
+  appType: 'mpa',
+  base: './',
+  resolve: { alias: { '/src': resolve(repoRoot, 'src') } },
+  plugins: [legacyDevFiles()],
+  server: { host: '127.0.0.1', fs: { allow: [repoRoot] } },
+  build: {
+    outDir: distRoot,
+    emptyOutDir: true,
+    assetsDir: 'v2/assets',
+    target: ['es2022', 'safari16'],
+    rolldownOptions: {
+      input: [resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
+    },
+  },
+});

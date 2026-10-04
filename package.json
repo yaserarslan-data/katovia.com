@@ -1,0 +1,21 @@
+{
+  "name": "katovia-foundation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "node scripts/generate-pages.mjs && vite --host 127.0.0.1",
+    "build": "node scripts/generate-pages.mjs && vite build && node scripts/preserve-legacy.mjs && node scripts/check-artifact.mjs && node scripts/asset-sizes.mjs",
+    "preview": "node scripts/serve.mjs",
+    "check": "node scripts/generate-pages.mjs --check && node --test tests/*.test.mjs",
+    "test": "npm run check && playwright test",
+    "test:browser": "playwright test",
+    "test:dev": "node scripts/check-dev.mjs",
+    "qa": "npm run build && npm test && npm run test:dev"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "vite": "8.3.2"
+  }
+}

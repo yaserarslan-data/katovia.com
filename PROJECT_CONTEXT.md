@@ -2,9 +2,50 @@
 
 > **Belge türü:** Ürün vizyonu, mimari sınırlar, güvenlik ve uyum anayasası  
 > **Hedef okuyucu:** Projede çalışan geliştirici, Codex/AI ajanı ve gelecekteki katkı sağlayıcılar  
-> **Belge önceliği:** Yeni özellik taleplerinden önce gelir  
-> **Son gözden geçirme:** 2026-07-16  
+> **Belge önceliği:** Güncel kullanıcı talimatları ve onaylanmış Katovia 2.0 kararlarıyla birlikte uygulanır
+> **Son gözden geçirme:** 2026-10-04
 > **Durum:** Aktif ve bağlayıcı proje bağlamı
+
+---
+
+## GÜNCEL ÜRÜN YÖNÜ — KATOVIA 2.0
+
+3 Ekim 2026 tarihinde Katovia 2.0 briefing’i ve EPIC 0 analizi onaylandı. Katovia artık yalnızca bir proje vitrini değil, insanların oynadığı, bir şey oluşturduğu ve arkadaşına gönderdiği interaktif bir internet playground’udur. Ana davranışlar **PLAY. CREATE. CHALLENGE.**; altı ürün alanı **TODAY, PLAY, CHALLENGE, CREATE, TOOLS, LAB**.
+
+- TODAY günlük geri dönüş ritüelidir; paylaşım, DUEL ve template tabanlı CREATE büyüme döngüleridir.
+- Ana sayfa zamanla doğrudan oynanabilir deneyime dönüşür. Mobil kalite, performans ve erişilebilirlik efektlerden önce gelir.
+- İlk kullanımda hesap zorunlu değildir. Creator içinde kullanıcı JavaScript/HTML/CSS kodu çalıştırılmaz.
+- TOOLS browser-side pratik araçlar ve SEO alanıdır. Eski oyunlar, mobil uygulamalar ve deneyler LAB altında korunur.
+
+Bu belgenin aşağıdaki eski stüdyo tanımı, vitrini ve Faz 0–9 yol haritası **legacy geçmiş bağlamı** olarak korunmuştur. Yeni ürün yönünde bunların yerine Katovia 2.0 briefing’i, [EPIC 0 analiz raporu](docs/KATOVIA_2_EPIC_0_ANALYSIS.md) ve [teknoloji](docs/ADR-001-Technology.md), [routing](docs/ADR-002-Routing.md), [legacy koruma](docs/ADR-003-Legacy-Preservation.md) kararları esas alınır. Veri minimizasyonu, lisans, kullanıcı dosyalarını koruma ve kalite ilkeleri yürürlüktedir.
+
+### Onaylanmış EPIC 0B teknik kapsamı
+
+Önceki build/framework sınırlarının bu milestone için açıkça onaylanmış istisnası: **Vite + vanilla JavaScript ES modules + statik MPA**, development QA için Playwright. React/Vue/Svelte ve TypeScript yok. Legacy production `index.html`, oyun/araç/data/vendor/asset dosyaları, `CNAME` ve `app-ads.txt` aynı kalır. Yeni shell yalnız `/v2/` altında paralel kaynak ve local build artifact’ıdır.
+
+`npm run dev` kaynak geliştirmeyi, `npm run build` allowlist korumalı local artifact’ı, `npm run preview` düz statik artifact server’ını çalıştırır. Bu onay production deployment, Firebase/Auth, gerçek analytics provider, Daily oyunu, Duel backend veya Creator yayınlama izni değildir. `tanitim/` kullanıcı dosyaları izlenmeyen çalışma olarak korunur ve artifact’a eklenmez. EPIC 0B için `codex/katovia-v2-foundation` branch’i kullanıcı tarafından yetkilendirilmiştir; commit/push yapılmaz.
+
+### Onaylanmış EPIC 2A kapsamı
+
+4 Ekim 2026 EPIC 2A talimatı, yalnız paralel `/v2/` home ve TODAY üzerinde browser-side Daily Engine ile **STOP AT 5.00** oyununu yetkilendirir. UTC günlük anahtarı, ilk geçerli local sonuç, motivasyon amaçlı local streak ve native/clipboard/manual paylaşım uygulanmıştır. Preview epoch `2026-10-04`; practice modu yoktur. Sonuçlar cihazda tutulur, güvenilir leaderboard veya sunucu doğrulaması değildir. [EPIC 2A sonuç raporu](docs/KATOVIA_2_EPIC_2A_RESULT.md) sınırları ve doğrulamayı kaydeder.
+
+Bu ek izin deployment, root cutover, gerçek analytics, hesap/bulut/backend, ödeme/billing, commit veya push yetkisi vermez. EPIC 0B’nin diğer koruma ve teknoloji sınırları devam eder.
+
+### Onaylanmış i18n ve additive yayın kapsamı — 4 Ekim 2026
+
+TR/EN foundation onaylandı: önce geçerli kayıtlı tercih, sonra `tr-*` browser dili, aksi halde EN. UI metinleri `src/i18n/messages.js` içinde merkezi key’lerle tutulur; yeni UI önce translation key, sonra markup yaklaşımını izler. User content otomatik çevrilmez; gelecekte `contentLocale` metadata’sı ayrı ürün kararıdır.
+
+Kullanıcının i18n mesajındaki açık deploy talimatı, ek brief’in “production deployment yapma” maddesini bu görev için geçersiz kılar. Testler geçtikten sonra mevcut GitHub Pages `main` / root kaynağı değiştirilmeden yalnız derlenmiş `/v2/` artifact’ı additive olarak yayınlanabilir. Root cutover, legacy değişikliği, `tanitim/` yayını, ücretli hosting veya cloud/billing yetkisi yoktur. Bu yayın için gerekli scoped source/release commit ve push işlemleri deploy talimatının kapsamındadır. Önce mevcut başarılı Pages commit/tree ve canlı legacy byte’ları saklanır; başarısız yayın önceki tree’yi geri getiren yeni bir commit ile rollback edilir. Force-push/reset/clean kullanılmaz.
+
+### COST & LICENSE GUARDRAIL — kullanıcı kısıtı
+
+Bu milestone’da ücretli API/SaaS/hosting, lisans ücreti gerektiren font/asset/library veya ödeme yöntemi isteyen servis eklenmez. Yeni dependency eklenmeden önce paket ve transitive bağımlılık lisansları kontrol edilir; yalnız ticari kullanıma uygun açık kaynak lisansları, bildirim ve dağıtım koşulları korunarak kullanılır. Harici görsel, ses, ikon veya medya alınmaz; yalnız mevcut repository assetleri veya özgün kodla üretilmiş görseller kullanılır.
+
+Firebase/Google Cloud billing, Blaze veya ödeme hesabı etkinleştirilmez; production üzerinde maliyet yaratabilecek kaynak oluşturulmaz. Gelecekte ücretli servis gerektiren bir çözüm implement edilmez; raporda ayrı, uygulanmamış öneri olarak belirtilir. “Free tier” veya kredi mevcut olması ödeme/billing gerektiren servisi bu kısıtın dışına çıkarmaz. Mevcut foundation lisans incelemesi: [Cost & License Record](docs/COST_LICENSE_RECORD.md).
+
+### Katovia 2.0 geliştirme sırası
+
+Foundation + parallel shell → shell görsel kalite kontrolü → local Daily Engine ve ilk oyun → diğer daily oyunları → lazy Playground → dynamic-link/identity/security kararı + Duel → template Creator → yeni Tools → Growth Layer → final regression. Analytics sözleşmesi, SEO, performans bütçesi ve QA erken kurulur; gerçek telemetry ve bulut servisi ilgili fazda ayrıca devreye alınır.
 
 ---
 
