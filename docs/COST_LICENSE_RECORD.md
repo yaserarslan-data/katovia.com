@@ -1,5 +1,9 @@
 # Cost & License Guardrail Record
 
+## Tools release — 7 October 2026
+
+Image Compressor, Lucky Draw and Pixel Art Grid use original native browser code and existing safe storage/share/i18n. No new dependency, third-party code/media/font/audio/asset, backend/auth/cloud storage, paid service, hosting/billing/payment/Blaze change. Test graphics are original Canvas-generated inputs. Existing Vite MIT / Playwright Apache-2.0 and vendor notices retained; package/lockfile unchanged. Original project code has no added third-party license requirement. Release has candidate/live QA and exact-tree forward rollback protection.
+
 ## Growth priorities — 6 October 2026
 
 Compact responsive CSS, saved-score Daily continuation/duel shares, PLAY share controls and early UTF-8 Creator link budgeting reuse native browser APIs and existing modules. No dependencies, external media/fonts/sound, paid/free SaaS provisioning, hosting/billing/payment/cloud changes. Package/lockfile unchanged. Existing legacy fixtures/licenses and user files preserved; artifact-only publication has a prepared exact-tree forward rollback.

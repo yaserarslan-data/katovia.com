@@ -1,0 +1,2 @@
+import {chromium} from '@playwright/test';import {qaNewTools} from './qa-new-tools.mjs';
+const browser=await chromium.launch({channel:'chrome',headless:true});try{const context=await browser.newContext({locale:'en-US'});const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await qaNewTools(page,'http://127.0.0.1:4173');if(errors.length)throw new Error(errors.join('; '));}finally{await browser.close();}

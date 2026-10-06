@@ -1,0 +1,2 @@
+export function parseDrawList(text){if(typeof text!=='string'||text.length>16000)throw new Error('lucky.limit');const items=text.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);if(items.length>200||items.some(x=>x.length>80))throw new Error('lucky.limit');return items;}
+export function randomIndex(length,cryptoObject=globalThis.crypto){if(!Number.isInteger(length)||length<1||length>200)throw new RangeError('length');const bound=0x100000000-0x100000000%length;let value;do{value=cryptoObject.getRandomValues(new Uint32Array(1))[0];}while(value>=bound);return value%length;}

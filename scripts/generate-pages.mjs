@@ -24,6 +24,7 @@ const statusLabel = (status) => txt(`status.${status}`);
 
 function card(entry, route, heading = 'h3') {
   return `<a class="section-card" data-card-id="${entry.id}" href="${hrefFrom(route, entry.route)}">
+        ${entry.visual?`<svg class="tool-visual" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="5" width="38" height="38" rx="8" stroke="currentColor" stroke-width="2"/><path d="${entry.id==='image-compressor'?'M12 32l8-10 7 6 5-8 5 12M16 15h4':entry.id==='lucky-draw'?'M24 12v24M12 24h24M16 16l16 16M32 16L16 32':'M16 8v32M24 8v32M32 8v32M8 16h32M8 24h32M8 32h32'}" stroke="currentColor" stroke-width="2"/></svg>`:''}
         ${entry.activity?`<div class="code-art code-art-${entry.id}" aria-hidden="true"></div>`:''}
         <div class="section-card-top">${txt(`common.${entry.type}`, 'span', 'class="eyebrow"')}<span class="card-arrow" aria-hidden="true">↗</span></div>
         ${txt(entry.titleKey || `entry.${entry.id}.title`, heading)}${txt(entry.descriptionKey || `entry.${entry.id}.description`, 'p')}
