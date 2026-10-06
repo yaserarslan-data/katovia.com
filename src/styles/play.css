@@ -2,3 +2,4 @@
 .experience-controls select {min-height:44px;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:.5rem;padding:.5rem;}
 .experience-canvas {display:block;width:100%;height:clamp(340px,55svh,600px);border-radius:1rem;background:#050c14;touch-action:none;}
 .experience {padding:clamp(.8rem,2vw,1.5rem);}
+.experience-controls{gap:.5rem}.experience-controls .button{padding-inline:.75rem;font-size:.85rem}.experience-controls [data-share-page]{min-width:0;max-width:100%}.experience-controls [data-page-share-status]:empty{display:none}.experience-controls textarea{width:100%;min-width:0;padding:.75rem;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:.5rem}

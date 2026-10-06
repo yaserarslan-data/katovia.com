@@ -79,8 +79,8 @@ export const messages = {
     "game.feedback.cancelled": "Sharing cancelled.",
     "nav.today": "TODAY",
     "page.today.title": "TODAY — Katovia",
-    "section.today.label": "One attempt. Five seconds.",
-    "section.today.description": "Today’s game: STOP AT 5.00. Trust your sense of time.",
+    "section.today.label": "Three little games. A fresh attempt each day.",
+    "section.today.description": "Stop at 5.00, remember glowing cells and react to the signal. Three Daily games with your own daily results.",
     "section.today.note": "Your first valid attempt becomes today’s saved result.",
     "nav.play": "PLAY",
     "page.play.title": "PLAY — Katovia",
@@ -283,7 +283,15 @@ export const messages = {
     "home.challenge": "CHALLENGE SOMEONE",
     "home.challengeCopy": "Wait for the signal. Tap fast. Can your friend beat your reaction time?",
     "home.tools": "USEFUL TOOLS",
-    "home.browserOnly": "No login, on your device"
+    "home.browserOnly": "No login, on your device",
+    "creator.quickHint": "Start with one question. Up to 8 questions; keep it short and easy to share.",
+    "creator.settings": "Theme and content language",
+    "creator.budget": "Link budget: {used} / {limit}",
+    "daily.next.memory": "TRY MEMORY GRID",
+    "daily.next.reaction": "TRY REACTION",
+    "daily.next.play": "EXPLORE PARTICLE UNIVERSE",
+    "daily.challenge": "CHALLENGE WITH THIS SCORE",
+    "daily.challengeText": "Can you beat my reaction time? ⚡ {score} ms · Katovia"
   },
   "tr": {
     "error.retry": "Bu işlem tamamlanamadı. Yeniden deneyebilirsin.",
@@ -364,8 +372,8 @@ export const messages = {
     "game.feedback.cancelled": "Paylaşım iptal edildi.",
     "nav.today": "BUGÜN",
     "page.today.title": "TODAY — Katovia",
-    "section.today.label": "Bir deneme. Beş saniye.",
-    "section.today.description": "Bugünün oyunu: STOP AT 5.00. Kendi zaman algına güven.",
+    "section.today.label": "Üç küçük oyun. Her gün yeni bir deneme.",
+    "section.today.description": "5.00’da dur, ışıklı hücreleri hatırla ve işarete hızlı tepki ver. Üç Daily oyunu, kendi günlük sonuçların.",
     "section.today.note": "İlk geçerli denemen bugünün kayıtlı sonucu olur.",
     "nav.play": "OYNA",
     "page.play.title": "PLAY — Katovia",
@@ -568,6 +576,14 @@ export const messages = {
     "home.challenge": "BİRİNE MEYDAN OKU",
     "home.challengeCopy": "İşareti bekle. Hızlı dokun. Arkadaşın tepki süreni geçebilecek mi?",
     "home.tools": "İŞE YARAYAN ARAÇLAR",
-    "home.browserOnly": "Girişsiz, cihazında"
+    "home.browserOnly": "Girişsiz, cihazında",
+    "creator.quickHint": "Tek soruyla başla. En fazla 8 soru; kısa tut, kolay paylaş.",
+    "creator.settings": "Tema ve içerik dili",
+    "creator.budget": "Bağlantı bütçesi: {used} / {limit}",
+    "daily.next.memory": "MEMORY GRID DENE",
+    "daily.next.reaction": "REACTION DENE",
+    "daily.next.play": "PARÇACIK EVRENİNİ KEŞFET",
+    "daily.challenge": "BU SKORLA MEYDAN OKU",
+    "daily.challengeText": "Tepki süremi geçebilir misin? ⚡ {score} ms · Katovia"
   }
 };

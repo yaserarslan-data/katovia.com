@@ -58,3 +58,5 @@
   .share-buttons .button-accent { flex: 1; }
 }
 @media (prefers-reduced-motion: reduce) { .game-result, .game-halo { animation: none !important; } }
+.daily-next{margin-top:.75rem}[data-session-actions]{display:flex;gap:.75rem;flex-wrap:wrap;margin-block:.75rem}
+@media(max-width:767px) and (max-height:760px){.has-daily .hero{padding-block:.75rem .5rem}.has-daily .hero-top{margin-bottom:.5rem}.has-daily .hero-top .eyebrow{max-width:none}.has-daily .hero h1{font-size:1.8rem}.has-daily .hero-bottom{margin-top:.5rem;padding-top:.5rem}.has-daily .section-heading .eyebrow{max-width:none}.has-daily [aria-labelledby=home-daily]>.section-heading{padding-block:.25rem}.has-daily .game-topline{padding:.5rem .75rem}.has-daily .game-topline .pill{font-size:.65rem}.has-daily .game-stage{min-height:0;padding:1rem .75rem}.has-daily .game-title span{font-size:clamp(2.8rem,10vw,4rem)}.has-daily .game-instructions{margin-top:.6rem}.has-daily .game-action{margin-top:.75rem}.has-daily .game-feedback{margin-top:.5rem;font-size:.7rem}.has-daily .game-bottomline{padding:.5rem .75rem}.has-daily .game-halo i{width:180px;height:180px}}

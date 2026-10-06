@@ -21,7 +21,7 @@ export function gameMarkup() {
     <div class="result-actions" data-result-actions hidden>
       <label class="score-option"><input type="checkbox" data-include-score checked> ${text('share.includeScore')}</label>
       <div class="share-buttons"><button class="button button-accent" type="button" data-share>${text('share.result')} <span aria-hidden="true">↗</span></button><button class="button" type="button" data-copy>${text('share.copy')}</button></div>
-      <p class="share-feedback" data-share-feedback role="status" aria-live="polite"></p>
+      <a class="button daily-next" href="/today/#memory-grid" data-i18n="daily.next.memory">TRY MEMORY GRID</a><p class="share-feedback" data-share-feedback role="status" aria-live="polite"></p>
       <label class="manual-share" data-manual hidden>${text('share.manualLabel')}<textarea data-share-text readonly rows="8" data-i18n-label="share.textLabel" aria-label="Copyable result text"></textarea></label>
     </div>
   </section>`;

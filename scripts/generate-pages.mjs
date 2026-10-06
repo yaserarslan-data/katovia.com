@@ -8,7 +8,6 @@ import { markup as reactionMarkup } from '../src/games/reaction/mount.js';
 import { translate } from '../src/i18n/index.js';
 import { personalPages } from '../src/catalog/personal.js';
 import { duelMarkup } from '../src/features/duel.js';
-import { sharePageMarkup } from '../src/features/share-page.js';
 import { creatorMarkup, creationMarkup } from '../src/features/creator.js';
 import { tools } from '../src/catalog/tools.js';
 import { toolMarkup } from '../src/features/tools.js';
@@ -47,7 +46,7 @@ function home(route) {
     <section class="home-cta" aria-labelledby="home-create">${txt('home.create','h2','id="home-create"')}${txt('home.createCopy','p')}<a class="button button-accent" href="/create/" data-i18n="creator.own">CREATE YOUR OWN</a></section>
     <section class="home-cta" aria-labelledby="home-challenge">${txt('home.challenge','h2','id="home-challenge"')}${txt('home.challengeCopy','p')}<a class="button" href="/challenge/" data-i18n="duel.own">CREATE A CHALLENGE</a></section>
     <section aria-labelledby="home-tools"><div class="section-heading">${txt('home.tools','h2','id="home-tools"')}${txt('home.browserOnly','span','class="eyebrow"')}</div><div class="section-grid">${tools.map(entry=>card(entry,route)).join('\n')}</div></section>
-    <section aria-labelledby="home-lab"><div class="section-heading">${txt('lab.collection','h2','id="home-lab"')}<a class="button" href="/lab/" data-i18n="common.return">Explore the lab</a></div><div class="section-grid">${entries.filter(entry=>['qr','golf','yuk-ustasi'].includes(entry.id)).map(entry=>card(entry,route)).join('\n')}</div></section>
+    <section id="laboratuvar" aria-labelledby="home-lab"><div class="section-heading">${txt('lab.collection','h2','id="home-lab"')}<a class="button" href="/lab/" data-i18n="common.return">Explore the lab</a></div><div class="section-grid">${entries.filter(entry=>['qr','golf','yuk-ustasi'].includes(entry.id)).map(entry=>card(entry,route)).join('\n')}</div></section>
   </main>`;
 }
 
@@ -57,7 +56,7 @@ function sectionPage(section) {
     <header class="section-intro"><p class="eyebrow">KATOVIA / ${txt(`nav.${section.id==='d' ? 'challenge' : section.personal ? 'create' : section.tool ? 'tools' : section.activity ? 'play' : section.id}`)}</p>${txt(section.activity || section.tool || section.personal ? section.titleKey : `section.${section.id}.label`, 'h1')}${txt(section.activity || section.tool || section.personal ? section.descriptionKey : `section.${section.id}.description`, 'p')}</header>
     ${section.id==='d' ? duelMarkup('play') : section.personal ? creationMarkup() : section.id==='create' ? creatorMarkup()+txt('section.create.note','p') : section.id==='challenge' ? `${duelMarkup()}<section class="activity-panel">${txt('challenge.heading','h2')}${txt('challenge.guide','p')}<a class="button" href="/today/#reaction" data-i18n="challenge.train">Try Reaction Daily</a><p>${txt('challenge.future')}</p></section>` : section.tool ? toolMarkup(section)+txt(`tool.${section.id}.about`,'p','class="experience-guide"') : section.activity ? experienceMarkup(section) + txt(`play.${section.id}.about`, 'p', 'class="experience-guide"') : section.id === 'today' ? daily(section.route) + `<div id="memory-grid">${memoryMarkup()}</div><div id="reaction">${reactionMarkup()}</div>` : ['play','tools'].includes(section.id) ? '' : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
     ${available.length ? `<section aria-labelledby="collection-title"><div class="section-heading">${txt(section.id === 'tools' || section.tool ? 'tools.collection' : section.id === 'play' || section.activity ? 'play.collection' : 'lab.collection', 'h2', 'id="collection-title"')}<span class="eyebrow"><span>${available.length}</span> ${txt('common.projects')}</span></div><div class="section-grid">${available.map((entry) => card(entry, section.route)).join('\n')}</div></section>` : ''}
-    ${section.activity?sharePageMarkup():''}
+
     ${section.id === 'lab' ? `<p class="legacy-note">${txt('lab.legacyIntro')} <a href="${hrefFrom(section.route, '/lab/')}" data-i18n="lab.legacyLink">${escape(translate('en', 'lab.legacyLink'))}</a>.</p>` : ''}
   </main>`;
 }

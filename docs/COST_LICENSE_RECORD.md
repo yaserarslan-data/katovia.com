@@ -1,5 +1,9 @@
 # Cost & License Guardrail Record
 
+## Growth priorities — 6 October 2026
+
+Compact responsive CSS, saved-score Daily continuation/duel shares, PLAY share controls and early UTF-8 Creator link budgeting reuse native browser APIs and existing modules. No dependencies, external media/fonts/sound, paid/free SaaS provisioning, hosting/billing/payment/cloud changes. Package/lockfile unchanged. Existing legacy fixtures/licenses and user files preserved; artifact-only publication has a prepared exact-tree forward rollback.
+
 ## Master Final Package
 
 Home uses original CSS-generated card art and registry links; no images/audio/fonts fetched externally. Native share and no-op hooks retained; no raw user text, URL or identity sent to analytics. Final journey, SEO and responsive QA use the existing development toolchain. No dependencies added or changed, payment/billing/hosting/service/resource activation. User-owned tanitim files hash-verified and excluded from artifact/staging. No paid future solution implemented.
