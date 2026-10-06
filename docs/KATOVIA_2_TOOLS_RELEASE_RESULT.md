@@ -2,7 +2,7 @@
 
 ## Final Status
 
-QA PASSED — production publication pending. Three real native browser tools implemented; no backend, authentication, cloud storage or new dependency.
+COMPLETE — three real native browser tools are published and live-verified. No backend, authentication, cloud storage or new dependency. Production `3e9d34d2e0ce2b334fede47eae169af3551452eb`; tested source `b625cdff3ca2437a5ce147ca7404432c146f8ac2`.
 
 ## Tools Added
 
@@ -88,11 +88,11 @@ No new third-party license decision required. No external image, audio, font, co
 
 ## Production Deployment
 
-Release label `Tools1`; verified baseline `66372cec39a39d6a26ad4dcc93a56dd854c381ca`, 117 served files and known-good archive retained. Candidate QA passed; publication and post-deploy results pending. Existing public Pages main/root and domain/HTTPS settings reused. Artifact-only release retains all other production paths and old hashed assets.
+Release label `Tools1`; verified baseline `66372cec39a39d6a26ad4dcc93a56dd854c381ca`, 117 served files and known-good archive retained. Production `3e9d34d2e0ce2b334fede47eae169af3551452eb` passed exact Pages build SHA and all served-file byte checks. Live QA passed actual image/PNG downloads, lucky persistence/removal, pixel history, all three new routes at six TR/EN viewports, sitemap/robots, existing Daily/PLAY/Creator/Duel and 18 legacy HTML pages including QR generation. Existing public Pages main/root and domain/HTTPS settings reused. Artifact-only release retains all other production paths and old hashed assets.
 
 ## Rollback State
 
-`scripts/release-pages.py` prepares an exact-tree forward rollback and publishes its branch before main. Build/live failure applies rollback and re-verifies served bytes. No force push/reset/clean. New release/rollback hashes will be recorded after verification.
+Exact-tree forward rollback `8a9aaeaef6e7f07853944214effb533e256140bc` is retained on remote `codex/katovia-master-tools1-rollback`, published before main. Its tree is the verified previous production. `scripts/release-pages.py` applies rollback and re-verifies bytes on build/live failure. This release passed without rollback. No force push/reset/clean.
 
 ## Legacy Preservation
 
