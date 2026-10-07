@@ -46,4 +46,15 @@ Pre-deploy validation: production build passed, 61/61 Node tests passed, 83/83 C
 
 The existing Pages flow verifies the complete publication bytes, runs root/tools/Mysteries/Alphabet/cleanup/legacy live smoke, checks all 99 retired paths for 404, and automatically restores an exact-tree forward rollback on failure. Deployment identifiers and final build/live status are recorded by `.cache/releases/Cleanup1/plan.json` and reported to the user after verification.
 
+## Verified publication
+
+- Deployed source: `5109da8cadafca0bf9a8dffcae5437b1c1e232a2`.
+- Production: `ba9ca086555a282b63438ccbb553a422d1967479`.
+- Exact previous-production rollback: `aabef5ff736361a073dccffb08c5218611e8d5aa` (remote branch `codex/katovia-master-cleanup1-rollback`). Rollback was not needed.
+- Pages build completed; complete served-byte verification and all live release suites passed.
+- All 99 explicitly retired URLs returned 404. The publication graph has 138 files, 331 recognized local reference edges, zero retained retirement paths and zero references to retired paths.
+- Final live crawl visited all 78 HTML files: zero external HTTP(S) runtime requests, zero failed resources and zero page console errors.
+- Live reader: https://katovia.com/lab/guzel-sozler/ ; previous URL remains accessible and forwards to it.
+- Source working tree is clean except the pre-existing untracked `tanitim/`. Its two content hashes remain unchanged and neither file is committed or published.
+
 Mysteries content/original HTML, analytics no-op, dependencies, CNAME, app-ads and Pages settings are unchanged. `tanitim/` remains untracked, hash-unchanged and excluded from publication. No API, paid service, backend, media acquisition or hosting resource is introduced.
