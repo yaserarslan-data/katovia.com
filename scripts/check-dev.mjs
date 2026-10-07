@@ -11,7 +11,7 @@ let browser;
 try {
   await server.listen();
   const base = `http://127.0.0.1:${server.httpServer.address().port}`;
-  for (const route of ['/', '/v2/', ...sections.map((section) => section.route), ...mysteryRoutes, '/laboratuvar/qr-kod-olusturucu.html']) {
+  for (const route of ['/', '/v2/', ...sections.map((section) => section.route), ...mysteryRoutes, '/tools/alphabet-lab/', '/laboratuvar/qr-kod-olusturucu.html']) {
     const response = await fetch(base + route);
     if (response.status !== 200) throw new Error(`Dev ${route}: ${response.status}`);
     if (route === '/' && !(await response.text()).includes('data-daily-mount')) throw new Error('Dev root shell missing');
@@ -33,6 +33,11 @@ try {
   await page.waitForURL('**/tr/mysteries/voynich-manuscript/**');
   if (await page.locator('.mystery-content section').count() !== 11) throw new Error('Dev research sections missing');
   if (errors.length) throw new Error(errors.join('\n'));
+  await page.goto(base + '/tools/alphabet-lab/');
+  await page.waitForSelector('[data-tool][data-ready="true"]');
+  await page.locator('[data-alpha-profile="greek-modern"]').click();
+  if(await page.locator('[data-alpha-symbol]').count()!==24)throw new Error('Dev Alphabet grid mismatch');
+  if(errors.length)throw new Error(errors.join('\n'));
   console.log('Dev smoke passed: root shell, app and mystery routes, QR, true 404, source modules and mobile navigation.');
 } finally {
   await browser?.close();

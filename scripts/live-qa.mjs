@@ -1,5 +1,6 @@
 import {qaNewTools} from './qa-new-tools.mjs';
 import {qaMysteries} from './qa-mysteries.mjs';
+import {qaAlphabet} from './qa-alphabet.mjs';
 import { chromium } from '@playwright/test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -41,6 +42,7 @@ try {
   }
   if(process.argv[2]==='Tools1')await qaNewTools(page,base);
   if(process.argv[2]==='Mysteries1'){await qaNewTools(page,base);await qaMysteries(page,base);}
+  if(process.argv[2]==='Alphabet1'){await qaNewTools(page,base);await qaMysteries(page,base);await qaAlphabet(page,base);}
   const manifest = JSON.parse(await readFile('scripts/legacy-manifest.json','utf8'));
   for (const item of manifest.files.filter((item) => item.category==='html' && item.path!=='index.html')) {
     const response=await page.goto(base+'/'+item.path); assert.equal(response.status(),200);
