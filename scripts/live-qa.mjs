@@ -42,7 +42,7 @@ try {
   }
   if(process.argv[2]==='Tools1')await qaNewTools(page,base);
   if(process.argv[2]==='Mysteries1'){await qaNewTools(page,base);await qaMysteries(page,base);}
-  if(process.argv[2]==='Alphabet1'){await qaNewTools(page,base);await qaMysteries(page,base);await qaAlphabet(page,base);}
+  if(['Alphabet1','Character1'].includes(process.argv[2])){await qaNewTools(page,base);await qaMysteries(page,base);await qaAlphabet(page,base,process.argv[2]==='Character1');}
   const manifest = JSON.parse(await readFile('scripts/legacy-manifest.json','utf8'));
   for (const item of manifest.files.filter((item) => item.category==='html' && item.path!=='index.html')) {
     const response=await page.goto(base+'/'+item.path); assert.equal(response.status(),200);

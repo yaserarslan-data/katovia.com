@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {profiles} from '../src/tools/alphabet/model.js';
-export async function qaAlphabet(page,base){
+export async function qaAlphabet(page,base,expectRetired=false){
  const url=base+'/tools/alphabet-lab/';
  assert.equal((await page.goto(url)).status(),200);await page.waitForSelector('[data-tool][data-ready="true"]');
  assert.equal(await page.locator('h1').count(),1);
@@ -23,5 +23,6 @@ export async function qaAlphabet(page,base){
  }
  const plainContext=await page.context().browser().newContext({javaScriptEnabled:false});
  try{const plain=await plainContext.newPage();assert.equal((await plain.goto(url)).status(),200);assert.equal(await plain.locator('[data-alpha-static-entry]').count(),194);assert.equal(await plain.locator('[data-alpha-static-profile]').count(),6);assert.ok(await plain.locator('[data-alpha-reference]').isVisible());await plain.setViewportSize({width:360,height:900});assert.ok(await plain.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}finally{await plainContext.close();}
+ if(expectRetired)assert.equal((await page.request.get(base+'/katovia-assets/client-CT4-RKRA.js')).status(),404);
  console.log('Alphabet live/local QA passed: 194 records, 6 profiles, TR/EN state, refresh, six widths, SEO/sitemap and no-JS.');
 }

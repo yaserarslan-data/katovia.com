@@ -49,12 +49,22 @@ elif mode=='prepare':
     hashes={}
     for path in paths:
         p=Path('dist')/path;assert not p.is_symlink();data=p.read_bytes();blob=git('hash-object','-w','--stdin',input=data);git('update-index','--add','--cacheinfo',f'100644,{blob},{path}',env=env);hashes[path]=hashlib.sha256(data).hexdigest()
+    retired=[]
+    if label=='Character1':
+        retirement=json.loads(Path('scripts/retired-alphabet-assets.json').read_text())
+        assert retirement['releaseLabel']==label and retirement['base']==plan['base']
+        for path in retirement['paths']:
+            assert path.startswith('katovia-assets/') and Path(path).suffix=='.js' and '/' not in path[len('katovia-assets/'):]
+            assert path not in preserved and path not in paths
+            previous=subprocess.check_output(['git','show',plan['base']+':'+path])
+            assert b'alphabet-lab-v1.0.0' in previous and b'UNICODE LICENSE V3' in previous,'Retirement must target the old Alphabet-only data payload'
+            git('update-index','--force-remove',path,env=env);retired.append(path)
     source=git('rev-parse','HEAD');release=git('commit-tree',git('write-tree',env=env),'-p',plan['base'],input=f'Publish Katovia master release {label}\n\nTested source: {source}\nArtifact-only release; preserved legacy paths.\n'.encode())
-    assert set(git('diff','--name-only',plan['base'],release).splitlines())<=set(paths)
+    assert set(git('diff','--name-only',plan['base'],release).splitlines())<=set(paths)|set(retired)
     rollback=git('commit-tree',git('rev-parse',plan['base']+'^{tree}'),'-p',release,input=f'Rollback master release {label} to verified production tree\n'.encode())
     assert not git('diff','--name-only',plan['base'],rollback)
     for name,sha in [('release',release),('rollback',rollback)]:git('update-ref',f'refs/heads/codex/katovia-master-{label.lower()}-{name}',sha)
-    plan.update(source=source,release=release,rollback=rollback,hashes=hashes,status='prepared');planpath.write_text(json.dumps(plan,indent=2));print('Prepared',release,'rollback',rollback,flush=True)
+    plan.update(source=source,release=release,rollback=rollback,hashes=hashes,status='prepared',retiredPaths=retired);planpath.write_text(json.dumps(plan,indent=2));print('Prepared',release,'rollback',rollback,flush=True)
 elif mode=='publish':
     plan=json.loads(planpath.read_text());assert plan['base']==remote();settings()
     for path,digest in plan['hashes'].items():assert hashlib.sha256((Path('dist')/path).read_bytes()).hexdigest()==digest

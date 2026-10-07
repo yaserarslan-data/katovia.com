@@ -1,4 +1,3 @@
 # Keep source hashes reproducible across Windows and Unix checkouts.
 "Yeni klasör/**" -text whitespace=cr-at-eol
 src/content/mysteries/** -text whitespace=cr-at-eol
-src/tools/alphabet/data.json -text whitespace=cr-at-eol
