@@ -13,3 +13,4 @@ for (const file of manifest.files) {
 }
 console.log('Legacy preserved byte-for-byte:', await checkLegacy(distRoot, { rootCutover: true }));
 for(const name of ['sitemap.xml','robots.txt'])await copyFile(safePath(siteRoot,name),safePath(distRoot,name));
+await copyFile(new URL('../src/build/vite-runtime-license.txt',import.meta.url),safePath(distRoot,'katovia-assets/vite-runtime-LICENSE.txt'));

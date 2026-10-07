@@ -38,11 +38,13 @@ export default defineConfig({
   plugins: [legacyDevFiles()],
   server: { host: '127.0.0.1', fs: { allow: [repoRoot] } },
   build: {
+    modulePreload: { polyfill: false },
     outDir: distRoot,
     emptyOutDir: true,
     assetsDir: 'katovia-assets',
     target: ['es2022', 'safari16'],
     rolldownOptions: {
+      output: { postBanner: '/*! Vite preload helper: Copyright (c) 2019-present VoidZero Inc. and Vite contributors. MIT; license: /katovia-assets/vite-runtime-LICENSE.txt */' },
       input: [...mysteryRoutes.map(route => resolve(siteRoot, `${route.slice(1)}index.html`)), resolve(siteRoot, 'index.html'), ...sections.map((section) => resolve(siteRoot, `${section.id}/index.html`)), ...[...experiences,...tools,...personalPages].map((entry) => resolve(siteRoot, `${entry.route.slice(1)}index.html`)), resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
     },
   },

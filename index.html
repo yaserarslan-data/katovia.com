@@ -1395,7 +1395,7 @@
         appFeatureTwo: "Kısa oyun turları",
         appAccent: "79,178,255",
         icon: "🎈",
-        image: "assets/apps/balonlubum.jpg",
+        image: null,
         route: "uygulamalar",
         url: "https://play.google.com/store/apps/details?id=com.katovia.balonlubum"
       },
@@ -1408,7 +1408,7 @@
         appFeatureTwo: "Izgara tabanlı oynanış",
         appAccent: "239,109,103",
         icon: "⚔️",
-        image: "assets/apps/kare-savaslari.jpg",
+        image: null,
         route: "uygulamalar",
         url: "https://play.google.com/store/apps/details?id=com.katovia.karesavaslari"
       },
@@ -1421,7 +1421,7 @@
         appFeatureTwo: "Anlaşılır sonuçlar",
         appAccent: "203,119,236",
         icon: "📊",
-        image: "assets/apps/iletisim-analizi.jpg",
+        image: null,
         route: "uygulamalar",
         url: "https://play.google.com/store/apps/details?id=com.katovia.iletisim_analizi"
       },
@@ -1434,7 +1434,7 @@
         appFeatureTwo: "Sade ve çevrimdışı deneyim",
         appAccent: "73,205,164",
         icon: "🧘",
-        image: "assets/apps/mental-detox.jpg",
+        image: null,
         route: "uygulamalar",
         url: "https://play.google.com/store/apps/details?id=com.katovia.mental_detox"
       },
@@ -1840,8 +1840,8 @@ if (route === "uygulamalar") {
   routeItems.innerHTML = apps.map(app => `
     <article class="appShowcaseCard" style="--app-accent:${app.appAccent}">
       <div class="appShowcaseMedia">
-        <img src="${app.image}" alt="${app.title} uygulama görseli" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-        <div class="appShowcaseFallback" role="img" aria-label="${app.title} görseli" hidden>${app.icon}</div>
+        ${app.image ? `<img src="${app.image}" alt="${app.title} uygulama görseli" onerror="this.hidden=true;this.nextElementSibling.hidden=false">` : ''}
+        <div class="appShowcaseFallback" role="img" aria-label="${app.title} görseli" ${app.image ? 'hidden' : ''}>${app.icon}</div>
       </div>
       <div class="appShowcaseContent">
         <span class="appPlatform"><span aria-hidden="true">▦</span> Android · Google Play</span>

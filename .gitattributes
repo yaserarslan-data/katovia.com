@@ -1,3 +1,12 @@
 # Keep source hashes reproducible across Windows and Unix checkouts.
 "Yeni klasör/**" -text whitespace=cr-at-eol
 src/content/mysteries/** -text whitespace=cr-at-eol
+# Authorized cleanup files are byte-checked by the legacy manifest.
+index.html -text whitespace=cr-at-eol
+laboratuvar/qr-kod-olusturucu.html -text whitespace=cr-at-eol
+laboratuvar/dijital-kartvizit-olusturucu.html -text whitespace=cr-at-eol
+laboratuvar/guzel-sozler.html -text whitespace=cr-at-eol
+laboratuvar/data/guzel-sozler.js -text whitespace=cr-at-eol
+laboratuvar/js/qr-kod-olusturucu.js -text whitespace=cr-at-eol
+laboratuvar/js/dijital-kartvizit-olusturucu.js -text whitespace=cr-at-eol
+laboratuvar/js/katovia-qr.js -text whitespace=cr-at-eol

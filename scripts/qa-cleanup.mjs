@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {readFile} from 'node:fs/promises';
+
+export async function qaCleanup(page,base,{retired=false}={}){
+ const errors=[],external=[];const onError=e=>errors.push(e.message),onRequest=r=>{if(/^https?:/.test(r.url())&&!r.url().startsWith(base+'/'))external.push(r.url());};page.on('pageerror',onError);page.on('request',onRequest);
+ try{
+  assert.equal((await page.goto(base+'/laboratuvar/guzel-sozler.html')).status(),200);await page.waitForURL(base+'/lab/guzel-sozler/');await page.waitForSelector('[data-tool="beautiful-quotes"][data-ready="true"]');
+  assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'),'https://katovia.com/lab/guzel-sozler/');
+  const get=name=>page.locator('[data-quote-'+name+']');
+  const original=await get('text').innerText();await get('favorite').click();const hash=page.url().split('#')[1];
+  await get('category').selectOption('sevgi');await page.locator('[data-quote-mode="collection"]').click();const selectedCount=await get('grid').locator('[data-quote-id]').count();assert.ok(selectedCount>0&&selectedCount<50);
+  for(const locale of ['tr','en']){await page.locator(`[data-locale="${locale}"]`).click();assert.equal(await get('category').inputValue(),'sevgi');assert.equal(await get('grid').locator('[data-quote-id]').count(),selectedCount);for(const width of [360,390,430,768,1024,1440]){await page.setViewportSize({width,height:900});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}}
+  await page.locator('[data-quote-mode="favorites"]').click();assert.ok(await get('grid').locator('[data-quote-id]').count());await get('grid').locator('[data-quote-card-action="open"]').first().click();assert.equal(await get('text').innerText(),original);await page.reload();await page.waitForSelector('[data-ready="true"]');assert.equal(await get('favorite').getAttribute('aria-pressed'),'true');
+  await page.locator('[data-quote-mode="collection"]').click();assert.equal(await get('grid').locator('[data-quote-id]').count(),50);
+  const nojs=await page.context().browser().newContext({javaScriptEnabled:false});try{const plain=await nojs.newPage();await plain.goto(base+'/lab/guzel-sozler/');assert.equal(await plain.locator('[data-quote-static] [data-quote-id]').count(),50);}finally{await nojs.close();}
+  await page.goto(base+'/lab/');assert.ok(await page.locator('[data-card-id="guzel-sozler"]').isVisible());await page.goto(base+'/tools/');assert.ok(await page.locator('[data-card-id="beautiful-quotes"]').isVisible());assert.ok((await (await page.request.get(base+'/sitemap.xml')).text()).includes('https://katovia.com/lab/guzel-sozler/'));
+  const pngs=[];await page.goto(base+'/laboratuvar/qr-kod-olusturucu.html');assert.equal(await page.evaluate(()=>typeof window.kjua),'undefined');assert.equal(await page.evaluate(()=>typeof window.KatoviaQR.render),'function');
+  const capture=async expected=>{await page.locator('#generate-button').click();await page.locator('#download-button').waitFor({state:'visible'});assert.equal(await page.locator('#download-button').isEnabled(),true);pngs.push({expected,png:await page.locator('#qr-surface canvas').evaluate(c=>c.toDataURL('image/png').split(',')[1])});};
+  await page.locator('#link-url').fill('https://katovia.com/');await capture('https://katovia.com/');
+  const pngDownloadPromise=page.waitForEvent('download');await page.locator('#download-button').click();const pngDownload=await pngDownloadPromise;assert.ok(pngDownload.suggestedFilename().endsWith('.png'));const pngStream=await pngDownload.createReadStream();const pngChunks=[];for await(const chunk of pngStream)pngChunks.push(chunk);assert.equal(Buffer.concat(pngChunks).readUInt32BE(16),320);
+  await page.locator('[data-qr-type="text"]').click();await page.locator('#plain-text').fill('İstanbul çağrı 🧩');await capture('İstanbul çağrı 🧩');
+  await page.locator('#plain-text').fill('tel:+905551234567');await capture('tel:+905551234567');
+  await page.locator('[data-qr-type="wifi"]').click();await page.locator('#wifi-ssid').fill('Katovia');await page.locator('#wifi-password').fill('şifre');await capture('WIFI:T:WPA;S:Katovia;P:şifre;H:false;;');
+  await page.locator('[data-qr-type="whatsapp"]').click();await page.locator('#phone-number').fill('5551234567');await page.locator('#whatsapp-message').fill('Merhaba');await capture('https://wa.me/905551234567?text=Merhaba');
+  const svg=await page.evaluate(()=>new XMLSerializer().serializeToString(KatoviaQR.render({text:'Katovia SVG',render:'svg',size:320})));assert.ok(svg.includes('viewBox'));assert.ok(svg.includes('shape-rendering="crispEdges"'));
+  for(const width of [360,1440]){await page.setViewportSize({width,height:900});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
+  await page.goto(base+'/laboratuvar/dijital-kartvizit-olusturucu.html');await page.locator('#full-name').fill('Yaşar Arslan');await page.locator('#phone').fill('+905551234567');await page.locator('#generate-button').click();assert.equal(await page.locator('#qr-download-button').isEnabled(),true);assert.equal(await page.locator('#card-download-button').isEnabled(),true);assert.equal(await page.locator('#vcard-download-button').isEnabled(),true);
+  pngs.push({expected:'BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Yaşar Arslan\r\nTEL;TYPE=CELL:+905551234567\r\nEND:VCARD\r\n',png:await page.locator('#qr-preview canvas').evaluate(c=>c.toDataURL('image/png').split(',')[1])});
+  const vcfPromise=page.waitForEvent('download');await page.locator('#vcard-download-button').click();const vcf=await vcfPromise;assert.ok(vcf.suggestedFilename().endsWith('.vcf'));const vcfChunks=[];for await(const chunk of await vcf.createReadStream())vcfChunks.push(chunk);assert.equal(Buffer.concat(vcfChunks).toString('utf8').replace(/^\uFEFF/,''),pngs[pngs.length-1].expected);
+  const cardPromise=page.waitForEvent('download');await page.locator('#card-download-button').click();const card=await cardPromise;const cardChunks=[];for await(const chunk of await card.createReadStream())cardChunks.push(chunk);const cardPng=Buffer.concat(cardChunks);assert.equal(cardPng.readUInt32BE(16),1050);pngs.push({expected:pngs[pngs.length-1].expected,png:cardPng.toString('base64')});
+  const decoder=execFileSync('python',['-c','import importlib.util; print(bool(importlib.util.find_spec("cv2")))'],{encoding:'utf8'}).trim();
+  if(decoder==='True'){const decoded=JSON.parse(execFileSync('python',['tests/qr-decode.py'],{input:JSON.stringify(pngs),encoding:'utf8',timeout:45000}));assert.ok(decoded.every(item=>item.matched));console.log('Independent OpenCV decoded seven actual Canvas/PNG outputs: URL, UTF-8/emoji, phone, Wi-Fi, WhatsApp, vCard and complete downloaded business card. Detectors: '+[...new Set(decoded.map(item=>item.detector))].join(', '));}else console.log('Independent OpenCV decoder unavailable; actual-device verification remains required.');
+  if(retired){const paths=JSON.parse(await readFile('scripts/cleanup-phase1-retirements.json','utf8')).paths;for(const path of paths)assert.equal((await page.request.get(base+'/'+path)).status(),404,path);}
+  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);console.log('Cleanup QA passed: restored quotes, TR/EN state, favorites/refresh, 50 no-JS quotes, six widths, canonical/sitemap, QR/Card and zero external runtime requests.');
+ }finally{page.off('pageerror',onError);page.off('request',onRequest);}
+}

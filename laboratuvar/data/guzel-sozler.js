@@ -1,7 +1,8 @@
 (function () {
   "use strict";
 
-  window.KATOVIA_BEAUTIFUL_QUOTES = Object.freeze([
+  const target = typeof window === "undefined" ? globalThis : window;
+  target.KATOVIA_BEAUTIFUL_QUOTES = Object.freeze([
     { id: "guzel-soz-001", text: "İnsan, ömrü boyunca şanslıysa belki bir kuyruklu yıldızın geçişine tanıklık eder. Oysa seni bir dakika görmek, on kuyruklu yıldızı aynı gökyüzünde seyretmeye bedel.", categories: ["sevgi", "hayranlik"], tags: ["gökyüzü", "kuyruklu yıldız"], source: "user" },
     { id: "guzel-soz-002", text: "İnsan bazen yıllarca gökyüzüne bakar da tek bir yıldızın kayışına denk gelemez. Ben sana her baktığımda, bütün dileklerim aynı anda gerçekleşmiş gibi hissediyorum.", categories: ["sevgi", "hayranlik"], tags: ["bakış", "yıldız", "dilek"], source: "user" },
     { id: "guzel-soz-003", text: "Bazı insanlar bir ömre sığar, bazılarıysa bir anıyla bütün ömrü değiştirir. Sen, hayatıma geldiğin andan beri zamanın anlamı başka.", categories: ["sevgi", "zaman"], tags: ["ömür", "değişim"], source: "user" },
@@ -59,7 +60,8 @@
       text: quote.text,
       categories: Object.freeze(quote.categories.slice()),
       tags: Object.freeze(quote.tags.slice()),
-      source: quote.source
+      source: quote.source,
+      rightsStatus: quote.source === "user" ? "review" : "first-party"
     });
   }));
 }());

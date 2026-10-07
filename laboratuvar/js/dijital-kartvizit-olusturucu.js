@@ -304,10 +304,10 @@
 
   // QR üretimi
   function createQrCanvas(vcard) {
-    if (typeof window.kjua !== "function") {
+    if (typeof window.KatoviaQR?.render !== "function") {
       throw new Error("QR component unavailable");
     }
-    const canvas = window.kjua({
+    const canvas = window.KatoviaQR.render({
       render: "canvas",
       text: vcard,
       size: QR_SIZE,

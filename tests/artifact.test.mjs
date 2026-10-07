@@ -8,9 +8,9 @@ import { manifest, checkLegacy, safePath } from '../scripts/legacy.mjs';
 import { checkArtifact, artifactFiles } from '../scripts/check-artifact.mjs';
 import { repoRoot, distRoot } from '../scripts/paths.mjs';
 
-test('source preserves 37 legacy files; artifact preserves 36 with the explicit root replacement', async () => {
-  assert.equal(manifest.files.length, 37);
-  const expected = { config: 2, asset: 4, html: 19, data: 6, js: 3, vendor: 3 };
+test('authorized cleanup preserves legacy routes and remaining bytes without retired vendor or unused JPEGs', async () => {
+  assert.equal(manifest.files.length, 31);
+  const expected = { config: 2, html: 19, data: 6, js: 4 };
   assert.deepEqual(await checkLegacy(), expected);
   assert.deepEqual(await checkLegacy(distRoot, { rootCutover: true }), { ...expected, html: 18 });
   await checkArtifact();
@@ -26,7 +26,7 @@ test('registry has unique IDs, honest status and existing legacy targets', async
   assert.deepEqual(sections.filter((section) => section.status === 'available').map((section) => section.id), ['today', 'play', 'challenge', 'create', 'tools']);
   for (const entry of entries) {
     assert.equal(entry.status, 'legacy');
-    await readFile(resolve(distRoot, entry.route.slice(1)));
+    await readFile(resolve(distRoot, entry.route.slice(1), entry.route.endsWith('/') ? 'index.html' : ''));
   }
 });
 test('plain static artifact direct loads, refreshes, query and 404 do not rely on SPA fallback', async () => {

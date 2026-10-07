@@ -44,7 +44,11 @@ elif mode=='prepare':
     plan=json.loads(planpath.read_text());assert plan['base']==remote();settings()
     subprocess.run(['node','scripts/check-artifact.mjs'],check=True)
     preserved={file['path'] for file in json.loads(Path('scripts/legacy-manifest.json').read_text())['files'] if file['path']!='index.html'}
-    paths=[p.relative_to('dist').as_posix() for p in Path('dist').rglob('*') if p.is_file() and p.relative_to('dist').as_posix() not in preserved]
+    cleanup=json.loads(Path('scripts/cleanup-phase1-retirements.json').read_text()) if label=='Cleanup1' else None
+    if cleanup:assert cleanup['releaseLabel']==label and cleanup['base']==plan['base'] and not cleanup['referenceAudit']['externalIncoming']
+    basepaths=set(git('ls-tree','-r','--name-only',plan['base']).splitlines())
+    updated=set(cleanup['updatedLegacyPaths']) if cleanup else set()
+    paths=[p.relative_to('dist').as_posix() for p in Path('dist').rglob('*') if p.is_file() and (p.relative_to('dist').as_posix() not in preserved or p.relative_to('dist').as_posix() in updated or p.relative_to('dist').as_posix() not in basepaths)]
     env=os.environ.copy();env['GIT_INDEX_FILE']=str(folder/'publication.index');git('read-tree',plan['base'],env=env)
     hashes={}
     for path in paths:
@@ -59,8 +63,14 @@ elif mode=='prepare':
             previous=subprocess.check_output(['git','show',plan['base']+':'+path])
             assert b'alphabet-lab-v1.0.0' in previous and b'UNICODE LICENSE V3' in previous,'Retirement must target the old Alphabet-only data payload'
             git('update-index','--force-remove',path,env=env);retired.append(path)
+    if cleanup:
+        for path in cleanup['paths']:
+            assert path in basepaths and path not in paths and path not in preserved
+            assert (path.startswith('katovia-assets/') and Path(path).suffix in ['.js','.css']) or path in ['assets/apps/balonlubum.jpg','assets/apps/iletisim-analizi.jpg','assets/apps/kare-savaslari.jpg','assets/apps/mental-detox.jpg','laboratuvar/vendor/README.md','laboratuvar/vendor/kjua-0.10.0.min.js','laboratuvar/vendor/kjua-LICENSE.txt']
+            git('update-index','--force-remove',path,env=env);retired.append(path)
     source=git('rev-parse','HEAD');release=git('commit-tree',git('write-tree',env=env),'-p',plan['base'],input=f'Publish Katovia master release {label}\n\nTested source: {source}\nArtifact-only release; preserved legacy paths.\n'.encode())
     assert set(git('diff','--name-only',plan['base'],release).splitlines())<=set(paths)|set(retired)
+    if cleanup:subprocess.run(['node','scripts/reference-graph.mjs',release],check=True)
     rollback=git('commit-tree',git('rev-parse',plan['base']+'^{tree}'),'-p',release,input=f'Rollback master release {label} to verified production tree\n'.encode())
     assert not git('diff','--name-only',plan['base'],rollback)
     for name,sha in [('release',release),('rollback',rollback)]:git('update-ref',f'refs/heads/codex/katovia-master-{label.lower()}-{name}',sha)

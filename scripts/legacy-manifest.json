@@ -14,34 +14,10 @@
       "sha256": "2c6401a975ff09c06c8f61360100a26a7877d1e02be0422301aa15661012548e"
     },
     {
-      "path": "assets/apps/balonlubum.jpg",
-      "category": "asset",
-      "bytes": 1992490,
-      "sha256": "ccbd5adf944ae810906715037ce49d92b70f96998d7102920aa701783f83ef28"
-    },
-    {
-      "path": "assets/apps/iletisim-analizi.jpg",
-      "category": "asset",
-      "bytes": 1401119,
-      "sha256": "cd20aed24e46ed95fd02af522f56eaa5204473bc970f53e43d0655c42ec4887e"
-    },
-    {
-      "path": "assets/apps/kare-savaslari.jpg",
-      "category": "asset",
-      "bytes": 2899941,
-      "sha256": "0055c57bfafc711112d700161018bae92e8d439cbf1989e839cdf07c59b6c4a3"
-    },
-    {
-      "path": "assets/apps/mental-detox.jpg",
-      "category": "asset",
-      "bytes": 619284,
-      "sha256": "e50d2aef4e3d1abf1a0ce7c980b472605d01d037291743f8f94637327d2ba78c"
-    },
-    {
       "path": "index.html",
       "category": "html",
-      "bytes": 82407,
-      "sha256": "540fe45f78457c927da4e175db4d7e83eea684a9b258f8d6e655e772f2ba3b15"
+      "bytes": 82339,
+      "sha256": "f9aa70d171b37467b0be68eb7ca8da3d2ebe6bdc185f9cfb61bae5c6b0e22bac"
     },
     {
       "path": "laboratuvar/bayram-mesaji.html",
@@ -76,8 +52,8 @@
     {
       "path": "laboratuvar/data/guzel-sozler.js",
       "category": "data",
-      "bytes": 14282,
-      "sha256": "6432f269b7aa072e8da850a374fdf0d0ea1fb9e11795c02bf870023ea01642d6"
+      "bytes": 14424,
+      "sha256": "c9fc8a50d3354e85cbd3016a15e913e17be8ab976043340545f0ace26e74ff20"
     },
     {
       "path": "laboratuvar/data/kandil-mesajlari.js",
@@ -94,8 +70,8 @@
     {
       "path": "laboratuvar/dijital-kartvizit-olusturucu.html",
       "category": "html",
-      "bytes": 24401,
-      "sha256": "8e0ac0398cf094b33fadf865a39e790b09b7b03da70301d902331a698694d9f4"
+      "bytes": 24512,
+      "sha256": "0525045074751c74eaa5445ae9428579def123bfb97a6ef5538e1bb58f0f8456"
     },
     {
       "path": "laboratuvar/dogum-gunu-mesaji.html",
@@ -106,14 +82,14 @@
     {
       "path": "laboratuvar/guzel-sozler.html",
       "category": "html",
-      "bytes": 21738,
-      "sha256": "8a278d0bcaf46feffd1c784c28f8a5d1dc8850a44cfce7646d18754db2274cc5"
+      "bytes": 21968,
+      "sha256": "cfd9491315b91d63267a89fb793714c62d2ec2133ef7d2aac681bd28c16d9e59"
     },
     {
       "path": "laboratuvar/js/dijital-kartvizit-olusturucu.js",
       "category": "js",
-      "bytes": 23440,
-      "sha256": "766b6c8737d14b6c5655aa00327ba5243909da5d6d09da6ccd5f689ed79ec448"
+      "bytes": 23465,
+      "sha256": "1368141c221aef796a5b887572bb4678f492f5d7df04514166a17240ffc7986e"
     },
     {
       "path": "laboratuvar/js/karar-pusulasi.js",
@@ -124,8 +100,8 @@
     {
       "path": "laboratuvar/js/qr-kod-olusturucu.js",
       "category": "js",
-      "bytes": 19825,
-      "sha256": "f5c839adcfc1cbed1c7281c66b10adb78506dcae79558f2cbd3b8d0a01a4f09f"
+      "bytes": 19850,
+      "sha256": "a5da0113844832eeffd0b81ff5487a9f0c615b686132bf1bebf1804ba22c0386"
     },
     {
       "path": "laboratuvar/kandil-mesaji.html",
@@ -142,26 +118,8 @@
     {
       "path": "laboratuvar/qr-kod-olusturucu.html",
       "category": "html",
-      "bytes": 27030,
-      "sha256": "cd8a3c271ae992b6a98c5d039b1f14d52d1634d555ba563aa51fae611b8d0dfe"
-    },
-    {
-      "path": "laboratuvar/vendor/README.md",
-      "category": "vendor",
-      "bytes": 966,
-      "sha256": "19fb77af36d838444260d8d4cecf29879a4540e006cc1a2313cd2b695693bb69"
-    },
-    {
-      "path": "laboratuvar/vendor/kjua-0.10.0.min.js",
-      "category": "vendor",
-      "bytes": 27003,
-      "sha256": "5b627e8633c7ce8ea404c3e32c691fe5f1a35a6dd1a2aaf04c49def38ba22279"
-    },
-    {
-      "path": "laboratuvar/vendor/kjua-LICENSE.txt",
-      "category": "vendor",
-      "bytes": 2604,
-      "sha256": "9273b929007449f6406aa89ee10b585746ef335d45cafd12972c96a9a4dfbabb"
+      "bytes": 27130,
+      "sha256": "0e1740e63f0e2b1eb40c6c2f46a7da3546f8f1f3a37a7331e84edb318294456b"
     },
     {
       "path": "oyunlar/araba-firlat.html",
@@ -222,6 +180,37 @@
       "category": "html",
       "bytes": 36782,
       "sha256": "2e68d6ea52fc76698fd5f9dd0dcfe212b7d7ead546cde0da372a25f453ad8d57"
+    },
+    {
+      "path": "laboratuvar/js/katovia-qr.js",
+      "category": "js",
+      "bytes": 11310,
+      "sha256": "287540516099f64fb9821e07add4803131d4431ff9464b9f7f8295eadfc9cb23"
     }
-  ]
+  ],
+  "authorizedCleanup": {
+    "milestone": "Cleanup1",
+    "previousProduction": "61eaacfcb2a760af2330ab34f7152b4592b1eb8e",
+    "removed": [
+      "assets/apps/balonlubum.jpg",
+      "assets/apps/iletisim-analizi.jpg",
+      "assets/apps/kare-savaslari.jpg",
+      "assets/apps/mental-detox.jpg",
+      "laboratuvar/vendor/README.md",
+      "laboratuvar/vendor/kjua-0.10.0.min.js",
+      "laboratuvar/vendor/kjua-LICENSE.txt"
+    ],
+    "changed": [
+      "index.html",
+      "laboratuvar/qr-kod-olusturucu.html",
+      "laboratuvar/dijital-kartvizit-olusturucu.html",
+      "laboratuvar/guzel-sozler.html",
+      "laboratuvar/data/guzel-sozler.js",
+      "laboratuvar/js/qr-kod-olusturucu.js",
+      "laboratuvar/js/dijital-kartvizit-olusturucu.js"
+    ],
+    "added": [
+      "laboratuvar/js/katovia-qr.js"
+    ]
+  }
 }
