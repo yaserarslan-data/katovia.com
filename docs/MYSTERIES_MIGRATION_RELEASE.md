@@ -122,7 +122,23 @@ Mevcut yayın akışı: scripts/release-pages.py baseline/prepare/publish Myster
 
 Doğrulanmış production baseline: 3e9d34d2e0ce2b334fede47eae169af3551452eb; 134 canlı dosya byte kontrolünden geçti. known-good tree arşivi ve forward-commit rollback hazırlanır; force-push/reset/clean yok.
 
-Yayın durumu: final build/test kontrolü ardından publish ve canlı smoke bekleniyor. Sonuç ve commit SHA'ları aşağıdaki yayın kanıtına eklenecek.
+Yayın durumu: tamamlandı; release canlı byte ve kapsamlı smoke kontrolleriyle doğrulandı.
+
+## Production yayın kanıtı
+
+- Durum: **published / RELEASE VERIFIED Mysteries1**.
+- Test edilmiş source commit: `766795c002d56107d3e16f9fe65d38a89300073e`.
+- Production release commit: `88a2d969cc6928621b2fe50080fc27e55d208f28`.
+- GitHub Pages build: **built**, `2026-10-07T16:55:02Z`.
+- Source branch: `codex/katovia-v2-foundation`; source ve sonuç raporu GitHub'a kaydedildi.
+- Rollback commit: `cc5f6a6292bb2b51f6190990eea24cb5083307f0`; remote `codex/katovia-master-mysteries1-rollback` üzerinde hazır. Tree'si doğrulanmış önceki production tree'siyle aynı.
+- Yayın sonrası 181 served dosya release tree ile birebir karşılaştırıldı. Kaynak JSON/HTML klasörleri, docs ve tanitim production'a sızmadı.
+- Canlı iki indeks: 14/14 kayıt; bütün 28 TR/EN araştırma rotası HTTP 200.
+- Canlı: alias/search, 4/5/5 filtre sayıları, iki yönde status sort, curated sıra, masaüstü tablo/mobil kart, language switch ve stable anchor, previous/all/next zinciri, canonical/hreflang, sitemap, print ve no-JS geçti.
+- Canlı mevcut root bölümleri, Memory/Reaction, TR/EN paylaşım ve local persistence, PLAY deneyimleri ve TOOLS geçti.
+- Canlı Image Compressor/Lucky Draw/Pixel Art gerçek çıktıları ve altı viewport QA geçti; 18 legacy sayfa ve çalışan QR işlevi geçti.
+- Runtime hatası saptanmadı; rollback gerekmedi. Hosting, CNAME, HTTPS ve main/root kaynak ayarları korunuyor.
+- Korunan 21 kaynak/pilot dosyasının başlangıç hash'leri yayın sonrasında da aynı; tanitim kullanıcı dosyaları commit/yayın kapsamı dışında.
 
 ## Takip notları
 
