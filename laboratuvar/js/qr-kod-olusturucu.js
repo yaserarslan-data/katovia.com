@@ -390,13 +390,13 @@
 
     const appearance = readAppearance();
     if (!appearance) return;
-    if (typeof window.KatoviaQR?.render !== "function") {
+    if (typeof window.kjua !== "function") {
       setStatus("QR bileşeni yüklenemedi. Sayfayı yenileyip tekrar deneyin.", "error");
       return;
     }
 
     try {
-      const canvas = window.KatoviaQR.render({
+      const canvas = window.kjua({
         render: "canvas",
         text: content.payload,
         size: appearance.size,
