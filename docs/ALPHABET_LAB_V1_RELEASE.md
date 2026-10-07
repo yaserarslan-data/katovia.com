@@ -75,4 +75,20 @@ Node: 54/54 geçti. Tam browser suite: 80/80 geçti. Son Greek variant/romanizat
 
 Mevcut scripts/release-pages.py baseline/prepare/publish Alphabet1 akışı kullanılır. Başlangıç production SHA: 88a2d969cc6928621b2fe50080fc27e55d208f28; 181 canlı served dosya başlangıç byte kontrolünden geçti. Hosting, CNAME, HTTPS ve main/root ayarları korunur; yalnız build artifact yayınlanır. Rollback önceki doğrulanmış tree'ye forward commit olarak hazırlanır. Hata halinde otomatik uygulanır; başarılı yayın sonrası gereksiz geri dönüş yapılmaz.
 
-Durum: Test edilmiş artifact ve source checkpoint hazırlandı; production yayın kanıtları tamamlanınca aşağıya eklenecek.
+Durum: **published — RELEASE VERIFIED Alphabet1**. Production ve kapsamlı canlı QA tamamlandı.
+
+
+## Production kanıtı
+
+- Canlı URL: https://katovia.com/tools/alphabet-lab/
+- Production SHA: `a7bba6439074610f67696e85f0b315e2615c0181`
+- Rollback SHA: `8cf5b726ccd4072fce90d2e5343157d2bc354184`
+- Test edilmiş source SHA: `aa3087e4d17266429d75711dcb8cf31a72589996`
+- GitHub Pages build: built, `2026-10-07T18:17:27Z`.
+- 198 served dosya release tree ile byte-for-byte doğrulandı; korunmuş legacy yollar ve eski hashed assetler tutuldu.
+- Canlı 194 kayıt ve altı profil; 24 / 33 / 46 / 36 / 29 / 26 sayıları doğrulandı.
+- Canlı TR/EN profile/seçili sembol/query/hash korunması ve refresh; no-JS194 satır; altı viewport; canonical/sitemap geçti.
+- Canlı Mysteries14 TR/EN, yeni üç tool, mevcut root bölümleri/PLAY/TOOLS/Memory/Reaction ve 18 legacy sayfa/QR geçti.
+- Rollback tree'si başlangıç production tree'si ile aynı ve remote `codex/katovia-master-alphabet1-rollback` üzerinde hazır; başarılı yayında uygulanmadı.
+- Yeni dependency, backend, ücretli servis, dış medya/ses/TTS veya production resource yok; package/lockfile, CNAME ve app-ads.txt değişmedi.
+- Çalışma alanında kullanıcı tanitim dosyaları korunuyor; commit/deploy kapsamı dışında.
