@@ -1,0 +1,1565 @@
+{
+  "schemaVersion": 1,
+  "id": "baghdad-battery",
+  "locale": "en",
+  "source": {
+    "filename": "Bagdat_Pili_Interaktif_Dosya.html",
+    "sha256": "d23b3e7975bc7cce3cb2c9b4e42fcb6ee4f9ef4bb3dec278020fb29c7beeaa9e",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "editorial-translation",
+    "independentlyReviewed": false,
+    "sourceLocale": "tr",
+    "sourceRevision": "2026-10-06",
+    "sourceContentSha256": "e5bb6d2918fc266312c0c74539a431b923ae0de2f5709160cb9b975c41dd9287"
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The case in 60 seconds"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nThe crucial point about the Baghdad “Battery” is: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "being able to make it work as a battery does not establish that it was used as one in antiquity."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nSmall ceramic vessels found at Khujut Rabu near Baghdad in the 1930s contained a copper cylinder and iron rod. In 1938, Wilhelm König proposed that they might be galvanic cells.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nModern replicas have generated electricity with an acidic electrolyte. An experimental study published in 2026 even argued that a suitable arrangement could produce voltages ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "above 1.4 volts"
+                  ]
+                },
+                " and visible electrochemical effects.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBut the archaeological problem remains:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "there are no electrical wires, series connections, definite electrolyte residues, instructions or indisputably electroplated objects."
+                  ]
+                },
+                "\nA substantial gap therefore remains between physical possibility and historical use.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The claim"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“Ancient Mesopotamians knew electricity. They used the Baghdad Battery for gold plating and even medical electrotherapy.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThis statement treats three separate things as one piece of evidence: that the device can generate electricity, that people knew this, and that they used electricity for a specific purpose. An experiment can demonstrate the first. The second and third require archaeological context.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What we know"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The combination of objects is real"
+                  ]
+                },
+                "The combination of ceramic jar, copper cylinder and iron rod was published in the 1930s."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Dating is uncertain"
+                  ]
+                },
+                "The find context is weak by modern standards, leaving uncertainty between Parthian and Sasanian dates."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "A galvanic cell can be constructed"
+                  ]
+                },
+                "Copper and iron, acting as different electrodes in an acidic liquid, can produce a small voltage."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "“Electroplating” has not been directly established"
+                  ]
+                },
+                "No ancient Mesopotamian object is known to have been indisputably demonstrated as electrically plated."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Similar vessels offer alternatives"
+                  ]
+                },
+                "Comparable vessels from Seleucia and Ctesiphon have been compared with objects used to store magical/prayer texts."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The originals' fate is problematic"
+                  ]
+                },
+                "The original Baghdad finds were reported missing or of uncertain whereabouts after the 2003 looting; opportunities for reanalysis are severely limited."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The evidence"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — Yes, it really can generate electricity"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nCopper and iron can act as two different metal electrodes. Vinegar, wine, grape juice or another acidic, ion-containing liquid between them can allow an electric current through a difference in chemical potential. This basic electrochemistry is not disputed.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Physically possible"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — The 2026 experiment strengthened the hypothesis without resolving the history"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAlexander Bazes's 2026 experimental study reported voltages above 1.4 volts and visible electrochemical reactions in a replica imitating the Baghdad Battery's details. It provides an important experimental result against the objection that “this design does not work”.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBut the experiment shows ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "how a modern researcher can operate"
+                  ]
+                },
+                " the arrangement as a battery; it does not, by itself, show that an ancient user actually employed it for that purpose.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "New and important; not evidence of intention"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — The critical gap in the electroplating hypothesis"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nKönig's best-known proposal was electrically depositing gold. Archaeometallurgical specialists such as David A. Scott, however, emphasise the lack of direct evidence for electroplating in that region at that time. Thin gold coatings could be made using fire gilding, amalgam or other metallurgical techniques requiring no electricity.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "The archaeological chain is missing"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — If electricity was used, where is the circuit?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nA functional technology involves more than a cell. Electroplating requires conductive connections, an object to coat, suitable electrolyte/metal salt and probably more than one cell. No reliable group of finds directly links these components with the Baghdad Battery.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "One of the greatest difficulties"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — The alternative “ritual/scroll container” explanation"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nSimilar vessels at Ctesiphon have been interpreted as containers for magical, prayer or protective texts on papyrus. An organic text could have been placed inside the copper cylinder and completely decayed. Although the iron rod's function remains disputed in this model, a “ritual deposit” is a serious archaeological alternative.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "A plausible alternative"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "6 — Is corrosion evidence of an electrolyte?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nCorrosion on the iron and copper is sometimes described as residue from an acidic electrolyte. But buried metal objects also corrode through soil moisture and environmental chemistry. Without detailed re-examination of the original inner surfaces using modern analytical methods, this evidence cannot be considered decisive.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Uncertain"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Theories"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory A — A genuine galvanic battery / electroplating device"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The geometry is suitable for an electric cell. Replicas generate electricity; the 2026 study also demonstrated stronger electrochemical effects."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " The use chain is absent: electrolyte residues, wires, series connections, a plating arrangement and definitely electroplated artefacts have not been found."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory B — Electrotherapy / pain relief"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Paul Keyser proposed that the sensation of low-voltage electricity could have been used for pain relief or ritual-medical purposes."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " No ancient medical text describes this, and no electrode-application apparatus exists. Highly speculative."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory C — A container for magical / prayer / sacred texts"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Similar regional vessels associated with written talismans and protective texts fit the historical context."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " A complete explanation of all details of the Khujut Rabu copper-and-iron arrangement is not straightforward."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory D — Another storage or craft vessel"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " An archaeological object's original use may not fit any modern classification."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " The need for the particular copper-cylinder/iron-rod combination must be explained."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "viral"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral claims: are they true?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Claim"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Assessment"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Why?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The Baghdad Battery is definitely the world's first battery.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Not established"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "It can work as a galvanic cell; its original function is unknown."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Electricity use 2,000 years ago has been proven.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "An overstatement"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "There is no supporting archaeological system demonstrating the use of electrical technology."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Ancient gold jewellery was made by electroplating.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Not established"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Historical gilding techniques required no electricity; no indisputable example of electroplating has been demonstrated."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Vinegar makes it produce voltage, so it is a battery.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Faulty reasoning"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "An object's performing a function in a modern experiment does not establish its historical design purpose."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It cannot generate any electricity.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Replica cells have physically demonstrated voltage production with a suitable electrolyte."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The mystery was completely solved in 2026.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "No"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The new study strengthened functional electrochemistry; it did not establish ancient people's intentions or use."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It was alien technology.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "No evidence"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "All its components could be produced using the period's known ceramic and metalworking techniques."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What remains unknown"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Its original function"
+                  ]
+                },
+                "An electric cell, ritual vessel or something else?"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "What liquid was inside?"
+                  ]
+                },
+                "No reliable analysis of an original electrolyte exists."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Were the components really one device?"
+                  ]
+                },
+                "Inadequate early excavation records leave the original assembly uncertain."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Its precise date"
+                  ]
+                },
+                "Assessments differ between the Parthian and Sasanian periods."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "If it was a battery, what was it connected to?"
+                  ]
+                },
+                "Wires, electrodes and an operating arrangement have not been found."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Can the originals be re-examined?"
+                  ]
+                },
+                "Their fate after 2003 has severely reduced opportunities for modern analysis."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "My assessment"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🟡 The Baghdad Battery could be a battery, but is not yet historically established as one."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBoth extremes are problematic. Saying “ancient people could not use electricity, so it is impossible” is incorrect: the arrangement really can operate as an electrochemical cell.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe opposite conclusion—“it works, so it is definitely a battery”—is also incorrect. Understanding intention in archaeology requires ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "functional context:"
+                  ]
+                },
+                " wires, used electrolyte, an electroplated product, a series of cells or a text describing the process. None is definitely available.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nIn my view, the 2026 experiment made the case more interesting:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "it weakens the argument that “this could not have been a battery”."
+                  ]
+                },
+                "\nBut it does not establish “ancient electrical technology”.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe most accurate statement at present is therefore:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "an ancient object strikingly suitable for generating electricity, whose original purpose remains unresolved."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Status in this series:"
+              ]
+            },
+            " 🟡 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "A genuine debate."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nA battery function is physically possible. Archaeologically, it has not yet been shown to be the intended function.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "References"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Experimental capacity was carefully distinguished from historical use. Source quality and archaeological limitations were stated explicitly in the text."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Keyser, P. T. (1993)."
+              ]
+            },
+            " “The Purpose of the Parthian Galvanic Cells: A First-Century A.D. Electric Battery Used for Analgesia.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal of Near Eastern Studies"
+              ]
+            },
+            " 52(2):81–98. One academic argument for the electric-cell and electrotherapy hypotheses."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Eggert, G. (1994)."
+              ]
+            },
+            " “On the origin of a gilding method of the Baghdad silversmiths.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Gold Bulletin"
+              ]
+            },
+            ". Critically examines the historical origins of the modern Baghdad gilding practice used in König's electroplating argument.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://link.springer.com/article/10.1007/BF03214771"
+              },
+              "children": [
+                "Springer / Gold Bulletin"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Scott, D. A."
+              ]
+            },
+            " ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Metallography and Microstructure of Ancient and Historic Metals."
+              ]
+            },
+            " Getty Conservation Institute. A critical approach to electroplating claims in the context of ancient gilding and metallurgy."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Bazes, A. (2026)."
+              ]
+            },
+            " “The Baghdad Battery: Experimental Verification of a 2,000-Year-Old Device Capable of Driving Visible and Useful Electrochemical Reactions at over 1.4 Volts.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Sino-Platonic Papers"
+              ]
+            },
+            " 377. A claim of strong electrochemical performance in a modern replica experiment.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.sino-platonic.org/complete/spp377_baghdad_battery.pdf"
+              },
+              "children": [
+                "Sino-Platonic Papers"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "History (2026)."
+              ]
+            },
+            " “Could Ancient Mesopotamians Have Built a Battery?” A recent popular-science overview of the discovery, König's hypothesis and continuing archaeological debate.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.history.com/articles/baghdad-battery"
+              },
+              "children": [
+                "History"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "von Handorf, D. E. (2002)."
+              ]
+            },
+            " “The Baghdad Battery—Myth or Reality?” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Plating & Surface Finishing."
+              ]
+            },
+            " A technical assessment of the electroplating hypothesis."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Last updated: 6 October 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Çözülemeyen Sorular 02 — Voynich El Yazması</title>
+<meta name="description" content="Voynich El Yazması hakkındaki iddiaları, dilbilimsel ve kriptolojik kanıtları, teorileri ve belirsizlikleri sade ve eğlenceli bir okuma formatında inceleyen araştırma dosyası." />
+<style>
+  :root{
+    --bg:#0c0f14; --panel:#141922; --panel2:#0f141c; --text:#f3f5f7; --muted:#aab2bd;
+    --line:#28303b; --accent:#f1c56c; --good:#70d6a5; --warn:#ffd166; --bad:#ff7b7b; --blue:#8fb8ff;
+    --max:920px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:linear-gradient(180deg,#0a0d12 0%,#111620 45%,#0b0f15 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}
+  a{color:var(--blue)}
+  .wrap{max-width:var(--max);margin:auto;padding:28px 18px 80px}
+  .hero{padding:64px 0 38px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:800}
+  h1{font-size:clamp(2.4rem,7vw,5.2rem);line-height:.98;margin:.2em 0 .28em;letter-spacing:-.05em}
+  .lede{font-size:clamp(1.05rem,2.4vw,1.35rem);color:#d8dde4;max-width:760px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .pill{border:1px solid var(--line);background:#10151d;border-radius:999px;padding:7px 11px;color:var(--muted);font-size:.88rem}
+  .nav{position:sticky;top:0;z-index:5;background:rgba(12,15,20,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .navin{max-width:var(--max);margin:auto;padding:10px 18px;display:flex;gap:8px;overflow:auto;white-space:nowrap}
+  .nav a{text-decoration:none;color:#cbd2db;font-size:.88rem;padding:7px 10px;border-radius:999px}
+  .nav a:hover{background:#1a2230;color:white}
+  section{padding:42px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:1.55rem;margin:0 0 18px;letter-spacing:-.02em}
+  h3{margin:28px 0 10px;font-size:1.05rem;color:#fff}
+  p{margin:0 0 16px}
+  ul{padding-left:22px}
+  .hook{font-size:1.22rem;line-height:1.6;color:#fff;border-left:3px solid var(--accent);padding-left:16px;margin:18px 0 26px}
+  .card{background:linear-gradient(180deg,#151b25,#111720);border:1px solid var(--line);border-radius:18px;padding:20px;margin:14px 0}
+  .callout{padding:18px 20px;border-radius:16px;background:#111822;border:1px solid #2d3847}
+  .callout strong{color:var(--accent)}
+  .status{display:inline-flex;align-items:center;gap:8px;font-weight:800}
+  .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .green{background:var(--good)} .yellow{background:var(--warn)} .red{background:var(--bad)}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .claim{padding:16px;border-radius:14px;background:var(--panel2);border:1px solid var(--line)}
+  .claim b{display:block;margin-bottom:6px}
+  .verdict{font-weight:800;margin-top:8px}
+  .timeline{margin:22px 0 0;padding:0;list-style:none;border-left:2px solid #344052}
+  .timeline li{position:relative;padding:0 0 20px 22px;color:#d8dde4}
+  .timeline li::before{content:"";position:absolute;left:-7px;top:.45em;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px #10151d}
+  .timeline b{color:#fff}
+  .meter{height:10px;background:#222a35;border-radius:999px;overflow:hidden;margin:8px 0 4px}
+  .meter > span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#ffe6a8);border-radius:999px}
+  .score{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:.9rem}
+  details{background:#10161f;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0}
+  summary{cursor:pointer;font-weight:800;color:#f5f7f9}
+  details p{margin-top:12px;color:#cfd5dc}
+  .quote{font-size:1.12rem;color:#f3f5f7;background:#17120b;border:1px solid #4e3e1f;padding:18px 20px;border-radius:16px}
+  .sources ol{padding-left:22px}
+  .sources li{margin:0 0 12px;color:#c5ccd5}
+  .final{background:linear-gradient(135deg,#151a22,#201b12);border:1px solid #4d422a;padding:24px;border-radius:20px}
+  .big-status{font-size:1.35rem;font-weight:900;margin-bottom:8px}
+  .mini{font-size:.92rem;color:var(--muted)}
+  .myth{border-left:3px solid var(--bad)}
+  .new{border-left:3px solid var(--good)}
+  footer{padding-top:28px;color:#89939f;font-size:.88rem}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}.hero{padding-top:42px}.wrap{padding-left:15px;padding-right:15px}}
+  @media print{.nav{display:none}body{background:white;color:#111}.card,.claim,details,.callout,.final{background:white;border-color:#ccc}.lede,p,.mini,.sources li,.timeline li{color:#333}h1,h2,h3,strong,b,summary{color:#111}.hero,section{border-color:#ddd}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Bölümler">
+  <div class="navin">
+    <a href="#ozet">Kısa sonuç</a><a href="#iddia">İddia</a><a href="#gercekler">Gerçekler</a><a href="#kanitlar">Kanıtlar</a><a href="#sorular">5 büyük soru</a><a href="#teoriler">Teoriler</a><a href="#efsaneler">İddia kontrolü</a><a href="#bilinmeyen">Bilinmeyen</a><a href="#degerlendirme">Değerlendirme</a><a href="#durum">Durum</a><a href="#kaynakca">Kaynakça</a>
+  </div>
+</nav>
+
+<main class="wrap">
+<header class="hero">
+  <div class="eyebrow">Çözülemeyen Sorular Dosyası · 02</div>
+  <h1>Voynich El Yazması</h1>
+  <p class="lede">Yüzlerce sayfa, tanımadığımız bir yazı sistemi, tuhaf bitkiler, yıldızlar, çıplak figürler ve yüz yılı aşkın süredir doğrulanmış tek bir çeviri yok. Peki bu gerçekten bir dil mi — yoksa çok iyi tasarlanmış bir yanılsama mı?</p>
+  <div class="meta"><span class="pill">Okuma: ~14 dakika</span><span class="pill">Görselsiz sade sürüm</span><span class="pill">Akademik + birincil kaynak öncelikli</span><span class="pill">Son güncelleme: 6 Ekim 2026</span></div>
+</header>
+
+<section id="ozet">
+  <h2>60 saniyelik sonuç</h2>
+  <p class="hook">Voynich El Yazması hakkında en güvenli cümle şu: <strong>kitap gerçek, Orta Çağ'a ait ve metni hâlâ okunamıyor.</strong> Fakat “tamamen anlamsız karalama” demek için de elimizde yeterli neden yok.</p>
+  <div class="grid">
+    <div class="claim"><b>📜 Yaşı</b>Parşömen 1404–1438 aralığına radyokarbonla tarihlendirildi; mürekkep ve pigmentler de Orta Çağ malzemeleriyle uyumlu.<div class="verdict">→ Modern sahtecilik değil</div></div>
+    <div class="claim"><b>🔤 Metin bir dil mi?</b>Birçok istatistiksel çalışma metinde rastgele karalamadan daha güçlü, dil-benzeri yapı buluyor.<div class="verdict">→ Dil/şifre lehine ciddi işaret</div></div>
+    <div class="claim"><b>🔐 Şifre mi?</b>Bazı şifre türleriyle uyumlu özellikler var; fakat kabul edilmiş bir anahtar veya tam çözüm yok.<div class="verdict">→ Mümkün, kanıtlanmış değil</div></div>
+    <div class="claim"><b>🎭 Sahte metin mi?</b>Kural tabanlı yöntemlerle Voynich-benzeri metin üretilebiliyor; dolayısıyla sahtecilik olasılığı kapanmış değil.<div class="verdict">→ Hâlâ masada</div></div>
+    <div class="claim"><b>🌿 Bitkiler</b>Çizimlerin çoğu güvenilir biçimde belirli bir türe bağlanamıyor; “dünyada olmayan uzay bitkileri” demek gereksiz.<div class="verdict">→ Stilize/karma çizimler olabilir</div></div>
+    <div class="claim"><b>✨ Astronomi</b>Zodyak ve yıldız benzeri motifler tanınabilir; ama diyagramların tam işlevi ve metinle ilişkisi bilinmiyor.<div class="verdict">→ Tema belli, içerik değil</div></div>
+  </div>
+  <div class="callout" style="margin-top:18px"><strong>Dosyanın kısa hükmü:</strong> Voynich gerçekten çözülmemiş bir problem. Fakat gizem “hangi dünyadan geldi?” değil; <strong>15. yüzyılda insanlar bu kitabı hangi amaçla ve hangi kodlama/yazı sistemiyle üretti?</strong></div>
+</section>
+
+<section id="iddia">
+  <h2>1. İddia</h2>
+  <p class="quote">“Yüzyıllardır hiçbir kriptolog veya dilbilimcinin çözemediği, dünyada eşi benzeri olmayan tuhaf bitkiler ve astronomik haritalar içeren Voynich El Yazması hangi dünyaya ait bir dili konuşuyor?”</p>
+  <p>Bu viral cümlede birbirine karışmış <strong>dört farklı soru</strong> var:</p>
+  <div class="card"><b>1)</b> Metin gerçekten anlamlı mı? &nbsp; <b>2)</b> Anlamlıysa doğal bir dil mi, şifre mi, kısaltma sistemi mi? &nbsp; <b>3)</b> Çizimler gerçek nesneleri mi temsil ediyor? &nbsp; <b>4)</b> Kitabın amacı neydi?</div>
+  <p>“Çözülemedi” doğru. Ama buradan “insanlık dışı”, “kayıp uygarlık dili” veya “başka dünyaya ait” sonucu çıkmıyor.</p>
+</section>
+
+<section id="gercekler">
+  <h2>2. Bildiğimiz gerçekler</h2>
+  <p>Voynich El Yazması, Yale Üniversitesi Beinecke Nadir Kitaplar ve El Yazmaları Kütüphanesi'nde <strong>MS 408</strong> numarasıyla saklanan, parşömen üzerine yazılmış resimli bir kodekstir. Yale kataloglaması metni “tanımlanamayan bir yazı sistemi” olarak tarif eder; çizimler ise kabaca bitkisel, astronomik/astrolojik, balneolojik, kozmolojik, farmasötik ve reçete-benzeri bölümlere ayrılır.</p>
+
+  <h3>Tarihsel zincir — kısa versiyon</h3>
+  <ul class="timeline">
+    <li><b>1404–1438:</b> Üniversite of Arizona radyokarbon analizleri parşömenin bu aralıkta üretilmiş olmasını en olası sonuç olarak verir.</li>
+    <li><b>15. yüzyıl:</b> Mürekkep ve pigment analizleri, malzemenin Orta Çağ el yazmalarıyla uyumlu olduğunu gösterir.</li>
+    <li><b>17. yüzyıl:</b> Johannes Marcus Marci'nin Athanasius Kircher'e gönderdiği mektup, kitabın bilinen erken provenansının önemli halkalarından biridir; mektupta Rudolf II ile ilgili ikinci el bir satın alma rivayeti aktarılır.</li>
+    <li><b>1912:</b> Kitapçı Wilfrid M. Voynich, el yazmasını İtalya'daki bir Cizvit koleksiyonundan satın alır; eser modern dünyada onun adıyla tanınır.</li>
+    <li><b>1969:</b> H. P. Kraus tarafından Yale'e bağışlanır.</li>
+    <li><b>2009:</b> Malzeme analizleri ve radyokarbon sonuçları, modern sahtecilik olasılığını ciddi biçimde zayıflatır.</li>
+    <li><b>2020:</b> Lisa Fagin Davis, paleografik analizle birden fazla yazıcı eli bulunduğunu savunur; en çok atıf alan model beş ayrı el önerir.</li>
+    <li><b>2026:</b> Layfield ve Davis, metin bütünlüğü ve cilt yapısını inceleyen iki çalışma yayımlar; ikinci çalışma kitabın bugün okuduğumuz sayfa sırasının özgün düzen olmayabileceğini savunur.</li>
+  </ul>
+  <p class="mini">Önemli nüans: radyokarbon analizi <strong>parşömenin</strong> yaşını ölçer. Yazının tam olarak hangi yıl eklendiğini tek başına söylemez. Ancak mürekkep/pigment analizleri ve tarihsel üslup, erken 15. yüzyıl üretimiyle genel olarak uyumludur.</p>
+</section>
+
+<section id="kanitlar">
+  <h2>3. Kanıtlar</h2>
+
+  <h3>A) Fiziksel kanıt: gerçek bir Orta Çağ nesnesi</h3>
+  <p>Yale'in koruma çalışmaları ve McCrone Associates malzeme analizi, kitabın parşömen, mürekkep ve pigmentlerinin Orta Çağ el yazması üretimiyle uyumlu olduğunu gösteriyor. 2009'da dört farklı parşömen örneğinin radyokarbon eğrileri birbiriyle tutarlı çıktı ve birleşik aralık 1404–1438 olarak raporlandı.</p>
+  <div class="card"><b>Ne elendi?</b><p style="margin-top:8px">“Voynich 19. veya 20. yüzyılda hazırlanmış modern bir sahte kitaptır” hipotezi, malzeme kanıtıyla çok zayıf hale geliyor.</p></div>
+
+  <h3>B) Metin rastgele görünmüyor</h3>
+  <p>2013'te PLOS ONE'da yayımlanan iki ayrı çalışma önemli bir ortak noktaya vardı. Amancio ve arkadaşları Voynich metninin çeşitli ağ ve kelime-istatistiği ölçülerinde doğal dillere büyük ölçüde uyduğunu; Montemurro ve Zanette ise kelimelerin uzun mesafeli dağılımında konu-benzeri kümelenmeler ve bilgi taşıyan sözcük ağları bulduklarını bildirdi.</p>
+  <p>Bu çalışmalar <strong>“metni çevirdik” demiyor.</strong> Söyledikleri daha dar ama önemli: sembol dizilerinin sayfa boyunca dağılımı, basit rastgele karalamadan beklenenden daha düzenli.</p>
+
+  <h3>C) Metin aynı zamanda doğal dillerden garip biçimde farklı</h3>
+  <p>2022'de Matlach, Janečková ve Dostál; sembollerin tekrar davranışlarında test ettikleri 21 doğal dilden ve bazı şifreli örneklerden ayrılan güçlü otokorelasyonlar buldu. Yani “dil-benzeri yapı var” demek, “bildiğimiz doğal dillerden biri gibi davranıyor” demek değil.</p>
+  <p>Bu gariplik, hem <strong>özel bir kodlama sistemi</strong> hem de <strong>kurallı yapay üretim</strong> hipotezlerine alan bırakıyor.</p>
+
+  <h3>D) Bölümler ile sözcük kullanımı arasında ilişki var</h3>
+  <p>Metin içinde geleneksel olarak “bitkisel”, “astronomik” vb. diye ayrılan görsel bölümlerle kelime dağılımlarının değişmesi arasında ölçülebilir ilişkiler bulunuyor. Bu, çizimlerin metinden tamamen bağımsız dekorasyonlar olması ihtimalini azaltıyor.</p>
+
+  <h3>E) 2026: sayfaları yanlış sırada okuyor olabiliriz</h3>
+  <div class="card new"><b>Yeni gelişme — 2026</b><p style="margin-top:8px">Colin Layfield ve Lisa Fagin Davis'in hakemli <em>Digital Medievalist</em> çalışması, cilt yapısı ve Latent Semantic Analysis sonuçlarını birlikte değerlendirerek el yazmasının başlangıçta iç içe “quire”lar şeklinde değil, tek tek katlanmış bifoliumlardan oluşan bir “singulion” dizisi olarak tasarlanmış olabileceğini ileri sürüyor. Bu doğruysa bugün gördüğümüz sayfa sırası özgün okuma sırasını bozuyor olabilir.</p></div>
+  <p>Bu çalışma metni çözmüyor. Ama çok önemli bir şeyi değiştiriyor: bazı “anlamsız geçişlerin” nedeni dil değil, <strong>sayfa düzeninin sonradan karışmış olması</strong> olabilir.</p>
+
+  <h3>Kanıt ağırlığı — tek bakışta</h3>
+  <div class="card">
+    <div class="score"><span>15. yy parşömen / malzeme</span><b>çok güçlü</b></div><div class="meter"><span style="width:95%"></span></div>
+    <div class="score"><span>Metinde kurallı istatistiksel yapı</span><b>güçlü</b></div><div class="meter"><span style="width:84%"></span></div>
+    <div class="score"><span>Doğal dil olduğu sonucu</span><b>orta–güçlü ama tartışmalı</b></div><div class="meter"><span style="width:69%"></span></div>
+    <div class="score"><span>Şifre olduğu sonucu</span><b>mümkün, özgül anahtar yok</b></div><div class="meter"><span style="width:52%"></span></div>
+    <div class="score"><span>Saf anlamsız sahte metin</span><b>mümkün ama basit rastgelelik zayıf</b></div><div class="meter"><span style="width:39%"></span></div>
+  </div>
+</section>
+
+<section id="sorular">
+  <h2>4. Beş büyük soru</h2>
+
+  <h3>1) Metin gerçekten bir dil mi?</h3>
+  <p><strong>En güvenli cevap:</strong> doğal dil-benzeri istatistiksel yapı taşıyor; ancak bunun mutlaka doğrudan yazılmış bir doğal dil olduğu kanıtlanmış değil.</p>
+  <p>2021'de Yale dilbilimcileri Claire Bowern ve Luke Lindemann, mevcut dilbilim çalışmalarını gözden geçirerek doğal dil hipotezinin ciddiye alınması gerektiğini savundu. Buna karşılık bazı araştırmacılar, Voynich-benzeri yapıların anlamsız ama kurallı üretimle de elde edilebildiğini gösteriyor.</p>
+
+  <h3>2) Bir şifre mi?</h3>
+  <p>Olabilir. Ancak klasik “A harfi = şu sembol” tarzı basit ikame şifreleri uzun zamandır yeterli görünmüyor. Sözcüklerin sayfa ve satır içindeki konumları, belli sembollerin yalnızca belirli yerlerde görülmesi ve kelime aileleri, daha karmaşık bir mekanizma gerektirebilir: kısaltma sistemi, hece-temelli kod, çok katmanlı şifre, steganografik yapı veya bunların karışımı.</p>
+  <p>2022'de Bowern ve Gaskell, bazı kelime-düzeyi ölçülerinin kimi şifreleme türleriyle uyumlu kalabildiğini gösterdi. Yani “istatistikler dile benziyor, öyleyse şifre olamaz” çıkarımı doğru değil.</p>
+
+  <h3>3) Anlamsız sahte metin olabilir mi?</h3>
+  <p>Evet, tamamen elenmiş değil. Gordon Rugg 2004'te, Rönesans döneminde bilinen tablo ve Cardan ızgarası benzeri yöntemlerle hızlı biçimde Voynich-benzeri kelimeler üretilebileceğini gösterdi. Bu, “15. yüzyılda böyle bir sahtecilik teknik olarak imkânsızdı” iddiasını çürütüyor.</p>
+  <p>Fakat zorluk şu: sadece kelimelerin görünüşünü değil, <strong>uzun mesafeli dağılımları, bölüm farklarını, tekrar yapılarını ve olası çoklu yazıcı davranışını</strong> da açıklamak gerekiyor. Sahtecilik hipotezi mümkün; fakat “kolayca kanıtlandı” seviyesinde değil.</p>
+
+  <h3>4) Bitki çizimleri gerçek türleri mi gösteriyor?</h3>
+  <p>Yale ve PLOS kaynaklarının temkinli tanımına göre bitkilerin çoğu <strong>tek bir gerçek türle tartışmasız biçimde eşleştirilemiyor.</strong> Bunun birkaç sıradan açıklaması var: Orta Çağ herbal geleneğinde stilizasyon, farklı bitki parçalarının birleştirilmesi, kopyadan kopyaya bozulma veya sembolik/işlevsel çizim.</p>
+  <p>“Dünyada eşi olmayan bitkiler” cümlesi görsel olarak çekici ama bilimsel olarak zayıf. Tanımlayamamak, bitkinin doğada var olmadığı anlamına gelmez.</p>
+
+  <h3>5) Astronomik/astrolojik şemalar ne anlatıyor?</h3>
+  <p>Zodyak işaretleri ve yıldız biçimleri gibi bazı motifler açıkça Orta Çağ astrolojik geleneğiyle ilişkilendirilebilir. Buna rağmen diyagramların tam olarak takvim, astrolojik hesap, tıbbi astroloji, kozmoloji veya başka bir sistemi mi temsil ettiği bilinmiyor.</p>
+  <p>Burada da problem aynı: <strong>görüntünün türünü tanıyoruz, başlığını okuyamıyoruz.</strong> Metin çözülmeden diyagramların amacı konusunda güçlü ama kesin olmayan yorumlarla yetinmek zorundayız.</p>
+</section>
+
+<section id="teoriler">
+  <h2>5. Teoriler</h2>
+  <p class="hook">Voynich için “tek büyük teori” yok. Daha doğru yaklaşım, birbirine rakip birkaç modelin hangi veriyi iyi ve kötü açıkladığını görmek.</p>
+
+  <details open><summary>🗣️ Teori 1 — Bilinmeyen yazıyla yazılmış doğal dil</summary><p><strong>Güçlü yanı:</strong> kelime frekansları, konuya göre dağılım ve bazı uzun-mesafe ilişkiler doğal metinlere benziyor. <strong>Zayıf yanı:</strong> sembol ve kelime yapılarına ait bazı kısıtlamalar bilinen diller için alışılmadık derecede katı; güvenilir bir dil eşlemesi yok.</p></details>
+  <details><summary>🔐 Teori 2 — Bilinen bir dilin şifrelenmiş/kısaltılmış biçimi</summary><p><strong>Güçlü yanı:</strong> Orta Çağ ve erken modern dönemde şifreler, kısaltmalar ve stenografik sistemler kullanılıyordu; Voynich'in sıra dışı sembol dağılımını açıklayabilir. <strong>Zayıf yanı:</strong> yüz yılı aşkın analizden sonra tüm kitapta çalışan, bağımsız araştırmacıların yeniden üretebildiği bir anahtar yok.</p></details>
+  <details><summary>🧠 Teori 3 — Yapay/oluşturulmuş dil</summary><p><strong>Güçlü yanı:</strong> doğal dillere benzeyen ama hiçbir dil ailesine oturmayan kuralları açıklayabilir. William Friedman gibi önemli kriptologlar da tarihsel olarak bu yöne ilgi göstermişti. <strong>Zayıf yanı:</strong> dilin sözlüğü veya grameri hakkında doğrudan kanıt yok; “yapay dil” bazen sadece bilinmeyeni yeniden adlandırıyor.</p></details>
+  <details><summary>🎭 Teori 4 — Bilinçli sahtecilik / anlam taşımayan kurallı metin</summary><p><strong>Güçlü yanı:</strong> Rugg ve daha sonraki jeneratif modeller, insan eliyle kurallı ama anlamsız Voynich-benzeri metin üretilebileceğini gösteriyor. <strong>Zayıf yanı:</strong> kitabın bölüm düzeyindeki organizasyonunu, çizim-metin ilişkilerini ve ince istatistiksel örüntüleri aynı üretim modeliyle açıklamak zor.</p></details>
+  <details><summary>📚 Teori 5 — Tıbbi/herbal/astrolojik başvuru kitabı</summary><p><strong>Güçlü yanı:</strong> bitkiler, kaplar, beden/banyo sahneleri, zodyak ve yıldızlar Orta Çağ'daki tıp-herbal-astroloji literatürüyle tematik olarak uyuşuyor. <strong>Zayıf yanı:</strong> metin okunmadığı için “kadın sağlığı el kitabı”, “eczacılık reçeteleri” gibi daha ayrıntılı tanımlar doğrudan doğrulanamıyor.</p></details>
+</section>
+
+<section id="efsaneler">
+  <h2>6. Sosyal medya / internet iddiaları</h2>
+
+  <div class="card myth"><b>❌ “Dünyada eşi olmayan bitkiler çizilmiş.”</b><p style="margin-top:8px">Aşırı yorum. Çizimlerin çoğu güvenilir biçimde tanımlanamıyor; bu, gerçek dünyada karşılığı olmadığı anlamına gelmez. Stilizasyon ve kompozit çizimler Orta Çağ herbal geleneğinde mümkündür.</p></div>
+
+  <div class="card myth"><b>❌ “Hiçbir dilbilimci veya kriptolog metin hakkında hiçbir şey çıkaramadı.”</b><p style="margin-top:8px">Yanlış. Çeviri yok; fakat kelime istatistikleri, sembol konumları, Currier A/B farkları, bölüm kümelenmeleri ve yazıcı elleri hakkında ölçülebilir çok şey biliyoruz.</p></div>
+
+  <div class="card myth"><b>❌ “Yapay zekâ Voynich'i çözdü.”</b><p style="margin-top:8px">Doğrulanmış değil. Bilgisayar modelleri dil adayları ve yapısal örüntüler önerebilir; ama bağımsız olarak tekrarlanabilir, bütün sayfalarda çalışan bir çeviri üretilemedi.</p></div>
+
+  <div class="card myth"><b>❌ “2019'da Proto-Romance olduğu kesinleşti.”</b><p style="margin-top:8px">Hayır. Gerard Cheshire'in makalesi yayımlandı ancak dilbilimci ve Orta Çağ uzmanlarından ciddi metodolojik eleştiri aldı. University of Bristol, ilk tanıtım haberini bu eleştiriler üzerine geri çekti. Akademik uzlaşı haline gelmedi.</p></div>
+
+  <div class="card myth"><b>🟡 “Eski Türkçe olduğu çözüldü.”</b><p style="margin-top:8px">Bu da kabul edilmiş bir çözüm değil. Türkçe/Türkî dil hipotezleri kamuoyunda ilgi gördü ancak bütün metni aynı, açık ve bağımsız biçimde uygulanabilir yöntemle çeviren akademik bir konsensüs oluşmadı.</p></div>
+
+  <div class="card myth"><b>🟡 “Kesin bir kadın sağlığı kitabı.”</b><p style="margin-top:8px">Olası temalardan biri olabilir; çıplak kadın figürleri, banyolar ve bitkiler bu yorumu teşvik ediyor. Fakat metin okunmadığı için “kesin içerik” diye sunmak veri sınırını aşıyor.</p></div>
+</section>
+
+<section id="bilinmeyen">
+  <h2>7. Hâlâ bilinmeyenler</h2>
+  <div class="grid">
+    <div class="claim"><b>❓ Dil / kod</b>Metnin altında hangi dilin, kodlama biçiminin veya üretim sisteminin bulunduğu bilinmiyor.</div>
+    <div class="claim"><b>❓ Yazarlar ve yer</b>Kimlerin, tam olarak nerede ve hangi kurum/çevre içinde kitabı ürettiği bilinmiyor.</div>
+    <div class="claim"><b>❓ Amaç</b>Tıp kitabı mı, özel bir başvuru defteri mi, eğitim materyali mi, ezoterik bir eser mi — kesin değil.</div>
+    <div class="claim"><b>❓ Çizimlerin anlamı</b>Birçok bitki, boru, havuz ve kozmolojik şeklin neyi temsil ettiği açık değil.</div>
+    <div class="claim"><b>❓ Özgün sayfa sırası</b>2026 “singulion” hipotezi doğruysa, bugünkü cilt düzeni orijinal metin akışını bozmuş olabilir.</div>
+    <div class="claim"><b>❓ Neden başka örnek yok?</b>Bu yazı sistemi gerçekten bir topluluk tarafından kullanıldıysa, neden elimizde başka kesin örnek bulunmadığı bilinmiyor.</div>
+  </div>
+  <p class="callout" style="margin-top:18px"><strong>Gerçek gizem:</strong> Elimizde “hiçbir şey bilmediğimiz” bir kitap yok. Tam tersine fiziksel tarihi ve metin yapısı hakkında şaşırtıcı ölçüde veri var. Eksik olan şey, bütün bu verileri <strong>tek, test edilebilir ve okunabilir bir açıklamada</strong> birleştiren anahtar.</p>
+</section>
+
+<section id="degerlendirme">
+  <h2>8. Benim değerlendirmem</h2>
+  <p>Bana göre kanıtların en önemli mesajı şu: <strong>Voynich'i “uzaylı dili” gibi sunmak gizemi büyütüyor ama bilimsel soruyu küçültüyor.</strong> Asıl problem çok daha ilginç: 15. yüzyıl Avrupa bağlamına fiziksel olarak oturan bir kitabın yazı sistemi, modern dilbilim ve kriptolojiye neden bu kadar direniyor?</p>
+
+  <div class="card"><b>Metin anlam taşıyor mu?</b><p style="margin-top:8px">Kanıt dengesi, basit rastgele karalamadan ziyade <strong>kurallı ve muhtemelen bilgi taşıyan</strong> bir sistem yönünde. Ancak “istatistiksel olarak dil-benzeri” ile “doğal dil olduğu kanıtlandı” aynı şey değil.</p></div>
+
+  <div class="card"><b>En makul sınıf hangisi?</b><p style="margin-top:8px">Doğal dil + alışılmadık yazım/kısaltma veya bir çeşit kodlama ailesi bana, saf rastgele sahtecilikten daha iyi bir başlangıç hipotezi gibi görünüyor. Fakat bu bir sonuç değil; çünkü henüz metin üzerinde çalışan genel bir anahtar yok.</p></div>
+
+  <div class="card"><b>2026 bulgusu neden önemli?</b><p style="margin-top:8px">Sayfaların özgün sırası bozulmuşsa, önceki dilsel modellerin bir kısmı yanlış komşuluklar üzerinden kurulmuş olabilir. Bu, “çözüm bulundu” demek değil; fakat önümüzdeki araştırmalar için gerçek bir metodolojik değişiklik yaratabilir.</p></div>
+
+  <p>Bir Voynich çözümünü ciddiye almak için minimum testim şu olur: <strong>aynı kurallar, seçilmiş birkaç kelimede değil, daha önce kullanılmamış sayfalarda da tutarlı metin üretmeli; başka araştırmacılar aynı anahtarla aynı sonuca varabilmeli.</strong> Şimdiye kadar hiçbir popüler “çözdüm” iddiası bu eşiği geniş kabul görecek biçimde geçmedi.</p>
+</section>
+
+<section id="durum">
+  <h2>9. Durum</h2>
+  <div class="final">
+    <div class="big-status">🔴 GERÇEKTEN ÇÖZÜLEMEMİŞ — ama tamamen karanlıkta değiliz</div>
+    <p><span class="status"><span class="dot green"></span> Büyük ölçüde cevaplandı:</span> Nesnenin Orta Çağ'a ait gerçek bir el yazması olduğu.</p>
+    <p><span class="status"><span class="dot green"></span> Güçlü kanıt:</span> Metnin basit rastgele sembol dizisinden daha düzenli ve bölüm-düzeyinde yapılandırılmış olduğu.</p>
+    <p><span class="status"><span class="dot yellow"></span> Güçlü olasılık:</span> Metnin dilsel veya kodlanmış bilgi taşıması.</p>
+    <p><span class="status"><span class="dot yellow"></span> Hâlâ tartışmalı:</span> Doğal dil, şifre, kısaltma sistemi, yapay dil veya kurallı sahte metin seçeneklerinden hangisinin doğru olduğu.</p>
+    <p><span class="status"><span class="dot red"></span> Çözülmedi:</span> Güvenilir, tekrarlanabilir, kitap boyunca çalışan çeviri.</p>
+    <p><span class="status"><span class="dot red"></span> Desteklenmiyor:</span> “Başka dünyaya ait dil”, “AI kesin çözdü”, “şu dil olduğu artık kanıtlandı” gibi kesin viral iddialar.</p>
+  </div>
+</section>
+
+<section id="kaynakca" class="sources">
+  <h2>10. Kaynakça</h2>
+  <ol>
+    <li><a href="https://beinecke.library.yale.edu/beinecke/collections/beinecke-cipher-voynich-manuscript" target="_blank" rel="noopener">Yale Beinecke Rare Book & Manuscript Library — The Beinecke Cipher (Voynich) Manuscript</a>. Kurumsal eser kaydı ve bölüm tanımları.</li>
+    <li><a href="https://beinecke.library.yale.edu/sites/default/files/files/voynich_analysis.pdf" target="_blank" rel="noopener">McCrone Associates (2009), Materials Analysis of the Voynich Manuscript</a>. Mürekkep ve pigment malzeme analizi.</li>
+    <li>University of Arizona AMS radyokarbon analizi (2009): dört parşömen örneğinin birleşik sonucu 1404–1438 (%95); sonuç Yale ve uzman kaynaklarında raporlanmıştır.</li>
+    <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0067310" target="_blank" rel="noopener">Amancio, D.R. et al. (2013). “Probing the Statistical Properties of Unknown Texts: Application to the Voynich Manuscript.” PLOS ONE 8:e67310.</a></li>
+    <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066344" target="_blank" rel="noopener">Montemurro, M.A. & Zanette, D.H. (2013). “Keywords and Co-Occurrence Patterns in the Voynich Manuscript: An Information-Theoretic Analysis.” PLOS ONE 8:e66344.</a></li>
+    <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0260948" target="_blank" rel="noopener">Matlach, V., Janečková, B.A. & Dostál, D. (2022). “The Voynich manuscript: Symbol roles revisited.” PLOS ONE 17:e0260948.</a></li>
+    <li><a href="https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-011619-030613" target="_blank" rel="noopener">Bowern, C.L. & Lindemann, L. (2021). “The Linguistics of the Voynich Manuscript.” Annual Review of Linguistics 7:285–308.</a></li>
+    <li><a href="https://www.tandfonline.com/doi/abs/10.1080/0161-110491892755" target="_blank" rel="noopener">Rugg, G. (2004). “An Elegant Hoax? A Possible Solution to the Voynich Manuscript.” Cryptologia 28(1):31–46.</a></li>
+    <li>Davis, L.F. (2020). “How Many Glyphs and How Many Scribes? Digital Paleography and the Voynich Manuscript.” <em>Manuscript Studies</em> 5(1):164–180. DOI: 10.1353/mns.2020.0011.</li>
+    <li><a href="https://www.researchgate.net/publication/405027080_The_Application_of_Latent_Semantic_Analysis_to_the_Voynich_Manuscript" target="_blank" rel="noopener">Layfield, C. & Davis, L.F. (2026). “The Application of Latent Semantic Analysis to the Voynich Manuscript.” Digital Humanities Quarterly 20(1).</a> DOI: 10.63744/2ezxpskcezq4.</li>
+    <li>Layfield, C. & Davis, L.F. (2026). “Singulion Structure and the Voynich Manuscript.” <em>Digital Medievalist</em> 19. DOI: 10.4000/16k0a.</li>
+    <li><a href="https://www.bristol.ac.uk/news/2019/may/voynich-manuscript.html" target="_blank" rel="noopener">University of Bristol (16 May 2019). Statement re: Voynich research paper.</a> “Proto-Romance” çözüm iddiası hakkındaki kurumsal geri çekilme açıklaması.</li>
+    <li><a href="https://www.tandfonline.com/doi/abs/10.1080/02639904.2019.1599566" target="_blank" rel="noopener">Cheshire, G. (2019). “The Language and Writing System of MS408 (Voynich) Explained.” Romance Studies 37(1):30–67.</a> Tartışmalı Proto-Romance önerisinin özgün makalesi.</li>
+    <li><a href="https://news.yale.edu/2025/02/21/deciphering-mysterious-manuscript" target="_blank" rel="noopener">Yale News (2025). “Deciphering a mysterious manuscript.”</a> Güncel uzman değerlendirmesi ve çoklu yazıcı bulgusu.</li>
+    <li><a href="https://www.theguardian.com/culture/2026/oct/06/voynich-manuscript-research-pages-wrongly-bound" target="_blank" rel="noopener">The Guardian (6 Ekim 2026). “A medieval manuscript has confounded scholars for centuries. Have they been reading it wrong all this time?”</a> 2026 “singulion” araştırmasının güncel kamuoyu özeti; temel bilimsel iddia için yukarıdaki hakemli makale esas alınmıştır.</li>
+  </ol>
+  <p class="mini">Kaynak yaklaşımı: Popüler haberler yalnızca güncel tartışmanın izini sürmek için kullanıldı. Temel tarih, malzeme, dilbilim ve kriptoloji iddiaları mümkün olduğunca Yale, hakemli makaleler ve özgün araştırma raporlarıyla dayandırıldı.</p>
+</section>
+
+<footer>
+  Bu seri “gizemi büyütmek” için değil, gizemin tam olarak nerede başladığını görmek için hazırlanır. Sonuç etiketi kanıtın durumunu gösterir: 🟢 büyük ölçüde cevaplandı · 🟡 ciddi belirsizlik/tartışma · 🔴 gerçekten çözülememiş.
+</footer>
+</main>
+</body>
+</html>

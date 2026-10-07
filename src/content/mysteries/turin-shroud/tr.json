@@ -1,0 +1,1536 @@
+{
+  "schemaVersion": 1,
+  "id": "turin-shroud",
+  "locale": "tr",
+  "source": {
+    "filename": "Torino_Kefeni_Interaktif_Dosya.html",
+    "sha256": "4bb0a1ce9d41749c4ac535d63d0b59de9d88f56c529d4f6a6f89bba28a8143bd",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "source-only",
+    "independentlyReviewed": false
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "60 saniyelik sonuç"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "hook"
+          },
+          "children": [
+            "Torino Kefeni gerçekten ilginç bir nesne. Fakat “bilim hiçbir şey açıklayamıyor” demek de, “her şey çözüldü” demek de fazla kolay."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🧵 Kumaşın yaşı"
+                  ]
+                },
+                "1988 radyokarbon testi, test edilen keteni MS 1260–1390’a tarihlendirdi.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Orta Çağ lehine güçlü kanıt"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "👤 Görüntü nasıl oluştu?"
+                  ]
+                },
+                "Tek ve herkesçe kabul edilmiş bir oluşum mekanizması yok.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Hâlâ açık"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🎨 “Hiç boya yok”"
+                  ]
+                },
+                "Fazla kesin. STURP boya tabakasını ana açıklama olarak görmedi; McCrone pigment/tempera savundu.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Çekişmeli"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "⚙️ “Modern teknoloji taklit edemiyor”"
+                  ]
+                },
+                "Abartılı. Bazı önemli özellikler deneysel olarak taklit edildi.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Viral anlatı fazla iddialı"
+                  ]
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "Dosyanın kısa hükmü:"
+              ]
+            },
+            " Kefenin görüntü mekanizması hâlâ tam kapanmış değil. Fakat mevcut bilimsel veriler, “mucize dışında açıklama yok” sonucunu zorunlu kılmıyor."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "1. İddia"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "quote"
+          },
+          "children": [
+            "“Hz. İsa’nın gömüldüğü kefen üzerindeki insan silüetinde boya izi yok; üstelik modern teknoloji bile bunu taklit edemiyor. O hâlde görüntü kumaşa nasıl geçti?”"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Bu cümlede aslında ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "üç ayrı iddia"
+              ]
+            },
+            " var:"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "1)"
+              ]
+            },
+            " Kumaşın İsa’ya ait olduğu.   ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "2)"
+              ]
+            },
+            " Görüntünün boya/pigment içermediği.   ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "3)"
+              ]
+            },
+            " Görüntünün modern yollarla üretilemediği."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Birinin doğru olması diğerini otomatik olarak doğrulamaz. İşte bütün dosyanın kilidi bu ayrım."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "2. Bildiğimiz gerçekler"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Torino Kefeni yaklaşık ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "4,4 × 1,1 metre"
+              ]
+            },
+            " boyutlarında, balıksırtı dokumalı keten bir kumaştır. Üzerinde önden ve arkadan bir erkek bedenini andıran soluk bir görüntü, kırmızımsı lekeler ve 1532’deki Chambéry yangınından kalma hasarlar bulunur."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "Tarihsel zincir — kısa versiyon"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "ul",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "14. yüzyıl ortaları:"
+                  ]
+                },
+                " Bugünkü kefenle güvenli biçimde ilişkilendirilebilen ilk kayıtlar Lirey, Fransa’da."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1453:"
+                  ]
+                },
+                " Savoy hanedanına geçiyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1532:"
+                  ]
+                },
+                " Chambéry yangınında zarar görüyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1578:"
+                  ]
+                },
+                " Torino’ya taşınıyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1898:"
+                  ]
+                },
+                " Secondo Pia’nın fotoğraf negatifi, beden ayrıntılarını çarpıcı biçimde görünür kılıyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1978:"
+                  ]
+                },
+                " STURP ekibi kapsamlı fiziksel ve kimyasal inceleme yapıyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1988:"
+                  ]
+                },
+                " Üç laboratuvar radyokarbon tarihlemesi yapıyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "2026:"
+                  ]
+                },
+                " Arizona’dan kalan radyokarbon örnek parçaları yeniden tekstil açısından inceleniyor."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "mini"
+          },
+          "children": [
+            "Kritik ayrım: 14. yüzyıldan önce “İsa’nın kefeni” olarak anılan kutsal bezlerden söz eden metinler var; fakat bunların bugünkü Torino Kefeni ile kesintisiz biçimde aynı nesne olduğunu gösteren kabul görmüş bir belge zinciri yok."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "3. Kanıtlar"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "A) Görüntünün yapısı"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "STURP çalışmalarında beden görüntüsü, keten liflerinin yüzeyindeki sararma/bozunma ile ilişkilendirildi. Araştırmacılar, kalın bir boya tabakasının görüntüyü açıklamadığını ve bütün gözlemleri tek başına karşılayan bir üretim mekanizması bulunmadığını bildirdi."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Walter McCrone ise örneklerde kırmızı okr, vermilyon ve protein esaslı tempera izleri gördüğünü savundu. Bu yüzden “hiç pigment yok” cümlesi, bilimsel tartışmayı olduğundan daha kesin gösteriyor."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "B) “Kan” lekeleri"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Heller ve Adler bazı kırmızı alanları kanla uyumlu kimyasal bulgular olarak yorumladı. McCrone buna itiraz etti. Daha sonraki adli kan lekesi analizlerinde ise bazı akışların tek bir beden pozisyonuyla kolay açıklanamadığı ileri sürüldü."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "C) Radyokarbon — en ağır top"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "1988’de Arizona, Oxford ve Zürih laboratuvarları aynı kumaştan alınan örnekleri AMS yöntemiyle ölçtü. Nature’da yayımlanan ortak sonuç: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "MS 1260–1390"
+              ]
+            },
+            " (%95 güven düzeyi)."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Neden önemli?"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Çünkü bu tarih, kefenin tarihsel kayıtlarda ilk kez güvenli biçimde görünmeye başladığı dönemle olağanüstü derecede iyi örtüşüyor."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Sonraki yıllarda örneklemenin kefenin tamamını temsil edip etmediği tartışıldı. Raymond Rogers, test bölgesinin onarılmış/işlenmiş olabileceğini savundu. 2019 ve 2020 çalışmalarında da verilerin homojenliği sorgulandı. Ancak bunlar kendi başına “kefen 1. yüzyıldandır” demiyor."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "2026 güncellemesi:"
+              ]
+            },
+            " 1988 Arizona örneklerinden kalan iki tekstil fragmanı yeniden incelendi. Çalışma, parçaların ana kumaşla uyumlu olduğunu ve radyokarbon yaşını geçersiz kılacak belirgin bir onarım/kirlenme kanıtı görmediğini bildirdi. Bu, “test edilen parça kesinlikle yamaydı” savını zayıflatıyor."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "Kanıt ağırlığı — tek bakışta"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "1988 AMS radyokarbon"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "çok güçlü"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "14. yy ilk kesin kayıt"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "güçlü"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "STURP görüntü kimyası"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "güçlü ama mekanizma açık"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "WAXS ile ~2000 yıl yorumu"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "dolaylı"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "4. Teoriler"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "hook"
+          },
+          "children": [
+            "Asıl ilginç bölüm burada: “Görüntü nasıl oluştu?” sorusuna tek bir cevap yok; fakat birkaç ciddi aday var."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🎨 Teori 1 — Orta Çağ sanatsal üretimi"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Pigment, sürtme, bas-rölyef veya benzeri yöntemlerle görüntünün üretilmiş olması. 2010’da Luigi Garlaschelli, Orta Çağ’da erişilebilir malzemelerle tam boy bir kopya üretti ve bazı temel görüntü özelliklerini yakaladı. Kusursuz kopya değildi; fakat “insan eliyle benzeri yapılamaz” iddiasını zayıflattı."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🧪 Teori 2 — Kimyasal yaşlanma / temas"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Ter, yağ, kumaşın hazırlanmasından kalan maddeler veya lokal kimyasal reaksiyonlar selülozun yüzeyinde sararma yaratmış olabilir. Bu sınıftaki süreçler bazı STURP bulgularıyla uyumlu, fakat tüm görüntüyü tek başına açıklayan deneysel model yok."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🍞 Teori 3 — Maillard reaksiyonu"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Rogers ve Arnoldi, ketende kalan indirgen şekerlerle bir cesetten çıkabilecek aminlerin yüzeysel renklenme oluşturabileceğini önerdi. Laboratuvarda benzer yüzeysel sararma elde edildi; ancak bu deney, kefenin gerçekten böyle oluştuğunu kanıtlamıyor."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "⚡ Teori 4 — Isı / UV / radyasyon"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Isıl veya elektromanyetik süreçler liflerin çok yüzeysel kısmını sarartabilir. ENEA’nın excimer lazer deneyleri bazı “kefen benzeri” özellikleri üretebildi. Ama laboratuvarda bir etki üretmek, tarihsel olarak aynı sürecin gerçekleştiğini göstermek değildir."
+              ]
+            }
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "5. Hâlâ bilinmeyen kısım"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Kesin görüntü mekanizması"
+                  ]
+                },
+                "Beden imgesindeki lif sararmasını oluşturan tek ve doğrulanmış süreç üzerinde fikir birliği yok."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Pigmentlerin rolü"
+                  ]
+                },
+                "Pigment parçacıkları var mı/yok mu tartışmasından ziyade, bunların beden görüntüsünün ana nedeni olup olmadığı tartışılıyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ İdeal yeniden tarihleme"
+                  ]
+                },
+                "Farklı bölgelerden, çağdaş protokolle yeni bir kör örnekleme tartışmayı ciddi ölçüde azaltabilir."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ 14. yüzyıldan önceki provenans"
+                  ]
+                },
+                "Bugünkü nesneyi 1. yüzyıla kadar kesintisiz bağlayan kabul görmüş belge zinciri yok."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "Gerçek gizem:"
+              ]
+            },
+            " “Nasıl 2000 yıl dayandı?” değil. Çünkü önce 2000 yıllık olduğunu göstermemiz gerekir. Asıl açık soru, beden görüntüsünü oluşturan fizikokimyasal sürecin tüm ayrıntılarıdır."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "6. Benim değerlendirmem"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Burada iki soruyu ayırmak gerekiyor:"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "“Bu kumaş ne zaman üretildi?”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Mevcut kanıt dengesi ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Orta Çağ kökenini"
+                  ]
+                },
+                " daha güçlü destekliyor. Bunun en önemli nedeni 1988 radyokarbon sonucu, ilk kesin tarihsel kayıtların aynı döneme denk gelmesi ve 2026 tekstil analizinin “test edilen parça yamaydı” itirazını zayıflatması."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "“Görüntü nasıl oluştu?”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Burada cevap daha temkinli: ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "kesin mekanizma bilinmiyor."
+                  ]
+                },
+                " Ancak görüntünün bazı temel özellikleri farklı laboratuvar yöntemleriyle üretilebildiği için “doğaüstü mekanizma bilimsel olarak zorunlu” sonucu çıkmıyor."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Ve üçüncü soru: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "“Bu Hz. İsa’nın kefeni mi?”"
+              ]
+            },
+            " Şu anki tarihsel ve bilimsel veri bunu doğrulamıyor. “Mümkün değildir” ile “kanıtlanmıştır” arasında geniş bir alan var; elimizdeki veriler bu nesneyi İsa’ya güvenilir biçimde bağlayacak kadar güçlü değil."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "durum"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "7. Durum"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "final"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "big-status"
+              },
+              "children": [
+                "🟡 HÂLÂ TARTIŞMALI — ama gizemin sınırı artık daha net"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot green"
+                      },
+                      "children": []
+                    },
+                    " Büyük ölçüde cevaplandı:"
+                  ]
+                },
+                " 14. yüzyıldan itibaren modern tarihçesi."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot green"
+                      },
+                      "children": []
+                    },
+                    " Güçlü kanıt:"
+                  ]
+                },
+                " Test edilen ketenin 1260–1390’a tarihlenmesi."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot yellow"
+                      },
+                      "children": []
+                    },
+                    " Tartışmalı:"
+                  ]
+                },
+                " 1988 örneklemesinin bütün kumaşı ne ölçüde temsil ettiği."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot yellow"
+                      },
+                      "children": []
+                    },
+                    " Hâlâ açık:"
+                  ]
+                },
+                " Beden görüntüsünün tam fizikokimyasal oluşum mekanizması."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot red"
+                      },
+                      "children": []
+                    },
+                    " Desteklenmiyor:"
+                  ]
+                },
+                " “Modern teknolojiyle hiçbir şekilde taklit edilemiyor.”"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot red"
+                      },
+                      "children": []
+                    },
+                    " Kanıtlanmış değil:"
+                  ]
+                },
+                " “Bu kesin olarak Hz. İsa’nın kefenidir.”"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynakca",
+        "class": "sources"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "8. Kaynakça"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "ol",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Damon, P.E. et al. (1989). “Radiocarbon dating of the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Nature"
+                  ]
+                },
+                " 337, 611–615. DOI: 10.1038/337611a0."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Casabianca, T. et al. (2019). “Radiocarbon Dating of the Turin Shroud: New Evidence from Raw Data.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Archaeometry"
+                  ]
+                },
+                " 61(5), 1223–1231."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Freer-Waters, R. & Jull, A.J.T. (2026). “Analysis of textile fragments from the 1988 radiocarbon samples of the Turin Shroud.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "npj Heritage Science"
+                  ]
+                },
+                " 14, 263."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Schwalbe, L.A. & Rogers, R.N. (1982). “Physics and chemistry of the shroud of Turin: A summary of the 1978 investigation.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Analytica Chimica Acta"
+                  ]
+                },
+                " 135, 3–49."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Jumper, E.J. et al. (1984). “A Comprehensive Examination of the Various Stains and Images on the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Archaeological Chemistry III"
+                  ]
+                },
+                "."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "McCrone, W.C. & Skirius, C. (1980). “Light Microscopical Study of the Turin Shroud I.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "The Microscope"
+                  ]
+                },
+                " 28, 105–113."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "McCrone, W.C. (1980). “Light Microscopical Study of the Turin Shroud II.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "The Microscope"
+                  ]
+                },
+                " 28, 115–128."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Heller, J.H. & Adler, A.D. (1980). “Blood on the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Applied Optics"
+                  ]
+                },
+                " 19(16), 2742–2744."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Borrini, M. & Garlaschelli, L. (2019). “A BPA Approach to the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Journal of Forensic Sciences"
+                  ]
+                },
+                " 64(1), 137–143."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Rogers, R.N. (2005). “Studies on the radiocarbon sample from the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Thermochimica Acta"
+                  ]
+                },
+                " 425, 189–194."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Riani, M. et al. (2020). “Statistical and Proactive Analysis of an Inter-Laboratory Comparison: The Radiocarbon Dating of the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Entropy"
+                  ]
+                },
+                " 22, 926."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "De Caro, L. et al. (2022). “X-ray Dating of a Turin Shroud’s Linen Sample.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Heritage"
+                  ]
+                },
+                " 5, 860–870."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Margariti, C. (2025). “The Shroud of Turin: An Overview of the Archaeological Scientific Studies.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Textiles"
+                  ]
+                },
+                " 5(1), 8."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Garlaschelli, L. (2010). “Life-size Reproduction of the Shroud of Turin and its Image.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Journal of Imaging Science and Technology"
+                  ]
+                },
+                " 54(4), 040301."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Pellicori, S.F. (1980). “Spectral properties of the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Applied Optics"
+                  ]
+                },
+                " 19, 1913–1920."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Rogers, R.N. & Arnoldi, A. (2003). “The Shroud of Turin: An Amino-Carbonyl Reaction (Maillard Reaction) May Explain the Image Formation.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Melanoidins"
+                  ]
+                },
+                " 4, 106–113."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Di Lazzaro, P. et al. (2012). “Superficial and Shroud-like coloration of linen by short laser pulses in the vacuum ultraviolet.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Applied Optics"
+                  ]
+                },
+                " 51, 8567–8578."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    }
+  ]
+}

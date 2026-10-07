@@ -1,0 +1,1730 @@
+{
+  "schemaVersion": 1,
+  "id": "saksaywaman-puma-punku",
+  "locale": "tr",
+  "source": {
+    "filename": "Saksaywaman_Puma_Punku_Interaktif_Dosya.html",
+    "sha256": "596d3a183bed4faa2bee5940ff82fcfcb636b9526a30c1d47d12906b9683d797",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "source-only",
+    "independentlyReviewed": false
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "60 saniyede dosya"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“Taşlar birbirine kâğıt girmeyecek kadar uyuyor; o hâlde bakır/taş aletlerle yapılamazdı” iddiası,\niki alan için de en çok tekrarlanan ama arkeolojik deneylerle en fazla sorun yaşayan cümle.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nSaksaywaman, 15. yüzyıl İnka Cusco’sunun anıtsal taş mimarisinin parçasıdır. Dev kireçtaşı blokları düzensiz çokgen biçimlerde birbirine oturtulmuştur.\nJean-Pierre Protzen’in İnka ocaklarında ve duvarlarında yaptığı saha/deney çalışmaları, taşların ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "çekiç taşlarıyla kırılabildiğini, dövülerek biçimlendirilebildiğini ve deneme-yanılma ile komşu taşa oturtulabildiğini"
+                  ]
+                },
+                " gösterdi.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nPuma Punku ise yaklaşık bin kilometre ötede, İnkalardan yüzyıllar önce gelişen Tiwanaku kültürüne aittir.\nBurada kırmızı kumtaşı temel blokları ile son derece hassas biçimlendirilmiş andezit üst yapı parçaları vardır.\nProtzen ve Stella Nair’in deneyleri, Tiwanaku taşçılarının çok yüksek geometri ve taş işçiliği bilgisine sahip olduğunu,\nfakat bunu açıklamak için lazer, CNC veya “yumuşatılmış taş” teknolojisine ihtiyaç olmadığını ortaya koydu.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ayrim"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Önce çok önemli bir ayrım"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "compare"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "h3",
+                  "attrs": {},
+                  "children": [
+                    "Saksaywaman ≠ Puma Punku"
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Saksaywaman:"
+                      ]
+                    },
+                    " Peru, Cusco. İnka İmparatorluğu. Özellikle 15. yüzyıl. Çokgen, birbirine uyarlanmış dev kireçtaşı duvarlarıyla ünlü."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "h3",
+                  "attrs": {},
+                  "children": [
+                    "Puma Punku ≠ İnka"
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Puma Punku:"
+                      ]
+                    },
+                    " Bolivya, Tiwanaku. İnka'dan yüzyıllar önce. Hassas düz yüzeyli kumtaşı ve andezit mimari parçalarıyla ünlü."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "İnternette iki bölge çoğu zaman “aynı kayıp teknoloji”nin kanıtları gibi yan yana konur. Arkeolojik olarak ise farklı dönem, farklı kültür ve kısmen farklı taş işleme gelenekleridir."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "İddia"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“Bu blokları bronz çağındaki insanlar kesemez, taşıyamaz ve bu hassasiyetle birbirine oturtamazdı.\nYüzeylerde makine izleri, matkap delikleri ve milimetrik hassasiyet var. Kayıp teknoloji, taş yumuşatma, ileri makineler veya dünya dışı yardım kullanılmış olmalı.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu anlatının en büyük problemi “nasıl yaptıklarını bilmiyoruz” ile “bilinen yöntemlerle yapılamaz” önermelerini aynı şey saymasıdır.\nArkeolojide bir teknolojinin yavaş, emek yoğun ve ustalık gerektirmesi onun imkânsız olduğu anlamına gelmez.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Bildiğimiz gerçekler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "İnka taş ocakları biliniyor"
+                  ]
+                },
+                "Ocaklarda yarım bırakılmış bloklar, çıkarma izleri ve çekiç taşları gibi üretim kanıtları bulunuyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Deneysel tekrar yapıldı"
+                  ]
+                },
+                "Protzen, İnka tipi çekiç taşlarıyla blokların çıkarılmasını, biçimlendirilmesini ve oturtulmasını deneysel olarak test etti."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Puma Punku gerçek bir mimari sistem"
+                  ]
+                },
+                "2018 rekonstrüksiyon çalışması, dağınık blokların standartlaşmış mimari elemanlara ait olduğunu ve 3B modellerle mantıklı yapılara birleştirilebildiğini gösterdi."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Puma Punku'nun büyük bloğu gerçekten dev"
+                  ]
+                },
+                "En büyük kırmızı kumtaşı levhalardan biri yaklaşık 8,12 × 3,86 × 1,2 m ve yaklaşık 83 ton olarak hesaplanmıştır."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tiwanaku taşçılığı son derece hassas"
+                  ]
+                },
+                "UCLA'nın yayımladığı çalışma, Tiwanaku ustalarının düz yüzeyler, keskin iç/dış açılar ve bazı örneklerde milimetre ölçeğinde hassasiyet üretebildiğini vurgular."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "İki gelenek aynı değil"
+                  ]
+                },
+                "Protzen ve Nair, Tiwanaku ile İnka taş işçiliğini karşılaştırıp önemli teknik farklar bulunduğunu savunmuştur."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "saksay"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Saksaywaman: taşlar nasıl oturtuldu?"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — Taşı çıkarma"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nProtzen’in 1985 araştırması, İnka ocaklarında taşların kaya düşmelerinden seçilebildiğini veya kaya yüzeyinden kaldırma çubuklarıyla ayrılabildiğini;\nbüyük çekiç taşlarının blokları ayırmak için kullanıldığını raporladı.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Arkeolojik + deneysel kanıt"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Biçim verme"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nDaha küçük ve sert çekiç taşlarıyla yüzey sürekli dövülerek istenen geometriye yaklaştırılabiliyordu.\nBu yöntem elektrikli kesim kadar hızlı değildir; fakat “taşı işleyemezlerdi” iddiasını doğrudan çürütür.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Deneysel olarak gösterilmiş"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — Komşu taşı eşleştirme"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nProtzen'in gözlemlerine göre yeni blok, daha önce yerleştirilmiş taşların yanına tekrar tekrar oturtulup temas noktaları işaretlenerek\nve bu alanlar azaltılarak deneme-yanılmayla uyarlanabiliyordu.\nBu süreç karmaşık çokgen temas yüzeylerini açıklayabiliyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Makul ve test edilmiş yöntem"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — “Harç yoksa imkânsız” değil"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nİnka elit mimarisinde kuru taş duvarcılık bilinçli bir yapı tekniğiydi.\nÇok yüzlü bloklar ve sıkı temaslar yalnızca estetik değil, duvarın bütünlüğüne katkıda bulunuyordu.\nCusco’nun İnka mimarisi UNESCO tarafından da olağanüstü yapısal ve estetik taş teknolojisiyle tanımlanır.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Yerleşik İnka yapı geleneği"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "puma"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Puma Punku: “H blokları” ve milimetrik taşçılık"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — H blokları seri üretim makine parçası mı?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAndezit blokların bazılarında tekrarlanan biçimler ve keskin iç köşeler vardır.\nBu, modüler mimari tasarım bilgisini gösterir. Ancak taşlar tam anlamıyla birbirinin CNC kopyası değildir;\nölçü ve ayrıntılarda farklılıklar bulunur.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Yüksek standardizasyon ≠ endüstriyel seri üretim"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Deneysel taş işçiliği"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nProtzen ve Nair, Tiwanaku taşçılığını doğrudan bloklardaki izler ve deneylerle inceledi.\nÇalışmaları; darbeli taş işleme, aşındırma, kazıma/incision ve farklı incelikte araçların\ndüz yüzeyler ile keskin köşeler üretmekte kullanılabileceğini gösteriyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Deneysel arkeoloji"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — Yapının kendisi yarım kalmış olabilir"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n2018 tarihli Heritage Science çalışması, Puma Punku'nun sömürge döneminden itibaren yoğun biçimde söküldüğünü,\nçok sayıda bloğun kayıp olduğunu ve yapının muhtemelen hiçbir zaman tamamen bitirilmediğini belirtiyor.\nBu yüzden bugünkü dağınık bloklardan “orijinal plan” çıkarmak başlı başına zor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Rekonstrüksiyon problemi"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — “Taş döküldü / antik betondu” tezi"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n2019’da yayımlanan bir çalışma, bazı Puma Punku taşlarının jeopolimer benzeri yapay taş olduğunu öne sürdü.\nBu fikir hakemli literatüre girmiş olsa da ana akım Tiwanaku taşçılık araştırmalarındaki taş ocağı,\nprovenans ve işleme kanıtlarıyla uyuşmadığı için genel kabul görmüş görüş değildir.\nÖzellikle modern jeokimyasal provenans çalışmaları Tiwanaku'da kullanılan volkanik taşların bölgesel doğal kaynaklarını araştırabiliyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Tartışmalı azınlık görüşü"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Teoriler"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori A — Yüksek ustalık + basit araçlar + çok emek"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Taş ocakları, araç izleri, deneysel tekrarlar ve bilinen And yapı geleneğiyle uyumlu. En az ek varsayım gerektiriyor."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Tüm lojistik ayrıntıları —özellikle en büyük blokların kesin taşıma rotası ve iş gücü organizasyonu— her yapı için belge belge bilmiyoruz."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori B — Kayıp ama tamamen yerel uzmanlık bilgisi"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Ustaların aktarılmış ölçüm, geometri ve yüzey işleme teknikleri bugün ayrıntılarıyla kaybolmuş olabilir. Bu, arkeolojide olağan bir durumdur."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " “Kayıp bilgi” ifadesi bazen gereksiz biçimde mistikleştiriliyor; temel fiziksel süreçlerin büyük bölümü zaten anlaşılabiliyor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori C — Taşları yumuşatan kimyasal"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Yüzeylerin hassaslığını hızlı açıklıyor gibi görünür."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Taşı hamur gibi yumuşatıp yeniden sertleştiren böyle bir İnka/Tiwanaku teknolojisini gösteren güvenilir arkeolojik üretim zinciri yok."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori D — Gelişmiş makine / lazer / dünya dışı teknoloji"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Modern göz için hassas taş işçiliğini sezgisel olarak açıklar."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Makine parçaları, enerji altyapısı, metalurjik kalıntılar veya bu teknolojilerin gerektireceği maddi kültür bulunmuyor. Deneysel arkeoloji zaten birçok özelliği basit yöntemlerle açıklıyor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "viral"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral iddialar: doğru mu?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "İddia"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Hüküm"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Neden?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Taşların arasına kâğıt bile girmiyor; elle yapılamaz.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış çıkarım"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Sıkı temas gerçektir; fakat deneysel taş işçiliği bunun basit araçlarla elde edilemeyeceğini göstermiyor."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“İnkalar demir kullanmadığı için sert taşı işleyemezdi.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Sert taşın işlenmesi için mutlaka çelik gerekmez; daha sert çekiç taşları ve aşındırıcılarla yüzey işlenebilir."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Puma Punku H blokları birbirinin birebir kopyasıdır.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Abartılı"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Modüler tasarım vardır ama bloklar kusursuz endüstriyel kopyalar değildir."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Puma Punku taşları lazerle kesilmiş kadar kusursuzdur.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Retorik"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Hassas işçilik gerçektir; lazer kullanıldığını gösterecek fiziksel kanıt yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Puma Punku 12–15 bin yıllık.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Desteksiz"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Arkeolojik Tiwanaku bağlamı ilk binyıl MS içindedir; Heritage Science çalışması Tiwanaku'yu yaklaşık MS 500–950 çerçevesinde ele alır."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Saksaywaman ve Puma Punku aynı kayıp uygarlık tarafından yapıldı.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Farklı kültürler, farklı dönemler ve farklı taş işçiliği gelenekleri."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Taşlar eritilip kalıba döküldü.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Kanıtlanmamış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Jeopolimer tezi yayımlandı ancak genel kabul görmüş açıklama değil; doğal taş kaynağı ve taş işleme kanıtları güçlü."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Hâlâ bilinmeyenler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Dev blokların lojistiğinin ayrıntıları"
+                  ]
+                },
+                "Rampa, halat, insan gücü ve güzergâhların tam kombinasyonu her blok için bilinmiyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Ustalık aktarımı"
+                  ]
+                },
+                "Taşçı ekiplerinin ölçüm ve eğitim sistemlerinin ayrıntılı sözlü geleneği günümüze ulaşmadı."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Puma Punku'nun tam görünümü"
+                  ]
+                },
+                "Yapı söküldüğü ve bloklar kaybolduğu için özgün üst yapının kesin rekonstrüksiyonu açık bir araştırma alanı."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Bazı alet ayrıntıları"
+                  ]
+                },
+                "Tiwanaku'da belirli ince kesilerin hangi spesifik araç alaşımı ve geometrisiyle yapıldığı her örnek için kesin değil."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Benim değerlendirmem"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🟢 “İmkânsız teknoloji” gizemi büyük ölçüde çözülmüş."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu iki alanda gerçekten açıklanması gereken olağanüstü mühendislik var; fakat olağanüstü ile açıklanamaz aynı şey değil.\nArkeolojik kayıt, taş ocakları, yüzey izleri ve deneysel çalışmalar And ustalarının bu sonuçlara\nbasit araçlar + geometri + çok yüksek beceri + büyük iş gücü ile ulaşabildiğini gösteriyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nÖzellikle önemli olan şu: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "“Çelik yoktu” demek “taş kesemezlerdi” demek değildir."
+                  ]
+                },
+                "\nTaş işçiliği sadece kesme değildir; dövme, kırma, aşındırma, kazıma, yüzey düzeltme ve defalarca deneme-oturtma süreçlerinin birleşimidir.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nGerçek gizem teknolojinin var olup olmadığı değil;\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "bu ustalık sistemlerinin nasıl örgütlendiği, nesiller arasında nasıl aktarıldığı ve bazı dev blokların tam olarak nasıl taşındığıdır."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Seri için durum:"
+              ]
+            },
+            " 🟢 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Büyük ölçüde açıklanmış."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nSaksaywaman ve Puma Punku “kayıp yüksek teknoloji” için güçlü kanıt değil; bunun yerine And dünyasının son derece gelişmiş taş işçiliğinin kanıtlarıdır.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kaynakça"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Ana iddialar akademik yayınlar ve kurumsal kaynaklardan alındı. “Ancient aliens / lazer / taş yumuşatma” içerikleri yalnızca doğrulanacak viral iddialar olarak ele alındı."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Protzen, J.-P. (1985)."
+              ]
+            },
+            " “Inca Quarrying and Stonecutting.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal of the Society of Architectural Historians"
+              ]
+            },
+            " 44(2):161–182. İnka taş ocakları, çekiç taşları, blok biçimlendirme ve deneme-yanılmayla oturtma üzerine temel deneysel çalışma.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://online.ucpress.edu/jsah/article/44/2/161/57823/Inca-Quarrying-and-Stonecutting"
+              },
+              "children": [
+                "UC Press / JSAH"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Protzen, J.-P. & Nair, S. (2013)."
+              ]
+            },
+            " ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "The Stones of Tiahuanaco: A Study of Architecture and Construction."
+              ]
+            },
+            " UCLA Cotsen Institute of Archaeology. Tiwanaku/Puma Punku taş işçiliğinin deneysel ve mimari analizi.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://ioa.ucla.edu/content/stones-tiahuanaco"
+              },
+              "children": [
+                "UCLA Cotsen Institute"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Vranich, A. (2018)."
+              ]
+            },
+            " “Reconstructing ancient architecture at Tiwanaku, Bolivia: the potential and promise of 3D printing.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Heritage Science"
+              ]
+            },
+            " 6:65. Puma Punku'nun ölçüleri, kayıp blokları ve mimari rekonstrüksiyonu.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.1186/s40494-018-0231-0"
+              },
+              "children": [
+                "Heritage Science"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Protzen, J.-P. & Nair, S. (1997)."
+              ]
+            },
+            " “Who Taught the Inca Stonemasons Their Skills? A Comparison of Tiahuanaco and Inca Cut-Stone Masonry.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "JSAH"
+              ]
+            },
+            " 56(2):146–167. İki taşçılık geleneğinin teknik farklarının karşılaştırması."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "UNESCO World Heritage Centre."
+              ]
+            },
+            " “City of Cuzco.” İnka Cusco'sunun 15. yüzyıldaki yeniden düzenlenmesi ve olağanüstü taş yapı teknolojisi bağlamı.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://whc.unesco.org/en/list/273"
+              },
+              "children": [
+                "UNESCO"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Davidovits, J. ve çalışma arkadaşları (2019)."
+              ]
+            },
+            " “Ancient organo-mineral geopolymer in South-American Monuments…” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Ceramics International"
+              ]
+            },
+            ". Puma Punku'da yapay/geopolimer taş tezini savunan tartışmalı alternatif çalışma.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.sciencedirect.com/science/article/pii/S0272884219300288"
+              },
+              "children": [
+                "ScienceDirect"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Flores-Blanco, L. ve çalışma arkadaşları (2026)."
+              ]
+            },
+            " “Volcanic stone sculptures of were-animals at Tiwanaku…” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal of Archaeological Science: Reports"
+              ]
+            },
+            " 73, 105858. Tiwanaku'da volkanik taşların bölgesel jeokimyasal kaynaklarını inceleyen güncel provenans çalışması.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.sciencedirect.com/science/article/pii/S2352409X26002932"
+              },
+              "children": [
+                "Journal of Archaeological Science: Reports"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Son güncelleme: 6 Ekim 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

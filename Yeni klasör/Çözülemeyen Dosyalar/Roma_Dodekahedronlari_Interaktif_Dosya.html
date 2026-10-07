@@ -1,0 +1,328 @@
+
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roma Dodekahedronları — Çözülemeyen Sorular Dosyası</title>
+<style>
+:root{
+ --bg:#0d0f13;--panel:#151821;--text:#eef2f7;--muted:#aab3c3;--line:#2b3140;
+ --accent:#d7b36a;--good:#56c596;--warn:#f3c969;--bad:#ef6a6a;--blue:#7db4ff;--max:1000px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#0b0d11,#11141b 35%,#0d0f13);color:var(--text);
+font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.7}
+a{color:#a9ccff;text-decoration:none}a:hover{text-decoration:underline}
+.hero{padding:70px 22px 38px;border-bottom:1px solid var(--line)}.wrap{max-width:var(--max);margin:auto}
+.kicker{letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-size:.78rem;font-weight:800}
+h1{font-size:clamp(2.1rem,6vw,4.7rem);line-height:1.03;margin:.35rem 0 1rem;letter-spacing:-.04em}
+.subtitle{font-size:1.12rem;color:var(--muted);max-width:820px}
+.statusline{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.badge{border:1px solid var(--line);background:#11151c;border-radius:999px;padding:8px 12px;font-size:.9rem}
+nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:rgba(13,15,19,.86);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:8px;overflow:auto;padding:10px 22px}
+nav a{white-space:nowrap;color:#c9d1df;padding:7px 10px;border-radius:9px}
+main{padding:34px 22px 80px}section{margin:0 0 56px;scroll-margin-top:78px}
+h2{font-size:1.65rem;margin:0 0 16px}h3{font-size:1.12rem;margin:22px 0 8px}p{margin:0 0 14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;margin:14px 0}
+.card.emphasis{background:linear-gradient(180deg,#181b24,#13161d);border-color:#3d465a}
+.quote{font-size:1.18rem;line-height:1.55;border-left:4px solid var(--accent);padding:8px 0 8px 18px;color:#f4ead6}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:48px}}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}.fact b{display:block;margin-bottom:4px}
+.pill{display:inline-block;padding:3px 8px;border-radius:999px;font-size:.78rem;font-weight:800;margin-right:6px}
+.green{background:rgba(86,197,150,.12);color:#7ee0b5;border:1px solid rgba(86,197,150,.35)}
+.yellow{background:rgba(243,201,105,.12);color:#f5d784;border:1px solid rgba(243,201,105,.35)}
+.red{background:rgba(239,106,106,.12);color:#ff9494;border:1px solid rgba(239,106,106,.35)}
+.blue{background:rgba(125,180,255,.12);color:#9dc8ff;border:1px solid rgba(125,180,255,.35)}
+details{border:1px solid var(--line);background:var(--panel);border-radius:14px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:16px 18px;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}
+summary:after{content:"+";float:right;color:var(--accent);font-size:1.3rem}details[open] summary:after{content:"–"}
+details .inside{padding:0 18px 18px;color:#d7dce5}
+table{width:100%;border-collapse:collapse;margin-top:10px}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+.verdict{font-size:clamp(1.45rem,4vw,2.5rem);font-weight:900;line-height:1.2}
+.callout{border:1px dashed #49536a;background:#12161e;border-radius:14px;padding:16px}
+.source{margin-bottom:10px}.small{font-size:.92rem;color:var(--muted)}
+button#print{background:var(--accent);border:0;color:#17120a;font-weight:900;padding:10px 14px;border-radius:10px;cursor:pointer}
+footer{border-top:1px solid var(--line);padding:30px 22px;color:var(--muted)}
+@media print{nav,button#print{display:none}body{background:white;color:#111}.card,.fact,details,.callout{background:white;border-color:#bbb}.small,.subtitle,footer{color:#444}a{color:#111;text-decoration:none}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="kicker">Çözülemeyen Sorular · Dosya 10</div>
+<h1>Roma Dodekahedronları</h1>
+<p class="subtitle">
+On iki yüzlü, içi boş, bronz nesneler. Her yüzlerinde farklı çapta delikler, köşelerinde küçük küreler var.
+Roma İmparatorluğu onları yaptı — ama bize ne işe yaradıklarını söyleyen tek bir metin bırakmadı.
+</p>
+<div class="statusline">
+<span class="badge"><strong>Dönem:</strong> MS 2.–4. yüzyıl</span>
+<span class="badge"><strong>Dağılım:</strong> Kuzeybatı Roma eyaletleri</span>
+<span class="badge"><strong>Genel durum:</strong> 🔴 İşlevi hâlâ bilinmiyor</span>
+</div>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#ozet">60 sn</a><a href="#iddia">İddia</a><a href="#gercekler">Gerçekler</a>
+<a href="#kanitlar">Kanıtlar</a><a href="#teoriler">Teoriler</a><a href="#viral">Viral iddialar</a>
+<a href="#bilinmeyen">Bilinmeyenler</a><a href="#degerlendirme">Değerlendirme</a><a href="#kaynaklar">Kaynakça</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="ozet">
+<h2>60 saniyede dosya</h2>
+<div class="card emphasis">
+<p class="quote">
+Roma dodekahedronları bu serideki en saf “gerçek gizem” örneklerinden biri:
+nesnelerin gerçekliği, tarihi ve üretim tekniği biliniyor — ama <b>ne işe yaradıkları bilinmiyor.</b>
+</p>
+<p>
+Bugüne kadar yaklaşık <b>130 civarında</b> örnek biliniyor. Çoğu Galya, Britanya, Germania ve çevresindeki kuzeybatı Roma eyaletlerinden geliyor.
+İtalya'da örnek bulunmaması dikkat çekici.
+</p>
+<p>
+Hepsi içi boş bakır alaşımlı çokyüzlüler. On iki beşgen yüzün her birinde farklı çapta dairesel bir delik,
+20 köşenin her birinde küçük bir topuz bulunuyor. Fakat ölçüleri standart değil ve antik metinlerde bunları tarif eden bilinen bir pasaj yok.
+</p>
+<p>
+Önerilen işlevler arasında <b>ölçüm aleti, mumluk, örgü aracı, askeri mesafe ölçer, kalıp, oyun nesnesi,
+astrolojik araç ve kehanet/ritüel nesnesi</b> var. Hiçbiri henüz tartışmayı kapatmış değil.
+</p>
+</div>
+</section>
+
+<section id="iddia">
+<h2>İddia</h2>
+<div class="card">
+<p class="quote">
+“Romalılar bu karmaşık bronz nesneden yüzlerce yaptı, ama ne olduğunu hiçbir yere yazmadı.
+Belki gizli bir askeri alet, gelişmiş hesap makinesi veya kayıp teknoloji ürünüydü.”
+</p>
+<p>
+İlk bölüm doğru: bugün işlevini bilmiyoruz. Ama buradan “gizli ileri teknoloji” sonucu çıkmıyor.
+Asıl şaşırtıcı olan, yüzlerce örneği bulunan bir nesnenin işlevini açıklayan metinsel veya ikonografik kanıtın bugüne ulaşmamış olması.
+</p>
+</div>
+</section>
+
+<section id="gercekler">
+<h2>Bildiğimiz gerçekler</h2>
+<div class="grid">
+<div class="fact"><b>Gerçek Roma dönemi eserleri</b>Buluntular yaklaşık MS 2.–4. yüzyıl aralığına tarihleniyor.</div>
+<div class="fact"><b>Yaklaşık 130 örnek</b>Bilinen sayı yeni keşiflerle değişiyor; Britanya'da 30'dan fazla örnek veya parça biliniyor.</div>
+<div class="fact"><b>Coğrafi dağılım tuhaf</b>Başlıca kuzeybatı eyaletlerinde bulunuyorlar; Roma'nın Akdeniz çekirdeğinde ve İtalya'da yok denecek kadar az/yok.</div>
+<div class="fact"><b>Standart ölçü yok</b>Boyut, ağırlık ve delik çapları örnekten örneğe değişiyor.</div>
+<div class="fact"><b>Yazıt yok</b>Çoğu üzerinde kullanım talimatı, sayı, ölçek veya açıklayıcı yazı bulunmuyor.</div>
+<div class="fact"><b>Bağlamlar çeşitli</b>Yerleşimler, askeri alanlar, mezarlar, tapınak çevreleri, kuyular ve başka farklı arkeolojik bağlamlarda bulunmuş örnekler var.</div>
+</div>
+</section>
+
+<section id="kanitlar">
+<h2>Kanıtlar</h2>
+
+<h3>1 — Ölçüm aleti teorisinin problemi: standart değiller</h3>
+<div class="card">
+<p>
+Eğer dodekahedronlar düzenli bir askeri veya mühendislik ölçüm aracı olsaydı,
+en azından delik çaplarında, karşılıklı yüzlerde veya toplam boyutlarda belirli standartlar beklemek makul olurdu.
+Fakat örnekler boyut ve ağırlık bakımından önemli ölçüde değişiyor.
+</p>
+<p>
+Norton Disney ekibi de yeni buluntunun ölçü standardizasyonu göstermediğini vurgulayarak
+“ölçüm cihazı” teorisine şüpheyle yaklaşıyor.
+</p>
+<span class="pill yellow">Ölçüm teorisi zayıflıyor</span>
+</div>
+
+<h3>2 — Yoğun kullanım aşınması genellikle yok</h3>
+<div class="card">
+<p>
+2023'te Lincolnshire'daki Norton Disney kazısında bulunan örnek tamamen korunmuş ve son derece iyi durumda.
+Araştırma ekibi, nesnede düzenli mekanik kullanım bekletecek belirgin aşınma izleri görmediklerini bildiriyor.
+Bu, günlük üretim aracı teorilerine karşı önemli bir ipucu.
+</p>
+<span class="pill yellow">Pratik araç teorilerine karşı</span>
+</div>
+
+<h3>3 — 2023 Norton Disney buluntusu neden çok önemli?</h3>
+<div class="card">
+<p>
+Birçok eski dodekahedronun tam kazı bağlamı belirsizken Norton Disney örneği kontrollü arkeolojik kazıda,
+yaklaşık 1 metre derinlikte büyük bir çukur içinde bulundu.
+Bakır alaşımı analizi yaklaşık <b>%75 bakır, %7 kalay, %18 kurşun</b> verdi.
+Yakınında 4. yüzyıl Roma seramiği bulunması, geç Roma bağlamını güçlendiriyor.
+</p>
+<span class="pill green">Nadir iyi bağlam</span>
+</div>
+
+<h3>4 — Ama Norton Disney bile gizemi çözmedi</h3>
+<div class="card">
+<p>
+2024 ve 2025'te çevrede yapılan ek kazılar, nesnenin neden o çukura bırakıldığını kesinleştiremedi.
+Royal Archaeological Institute raporunda açıkça, bir ritüel depo olduğuna dair bariz kanıt bulunmadığı belirtiliyor.
+Yani en iyi bağlamlı örneklerden biri bile bize “işlevi şuydu” demiyor.
+</p>
+<span class="pill red">Gizem devam ediyor</span>
+</div>
+
+<h3>5 — Ritüel/astrolojik teori neden ciddiye alınıyor?</h3>
+<div class="card">
+<p>
+Liège'deki Grand Curtius Müzesi, dodekahedronların kuzeybatı Roma eyaletlerindeki Kelt gelenekleriyle ilişkili olabileceğini
+ve astroloji/kehanet teorisinin özellikle ilgi çekici olduğunu belirtiyor.
+Cenevre'de bulunan, yüzlerinde zodyak adları bulunan dodekahedral bir zar benzeri nesne,
+dodekahedral biçimin kehanet bağlamında kullanılabildiğine dair karşılaştırmalı bir ipucu sunuyor.
+</p>
+<p>
+Ama bu nesne ile delikli bronz dodekahedronların aynı işlevi gördüğünü doğrudan kanıtlamıyor.
+</p>
+<span class="pill yellow">İlginç bağlamsal destek</span>
+</div>
+
+<h3>6 — “Örgü aparatı” çalışıyor olması yeterli değil</h3>
+<div class="card">
+<p>
+Modern replikalarla eldiven parmakları veya tüp biçimli örgüler yapılabildiği gösterildi.
+Fakat bir nesnenin bugün bir işi yapabilmesi, onun antik çağda o amaçla üretildiğini kanıtlamaz.
+Üstelik bronz, pahalı ve ağır bir malzeme; daha basit ahşap düzenekler aynı işi yapabilirdi.
+</p>
+<span class="pill red">Fonksiyon ≠ tarihsel kanıt</span>
+</div>
+</section>
+
+<section id="teoriler">
+<h2>Teoriler</h2>
+
+<details open>
+<summary>Teori A — Ritüel / kehanet / astrolojik nesne</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> Standardizasyon eksikliği, sınırlı aşınma, yüksek üretim emeği ve bazı kutsal/funerary bağlamlar faydacı araçtan ziyade sembolik değere uyabilir. Kuzeybatı eyaletlerde yoğunlaşması yerel dini gelenek ihtimalini güçlendirir.</p>
+<p><b>Zayıf yanı:</b> Dodekahedronu ritüelde gösteren bir Roma tasviri veya onu adlandıran bir metin yok. “Ritüel” bazen işlevi bilinmeyen nesneler için kolay kaçış açıklaması olabilir.</p>
+</div>
+</details>
+
+<details>
+<summary>Teori B — Mesafe / boyut ölçme veya optik görüş aleti</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> Farklı çaplı karşılıklı deliklerden bakıldığında görüş alanı değişir; teorik olarak açı veya mesafe tahmini yapılabilir.</p>
+<p><b>Zayıf yanı:</b> Örnekler standart değil, çoğunda ölçü işaretleri yok ve bilinen bir Roma metni bu yöntemi tarif etmiyor.</p>
+</div>
+</details>
+
+<details>
+<summary>Teori C — Örgü / eldiven üretim aparatı</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> Replikalar pratikte iplik örmeye yarayabiliyor.</p>
+<p><b>Zayıf yanı:</b> Antik örgü kullanımına dair doğrudan iz yok; bronz gereksiz pahalı; ayrıca ilgili “spool knitting” tekniği için açık antik paraleller zayıf.</p>
+</div>
+</details>
+
+<details>
+<summary>Teori D — Mumluk</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> Bazı örneklerin içinde balmumu kalıntısı bulunduğu iddiaları bu teoriyi doğurdu.</p>
+<p><b>Zayıf yanı:</b> Mumluk için aşırı karmaşık ve pahalı bir tasarım; balmumu başka amaçlarla da bulaşmış olabilir. Tüm örneklerde ortak kanıt yok.</p>
+</div>
+</details>
+
+<details>
+<summary>Teori E — Usta işi / statü nesnesi</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> Kayıp mum döküm tekniğiyle üretilmeleri ciddi metal işçiliği gerektiriyor; zanaatkâr beceri gösterisi veya prestij nesnesi olabilir.</p>
+<p><b>Zayıf yanı:</b> Neden aynı karakteristik delik-topuz tasarımının geniş bir coğrafyada tekrarlandığını tek başına açıklamıyor.</p>
+</div>
+</details>
+
+<details>
+<summary>Teori F — Birden fazla işlev</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> Farklı boyut ve bağlamlar, tek bir kullanım yerine bölgesel veya dönemsel değişkenlik ihtimalini açık bırakıyor.</p>
+<p><b>Zayıf yanı:</b> Aynı temel tasarımın sürekli korunması, ortak bir çekirdek anlam veya işleve işaret ediyor olabilir.</p>
+</div>
+</details>
+</section>
+
+<section id="viral">
+<h2>Viral iddialar: doğru mu?</h2>
+<table>
+<thead><tr><th>İddia</th><th>Hüküm</th><th>Neden?</th></tr></thead>
+<tbody>
+<tr><td>“Romalıların mesafe ölçme cihazıydı.”</td><td><span class="pill yellow">Kanıtlanmamış</span></td><td>Geometrik olarak mümkün senaryolar üretilebilir; fakat standart ölçüler ve antik kullanım kanıtı yok.</td></tr>
+<tr><td>“Roma askerleri top menzili hesaplıyordu.”</td><td><span class="pill red">Spekülasyon</span></td><td>Bunu destekleyen yazıt, kullanım izi veya askeri metin bulunmuyor.</td></tr>
+<tr><td>“Eldiven örmek için kullanılıyordu; gizem çözüldü.”</td><td><span class="pill red">Çözülmedi</span></td><td>Modern replikanın işe yaraması tarihsel amacı kanıtlamaz.</td></tr>
+<tr><td>“Bunlar Roma takvimi.”</td><td><span class="pill yellow">Spekülasyon</span></td><td>12 yüz aylarla ilişkilendirilebilir, ama yüzlerde ay adları veya düzenli takvim işaretleri yok.</td></tr>
+<tr><td>“Hepsi aynı ölçülerde üretildi.”</td><td><span class="pill red">Yanlış</span></td><td>Boyut ve ağırlıkları değişiyor.</td></tr>
+<tr><td>“İtalya'da da her yerde bulunuyor.”</td><td><span class="pill red">Yanlış</span></td><td>Dağılım özellikle kuzeybatı Roma eyaletlerinde yoğunlaşıyor; bu coğrafi örüntü gizemin önemli parçası.</td></tr>
+<tr><td>“Romalılar ne olduğunu yazmadığı için uzaylı teknolojisi olabilir.”</td><td><span class="pill red">Kanıt yok</span></td><td>Nesnelerin üretim tekniği Roma metal işçiliğiyle tamamen uyumlu.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="bilinmeyen">
+<h2>Hâlâ bilinmeyenler</h2>
+<div class="grid">
+<div class="fact"><b>Temel işlev</b>En büyük soru hâlâ bu. Bugün hiçbir teori tartışmayı kapatmıyor.</div>
+<div class="fact"><b>Neden yalnızca kuzeybatıda?</b>Galya/Kelt gelenekleriyle bağlantı güçlü bir ihtimal ama doğrudan kanıt eksik.</div>
+<div class="fact"><b>Delik çapları neden farklı?</b>Ölçüm, ritüel, optik veya estetik sebeplerden hangisinin belirleyici olduğu bilinmiyor.</div>
+<div class="fact"><b>Köşe topuzları ne işe yarıyordu?</b>Tutma, ayakta durma, ip bağlama, sembolik tasarım veya üretim zorunluluğu olabilir.</div>
+<div class="fact"><b>Neden metinlerde yok?</b>Belki yerel ve yaygın olmayan bir nesneydi; belki adı farklıydı; belki ilgili metinler kayboldu.</div>
+<div class="fact"><b>Tek işlev mi, çok işlev mi?</b>Farklı boyut ve bağlamların tek tip kullanım mı yoksa farklı kullanımlar mı gösterdiği bilinmiyor.</div>
+</div>
+</section>
+
+<section id="degerlendirme">
+<h2>Benim değerlendirmem</h2>
+<div class="card emphasis">
+<p class="verdict">🔴 Bu sefer gerçekten “ne işe yarıyordu?” sorusunun cevabını bilmiyoruz.</p>
+<p>
+Roman dodekahedronları Voynich'e benzer biçimde gerçek bir açık problem, fakat farklı nedenle:
+metni okuyamıyoruz değil; <b>nesnenin kendisi konuşmuyor.</b>
+</p>
+<p>
+Benim kanıt ağırlığına göre en makul geniş kategori <b>ritüel / sembolik / kehanet</b> tarafı.
+Bunu “çözüm” olarak değil, mevcut veriye en iyi uyan çalışma hipotezi olarak görüyorum:
+ölçü standardının olmaması, bazı örneklerde sınırlı aşınma, pahalı bronz üretim ve kuzeybatı eyaletlere özgü dağılım bunu destekliyor.
+</p>
+<p>
+Ama kritik nokta şu: <b>henüz hiçbir teoriye 🟢 veremiyoruz.</b>
+Norton Disney gibi iyi bağlamlı yeni buluntular çoğaldıkça gizem bir gün çözülebilir.
+</p>
+</div>
+<div class="callout">
+<b>Seri için durum:</b> 🔴 <b>Gerçekten çözülememiş.</b><br>
+Nesnenin dönemi, coğrafyası ve nasıl üretildiği biliniyor; temel kullanım amacı bilinmiyor.
+</div>
+</section>
+
+<section id="kaynaklar">
+<h2>Kaynakça</h2>
+<p class="small">Kaynaklarda müze, üniversite, arkeoloji kurumu ve güncel kazı raporları önceliklendirildi.</p>
+
+<div class="source"><b>Grand Curtius Museum, Liège.</b> Gallo-Roman dodekahedron; tarih, buluntu bağlamı, üretim tekniği ve başlıca işlev teorileri.<br>
+<a href="https://www.grandcurtius.be/en/museums-collections/archaeology/dodecahedron" target="_blank" rel="noopener">Grand Curtius</a></div>
+
+<div class="source"><b>Newcastle University (2024).</b> “Digging for Britain dodecahedron.” Roma dodekahedronlarının biçim, dağılım ve doktora araştırması bağlamı.<br>
+<a href="https://www.ncl.ac.uk/press/articles/archive/2024/01/diggingforbritaindodecahedron/" target="_blank" rel="noopener">Newcastle University</a></div>
+
+<div class="source"><b>Norton Disney History & Archaeology Group.</b> 2023 buluntusunun kazı bağlamı, XRF bileşimi, sonraki kazılar ve devam eden araştırma.<br>
+<a href="https://nortondisneyhag.org/?page_id=2406" target="_blank" rel="noopener">Norton Disney Dodecahedron</a></div>
+
+<div class="source"><b>Royal Archaeological Institute (2025).</b> Norton Disney kazısı ara raporu; dodekahedronun bulunduğu alanın yeniden incelenmesi ve ritüel depo kanıtının belirsizliği.<br>
+<a href="https://www.royalarchinst.org/sites/royalarchinst.org/files/2026-02/Spring%202025_Newsletter69.pdf" target="_blank" rel="noopener">RAI Newsletter</a></div>
+
+<div class="source"><b>Roman Society (2024–2025).</b> Norton Disney kazılarına ilişkin saha güncellemeleri ve bağlamsal değerlendirmeler.<br>
+<a href="https://www.romansociety.org/Portals/0/Documents/Epistula/Epistula%20XXVIII%20Winter%202024.pdf" target="_blank" rel="noopener">Roman Society</a></div>
+
+<div class="source"><b>Portable Antiquities Scheme record LIN-BC9890.</b> Norton Disney örneğinin ölçüleri, malzemesi, üretim yöntemi ve stratigrafik buluntu kaydı.</div>
+
+<p class="small" style="margin-top:24px">Son güncelleme: 6 Ekim 2026.</p>
+<button id="print" onclick="window.print()">Yazdır / PDF olarak kaydet</button>
+</section>
+
+</main>
+<footer><div class="wrap"><b>Çözülemeyen Sorular</b> · Roma Dodekahedronları araştırma dosyası<br>Görselsiz, kaynakçalı, interaktif okuma sürümü.</div></footer>
+</body>
+</html>

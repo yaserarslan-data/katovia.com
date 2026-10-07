@@ -1,0 +1,1539 @@
+{
+  "schemaVersion": 1,
+  "id": "turin-shroud",
+  "locale": "en",
+  "source": {
+    "filename": "Torino_Kefeni_Interaktif_Dosya.html",
+    "sha256": "4bb0a1ce9d41749c4ac535d63d0b59de9d88f56c529d4f6a6f89bba28a8143bd",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "editorial-translation",
+    "independentlyReviewed": false,
+    "sourceLocale": "tr",
+    "sourceRevision": "2026-10-06",
+    "sourceContentSha256": "e867476c554d29fd8c439f14645fc694c67c865639b71e49dc6c831a3986ea8f"
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The conclusion in 60 seconds"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "hook"
+          },
+          "children": [
+            "The Shroud of Turin is a genuinely intriguing object. But saying “science cannot explain anything” is as simplistic as saying “everything has been solved”."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🧵 The cloth's age"
+                  ]
+                },
+                "The 1988 radiocarbon test dated the linen that was tested to 1260–1390 CE.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Strong evidence for a medieval date"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "👤 How was the image formed?"
+                  ]
+                },
+                "There is no single, universally accepted formation mechanism.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Still open"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🎨 “There is no paint at all”"
+                  ]
+                },
+                "Too categorical. STURP did not consider a paint layer the main explanation; McCrone argued for pigments/tempera.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Disputed"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "⚙️ “Modern technology cannot reproduce it”"
+                  ]
+                },
+                "Exaggerated. Some important features have been reproduced experimentally.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ The viral account overstates the case"
+                  ]
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "The case's brief assessment:"
+              ]
+            },
+            " The question of the shroud's image-forming mechanism is not fully settled. Yet the available scientific data do not compel the conclusion that “only a miracle can explain it”."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "1. The claim"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "quote"
+          },
+          "children": [
+            "“There are no traces of paint in the human silhouette on the shroud in which Jesus was buried, and even modern technology cannot reproduce it. So how did the image appear on the cloth?”"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "This statement combines ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "three separate claims"
+              ]
+            },
+            ":"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "1)"
+              ]
+            },
+            " That the cloth belonged to Jesus.   ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "2)"
+              ]
+            },
+            " That the image contains no paint/pigment.   ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "3)"
+              ]
+            },
+            " That the image cannot be produced by modern methods."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "One being true would not automatically establish the others. This distinction is the key to the entire case."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "2. What we know"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "The Shroud of Turin is a herringbone-weave linen cloth measuring approximately ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "4.4 × 1.1 metres"
+              ]
+            },
+            ". It bears a faint image resembling the front and back of a man's body, reddish stains, and damage from the 1532 fire in Chambéry."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "Its historical trail — a short version"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "ul",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Mid-fourteenth century:"
+                  ]
+                },
+                " The first records that can be securely linked to the present shroud appear in Lirey, France."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1453:"
+                  ]
+                },
+                " It passes to the House of Savoy."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1532:"
+                  ]
+                },
+                " It is damaged in the Chambéry fire."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1578:"
+                  ]
+                },
+                " It is moved to Turin."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1898:"
+                  ]
+                },
+                " Secondo Pia's photographic negative makes details of the body strikingly visible."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1978:"
+                  ]
+                },
+                " The STURP team conducts extensive physical and chemical examinations."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1988:"
+                  ]
+                },
+                " Three laboratories carry out radiocarbon dating."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "2026:"
+                  ]
+                },
+                " Surviving fragments of the Arizona radiocarbon sample are re-examined from a textile perspective."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "mini"
+          },
+          "children": [
+            "A crucial distinction: texts before the fourteenth century mention sacred cloths called “Jesus's shroud”, but there is no accepted documentary chain establishing that these were continuously the same object as the present Shroud of Turin."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "3. The evidence"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "A) The structure of the image"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "STURP studies associated the body image with yellowing/degradation at the surface of the linen fibres. Researchers reported that a thick layer of paint did not explain the image, and that no single production mechanism accounted for all the observations."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Walter McCrone, however, argued that the samples contained traces of red ochre, vermilion and protein-based tempera. Saying “there is no pigment at all” therefore makes the scientific debate appear more settled than it is."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "B) The “blood” stains"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Heller and Adler interpreted chemical findings from some red areas as consistent with blood. McCrone disputed this. Later forensic bloodstain analyses proposed that some flows could not easily be explained by a single body position."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "C) Radiocarbon — the strongest line of evidence"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "In 1988, laboratories in Arizona, Oxford and Zürich measured samples from the same cloth using AMS. Their joint result, published in Nature, was: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "1260–1390 CE"
+              ]
+            },
+            " (95% confidence level)."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Why does this matter?"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Because the date corresponds exceptionally well to the period in which the shroud first begins to appear securely in historical records."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "In later years, researchers debated whether the sample represented the whole shroud. Raymond Rogers argued that the tested area might have been repaired or treated. Studies in 2019 and 2020 also questioned the homogeneity of the data. These findings do not, by themselves, establish that “the shroud dates to the first century”."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "2026 update:"
+              ]
+            },
+            " Two surviving textile fragments from the 1988 Arizona samples were re-examined. The study reported that they were consistent with the main cloth and showed no clear evidence of repair/contamination that would invalidate the radiocarbon age. This weakens the assertion that “the tested piece was definitely a patch”."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "Weight of evidence — at a glance"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "1988 AMS radiocarbon dating"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "very strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "First secure record in the fourteenth century"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "STURP image chemistry"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "strong, but the mechanism remains open"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "An approximately 2,000-year interpretation using WAXS"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "indirect"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "4. Theories"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "hook"
+          },
+          "children": [
+            "This is where the case becomes particularly interesting: there is no single answer to “How did the image form?”, but several serious candidates exist."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🎨 Theory 1 — Medieval artistic production"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "The image may have been produced using pigments, rubbing, bas-relief or similar methods. In 2010, Luigi Garlaschelli made a full-size replica using materials available in the Middle Ages and reproduced some basic image features. It was not a perfect copy, but it weakened the claim that “nothing like it can be made by human hands”."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🧪 Theory 2 — Chemical ageing / contact"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Sweat, oils, residues from preparing the cloth or local chemical reactions may have yellowed the cellulose surface. Processes of this kind are consistent with some STURP findings, but no experimental model explains the whole image on its own."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🍞 Theory 3 — The Maillard reaction"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Rogers and Arnoldi proposed that reducing sugars remaining on the linen could react with amines released by a corpse to produce superficial colouration. Similar surface yellowing was obtained in the laboratory, but this experiment does not establish that the shroud's image actually formed in this way."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "⚡ Theory 4 — Heat / UV / radiation"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Thermal or electromagnetic processes can yellow the very outermost parts of fibres. ENEA's excimer-laser experiments reproduced some “shroud-like” features. Producing an effect in a laboratory, however, does not establish that the same process occurred historically."
+              ]
+            }
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "5. What remains unknown"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ The precise image-forming mechanism"
+                  ]
+                },
+                "There is no agreement on a single verified process responsible for the yellowing of the fibres in the body image."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ The role of pigments"
+                  ]
+                },
+                "The debate is less about whether pigment particles are present at all than about whether they are the main cause of the body image."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ An ideal new dating exercise"
+                  ]
+                },
+                "New blind sampling from different areas under contemporary protocols could substantially reduce the debate."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Provenance before the fourteenth century"
+                  ]
+                },
+                "There is no accepted documentary chain linking the present object continuously back to the first century."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "The real mystery:"
+              ]
+            },
+            " It is not “How did it survive for 2,000 years?” We would first have to show that it is 2,000 years old. The real open question concerns the full details of the physicochemical process that produced the body image."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "6. My assessment"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Two questions need to be separated:"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "“When was this cloth made?”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "The current balance of evidence more strongly supports ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "a medieval origin."
+                  ]
+                },
+                " The main reasons are the 1988 radiocarbon result, the first secure historical records falling in the same period, and the 2026 textile analysis weakening the objection that “the tested piece was a patch”."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "“How was the image formed?”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "The answer here is more cautious: ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "the precise mechanism is unknown."
+                  ]
+                },
+                " But because different laboratory methods have reproduced some basic features of the image, it does not follow that “a supernatural mechanism is scientifically required”."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "And a third question: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "“Is this Jesus's shroud?”"
+              ]
+            },
+            " The current historical and scientific data do not establish that. There is considerable distance between “impossible” and “proven”; the available evidence is not strong enough to link this object reliably to Jesus."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "durum"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "7. Status"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "final"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "big-status"
+              },
+              "children": [
+                "🟡 STILL DISPUTED — but the boundaries of the mystery are clearer"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot green"
+                      },
+                      "children": []
+                    },
+                    " Largely answered:"
+                  ]
+                },
+                " Its modern history from the fourteenth century onwards."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot green"
+                      },
+                      "children": []
+                    },
+                    " Strong evidence:"
+                  ]
+                },
+                " The tested linen dates to 1260–1390."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot yellow"
+                      },
+                      "children": []
+                    },
+                    " Disputed:"
+                  ]
+                },
+                " How far the 1988 sample represents the whole cloth."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot yellow"
+                      },
+                      "children": []
+                    },
+                    " Still open:"
+                  ]
+                },
+                " The precise physicochemical mechanism that formed the body image."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot red"
+                      },
+                      "children": []
+                    },
+                    " Unsupported:"
+                  ]
+                },
+                " “Modern technology cannot reproduce it in any way.”"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot red"
+                      },
+                      "children": []
+                    },
+                    " Not established:"
+                  ]
+                },
+                " “This is definitely Jesus's shroud.”"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynakca",
+        "class": "sources"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "8. References"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "ol",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Damon, P.E. et al. (1989). “Radiocarbon dating of the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Nature"
+                  ]
+                },
+                " 337, 611–615. DOI: 10.1038/337611a0."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Casabianca, T. et al. (2019). “Radiocarbon Dating of the Turin Shroud: New Evidence from Raw Data.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Archaeometry"
+                  ]
+                },
+                " 61(5), 1223–1231."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Freer-Waters, R. & Jull, A.J.T. (2026). “Analysis of textile fragments from the 1988 radiocarbon samples of the Turin Shroud.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "npj Heritage Science"
+                  ]
+                },
+                " 14, 263."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Schwalbe, L.A. & Rogers, R.N. (1982). “Physics and chemistry of the shroud of Turin: A summary of the 1978 investigation.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Analytica Chimica Acta"
+                  ]
+                },
+                " 135, 3–49."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Jumper, E.J. et al. (1984). “A Comprehensive Examination of the Various Stains and Images on the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Archaeological Chemistry III"
+                  ]
+                },
+                "."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "McCrone, W.C. & Skirius, C. (1980). “Light Microscopical Study of the Turin Shroud I.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "The Microscope"
+                  ]
+                },
+                " 28, 105–113."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "McCrone, W.C. (1980). “Light Microscopical Study of the Turin Shroud II.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "The Microscope"
+                  ]
+                },
+                " 28, 115–128."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Heller, J.H. & Adler, A.D. (1980). “Blood on the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Applied Optics"
+                  ]
+                },
+                " 19(16), 2742–2744."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Borrini, M. & Garlaschelli, L. (2019). “A BPA Approach to the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Journal of Forensic Sciences"
+                  ]
+                },
+                " 64(1), 137–143."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Rogers, R.N. (2005). “Studies on the radiocarbon sample from the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Thermochimica Acta"
+                  ]
+                },
+                " 425, 189–194."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Riani, M. et al. (2020). “Statistical and Proactive Analysis of an Inter-Laboratory Comparison: The Radiocarbon Dating of the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Entropy"
+                  ]
+                },
+                " 22, 926."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "De Caro, L. et al. (2022). “X-ray Dating of a Turin Shroud’s Linen Sample.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Heritage"
+                  ]
+                },
+                " 5, 860–870."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Margariti, C. (2025). “The Shroud of Turin: An Overview of the Archaeological Scientific Studies.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Textiles"
+                  ]
+                },
+                " 5(1), 8."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Garlaschelli, L. (2010). “Life-size Reproduction of the Shroud of Turin and its Image.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Journal of Imaging Science and Technology"
+                  ]
+                },
+                " 54(4), 040301."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Pellicori, S.F. (1980). “Spectral properties of the Shroud of Turin.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Applied Optics"
+                  ]
+                },
+                " 19, 1913–1920."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Rogers, R.N. & Arnoldi, A. (2003). “The Shroud of Turin: An Amino-Carbonyl Reaction (Maillard Reaction) May Explain the Image Formation.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Melanoidins"
+                  ]
+                },
+                " 4, 106–113."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Di Lazzaro, P. et al. (2012). “Superficial and Shroud-like coloration of linen by short laser pulses in the vacuum ultraviolet.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Applied Optics"
+                  ]
+                },
+                " 51, 8567–8578."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1837 @@
+{
+  "schemaVersion": 1,
+  "id": "nazca-lines",
+  "locale": "tr",
+  "source": {
+    "filename": "Nazca_Cizgileri_Interaktif_Dosya.html",
+    "sha256": "a201029acca12d14b86b9967e848ed74c754869201ca6ca708b2783265d6c6ec",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "source-only",
+    "independentlyReviewed": false
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "60 saniyede dosya"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n      Nazca Çizgileri tek bir proje değil. Yüzlerce yıl boyunca farklı toplulukların ürettiği,\n      farklı tip ve muhtemelen farklı işlevlere sahip dev bir geoglif peyzajı.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      UNESCO, Nazca ve Palpa geogliflerini kabaca ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "MÖ 500 – MS 500"
+                  ]
+                },
+                " arasına yerleştiriyor.\n      Ancak bazı geometrik çizgiler için doğrudan tarihleme çalışmaları ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "MS 400–650"
+                  ]
+                },
+                " aralığını da gösteriyor.\n      Bu yüzden “hepsi tam olarak aynı dönemde yapıldı” demek doğru değil.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Bugün öne çıkan akademik görüş, çizgilerin yalnızca astronomik takvim veya yalnızca su haritası olmadığı;\n      ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "ritüel hareket, topluluk törenleri, yollar, kutsal mekânlar ve sosyal bilgi aktarımı"
+                  ]
+                },
+                " gibi birden fazla işleve sahip olduğudur.\n      2024’te yayımlanan PNAS çalışması, bu çoklu kullanım fikrini önemli ölçüde güçlendirdi.\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "İddia"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n      “Bu dev şekiller ancak havadan görülebiliyor. O halde Nazca halkı onları ya uçan varlıklar için yaptı\n      ya da çizgilerin anlamını bugün hâlâ açıklayamadığımız sıra dışı bir teknolojiyle biliyordu.”\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Buradaki kritik hata şu: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "figürlerin anlamlı olabilmesi için tamamının tek bakışta görülmesi gerekmiyor."
+                  ]
+                },
+                "\n      Birçok çizgi ve kabartma tipi geoglif yer seviyesinden, yakındaki yükseltilerden veya onları çevreleyen patikalardan algılanabiliyor.\n      Ayrıca bazıları açıkça yürüyüş ve tören güzergâhlarıyla ilişkili.\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Bildiğimiz gerçekler"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Dev bir alan"
+                  ]
+                },
+                "UNESCO Dünya Mirası alanı yaklaşık 450 km²’lik Nazca ve Palpa çöl peyzajını kapsıyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tek tür değiller"
+                  ]
+                },
+                "Hayvanlar, bitkiler, insan biçimleri, hayali varlıklar; ayrıca düz çizgiler, spiraller, trapezler ve geniş pist benzeri şekiller var."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Nasıl yapıldılar?"
+                  ]
+                },
+                "Koyu yüzey taşları kenara çekilip daha açık renkli alt tabaka ortaya çıkarılarak. Bazı küçük figürlerde taşların yığılması/yer değiştirilmesiyle kabartı tipi teknik kullanıldı."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Neden korunmuşlar?"
+                  ]
+                },
+                "Aşırı kurak iklim, düşük yağış ve çöl yüzeyinin göreli kararlılığı çizgilerin uzun süre korunmasına yardım etti."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tek bir kültür değil"
+                  ]
+                },
+                "Paracas ve Nasca dönemleri başta olmak üzere farklı zaman evrelerine yayılan üretim var."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Yeni keşifler sürüyor"
+                  ]
+                },
+                "2024’te AI destekli tarama ve saha doğrulamasıyla 303 yeni figüratif geoglif raporlandı."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kanıtlar"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — “Sadece havadan görülebilir” doğru değil"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Nazca araştırmalarında yer seviyesindeki güzergâhların, tepelerin ve patikaların önemi giderek daha fazla vurgulanıyor.\n      Ruggles ve Saunders’ın saha temelli çalışması, bazı çizgi sistemlerinin zeminden takip edildiğinde törensel bir “labirent” gibi deneyimlenebildiğini gösterdi.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Güçlü saha kanıtı"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — 2024: iki farklı geoglif dünyası"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Yamagata Üniversitesi ve IBM Research ekibi, 303 yeni figüratif geoglifi doğruladı.\n      Büyük ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "çizgi tipi"
+                  ]
+                },
+                " figürlerin çoğu vahşi hayvanları gösteriyor ve doğrusal/trapezoidal tören ağlarıyla ilişkili.\n      Küçük ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "kabartı tipi"
+                  ]
+                },
+                " figürlerde ise insan, evcil devegiller ve kesik baş gibi insan faaliyetleriyle ilişkili motifler daha yaygın;\n      bunlar çoğunlukla kıvrımlı patikaların yakınında.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Çalışmanın yorumu önemli: büyük çizgi tipi figürler ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "topluluk ölçekli törensel faaliyetlerle"
+                  ]
+                },
+                ",\n      küçük kabartı tipi figürler ise ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "bireyler veya küçük gruplarla bilgi paylaşımı"
+                  ]
+                },
+                " ile ilişkili olabilir.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "PNAS · güçlü yeni kanıt"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — Astronomi var olabilir, ama tüm sistemi açıklamıyor"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Bazı çizgilerin Güneş’in veya belirli gök cisimlerinin doğuş/batış yönleriyle eşleştiği ileri sürüldü.\n      Fakat yüzlerce çizgi arasından rastlantısal hizalanmalar çıkması beklenebilir ve bütün geoglif ağını tek bir astronomik takvim olarak açıklayan genel bir uzlaşma yok.\n      Modern literatürde astronomi, olası işlevlerden ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "biri"
+                  ]
+                },
+                " olarak kalıyor.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Kısmi destek"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — Su bağlantısı cazip, ama tek açıklama değil"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Kurak bir çevrede su, Nasca toplumunun ritüellerinde ve yerleşim düzeninde merkezi önemdeydi.\n      Bazı çizgiler su kaynakları, vadiler veya yeraltı su sistemleriyle ilişkilendirildi.\n      Ancak geogliflerin tamamını “yeraltı su haritası” olarak açıklamak için yeterli kanıt yok.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Bağlamsal olarak güçlü, evrensel açıklama değil"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — Tarihleme tek bir yüzyıla sıkışmıyor"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      UNESCO genel üretim evresini MÖ 500–MS 500 olarak özetler.\n      Buna karşılık Rink ve Bartoll’un optik uyarmalı lüminesans çalışması,\n      Palpa yakınındaki bazı geometrik taş çizgileri için ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "MS 400–650"
+                  ]
+                },
+                " aralığını verdi.\n      Bu, geoglif geleneğinin uzun süreli ve çok evreli olduğunu gösteriyor.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Kronoloji önemli ölçüde katmanlı"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "zaman"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Zaman çizelgesi"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "MÖ 500 civarı"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Orta/Geç Formatif dönemlerde, özellikle Paracas bağlamında geoglif geleneği belirginleşir."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "MÖ 200 – MS 500"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Nasca kültürü döneminde çizgiler, geometrik şekiller ve büyük figüratif geoglifler yoğun biçimde üretilir ve kullanılır."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "MS 400–650"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Bazı geometrik çizgiler için doğrudan OSL tarihlemesi bu geç aralığı işaret eder."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1920’ler"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Modern bilimsel ilgi artar; bölgedeki çizgiler hava ulaşımıyla birlikte daha geniş çevrelerde tanınır."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1940’lar–1990’lar"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Astronomik takvim, ritüel yürüyüş, su ve kutsal peyzaj teorileri yoğun biçimde tartışılır."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1994"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Nasca ve Palpa çizgileri UNESCO Dünya Mirası Listesi’ne girer."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2015"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Yeni tarihleme ve yer seviyesinden peyzaj çalışmaları, tek amaçlı açıklamaları daha da zayıflatır."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2024"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "AI destekli tarama, 303 yeni figüratif geoglifi doğrular ve iki farklı kullanım modelini güçlendirir."
+                  ]
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Teoriler"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori A — Ritüel yollar ve topluluk törenleri"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Çizgilerin, trapezlerin ve bazı figürlerin birbirine bağlı kutsal mekânlar ve yürüyüş güzergâhlarıyla ilişkisi saha çalışmalarında görülüyor. 2024 PNAS sonuçları özellikle büyük çizgi tipi figürlerde topluluk ölçekli kullanım fikrini güçlendiriyor."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " “Ritüel” geniş bir kategori; her çizginin tam olarak hangi törende kullanıldığını söylemiyor."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori B — Astronomik takvim / gökyüzü hizalamaları"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Bazı hatlarda anlamlı güneşsel veya göksel yönelimler bulunabilir ve And toplumlarında gök olaylarının ritüel önemi bilinir."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Binlerce çizgiden oluşan dev veri setinde tesadüfi hizalanmalar kaçınılmazdır. Tüm sistemi tek bir gök takvimine indirgeyen güçlü bir kanıt yok."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori C — Su kültü, bereket ve kutsal peyzaj"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Nazca’nın aşırı kurak çevresinde su yaşamsaldı; su kaynakları, dağlar ve ritüeller arasında And dünyasında güçlü ilişkiler bulunur."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Her geoglifin yeraltı suyu veya sulama sistemiyle örtüştüğü gösterilememiştir."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori D — Yol işaretleri ve sosyal bilgi"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " 2024 çalışmasında küçük kabartı tipi figürlerin kıvrımlı patikaların yakınında ve insan faaliyetlerine ilişkin motiflerle kümelenmesi bu yorumu destekliyor."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Hangi motifin hangi mesajı taşıdığı hâlâ çözülememiş durumda."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori E — Tek amaç yoktu"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Farklı dönem, teknik, ölçek, motif ve mekânsal bağlamların varlığı, yüzlerce yıl boyunca tek bir işlev beklemenin gereksiz olduğunu gösteriyor."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Çok işlevli model doğru olsa bile, belirli çizgilerin tam anlamını tek tek açıklamak zor."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "abartilar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral iddialar: doğru mu?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "İddia"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Hüküm"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Neden?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Sadece uçaktan görülebilirler.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Bir kısmı yakın tepelerden ve yer seviyesinden algılanabilir; bazıları zaten patikalar ve yürüyüş güzergâhlarıyla ilişkili."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Uzaylılar için iniş pistiydi.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıt yok"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Arkeolojik bağlam, teknik ve motifler yerel Paracas/Nasca kültürleriyle uyumludur. “Pist” yorumu fiziksel kanıta dayanmıyor."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Nazca halkı bu kadar düzgün çizgileri yapamazdı.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Basit kazık, ip ve ölçüm teknikleriyle düz çizgiler ve büyük figürler üretmek mümkündür; olağanüstü teknoloji gerektirmez."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Hepsi astronomik takvimdi.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Aşırı genelleme"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Bazı hizalanmalar olabilir; fakat modern araştırmalar çok işlevli ritüel ve sosyal kullanım modellerini daha güçlü görüyor."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Yeraltı su kaynaklarını gösteriyorlar.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Bazı ilişkiler olabilir"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Su bağlamı önemlidir, fakat bütün çizgileri tek bir hidrolik harita olarak açıklamak için yeterli kanıt yok."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“2024’te AI çizgilerin sırrını tamamen çözdü.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "AI yeni adayları bulmayı hızlandırdı; saha ekipleri bunları doğruladı. Çalışma işlev konusunda güçlü yeni örüntüler sundu ama “nihai çözüm” vermedi."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Hâlâ bilinmeyenler"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Belirli figürlerin anlamı"
+                  ]
+                },
+                "Maymun, örümcek, kuşlar ve başka motiflerin neden seçildiğini kesin olarak bilmiyoruz."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Her çizginin işlevi"
+                  ]
+                },
+                "Bazıları tören yolu, bazıları sosyal işaret, bazıları astronomik veya çevresel işlev taşıyor olabilir."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Ritüellerin içeriği"
+                  ]
+                },
+                "Yüründüğünü veya törensel kullanıldığını düşünmek başka, ritüelin tam olarak ne olduğunu bilmek başka."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Üretim organizasyonu"
+                  ]
+                },
+                "Kimlerin planladığı, kaç kişinin çalıştığı ve projelerin hangi sosyal otorite tarafından yönetildiği her grup için bilinmiyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Motiflerin “dili”"
+                  ]
+                },
+                "2024 çalışması figürlerin dağılımında bilgi aktarımına işaret ediyor; fakat bu sembolik sistem henüz okunmuş değil."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tam kronoloji"
+                  ]
+                },
+                "Her geoglif doğrudan tarihlenmiş değil. Genel dönem bilinse de tek tek yapıların yaşları çoğu kez bağlamsal çıkarıma dayanıyor."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Benim değerlendirmem"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🟡 Gizem çözülüyor — fakat “tek cevap” beklemek muhtemelen baştan yanlış."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Nazca Çizgileri hakkında bugün en güçlü değişim şu: araştırmacılar artık onları dev bir bilmece gibi,\n      “Bu çizgilerin tek amacı neydi?” diye okumaktan uzaklaşıyor. Çünkü aynı bölgede yüzlerce yıl boyunca,\n      farklı tekniklerle ve farklı sosyal bağlamlarda üretilmiş çok sayıda geoglif var.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Bu nedenle benim en olası değerlendirmem: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Nazca peyzajı ritüel yürüyüşlerin, topluluk törenlerinin,\n      sosyal bilginin, su ve kutsal coğrafya ilişkilerinin bir araya geldiği çok katmanlı bir kültürel sistemdi."
+                  ]
+                },
+                "\n      Bazı çizgilerin astronomik işlevi olması mümkündür; ama bu bütün sistemi açıklamaz.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      En etkileyici tarafı “nasıl yaptılar?” değil. Bunu basit araçlarla yapabiliyorlardı.\n      Asıl soru, ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "bu dev peyzajın onlar için nasıl bir anlam dünyası oluşturduğudur."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Seri için durum:"
+              ]
+            },
+            " 🟡 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Temel üretim ve kullanım bağlamı giderek iyi anlaşılıyor; sembolik anlam ve tek tek yapıların amacı hâlâ açık."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kaynakça"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Popüler içerikler nihai kanıt olarak kullanılmadı. Ana iddialar UNESCO ve akademik yayınlara dayandırıldı."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "UNESCO World Heritage Centre."
+              ]
+            },
+            " “Lines and Geoglyphs of Nasca and Palpa.” Alanın kronolojisi, kapsamı ve temel sınıflandırması.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://whc.unesco.org/en/list/700"
+              },
+              "children": [
+                "UNESCO kaydı"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Sakai, M. ve çalışma arkadaşları (2024)."
+              ]
+            },
+            " “AI-accelerated Nazca survey nearly doubles the number of known figurative geoglyphs and sheds light on their purpose.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Proceedings of the National Academy of Sciences"
+              ]
+            },
+            ". DOI: 10.1073/pnas.2407652121.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.1073/pnas.2407652121"
+              },
+              "children": [
+                "PNAS makalesi"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ruggles, C. & Saunders, N. J. (2015)."
+              ]
+            },
+            " “Desert labyrinth: lines, landscape and meaning at Nazca, Peru.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Antiquity"
+              ]
+            },
+            ".",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.cambridge.org/core/journals/antiquity/article/abs/desert-labyrinth-lines-landscape-and-meaning-at-nazca-peru/6CFD0AC5DDA25CABB21DBF0837C06BBC"
+              },
+              "children": [
+                "Cambridge / Antiquity"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Rink, W. J. & Bartoll, J. (2015)."
+              ]
+            },
+            " “Dating the geometric Nasca lines in the Peruvian desert.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Antiquity"
+              ]
+            },
+            ". Optik uyarmalı lüminesans ile bazı geometrik çizgiler için MS 400–650 aralığı.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.cambridge.org/core/journals/antiquity/article/abs/dating-the-geometric-nasca-lines-in-the-peruvian-desert/BC66A0CB3A36EC987BAF15BA3A3ED8E3"
+              },
+              "children": [
+                "Cambridge / Antiquity"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Clarkson, P. B. (2020)."
+              ]
+            },
+            " “Nasca and Pampa Jumana Lines and Geoglyphs.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Encyclopedia of Global Archaeology"
+              ]
+            },
+            ". Springer.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.1007/978-3-030-30018-0_1626"
+              },
+              "children": [
+                "Springer kaydı"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Yamagata University (2024)."
+              ]
+            },
+            " AI destekli Nazca araştırmasının saha sonuçları ve 303 yeni geoglif duyurusu.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.yamagata-u.ac.jp/en/information/info/20240924/"
+              },
+              "children": [
+                "Üniversite araştırma özeti"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Son güncelleme: 6 Ekim 2026."
+          ]
+        },
+        "\n  ",
+        "\n"
+      ]
+    }
+  ]
+}

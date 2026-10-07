@@ -1,0 +1,2185 @@
+{
+  "schemaVersion": 1,
+  "id": "voynich-manuscript",
+  "locale": "tr",
+  "source": {
+    "filename": "Voynich_El_Yazmasi_Interaktif_Dosya.html",
+    "sha256": "6fea23b60a003e1e37f399ecb71de4e3ed37e45dac04221ee744d55ad571e2a9",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "source-only",
+    "independentlyReviewed": false
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "60 saniyelik sonuç"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "hook"
+          },
+          "children": [
+            "Voynich El Yazması hakkında en güvenli cümle şu: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "kitap gerçek, Orta Çağ'a ait ve metni hâlâ okunamıyor."
+              ]
+            },
+            " Fakat “tamamen anlamsız karalama” demek için de elimizde yeterli neden yok."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "📜 Yaşı"
+                  ]
+                },
+                "Parşömen 1404–1438 aralığına radyokarbonla tarihlendirildi; mürekkep ve pigmentler de Orta Çağ malzemeleriyle uyumlu.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Modern sahtecilik değil"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🔤 Metin bir dil mi?"
+                  ]
+                },
+                "Birçok istatistiksel çalışma metinde rastgele karalamadan daha güçlü, dil-benzeri yapı buluyor.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Dil/şifre lehine ciddi işaret"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🔐 Şifre mi?"
+                  ]
+                },
+                "Bazı şifre türleriyle uyumlu özellikler var; fakat kabul edilmiş bir anahtar veya tam çözüm yok.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Mümkün, kanıtlanmış değil"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🎭 Sahte metin mi?"
+                  ]
+                },
+                "Kural tabanlı yöntemlerle Voynich-benzeri metin üretilebiliyor; dolayısıyla sahtecilik olasılığı kapanmış değil.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Hâlâ masada"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🌿 Bitkiler"
+                  ]
+                },
+                "Çizimlerin çoğu güvenilir biçimde belirli bir türe bağlanamıyor; “dünyada olmayan uzay bitkileri” demek gereksiz.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Stilize/karma çizimler olabilir"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "✨ Astronomi"
+                  ]
+                },
+                "Zodyak ve yıldız benzeri motifler tanınabilir; ama diyagramların tam işlevi ve metinle ilişkisi bilinmiyor.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Tema belli, içerik değil"
+                  ]
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "Dosyanın kısa hükmü:"
+              ]
+            },
+            " Voynich gerçekten çözülmemiş bir problem. Fakat gizem “hangi dünyadan geldi?” değil; ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "15. yüzyılda insanlar bu kitabı hangi amaçla ve hangi kodlama/yazı sistemiyle üretti?"
+              ]
+            }
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "1. İddia"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "quote"
+          },
+          "children": [
+            "“Yüzyıllardır hiçbir kriptolog veya dilbilimcinin çözemediği, dünyada eşi benzeri olmayan tuhaf bitkiler ve astronomik haritalar içeren Voynich El Yazması hangi dünyaya ait bir dili konuşuyor?”"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Bu viral cümlede birbirine karışmış ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "dört farklı soru"
+              ]
+            },
+            " var:"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "1)"
+              ]
+            },
+            " Metin gerçekten anlamlı mı?   ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "2)"
+              ]
+            },
+            " Anlamlıysa doğal bir dil mi, şifre mi, kısaltma sistemi mi?   ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "3)"
+              ]
+            },
+            " Çizimler gerçek nesneleri mi temsil ediyor?   ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "4)"
+              ]
+            },
+            " Kitabın amacı neydi?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "“Çözülemedi” doğru. Ama buradan “insanlık dışı”, “kayıp uygarlık dili” veya “başka dünyaya ait” sonucu çıkmıyor."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "2. Bildiğimiz gerçekler"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Voynich El Yazması, Yale Üniversitesi Beinecke Nadir Kitaplar ve El Yazmaları Kütüphanesi'nde ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "MS 408"
+              ]
+            },
+            " numarasıyla saklanan, parşömen üzerine yazılmış resimli bir kodekstir. Yale kataloglaması metni “tanımlanamayan bir yazı sistemi” olarak tarif eder; çizimler ise kabaca bitkisel, astronomik/astrolojik, balneolojik, kozmolojik, farmasötik ve reçete-benzeri bölümlere ayrılır."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "Tarihsel zincir — kısa versiyon"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "ul",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1404–1438:"
+                  ]
+                },
+                " Üniversite of Arizona radyokarbon analizleri parşömenin bu aralıkta üretilmiş olmasını en olası sonuç olarak verir."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "15. yüzyıl:"
+                  ]
+                },
+                " Mürekkep ve pigment analizleri, malzemenin Orta Çağ el yazmalarıyla uyumlu olduğunu gösterir."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "17. yüzyıl:"
+                  ]
+                },
+                " Johannes Marcus Marci'nin Athanasius Kircher'e gönderdiği mektup, kitabın bilinen erken provenansının önemli halkalarından biridir; mektupta Rudolf II ile ilgili ikinci el bir satın alma rivayeti aktarılır."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1912:"
+                  ]
+                },
+                " Kitapçı Wilfrid M. Voynich, el yazmasını İtalya'daki bir Cizvit koleksiyonundan satın alır; eser modern dünyada onun adıyla tanınır."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1969:"
+                  ]
+                },
+                " H. P. Kraus tarafından Yale'e bağışlanır."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "2009:"
+                  ]
+                },
+                " Malzeme analizleri ve radyokarbon sonuçları, modern sahtecilik olasılığını ciddi biçimde zayıflatır."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "2020:"
+                  ]
+                },
+                " Lisa Fagin Davis, paleografik analizle birden fazla yazıcı eli bulunduğunu savunur; en çok atıf alan model beş ayrı el önerir."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "2026:"
+                  ]
+                },
+                " Layfield ve Davis, metin bütünlüğü ve cilt yapısını inceleyen iki çalışma yayımlar; ikinci çalışma kitabın bugün okuduğumuz sayfa sırasının özgün düzen olmayabileceğini savunur."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "mini"
+          },
+          "children": [
+            "Önemli nüans: radyokarbon analizi ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "parşömenin"
+              ]
+            },
+            " yaşını ölçer. Yazının tam olarak hangi yıl eklendiğini tek başına söylemez. Ancak mürekkep/pigment analizleri ve tarihsel üslup, erken 15. yüzyıl üretimiyle genel olarak uyumludur."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "3. Kanıtlar"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "A) Fiziksel kanıt: gerçek bir Orta Çağ nesnesi"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Yale'in koruma çalışmaları ve McCrone Associates malzeme analizi, kitabın parşömen, mürekkep ve pigmentlerinin Orta Çağ el yazması üretimiyle uyumlu olduğunu gösteriyor. 2009'da dört farklı parşömen örneğinin radyokarbon eğrileri birbiriyle tutarlı çıktı ve birleşik aralık 1404–1438 olarak raporlandı."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ne elendi?"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "“Voynich 19. veya 20. yüzyılda hazırlanmış modern bir sahte kitaptır” hipotezi, malzeme kanıtıyla çok zayıf hale geliyor."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "B) Metin rastgele görünmüyor"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "2013'te PLOS ONE'da yayımlanan iki ayrı çalışma önemli bir ortak noktaya vardı. Amancio ve arkadaşları Voynich metninin çeşitli ağ ve kelime-istatistiği ölçülerinde doğal dillere büyük ölçüde uyduğunu; Montemurro ve Zanette ise kelimelerin uzun mesafeli dağılımında konu-benzeri kümelenmeler ve bilgi taşıyan sözcük ağları bulduklarını bildirdi."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Bu çalışmalar ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "“metni çevirdik” demiyor."
+              ]
+            },
+            " Söyledikleri daha dar ama önemli: sembol dizilerinin sayfa boyunca dağılımı, basit rastgele karalamadan beklenenden daha düzenli."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "C) Metin aynı zamanda doğal dillerden garip biçimde farklı"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "2022'de Matlach, Janečková ve Dostál; sembollerin tekrar davranışlarında test ettikleri 21 doğal dilden ve bazı şifreli örneklerden ayrılan güçlü otokorelasyonlar buldu. Yani “dil-benzeri yapı var” demek, “bildiğimiz doğal dillerden biri gibi davranıyor” demek değil."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Bu gariplik, hem ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "özel bir kodlama sistemi"
+              ]
+            },
+            " hem de ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "kurallı yapay üretim"
+              ]
+            },
+            " hipotezlerine alan bırakıyor."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "D) Bölümler ile sözcük kullanımı arasında ilişki var"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Metin içinde geleneksel olarak “bitkisel”, “astronomik” vb. diye ayrılan görsel bölümlerle kelime dağılımlarının değişmesi arasında ölçülebilir ilişkiler bulunuyor. Bu, çizimlerin metinden tamamen bağımsız dekorasyonlar olması ihtimalini azaltıyor."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "E) 2026: sayfaları yanlış sırada okuyor olabiliriz"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card new"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Yeni gelişme — 2026"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Colin Layfield ve Lisa Fagin Davis'in hakemli ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Digital Medievalist"
+                  ]
+                },
+                " çalışması, cilt yapısı ve Latent Semantic Analysis sonuçlarını birlikte değerlendirerek el yazmasının başlangıçta iç içe “quire”lar şeklinde değil, tek tek katlanmış bifoliumlardan oluşan bir “singulion” dizisi olarak tasarlanmış olabileceğini ileri sürüyor. Bu doğruysa bugün gördüğümüz sayfa sırası özgün okuma sırasını bozuyor olabilir."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Bu çalışma metni çözmüyor. Ama çok önemli bir şeyi değiştiriyor: bazı “anlamsız geçişlerin” nedeni dil değil, ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "sayfa düzeninin sonradan karışmış olması"
+              ]
+            },
+            " olabilir."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "Kanıt ağırlığı — tek bakışta"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "15. yy parşömen / malzeme"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "çok güçlü"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Metinde kurallı istatistiksel yapı"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "güçlü"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Doğal dil olduğu sonucu"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "orta–güçlü ama tartışmalı"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Şifre olduğu sonucu"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "mümkün, özgül anahtar yok"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Saf anlamsız sahte metin"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "mümkün ama basit rastgelelik zayıf"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "sorular"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "4. Beş büyük soru"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1) Metin gerçekten bir dil mi?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "En güvenli cevap:"
+              ]
+            },
+            " doğal dil-benzeri istatistiksel yapı taşıyor; ancak bunun mutlaka doğrudan yazılmış bir doğal dil olduğu kanıtlanmış değil."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "2021'de Yale dilbilimcileri Claire Bowern ve Luke Lindemann, mevcut dilbilim çalışmalarını gözden geçirerek doğal dil hipotezinin ciddiye alınması gerektiğini savundu. Buna karşılık bazı araştırmacılar, Voynich-benzeri yapıların anlamsız ama kurallı üretimle de elde edilebildiğini gösteriyor."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2) Bir şifre mi?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Olabilir. Ancak klasik “A harfi = şu sembol” tarzı basit ikame şifreleri uzun zamandır yeterli görünmüyor. Sözcüklerin sayfa ve satır içindeki konumları, belli sembollerin yalnızca belirli yerlerde görülmesi ve kelime aileleri, daha karmaşık bir mekanizma gerektirebilir: kısaltma sistemi, hece-temelli kod, çok katmanlı şifre, steganografik yapı veya bunların karışımı."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "2022'de Bowern ve Gaskell, bazı kelime-düzeyi ölçülerinin kimi şifreleme türleriyle uyumlu kalabildiğini gösterdi. Yani “istatistikler dile benziyor, öyleyse şifre olamaz” çıkarımı doğru değil."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3) Anlamsız sahte metin olabilir mi?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Evet, tamamen elenmiş değil. Gordon Rugg 2004'te, Rönesans döneminde bilinen tablo ve Cardan ızgarası benzeri yöntemlerle hızlı biçimde Voynich-benzeri kelimeler üretilebileceğini gösterdi. Bu, “15. yüzyılda böyle bir sahtecilik teknik olarak imkânsızdı” iddiasını çürütüyor."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Fakat zorluk şu: sadece kelimelerin görünüşünü değil, ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "uzun mesafeli dağılımları, bölüm farklarını, tekrar yapılarını ve olası çoklu yazıcı davranışını"
+              ]
+            },
+            " da açıklamak gerekiyor. Sahtecilik hipotezi mümkün; fakat “kolayca kanıtlandı” seviyesinde değil."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4) Bitki çizimleri gerçek türleri mi gösteriyor?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Yale ve PLOS kaynaklarının temkinli tanımına göre bitkilerin çoğu ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "tek bir gerçek türle tartışmasız biçimde eşleştirilemiyor."
+              ]
+            },
+            " Bunun birkaç sıradan açıklaması var: Orta Çağ herbal geleneğinde stilizasyon, farklı bitki parçalarının birleştirilmesi, kopyadan kopyaya bozulma veya sembolik/işlevsel çizim."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "“Dünyada eşi olmayan bitkiler” cümlesi görsel olarak çekici ama bilimsel olarak zayıf. Tanımlayamamak, bitkinin doğada var olmadığı anlamına gelmez."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5) Astronomik/astrolojik şemalar ne anlatıyor?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Zodyak işaretleri ve yıldız biçimleri gibi bazı motifler açıkça Orta Çağ astrolojik geleneğiyle ilişkilendirilebilir. Buna rağmen diyagramların tam olarak takvim, astrolojik hesap, tıbbi astroloji, kozmoloji veya başka bir sistemi mi temsil ettiği bilinmiyor."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Burada da problem aynı: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "görüntünün türünü tanıyoruz, başlığını okuyamıyoruz."
+              ]
+            },
+            " Metin çözülmeden diyagramların amacı konusunda güçlü ama kesin olmayan yorumlarla yetinmek zorundayız."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "5. Teoriler"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "hook"
+          },
+          "children": [
+            "Voynich için “tek büyük teori” yok. Daha doğru yaklaşım, birbirine rakip birkaç modelin hangi veriyi iyi ve kötü açıkladığını görmek."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🗣️ Teori 1 — Bilinmeyen yazıyla yazılmış doğal dil"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Güçlü yanı:"
+                  ]
+                },
+                " kelime frekansları, konuya göre dağılım ve bazı uzun-mesafe ilişkiler doğal metinlere benziyor. ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Zayıf yanı:"
+                  ]
+                },
+                " sembol ve kelime yapılarına ait bazı kısıtlamalar bilinen diller için alışılmadık derecede katı; güvenilir bir dil eşlemesi yok."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🔐 Teori 2 — Bilinen bir dilin şifrelenmiş/kısaltılmış biçimi"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Güçlü yanı:"
+                  ]
+                },
+                " Orta Çağ ve erken modern dönemde şifreler, kısaltmalar ve stenografik sistemler kullanılıyordu; Voynich'in sıra dışı sembol dağılımını açıklayabilir. ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Zayıf yanı:"
+                  ]
+                },
+                " yüz yılı aşkın analizden sonra tüm kitapta çalışan, bağımsız araştırmacıların yeniden üretebildiği bir anahtar yok."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🧠 Teori 3 — Yapay/oluşturulmuş dil"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Güçlü yanı:"
+                  ]
+                },
+                " doğal dillere benzeyen ama hiçbir dil ailesine oturmayan kuralları açıklayabilir. William Friedman gibi önemli kriptologlar da tarihsel olarak bu yöne ilgi göstermişti. ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Zayıf yanı:"
+                  ]
+                },
+                " dilin sözlüğü veya grameri hakkında doğrudan kanıt yok; “yapay dil” bazen sadece bilinmeyeni yeniden adlandırıyor."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🎭 Teori 4 — Bilinçli sahtecilik / anlam taşımayan kurallı metin"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Güçlü yanı:"
+                  ]
+                },
+                " Rugg ve daha sonraki jeneratif modeller, insan eliyle kurallı ama anlamsız Voynich-benzeri metin üretilebileceğini gösteriyor. ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Zayıf yanı:"
+                  ]
+                },
+                " kitabın bölüm düzeyindeki organizasyonunu, çizim-metin ilişkilerini ve ince istatistiksel örüntüleri aynı üretim modeliyle açıklamak zor."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "📚 Teori 5 — Tıbbi/herbal/astrolojik başvuru kitabı"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Güçlü yanı:"
+                  ]
+                },
+                " bitkiler, kaplar, beden/banyo sahneleri, zodyak ve yıldızlar Orta Çağ'daki tıp-herbal-astroloji literatürüyle tematik olarak uyuşuyor. ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Zayıf yanı:"
+                  ]
+                },
+                " metin okunmadığı için “kadın sağlığı el kitabı”, “eczacılık reçeteleri” gibi daha ayrıntılı tanımlar doğrudan doğrulanamıyor."
+              ]
+            }
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "efsaneler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "6. Sosyal medya / internet iddiaları"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "❌ “Dünyada eşi olmayan bitkiler çizilmiş.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Aşırı yorum. Çizimlerin çoğu güvenilir biçimde tanımlanamıyor; bu, gerçek dünyada karşılığı olmadığı anlamına gelmez. Stilizasyon ve kompozit çizimler Orta Çağ herbal geleneğinde mümkündür."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "❌ “Hiçbir dilbilimci veya kriptolog metin hakkında hiçbir şey çıkaramadı.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Yanlış. Çeviri yok; fakat kelime istatistikleri, sembol konumları, Currier A/B farkları, bölüm kümelenmeleri ve yazıcı elleri hakkında ölçülebilir çok şey biliyoruz."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "❌ “Yapay zekâ Voynich'i çözdü.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Doğrulanmış değil. Bilgisayar modelleri dil adayları ve yapısal örüntüler önerebilir; ama bağımsız olarak tekrarlanabilir, bütün sayfalarda çalışan bir çeviri üretilemedi."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "❌ “2019'da Proto-Romance olduğu kesinleşti.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Hayır. Gerard Cheshire'in makalesi yayımlandı ancak dilbilimci ve Orta Çağ uzmanlarından ciddi metodolojik eleştiri aldı. University of Bristol, ilk tanıtım haberini bu eleştiriler üzerine geri çekti. Akademik uzlaşı haline gelmedi."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "🟡 “Eski Türkçe olduğu çözüldü.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Bu da kabul edilmiş bir çözüm değil. Türkçe/Türkî dil hipotezleri kamuoyunda ilgi gördü ancak bütün metni aynı, açık ve bağımsız biçimde uygulanabilir yöntemle çeviren akademik bir konsensüs oluşmadı."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "🟡 “Kesin bir kadın sağlığı kitabı.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Olası temalardan biri olabilir; çıplak kadın figürleri, banyolar ve bitkiler bu yorumu teşvik ediyor. Fakat metin okunmadığı için “kesin içerik” diye sunmak veri sınırını aşıyor."
+              ]
+            }
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "7. Hâlâ bilinmeyenler"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Dil / kod"
+                  ]
+                },
+                "Metnin altında hangi dilin, kodlama biçiminin veya üretim sisteminin bulunduğu bilinmiyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Yazarlar ve yer"
+                  ]
+                },
+                "Kimlerin, tam olarak nerede ve hangi kurum/çevre içinde kitabı ürettiği bilinmiyor."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Amaç"
+                  ]
+                },
+                "Tıp kitabı mı, özel bir başvuru defteri mi, eğitim materyali mi, ezoterik bir eser mi — kesin değil."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Çizimlerin anlamı"
+                  ]
+                },
+                "Birçok bitki, boru, havuz ve kozmolojik şeklin neyi temsil ettiği açık değil."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Özgün sayfa sırası"
+                  ]
+                },
+                "2026 “singulion” hipotezi doğruysa, bugünkü cilt düzeni orijinal metin akışını bozmuş olabilir."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Neden başka örnek yok?"
+                  ]
+                },
+                "Bu yazı sistemi gerçekten bir topluluk tarafından kullanıldıysa, neden elimizde başka kesin örnek bulunmadığı bilinmiyor."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "Gerçek gizem:"
+              ]
+            },
+            " Elimizde “hiçbir şey bilmediğimiz” bir kitap yok. Tam tersine fiziksel tarihi ve metin yapısı hakkında şaşırtıcı ölçüde veri var. Eksik olan şey, bütün bu verileri ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "tek, test edilebilir ve okunabilir bir açıklamada"
+              ]
+            },
+            " birleştiren anahtar."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "8. Benim değerlendirmem"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Bana göre kanıtların en önemli mesajı şu: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "Voynich'i “uzaylı dili” gibi sunmak gizemi büyütüyor ama bilimsel soruyu küçültüyor."
+              ]
+            },
+            " Asıl problem çok daha ilginç: 15. yüzyıl Avrupa bağlamına fiziksel olarak oturan bir kitabın yazı sistemi, modern dilbilim ve kriptolojiye neden bu kadar direniyor?"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Metin anlam taşıyor mu?"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Kanıt dengesi, basit rastgele karalamadan ziyade ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "kurallı ve muhtemelen bilgi taşıyan"
+                  ]
+                },
+                " bir sistem yönünde. Ancak “istatistiksel olarak dil-benzeri” ile “doğal dil olduğu kanıtlandı” aynı şey değil."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "En makul sınıf hangisi?"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Doğal dil + alışılmadık yazım/kısaltma veya bir çeşit kodlama ailesi bana, saf rastgele sahtecilikten daha iyi bir başlangıç hipotezi gibi görünüyor. Fakat bu bir sonuç değil; çünkü henüz metin üzerinde çalışan genel bir anahtar yok."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "2026 bulgusu neden önemli?"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Sayfaların özgün sırası bozulmuşsa, önceki dilsel modellerin bir kısmı yanlış komşuluklar üzerinden kurulmuş olabilir. Bu, “çözüm bulundu” demek değil; fakat önümüzdeki araştırmalar için gerçek bir metodolojik değişiklik yaratabilir."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Bir Voynich çözümünü ciddiye almak için minimum testim şu olur: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "aynı kurallar, seçilmiş birkaç kelimede değil, daha önce kullanılmamış sayfalarda da tutarlı metin üretmeli; başka araştırmacılar aynı anahtarla aynı sonuca varabilmeli."
+              ]
+            },
+            " Şimdiye kadar hiçbir popüler “çözdüm” iddiası bu eşiği geniş kabul görecek biçimde geçmedi."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "durum"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "9. Durum"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "final"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "big-status"
+              },
+              "children": [
+                "🔴 GERÇEKTEN ÇÖZÜLEMEMİŞ — ama tamamen karanlıkta değiliz"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot green"
+                      },
+                      "children": []
+                    },
+                    " Büyük ölçüde cevaplandı:"
+                  ]
+                },
+                " Nesnenin Orta Çağ'a ait gerçek bir el yazması olduğu."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot green"
+                      },
+                      "children": []
+                    },
+                    " Güçlü kanıt:"
+                  ]
+                },
+                " Metnin basit rastgele sembol dizisinden daha düzenli ve bölüm-düzeyinde yapılandırılmış olduğu."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot yellow"
+                      },
+                      "children": []
+                    },
+                    " Güçlü olasılık:"
+                  ]
+                },
+                " Metnin dilsel veya kodlanmış bilgi taşıması."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot yellow"
+                      },
+                      "children": []
+                    },
+                    " Hâlâ tartışmalı:"
+                  ]
+                },
+                " Doğal dil, şifre, kısaltma sistemi, yapay dil veya kurallı sahte metin seçeneklerinden hangisinin doğru olduğu."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot red"
+                      },
+                      "children": []
+                    },
+                    " Çözülmedi:"
+                  ]
+                },
+                " Güvenilir, tekrarlanabilir, kitap boyunca çalışan çeviri."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot red"
+                      },
+                      "children": []
+                    },
+                    " Desteklenmiyor:"
+                  ]
+                },
+                " “Başka dünyaya ait dil”, “AI kesin çözdü”, “şu dil olduğu artık kanıtlandı” gibi kesin viral iddialar."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynakca",
+        "class": "sources"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "10. Kaynakça"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "ol",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://beinecke.library.yale.edu/beinecke/collections/beinecke-cipher-voynich-manuscript"
+                  },
+                  "children": [
+                    "Yale Beinecke Rare Book & Manuscript Library — The Beinecke Cipher (Voynich) Manuscript"
+                  ]
+                },
+                ". Kurumsal eser kaydı ve bölüm tanımları."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://beinecke.library.yale.edu/sites/default/files/files/voynich_analysis.pdf"
+                  },
+                  "children": [
+                    "McCrone Associates (2009), Materials Analysis of the Voynich Manuscript"
+                  ]
+                },
+                ". Mürekkep ve pigment malzeme analizi."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "University of Arizona AMS radyokarbon analizi (2009): dört parşömen örneğinin birleşik sonucu 1404–1438 (%95); sonuç Yale ve uzman kaynaklarında raporlanmıştır."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0067310"
+                  },
+                  "children": [
+                    "Amancio, D.R. et al. (2013). “Probing the Statistical Properties of Unknown Texts: Application to the Voynich Manuscript.” PLOS ONE 8:e67310."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066344"
+                  },
+                  "children": [
+                    "Montemurro, M.A. & Zanette, D.H. (2013). “Keywords and Co-Occurrence Patterns in the Voynich Manuscript: An Information-Theoretic Analysis.” PLOS ONE 8:e66344."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0260948"
+                  },
+                  "children": [
+                    "Matlach, V., Janečková, B.A. & Dostál, D. (2022). “The Voynich manuscript: Symbol roles revisited.” PLOS ONE 17:e0260948."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-011619-030613"
+                  },
+                  "children": [
+                    "Bowern, C.L. & Lindemann, L. (2021). “The Linguistics of the Voynich Manuscript.” Annual Review of Linguistics 7:285–308."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.tandfonline.com/doi/abs/10.1080/0161-110491892755"
+                  },
+                  "children": [
+                    "Rugg, G. (2004). “An Elegant Hoax? A Possible Solution to the Voynich Manuscript.” Cryptologia 28(1):31–46."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Davis, L.F. (2020). “How Many Glyphs and How Many Scribes? Digital Paleography and the Voynich Manuscript.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Manuscript Studies"
+                  ]
+                },
+                " 5(1):164–180. DOI: 10.1353/mns.2020.0011."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.researchgate.net/publication/405027080_The_Application_of_Latent_Semantic_Analysis_to_the_Voynich_Manuscript"
+                  },
+                  "children": [
+                    "Layfield, C. & Davis, L.F. (2026). “The Application of Latent Semantic Analysis to the Voynich Manuscript.” Digital Humanities Quarterly 20(1)."
+                  ]
+                },
+                " DOI: 10.63744/2ezxpskcezq4."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Layfield, C. & Davis, L.F. (2026). “Singulion Structure and the Voynich Manuscript.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Digital Medievalist"
+                  ]
+                },
+                " 19. DOI: 10.4000/16k0a."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.bristol.ac.uk/news/2019/may/voynich-manuscript.html"
+                  },
+                  "children": [
+                    "University of Bristol (16 May 2019). Statement re: Voynich research paper."
+                  ]
+                },
+                " “Proto-Romance” çözüm iddiası hakkındaki kurumsal geri çekilme açıklaması."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.tandfonline.com/doi/abs/10.1080/02639904.2019.1599566"
+                  },
+                  "children": [
+                    "Cheshire, G. (2019). “The Language and Writing System of MS408 (Voynich) Explained.” Romance Studies 37(1):30–67."
+                  ]
+                },
+                " Tartışmalı Proto-Romance önerisinin özgün makalesi."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://news.yale.edu/2025/02/21/deciphering-mysterious-manuscript"
+                  },
+                  "children": [
+                    "Yale News (2025). “Deciphering a mysterious manuscript.”"
+                  ]
+                },
+                " Güncel uzman değerlendirmesi ve çoklu yazıcı bulgusu."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.theguardian.com/culture/2026/oct/06/voynich-manuscript-research-pages-wrongly-bound"
+                  },
+                  "children": [
+                    "The Guardian (6 Ekim 2026). “A medieval manuscript has confounded scholars for centuries. Have they been reading it wrong all this time?”"
+                  ]
+                },
+                " 2026 “singulion” araştırmasının güncel kamuoyu özeti; temel bilimsel iddia için yukarıdaki hakemli makale esas alınmıştır."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "mini"
+          },
+          "children": [
+            "Kaynak yaklaşımı: Popüler haberler yalnızca güncel tartışmanın izini sürmek için kullanıldı. Temel tarih, malzeme, dilbilim ve kriptoloji iddiaları mümkün olduğunca Yale, hakemli makaleler ve özgün araştırma raporlarıyla dayandırıldı."
+          ]
+        },
+        "\n"
+      ]
+    }
+  ]
+}

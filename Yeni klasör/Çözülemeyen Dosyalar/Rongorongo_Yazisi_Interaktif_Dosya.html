@@ -1,0 +1,338 @@
+
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rongorongo Yazısı — Çözülemeyen Sorular Dosyası</title>
+<style>
+:root{
+ --bg:#0d0f13;--panel:#151821;--text:#eef2f7;--muted:#aab3c3;--line:#2b3140;
+ --accent:#d7b36a;--good:#56c596;--warn:#f3c969;--bad:#ef6a6a;--blue:#7db4ff;--max:1000px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#0b0d11,#11141b 35%,#0d0f13);color:var(--text);
+font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.7}
+a{color:#a9ccff;text-decoration:none}a:hover{text-decoration:underline}
+.hero{padding:70px 22px 38px;border-bottom:1px solid var(--line)}.wrap{max-width:var(--max);margin:auto}
+.kicker{letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-size:.78rem;font-weight:800}
+h1{font-size:clamp(2.1rem,6vw,4.8rem);line-height:1.03;margin:.35rem 0 1rem;letter-spacing:-.04em}
+.subtitle{font-size:1.12rem;color:var(--muted);max-width:830px}
+.statusline{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.badge{border:1px solid var(--line);background:#11151c;border-radius:999px;padding:8px 12px;font-size:.9rem}
+nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:rgba(13,15,19,.86);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:8px;overflow:auto;padding:10px 22px}
+nav a{white-space:nowrap;color:#c9d1df;padding:7px 10px;border-radius:9px}
+main{padding:34px 22px 80px}section{margin:0 0 56px;scroll-margin-top:78px}
+h2{font-size:1.65rem;margin:0 0 16px}h3{font-size:1.12rem;margin:22px 0 8px}p{margin:0 0 14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;margin:14px 0}
+.card.emphasis{background:linear-gradient(180deg,#181b24,#13161d);border-color:#3d465a}
+.quote{font-size:1.18rem;line-height:1.55;border-left:4px solid var(--accent);padding:8px 0 8px 18px;color:#f4ead6}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:48px}}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}.fact b{display:block;margin-bottom:4px}
+.pill{display:inline-block;padding:3px 8px;border-radius:999px;font-size:.78rem;font-weight:800;margin-right:6px}
+.green{background:rgba(86,197,150,.12);color:#7ee0b5;border:1px solid rgba(86,197,150,.35)}
+.yellow{background:rgba(243,201,105,.12);color:#f5d784;border:1px solid rgba(243,201,105,.35)}
+.red{background:rgba(239,106,106,.12);color:#ff9494;border:1px solid rgba(239,106,106,.35)}
+.blue{background:rgba(125,180,255,.12);color:#9dc8ff;border:1px solid rgba(125,180,255,.35)}
+details{border:1px solid var(--line);background:var(--panel);border-radius:14px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:16px 18px;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}
+summary:after{content:"+";float:right;color:var(--accent);font-size:1.3rem}details[open] summary:after{content:"–"}
+details .inside{padding:0 18px 18px;color:#d7dce5}
+table{width:100%;border-collapse:collapse;margin-top:10px}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+.verdict{font-size:clamp(1.45rem,4vw,2.5rem);font-weight:900;line-height:1.2}
+.callout{border:1px dashed #49536a;background:#12161e;border-radius:14px;padding:16px}
+.source{margin-bottom:12px}.small{font-size:.92rem;color:var(--muted)}
+button#print{background:var(--accent);border:0;color:#17120a;font-weight:900;padding:10px 14px;border-radius:10px;cursor:pointer}
+footer{border-top:1px solid var(--line);padding:30px 22px;color:var(--muted)}
+@media print{nav,button#print{display:none}body{background:white;color:#111}.card,.fact,details,.callout{background:white;border-color:#bbb}.small,.subtitle,footer{color:#444}a{color:#111;text-decoration:none}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="kicker">Çözülemeyen Sorular · Dosya 11</div>
+<h1>Rongorongo Yazısı</h1>
+<p class="subtitle">
+Rapa Nui'den kalan küçük bir tahta corpus, yüzlerce tuhaf glif ve hiçbir güvenilir “Rosetta Taşı”.
+Gerçek bir yazı sistemi mi? Avrupa temasından önce mi icat edildi? Ve bugün hâlâ neden okuyamıyoruz?
+</p>
+<div class="statusline">
+<span class="badge"><strong>Yer:</strong> Rapa Nui / Paskalya Adası</span>
+<span class="badge"><strong>Corpus:</strong> 30'dan az yazılı nesne</span>
+<span class="badge"><strong>Genel durum:</strong> 🔴 Hâlâ çözülememiş</span>
+</div>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#ozet">60 sn</a><a href="#iddia">İddia</a><a href="#gercekler">Gerçekler</a>
+<a href="#kanitlar">Kanıtlar</a><a href="#takvim">Lunar takvim</a><a href="#teoriler">Teoriler</a>
+<a href="#viral">Viral iddialar</a><a href="#bilinmeyen">Bilinmeyenler</a>
+<a href="#degerlendirme">Değerlendirme</a><a href="#kaynaklar">Kaynakça</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="ozet">
+<h2>60 saniyede dosya</h2>
+<div class="card emphasis">
+<p class="quote">
+Rongorongo bugün hâlâ okunamıyor. Ama “hiçbir şey bilmiyoruz” da doğru değil.
+</p>
+<p>
+Yazı, 19. yüzyılda dışarıdan gelenlerce kayda geçirildi ve bugün yaklaşık 26 civarında yazılı nesneyle temsil ediliyor.
+Metinler çoğunlukla ahşap tabletlerde, figüratif ve bileşik gliflerle kazınmış durumda.
+</p>
+<p>
+Yazılar genellikle <b>ters boustrophedon</b> biçiminde düzenlenmiş: bir satır bittiğinde tablet 180 derece çevrilerek sonraki satır okunuyor.
+Bu kadar düzenli bir metin organizasyonu, tekrar eden diziler ve düzeltme izleri, bunun rastgele dekorasyondan fazlası olduğuna işaret ediyor.
+</p>
+<p>
+En umut verici bölüm <b>Mamari tableti</b> üzerindeki ay takvimi dizisi. Burada Ay gecelerinin sırasıyla ilişkilendirilen bir yapı konusunda akademik uzlaşma oldukça güçlü.
+Yine de bu, bütün sistemin çözüldüğü anlamına gelmiyor.
+</p>
+<p>
+2024'te yayımlanan radyokarbon çalışması ise tartışmayı daha da ilginç yaptı:
+bir tabletin ahşabı 15. yüzyıla tarihlendi. Bu, rongorongonun Avrupa temasından bağımsız olarak icat edilmiş olabileceği ihtimalini güçlendirdi —
+ama ahşabın yaşı ile üzerindeki yazının kazınma tarihi aynı şey değildir.
+</p>
+</div>
+</section>
+
+<section id="iddia">
+<h2>İddia</h2>
+<div class="card">
+<p class="quote">
+“Paskalya Adası halkı, dünyanın başka hiçbir yazısına benzemeyen bir sistemi tamamen bağımsız biçimde icat etti.
+Tabletlerde kralların soyları, astronomi, tarım ve kayıp Rapa Nui tarihi yazıyor — ama modern insanlar hâlâ okuyamıyor.”
+</p>
+<p>
+Bu iddianın bazı parçaları makul, bazıları ise kanıtlanmış değil.
+Sistemin başka yazılardan biçimsel olarak çok farklı olduğu doğru.
+Bağımsız icat ihtimali 2024 tarihlemesiyle güçlendi.
+Fakat tabletlerin tam olarak hangi tür metinler içerdiğini henüz bilmiyoruz.
+</p>
+</div>
+</section>
+
+<section id="gercekler">
+<h2>Bildiğimiz gerçekler</h2>
+<div class="grid">
+<div class="fact"><b>Dış dünya 1864'te fark etti</b>Misyondaki gözlemciler adada yazılı tabletlerin varlığını kayda geçirdi.</div>
+<div class="fact"><b>Corpus çok küçük</b>Yaklaşık 26 yazılı nesne hayatta kaldı; bunlar farklı müze ve koleksiyonlara dağılmış durumda.</div>
+<div class="fact"><b>Glifler figüratif</b>İnsan, beden parçası, hayvan, bitki, araç ve göksel nesneleri andıran işaretler bulunuyor.</div>
+<div class="fact"><b>Yazım yönü sıra dışı</b>Metinler çoğunlukla ters boustrophedon: her satır sonunda tablet çevrilerek okunuyor.</div>
+<div class="fact"><b>İşaret sayısı kesin değil</b>Barthel 599 biçim katalogladı; ancak bunların bir kısmı varyant veya ligatür. Yeni çalışmalar temel işaret sayısının çok daha düşük olabileceğini düşünüyor.</div>
+<div class="fact"><b>Çözüm anahtarı kayboldu</b>19. yüzyıldaki köle baskınları, salgınlar ve nüfus çöküşüyle geleneksel bilgi aktarımı ağır biçimde kırıldı.</div>
+</div>
+</section>
+
+<section id="kanitlar">
+<h2>Kanıtlar</h2>
+
+<h3>1 — Rastgele çizimler değil</h3>
+<div class="card">
+<p>
+Metinlerde tekrar eden diziler, düzenli satırlar, karmaşık ligatürler ve bazı yerlerde kâtip düzeltmeleri bulunuyor.
+2022 tarihli paleografik çalışma, 3B modelleme ile eski çizim transkripsiyonlarını düzelterek bu yapısal düzeni daha net gösterdi.
+</p>
+<span class="pill green">Dilsel/notasyonel sistem lehine güçlü</span>
+</div>
+
+<h3>2 — Ama “tam fonetik yazı” olduğu da kanıtlanmış değil</h3>
+<div class="card">
+<p>
+Rongorongonun gerçek dili ne ölçüde kodladığı hâlâ tartışmalı.
+Tam logografik, logo-fonetik, hecesel veya karma bir sistem olması gibi farklı modeller önerildi.
+2024 Oxford bölümü, sistemi logo-fonetik ve gramatik kelimeleri büyük ölçüde atlayan bir notasyon olarak yorumlayan yeni bir model sunuyor.
+Bu önemli bir öneri, fakat henüz nihai çözüm değil.
+</p>
+<span class="pill yellow">Yazı türü hâlâ açık</span>
+</div>
+
+<h3>3 — 2024 radyokarbon sonucu gerçekten önemli</h3>
+<div class="card">
+<p>
+Scientific Reports'ta yayımlanan çalışma dört Roma tabletini doğrudan tarihlendirdi.
+Üç tabletin ahşabı 19. yüzyıl kullanım ufkuna yakınken, Tablet D / Échancrée için kullanılan odunun yaşı güvenli biçimde <b>15. yüzyıl ortasına</b> kadar geri gidiyor.
+</p>
+<p>
+Bu, Rongorongo tarihindeki en heyecan verici sonuçlardan biri; çünkü Avrupa gemilerinin 18. yüzyıldaki gelişinden önceye ait bir ahşap üzerinde Rongorongo bulunuyor.
+</p>
+<span class="pill green">Bağımsız icat ihtimalini güçlendiriyor</span>
+</div>
+
+<h3>4 — Fakat eski odun ≠ eski yazı</h3>
+<div class="card">
+<p>
+Araştırmacılar özellikle uyarıyor: Tablet D'nin ahşabı Rapa Nui'ye özgü değil ve muhtemelen yeniden kullanılmış bir odun.
+Dolayısıyla ağacın 15. yüzyılda yaşamış olması, gliflerin de 15. yüzyılda kazındığını tek başına kanıtlamaz.
+</p>
+<span class="pill red">Kritik sınırlama</span>
+</div>
+
+<h3>5 — Gelenek neden bu kadar hızlı kayboldu?</h3>
+<div class="card">
+<p>
+1862'de başlayan Peru köle baskınlarında Rapa Nui'nin seçkinleri ve geleneksel bilgi taşıyıcılarının önemli bir kısmı götürüldü.
+Hayatta kalanların dönüşüyle salgın hastalıklar geldi ve nüfus daha da düştü.
+1860'ların sonunda rongorongo geleneğinin etkin aktarımı sona ermiş görünüyordu.
+</p>
+<span class="pill blue">Çözüm için “canlı anahtar”ın kaybı</span>
+</div>
+
+</section>
+
+<section id="takvim">
+<h2>Mamari tableti: elimizdeki en güçlü ipucu</h2>
+<div class="card emphasis">
+<p class="quote">
+Rongorongo tamamen karanlık değil. Mamari tabletindeki belirli bir dizinin ay takvimi olduğu konusunda araştırmacılar arasında oldukça güçlü bir uzlaşma var.
+</p>
+<p>
+Tablet C / Mamari'nin Ca6–Ca8 satırları ve muhtemelen çevresindeki bölümler,
+Rapa Nui ve Doğu Polinezya geleneklerinden bilinen <b>Ay geceleri listesini</b> yansıtan bir takvimsel dizi olarak yorumlanıyor.
+</p>
+<p>
+Paul Horley'nin astronomik ve paleografik analizi, dizinin 30 gecelik ay çevrimiyle uyumlu olduğunu savundu.
+2024'te Oxford University Press'te yayımlanan yeni değerlendirme de “lunar calendar” yorumunun bilimsel literatürdeki en sağlam kısmi okumalarından biri olduğunu kabul ediyor.
+</p>
+<p>
+Fakat bir takvim dizisini tanımak ile gliflerin tek tek ses değerlerini bilmek farklıdır.
+Bu yüzden Mamari bize <b>metnin konusuna açılan pencere</b> sunuyor, henüz sözlük vermiyor.
+</p>
+</div>
+</section>
+
+<section id="teoriler">
+<h2>Teoriler</h2>
+
+<details open>
+<summary>Teori A — Gerçek bir logo-fonetik yazı sistemi</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> Uzun lineer metinler, işaret kombinasyonları, tekrar dizileri, düzeltmeler ve olası ay takvimi bölümü dilsel kodlamayı güçlü biçimde düşündürüyor.</p>
+<p><b>Zayıf yanı:</b> Çok küçük corpus ve güvenilir iki dilli metin yokluğu yüzünden glif-ses/anlam eşleşmeleri sistematik biçimde doğrulanamıyor.</p>
+</div>
+</details>
+
+<details>
+<summary>Teori B — Mnemonik / sözlü geleneği destekleyen notasyon</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> Küçük toplumlarda ezberlenen ilahiler, soy kütükleri veya ritüel bilgiyi hatırlatıcı işaretlerle desteklemek mümkündür. Figüratif gliflerin doğası buna uyabilir.</p>
+<p><b>Zayıf yanı:</b> Metinlerdeki karmaşık yapısal örüntüler sadece basit hatırlatıcı işaretlerden daha gelişmiş bir sistem olabileceğini düşündürüyor.</p>
+</div>
+</details>
+
+<details>
+<summary>Teori C — Avrupa yazısını gördükten sonra yerel icat</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> Rapa Nui'liler 1770'te Avrupalıların yazı yazdığını gördü; hayatta kalan birçok tabletin ahşabı da 19. yüzyıl ufkuyla uyumlu.</p>
+<p><b>Zayıf yanı:</b> Rongorongo işaretleri bilinen Avrupa yazısına biçimsel olarak benzemiyor. 2024'teki eski ahşap sonucu da bağımsız daha erken köken ihtimalini açık tutuyor.</p>
+</div>
+</details>
+
+<details>
+<summary>Teori D — Avrupa temasından önce bağımsız olarak icat edildi</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> İşaret sisteminin benzersizliği ve 15. yüzyıl odunu bu ihtimali ciddi hâle getiriyor. Eğer doğrulanırsa insanlık tarihinde bağımsız yazı icadının çok nadir örneklerinden biri olur.</p>
+<p><b>Zayıf yanı:</b> Ahşabın yaşı yazıtın yaşı değildir. Avrupa öncesine kesin tarihlenmiş bir kazı bağlamında Rongorongo metni henüz yok.</p>
+</div>
+</details>
+
+<details>
+<summary>Teori E — Tabletlerde soy kütüğü, ilahi, astronomi ve ritüel metinler vardı</summary>
+<div class="inside">
+<p><b>Güçlü yanı:</b> Geç etnografik tanıklıklar ve Mamari'nin takvim dizisi, birden fazla metin türünü olası kılıyor.</p>
+<p><b>Zayıf yanı:</b> Etnografik tanıklıkların çoğu Rongorongo geleneği çöktükten sonra kaydedildi ve anlamların tabletlerle güvenilir biçimde eşleştirilmesi zor.</p>
+</div>
+</details>
+</section>
+
+<section id="viral">
+<h2>Viral iddialar: doğru mu?</h2>
+<table>
+<thead><tr><th>İddia</th><th>Hüküm</th><th>Neden?</th></tr></thead>
+<tbody>
+<tr><td>“Rongorongo kesinlikle tamamen çözülmemiş, tek bir glif bile bilinmiyor.”</td><td><span class="pill yellow">Aşırı</span></td><td>Tam çözüm yok; fakat Mamari'deki ay takvimi gibi bazı yapılar ve olası glif işlevleri konusunda güçlü kısmi okumalar var.</td></tr>
+<tr><td>“2024'te yazının 15. yüzyıldan olduğu kanıtlandı.”</td><td><span class="pill red">Yanlış</span></td><td>15. yüzyıla tarihlenen şey ahşabın kendisi. Yazının ne zaman kazındığı doğrudan tarihlenemedi.</td></tr>
+<tr><td>“Rongorongo dünyanın en eski yazılarından biridir.”</td><td><span class="pill red">Yanlış</span></td><td>En eski olası tarihi bile antik Mezopotamya ve Mısır yazılarından binlerce yıl sonradır.</td></tr>
+<tr><td>“Avrupalılar gelmeden kesinlikle vardı.”</td><td><span class="pill yellow">Muhtemel ama kanıtlanmamış</span></td><td>2024 çalışması ihtimali güçlendirdi; kesin yazıt tarihi hâlâ yok.</td></tr>
+<tr><td>“İnkalar veya Güney Amerikalılar bu yazıyı getirdi.”</td><td><span class="pill red">Kanıt yok</span></td><td>Rongorongo gliflerinin bilinen And yazı/notasyon sistemleriyle güvenilir bir soy ilişkisi gösterilemedi.</td></tr>
+<tr><td>“AI artık Rongorongo'yu çözdü.”</td><td><span class="pill red">Yanlış</span></td><td>3B modelleme ve bilgisayarlı analiz transkripsiyonu geliştiriyor; tam okuma ve dilsel çözüm henüz yok.</td></tr>
+<tr><td>“2025'te tamamen çözüldü.”</td><td><span class="pill red">Yanlış</span></td><td>Yeni çalışmalar bazı glifler için yüksek güvenli öneriler sunuyor; akademik corpusun tamamını okuyabilen ortak kabul görmüş bir çözüm yok.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="bilinmeyen">
+<h2>Hâlâ bilinmeyenler</h2>
+<div class="grid">
+<div class="fact"><b>İşaretlerin ses/anlam değerleri</b>Çoğu glif için güvenilir okuma yok.</div>
+<div class="fact"><b>Sistemin tipi</b>Logo-fonetik mi, hecesel mi, karma mı, yoksa dil ile mnemonik notasyon arasında mı?</div>
+<div class="fact"><b>Ne zaman icat edildi?</b>Avrupa öncesi bağımsız icat ihtimali güçlü biçimde yeniden gündemde, ancak kesin değil.</div>
+<div class="fact"><b>Metinlerin konuları</b>Takvim dışında hangi tabletin ilahi, soy kütüğü, ritüel, tarih veya başka türde metin taşıdığı bilinmiyor.</div>
+<div class="fact"><b>Temel glif sayısı</b>Yüzlerce çizim varyantından kaçının gerçekten ayrı işaret olduğu tartışmalı.</div>
+<div class="fact"><b>Rosetta Taşı neden yok?</b>İki dilli veya güvenilir biçimde açıklanmış bir Rongorongo metni bulunmadığı için çözüm kontrol edilemiyor.</div>
+</div>
+</section>
+
+<section id="degerlendirme">
+<h2>Benim değerlendirmem</h2>
+<div class="card emphasis">
+<p class="verdict">🔴 Rongorongo gerçekten çözülmemiş — ama artık tamamen karanlıkta değiliz.</p>
+<p>
+Bence bu dosyanın en heyecan verici tarafı “garip semboller” değil.
+Asıl mesele, Rapa Nui gibi çok izole bir toplumun <b>yazıyı bağımsız olarak icat etmiş olma ihtimali.</b>
+Eğer Avrupa öncesi bir Rongorongo yazıtı doğrudan tarihlenirse, insanlık tarihindeki bağımsız yazı icatları listesine çok önemli bir yeni örnek eklenebilir.
+</p>
+<p>
+2024 sonucu bu olasılığı ciddi biçimde güçlendirdi ama henüz bitirmedi.
+Eski ahşabın üzerine daha geç yazı kazınmış olabilir.
+</p>
+<p>
+Çözüm açısından en büyük engel ise corpusun küçüklüğü ve 19. yüzyıldaki kültürel felaket.
+Rongorongoyu okuyabilen veya öğretebilen gelenek koparken elimizde güvenilir bir çeviri anahtarı kalmadı.
+Bu nedenle bugünkü araştırmanın yolu; <b>yüksek kaliteli 3B taramalar + doğru paleografi + istatistiksel örüntüler + Rapanui dili ve etnografyası</b> üzerinden ilerliyor.
+</p>
+</div>
+<div class="callout">
+<b>Seri için durum:</b> 🔴 <b>Gerçek açık problem.</b><br>
+Sistemin yapısına dair ciddi ilerleme var, Mamari'deki ay takvimi muhtemelen tanınmış durumda; fakat Rongorongo metinlerini güvenilir biçimde okuyamıyoruz.
+</div>
+</section>
+
+<section id="kaynaklar">
+<h2>Kaynakça</h2>
+<p class="small">Güncel akademik çalışmalar önceliklendirildi. “Çözüldü” iddiaları ancak hakemli literatürde çapraz doğrulanabildiğinde dikkate alındı.</p>
+
+<div class="source"><b>Ferrara, S. ve çalışma arkadaşları (2024).</b> “The invention of writing on Rapa Nui (Easter Island). New radiocarbon dates on the Rongorongo script.” <i>Scientific Reports</i> 14, 2794. Dört tabletin doğrudan radyokarbon tarihlemesi; bir örnekte 15. yüzyıl odunu.<br>
+<a href="https://www.nature.com/articles/s41598-024-53063-7" target="_blank" rel="noopener">Scientific Reports</a></div>
+
+<div class="source"><b>Ferrara, S. ve çalışma arkadaşları (2022).</b> “Modelling the Rongorongo tablets: A new transcription of the Échancrée tablet and the foundation for decipherment attempts.” <i>Digital Scholarship in the Humanities</i> 37(2):497–519. 3B modelleme ve yeni paleografik transkripsiyon.<br>
+<a href="https://academic.oup.com/dsh/article/37/2/497/6387816" target="_blank" rel="noopener">Oxford Academic</a></div>
+
+<div class="source"><b>Valério, M. (2024).</b> “The Rongorongo ‘Lunar Calendar’ of Rapa Nui (Easter Island) and the Type of Script.” <i>Writing from Invention to Decipherment</i>, Oxford University Press. Mamari ay takvimi ve yazı tipolojisine güncel değerlendirme.<br>
+<a href="https://academic.oup.com/book/58672/chapter/485388496" target="_blank" rel="noopener">Oxford Academic</a></div>
+
+<div class="source"><b>Horley, P. (2011).</b> “Lunar calendar in rongorongo texts and rock art of Easter Island.” <i>Journal de la Société des Océanistes</i> 132:17–38. Mamari'nin 30 gecelik ay çevrimi üzerine paleografik ve astronomik analiz.<br>
+<a href="https://doi.org/10.4000/jso.6314" target="_blank" rel="noopener">DOI</a></div>
+
+<div class="source"><b>Horley, P. (2009).</b> “Rongorongo Script: Carving Techniques and Scribal Corrections.” <i>Journal de la Société des Océanistes</i>. Kazıma teknikleri, düzeltmeler ve ters boustrophedon yazım düzeni.<br>
+<a href="https://doi.org/10.4000/jso.5813" target="_blank" rel="noopener">DOI</a></div>
+
+<div class="source"><b>Horley ve ilgili çalışma (2021).</b> “The rongorongo tablet from Berlin and the time-depth of Easter Island’s writing system.” <i>Journal of Island & Coastal Archaeology</i>. Rongorongo geleneğinin çöküşü, 1862 köle baskınları ve tarihleme tartışması.<br>
+<a href="https://www.tandfonline.com/doi/full/10.1080/15564894.2021.1950874" target="_blank" rel="noopener">Taylor & Francis</a></div>
+
+<div class="source"><b>Wieczorek, R. (2025).</b> “Aspects of Rongorongo Decipherment.” <i>Journal of the Polynesian Society</i> 134(3):343–392. Son yıllardaki glif çözüm önerilerini güven düzeylerine göre derleyen güncel çalışma. Bu yayın tam çözüm iddiasında değil; kısmi ve çapraz doğrulanabilir öneriler sunuyor.</div>
+
+<div class="source"><b>Australian Museum (2026).</b> “Kōhau Roŋoroŋo: Talking Tablet.” Güncel kurumsal özet; ters boustrophedon okuma yönü ve Rapa Nui kültürel bağlamı.<br>
+<a href="https://australian.museum/learn/cultures/pasifika-collections/rapa-nui-collections/kohau-rongorongo-talking-tablet/" target="_blank" rel="noopener">Australian Museum</a></div>
+
+<p class="small" style="margin-top:24px">Son güncelleme: 6 Ekim 2026.</p>
+<button id="print" onclick="window.print()">Yazdır / PDF olarak kaydet</button>
+</section>
+</main>
+
+<footer><div class="wrap"><b>Çözülemeyen Sorular</b> · Rongorongo Yazısı araştırma dosyası<br>Görselsiz, kaynakçalı, interaktif okuma sürümü.</div></footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Çözülemeyen Sorular 01 — Torino Kefeni</title>
+<meta name="description" content="Torino Kefeni hakkındaki iddiaları, kanıtları ve belirsizlikleri sade ve eğlenceli bir okuma formatında inceleyen araştırma dosyası." />
+<style>
+  :root{
+    --bg:#0c0f14; --panel:#141922; --panel2:#0f141c; --text:#f3f5f7; --muted:#aab2bd;
+    --line:#28303b; --accent:#f1c56c; --good:#70d6a5; --warn:#ffd166; --bad:#ff7b7b; --blue:#8fb8ff;
+    --max:920px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:linear-gradient(180deg,#0a0d12 0%,#111620 45%,#0b0f15 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}
+  a{color:var(--blue)}
+  .wrap{max-width:var(--max);margin:auto;padding:28px 18px 80px}
+  .hero{padding:64px 0 38px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:800}
+  h1{font-size:clamp(2.4rem,7vw,5.2rem);line-height:.98;margin:.2em 0 .28em;letter-spacing:-.05em}
+  .lede{font-size:clamp(1.05rem,2.4vw,1.35rem);color:#d8dde4;max-width:760px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .pill{border:1px solid var(--line);background:#10151d;border-radius:999px;padding:7px 11px;color:var(--muted);font-size:.88rem}
+  .nav{position:sticky;top:0;z-index:5;background:rgba(12,15,20,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .navin{max-width:var(--max);margin:auto;padding:10px 18px;display:flex;gap:8px;overflow:auto;white-space:nowrap}
+  .nav a{text-decoration:none;color:#cbd2db;font-size:.88rem;padding:7px 10px;border-radius:999px}
+  .nav a:hover{background:#1a2230;color:white}
+  section{padding:42px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:1.55rem;margin:0 0 18px;letter-spacing:-.02em}
+  h3{margin:28px 0 10px;font-size:1.05rem;color:#fff}
+  p{margin:0 0 16px}
+  .hook{font-size:1.22rem;line-height:1.6;color:#fff;border-left:3px solid var(--accent);padding-left:16px;margin:18px 0 26px}
+  .card{background:linear-gradient(180deg,#151b25,#111720);border:1px solid var(--line);border-radius:18px;padding:20px;margin:14px 0}
+  .callout{padding:18px 20px;border-radius:16px;background:#111822;border:1px solid #2d3847}
+  .callout strong{color:var(--accent)}
+  .status{display:inline-flex;align-items:center;gap:8px;font-weight:800}
+  .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .green{background:var(--good)} .yellow{background:var(--warn)} .red{background:var(--bad)}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .claim{padding:16px;border-radius:14px;background:var(--panel2);border:1px solid var(--line)}
+  .claim b{display:block;margin-bottom:6px}
+  .verdict{font-weight:800;margin-top:8px}
+  .timeline{margin:22px 0 0;padding:0;list-style:none;border-left:2px solid #344052}
+  .timeline li{position:relative;padding:0 0 20px 22px;color:#d8dde4}
+  .timeline li::before{content:"";position:absolute;left:-7px;top:.45em;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px #10151d}
+  .timeline b{color:#fff}
+  .meter{height:10px;background:#222a35;border-radius:999px;overflow:hidden;margin:8px 0 4px}
+  .meter > span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#ffe6a8);border-radius:999px}
+  .score{display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem}
+  details{background:#10161f;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0}
+  summary{cursor:pointer;font-weight:800;color:#f5f7f9}
+  details p{margin-top:12px;color:#cfd5dc}
+  .quote{font-size:1.12rem;color:#f3f5f7;background:#17120b;border:1px solid #4e3e1f;padding:18px 20px;border-radius:16px}
+  .sources ol{padding-left:22px}
+  .sources li{margin:0 0 11px;color:#c5ccd5}
+  .final{background:linear-gradient(135deg,#151a22,#201b12);border:1px solid #4d422a;padding:24px;border-radius:20px}
+  .big-status{font-size:1.35rem;font-weight:900;margin-bottom:8px}
+  .mini{font-size:.92rem;color:var(--muted)}
+  footer{padding-top:28px;color:#89939f;font-size:.88rem}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}.hero{padding-top:42px}.wrap{padding-left:15px;padding-right:15px}}
+  @media print{.nav{display:none}body{background:white;color:#111}.card,.claim,details,.callout,.final{background:white;border-color:#ccc}.lede,p,.mini,.sources li,.timeline li{color:#333}h1,h2,h3,strong,b,summary{color:#111}.hero,section{border-color:#ddd}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Bölümler">
+  <div class="navin">
+    <a href="#ozet">Kısa sonuç</a><a href="#iddia">İddia</a><a href="#gercekler">Gerçekler</a><a href="#kanitlar">Kanıtlar</a><a href="#teoriler">Teoriler</a><a href="#bilinmeyen">Bilinmeyen</a><a href="#degerlendirme">Değerlendirme</a><a href="#durum">Durum</a><a href="#kaynakca">Kaynakça</a>
+  </div>
+</nav>
+
+<main class="wrap">
+<header class="hero">
+  <div class="eyebrow">Çözülemeyen Sorular Dosyası · 01</div>
+  <h1>Torino Kefeni</h1>
+  <p class="lede">“Boya yoksa bu insan görüntüsü kumaşa nasıl geçti?” Güzel soru. Ama önce internet efsanesini, gerçekten bildiklerimizden ayıralım.</p>
+  <div class="meta"><span class="pill">Okuma: ~10 dakika</span><span class="pill">Görselsiz sade sürüm</span><span class="pill">Son güncelleme: 6 Ekim 2026</span></div>
+</header>
+
+<section id="ozet">
+  <h2>60 saniyelik sonuç</h2>
+  <p class="hook">Torino Kefeni gerçekten ilginç bir nesne. Fakat “bilim hiçbir şey açıklayamıyor” demek de, “her şey çözüldü” demek de fazla kolay.</p>
+  <div class="grid">
+    <div class="claim"><b>🧵 Kumaşın yaşı</b>1988 radyokarbon testi, test edilen keteni MS 1260–1390’a tarihlendirdi.<div class="verdict">→ Orta Çağ lehine güçlü kanıt</div></div>
+    <div class="claim"><b>👤 Görüntü nasıl oluştu?</b>Tek ve herkesçe kabul edilmiş bir oluşum mekanizması yok.<div class="verdict">→ Hâlâ açık</div></div>
+    <div class="claim"><b>🎨 “Hiç boya yok”</b>Fazla kesin. STURP boya tabakasını ana açıklama olarak görmedi; McCrone pigment/tempera savundu.<div class="verdict">→ Çekişmeli</div></div>
+    <div class="claim"><b>⚙️ “Modern teknoloji taklit edemiyor”</b>Abartılı. Bazı önemli özellikler deneysel olarak taklit edildi.<div class="verdict">→ Viral anlatı fazla iddialı</div></div>
+  </div>
+  <div class="callout" style="margin-top:18px"><strong>Dosyanın kısa hükmü:</strong> Kefenin görüntü mekanizması hâlâ tam kapanmış değil. Fakat mevcut bilimsel veriler, “mucize dışında açıklama yok” sonucunu zorunlu kılmıyor.</div>
+</section>
+
+<section id="iddia">
+  <h2>1. İddia</h2>
+  <p class="quote">“Hz. İsa’nın gömüldüğü kefen üzerindeki insan silüetinde boya izi yok; üstelik modern teknoloji bile bunu taklit edemiyor. O hâlde görüntü kumaşa nasıl geçti?”</p>
+  <p>Bu cümlede aslında <strong>üç ayrı iddia</strong> var:</p>
+  <div class="card"><b>1)</b> Kumaşın İsa’ya ait olduğu. &nbsp; <b>2)</b> Görüntünün boya/pigment içermediği. &nbsp; <b>3)</b> Görüntünün modern yollarla üretilemediği.</div>
+  <p>Birinin doğru olması diğerini otomatik olarak doğrulamaz. İşte bütün dosyanın kilidi bu ayrım.</p>
+</section>
+
+<section id="gercekler">
+  <h2>2. Bildiğimiz gerçekler</h2>
+  <p>Torino Kefeni yaklaşık <strong>4,4 × 1,1 metre</strong> boyutlarında, balıksırtı dokumalı keten bir kumaştır. Üzerinde önden ve arkadan bir erkek bedenini andıran soluk bir görüntü, kırmızımsı lekeler ve 1532’deki Chambéry yangınından kalma hasarlar bulunur.</p>
+  <h3>Tarihsel zincir — kısa versiyon</h3>
+  <ul class="timeline">
+    <li><b>14. yüzyıl ortaları:</b> Bugünkü kefenle güvenli biçimde ilişkilendirilebilen ilk kayıtlar Lirey, Fransa’da.</li>
+    <li><b>1453:</b> Savoy hanedanına geçiyor.</li>
+    <li><b>1532:</b> Chambéry yangınında zarar görüyor.</li>
+    <li><b>1578:</b> Torino’ya taşınıyor.</li>
+    <li><b>1898:</b> Secondo Pia’nın fotoğraf negatifi, beden ayrıntılarını çarpıcı biçimde görünür kılıyor.</li>
+    <li><b>1978:</b> STURP ekibi kapsamlı fiziksel ve kimyasal inceleme yapıyor.</li>
+    <li><b>1988:</b> Üç laboratuvar radyokarbon tarihlemesi yapıyor.</li>
+    <li><b>2026:</b> Arizona’dan kalan radyokarbon örnek parçaları yeniden tekstil açısından inceleniyor.</li>
+  </ul>
+  <p class="mini">Kritik ayrım: 14. yüzyıldan önce “İsa’nın kefeni” olarak anılan kutsal bezlerden söz eden metinler var; fakat bunların bugünkü Torino Kefeni ile kesintisiz biçimde aynı nesne olduğunu gösteren kabul görmüş bir belge zinciri yok.</p>
+</section>
+
+<section id="kanitlar">
+  <h2>3. Kanıtlar</h2>
+  <h3>A) Görüntünün yapısı</h3>
+  <p>STURP çalışmalarında beden görüntüsü, keten liflerinin yüzeyindeki sararma/bozunma ile ilişkilendirildi. Araştırmacılar, kalın bir boya tabakasının görüntüyü açıklamadığını ve bütün gözlemleri tek başına karşılayan bir üretim mekanizması bulunmadığını bildirdi.</p>
+  <p>Walter McCrone ise örneklerde kırmızı okr, vermilyon ve protein esaslı tempera izleri gördüğünü savundu. Bu yüzden “hiç pigment yok” cümlesi, bilimsel tartışmayı olduğundan daha kesin gösteriyor.</p>
+
+  <h3>B) “Kan” lekeleri</h3>
+  <p>Heller ve Adler bazı kırmızı alanları kanla uyumlu kimyasal bulgular olarak yorumladı. McCrone buna itiraz etti. Daha sonraki adli kan lekesi analizlerinde ise bazı akışların tek bir beden pozisyonuyla kolay açıklanamadığı ileri sürüldü.</p>
+
+  <h3>C) Radyokarbon — en ağır top</h3>
+  <p>1988’de Arizona, Oxford ve Zürih laboratuvarları aynı kumaştan alınan örnekleri AMS yöntemiyle ölçtü. Nature’da yayımlanan ortak sonuç: <strong>MS 1260–1390</strong> (%95 güven düzeyi).</p>
+  <div class="card">
+    <b>Neden önemli?</b>
+    <p style="margin-top:8px">Çünkü bu tarih, kefenin tarihsel kayıtlarda ilk kez güvenli biçimde görünmeye başladığı dönemle olağanüstü derecede iyi örtüşüyor.</p>
+  </div>
+  <p>Sonraki yıllarda örneklemenin kefenin tamamını temsil edip etmediği tartışıldı. Raymond Rogers, test bölgesinin onarılmış/işlenmiş olabileceğini savundu. 2019 ve 2020 çalışmalarında da verilerin homojenliği sorgulandı. Ancak bunlar kendi başına “kefen 1. yüzyıldandır” demiyor.</p>
+  <p><strong>2026 güncellemesi:</strong> 1988 Arizona örneklerinden kalan iki tekstil fragmanı yeniden incelendi. Çalışma, parçaların ana kumaşla uyumlu olduğunu ve radyokarbon yaşını geçersiz kılacak belirgin bir onarım/kirlenme kanıtı görmediğini bildirdi. Bu, “test edilen parça kesinlikle yamaydı” savını zayıflatıyor.</p>
+
+  <h3>Kanıt ağırlığı — tek bakışta</h3>
+  <div class="card">
+    <div class="score"><span>1988 AMS radyokarbon</span><b>çok güçlü</b></div><div class="meter"><span style="width:92%"></span></div>
+    <div class="score"><span>14. yy ilk kesin kayıt</span><b>güçlü</b></div><div class="meter"><span style="width:82%"></span></div>
+    <div class="score"><span>STURP görüntü kimyası</span><b>güçlü ama mekanizma açık</b></div><div class="meter"><span style="width:74%"></span></div>
+    <div class="score"><span>WAXS ile ~2000 yıl yorumu</span><b>dolaylı</b></div><div class="meter"><span style="width:42%"></span></div>
+  </div>
+</section>
+
+<section id="teoriler">
+  <h2>4. Teoriler</h2>
+  <p class="hook">Asıl ilginç bölüm burada: “Görüntü nasıl oluştu?” sorusuna tek bir cevap yok; fakat birkaç ciddi aday var.</p>
+  <details open><summary>🎨 Teori 1 — Orta Çağ sanatsal üretimi</summary><p>Pigment, sürtme, bas-rölyef veya benzeri yöntemlerle görüntünün üretilmiş olması. 2010’da Luigi Garlaschelli, Orta Çağ’da erişilebilir malzemelerle tam boy bir kopya üretti ve bazı temel görüntü özelliklerini yakaladı. Kusursuz kopya değildi; fakat “insan eliyle benzeri yapılamaz” iddiasını zayıflattı.</p></details>
+  <details><summary>🧪 Teori 2 — Kimyasal yaşlanma / temas</summary><p>Ter, yağ, kumaşın hazırlanmasından kalan maddeler veya lokal kimyasal reaksiyonlar selülozun yüzeyinde sararma yaratmış olabilir. Bu sınıftaki süreçler bazı STURP bulgularıyla uyumlu, fakat tüm görüntüyü tek başına açıklayan deneysel model yok.</p></details>
+  <details><summary>🍞 Teori 3 — Maillard reaksiyonu</summary><p>Rogers ve Arnoldi, ketende kalan indirgen şekerlerle bir cesetten çıkabilecek aminlerin yüzeysel renklenme oluşturabileceğini önerdi. Laboratuvarda benzer yüzeysel sararma elde edildi; ancak bu deney, kefenin gerçekten böyle oluştuğunu kanıtlamıyor.</p></details>
+  <details><summary>⚡ Teori 4 — Isı / UV / radyasyon</summary><p>Isıl veya elektromanyetik süreçler liflerin çok yüzeysel kısmını sarartabilir. ENEA’nın excimer lazer deneyleri bazı “kefen benzeri” özellikleri üretebildi. Ama laboratuvarda bir etki üretmek, tarihsel olarak aynı sürecin gerçekleştiğini göstermek değildir.</p></details>
+</section>
+
+<section id="bilinmeyen">
+  <h2>5. Hâlâ bilinmeyen kısım</h2>
+  <div class="grid">
+    <div class="claim"><b>❓ Kesin görüntü mekanizması</b>Beden imgesindeki lif sararmasını oluşturan tek ve doğrulanmış süreç üzerinde fikir birliği yok.</div>
+    <div class="claim"><b>❓ Pigmentlerin rolü</b>Pigment parçacıkları var mı/yok mu tartışmasından ziyade, bunların beden görüntüsünün ana nedeni olup olmadığı tartışılıyor.</div>
+    <div class="claim"><b>❓ İdeal yeniden tarihleme</b>Farklı bölgelerden, çağdaş protokolle yeni bir kör örnekleme tartışmayı ciddi ölçüde azaltabilir.</div>
+    <div class="claim"><b>❓ 14. yüzyıldan önceki provenans</b>Bugünkü nesneyi 1. yüzyıla kadar kesintisiz bağlayan kabul görmüş belge zinciri yok.</div>
+  </div>
+  <p class="callout" style="margin-top:18px"><strong>Gerçek gizem:</strong> “Nasıl 2000 yıl dayandı?” değil. Çünkü önce 2000 yıllık olduğunu göstermemiz gerekir. Asıl açık soru, beden görüntüsünü oluşturan fizikokimyasal sürecin tüm ayrıntılarıdır.</p>
+</section>
+
+<section id="degerlendirme">
+  <h2>6. Benim değerlendirmem</h2>
+  <p>Burada iki soruyu ayırmak gerekiyor:</p>
+  <div class="card"><b>“Bu kumaş ne zaman üretildi?”</b><p style="margin-top:8px">Mevcut kanıt dengesi <strong>Orta Çağ kökenini</strong> daha güçlü destekliyor. Bunun en önemli nedeni 1988 radyokarbon sonucu, ilk kesin tarihsel kayıtların aynı döneme denk gelmesi ve 2026 tekstil analizinin “test edilen parça yamaydı” itirazını zayıflatması.</p></div>
+  <div class="card"><b>“Görüntü nasıl oluştu?”</b><p style="margin-top:8px">Burada cevap daha temkinli: <strong>kesin mekanizma bilinmiyor.</strong> Ancak görüntünün bazı temel özellikleri farklı laboratuvar yöntemleriyle üretilebildiği için “doğaüstü mekanizma bilimsel olarak zorunlu” sonucu çıkmıyor.</p></div>
+  <p>Ve üçüncü soru: <strong>“Bu Hz. İsa’nın kefeni mi?”</strong> Şu anki tarihsel ve bilimsel veri bunu doğrulamıyor. “Mümkün değildir” ile “kanıtlanmıştır” arasında geniş bir alan var; elimizdeki veriler bu nesneyi İsa’ya güvenilir biçimde bağlayacak kadar güçlü değil.</p>
+</section>
+
+<section id="durum">
+  <h2>7. Durum</h2>
+  <div class="final">
+    <div class="big-status">🟡 HÂLÂ TARTIŞMALI — ama gizemin sınırı artık daha net</div>
+    <p><span class="status"><span class="dot green"></span> Büyük ölçüde cevaplandı:</span> 14. yüzyıldan itibaren modern tarihçesi.</p>
+    <p><span class="status"><span class="dot green"></span> Güçlü kanıt:</span> Test edilen ketenin 1260–1390’a tarihlenmesi.</p>
+    <p><span class="status"><span class="dot yellow"></span> Tartışmalı:</span> 1988 örneklemesinin bütün kumaşı ne ölçüde temsil ettiği.</p>
+    <p><span class="status"><span class="dot yellow"></span> Hâlâ açık:</span> Beden görüntüsünün tam fizikokimyasal oluşum mekanizması.</p>
+    <p><span class="status"><span class="dot red"></span> Desteklenmiyor:</span> “Modern teknolojiyle hiçbir şekilde taklit edilemiyor.”</p>
+    <p><span class="status"><span class="dot red"></span> Kanıtlanmış değil:</span> “Bu kesin olarak Hz. İsa’nın kefenidir.”</p>
+  </div>
+</section>
+
+<section id="kaynakca" class="sources">
+  <h2>8. Kaynakça</h2>
+  <ol>
+    <li>Damon, P.E. et al. (1989). “Radiocarbon dating of the Shroud of Turin.” <em>Nature</em> 337, 611–615. DOI: 10.1038/337611a0.</li>
+    <li>Casabianca, T. et al. (2019). “Radiocarbon Dating of the Turin Shroud: New Evidence from Raw Data.” <em>Archaeometry</em> 61(5), 1223–1231.</li>
+    <li>Freer-Waters, R. & Jull, A.J.T. (2026). “Analysis of textile fragments from the 1988 radiocarbon samples of the Turin Shroud.” <em>npj Heritage Science</em> 14, 263.</li>
+    <li>Schwalbe, L.A. & Rogers, R.N. (1982). “Physics and chemistry of the shroud of Turin: A summary of the 1978 investigation.” <em>Analytica Chimica Acta</em> 135, 3–49.</li>
+    <li>Jumper, E.J. et al. (1984). “A Comprehensive Examination of the Various Stains and Images on the Shroud of Turin.” <em>Archaeological Chemistry III</em>.</li>
+    <li>McCrone, W.C. & Skirius, C. (1980). “Light Microscopical Study of the Turin Shroud I.” <em>The Microscope</em> 28, 105–113.</li>
+    <li>McCrone, W.C. (1980). “Light Microscopical Study of the Turin Shroud II.” <em>The Microscope</em> 28, 115–128.</li>
+    <li>Heller, J.H. & Adler, A.D. (1980). “Blood on the Shroud of Turin.” <em>Applied Optics</em> 19(16), 2742–2744.</li>
+    <li>Borrini, M. & Garlaschelli, L. (2019). “A BPA Approach to the Shroud of Turin.” <em>Journal of Forensic Sciences</em> 64(1), 137–143.</li>
+    <li>Rogers, R.N. (2005). “Studies on the radiocarbon sample from the Shroud of Turin.” <em>Thermochimica Acta</em> 425, 189–194.</li>
+    <li>Riani, M. et al. (2020). “Statistical and Proactive Analysis of an Inter-Laboratory Comparison: The Radiocarbon Dating of the Shroud of Turin.” <em>Entropy</em> 22, 926.</li>
+    <li>De Caro, L. et al. (2022). “X-ray Dating of a Turin Shroud’s Linen Sample.” <em>Heritage</em> 5, 860–870.</li>
+    <li>Margariti, C. (2025). “The Shroud of Turin: An Overview of the Archaeological Scientific Studies.” <em>Textiles</em> 5(1), 8.</li>
+    <li>Garlaschelli, L. (2010). “Life-size Reproduction of the Shroud of Turin and its Image.” <em>Journal of Imaging Science and Technology</em> 54(4), 040301.</li>
+    <li>Pellicori, S.F. (1980). “Spectral properties of the Shroud of Turin.” <em>Applied Optics</em> 19, 1913–1920.</li>
+    <li>Rogers, R.N. & Arnoldi, A. (2003). “The Shroud of Turin: An Amino-Carbonyl Reaction (Maillard Reaction) May Explain the Image Formation.” <em>Melanoidins</em> 4, 106–113.</li>
+    <li>Di Lazzaro, P. et al. (2012). “Superficial and Shroud-like coloration of linen by short laser pulses in the vacuum ultraviolet.” <em>Applied Optics</em> 51, 8567–8578.</li>
+  </ol>
+</section>
+
+<footer>
+  Bu sürüm özellikle sadeleştirilmiştir: görsel kullanılmaz, metin kısa bloklara ayrılır, iddia–kanıt–hüküm akışı korunur. Aynı sistem serinin Ahit Sandığı, Göbeklitepe ve Voynich dosyalarına da uygulanabilir.
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,387 @@
+
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Antikythera Düzeneği — Çözülemeyen Sorular Dosyası</title>
+<style>
+:root{
+  --bg:#0d0f13; --panel:#151821; --panel2:#1b1f2a; --text:#eef2f7;
+  --muted:#aab3c3; --line:#2b3140; --accent:#d7b36a; --good:#56c596;
+  --warn:#f3c969; --bad:#ef6a6a; --blue:#7db4ff; --max:980px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:linear-gradient(180deg,#0b0d11,#11141b 35%,#0d0f13);
+  color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  line-height:1.7;
+}
+a{color:#a9ccff;text-decoration:none}
+a:hover{text-decoration:underline}
+.hero{padding:70px 22px 36px;border-bottom:1px solid var(--line)}
+.wrap{max-width:var(--max);margin:auto}
+.kicker{letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-size:.78rem;font-weight:800}
+h1{font-size:clamp(2.2rem,6vw,4.9rem);line-height:1.02;margin:.35rem 0 1rem;letter-spacing:-.04em}
+.subtitle{font-size:1.12rem;color:var(--muted);max-width:760px}
+.statusline{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.badge{border:1px solid var(--line);background:#11151c;border-radius:999px;padding:8px 12px;font-size:.9rem}
+.badge strong{color:white}
+nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:rgba(13,15,19,.85);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:10px;overflow:auto;padding:10px 22px}
+nav a{white-space:nowrap;color:#c9d1df;border:1px solid transparent;padding:7px 10px;border-radius:9px}
+nav a:hover{border-color:var(--line);text-decoration:none;background:#171b24}
+main{padding:34px 22px 80px}
+section{margin:0 0 54px;scroll-margin-top:78px}
+h2{font-size:1.65rem;margin:0 0 16px}
+h3{font-size:1.12rem;margin:22px 0 8px}
+p{margin:0 0 14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;margin:14px 0}
+.card.emphasis{background:linear-gradient(180deg,#181b24,#13161d);border-color:#3d465a}
+.quote{font-size:1.2rem;line-height:1.55;border-left:4px solid var(--accent);padding:8px 0 8px 18px;color:#f4ead6}
+.small{font-size:.92rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:48px}}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.fact b{display:block;margin-bottom:4px}
+.pill{display:inline-block;padding:3px 8px;border-radius:999px;font-size:.78rem;font-weight:800;margin-right:6px}
+.green{background:rgba(86,197,150,.12);color:#7ee0b5;border:1px solid rgba(86,197,150,.35)}
+.yellow{background:rgba(243,201,105,.12);color:#f5d784;border:1px solid rgba(243,201,105,.35)}
+.red{background:rgba(239,106,106,.12);color:#ff9494;border:1px solid rgba(239,106,106,.35)}
+.blue{background:rgba(125,180,255,.12);color:#9dc8ff;border:1px solid rgba(125,180,255,.35)}
+.timeline{border-left:2px solid #384154;margin-left:8px;padding-left:20px}
+.timeline .t{position:relative;margin:0 0 20px}
+.timeline .t:before{content:"";position:absolute;left:-27px;top:.45em;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px #10131a}
+.timeline time{font-weight:800;color:#e7c47d}
+details{border:1px solid var(--line);background:var(--panel);border-radius:14px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:16px 18px;font-weight:800;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";float:right;color:var(--accent);font-size:1.3rem}
+details[open] summary:after{content:"–"}
+details .inside{padding:0 18px 18px;color:#d7dce5}
+.verdict{font-size:clamp(1.5rem,4vw,2.6rem);font-weight:900;line-height:1.2}
+.score{display:flex;align-items:center;gap:10px;margin:9px 0}
+.track{height:9px;background:#252b37;border-radius:99px;flex:1;overflow:hidden}
+.fill{height:100%;background:linear-gradient(90deg,#6ea8ff,#d7b36a);border-radius:99px}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:#d8deea}
+footer{border-top:1px solid var(--line);padding:30px 22px;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+.source{margin-bottom:10px}
+.callout{border:1px dashed #49536a;background:#12161e;border-radius:14px;padding:16px}
+button#print{background:var(--accent);border:0;color:#17120a;font-weight:900;padding:10px 14px;border-radius:10px;cursor:pointer}
+@media print{
+ nav,button#print{display:none}
+ body{background:white;color:#111}
+ .card,.fact,details,.callout{background:white;border-color:#bbb}
+ .small,.subtitle,footer{color:#444}
+ a{color:#111;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Çözülemeyen Sorular · Dosya 03</div>
+    <h1>Antikythera<br>Düzeneği</h1>
+    <p class="subtitle">
+      Yaklaşık iki bin yıllık bronz dişliler, tutulmaları hesaplayan kadranlar ve kaybolmuş bir ön yüz.
+      Gerçekten “antik çağın bilgisayarı” mıydı — ve böylesi bir teknoloji neden yüzyıllarca ortadan kayboldu?
+    </p>
+    <div class="statusline">
+      <span class="badge"><strong>Genel durum:</strong> 🟡 Büyük ölçüde anlaşıldı, kritik parçalar hâlâ belirsiz</span>
+      <span class="badge"><strong>Gizem:</strong> İşlevden çok köken ve tam tasarım</span>
+      <span class="badge"><strong>Kanıt:</strong> Fiziksel kalıntı + CT + yazıt</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#ozet">60 sn</a>
+    <a href="#iddia">İddia</a>
+    <a href="#gercekler">Gerçekler</a>
+    <a href="#kanitlar">Kanıtlar</a>
+    <a href="#zaman">Zaman çizelgesi</a>
+    <a href="#teoriler">Teoriler</a>
+    <a href="#abartilar">Viral iddialar</a>
+    <a href="#bilinmeyen">Bilinmeyenler</a>
+    <a href="#degerlendirme">Değerlendirme</a>
+    <a href="#kaynaklar">Kaynakça</a>
+  </div>
+</nav>
+
+<main class="wrap">
+<section id="ozet">
+  <h2>60 saniyede dosya</h2>
+  <div class="card emphasis">
+    <p class="quote">
+      Antikythera Düzeneği bir efsane değil: gerçek, antik Yunan yapımı, dişli çarklarla çalışan astronomik bir hesaplama aygıtıdır.
+      Fakat elimizde orijinalin yalnızca yaklaşık üçte biri olduğu için, özellikle ön yüzdeki gezegen göstergesinin tam mekanik düzeni hâlâ kesin değildir.
+    </p>
+    <p>
+      En sağlam bulgu şu: düzenek Güneş ve Ay döngülerini, takvim çevrimlerini ve tutulma dizilerini mekanik olarak temsil ediyordu.
+      Arka kadranların işlevi güçlü biçimde çözülmüş durumda; ön yüz içinse yazıtlar gezegenlerin de gösterildiğini destekliyor, ancak kayıp dişlilerin tam düzeni rekonstrüksiyonlara dayanıyor.
+    </p>
+    <p><b>Asıl gizem:</b> “Ne işe yarıyordu?” sorusundan çok, <b>kim yaptı, hangi atölye geleneğine aitti, kaç benzeri vardı ve ön sistem tam olarak nasıldı?</b></p>
+  </div>
+</section>
+
+<section id="iddia">
+  <h2>İddia</h2>
+  <div class="card">
+    <p class="quote">
+      “MÖ 2.–1. yüzyılda böyle karmaşık bir dişli bilgisayar yapılamazdı. Antikythera Düzeneği,
+      çağının bin yıl ilerisinde, kaynağı açıklanamayan bir teknoloji olmalı.”
+    </p>
+    <p>
+      Bu iddianın ilk yarısı anlaşılır: hayatta kalan örnekler içinde düzenek gerçekten olağanüstü.
+      Fakat “çağında yapılamazdı” sonucu kanıtlanmış değil. Yunan mekanik geleneği, astronomi bilgisi ve yazılı kaynaklar
+      böyle cihazların entelektüel altyapısının mevcut olduğunu gösteriyor.
+    </p>
+  </div>
+</section>
+
+<section id="gercekler">
+  <h2>Bildiğimiz gerçekler</h2>
+  <div class="grid">
+    <div class="fact"><b>Gerçek bir arkeolojik buluntu</b>1900–1901’de Antikythera açıklarındaki Roma dönemi gemi batığından çıkarıldı.</div>
+    <div class="fact"><b>Tarih</b>Ulusal Arkeoloji Müzesi kronolojisi düzeneğin yapımını yaklaşık MÖ 150–100’e, batığı yaklaşık MÖ 70’e yerleştiriyor.</div>
+    <div class="fact"><b>Korunma durumu</b>Bugün 82 fragmana ayrılmış durumda; yaklaşık üçte biri korunmuş ve 30 kadar dişli çark doğrudan saptanmış durumda.</div>
+    <div class="fact"><b>Malzeme</b>Temel mekanizma bronz dişlilerden ve kadranlardan oluşuyor; bir kutu/kasa içine yerleştirilmişti.</div>
+    <div class="fact"><b>Arka yüz</b>Metonik çevrim, Saros tutulma çevrimi ve Panhelenik oyunlarla ilişkili takvimsel göstergeler güçlü biçimde çözüldü.</div>
+    <div class="fact"><b>Ön yüz</b>Güneş, Ay ve antik çağda bilinen beş gezegenin hareketlerini gösteren bir “kozmos” ekranı bulunduğunu yazıtlar destekliyor.</div>
+  </div>
+</section>
+
+<section id="kanitlar">
+  <h2>Kanıtlar</h2>
+
+  <h3>1 — Dişliler yalnızca dekor değil</h3>
+  <div class="card">
+    <p>
+      2006 tarihli Nature çalışması, yüksek çözünürlüklü X-ışını tomografisi ve yüzey görüntüleme ile dişlilerin oranlarını ve yazıtları yeniden değerlendirdi.
+      Sonuç: cihaz, Ay’ın evrelerini ve düzensiz görünen hareketini modelleyen mekanik bir düzen içeriyor; ayrıca tutulma döngülerini hesaplayabiliyordu.
+    </p>
+    <span class="pill green">Güçlü kanıt</span>
+  </div>
+
+  <h3>2 — Arka kadranların dili çözüldü</h3>
+  <div class="card">
+    <p>
+      2008 Nature çalışması, üst arka kadranı 19 yıllık Metonik takvim çevrimiyle; alt arka kadranı ise 223 sinodik aylık Saros tutulma çevrimiyle ilişkilendirdi.
+      Ayrıca Olimpiyat ve diğer Panhelenik oyun döngülerine ait bir alt kadran belirlendi.
+    </p>
+    <span class="pill green">Çok güçlü</span>
+  </div>
+
+  <h3>3 — Cihazın üzerinde bir çeşit “kullanım kılavuzu” var</h3>
+  <div class="card">
+    <p>
+      CT ile okunabilen yazıtlar yalnızca etiket değil; cihazın göstergelerini ve astronomik döngüleri tarif ediyor.
+      2016’daki kapsamlı epigrafik yayınlar, ön ve arka kapak ile kadran yazıtlarını sistematik biçimde yayımladı.
+    </p>
+    <span class="pill green">Doğrudan fiziksel kanıt</span>
+  </div>
+
+  <h3>4 — Ön yüz için güçlü ama tam olmayan rekonstrüksiyon</h3>
+  <div class="card">
+    <p>
+      2021’de Scientific Reports’ta yayımlanan UCL modeli, yazıtlarda belirtilen gezegen çevrimlerini, dişli oranlarını ve fiziksel kısıtları bir araya getirerek
+      Güneş, Ay, Merkür, Venüs, Mars, Jüpiter ve Satürn’ü gösteren katmanlı bir ön “kozmos” sistemi önerdi.
+      Bu model verilerle uyumlu; ancak kayıp parçalar nedeniyle <b>orijinal düzenin birebir kanıtı değildir.</b>
+    </p>
+    <span class="pill yellow">Güçlü rekonstrüksiyon, kesin değil</span>
+  </div>
+
+  <h3>5 — 2024’te takvim halkası tartışması yeniden açıldı</h3>
+  <div class="card">
+    <p>
+      Graham Woan ve Joseph Bayley, korunmuş delik konumlarını Bayesçi yöntemlerle yeniden analiz etti.
+      Sonuçları yaklaşık 354–355 delikli bir halka lehine çıktı; 360 ve 365 delik seçeneklerini kendi model varsayımları altında zayıf buldular.
+      Bu, ay takvimi yorumunu güçlendirebilir, ancak mekanizmanın bütün takvim mimarisinin yeniden yazıldığı anlamına gelmez.
+    </p>
+    <span class="pill blue">Yeni ve tartışmaya açık</span>
+  </div>
+</section>
+
+<section id="zaman">
+  <h2>Zaman çizelgesi</h2>
+  <div class="timeline">
+    <div class="t"><time>MÖ 150–100</time><p>Ulusal Arkeoloji Müzesi kronolojisine göre düzeneğin üretildiği dönem.</p></div>
+    <div class="t"><time>Yaklaşık MÖ 70 / 60–50</time><p>Antikythera açıklarındaki gemi batar. Müze kaynakları batış tarihi için yaklaşık MÖ 70 ile MÖ 60–50 aralığını verir.</p></div>
+    <div class="t"><time>1900–1901</time><p>Sünger dalgıçları batığı keşfeder; eserler çıkarılır.</p></div>
+    <div class="t"><time>1902</time><p>Dişli çarklı yapının önemi fark edilmeye başlanır.</p></div>
+    <div class="t"><time>1950’ler–1974</time><p>Derek de Solla Price cihazı sistematik olarak inceler ve onu antik bir mekanik hesaplayıcı olarak yorumlar.</p></div>
+    <div class="t"><time>2005</time><p>Mikrofokus X-ray CT ve gelişmiş yüzey görüntüleme kampanyası başlar.</p></div>
+    <div class="t"><time>2006</time><p>Nature: Ay hareketi, tutulma hesapları ve dişli mimarisine ilişkin önemli çözümlemeler.</p></div>
+    <div class="t"><time>2008</time><p>Nature: Metonik takvim, Saros tutulma kadranı ve Panhelenik oyun göstergesi ayrıntılandırılır.</p></div>
+    <div class="t"><time>2016</time><p>Yazıtların kapsamlı akademik yayımı yapılır.</p></div>
+    <div class="t"><time>2021</time><p>UCL ekibi ön kozmos ekranı için yeni mekanik model yayımlar.</p></div>
+    <div class="t"><time>2024</time><p>Takvim halkasındaki delik sayısı için yaklaşık 354–355 lehine yeni istatistiksel analiz yayımlanır.</p></div>
+  </div>
+</section>
+
+<section id="teoriler">
+  <h2>Teoriler</h2>
+
+  <details open>
+    <summary>Teori A — Astronomik eğitim ve gösteri cihazı</summary>
+    <div class="inside">
+      <p><b>Güçlü yanı:</b> Yazıtlar, kadranlar ve gezegen/tutulma göstergeleri bunun bir “mekanik kozmos” olduğunu açıkça destekler. Böyle bir nesne eğitim, gösteri ve hesaplama için çok uygundur.</p>
+      <p><b>Zayıf yanı:</b> Kimin kullandığını ve hangi bağlamda kullanıldığını doğrudan söyleyen bir belge yok.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Teori B — Takvim ve astronomik öngörü aracı</summary>
+    <div class="inside">
+      <p><b>Güçlü yanı:</b> Metonik ve Saros çevrimleri doğrudan mekanizmanın arka yüzüne işlenmiş durumda; tutulma tahminleri fiziksel kanıtla destekleniyor.</p>
+      <p><b>Zayıf yanı:</b> “Tahmin” modern hassas astronomik hesap anlamına gelmez; döngüsel şemalara dayalı öngörüdür.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Teori C — Archimedes veya onun geleneği</summary>
+    <div class="inside">
+      <p><b>Güçlü yanı:</b> Antik kaynaklarda Archimedes’e atfedilen göksel küre/mekanik model anlatıları vardır; ayrıca bazı takvim adlarının Korinth kökenli olması Syracuse bağlantısını ilginç kılar.</p>
+      <p><b>Zayıf yanı:</b> Düzeneği Archimedes’in yaptığına dair doğrudan kanıt yoktur. Üstelik cihaz muhtemelen onun ölümünden yaklaşık bir yüzyıl sonra yapılmıştır.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Teori D — Rodos / Hipparkhos çevresi</summary>
+    <div class="inside">
+      <p><b>Güçlü yanı:</b> Ay hareketinin modellenmesi Hipparkhos’un astronomik teorileriyle uyumlu bulunmuştur; Rodos da dönemin önemli astronomi ve mekanik merkezlerinden biridir.</p>
+      <p><b>Zayıf yanı:</b> “Hipparkhos yaptı” sonucunu verecek imza, atölye işareti veya belge yoktur.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Teori E — Kayıp bir teknoloji geleneğinin tek hayatta kalan örneği</summary>
+    <div class="inside">
+      <p><b>Güçlü yanı:</b> Tek bir olağanüstü cihazın sıfırdan ortaya çıkması yerine, deneyimli bir atölye geleneğinin ürünü olması mühendislik açısından makuldür. Antik edebiyatta mekanik gök modellerine dair atıflar da vardır.</p>
+      <p><b>Zayıf yanı:</b> Aynı karmaşıklıkta başka tam cihazlar günümüze ulaşmadı. Bu yüzden geleneğin kapsamını bilmiyoruz.</p>
+    </div>
+  </details>
+</section>
+
+<section id="abartilar">
+  <h2>Viral iddialar: doğru mu?</h2>
+  <table>
+    <thead><tr><th>İddia</th><th>Hüküm</th><th>Neden?</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>“Dünyanın ilk bilgisayarıdır.”</td>
+        <td><span class="pill yellow">Kısmen doğru</span></td>
+        <td>“Bilgisayar” modern elektronik cihaz anlamında değil; çok değişkenli hesapları mekanik oranlarla yapan <b>analog hesaplayıcı</b> anlamında kullanılır.</td>
+      </tr>
+      <tr>
+        <td>“Gezegenlerin konumunu kesin olarak hesaplıyordu.”</td>
+        <td><span class="pill yellow">Muhtemel / model bağımlı</span></td>
+        <td>Yazıtlar gezegen göstergesini güçlü biçimde destekler. Ancak ön dişli sisteminin çoğu kayıp olduğundan tam mekanizma rekonstrüksiyondur.</td>
+      </tr>
+      <tr>
+        <td>“Güneş ve Ay tutulmalarını önceden biliyordu.”</td>
+        <td><span class="pill green">Evet, döngüsel anlamda</span></td>
+        <td>Saros kadranı tutulma dizilerini mekanik olarak gösteriyordu.</td>
+      </tr>
+      <tr>
+        <td>“Bu teknoloji antik Yunan’da imkânsızdı.”</td>
+        <td><span class="pill red">Desteksiz</span></td>
+        <td>Astronomi, oran matematiği, metal işçiliği ve dişli teknolojisinin gerekli bileşenleri Helenistik dünyada vardı. Asıl şaşırtıcı olan bunların bu yoğunlukta birleşmesidir.</td>
+      </tr>
+      <tr>
+        <td>“Uzaylı teknolojisi olabilir.”</td>
+        <td><span class="pill red">Kanıt yok</span></td>
+        <td>Cihazın dili, astronomisi, takvimleri ve üretim biçimi antik Yunan bilim kültürüyle uyumludur.</td>
+      </tr>
+      <tr>
+        <td>“Bundan sonra 1000 yıl boyunca benzeri yoktu.”</td>
+        <td><span class="pill yellow">Basitleştirme</span></td>
+        <td>Hayatta kalan aynı karmaşıklıkta dişli mekanizmalar açısından uzun bir boşluk vardır; fakat bu, aradaki bin yılda mekanik bilgi olmadığı anlamına gelmez.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="bilinmeyen">
+  <h2>Hâlâ bilinmeyenler</h2>
+  <div class="grid">
+    <div class="fact"><b>Kim yaptı?</b>İsim, imza veya kesin atölye bilgisi yok.</div>
+    <div class="fact"><b>Nerede yapıldı?</b>Rodos, Korinth/Syracuse çevresi ve başka Helenistik merkezler tartışılıyor.</div>
+    <div class="fact"><b>Ön dişli sistemi tam olarak nasıldı?</b>Kritik parçalar kayıp. Modern rekonstrüksiyonlar kanıta dayalı ama tek zorunlu çözüm oldukları kesin değil.</div>
+    <div class="fact"><b>Kaç benzeri vardı?</b>Bu kadar gelişmiş bir cihazın tek örnek olması şaşırtıcı; ancak diğerlerinin eritilmiş, geri dönüştürülmüş veya kaybolmuş olması mümkün.</div>
+    <div class="fact"><b>Tam kullanım amacı neydi?</b>Eğitim, gösteri, takvim, astrolojik/astronomik planlama veya bunların birleşimi olabilir.</div>
+    <div class="fact"><b>Takvim halkasının delik sayısı?</b>2024 analizi 354–355’i destekliyor; bu konu hâlâ model ve ölçüm varsayımlarına bağlı.</div>
+  </div>
+</section>
+
+<section id="degerlendirme">
+  <h2>Benim değerlendirmem</h2>
+  <div class="card emphasis">
+    <p class="verdict">🟡 Gizemli olan “nasıl çalıştığı” değil; <br>tam olarak <em>kimlerin ne kadar ileri bir mekanik gelenek kurduğu.</em></p>
+    <p>
+      Antikythera Düzeneği, “açıklanamayan teknoloji” kategorisine girmiyor. Fiziksel dişliler, kadranlar, astronomik oranlar ve yazıtlar sayesinde temel işlevleri oldukça iyi anlaşılıyor.
+      Fakat cihazın üçte ikisinin kayıp olması, özellikle ön gezegen sistemini ve üretim bağlamını açık bırakıyor.
+    </p>
+    <p>
+      En makul tablo şu: Helenistik bilim dünyasında astronomi, geometrik modeller ve hassas bronz işçiliği,
+      bugün elimizde yalnızca tek örneği kalan gelişmiş bir mekanik hesaplama geleneğinde buluştu.
+      “Tek örnek” olması, onun gökten düşmüş bir teknoloji olduğunu değil, <b>arkeolojik kayıtların ne kadar eksik olabileceğini</b> gösteriyor.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Kanıt dengesi</h3>
+    <div class="score"><span style="width:190px">Astronomik hesaplayıcı</span><div class="track"><div class="fill" style="width:98%"></div></div><b>çok güçlü</b></div>
+    <div class="score"><span style="width:190px">Tutulma / takvim işlevi</span><div class="track"><div class="fill" style="width:98%"></div></div><b>çok güçlü</b></div>
+    <div class="score"><span style="width:190px">Gezegen ekranı</span><div class="track"><div class="fill" style="width:85%"></div></div><b>güçlü</b></div>
+    <div class="score"><span style="width:190px">Tam ön dişli düzeni</span><div class="track"><div class="fill" style="width:60%"></div></div><b>belirsiz</b></div>
+    <div class="score"><span style="width:190px">Yapımcı / atölye</span><div class="track"><div class="fill" style="width:28%"></div></div><b>bilinmiyor</b></div>
+  </div>
+
+  <div class="callout">
+    <b>Seri için durum:</b> 🟡 <b>Büyük ölçüde çözülmüş, fakat rekonstrüksiyonun ve kökenin kritik ayrıntıları açık.</b><br>
+    Torino Kefeni’ndeki gibi oluşum mekanizması tartışması veya Voynich’teki gibi temel anlam belirsizliği yok.
+    Antikythera’da bilimin çözdüğü kısım oldukça büyük.
+  </div>
+</section>
+
+<section id="kaynaklar">
+  <h2>Kaynakça</h2>
+  <p class="small">Popüler anlatılar yalnızca yön bulmak için kullanıldı. Aşağıdaki liste, dosyanın ana iddialarını taşıyan akademik ve kurumsal kaynaklardır.</p>
+
+  <div class="source"><b>Freeth, T. et al. (2006).</b> “Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism.” <i>Nature</i> 444, 587–591. DOI: 10.1038/nature05357.<br>
+  <a href="https://www.nature.com/articles/nature05357" target="_blank" rel="noopener">Nature makalesi</a></div>
+
+  <div class="source"><b>Freeth, T., Jones, A., Steele, J. M. et al. (2008).</b> “Calendars with Olympiad display and eclipse prediction on the Antikythera Mechanism.” <i>Nature</i> 454, 614–617. DOI: 10.1038/nature07130.<br>
+  <a href="https://www.nature.com/articles/nature07130" target="_blank" rel="noopener">Nature makalesi</a></div>
+
+  <div class="source"><b>Freeth, T. et al. (2021).</b> “A Model of the Cosmos in the ancient Greek Antikythera Mechanism.” <i>Scientific Reports</i> 11, 5821. DOI: 10.1038/s41598-021-84310-w.<br>
+  <a href="https://www.nature.com/articles/s41598-021-84310-w" target="_blank" rel="noopener">Scientific Reports makalesi</a></div>
+
+  <div class="source"><b>Jones, A. ve çalışma arkadaşları (2016).</b> <i>Inscriptions of the Antikythera Mechanism</i>. NYU Faculty Digital Archive / Almagest özel yayını.<br>
+  <a href="https://archive.nyu.edu/jspui/handle/2451/71597" target="_blank" rel="noopener">NYU arşivi</a></div>
+
+  <div class="source"><b>National Archaeological Museum, Athens.</b> “The Mysteries of the Mechanism of Antikythera” — kronoloji, arkeoloji ve bilim tarihi bölümleri.<br>
+  <a href="https://antikythera-mechanism.namuseum.gr/en/" target="_blank" rel="noopener">Müze dosyası</a></div>
+
+  <div class="source"><b>Woan, G. & Bayley, J. (2024).</b> “An improved calendar ring hole-count for the Antikythera mechanism.” <i>Horological Journal</i>.<br>
+  <a href="https://eprints.gla.ac.uk/329337/" target="_blank" rel="noopener">University of Glasgow kaydı</a></div>
+
+  <p class="small" style="margin-top:24px">Son güncelleme: 6 Ekim 2026. Bu çalışma, eldeki fiziksel ve akademik kanıtı “kesin”, “güçlü”, “olasılık” ve “spekülasyon” olarak ayırmayı amaçlar.</p>
+  <button id="print" onclick="window.print()">Yazdır / PDF olarak kaydet</button>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Çözülemeyen Sorular</b> · Antikythera Düzeneği araştırma dosyası<br>
+    Görselsiz, kaynakçalı, interaktif okuma sürümü.
+  </div>
+</footer>
+</body>
+</html>

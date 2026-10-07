@@ -1,0 +1,1650 @@
+{
+  "schemaVersion": 1,
+  "id": "phaistos-disc",
+  "locale": "en",
+  "source": {
+    "filename": "Phaistos_Diski_Interaktif_Dosya.html",
+    "sha256": "02417892fdb2b055b653953222daba358ba20625c0cb108bb4d2ff71e2afc98c",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "editorial-translation",
+    "independentlyReviewed": false,
+    "sourceLocale": "tr",
+    "sourceRevision": "2026-10-06",
+    "sourceContentSha256": "919bafaef9c2f829e187f157e8415cf7011bf55555061a40cd1528baf381d6eb"
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The case in 60 seconds"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nThe Phaistos Disc's mystery stems less from “very strange” signs than from having almost only one text.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nLuigi Pernier found the disc at the Palace of Phaistos in 1908. It is dated to approximately 1700–1650 BCE. Its two sides contain a total of ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "241 stamped signs"
+                  ]
+                },
+                " and ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "61 sign groups."
+                  ]
+                },
+                " The museum considers reading from the outer edge towards the centre the most likely direction.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThere are approximately ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "45 different sign types."
+                  ]
+                },
+                " That number makes a system such as syllabic writing possible. Brent Davis's study published by Cambridge University Press in 2026 places the Phaistos Disc script within the family of Aegean syllabic scripts and argues that the system is a syllabary. But we still do not know the sounds represented or the language encoded.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe main obstacle to decipherment is simple: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "the corpus is too small."
+                  ]
+                },
+                "\nWithout a second, third or hundredth text in the same system, proposed readings cannot be tested against independent examples.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The claim"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“The Phaistos Disc contains the lost language of the Minoan civilisation. Its symbols may be a prayer, calendar, game, war narrative or star map, but no one has deciphered them for a century.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe first part is plausible; the second remains open. The disc was certainly found in a Minoan cultural context. But its language, subject and relationship to other Aegean scripts are still uncertain.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What we know"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Found in 1908"
+                  ]
+                },
+                "Italian archaeologist Luigi Pernier discovered it in a room at the Palace of Phaistos."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Made of clay"
+                  ]
+                },
+                "Small seals/punches stamped the signs into wet clay, and the disc was subsequently fired."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "241 signs"
+                  ]
+                },
+                "The two sides contain a total of 241 impressed signs."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "61 groups"
+                  ]
+                },
+                "Vertical/radial lines divide the signs into 61 groups, probably word-like units."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "About 45 sign types"
+                  ]
+                },
+                "An inventory of this size is more consistent with syllabic than alphabetic writing."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "A unique corpus"
+                  ]
+                },
+                "There is no reliable, lengthy second text in the same script. This is the central difficulty for decipherment."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The evidence"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — The signs were stamped, not drawn by hand"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe figures appear to have been repeatedly impressed using the same stamps. The disc is therefore sometimes described as “a very early ancestor of movable-type printing”. The technical analogy is interesting, but does not make it a direct ancestor of the modern printing press.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Physically clear"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — The textual structure does not appear random"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe signs form regular groups; some groups recur, and the distribution of particular signs at the beginnings/ends of groups is not random. The Heraklion Archaeological Museum links some recurring groups with the possibility of a “refrain”, raising interpretations as a hymn or magical/prayer text.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Strong structural organisation"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — A syllabic script is a strong possibility"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nIn the 2026 study ",
+                {
+                  "tag": "i",
+                  "attrs": {},
+                  "children": [
+                    "The Undeciphered Aegean Scripts"
+                  ]
+                },
+                ", Brent Davis places the Phaistos Disc script within the syllabic family alongside other pre-alphabetic Aegean systems. This implies a model in which each sign represents roughly one syllable.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "A current academic model"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — The relationship with Linear A or Cretan Hieroglyphic is uncertain"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe disc was found at Phaistos in a context where Linear A is known; some signs may resemble Cretan Hieroglyphic or other Aegean signs. Yet Meissner and Salgarella's Cambridge assessment emphasises that identifying the Phaistos script with Cretan Hieroglyphic creates serious sign-inventory problems.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "A connection is possible; identity is unproven"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — Why are most decipherment attempts unconvincing?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nOxford's 2024 assessment identifies a clear problem: dozens of languages and sound values can be tried on one short document, and some may yield “meaningful” results by chance. Because these cannot be tested on a second independent text, decipherment claims are difficult to verify.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "The corpus problem"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "6 — Why is the forgery claim weak?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe disc's uniqueness has prompted suspicions of forgery. The current archaeological approach, however, places it within Phaistos's context of writing, sealing and ceramic production. Oxford's 2024 study particularly emphasises its consistency with the site's material culture.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Strong contextual support for authenticity"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Theories"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory A — A hymn / prayer / ritual text"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Regular recurrence of some sign groups creates a refrain-like structure. A ritual text is plausible in the Minoan context."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Without knowing the signs' sounds or the words' meanings, we cannot say “this is a hymn”."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory B — An administrative or legal text"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Writing and sealing were extensively used administratively at Phaistos. The disc is also a product of stamping technology."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " The lack of obvious numerical signs and typical accounting organisation makes it look different from conventional administrative tablets."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory C — A game / board game"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The spiral layout and divided spaces can visually suggest a game route."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Language-like recurrence of sign groups and a script-like inventory weaken this explanation. Clear support such as playing pieces or use-wear is absent."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory D — A calendar or astronomical record"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Spirals and recurring patterns can be matched to calendrical cycles."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Most matches rely on retrospective numerical correspondences; there are no reliable readings of definite month, day or celestial-body signs."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory E — A local script related to Linear A / Cretan Hieroglyphic"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " It appears within the same Minoan writing environment, and its inventory size fits a syllabic tradition."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Most signs do not match directly. Current research allows a close relationship but does not regard equivalence as established."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "viral"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral claims: are they true?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Claim"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Assessment"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Why?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It is the world's first example of printing.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "A technical analogy"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Reusable stamps may have impressed the signs, but that is not the same social/technical system as modern movable-type printing."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It is written in Linear A.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Not established"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Despite the shared cultural setting, its sign system is not directly classified as Linear A."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The text is definitely a prayer.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Possible"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Refrain-like repetitions support this interpretation, but the content has not been read."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The disc has been completely deciphered.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Many decipherment claims exist; there is no academically verified common reading."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It has been proven to be Turkish / Slavic / Greek / Hittite.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Hundreds of proposals match it to different languages; none has passed an independent test outside the corpus."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Luigi Pernier forged the object.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "A minority claim"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Although its uniqueness prompted suspicion, the current archaeological context more strongly supports an authentic Minoan artefact."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The signs are only pictures and encode no language.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "A weakening view"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Current linguistic research considers the system to behave like syllabic writing, though a full reading is still absent."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What remains unknown"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Which language does it encode?"
+                  ]
+                },
+                "It could be the Minoan language, another Aegean language or some other language unknown today."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The signs' sound values"
+                  ]
+                },
+                "There is no reliable phonetic table for the approximately 45 signs."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "What does the text say?"
+                  ]
+                },
+                "A hymn, ritual, administrative record or another genre—it is uncertain."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Why only one example?"
+                  ]
+                },
+                "If no other documents from the same writing tradition exist, it may have been a short-lived system for a special purpose."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Its relationship with other Aegean scripts"
+                  ]
+                },
+                "The degree of genealogical/functional connection with Linear A and Cretan Hieroglyphic remains open."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Could it eventually be deciphered?"
+                  ]
+                },
+                "The greatest hope is the discovery of a new, longer document in the same sign system."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "My assessment"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🔴 The Phaistos Disc is a genuinely undeciphered-script problem."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nFor me, the key point is: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "it remains undeciphered not because human intelligence is inadequate, but because the data are insufficient."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nDecipherment usually requires numerous recurring texts, proper names, known linguistic connections, bilingual inscriptions, or the same words in different contexts. Almost none of these is available for Phaistos.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe toughest test for any “I've deciphered it” proposal should therefore be:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "can the proposed sign values correctly read another, previously unseen Phaistos text?"
+                  ]
+                },
+                "\nWithout such a second text, reliable verification is currently impossible.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nCurrent scholarship is moving away from seeing the disc as entirely random or purely decorative, towards treating it as\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "a structured syllabic script."
+                  ]
+                },
+                " Its language and content nevertheless remain obscure.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Status in this series:"
+              ]
+            },
+            " 🔴 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Genuinely undeciphered."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nAs with Rongorongo, the main obstacle is the corpus. The problem is even greater here: there is effectively only one principal text.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "References"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "The museum record, recent academic monographs and peer-reviewed/university publications on Aegean scripts were prioritised."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Heraklion Archaeological Museum."
+              ]
+            },
+            " “The Phaistos Disc.” Approximate dating to 1700–1650 BCE, 241 signs, 61 groups, reading direction and an overview of current interpretations.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://heraklionmuseum.gr/en/exhibit/the-phaistos-disc/"
+              },
+              "children": [
+                "Heraklion Archaeological Museum"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ferrara, S. & Valério, M. (2024)."
+              ]
+            },
+            " “The Phaistos Disc: Placing an Enigmatic Artefact in its Cultural Context.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Writing from Invention to Decipherment"
+              ]
+            },
+            ", Oxford University Press. A recent assessment of the disc within Phaistos's writing, sealing and ceramic context.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://academic.oup.com/book/58672/chapter/485388307"
+              },
+              "children": [
+                "Oxford Academic"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Davis, B. (2026)."
+              ]
+            },
+            " ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "The Undeciphered Aegean Scripts: Linguistic Investigations into the Languages They Encode."
+              ]
+            },
+            " Cambridge University Press. A recent monograph examining the Phaistos Disc script in the context of Aegean syllabic scripts.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.cambridge.org/core/books/undeciphered-aegean-scripts/1B95B79E29C8D1E19C359B83973E28AE"
+              },
+              "children": [
+                "Cambridge University Press"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Meissner, T. & Salgarella, E."
+              ]
+            },
+            " “Relationship between Cretan Hieroglyphic and the Other Cretan Scripts.” Cambridge University Press. Methodological problems with identifying the Phaistos Disc script with Cretan Hieroglyphic.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/23E632C89A7F308D4677E21C68E44190/9781009490108c07_134-164.pdf/relationship_between_cretan_hieroglyphic_and_the_other_cretan_scripts.pdf"
+              },
+              "children": [
+                "Cambridge PDF"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Collet, S. (2017)."
+              ]
+            },
+            " ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Le guerrier, le chat, l’aigle, le poisson et la colonne: la voie spiralée des signes."
+              ]
+            },
+            " Archaeopress. Structural/semiotic analysis of the disc and its 45-sign inventory.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.jstor.org/stable/j.ctv170x45v"
+              },
+              "children": [
+                "JSTOR / Archaeopress"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ferrara, S. & Valério, M. (2024)."
+              ]
+            },
+            " “Deciphering a Writing System: Luck, Intuition, or Method?” Oxford University Press. A methodological assessment of why the small corpus makes the Phaistos Disc especially difficult to decipher.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://academic.oup.com/book/58672/chapter/485388064"
+              },
+              "children": [
+                "Oxford Academic"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Last updated: 6 October 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1778 @@
+{
+  "schemaVersion": 1,
+  "id": "yonaguni-monument",
+  "locale": "en",
+  "source": {
+    "filename": "Yonaguni_Aniti_Interaktif_Dosya.html",
+    "sha256": "ff5b00004709a8ed3fa02497c98b2c319cdbee3696610d7a84225bd5b174446c",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "editorial-translation",
+    "independentlyReviewed": false,
+    "sourceLocale": "tr",
+    "sourceRevision": "2026-10-06",
+    "sourceContentSha256": "76242327f9bb8f8874adf18b464636acd5c964b3c9b03f0e2b38d3923e30a53f"
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The case in 60 seconds"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nThe Yonaguni formation looks remarkably geometric. But “looking geometric” does not, by itself, establish that something is human-made.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe main formation measures approximately ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "100 × 60 metres"
+                  ]
+                },
+                " and stands about ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "25 metres"
+                  ]
+                },
+                " high. It contains large flat surfaces, terraces, steep edges and step-like fractures.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe local geology has precisely the characteristics that can produce such shapes naturally: Miocene sandstones are widespread on Yonaguni, and the rocks contain numerous ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "joints, fractures and faults."
+                  ]
+                },
+                " A 2020 geomorphological study documents pronounced joint systems and erosion forms on the island's rock surfaces; new submarine geomorphological research in 2024 also examines sandstone erosion forms around Yonaguni using multibeam sonar, ROV photogrammetry and diving.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe strongest advocate of a human-made interpretation is Masaaki Kimura of the University of the Ryukyus. Kimura interpreted the formation as a complex built or worked about 10,000 years ago, when it was on land. Geologist Robert Schoch, by contrast, concluded that it was ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "largely natural,"
+                  ]
+                },
+                " although ancient people might have used or modified parts of it.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The claim"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“Yonaguni is a pyramid or temple complex of a lost civilisation more than 10,000 years old, submerged at the end of the last Ice Age.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThis claim links two different propositions:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "that the formation was once above sea level"
+                  ]
+                },
+                " and\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "that people built it"
+                  ]
+                },
+                ". The first is palaeogeographically possible; the second requires separate archaeological evidence.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What we know"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Noticed in 1986"
+                  ]
+                },
+                "Dive operator Kihachiro Aratake discovered the formation off Yonaguni's southern coast."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "An enormous rock mass"
+                  ]
+                },
+                "The Japan National Tourism Organization describes the main formation as approximately 100 × 60 m and 25 m high."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The rock type matters"
+                  ]
+                },
+                "Miocene sandstones of the Yaeyama Group are widespread in Yonaguni Island's bedrock."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Joints and faults are widespread"
+                  ]
+                },
+                "The island's surface geology shows horizontal/vertical fracture systems, normal faults and pronounced erosion forms."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The human-made interpretation has also been argued academically"
+                  ]
+                },
+                "In studies from 2000 and 2003, Masaaki Kimura interpreted the formation as a submerged human-made monument."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "No consensus"
+                  ]
+                },
+                "Even Japan's official tourism page presents alternatives: a natural formation, a formation modified by people, or remains of a lost civilisation."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The evidence"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — The strongest point of the natural explanation: how does the rock break?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nYonaguni sandstone can separate along horizontal bedding and vertical joint systems. Together, these directions can produce steep walls, broad flat platforms and a “step” appearance. Fieldwork published in 2020 reported numerous joints and normal faults developed under horizontal stresses in the island's Sanninu-dai area.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Strong support for the natural model"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Similar angular forms occur on land on the same island"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThis comparison is crucial. If the same rock unit produces flat surfaces, steep edges, terrace-like platforms and fractured blocks onshore and along the coast, the underwater geometry need not require human workmanship. This is also Robert Schoch's central field argument.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Comparative geology"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — Kimura's human-made interpretation is a genuine academic proposal"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nCombining submarine geological/geophysical research, diving observations and Ryukyu palaeogeography, Masaaki Kimura interpreted the Yonaguni formation as a human-made complex 6,000–10,000+ years old. His 2003 paper described it as a large ",
+                {
+                  "tag": "i",
+                  "attrs": {},
+                  "children": [
+                    "gusuku"
+                  ]
+                },
+                "-like structure.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThis does not mean that “scientists have proven it is human-made”. It is a published interpretation on one side of the debate.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "A genuine academic view, not a consensus"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — The critical gap: definite traces of human workmanship"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nEvidence strongly supporting an architectural-complex interpretation would include repeated tool marks, quarrying traces, masonry, mortar, human-made fill, a reliable cultural layer, or datable archaeological material directly associated with the structure. None has been demonstrated for Yonaguni's main formation in a generally accepted way.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "The central weakness of the human-made hypothesis"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — “It was on land 10,000 years ago” ≠ “It was built 10,000 years ago”"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nGlobal sea-level rise after the last Ice Age makes it plausible that some coastal areas now in shallow water were once dry land. Kimura's palaeogeographic studies discuss the progressive submergence of the Ryukyu region. A rock being on land at that time, however, does not establish that people made it.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "A crucial distinction"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "6 — Research in 2024 still focuses on geomorphology"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nWork presented in 2024 by teams from Kyushu University and other Japanese research institutions examined submarine sandstone erosion forms around Yonaguni using multibeam sonar, ROV photogrammetry and SCUBA surveys. This shows that the site remains a subject of serious geomorphological research.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Current scientific context"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "zaman"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Timeline"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Miocene"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The Yaeyama Group sandstones making up much of Yonaguni are formed."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Last Ice Age"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Sea level is lower than today; some parts of the present coast are dry land."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Early Holocene"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Rising sea level progressively submerges the coastal landscape."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1986"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Kihachiro Aratake discovers the main underwater formation."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1990s"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Masaaki Kimura develops the human-made-complex interpretation; international interest grows."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2000–2004"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Kimura argues for his Ryukyu palaeogeographic and human-made Yonaguni interpretations in academic publications."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2020"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "A study of Yonaguni's onshore geomorphology details its sandstones, faults, joints and erosion forms."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2024"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "New sonar, ROV photogrammetry and diving surveys focus on submarine sandstone erosion forms."
+                  ]
+                }
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Theories"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory A — An entirely natural rock formation"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Sandstone bedding, joint systems, faulting and marine erosion can explain the broad flat surfaces and steep steps. Similar shapes also occur on land on the island."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Some details—particularly combinations of regular terraces—look unusually “architectural” at first sight. Visual intuition is not evidence, but keeps the question alive."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory B — A natural formation partly modified by people"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " An intermediate model also adopted by Robert Schoch. Ancient people could theoretically have used the natural rock surface as steps, a passage or a ritual area, or made small alterations."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " There are still no indisputable tool marks or cultural layers reliably demonstrating such “touch-ups”."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory C — An entirely human-made ancient monument"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The platforms, steps, passages and some surrounding forms described by Kimura suggest an architectural plan. Lower past sea levels make human access chronologically possible."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " “People could reach it” is different from “people built it”. Definite construction techniques, tool marks, archaeological culture and datable building material have not been demonstrated."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory D — Mu / Atlantis / a lost advanced civilisation"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " It provides a powerful popular-cultural narrative."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " No independent archaeological, written or technological evidence links Yonaguni with Mu or Atlantis."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "abartilar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral claims: are they true?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Claim"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Assessment"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Why?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It is definitely a 10,000-year-old pyramid.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Not established"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The roughly 10,000-year human-made interpretation is Kimura's proposal; it has not been independently verified as a construction date."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Scientists say it cannot be natural.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The geological explanation is strong; geologists who have examined the site include advocates of a natural or mostly natural interpretation."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Nature cannot make stairs at 90 degrees.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Faulty reasoning"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Approximately right angles can form through natural fracturing in jointed, layered rock."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Hieroglyphs have been found on it.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Disputed / weak"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Various scratches and shapes have been interpreted as writing or symbols, but there is no generally accepted epigraphic reading."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“A city, roads and stadium complex have been found.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "An interpretation"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "These names rely on Kimura's morphological interpretations, not independently verified architectural functions."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Sea level rose, so an ancient civilisation definitely sank.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "An invalid inference"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Ancient coasts really were submerged, but the conclusion that a monumental civilisation occupied them requires separate evidence."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What remains unknown"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Was there human intervention?"
+                  ]
+                },
+                "Ancient communities using or partly modifying a natural formation remains a plausible open question."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Which surfaces were exposed, and when?"
+                  ]
+                },
+                "A detailed local sea-level and tectonic history could establish more precisely when the site was dry land."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Are the suspected “tool marks” genuine?"
+                  ]
+                },
+                "Comprehensive published work distinguishing human workmanship from natural fracture/erosion marks at microscopic scale would be crucial."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Is there cultural material nearby?"
+                  ]
+                },
+                "Reliable archaeological material directly associated with the formation could radically change the debate."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "My assessment"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🟡 It looks highly “artificial”; the weight of evidence favours a natural formation."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nYonaguni's greatest trap is visual intuition. Steps, flat surfaces and steep corners immediately suggest “architecture” to us. Yet geology—particularly horizontally bedded, vertically jointed sandstone—can produce strikingly geometric surfaces. Yonaguni's onshore geology directly demonstrates this mechanism.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe current evidence is therefore insufficient for the ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "entirely human-made lost city/pyramid"
+                  ]
+                },
+                " hypothesis. I nevertheless do not assign the case 🟢, because the narrower possibility of people using or locally modifying a natural formation has not been fully closed archaeologically.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe best working hypothesis is therefore:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "the main mass is natural; possible human use or small-scale intervention merits investigation."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Status in this series:"
+              ]
+            },
+            " 🟡 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "The grand lost-civilisation claim is weak; the possibility of human intervention is not entirely closed."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "References"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Popular “Atlantis/Mu” accounts were not used as evidence. The main framework compares geology, palaeogeography and the published human-made interpretation."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ogata, T., Otsubo, M. & Itoh, H. (2020)."
+              ]
+            },
+            " “Geosites of Yonaguni Island Located at the Westernmost Point of Japan.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "E-journal GEO"
+              ]
+            },
+            " 15(1):44–54. Yonaguni's sandstone, faults, joints and erosional geomorphology.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.4157/ejgeo.15.44"
+              },
+              "children": [
+                "J-STAGE / DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Kan, H. and colleagues (2024)."
+              ]
+            },
+            " “Submarine Erosional landforms of sandstone around Yonaguni Island.” Association of Japanese Geographers Annual Meeting. Multibeam sonar, ROV photogrammetry and SCUBA surveys.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.14866/ajg.2024s.0_121"
+              },
+              "children": [
+                "J-STAGE / DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Kimura, M. (2003)."
+              ]
+            },
+            " “Paleogeography of Ryukyu Islands and submarine ruins off Yonaguni, Okinawa, southern Japan.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal of Fossil Research"
+              ]
+            },
+            " 36(2):33–42. An academic presentation of the human-made interpretation.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.60339/kasekiken.36.2_33"
+              },
+              "children": [
+                "J-STAGE / DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Kimura, M. (2000)."
+              ]
+            },
+            " “Paleogeography of the Ryukyu Islands.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Tropics"
+              ]
+            },
+            " 10(1):5–24. Ryukyu palaeogeography, sea level and the interpretation of underwater remains.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.3759/tropics.10.5"
+              },
+              "children": [
+                "J-STAGE / DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Omura, A. et al. (1994)."
+              ]
+            },
+            " “Tectonic History of Yonaguni Island…”. ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "The Quaternary Research"
+              ]
+            },
+            " 33(4):213–231. Yonaguni's tectonic and marine-terrace history.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.4116/jaqua.33.213"
+              },
+              "children": [
+                "J-STAGE / DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Japan National Tourism Organization."
+              ]
+            },
+            " “Yonaguni Underwater Monument.” Discovery, dimensions and the official tourism framing.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.japan.travel/en/spot/564/"
+              },
+              "children": [
+                "JNTO"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Robert M. Schoch."
+              ]
+            },
+            " Yonaguni field assessment. Not an academic journal article; a primary commentary directly documenting the natural/partial-human-intervention view of a geologist who examined the site.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.robertschoch.com/yonaguni.html"
+              },
+              "children": [
+                "Schoch – Yonaguni"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Last updated: 6 October 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

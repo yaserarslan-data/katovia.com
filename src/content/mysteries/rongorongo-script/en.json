@@ -1,0 +1,1756 @@
+{
+  "schemaVersion": 1,
+  "id": "rongorongo-script",
+  "locale": "en",
+  "source": {
+    "filename": "Rongorongo_Yazisi_Interaktif_Dosya.html",
+    "sha256": "a9bf7ce921df4564592e9c8ee54451499b85a58a2ce7bb744874a06586d8abbf",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "editorial-translation",
+    "independentlyReviewed": false,
+    "sourceLocale": "tr",
+    "sourceRevision": "2026-10-06",
+    "sourceContentSha256": "a8a23e0cbf28699b54a2b6d14fa716f38c0c8b1d21f6db4384309aecd0e09494"
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The case in 60 seconds"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nRongorongo still cannot be read. But “we know nothing” is also incorrect.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nOutsiders recorded the writing in the nineteenth century, and approximately 26 inscribed objects survive today. The texts are mostly incised on wooden tablets with figurative and compound glyphs.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe writing is generally arranged in ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "reverse boustrophedon:"
+                  ]
+                },
+                " the tablet is turned 180 degrees at the end of each line to read the next. Such regular organisation, recurring sequences and correction marks suggest more than random decoration.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe most promising section is the lunar-calendar sequence on the ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Mamari tablet."
+                  ]
+                },
+                " There is fairly strong scholarly agreement on a structure associated with a sequence of lunar nights. This does not mean the whole system has been deciphered.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nA radiocarbon study published in 2024 made the debate more interesting: one tablet's wood was dated to the fifteenth century. This strengthened the possibility that rongorongo was invented independently of European contact—but the wood's age is not the same as the date when the writing was incised.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The claim"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“The people of Easter Island independently invented a system unlike any other script in the world. The tablets contain royal genealogies, astronomy, agriculture and lost Rapa Nui history—but modern people still cannot read them.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nSome parts of this claim are plausible; others are unproven. The system does differ markedly in form from other scripts. The 2024 dating strengthened the possibility of independent invention. But we still do not know exactly which kinds of texts the tablets contain.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What we know"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The outside world noticed it in 1864"
+                  ]
+                },
+                "Mission observers recorded the existence of inscribed tablets on the island."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "A very small corpus"
+                  ]
+                },
+                "Approximately 26 inscribed objects survive, scattered across museums and collections."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Figurative glyphs"
+                  ]
+                },
+                "Signs resemble people, body parts, animals, plants, tools and celestial objects."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "An unusual writing direction"
+                  ]
+                },
+                "The texts mostly use reverse boustrophedon: the tablet is turned at the end of each line."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The sign count is uncertain"
+                  ]
+                },
+                "Barthel catalogued 599 forms, but some are variants or ligatures. New work suggests the number of basic signs may be much lower."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The key to decipherment was lost"
+                  ]
+                },
+                "Slave raids, epidemics and population collapse in the nineteenth century severely disrupted the transmission of traditional knowledge."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The evidence"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — Not random drawings"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe texts contain recurring sequences, regular lines, complex ligatures and occasional scribal corrections. A palaeographic study in 2022 used 3D modelling to correct older drawn transcriptions, clarifying this structural organisation.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Strong support for a linguistic/notational system"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — But “fully phonetic writing” is not established either"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nHow far Rongorongo encodes actual language remains disputed. Proposed models include fully logographic, logo-phonetic, syllabic and mixed systems. A 2024 Oxford chapter presents a new model interpreting it as logo-phonetic notation that largely omits grammatical words. This is an important proposal, not a final solution.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "The script type remains open"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — The 2024 radiocarbon result really matters"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe Scientific Reports study directly dated four tablets held in Rome. Three tablets' wood was close to a nineteenth-century use horizon, whereas the wood used for Tablet D / Échancrée dates securely back to the ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "mid-fifteenth century."
+                  ]
+                },
+                " That is the age of the wood.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThis is one of the most exciting findings in Rongorongo's history: the writing occurs on wood predating the arrival of European ships in the eighteenth century.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Strengthens the possibility of independent invention"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — Old wood ≠ old writing"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe researchers specifically caution that Tablet D's wood is not native to Rapa Nui and was probably reused. A tree living in the fifteenth century therefore does not, by itself, establish that the glyphs were incised then.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "A critical limitation"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — Why did the tradition disappear so quickly?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nPeruvian slave raids beginning in 1862 removed a substantial proportion of Rapa Nui's elite and traditional knowledge holders. Returning survivors brought epidemics, and the population declined further. By the late 1860s, active transmission of the rongorongo tradition appears to have ended.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Loss of the “living key” to decipherment"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "takvim"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The Mamari tablet: our strongest clue"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nRongorongo is not entirely obscure. There is fairly strong agreement among researchers that a particular sequence on the Mamari tablet is a lunar calendar.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nLines Ca6–Ca8 of Tablet C / Mamari, and possibly surrounding sections, are interpreted as a calendrical sequence reflecting the ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "list of lunar nights"
+                  ]
+                },
+                " known from Rapa Nui and Eastern Polynesian traditions.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nPaul Horley's astronomical and palaeographic analysis argued that the sequence fits a 30-night lunar cycle. A new assessment published by Oxford University Press in 2024 also recognises the “lunar calendar” interpretation as one of the strongest partial readings in the scientific literature.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nRecognising a calendar sequence is different from knowing the phonetic values of individual glyphs. Mamari therefore offers ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "a window onto the text's subject,"
+                  ]
+                },
+                " not yet a dictionary.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Theories"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory A — A genuine logo-phonetic writing system"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Long linear texts, sign combinations, recurring sequences, corrections and the possible lunar-calendar section strongly suggest linguistic encoding."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " A tiny corpus and lack of reliable bilingual texts prevent systematic verification of glyph-to-sound/meaning matches."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory B — Mnemonic notation supporting oral tradition"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Small societies can support memorised chants, genealogies or ritual knowledge with reminder signs. The figurative glyphs could fit this."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Complex structural patterns suggest a system more developed than simple reminder signs."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory C — Local invention after exposure to European writing"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Rapa Nui people saw Europeans writing in 1770; the wood of many surviving tablets is also consistent with a nineteenth-century horizon."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Rongorongo signs do not formally resemble known European writing. The old-wood result in 2024 also keeps an earlier independent origin open."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory D — Independent invention before European contact"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The system's uniqueness and fifteenth-century wood make this a serious possibility. If confirmed, it would be one of the very rare examples of independent invention of writing in human history."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " The wood's age is not the inscription's age. No Rongorongo text has yet been found in an excavated context securely dated before European contact."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory E — Genealogies, chants, astronomy and ritual texts on the tablets"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Late ethnographic testimony and Mamari's calendar sequence make multiple text genres possible."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Most ethnographic testimony was recorded after the tradition collapsed, making reliable matches between meanings and tablets difficult."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "viral"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral claims: are they true?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Claim"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Assessment"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Why?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Rongorongo is completely undeciphered; not a single glyph is understood.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "An overstatement"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "There is no complete decipherment, but structures such as Mamari's lunar calendar and possible glyph functions have strong partial readings."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“In 2024, the writing was proven to date to the fifteenth century.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "What was dated to the fifteenth century was the wood itself. The incision of the writing could not be directly dated."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Rongorongo is one of the world's oldest scripts.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Even its earliest possible date is thousands of years later than ancient Mesopotamian and Egyptian writing."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It definitely existed before Europeans arrived.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Probable, but unproven"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The 2024 study strengthened the possibility; a definite inscription date is still missing."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The Inca or South Americans brought the script.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "No evidence"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "No reliable genealogical relationship has been demonstrated between Rongorongo glyphs and known Andean writing/notational systems."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“AI has now deciphered Rongorongo.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "3D modelling and computer analysis improve transcription; a full reading and linguistic decipherment are still absent."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It was completely deciphered in 2025.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "New studies offer high-confidence proposals for some glyphs, but no commonly accepted solution reads the entire academic corpus."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What remains unknown"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The signs' sound/meaning values"
+                  ]
+                },
+                "Most glyphs lack a reliable reading."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The system's type"
+                  ]
+                },
+                "Logo-phonetic, syllabic, mixed, or somewhere between language and mnemonic notation?"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "When was it invented?"
+                  ]
+                },
+                "Independent invention before European contact is strongly back on the agenda, but is not certain."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The texts' subjects"
+                  ]
+                },
+                "Apart from the calendar, it is unknown which tablets contain chants, genealogies, ritual, history or other genres."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The basic glyph count"
+                  ]
+                },
+                "How many of the hundreds of drawn variants are genuinely separate signs remains disputed."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Why is there no Rosetta Stone?"
+                  ]
+                },
+                "Without a bilingual or reliably explained Rongorongo text, proposed decipherments cannot be checked."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "My assessment"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🔴 Rongorongo is genuinely undeciphered — but we are no longer entirely in the dark."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nFor me, the most exciting aspect is not “strange symbols”, but the possibility that a society as isolated as Rapa Nui ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "invented writing independently."
+                  ]
+                },
+                "\nIf a pre-European Rongorongo inscription is directly dated, a very significant new example could be added to the history of independent inventions of writing.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe 2024 result substantially strengthened this possibility without settling it. Later writing could have been incised on old wood.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe greatest obstacles to decipherment are the small corpus and nineteenth-century cultural catastrophe. The tradition of reading or teaching rongorongo was broken without leaving a reliable translation key. Current research therefore proceeds through ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "high-quality 3D scans, sound palaeography, statistical patterns, and Rapanui language and ethnography."
+                  ]
+                },
+                " These form its current path.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Status in this series:"
+              ]
+            },
+            " 🔴 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "A genuinely open problem."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nThere has been substantial progress on the system's structure, and Mamari's lunar calendar has probably been identified, but Rongorongo texts still cannot be read reliably.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "References"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Recent academic work was prioritised. “Deciphered” claims were considered only when they could be cross-verified in peer-reviewed literature."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ferrara, S. and colleagues (2024)."
+              ]
+            },
+            " “The invention of writing on Rapa Nui (Easter Island). New radiocarbon dates on the Rongorongo script.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Scientific Reports"
+              ]
+            },
+            " 14, 2794. Direct radiocarbon dating of four tablets; fifteenth-century wood in one specimen.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.nature.com/articles/s41598-024-53063-7"
+              },
+              "children": [
+                "Scientific Reports"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ferrara, S. and colleagues (2022)."
+              ]
+            },
+            " “Modelling the Rongorongo tablets: A new transcription of the Échancrée tablet and the foundation for decipherment attempts.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Digital Scholarship in the Humanities"
+              ]
+            },
+            " 37(2):497–519. 3D modelling and new palaeographic transcription.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://academic.oup.com/dsh/article/37/2/497/6387816"
+              },
+              "children": [
+                "Oxford Academic"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Valério, M. (2024)."
+              ]
+            },
+            " “The Rongorongo ‘Lunar Calendar’ of Rapa Nui (Easter Island) and the Type of Script.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Writing from Invention to Decipherment"
+              ]
+            },
+            ", Oxford University Press. A recent assessment of Mamari's lunar calendar and script typology.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://academic.oup.com/book/58672/chapter/485388496"
+              },
+              "children": [
+                "Oxford Academic"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Horley, P. (2011)."
+              ]
+            },
+            " “Lunar calendar in rongorongo texts and rock art of Easter Island.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal de la Société des Océanistes"
+              ]
+            },
+            " 132:17–38. Palaeographic and astronomical analysis of Mamari's 30-night lunar cycle.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.4000/jso.6314"
+              },
+              "children": [
+                "DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Horley, P. (2009)."
+              ]
+            },
+            " “Rongorongo Script: Carving Techniques and Scribal Corrections.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal de la Société des Océanistes"
+              ]
+            },
+            ". Incision techniques, corrections and reverse-boustrophedon arrangement.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.4000/jso.5813"
+              },
+              "children": [
+                "DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Horley and related work (2021)."
+              ]
+            },
+            " “The rongorongo tablet from Berlin and the time-depth of Easter Island’s writing system.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal of Island & Coastal Archaeology"
+              ]
+            },
+            ". The collapse of the Rongorongo tradition, the 1862 slave raids and the dating debate.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.tandfonline.com/doi/full/10.1080/15564894.2021.1950874"
+              },
+              "children": [
+                "Taylor & Francis"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Wieczorek, R. (2025)."
+              ]
+            },
+            " “Aspects of Rongorongo Decipherment.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal of the Polynesian Society"
+              ]
+            },
+            " 134(3):343–392. A recent study compiling glyph-decipherment proposals by confidence level. It does not claim complete decipherment, but offers partial, cross-verifiable proposals."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Australian Museum (2026)."
+              ]
+            },
+            " “Kōhau Roŋoroŋo: Talking Tablet.” A recent institutional overview: reverse-boustrophedon reading direction and Rapa Nui cultural context.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://australian.museum/learn/cultures/pasifika-collections/rapa-nui-collections/kohau-rongorongo-talking-tablet/"
+              },
+              "children": [
+                "Australian Museum"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Last updated: 6 October 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

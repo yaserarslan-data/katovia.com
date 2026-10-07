@@ -4,13 +4,14 @@ import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { repoRoot } from './paths.mjs';
 import { sections } from '../src/catalog/registry.js';
+import { mysteryRoutes } from '../src/catalog/mysteries.js';
 
 const server = await createServer({ configFile: resolve(repoRoot, 'vite.config.js'), server: { port: 0, host: '127.0.0.1' } });
 let browser;
 try {
   await server.listen();
   const base = `http://127.0.0.1:${server.httpServer.address().port}`;
-  for (const route of ['/', '/v2/', ...sections.map((section) => section.route), '/laboratuvar/qr-kod-olusturucu.html']) {
+  for (const route of ['/', '/v2/', ...sections.map((section) => section.route), ...mysteryRoutes, '/laboratuvar/qr-kod-olusturucu.html']) {
     const response = await fetch(base + route);
     if (response.status !== 200) throw new Error(`Dev ${route}: ${response.status}`);
     if (route === '/' && !(await response.text()).includes('data-daily-mount')) throw new Error('Dev root shell missing');
@@ -26,7 +27,13 @@ try {
   await page.getByRole('navigation').getByRole('link', { name: 'TOOLS', exact: true }).click();
   await page.waitForURL('**/tools/');
   if (errors.length) throw new Error(errors.join('\n'));
-  console.log('Dev smoke passed: production root shell, all entries, QR, true 404, source modules and mobile navigation.');
+  await page.goto(base + '/tr/mysteries/');
+  await page.locator('input[name=q]').fill('Voynich');
+  await page.locator('[data-case-link]:visible').click();
+  await page.waitForURL('**/tr/mysteries/voynich-manuscript/**');
+  if (await page.locator('.mystery-content section').count() !== 11) throw new Error('Dev research sections missing');
+  if (errors.length) throw new Error(errors.join('\n'));
+  console.log('Dev smoke passed: root shell, app and mystery routes, QR, true 404, source modules and mobile navigation.');
 } finally {
   await browser?.close();
   await server.close();

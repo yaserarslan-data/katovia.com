@@ -1,0 +1,2188 @@
+{
+  "schemaVersion": 1,
+  "id": "voynich-manuscript",
+  "locale": "en",
+  "source": {
+    "filename": "Voynich_El_Yazmasi_Interaktif_Dosya.html",
+    "sha256": "6fea23b60a003e1e37f399ecb71de4e3ed37e45dac04221ee744d55ad571e2a9",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "editorial-translation",
+    "independentlyReviewed": false,
+    "sourceLocale": "tr",
+    "sourceRevision": "2026-10-06",
+    "sourceContentSha256": "6e0f75e8309f6e3c701a0a308867e05864d06a3b42c8805887fb41c2fb060d0a"
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The conclusion in 60 seconds"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "hook"
+          },
+          "children": [
+            "The safest statement about the Voynich Manuscript is this: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "the book is real, medieval, and its text remains unreadable."
+              ]
+            },
+            " But we also lack sufficient grounds to call it “entirely meaningless scribbling”."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "📜 Its age"
+                  ]
+                },
+                "The parchment has been radiocarbon-dated to 1404–1438; the inks and pigments are also consistent with medieval materials.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Not a modern forgery"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🔤 Is the text a language?"
+                  ]
+                },
+                "Many statistical studies find language-like structure in the text that is stronger than random scribbling.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Significant indications in favour of language/cipher"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🔐 Is it a cipher?"
+                  ]
+                },
+                "Some features are consistent with certain types of cipher, but there is no accepted key or complete solution.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Possible, not established"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🎭 A fabricated text?"
+                  ]
+                },
+                "Rule-based methods can generate Voynich-like text, so the possibility of a hoax remains open.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ Still on the table"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "🌿 The plants"
+                  ]
+                },
+                "Most drawings cannot be reliably assigned to a particular species; calling them “alien plants that do not exist on Earth” is unnecessary.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ They may be stylised/composite drawings"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "✨ Astronomy"
+                  ]
+                },
+                "Zodiac and star-like motifs can be recognised, but the exact function of the diagrams and their relationship to the text are unknown.",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "verdict"
+                  },
+                  "children": [
+                    "→ The theme is identifiable, the content is not"
+                  ]
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "The case's brief assessment:"
+              ]
+            },
+            " Voynich is a genuinely unsolved problem. But the mystery is not “which world did it come from?”; it is ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "why people in the fifteenth century produced this book, and which encoding or writing system they used."
+              ]
+            }
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "1. The claim"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "quote"
+          },
+          "children": [
+            "“What world's language does the Voynich Manuscript speak—a book containing strange plants and astronomical maps unlike anything on Earth, which no cryptologist or linguist has been able to decipher for centuries?”"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Within this viral statement, ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "four different questions"
+              ]
+            },
+            " are conflated:"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "1)"
+              ]
+            },
+            " Does the text actually carry meaning?   ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "2)"
+              ]
+            },
+            " If it does, is it a natural language, a cipher, or an abbreviation system?   ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "3)"
+              ]
+            },
+            " Do the drawings represent real objects?   ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "4)"
+              ]
+            },
+            " What was the book's purpose?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "“It has not been deciphered” is true. That does not establish that it is “non-human”, “the language of a lost civilisation” or “from another world”."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "2. What we know"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "The Voynich Manuscript is an illustrated codex written on parchment, held at Yale University's Beinecke Rare Book & Manuscript Library as ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "MS 408"
+              ]
+            },
+            " . Yale's catalogue describes the text as an “unidentified writing system”; the illustrations are broadly divided into herbal, astronomical/astrological, balneological, cosmological, pharmaceutical and recipe-like sections."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "Its historical trail — a short version"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "ul",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1404–1438:"
+                  ]
+                },
+                " The University of Arizona's radiocarbon analyses identify this interval as the most likely period in which the parchment was produced."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Fifteenth century:"
+                  ]
+                },
+                " Analyses of the inks and pigments show that the materials are consistent with medieval manuscripts."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Seventeenth century:"
+                  ]
+                },
+                " Johannes Marcus Marci's letter to Athanasius Kircher is an important link in the book's known early provenance; it recounts a second-hand story of a purchase involving Rudolf II."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1912:"
+                  ]
+                },
+                " Bookseller Wilfrid M. Voynich purchases the manuscript from a Jesuit collection in Italy; it becomes known in the modern world by his name."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1969:"
+                  ]
+                },
+                " H. P. Kraus donates it to Yale."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "2009:"
+                  ]
+                },
+                " Material analyses and radiocarbon results substantially weaken the possibility of a modern forgery."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "2020:"
+                  ]
+                },
+                " Lisa Fagin Davis argues for multiple scribal hands on the basis of palaeographic analysis; the most widely cited model proposes five distinct hands."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "2026:"
+                  ]
+                },
+                " Layfield and Davis publish two studies examining textual coherence and binding structure; the second argues that the page order in which we read the book today may not be its original arrangement."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "mini"
+          },
+          "children": [
+            "An important nuance: radiocarbon analysis measures the age of ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "the parchment."
+              ]
+            },
+            " It does not, by itself, establish the precise year in which the writing was added. However, ink/pigment analyses and historical style are broadly consistent with production in the early fifteenth century."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "3. The evidence"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "A) Physical evidence: a genuine medieval object"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Yale's conservation work and the McCrone Associates material analysis show that the book's parchment, inks and pigments are consistent with medieval manuscript production. In 2009, radiocarbon curves from four different parchment samples proved mutually consistent, and the combined interval was reported as 1404–1438."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "What has been ruled out?"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "The material evidence makes the hypothesis that “Voynich is a modern forged book made in the nineteenth or twentieth century” very weak."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "B) The text does not appear random"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Two separate studies published in PLOS ONE in 2013 reached an important point of agreement. Amancio and colleagues reported that the Voynich text largely resembles natural languages on various network and word-statistical measures; Montemurro and Zanette reported topic-like clustering and information-bearing word networks in the long-range distribution of words."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "These studies do ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "not claim to have translated the text."
+              ]
+            },
+            " Their finding is narrower but important: the distribution of symbol sequences across the pages is more regular than would be expected from simple random scribbling."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "C) The text also differs strangely from natural languages"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "In 2022, Matlach, Janečková and Dostál found strong autocorrelations in the repetition behaviour of symbols that differed from the 21 natural languages and some encrypted examples they tested. “There is language-like structure” therefore does not mean “it behaves like one of the natural languages we know”."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "This peculiarity leaves room for both ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "a distinctive encoding system"
+              ]
+            },
+            " and ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "rule-based artificial generation"
+              ]
+            },
+            " as hypotheses."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "D) Sections and word use are related"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "There are measurable relationships between changes in word distribution and the visual sections conventionally labelled “herbal”, “astronomical” and so on. This reduces the likelihood that the drawings are merely decorations entirely independent of the text."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "E) 2026: we may be reading the pages in the wrong order"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card new"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "A new development — 2026"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Colin Layfield and Lisa Fagin Davis's peer-reviewed ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Digital Medievalist"
+                  ]
+                },
+                " study considers binding structure alongside Latent Semantic Analysis results. It proposes that the manuscript may originally have been designed as a sequence of “singulions”—individually folded bifolia—rather than nested quires. If this is correct, the page order we see today may disrupt the original reading order."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "This study does not decipher the text. But it changes something important: some “meaningless transitions” might be caused not by the language, but by ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "a later rearrangement of the pages"
+              ]
+            },
+            "."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "Weight of evidence — at a glance"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Fifteenth-century parchment / materials"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "very strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Rule-governed statistical structure in the text"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "The conclusion that it is a natural language"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "moderate to strong, but disputed"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "The conclusion that it is a cipher"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "possible; no specific key"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "An entirely meaningless fabricated text"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "possible, but simple randomness is a weak explanation"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "meter"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": []
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "sorular"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "4. Five major questions"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1) Is the text really a language?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "The safest answer:"
+              ]
+            },
+            " it has statistical structure resembling natural language, but it has not been established that it must be a natural language written directly."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "In 2021, Yale linguists Claire Bowern and Luke Lindemann reviewed the linguistic research and argued that the natural-language hypothesis should be taken seriously. Other researchers, however, show that Voynich-like structures can also be obtained through meaningless but rule-governed generation."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2) Is it a cipher?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "It could be. But simple substitution ciphers of the familiar “letter A equals this symbol” kind have long appeared inadequate. Word positions within pages and lines, symbols occurring only in particular places, and word families may require a more complex mechanism: an abbreviation system, syllable-based code, multilayered cipher, steganographic structure, or a combination of these."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "In 2022, Bowern and Gaskell showed that some word-level measures can remain consistent with certain forms of encryption. The inference “its statistics resemble language, so it cannot be a cipher” is therefore incorrect."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3) Could it be meaningless fabricated text?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Yes; that has not been entirely ruled out. In 2004, Gordon Rugg showed that Voynich-like words could be produced quickly using tables and methods resembling the Cardan grille known in the Renaissance. This refutes the claim that “such a hoax was technically impossible in the fifteenth century”."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "The difficulty, however, is that an explanation must account not only for the appearance of the words, but also for ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "long-range distributions, differences between sections, repetition patterns and possible behaviour of multiple scribes."
+              ]
+            },
+            " A hoax is possible, but it has not been “easily proven”."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4) Do the plant drawings depict real species?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "According to the cautious descriptions in Yale and PLOS sources, most plants ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "cannot be unambiguously matched to a single real species."
+              ]
+            },
+            " Several ordinary explanations are possible: stylisation within the medieval herbal tradition, combinations of parts from different plants, distortion through successive copying, or symbolic/functional drawing."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "“Plants unlike anything on Earth” is a visually appealing statement, but scientifically weak. Failure to identify a plant does not mean it does not exist in nature."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5) What do the astronomical/astrological diagrams show?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "Some motifs, such as zodiac signs and star shapes, can clearly be related to the medieval astrological tradition. Nevertheless, it is unknown whether the diagrams specifically represent a calendar, astrological calculations, medical astrology, cosmology, or some other system."
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "The problem here is the same: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "we recognise the type of image, but cannot read its caption."
+              ]
+            },
+            " Until the text is deciphered, we must settle for strong but uncertain interpretations of the diagrams' purpose."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "5. Theories"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "hook"
+          },
+          "children": [
+            "There is no “single grand theory” of Voynich. A better approach is to examine which data several competing models explain well or poorly."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🗣️ Theory 1 — A natural language written in an unknown script"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Strength:"
+                  ]
+                },
+                " word frequencies, topic-related distributions and some long-range relationships resemble natural texts. ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Weakness:"
+                  ]
+                },
+                " some constraints on symbol and word structures are unusually rigid for known languages; there is no reliable match to a language."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🔐 Theory 2 — An encrypted/abbreviated form of a known language"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Strength:"
+                  ]
+                },
+                " ciphers, abbreviations and shorthand systems were used in the medieval and early modern periods; these might explain Voynich's unusual symbol distribution. ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Weakness:"
+                  ]
+                },
+                " after more than a century of analysis, there is no key that works throughout the book and whose results independent researchers can reproduce."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🧠 Theory 3 — An artificial/constructed language"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Strength:"
+                  ]
+                },
+                " it could explain rules resembling natural languages but fitting no language family. Prominent cryptologists such as William Friedman historically took an interest in this possibility. ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Weakness:"
+                  ]
+                },
+                " there is no direct evidence of the language's vocabulary or grammar; “artificial language” sometimes merely gives the unknown a new name."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "🎭 Theory 4 — A deliberate hoax / rule-governed text without meaning"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Strength:"
+                  ]
+                },
+                " Rugg and later generative models show that people can produce rule-governed but meaningless Voynich-like text. ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Weakness:"
+                  ]
+                },
+                " it is difficult to explain the book's organisation at section level, relationships between drawings and text, and subtle statistical patterns within the same generative model."
+              ]
+            }
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "📚 Theory 5 — A medical/herbal/astrological reference book"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Strength:"
+                  ]
+                },
+                " plants, containers, body/bathing scenes, the zodiac and stars are thematically consistent with medieval medical, herbal and astrological literature. ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "Weakness:"
+                  ]
+                },
+                " because the text cannot be read, more specific descriptions such as “a women's health manual” or “pharmaceutical recipes” cannot be directly verified."
+              ]
+            }
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "efsaneler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "6. Social media / internet claims"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "❌ “It depicts plants unlike anything on Earth.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "An overinterpretation. Most drawings cannot be reliably identified; this does not mean they have no real-world counterpart. Stylisation and composite drawings are possible within the medieval herbal tradition."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "❌ “No linguist or cryptologist has learned anything about the text.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "False. There is no translation, but we know a great deal that can be measured about word statistics, symbol positions, Currier A/B differences, section clustering and scribal hands."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "❌ “AI has deciphered Voynich.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Not verified. Computer models can suggest candidate languages and structural patterns, but no independently reproducible translation working across all pages has been produced."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "❌ “It was established as Proto-Romance in 2019.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "No. Gerard Cheshire's paper was published, but received serious methodological criticism from linguists and medieval specialists. The University of Bristol withdrew its initial publicity story following these criticisms. The proposal did not become an academic consensus."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "🟡 “It has been deciphered as Old Turkish.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "This is not an accepted solution either. Turkish/Turkic language hypotheses attracted public interest, but no academic consensus has emerged around a translation of the whole text using the same transparent, independently applicable method."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card myth"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "🟡 “It is definitely a women's health book.”"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "That could be one of its themes; naked female figures, baths and plants encourage this interpretation. But because the text cannot be read, presenting this as “definite content” exceeds the limits of the data."
+              ]
+            }
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "7. What remains unknown"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Language / code"
+                  ]
+                },
+                "The language, encoding method or generative system underlying the text is unknown."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Authors and location"
+                  ]
+                },
+                "We do not know who produced the book, precisely where, or within which institution or circle."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Purpose"
+                  ]
+                },
+                "A medical book, a private reference notebook, teaching material, an esoteric work—it is not certain."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Meaning of the drawings"
+                  ]
+                },
+                "What many plants, pipes, pools and cosmological shapes represent is unclear."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Original page order"
+                  ]
+                },
+                "If the 2026 “singulion” hypothesis is correct, the present binding arrangement may have disrupted the original flow of the text."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "claim"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "❓ Why are there no other examples?"
+                  ]
+                },
+                "If a community really used this writing system, it is unknown why no other definite examples have survived."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "The real mystery:"
+              ]
+            },
+            " This is not a book about which we know nothing. On the contrary, there is a surprising amount of data about its physical history and textual structure. What is missing is the key that brings all these data together into ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "one testable, readable explanation"
+              ]
+            },
+            "."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "8. My assessment"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "In my view, the most important message of the evidence is this: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "presenting Voynich as an “alien language” inflates the mystery while diminishing the scientific question."
+              ]
+            },
+            " The real problem is much more interesting: why does the writing system of a book physically consistent with fifteenth-century Europe resist modern linguistics and cryptology so persistently?"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Does the text carry meaning?"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "The balance of evidence points towards a system that is ",
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "rule-governed and probably information-bearing,"
+                  ]
+                },
+                " rather than simple random scribbling. But “statistically language-like” is not the same as “proven to be a natural language”."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Which category is most plausible?"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "A natural language with unusual spelling/abbreviation, or some family of encoding, seems to me a better starting hypothesis than purely random fabrication. This is not a conclusion, however: there is still no general key that works on the text."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Why does the 2026 finding matter?"
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "If the original page order has been disrupted, some earlier linguistic models may have been built on incorrect adjacencies. This does not mean “a solution has been found”, but it could bring a real methodological change to future research."
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "p",
+          "attrs": {},
+          "children": [
+            "My minimum test for taking a proposed Voynich solution seriously would be: ",
+            {
+              "tag": "strong",
+              "attrs": {},
+              "children": [
+                "the same rules must yield consistent text on previously unused pages, not merely on a few selected words; other researchers must reach the same result using the same key."
+              ]
+            },
+            " So far, no popular “I've solved it” claim has passed this threshold in a way that has gained broad acceptance."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "durum"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "9. Status"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "final"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "big-status"
+              },
+              "children": [
+                "🔴 GENUINELY UNSOLVED — but we are not entirely in the dark"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot green"
+                      },
+                      "children": []
+                    },
+                    " Largely answered:"
+                  ]
+                },
+                " That the object is a genuine medieval manuscript."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot green"
+                      },
+                      "children": []
+                    },
+                    " Strong evidence:"
+                  ]
+                },
+                " That the text is more regular than a simple random sequence of symbols and is structured at section level."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot yellow"
+                      },
+                      "children": []
+                    },
+                    " Strong possibility:"
+                  ]
+                },
+                " That the text carries linguistic or encoded information."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot yellow"
+                      },
+                      "children": []
+                    },
+                    " Still disputed:"
+                  ]
+                },
+                " Which explanation is correct: natural language, cipher, abbreviation system, artificial language, or rule-governed fabricated text."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot red"
+                      },
+                      "children": []
+                    },
+                    " Unsolved:"
+                  ]
+                },
+                " A reliable, reproducible translation that works throughout the book."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "status"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "dot red"
+                      },
+                      "children": []
+                    },
+                    " Unsupported:"
+                  ]
+                },
+                " Definitive viral claims such as “a language from another world”, “AI has definitely solved it”, or “it has now been proven to be this language”."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynakca",
+        "class": "sources"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "10. References"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "ol",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://beinecke.library.yale.edu/beinecke/collections/beinecke-cipher-voynich-manuscript"
+                  },
+                  "children": [
+                    "Yale Beinecke Rare Book & Manuscript Library — The Beinecke Cipher (Voynich) Manuscript"
+                  ]
+                },
+                ". Institutional catalogue record and descriptions of the sections."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://beinecke.library.yale.edu/sites/default/files/files/voynich_analysis.pdf"
+                  },
+                  "children": [
+                    "McCrone Associates (2009), Materials Analysis of the Voynich Manuscript"
+                  ]
+                },
+                ". Material analysis of inks and pigments."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "University of Arizona AMS radiocarbon analysis (2009): the combined result from four parchment samples is 1404–1438 (95%); the result is reported by Yale and specialist sources."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0067310"
+                  },
+                  "children": [
+                    "Amancio, D.R. et al. (2013). “Probing the Statistical Properties of Unknown Texts: Application to the Voynich Manuscript.” PLOS ONE 8:e67310."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066344"
+                  },
+                  "children": [
+                    "Montemurro, M.A. & Zanette, D.H. (2013). “Keywords and Co-Occurrence Patterns in the Voynich Manuscript: An Information-Theoretic Analysis.” PLOS ONE 8:e66344."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0260948"
+                  },
+                  "children": [
+                    "Matlach, V., Janečková, B.A. & Dostál, D. (2022). “The Voynich manuscript: Symbol roles revisited.” PLOS ONE 17:e0260948."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-011619-030613"
+                  },
+                  "children": [
+                    "Bowern, C.L. & Lindemann, L. (2021). “The Linguistics of the Voynich Manuscript.” Annual Review of Linguistics 7:285–308."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.tandfonline.com/doi/abs/10.1080/0161-110491892755"
+                  },
+                  "children": [
+                    "Rugg, G. (2004). “An Elegant Hoax? A Possible Solution to the Voynich Manuscript.” Cryptologia 28(1):31–46."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Davis, L.F. (2020). “How Many Glyphs and How Many Scribes? Digital Paleography and the Voynich Manuscript.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Manuscript Studies"
+                  ]
+                },
+                " 5(1):164–180. DOI: 10.1353/mns.2020.0011."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.researchgate.net/publication/405027080_The_Application_of_Latent_Semantic_Analysis_to_the_Voynich_Manuscript"
+                  },
+                  "children": [
+                    "Layfield, C. & Davis, L.F. (2026). “The Application of Latent Semantic Analysis to the Voynich Manuscript.” Digital Humanities Quarterly 20(1)."
+                  ]
+                },
+                " DOI: 10.63744/2ezxpskcezq4."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                "Layfield, C. & Davis, L.F. (2026). “Singulion Structure and the Voynich Manuscript.” ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "Digital Medievalist"
+                  ]
+                },
+                " 19. DOI: 10.4000/16k0a."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.bristol.ac.uk/news/2019/may/voynich-manuscript.html"
+                  },
+                  "children": [
+                    "University of Bristol (16 May 2019). Statement re: Voynich research paper."
+                  ]
+                },
+                " Institutional withdrawal statement concerning the “Proto-Romance” decipherment claim."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.tandfonline.com/doi/abs/10.1080/02639904.2019.1599566"
+                  },
+                  "children": [
+                    "Cheshire, G. (2019). “The Language and Writing System of MS408 (Voynich) Explained.” Romance Studies 37(1):30–67."
+                  ]
+                },
+                " The original paper proposing the disputed Proto-Romance interpretation."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://news.yale.edu/2025/02/21/deciphering-mysterious-manuscript"
+                  },
+                  "children": [
+                    "Yale News (2025). “Deciphering a mysterious manuscript.”"
+                  ]
+                },
+                " A recent expert assessment and the finding of multiple scribal hands."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "li",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "href": "https://www.theguardian.com/culture/2026/oct/06/voynich-manuscript-research-pages-wrongly-bound"
+                  },
+                  "children": [
+                    "The Guardian (6 October 2026). “A medieval manuscript has confounded scholars for centuries. Have they been reading it wrong all this time?”"
+                  ]
+                },
+                " A recent public-facing account of the 2026 “singulion” research; the peer-reviewed paper listed above is used for the underlying scientific claim."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "mini"
+          },
+          "children": [
+            "Source approach: popular news reports were used only to trace the current discussion. Wherever possible, the central historical, material, linguistic and cryptological claims draw on Yale, peer-reviewed papers and original research reports."
+          ]
+        },
+        "\n"
+      ]
+    }
+  ]
+}

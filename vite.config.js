@@ -1,3 +1,4 @@
+import { mysteryRoutes } from './src/catalog/mysteries.js';
 import { defineConfig } from 'vite';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
@@ -42,7 +43,7 @@ export default defineConfig({
     assetsDir: 'katovia-assets',
     target: ['es2022', 'safari16'],
     rolldownOptions: {
-      input: [resolve(siteRoot, 'index.html'), ...sections.map((section) => resolve(siteRoot, `${section.id}/index.html`)), ...[...experiences,...tools,...personalPages].map((entry) => resolve(siteRoot, `${entry.route.slice(1)}index.html`)), resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
+      input: [...mysteryRoutes.map(route => resolve(siteRoot, `${route.slice(1)}index.html`)), resolve(siteRoot, 'index.html'), ...sections.map((section) => resolve(siteRoot, `${section.id}/index.html`)), ...[...experiences,...tools,...personalPages].map((entry) => resolve(siteRoot, `${entry.route.slice(1)}index.html`)), resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
     },
   },
 });

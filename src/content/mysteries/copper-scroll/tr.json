@@ -1,0 +1,1618 @@
+{
+  "schemaVersion": 1,
+  "id": "copper-scroll",
+  "locale": "tr",
+  "source": {
+    "filename": "Bakir_Parsomen_Copper_Scroll_Interaktif_Dosya.html",
+    "sha256": "747ea4eb6186dc41d200ac6bcd2a17bdf726d6e9475a5e2f30e2fafdca96268b",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "source-only",
+    "independentlyReviewed": false
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "60 saniyede dosya"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nBakır Parşömen, Ölü Deniz Parşömenleri içindeki en tuhaf belgelerden biri:\nedebî veya dinî bir metin olmaktan çok, ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "64 ayrı saklama yerini ve oralara gömüldüğü söylenen hazineleri"
+                  ]
+                },
+                " listeleyen bir envanter gibi görünüyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n1952’de Kumran yakınındaki Mağara 3’te bulundu. Diğer parşömenlerin aksine bakır alaşımlı levha üzerine kazınmıştı.\nMetin, yer tarifleriyle birlikte altın, gümüş ve değerli nesnelerden söz ediyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAsıl gizem iki parçalı: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Hazine gerçekten var mıydı?"
+                  ]
+                },
+                " ve ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "varsa kimin hazinesiydi?"
+                  ]
+                },
+                "\nKudüs Tapınağı hazinesi, Kumran topluluğunun serveti veya başka bir grubun savaş sırasında sakladığı varlıklar gibi teoriler var.\nBugüne kadar metindeki hazineyle kesin olarak eşleştirilen bir buluntu yok.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "İddia"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“Bakır Parşömen, Roma işgali öncesinde Kudüs Tapınağı’nın altınlarını gizleyenlerin hazırladığı gerçek bir hazine haritasıdır.\nMetindeki tarifler çözülürse kayıp Tapınak hazinesi bulunabilir.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu, en ünlü yorum. Fakat “hazine listesi” ile “Tapınak hazinesi” aynı şey değil.\nMetin gerçek bir envanter gibi davranıyor; ama hazinenin kökenini açıkça söylemiyor.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Bildiğimiz gerçekler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1952’de bulundu"
+                  ]
+                },
+                "Kumran’daki Mağara 3’te arkeologlar tarafından keşfedildi."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Malzemesi sıra dışı"
+                  ]
+                },
+                "Diğer Qumran el yazmalarının çoğu deri veya papirüsken 3Q15 metal üzerine kazınmıştır."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tek parça değildi"
+                  ]
+                },
+                "Başlangıçta tek bir rulo olan levha, korozyon ve kırılganlık nedeniyle açılabilmek için kesilerek şeritlere ayrıldı."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "64 saklama noktası"
+                  ]
+                },
+                "Metin onlarca yer adı ve saklama tarifinin yanında altın, gümüş ve başka değerlerden söz eder."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Dil farklılık gösterir"
+                  ]
+                },
+                "İbranicesi, Qumran’daki birçok edebî metinden farklı ve daha geç dönem İbranicesine yakın özellikler taşır."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Hazine bulunmadı"
+                  ]
+                },
+                "Metindeki yerlerle kesin olarak ilişkilendirilen büyük bir hazine keşfi yok."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kanıtlar"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — Metin gerçekten “liste” gibi davranıyor"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBakır Parşömen bir vaaz, yorum veya apokaliptik vizyon gibi yazılmamış.\nMadde madde yer tarifleri, ölçüler ve gömülü değer miktarları veriyor.\nBu biçim, onu diğer Ölü Deniz Parşömenlerinden belirgin biçimde ayırıyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Doğrudan metinsel kanıt"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Bakır kullanımı kalıcılık niyetine işaret ediyor olabilir"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBir metni bakıra kazımak zahmetli ve pahalıdır; buna karşın deri veya papirüsten daha dayanıklı olabilir.\nBu yüzden birçok araştırmacı, yazarların bilgiyi uzun süre korumayı amaçladığını düşünür.\nAncak “bakır kullanıldı, demek ki hazine kesin gerçektir” sonucu mantıksal olarak zorunlu değildir.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Güçlü ipucu, kesin kanıt değil"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — Mekân tarifleri gerçek coğrafyaya benziyor ama çoğu belirsiz"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nMetin “şu vadideki sarnıcın altında”, “mezarın yakınında”, “kanalın içinde” türü yerel tarifler kullanıyor.\nSorun şu: iki bin yıl içinde isimler, yapılar, yollar ve peyzaj değişti.\nBirçok terimin tam karşılığı da tartışmalı.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Gerçekçi ama uygulanması zor"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — Devasa miktarlar yorumu zorlaştırıyor"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nMetinde listelenen toplam servet olağanüstü büyüktür. Bu, gerçek bir kurum hazinesi ihtimalini destekleyebileceği gibi,\nrakamların kopyalama, ölçü birimi veya yorum sorunları taşıyabileceğini de düşündürüyor.\nBu yüzden modern kilogram karşılıkları verilirken büyük ihtiyat gerekir.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Ölçek tartışmalı"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — Mağara bağlamı Qumran dünyasıyla ilişki kuruyor, ama yazarlığı kanıtlamıyor"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nParşömenin Mağara 3’te diğer Qumran metinleriyle birlikte bulunması, onun aynı tarihsel kriz bağlamında saklandığını düşündürüyor.\nFakat mağarada bulunması, metni mutlaka Qumran topluluğunun yazdığı anlamına gelmez.\nJerusalem’den getirilip saklanmış olması da araştırmada tartışılan seçeneklerden biridir.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Bağlam güçlü, aidiyet belirsiz"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "zaman"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Zaman çizelgesi"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "MS 1. yüzyıl"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Bakır Parşömen hazırlanır; paleografik ve tarihsel tartışmalar onu Roma dönemi Yahudeya’sına yerleştirir."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "MS 66–73"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Birinci Yahudi-Roma Savaşı. Hazinenin bu kriz sırasında saklanmış olabileceği en sık tartışılan tarihsel bağlamlardan biridir."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "MS 70"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Romalılar Kudüs’ü ve İkinci Tapınağı yıkar. Tapınak-hazinesi teorisinin merkezindeki dönüm noktası budur."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1952"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Parşömen Kumran Mağara 3’te bulunur."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1955–1956"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Aşırı kırılgan metal rulo Manchester’da kesilerek açılır ve okunabilir hâle getirilir."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1950’ler sonrası"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Hazine avları ve akademik tartışmalar başlar; Kudüs, Kumran ve Yahudiye çölü boyunca çeşitli yer eşleştirmeleri önerilir."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Günümüz"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Metin çözümlenmiş durumda, fakat hazineye dair kesin arkeolojik doğrulama hâlâ yok."
+                  ]
+                }
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Teoriler"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori A — Kudüs Tapınağı hazinesi"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Listelenen servetin büyüklüğü, sıradan bir grubun mal varlığından çok büyük bir kurum hazinesini düşündürüyor. MS 70 öncesi savaş ortamı da değerlerin saklanması için makul bir neden sunuyor."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Metin açıkça “Tapınak hazinesi” demez. Roma kaynakları da Tapınak’tan büyük miktarda ganimet götürüldüğünü bildirir; dolayısıyla tüm hazinenin önceden kaçırıldığı varsayımı sorunludur."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori B — Kumran / Essen topluluğunun hazinesi"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Parşömen Kumran mağaralarında bulundu ve Qumran koleksiyonuyla aynı kriz ortamında saklanmış olabilir."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Listelenen servet miktarı küçük/asketik bir topluluk için olağanüstü yüksek görünüyor. Ayrıca dil ve metin biçimi diğer sekter Qumran eserlerinden farklıdır."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori C — Birden çok kurum veya bağış deposunun birleşik envanteri"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " 64 farklı saklama yeri, tek bir kasadan ziyade dağıtılmış varlıklar düşündürüyor. Tapınak, bağışlar, yerel cemaatler veya kriz döneminde birleştirilen fonlar söz konusu olabilir."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Bunu açıkça doğrulayacak ikinci bir belge yok."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori D — Sembolik / kurgusal hazine listesi"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Devasa miktarlar ve çözülemeyen yer adları, edebî veya idealize bir envanter ihtimalini gündeme getirir."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Metnin kuru, teknik ve yer tarifli üslubu edebî bir alegoriden çok pratik kayıt izlenimi verir. Bakır üzerine kazıma tercihi de salt kurgu için alışılmadık."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "abartilar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral iddialar: doğru mu?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "İddia"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Hüküm"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Neden?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Bu kesin olarak Süleyman’ın hazinesinin haritası.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış / kronolojik olarak sorunlu"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Metin yaklaşık bin yıl daha geç bir döneme aittir. Süleyman’la doğrudan bağlantı gösteren kanıt yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Kayıp Ahit Sandığı’nın yerini tarif ediyor.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıt yok"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Metinde Ahit Sandığı’nı açıkça tanımlayan güvenilir bir ifade yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Hazine mutlaka gerçek, çünkü bakıra yazılmış.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Aşırı sonuç"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Bakır kalıcılık niyetini gösterebilir; içeriğin her maddesinin gerçek olduğunu tek başına ispatlamaz."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“64 yerin hiçbiri çözülemedi.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Abartılı"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Bazı coğrafi terimler ve bölgesel bağlamlar anlaşılabiliyor; sorun, kesin modern konum eşleştirmelerinin çoğunda uzlaşma olmaması."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Metin şifreli.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Genel olarak yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Metin zor ve bazı işaretler sıra dışı olsa da esas problem kriptografi değil; dil, topoğrafya ve tarihsel bağlam."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Hazinenin büyük kısmı bulundu ama saklanıyor.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıt yok"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Akademik olarak doğrulanmış, metindeki listeyle kesin eşleşen büyük bir keşif yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Hâlâ bilinmeyenler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Hazine gerçek miydi?"
+                  ]
+                },
+                "Metin gerçekçi bir envanter gibi görünür, fakat hiçbir ana depo doğrulanmadı."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Kime aitti?"
+                  ]
+                },
+                "Tapınak, Kumran topluluğu veya başka bir Yahudi grup arasında kesin seçim yapılamıyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Yer tarifleri neresi?"
+                  ]
+                },
+                "İki bin yıllık coğrafi ve dilsel değişim, birçok noktayı tanınmaz hâle getirmiş olabilir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Rakamlar ne kadar literal?"
+                  ]
+                },
+                "Ağırlık ve miktar okumaları ile antik ölçülerin modern karşılıkları konusunda ihtiyat gerekiyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Neden bakır?"
+                  ]
+                },
+                "Kalıcı arşivleme en mantıklı açıklama; fakat yazarın gerekçesini bilmiyoruz."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Son madde ve “kopya” meselesi"
+                  ]
+                },
+                "Metin başka bir kopya veya ayrıntılı kayıt bulunduğunu ima ediyor olabilir; bu yorum da tartışmalı ve böyle bir belge bulunmadı."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Benim değerlendirmem"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🔴 Metni okuyabiliyoruz. Gizem, ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "metnin anlattığı şeyin gerçek olup olmadığı."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBakır Parşömen, Voynich gibi “ne yazdığı anlaşılmayan” bir eser değil.\nTam tersine, ne yaptığını kabaca biliyoruz: gömülü değerlerin yerlerini listeleyen bir kayıt gibi davranıyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu nedenle dosyanın düğümü dilbilim değil, ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "arkeolojik doğrulama"
+                  ]
+                },
+                ".\nEğer tek bir maddesi bile tartışmasız biçimde bulunup metinle eşleştirilebilseydi, belgenin niteliğine dair tartışma dramatik biçimde değişirdi.\nŞimdilik böyle bir keşif yok.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBana göre en makul senaryo, metnin tamamen fantastik bir kurgu olmamasıdır.\nMetal üzerine bu kadar kuru ve lojistik ayrıntı kazımak, gerçek bir kayıt ihtimalini ciddiye almamızı gerektiriyor.\nAma buradan “kesin Tapınak hazinesidir” sonucuna geçemeyiz.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Seri için durum:"
+              ]
+            },
+            " 🔴 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Gerçek bir açık problem."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nBelgenin ne tür bir metin olduğu büyük ölçüde anlaşılıyor; fakat hazinenin gerçekliği, sahibi ve yerleri hâlâ doğrulanmış değil.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kaynakça"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Ana iddialar akademik ve üniversite kaynakları üzerinden kuruldu; popüler hazine avı anlatıları kanıt olarak kullanılmadı."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "West Semitic Research Project, University of Southern California."
+              ]
+            },
+            " “Copper Scroll.” 3Q15’in bulunması ve hazine içeriğine giriş.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://dornsife.usc.edu/wsrp/copper-scroll/"
+              },
+              "children": [
+                "USC kaydı"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Wolters, A. (1990)."
+              ]
+            },
+            " “Apocalyptic and the Copper Scroll.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Revue de Qumrân"
+              ]
+            },
+            ". Bakır Parşömen’in türü ve tarihsel bağlamı üzerine akademik tartışma.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.jstor.org/stable/545738"
+              },
+              "children": [
+                "JSTOR kaydı"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Brooke, G. J. ve ilgili Copper Scroll çalışmaları."
+              ]
+            },
+            " Qumran bağlamı, coğrafya ve sekter aidiyet tartışmaları.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.liverpooluniversitypress.co.uk/doi/pdf/10.18647/1656/JJS-1992"
+              },
+              "children": [
+                "Liverpool University Press"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Brill, 2023."
+              ]
+            },
+            " “The Copper Scroll: The Medium, the Context…” Mağara 3 bağlamı ve metal metnin arkeolojik değerlendirmesi.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://brill.com/display/book/9789004537804/BP000016.xml"
+              },
+              "children": [
+                "Brill bölümü"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Biblical Archaeology Society (2025)."
+              ]
+            },
+            " “Dating the Copper Scroll.” Güncel tarihleme tartışmalarının özeti; popüler-arkeoloji düzeyinde ikincil kaynak.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.biblicalarchaeology.org/daily/biblical-artifacts/dead-sea-scrolls/dating-the-copper-scroll/"
+              },
+              "children": [
+                "BAS özeti"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Son güncelleme: 6 Ekim 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

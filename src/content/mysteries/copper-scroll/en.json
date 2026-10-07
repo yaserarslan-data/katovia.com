@@ -1,0 +1,1621 @@
+{
+  "schemaVersion": 1,
+  "id": "copper-scroll",
+  "locale": "en",
+  "source": {
+    "filename": "Bakir_Parsomen_Copper_Scroll_Interaktif_Dosya.html",
+    "sha256": "747ea4eb6186dc41d200ac6bcd2a17bdf726d6e9475a5e2f30e2fafdca96268b",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "editorial-translation",
+    "independentlyReviewed": false,
+    "sourceLocale": "tr",
+    "sourceRevision": "2026-10-06",
+    "sourceContentSha256": "7859f76e434ccec1b318ffd5741257830e5c17b3e89c55a71056e33f5590593c"
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The case in 60 seconds"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nThe Copper Scroll is one of the strangest documents among the Dead Sea Scrolls. Rather than a literary or religious text, it appears to be an inventory listing ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "64 separate hiding places and the treasures said to be buried there."
+                  ]
+                },
+                " That is the kind of record its contents suggest.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nIt was found in 1952 in Cave 3 near Qumran. Unlike the other scrolls, it was incised on copper-alloy sheet. The text mentions gold, silver and valuable objects alongside descriptions of locations.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe central mystery has two parts: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Did the treasure really exist?"
+                  ]
+                },
+                " And, ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "if so, whose treasure was it?"
+                  ]
+                },
+                "\nTheories include the Jerusalem Temple's treasury, the wealth of the Qumran community, or assets hidden by another group during wartime. No find has yet been conclusively matched to the treasure described in the text.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The claim"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“The Copper Scroll is a real treasure map prepared by those who hid the Jerusalem Temple's gold before the Roman invasion. Decipher its directions, and the lost Temple treasure can be found.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThis is the best-known interpretation. But a “treasure list” is not the same as “Temple treasure”. The text resembles a genuine inventory, yet does not explicitly identify the treasure's origin.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What we know"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Found in 1952"
+                  ]
+                },
+                "Archaeologists discovered it in Cave 3 at Qumran."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "An unusual material"
+                  ]
+                },
+                "Whereas most other Qumran manuscripts are on leather or papyrus, 3Q15 is incised on metal."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "It was not left intact"
+                  ]
+                },
+                "Originally a single rolled sheet, it was cut into strips to open it because corrosion had made it brittle."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "64 hiding places"
+                  ]
+                },
+                "The text mentions gold, silver and other valuables alongside dozens of place names and hiding instructions."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Its language differs"
+                  ]
+                },
+                "Its Hebrew differs from many literary texts at Qumran and shows features closer to later Hebrew."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The treasure has not been found"
+                  ]
+                },
+                "No major treasure discovery has been conclusively linked to the locations in the text."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The evidence"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — The text really does behave like a “list”"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe Copper Scroll is not written like a sermon, commentary or apocalyptic vision. Entry by entry, it gives locations, measurements and quantities of buried valuables. This form clearly distinguishes it from the other Dead Sea Scrolls.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Direct textual evidence"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Using copper may suggest an intention to preserve the record"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nIncising a text on copper is laborious and expensive, but may make it more durable than leather or papyrus. Many researchers therefore think the authors intended to preserve the information over time. Yet “copper was used, so the treasure must be real” is not a logically necessary conclusion.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "A strong clue, not conclusive proof"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — The location descriptions resemble real geography, but most are uncertain"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe text uses local descriptions such as “beneath the cistern in this valley”, “near the tomb” or “inside the channel”. The difficulty is that names, buildings, routes and landscapes have changed over two thousand years. The precise meanings of many terms are also disputed.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Realistic, but difficult to apply"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — Enormous quantities complicate interpretation"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe total wealth listed is extraordinarily large. This may support the possibility of a genuine institutional treasury, but may also suggest copying, unit-of-measure or interpretation problems in the figures. Great caution is therefore needed when giving modern kilogram equivalents.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "The scale is disputed"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — The cave context connects it with the Qumran world, but does not establish authorship"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nFinding the scroll with other Qumran texts in Cave 3 suggests that it was hidden within the same historical crisis. However, its presence in the cave does not mean the Qumran community necessarily wrote it. Researchers also discuss the possibility that it was brought from Jerusalem and hidden there.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Strong context, uncertain affiliation"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "zaman"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Timeline"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "First century CE"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The Copper Scroll is produced; palaeographic and historical discussions place it in Roman-period Judaea."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "66–73 CE"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The First Jewish–Roman War. The possibility that the treasure was hidden during this crisis is one of the most frequently discussed historical contexts."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "70 CE"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The Romans destroy Jerusalem and the Second Temple. This is the central turning point in the Temple-treasure theory."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1952"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The scroll is found in Qumran Cave 3."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1955–1956"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The extremely brittle metal roll is cut open in Manchester and made readable."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "After the 1950s"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Treasure hunts and academic debates begin; location identifications are proposed across Jerusalem, Qumran and the Judaean Desert."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Today"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The text has been deciphered, but the treasure still lacks conclusive archaeological verification."
+                  ]
+                }
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Theories"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory A — The Jerusalem Temple treasury"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The size of the listed wealth suggests a major institutional treasury rather than an ordinary group's assets. The wartime situation before 70 CE also provides a plausible reason for hiding valuables."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " The text does not explicitly say “Temple treasure”. Roman sources also report substantial booty taken from the Temple, making the assumption that the entire treasury had been removed beforehand problematic."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory B — The Qumran / Essene community's treasury"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The scroll was found in the Qumran caves and may have been hidden during the same crisis as the Qumran collection."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " The listed wealth seems extraordinarily high for a small/ascetic community. Its language and textual form also differ from other sectarian Qumran works."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory C — A combined inventory of several institutions or donation stores"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " 64 different hiding places suggest distributed assets rather than a single treasury. Temple holdings, donations, local communities or funds pooled during a crisis could be involved."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " There is no second document explicitly confirming this."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory D — A symbolic / fictional treasure list"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The enormous quantities and unidentified place names raise the possibility of a literary or idealised inventory."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Its dry, technical style and location descriptions suggest a practical record more than a literary allegory. Choosing to incise it on copper is also unusual for pure fiction."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "abartilar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral claims: are they true?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Claim"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Assessment"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Why?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“This is definitely a map of Solomon's treasure.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False / chronologically problematic"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The text belongs to a period roughly a thousand years later. No evidence directly links it to Solomon."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It gives the location of the lost Ark of the Covenant.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "No evidence"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "There is no reliable expression in the text explicitly identifying the Ark of the Covenant."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The treasure must be real because it was written on copper.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "An unwarranted conclusion"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Copper may indicate an intention to preserve the record; it does not, by itself, establish that every entry is real."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“None of the 64 locations has been understood.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Exaggerated"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Some geographical terms and regional contexts can be understood; the problem is a lack of consensus on most precise modern location identifications."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The text is encrypted.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Generally false"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Although the text is difficult and some signs unusual, the main problem is not cryptography, but language, topography and historical context."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Most of the treasure has been found but is being concealed.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "No evidence"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "There is no academically verified major discovery conclusively matching the list."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What remains unknown"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Was the treasure real?"
+                  ]
+                },
+                "The text resembles a realistic inventory, but no main deposit has been verified."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Whose was it?"
+                  ]
+                },
+                "There is no conclusive choice between the Temple, the Qumran community or another Jewish group."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Where are the described places?"
+                  ]
+                },
+                "Two thousand years of geographical and linguistic change may have made many locations unrecognisable."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "How literal are the figures?"
+                  ]
+                },
+                "Caution is needed when reading weights and quantities and converting ancient measures into modern equivalents."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Why copper?"
+                  ]
+                },
+                "Permanent archiving is the most reasonable explanation, but we do not know the author's reason."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The final entry and the “copy” question"
+                  ]
+                },
+                "The text may imply that another copy or a more detailed record existed. This interpretation is also disputed, and no such document has been found."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "My assessment"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🔴 We can read the text. The mystery is ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "whether what it describes is real."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nUnlike Voynich, the Copper Scroll is not a work whose contents cannot be understood. On the contrary, we broadly know what it does: it behaves like a record listing the locations of buried valuables.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe central issue is therefore not linguistics, but ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "archaeological verification"
+                  ]
+                },
+                ". If even one entry could be found beyond dispute and matched to the text, the debate over the document's nature would change dramatically. No such discovery exists so far.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nIn my view, the most plausible scenario is that the text is not entirely fantastical fiction. Incising so much dry logistical detail on metal requires us to take the possibility of a genuine record seriously. But that does not justify concluding that “it is definitely Temple treasure”.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Status in this series:"
+              ]
+            },
+            " 🔴 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "A genuinely open problem."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nThe document's textual genre is largely understood, but the treasure's existence, ownership and locations remain unverified.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "References"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "The main claims draw on academic and university sources; popular treasure-hunting accounts were not used as evidence."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "West Semitic Research Project, University of Southern California."
+              ]
+            },
+            " “Copper Scroll.” An introduction to the discovery of 3Q15 and its treasure contents.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://dornsife.usc.edu/wsrp/copper-scroll/"
+              },
+              "children": [
+                "USC record"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Wolters, A. (1990)."
+              ]
+            },
+            " “Apocalyptic and the Copper Scroll.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Revue de Qumrân"
+              ]
+            },
+            ". Scholarly discussion of the Copper Scroll's genre and historical context.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.jstor.org/stable/545738"
+              },
+              "children": [
+                "JSTOR record"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Brooke, G. J. and related Copper Scroll studies."
+              ]
+            },
+            " Debates concerning the Qumran context, geography and sectarian affiliation.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.liverpooluniversitypress.co.uk/doi/pdf/10.18647/1656/JJS-1992"
+              },
+              "children": [
+                "Liverpool University Press"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Brill, 2023."
+              ]
+            },
+            " “The Copper Scroll: The Medium, the Context…” The Cave 3 context and archaeological assessment of the metal text.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://brill.com/display/book/9789004537804/BP000016.xml"
+              },
+              "children": [
+                "Brill chapter"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Biblical Archaeology Society (2025)."
+              ]
+            },
+            " “Dating the Copper Scroll.” A summary of recent dating debates; a secondary source at the popular-archaeology level.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.biblicalarchaeology.org/daily/biblical-artifacts/dead-sea-scrolls/dating-the-copper-scroll/"
+              },
+              "children": [
+                "BAS summary"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Last updated: 6 October 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

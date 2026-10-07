@@ -1,0 +1,1647 @@
+{
+  "schemaVersion": 1,
+  "id": "phaistos-disc",
+  "locale": "tr",
+  "source": {
+    "filename": "Phaistos_Diski_Interaktif_Dosya.html",
+    "sha256": "02417892fdb2b055b653953222daba358ba20625c0cb108bb4d2ff71e2afc98c",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "source-only",
+    "independentlyReviewed": false
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "60 saniyede dosya"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nPhaistos Diski'nin gizemi, işaretlerin “çok garip” olmasından çok, elimizde neredeyse tek bir metin bulunmasından kaynaklanıyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nDisk 1908'de Luigi Pernier tarafından Phaistos Sarayı'nda bulundu. Yaklaşık MÖ 1700–1650'ye tarihleniyor.\nİki yüzünde toplam ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "241 damgalı işaret"
+                  ]
+                },
+                " ve ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "61 işaret grubu"
+                  ]
+                },
+                " bulunuyor.\nMüze, metnin dış kenardan merkeze doğru okunmasının en olası yön olduğunu belirtiyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nYaklaşık ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "45 farklı işaret türü"
+                  ]
+                },
+                " var. Bu sayı, hece yazısı gibi bir sistemi mümkün kılıyor.\nNitekim 2026'da Cambridge University Press tarafından yayımlanan Brent Davis çalışması,\nPhaistos Diski yazısını Ege'nin hece yazıları ailesi içinde ele alıyor ve sistemin bir syllabary/hece yazısı olduğu görüşünü savunuyor.\nAma işaretlerin hangi sesleri verdiğini ve hangi dili kodladığını hâlâ bilmiyoruz.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nÇözümün önündeki temel engel basit: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "corpus çok küçük."
+                  ]
+                },
+                "\nAynı sistemle yazılmış ikinci, üçüncü ve yüzüncü metinler elimizde olmadığı için,\nönerilen okumaları bağımsız örneklerle test edemiyoruz.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "İddia"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“Phaistos Diski, Minos uygarlığının kayıp dilini taşıyor. Üzerindeki semboller bir dua, takvim,\noyun, savaş anlatısı veya yıldız haritası olabilir; ama yüz yıldır kimse çözemedi.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nİlk kısım makul, ikinci kısım açık. Disk kesinlikle Minoan kültürel bağlamında bulundu.\nAma üzerinde hangi dilin olduğu, metnin konusu ve diğer Ege yazılarıyla ilişkisi hâlâ kesin değil.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Bildiğimiz gerçekler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1908'de bulundu"
+                  ]
+                },
+                "İtalyan arkeolog Luigi Pernier, Phaistos Sarayı'ndaki bir odada diski keşfetti."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Kilden yapılmış"
+                  ]
+                },
+                "İşaretler kil henüz yaşken küçük mühür/punçlarla damgalandı ve disk daha sonra pişti."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "241 işaret"
+                  ]
+                },
+                "İki yüzde toplam 241 basılmış işaret bulunuyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "61 grup"
+                  ]
+                },
+                "Dikey/radyal çizgiler işaretleri 61 gruba ayırıyor; bunların “kelime” benzeri birimler olması muhtemel."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Yaklaşık 45 işaret türü"
+                  ]
+                },
+                "Bu envanter büyüklüğü, alfabetik sistemden çok hece yazısı ihtimaliyle uyumlu."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tekil corpus"
+                  ]
+                },
+                "Aynı yazıyla yazılmış güvenilir, uzun ikinci bir metin yok. Çözümün ana problemi bu."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kanıtlar"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — İşaretler elle çizilmedi; damgalandı"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nDiskteki figürler tekrar tekrar aynı kalıplarla basılmış görünüyor.\nBu nedenle Phaistos Diski bazen “hareketli harf baskısının çok erken atası” gibi anlatılır.\nTeknik benzetme ilginçtir ama modern matbaanın doğrudan atası olduğu anlamına gelmez.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Fiziksel olarak açık"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Metin yapısı rastgele görünmüyor"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nİşaretler düzenli gruplar oluşturuyor, bazı gruplar tekrar ediyor ve belirli işaretlerin grup başı/sonu konumlarında dağılımı rastlantısal değil.\nHeraklion Arkeoloji Müzesi, tekrarlanan bazı grupları bir “nakarat” olasılığıyla ilişkilendiriyor;\nbu yüzden ilahi veya büyü/dua metni yorumu gündeme geliyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Yapısal düzen güçlü"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — Hece yazısı olma ihtimali güçlü"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n2026 tarihli ",
+                {
+                  "tag": "i",
+                  "attrs": {},
+                  "children": [
+                    "The Undeciphered Aegean Scripts"
+                  ]
+                },
+                " çalışmasında Brent Davis,\nPhaistos Disk yazısını Ege'nin diğer pre-alfabetik sistemleriyle birlikte hece yazısı ailesinde değerlendiriyor.\nBu, her işaretin kabaca bir heceyi temsil ettiği bir model anlamına geliyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Güncel akademik model"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — Linear A veya Girit Hiyeroglifi ile ilişki kesin değil"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nDisk Phaistos'ta, Linear A'nın bilindiği bir bağlamda bulundu; bazı işaretler Girit Hiyeroglifi veya başka Ege işaretleriyle benzer görünebilir.\nFakat Cambridge'de Meissner ve Salgarella'nın değerlendirmesi,\nPhaistos yazısını Girit Hiyeroglifiyle özdeşleştirmenin ciddi işaret envanteri problemleri yarattığını vurguluyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Bağlantı olası; özdeşlik kanıtlanmadı"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — Çözüm denemelerinin çoğu neden ikna edici değil?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nOxford'un 2024 tarihli değerlendirmesi çok net bir probleme işaret ediyor:\ntek bir kısa belge üzerinde onlarca farklı dil ve ses değeri denenebilir ve bunlardan bazıları tesadüfen “anlamlı” sonuçlar verebilir.\nBunları ikinci bir bağımsız metinde sınayamadığımız için çözüm iddiaları kolayca doğrulanamıyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "Corpus problemi"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "6 — Sahte eser iddiası neden zayıf?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nDiskin benzersizliği geçmişte sahtecilik şüpheleri doğurdu.\nAncak güncel arkeolojik yaklaşım, objeyi Phaistos'un yazı, mühürleme ve seramik üretimi bağlamına yerleştiriyor.\nOxford'un 2024 çalışması, diskin site içindeki malzeme kültürüyle uyumunu özellikle vurguluyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Otantiklik lehine güçlü bağlam"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Teoriler"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori A — İlahi / dua / ritüel metni"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Bazı işaret gruplarının düzenli biçimde tekrarlanması nakarat benzeri bir yapı oluşturuyor. Minoan bağlamında ritüel metin ihtimali makul."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " İşaretlerin seslerini veya kelimelerin anlamlarını bilmediğimiz için “bu bir ilahidir” diyemiyoruz."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori B — Yönetimsel veya hukuki metin"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Phaistos'ta yazı ve mühürleme idari bağlamda yoğun biçimde kullanılıyordu. Disk de damgalama teknolojisinin ürünüdür."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Sayısal işaretlerin ve tipik muhasebe düzeninin belirgin olmaması klasik idari tabletlerden farklı görünmesine yol açıyor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori C — Oyun / tahta oyunu"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Spiral düzen ve bölümlenmiş alanlar görsel olarak bir oyun rotasını andırabilir."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " İşaret gruplarının dil benzeri tekrarı ve yazı sistemlerine benzeyen envanteri oyun açıklamasını zayıflatıyor. Oyun taşı veya kullanım aşınması gibi açık destek yok."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori D — Takvim veya astronomik kayıt"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Spiral ve tekrar örüntüleri takvimsel döngülerle eşleştirilebilir."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Eşleştirmelerin çoğu geriye dönük sayı uyumlarına dayanıyor; açık ay, gün veya gök cismi işaretlerinin güvenilir okuması yok."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori E — Linear A / Girit Hiyeroglifi ile akraba bir yerel yazı"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Aynı Minoan yazı ortamında ortaya çıkıyor ve işaret envanterinin boyutu hece yazısı geleneğiyle uyumlu."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " İşaretlerin çoğu bire bir eşleşmiyor. Güncel araştırma yakın ilişkiyi mümkün görse de eşitliği kanıtlanmış saymıyor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "viral"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral iddialar: doğru mu?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "İddia"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Hüküm"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Neden?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Dünyanın ilk matbaa örneğidir.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Teknik benzetme"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Tekrar kullanılabilen damgalarla işaret basılmış olabilir; fakat modern hareketli harf matbaasının toplumsal/teknik sistemiyle aynı şey değil."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Linear A ile yazılmıştır.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıtlanmadı"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Aynı kültürel çevrede olsa da işaret sistemi doğrudan Linear A olarak sınıflandırılmıyor."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Metin kesin olarak bir dua.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Olası"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Nakarat benzeri tekrarlar bu yorumu destekliyor; içerik okunmuş değil."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Disk tamamen çözüldü.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Çok sayıda çözüm iddiası var; akademik olarak doğrulanmış ortak bir okuma yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Türkçe / Slavca / Yunanca / Hititçe olduğu kanıtlandı.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Farklı dillerle eşleştiren yüzlerce öneri mevcut; hiçbiri corpus dışı bağımsız testten geçmedi."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Luigi Pernier eseri sahteledi.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Azınlık iddiası"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Benzersizliği şüphe doğurmuş olsa da güncel arkeolojik bağlam otantik Minoan eser yorumunu daha güçlü destekliyor."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“İşaretler tamamen resim; dil kodlamıyor.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Zayıflayan görüş"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Güncel dilbilimsel çalışmalar sistemin hece yazısı gibi davrandığını düşünüyor; fakat tam okuma hâlâ yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Hâlâ bilinmeyenler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Hangi dili kodluyor?"
+                  ]
+                },
+                "Minoan dili, başka bir Ege dili veya bugün bilinmeyen başka bir dil olabilir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "İşaretlerin ses değerleri"
+                  ]
+                },
+                "Yaklaşık 45 işaret için güvenilir fonetik tablo yok."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Metin ne söylüyor?"
+                  ]
+                },
+                "İlahi, ritüel, idari kayıt veya başka bir tür mü — kesin değil."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Neden tek örnek?"
+                  ]
+                },
+                "Aynı yazı geleneğinin başka belgeleri yoksa, bu özel amaçlı ve kısa ömürlü bir sistem olabilir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Diğer Ege yazılarıyla ilişkisi"
+                  ]
+                },
+                "Linear A ve Girit Hiyeroglifiyle genetik/işlevsel bağın derecesi açık."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Bir gün çözülebilir mi?"
+                  ]
+                },
+                "En büyük umut, aynı işaret sistemiyle yazılmış yeni ve daha uzun bir belgenin bulunması."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Benim değerlendirmem"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🔴 Phaistos Diski gerçek bir çözülmemiş yazı problemi."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu dosyada bence en önemli nokta şu: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "insan zekâsı yetmediği için çözülemiyor değil; veri yetmediği için çözülemiyor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBir yazıyı çözmek için genellikle tekrar eden çok sayıda metin, özel isimler, bilinen dil bağlantıları,\niki dilli yazıtlar veya farklı bağlamlarda aynı kelimelerin kullanımı gerekir.\nPhaistos'ta bunların hemen hiçbiri yok.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu nedenle “ben çözdüm” diyen herhangi bir öneri için en sert test şu olmalı:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "önerdiğin işaret değerleri daha önce görülmemiş başka bir Phaistos metnini doğru okuyabiliyor mu?"
+                  ]
+                },
+                "\nŞimdilik böyle bir ikinci metnimiz olmadığı için güvenilir doğrulama mümkün değil.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nGüncel akademik tablo, diski tamamen rastgele veya salt dekoratif görmekten ziyade\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "yapılı bir hece yazısı"
+                  ]
+                },
+                " olarak ele almaya gidiyor. Fakat dili ve içeriği hâlâ karanlıkta.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Seri için durum:"
+              ]
+            },
+            " 🔴 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Gerçekten çözülememiş."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nRongorongo gibi burada da ana engel corpus. Hatta Phaistos'ta sorun daha ağır: elimizde pratik olarak tek ana metin var.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kaynakça"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Müze kaydı, güncel akademik monografiler ve Ege yazıları üzerine hakemli/üniversite yayınları önceliklendirildi."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Heraklion Archaeological Museum."
+              ]
+            },
+            " “The Phaistos Disc.” Yaklaşık MÖ 1700–1650 tarihlemesi, 241 işaret, 61 grup, okuma yönü ve mevcut yorumların özeti.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://heraklionmuseum.gr/en/exhibit/the-phaistos-disc/"
+              },
+              "children": [
+                "Heraklion Archaeological Museum"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ferrara, S. & Valério, M. (2024)."
+              ]
+            },
+            " “The Phaistos Disc: Placing an Enigmatic Artefact in its Cultural Context.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Writing from Invention to Decipherment"
+              ]
+            },
+            ", Oxford University Press. Diskin Phaistos'un yazı, mühürleme ve seramik bağlamı içindeki güncel değerlendirmesi.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://academic.oup.com/book/58672/chapter/485388307"
+              },
+              "children": [
+                "Oxford Academic"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Davis, B. (2026)."
+              ]
+            },
+            " ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "The Undeciphered Aegean Scripts: Linguistic Investigations into the Languages They Encode."
+              ]
+            },
+            " Cambridge University Press. Phaistos Disk yazısını Ege hece yazıları bağlamında inceleyen güncel monografi.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.cambridge.org/core/books/undeciphered-aegean-scripts/1B95B79E29C8D1E19C359B83973E28AE"
+              },
+              "children": [
+                "Cambridge University Press"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Meissner, T. & Salgarella, E."
+              ]
+            },
+            " “Relationship between Cretan Hieroglyphic and the Other Cretan Scripts.” Cambridge University Press. Phaistos Disk yazısının Girit Hiyeroglifiyle özdeşleştirilmesine yönelik metodolojik sorunlar.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/23E632C89A7F308D4677E21C68E44190/9781009490108c07_134-164.pdf/relationship_between_cretan_hieroglyphic_and_the_other_cretan_scripts.pdf"
+              },
+              "children": [
+                "Cambridge PDF"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Collet, S. (2017)."
+              ]
+            },
+            " ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Le guerrier, le chat, l’aigle, le poisson et la colonne: la voie spiralée des signes."
+              ]
+            },
+            " Archaeopress. Diskin 45 işaretlik envanteri ve yapısal/semiotik analizi.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.jstor.org/stable/j.ctv170x45v"
+              },
+              "children": [
+                "JSTOR / Archaeopress"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ferrara, S. & Valério, M. (2024)."
+              ]
+            },
+            " “Deciphering a Writing System: Luck, Intuition, or Method?” Oxford University Press. Phaistos Disk'in küçük corpus nedeniyle neden özellikle zor çözülen bir vaka olduğuna metodolojik değerlendirme.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://academic.oup.com/book/58672/chapter/485388064"
+              },
+              "children": [
+                "Oxford Academic"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Son güncelleme: 6 Ekim 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

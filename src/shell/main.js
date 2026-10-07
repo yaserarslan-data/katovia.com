@@ -13,7 +13,9 @@ import { mountActivities } from '../features/activities.js';
 
 document.documentElement.classList.add('js');
 applyTranslations();
-i18n.subscribe(() => applyTranslations());
+const updateMysteryLinks = () => document.querySelectorAll('[data-mystery-entry]').forEach(link => { link.href = i18n.locale === 'tr' ? '/tr/mysteries/' : '/mysteries/'; });
+updateMysteryLinks();
+i18n.subscribe(() => { applyTranslations(); updateMysteryLinks(); });
 document.querySelectorAll('[data-locale]').forEach((button) => button.addEventListener('click', () => i18n.setLocale(button.dataset.locale)));
 let disposeNav = mountNavigation();
 let disposeShares=mountPageShares();

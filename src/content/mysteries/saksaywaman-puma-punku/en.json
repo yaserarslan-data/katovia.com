@@ -1,0 +1,1733 @@
+{
+  "schemaVersion": 1,
+  "id": "saksaywaman-puma-punku",
+  "locale": "en",
+  "source": {
+    "filename": "Saksaywaman_Puma_Punku_Interaktif_Dosya.html",
+    "sha256": "596d3a183bed4faa2bee5940ff82fcfcb636b9526a30c1d47d12906b9683d797",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "editorial-translation",
+    "independentlyReviewed": false,
+    "sourceLocale": "tr",
+    "sourceRevision": "2026-10-06",
+    "sourceContentSha256": "e3f4e58b187a9c4ba0e8b87983eeebd0e5817a4386d8dd91b60119f0ad4db3a3"
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The case in 60 seconds"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“The stones fit so tightly that a sheet of paper cannot pass between them, so they could not have been made with copper or stone tools” is one of the most repeated claims about both sites—and one that encounters the greatest difficulties when tested against archaeological experiments.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nSaksaywaman forms part of the monumental stone architecture of fifteenth-century Inca Cusco. Its huge limestone blocks are fitted together in irregular polygonal shapes. Jean-Pierre Protzen's fieldwork and experiments at Inca quarries and walls showed that stones ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "could be broken with hammerstones, shaped by pounding, and fitted to neighbouring stones through trial and error"
+                  ]
+                },
+                ".\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nPuma Punku, roughly a thousand kilometres away, belongs to the Tiwanaku culture, which developed centuries before the Inca. It has red sandstone foundation blocks and exceptionally precisely shaped andesite components from the upper structure. Experiments by Protzen and Stella Nair showed that Tiwanaku stonemasons possessed a very high level of geometrical and stoneworking knowledge, without requiring lasers, CNC machines or “softened stone” technology to explain it.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ayrim"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "First, a crucial distinction"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "compare"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "h3",
+                  "attrs": {},
+                  "children": [
+                    "Saksaywaman ≠ Puma Punku"
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Saksaywaman:"
+                      ]
+                    },
+                    " Cusco, Peru. The Inca Empire, particularly the fifteenth century. Famous for its walls of huge, fitted polygonal limestone blocks."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "h3",
+                  "attrs": {},
+                  "children": [
+                    "Puma Punku ≠ Inca"
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Puma Punku:"
+                      ]
+                    },
+                    " Tiwanaku, Bolivia. Centuries before the Inca. Famous for sandstone and andesite architectural components with precisely worked flat surfaces."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Online, the two sites are often presented side by side as evidence of “the same lost technology”. Archaeologically, they belong to different periods, different cultures and, in part, different stoneworking traditions."
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The claim"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“People of the Bronze Age could not have cut, transported and fitted these blocks with such precision. The surfaces show machine marks, drilled holes and millimetre-scale accuracy. Lost technology, stone softening, advanced machinery or extraterrestrial help must have been involved.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe main problem with this account is that it treats “we do not know how they did it” and “it could not be done using known methods” as equivalent. In archaeology, a technology being slow, labour-intensive and highly skilled does not make it impossible.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What we know"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Inca quarries are known"
+                  ]
+                },
+                "Quarries contain evidence of production, including unfinished blocks, extraction marks and hammerstones."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Experimental replication has been carried out"
+                  ]
+                },
+                "Protzen experimentally tested the extraction, shaping and fitting of blocks using Inca-style hammerstones."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Puma Punku is a genuine architectural system"
+                  ]
+                },
+                "A 2018 reconstruction study showed that the scattered blocks belonged to standardised architectural elements and could be assembled into plausible structures using 3D models."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Puma Punku's large block really is enormous"
+                  ]
+                },
+                "One of the largest red sandstone slabs measures approximately 8.12 × 3.86 × 1.2 m and has been estimated to weigh about 83 tonnes."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tiwanaku stoneworking is exceptionally precise"
+                  ]
+                },
+                "The study published by UCLA emphasises that Tiwanaku craftspeople could produce flat surfaces, sharp internal and external angles, and—in some examples—millimetre-scale precision."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The two traditions are not the same"
+                  ]
+                },
+                "Comparing Tiwanaku and Inca stoneworking, Protzen and Nair argued that there were significant technical differences."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "saksay"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Saksaywaman: how were the stones fitted?"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — Extracting the stone"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nProtzen's 1985 study reported that stones in Inca quarries could be selected from rockfalls or separated from rock faces using levering bars; large hammerstones were used to break blocks free.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Archaeological and experimental evidence"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Shaping"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nRepeated pounding with smaller, harder hammerstones could bring a surface closer to the desired geometry. This is slower than powered cutting, but directly refutes the claim that “they could not work the stone”.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Experimentally demonstrated"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — Matching neighbouring stones"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAccording to Protzen's observations, a new block could be repeatedly placed against stones already in position, its contact points marked, and those areas reduced to achieve a fit through trial and error. This process can explain complex polygonal contact surfaces.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "A plausible, tested method"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — “No mortar” does not mean “impossible”"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nDry-stone masonry was a deliberate construction technique in elite Inca architecture. Multifaceted blocks and close contacts were not merely aesthetic: they contributed to the integrity of the wall. UNESCO also describes Cusco's Inca architecture in terms of its exceptional structural and aesthetic stone technology.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "An established Inca building tradition"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "puma"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Puma Punku: “H blocks” and millimetre-scale stoneworking"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — Are the H blocks mass-produced machine parts?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nSome andesite blocks have repeated forms and sharp internal corners. This demonstrates knowledge of modular architectural design. But the stones are not exact CNC copies of one another: their dimensions and details vary.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "High standardisation ≠ industrial mass production"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Experimental stoneworking"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nProtzen and Nair studied Tiwanaku stoneworking directly through marks on the blocks and experiments. Their work shows that percussion, abrasion, scraping/incision and tools of differing fineness could be used to produce flat surfaces and sharp corners.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Experimental archaeology"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — The structure itself may have remained unfinished"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe 2018 Heritage Science study states that Puma Punku was extensively dismantled from the colonial period onwards, that many blocks are missing, and that the structure was probably never fully completed. Reconstructing an “original plan” from today's scattered blocks is therefore a difficult task in itself.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "A reconstruction problem"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — The “cast stone / ancient concrete” hypothesis"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nA study published in 2019 proposed that some Puma Punku stones were artificial, geopolymer-like stone. Although the idea entered the peer-reviewed literature, it is not a generally accepted view because it conflicts with quarry, provenance and working evidence in mainstream Tiwanaku stoneworking research. Modern geochemical provenance studies, in particular, can investigate the regional natural sources of the volcanic stone used at Tiwanaku.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "A disputed minority view"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Theories"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory A — High skill + simple tools + considerable labour"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Consistent with quarries, tool marks, experimental replications and the known Andean building tradition. Requires the fewest additional assumptions."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " We do not have documentary knowledge of every logistical detail for every structure—particularly the precise transport routes of the largest blocks and the organisation of labour."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory B — Lost, but entirely local, specialist knowledge"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Details of craftspeople's transmitted methods of measurement, geometry and surface working may now be lost. This is common in archaeology."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " “Lost knowledge” is sometimes unnecessarily mystified; many of the basic physical processes are already understandable."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory C — A chemical that softened stone"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " It seems to offer a quick explanation for the precision of the surfaces."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " There is no reliable archaeological production chain demonstrating an Inca/Tiwanaku technology that softened stone like dough and then hardened it again."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory D — Advanced machinery / lasers / extraterrestrial technology"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " To a modern observer, it intuitively explains precise stoneworking."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " No machine parts, energy infrastructure, metallurgical remains or material culture required by such technologies have been found. Experimental archaeology already explains many features using simple methods."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "viral"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral claims: are they true?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Claim"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Assessment"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Why?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Not even paper fits between the stones; they cannot have been made by hand.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Invalid inference"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The close fit is real, but experimental stoneworking does not show that it could not be achieved with simple tools."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The Inca could not work hard stone because they did not use iron.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Working hard stone does not necessarily require steel; surfaces can be worked using harder hammerstones and abrasives."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Puma Punku's H blocks are exact copies of one another.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Exaggerated"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "There is modular design, but the blocks are not perfect industrial copies."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Puma Punku's stones are as flawless as laser-cut stone.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Rhetorical"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The precision of the craftsmanship is real; there is no physical evidence of laser use."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Puma Punku is 12,000–15,000 years old.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Unsupported"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The archaeological Tiwanaku context falls within the first millennium CE; the Heritage Science study discusses Tiwanaku within an approximate 500–950 CE framework."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Saksaywaman and Puma Punku were built by the same lost civilisation.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Different cultures, different periods and different stoneworking traditions."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The stones were melted and poured into moulds.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Unproven"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The geopolymer hypothesis has been published, but is not the generally accepted explanation; evidence for natural stone sources and stoneworking is strong."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What remains unknown"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Details of the logistics for huge blocks"
+                  ]
+                },
+                "The exact combination of ramps, ropes, human labour and routes is not known for every block."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Transmission of craftsmanship"
+                  ]
+                },
+                "The detailed oral traditions of stonemason teams' measurement and training systems have not survived."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Puma Punku's complete appearance"
+                  ]
+                },
+                "Because the structure was dismantled and blocks are missing, an exact reconstruction of its original upper structure remains an open research area."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Some tool details"
+                  ]
+                },
+                "For particular fine incisions at Tiwanaku, the specific tool alloy and geometry used are not certain in every example."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "My assessment"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🟢 The mystery of “impossible technology” is largely explained."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBoth sites contain extraordinary engineering that deserves explanation, but extraordinary does not mean inexplicable. The archaeological record, quarries, surface marks and experimental studies show that Andean craftspeople could achieve these results with simple tools, geometry, exceptional skill and a large workforce.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe crucial point is: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "“They had no steel” does not mean “they could not cut stone”."
+                  ]
+                },
+                "\nStoneworking is more than cutting: it combines pounding, breaking, abrasion, scraping, surface finishing, and repeated trial fitting.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nThe real mystery is not whether the technology existed, but\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "how these systems of craftsmanship were organised, transmitted between generations, and how some enormous blocks were transported."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Status in this series:"
+              ]
+            },
+            " 🟢 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Largely explained."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nSaksaywaman and Puma Punku are not strong evidence for “lost high technology”; instead, they are evidence of the Andean world's exceptionally advanced stoneworking.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "References"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "The main claims draw on academic publications and institutional sources. “Ancient aliens / lasers / stone softening” accounts were treated only as viral claims to be checked."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Protzen, J.-P. (1985)."
+              ]
+            },
+            " “Inca Quarrying and Stonecutting.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal of the Society of Architectural Historians"
+              ]
+            },
+            " 44(2):161–182. A foundational experimental study of Inca quarries, hammerstones, block shaping and trial-and-error fitting.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://online.ucpress.edu/jsah/article/44/2/161/57823/Inca-Quarrying-and-Stonecutting"
+              },
+              "children": [
+                "UC Press / JSAH"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Protzen, J.-P. & Nair, S. (2013)."
+              ]
+            },
+            " ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "The Stones of Tiahuanaco: A Study of Architecture and Construction."
+              ]
+            },
+            " UCLA Cotsen Institute of Archaeology. An experimental and architectural analysis of Tiwanaku/Puma Punku stoneworking.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://ioa.ucla.edu/content/stones-tiahuanaco"
+              },
+              "children": [
+                "UCLA Cotsen Institute"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Vranich, A. (2018)."
+              ]
+            },
+            " “Reconstructing ancient architecture at Tiwanaku, Bolivia: the potential and promise of 3D printing.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Heritage Science"
+              ]
+            },
+            " 6:65. Puma Punku's dimensions, missing blocks and architectural reconstruction.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.1186/s40494-018-0231-0"
+              },
+              "children": [
+                "Heritage Science"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Protzen, J.-P. & Nair, S. (1997)."
+              ]
+            },
+            " “Who Taught the Inca Stonemasons Their Skills? A Comparison of Tiahuanaco and Inca Cut-Stone Masonry.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "JSAH"
+              ]
+            },
+            " 56(2):146–167. A comparison of technical differences between the two stoneworking traditions."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "UNESCO World Heritage Centre."
+              ]
+            },
+            " “City of Cuzco.” Context for the fifteenth-century reorganisation of Inca Cusco and its exceptional stone-building technology.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://whc.unesco.org/en/list/273"
+              },
+              "children": [
+                "UNESCO"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Davidovits, J. and colleagues (2019)."
+              ]
+            },
+            " “Ancient organo-mineral geopolymer in South-American Monuments…” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Ceramics International"
+              ]
+            },
+            ". A disputed alternative study arguing for artificial/geopolymer stone at Puma Punku.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.sciencedirect.com/science/article/pii/S0272884219300288"
+              },
+              "children": [
+                "ScienceDirect"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Flores-Blanco, L. and colleagues (2026)."
+              ]
+            },
+            " “Volcanic stone sculptures of were-animals at Tiwanaku…” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal of Archaeological Science: Reports"
+              ]
+            },
+            " 73, 105858. A recent provenance study investigating the regional geochemical sources of volcanic stone at Tiwanaku.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.sciencedirect.com/science/article/pii/S2352409X26002932"
+              },
+              "children": [
+                "Journal of Archaeological Science: Reports"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Last updated: 6 October 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

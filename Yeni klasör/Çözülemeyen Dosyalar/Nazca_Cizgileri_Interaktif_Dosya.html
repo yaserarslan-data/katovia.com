@@ -1,0 +1,386 @@
+
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nazca Çizgileri — Çözülemeyen Sorular Dosyası</title>
+<style>
+:root{
+  --bg:#0d0f13; --panel:#151821; --panel2:#1b1f2a; --text:#eef2f7;
+  --muted:#aab3c3; --line:#2b3140; --accent:#d7b36a; --good:#56c596;
+  --warn:#f3c969; --bad:#ef6a6a; --blue:#7db4ff; --max:980px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:linear-gradient(180deg,#0b0d11,#11141b 35%,#0d0f13);
+  color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  line-height:1.7;
+}
+a{color:#a9ccff;text-decoration:none}
+a:hover{text-decoration:underline}
+.hero{padding:70px 22px 36px;border-bottom:1px solid var(--line)}
+.wrap{max-width:var(--max);margin:auto}
+.kicker{letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-size:.78rem;font-weight:800}
+h1{font-size:clamp(2.2rem,6vw,4.9rem);line-height:1.02;margin:.35rem 0 1rem;letter-spacing:-.04em}
+.subtitle{font-size:1.12rem;color:var(--muted);max-width:780px}
+.statusline{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.badge{border:1px solid var(--line);background:#11151c;border-radius:999px;padding:8px 12px;font-size:.9rem}
+.badge strong{color:white}
+nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:rgba(13,15,19,.85);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:10px;overflow:auto;padding:10px 22px}
+nav a{white-space:nowrap;color:#c9d1df;border:1px solid transparent;padding:7px 10px;border-radius:9px}
+nav a:hover{border-color:var(--line);text-decoration:none;background:#171b24}
+main{padding:34px 22px 80px}
+section{margin:0 0 54px;scroll-margin-top:78px}
+h2{font-size:1.65rem;margin:0 0 16px}
+h3{font-size:1.12rem;margin:22px 0 8px}
+p{margin:0 0 14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;margin:14px 0}
+.card.emphasis{background:linear-gradient(180deg,#181b24,#13161d);border-color:#3d465a}
+.quote{font-size:1.2rem;line-height:1.55;border-left:4px solid var(--accent);padding:8px 0 8px 18px;color:#f4ead6}
+.small{font-size:.92rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:48px}}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.fact b{display:block;margin-bottom:4px}
+.pill{display:inline-block;padding:3px 8px;border-radius:999px;font-size:.78rem;font-weight:800;margin-right:6px}
+.green{background:rgba(86,197,150,.12);color:#7ee0b5;border:1px solid rgba(86,197,150,.35)}
+.yellow{background:rgba(243,201,105,.12);color:#f5d784;border:1px solid rgba(243,201,105,.35)}
+.red{background:rgba(239,106,106,.12);color:#ff9494;border:1px solid rgba(239,106,106,.35)}
+.blue{background:rgba(125,180,255,.12);color:#9dc8ff;border:1px solid rgba(125,180,255,.35)}
+.timeline{border-left:2px solid #384154;margin-left:8px;padding-left:20px}
+.timeline .t{position:relative;margin:0 0 20px}
+.timeline .t:before{content:"";position:absolute;left:-27px;top:.45em;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px #10131a}
+.timeline time{font-weight:800;color:#e7c47d}
+details{border:1px solid var(--line);background:var(--panel);border-radius:14px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:16px 18px;font-weight:800;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";float:right;color:var(--accent);font-size:1.3rem}
+details[open] summary:after{content:"–"}
+details .inside{padding:0 18px 18px;color:#d7dce5}
+.verdict{font-size:clamp(1.5rem,4vw,2.6rem);font-weight:900;line-height:1.2}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:#d8deea}
+footer{border-top:1px solid var(--line);padding:30px 22px;color:var(--muted)}
+.source{margin-bottom:10px}
+.callout{border:1px dashed #49536a;background:#12161e;border-radius:14px;padding:16px}
+button#print{background:var(--accent);border:0;color:#17120a;font-weight:900;padding:10px 14px;border-radius:10px;cursor:pointer}
+@media print{
+ nav,button#print{display:none}
+ body{background:white;color:#111}
+ .card,.fact,details,.callout{background:white;border-color:#bbb}
+ .small,.subtitle,footer{color:#444}
+ a{color:#111;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Çözülemeyen Sorular · Dosya 04</div>
+    <h1>Nazca<br>Çizgileri</h1>
+    <p class="subtitle">
+      Peru çölünde kilometreler boyunca uzanan çizgiler, hayvan figürleri ve geometrik şekiller.
+      Gökyüzünden bakılmak için mi yapıldılar, bir takvim miydiler, suyla mı ilgiliydiler — yoksa yürünerek deneyimlenen kutsal bir peyzajın parçaları mıydı?
+    </p>
+    <div class="statusline">
+      <span class="badge"><strong>Yer:</strong> Güney Peru · Nazca–Palpa</span>
+      <span class="badge"><strong>Dönem:</strong> yaklaşık MÖ 500 – MS 500; bazı tarihleme çalışmaları MS 650’ye kadar uzanıyor</span>
+      <span class="badge"><strong>Genel durum:</strong> 🟡 Ama tek bir “amaç” aramak muhtemelen yanlış</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#ozet">60 sn</a>
+    <a href="#iddia">İddia</a>
+    <a href="#gercekler">Gerçekler</a>
+    <a href="#kanitlar">Kanıtlar</a>
+    <a href="#zaman">Zaman çizelgesi</a>
+    <a href="#teoriler">Teoriler</a>
+    <a href="#abartilar">Viral iddialar</a>
+    <a href="#bilinmeyen">Bilinmeyenler</a>
+    <a href="#degerlendirme">Değerlendirme</a>
+    <a href="#kaynaklar">Kaynakça</a>
+  </div>
+</nav>
+
+<main class="wrap">
+<section id="ozet">
+  <h2>60 saniyede dosya</h2>
+  <div class="card emphasis">
+    <p class="quote">
+      Nazca Çizgileri tek bir proje değil. Yüzlerce yıl boyunca farklı toplulukların ürettiği,
+      farklı tip ve muhtemelen farklı işlevlere sahip dev bir geoglif peyzajı.
+    </p>
+    <p>
+      UNESCO, Nazca ve Palpa geogliflerini kabaca <b>MÖ 500 – MS 500</b> arasına yerleştiriyor.
+      Ancak bazı geometrik çizgiler için doğrudan tarihleme çalışmaları <b>MS 400–650</b> aralığını da gösteriyor.
+      Bu yüzden “hepsi tam olarak aynı dönemde yapıldı” demek doğru değil.
+    </p>
+    <p>
+      Bugün öne çıkan akademik görüş, çizgilerin yalnızca astronomik takvim veya yalnızca su haritası olmadığı;
+      <b>ritüel hareket, topluluk törenleri, yollar, kutsal mekânlar ve sosyal bilgi aktarımı</b> gibi birden fazla işleve sahip olduğudur.
+      2024’te yayımlanan PNAS çalışması, bu çoklu kullanım fikrini önemli ölçüde güçlendirdi.
+    </p>
+  </div>
+</section>
+
+<section id="iddia">
+  <h2>İddia</h2>
+  <div class="card">
+    <p class="quote">
+      “Bu dev şekiller ancak havadan görülebiliyor. O halde Nazca halkı onları ya uçan varlıklar için yaptı
+      ya da çizgilerin anlamını bugün hâlâ açıklayamadığımız sıra dışı bir teknolojiyle biliyordu.”
+    </p>
+    <p>
+      Buradaki kritik hata şu: <b>figürlerin anlamlı olabilmesi için tamamının tek bakışta görülmesi gerekmiyor.</b>
+      Birçok çizgi ve kabartma tipi geoglif yer seviyesinden, yakındaki yükseltilerden veya onları çevreleyen patikalardan algılanabiliyor.
+      Ayrıca bazıları açıkça yürüyüş ve tören güzergâhlarıyla ilişkili.
+    </p>
+  </div>
+</section>
+
+<section id="gercekler">
+  <h2>Bildiğimiz gerçekler</h2>
+  <div class="grid">
+    <div class="fact"><b>Dev bir alan</b>UNESCO Dünya Mirası alanı yaklaşık 450 km²’lik Nazca ve Palpa çöl peyzajını kapsıyor.</div>
+    <div class="fact"><b>Tek tür değiller</b>Hayvanlar, bitkiler, insan biçimleri, hayali varlıklar; ayrıca düz çizgiler, spiraller, trapezler ve geniş pist benzeri şekiller var.</div>
+    <div class="fact"><b>Nasıl yapıldılar?</b>Koyu yüzey taşları kenara çekilip daha açık renkli alt tabaka ortaya çıkarılarak. Bazı küçük figürlerde taşların yığılması/yer değiştirilmesiyle kabartı tipi teknik kullanıldı.</div>
+    <div class="fact"><b>Neden korunmuşlar?</b>Aşırı kurak iklim, düşük yağış ve çöl yüzeyinin göreli kararlılığı çizgilerin uzun süre korunmasına yardım etti.</div>
+    <div class="fact"><b>Tek bir kültür değil</b>Paracas ve Nasca dönemleri başta olmak üzere farklı zaman evrelerine yayılan üretim var.</div>
+    <div class="fact"><b>Yeni keşifler sürüyor</b>2024’te AI destekli tarama ve saha doğrulamasıyla 303 yeni figüratif geoglif raporlandı.</div>
+  </div>
+</section>
+
+<section id="kanitlar">
+  <h2>Kanıtlar</h2>
+
+  <h3>1 — “Sadece havadan görülebilir” doğru değil</h3>
+  <div class="card">
+    <p>
+      Nazca araştırmalarında yer seviyesindeki güzergâhların, tepelerin ve patikaların önemi giderek daha fazla vurgulanıyor.
+      Ruggles ve Saunders’ın saha temelli çalışması, bazı çizgi sistemlerinin zeminden takip edildiğinde törensel bir “labirent” gibi deneyimlenebildiğini gösterdi.
+    </p>
+    <span class="pill green">Güçlü saha kanıtı</span>
+  </div>
+
+  <h3>2 — 2024: iki farklı geoglif dünyası</h3>
+  <div class="card">
+    <p>
+      Yamagata Üniversitesi ve IBM Research ekibi, 303 yeni figüratif geoglifi doğruladı.
+      Büyük <b>çizgi tipi</b> figürlerin çoğu vahşi hayvanları gösteriyor ve doğrusal/trapezoidal tören ağlarıyla ilişkili.
+      Küçük <b>kabartı tipi</b> figürlerde ise insan, evcil devegiller ve kesik baş gibi insan faaliyetleriyle ilişkili motifler daha yaygın;
+      bunlar çoğunlukla kıvrımlı patikaların yakınında.
+    </p>
+    <p>
+      Çalışmanın yorumu önemli: büyük çizgi tipi figürler <b>topluluk ölçekli törensel faaliyetlerle</b>,
+      küçük kabartı tipi figürler ise <b>bireyler veya küçük gruplarla bilgi paylaşımı</b> ile ilişkili olabilir.
+    </p>
+    <span class="pill green">PNAS · güçlü yeni kanıt</span>
+  </div>
+
+  <h3>3 — Astronomi var olabilir, ama tüm sistemi açıklamıyor</h3>
+  <div class="card">
+    <p>
+      Bazı çizgilerin Güneş’in veya belirli gök cisimlerinin doğuş/batış yönleriyle eşleştiği ileri sürüldü.
+      Fakat yüzlerce çizgi arasından rastlantısal hizalanmalar çıkması beklenebilir ve bütün geoglif ağını tek bir astronomik takvim olarak açıklayan genel bir uzlaşma yok.
+      Modern literatürde astronomi, olası işlevlerden <b>biri</b> olarak kalıyor.
+    </p>
+    <span class="pill yellow">Kısmi destek</span>
+  </div>
+
+  <h3>4 — Su bağlantısı cazip, ama tek açıklama değil</h3>
+  <div class="card">
+    <p>
+      Kurak bir çevrede su, Nasca toplumunun ritüellerinde ve yerleşim düzeninde merkezi önemdeydi.
+      Bazı çizgiler su kaynakları, vadiler veya yeraltı su sistemleriyle ilişkilendirildi.
+      Ancak geogliflerin tamamını “yeraltı su haritası” olarak açıklamak için yeterli kanıt yok.
+    </p>
+    <span class="pill yellow">Bağlamsal olarak güçlü, evrensel açıklama değil</span>
+  </div>
+
+  <h3>5 — Tarihleme tek bir yüzyıla sıkışmıyor</h3>
+  <div class="card">
+    <p>
+      UNESCO genel üretim evresini MÖ 500–MS 500 olarak özetler.
+      Buna karşılık Rink ve Bartoll’un optik uyarmalı lüminesans çalışması,
+      Palpa yakınındaki bazı geometrik taş çizgileri için <b>MS 400–650</b> aralığını verdi.
+      Bu, geoglif geleneğinin uzun süreli ve çok evreli olduğunu gösteriyor.
+    </p>
+    <span class="pill blue">Kronoloji önemli ölçüde katmanlı</span>
+  </div>
+</section>
+
+<section id="zaman">
+  <h2>Zaman çizelgesi</h2>
+  <div class="timeline">
+    <div class="t"><time>MÖ 500 civarı</time><p>Orta/Geç Formatif dönemlerde, özellikle Paracas bağlamında geoglif geleneği belirginleşir.</p></div>
+    <div class="t"><time>MÖ 200 – MS 500</time><p>Nasca kültürü döneminde çizgiler, geometrik şekiller ve büyük figüratif geoglifler yoğun biçimde üretilir ve kullanılır.</p></div>
+    <div class="t"><time>MS 400–650</time><p>Bazı geometrik çizgiler için doğrudan OSL tarihlemesi bu geç aralığı işaret eder.</p></div>
+    <div class="t"><time>1920’ler</time><p>Modern bilimsel ilgi artar; bölgedeki çizgiler hava ulaşımıyla birlikte daha geniş çevrelerde tanınır.</p></div>
+    <div class="t"><time>1940’lar–1990’lar</time><p>Astronomik takvim, ritüel yürüyüş, su ve kutsal peyzaj teorileri yoğun biçimde tartışılır.</p></div>
+    <div class="t"><time>1994</time><p>Nasca ve Palpa çizgileri UNESCO Dünya Mirası Listesi’ne girer.</p></div>
+    <div class="t"><time>2015</time><p>Yeni tarihleme ve yer seviyesinden peyzaj çalışmaları, tek amaçlı açıklamaları daha da zayıflatır.</p></div>
+    <div class="t"><time>2024</time><p>AI destekli tarama, 303 yeni figüratif geoglifi doğrular ve iki farklı kullanım modelini güçlendirir.</p></div>
+  </div>
+</section>
+
+<section id="teoriler">
+  <h2>Teoriler</h2>
+
+  <details open>
+    <summary>Teori A — Ritüel yollar ve topluluk törenleri</summary>
+    <div class="inside">
+      <p><b>Güçlü yanı:</b> Çizgilerin, trapezlerin ve bazı figürlerin birbirine bağlı kutsal mekânlar ve yürüyüş güzergâhlarıyla ilişkisi saha çalışmalarında görülüyor. 2024 PNAS sonuçları özellikle büyük çizgi tipi figürlerde topluluk ölçekli kullanım fikrini güçlendiriyor.</p>
+      <p><b>Zayıf yanı:</b> “Ritüel” geniş bir kategori; her çizginin tam olarak hangi törende kullanıldığını söylemiyor.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Teori B — Astronomik takvim / gökyüzü hizalamaları</summary>
+    <div class="inside">
+      <p><b>Güçlü yanı:</b> Bazı hatlarda anlamlı güneşsel veya göksel yönelimler bulunabilir ve And toplumlarında gök olaylarının ritüel önemi bilinir.</p>
+      <p><b>Zayıf yanı:</b> Binlerce çizgiden oluşan dev veri setinde tesadüfi hizalanmalar kaçınılmazdır. Tüm sistemi tek bir gök takvimine indirgeyen güçlü bir kanıt yok.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Teori C — Su kültü, bereket ve kutsal peyzaj</summary>
+    <div class="inside">
+      <p><b>Güçlü yanı:</b> Nazca’nın aşırı kurak çevresinde su yaşamsaldı; su kaynakları, dağlar ve ritüeller arasında And dünyasında güçlü ilişkiler bulunur.</p>
+      <p><b>Zayıf yanı:</b> Her geoglifin yeraltı suyu veya sulama sistemiyle örtüştüğü gösterilememiştir.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Teori D — Yol işaretleri ve sosyal bilgi</summary>
+    <div class="inside">
+      <p><b>Güçlü yanı:</b> 2024 çalışmasında küçük kabartı tipi figürlerin kıvrımlı patikaların yakınında ve insan faaliyetlerine ilişkin motiflerle kümelenmesi bu yorumu destekliyor.</p>
+      <p><b>Zayıf yanı:</b> Hangi motifin hangi mesajı taşıdığı hâlâ çözülememiş durumda.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Teori E — Tek amaç yoktu</summary>
+    <div class="inside">
+      <p><b>Güçlü yanı:</b> Farklı dönem, teknik, ölçek, motif ve mekânsal bağlamların varlığı, yüzlerce yıl boyunca tek bir işlev beklemenin gereksiz olduğunu gösteriyor.</p>
+      <p><b>Zayıf yanı:</b> Çok işlevli model doğru olsa bile, belirli çizgilerin tam anlamını tek tek açıklamak zor.</p>
+    </div>
+  </details>
+</section>
+
+<section id="abartilar">
+  <h2>Viral iddialar: doğru mu?</h2>
+  <table>
+    <thead><tr><th>İddia</th><th>Hüküm</th><th>Neden?</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>“Sadece uçaktan görülebilirler.”</td>
+        <td><span class="pill red">Yanlış</span></td>
+        <td>Bir kısmı yakın tepelerden ve yer seviyesinden algılanabilir; bazıları zaten patikalar ve yürüyüş güzergâhlarıyla ilişkili.</td>
+      </tr>
+      <tr>
+        <td>“Uzaylılar için iniş pistiydi.”</td>
+        <td><span class="pill red">Kanıt yok</span></td>
+        <td>Arkeolojik bağlam, teknik ve motifler yerel Paracas/Nasca kültürleriyle uyumludur. “Pist” yorumu fiziksel kanıta dayanmıyor.</td>
+      </tr>
+      <tr>
+        <td>“Nazca halkı bu kadar düzgün çizgileri yapamazdı.”</td>
+        <td><span class="pill red">Yanlış</span></td>
+        <td>Basit kazık, ip ve ölçüm teknikleriyle düz çizgiler ve büyük figürler üretmek mümkündür; olağanüstü teknoloji gerektirmez.</td>
+      </tr>
+      <tr>
+        <td>“Hepsi astronomik takvimdi.”</td>
+        <td><span class="pill yellow">Aşırı genelleme</span></td>
+        <td>Bazı hizalanmalar olabilir; fakat modern araştırmalar çok işlevli ritüel ve sosyal kullanım modellerini daha güçlü görüyor.</td>
+      </tr>
+      <tr>
+        <td>“Yeraltı su kaynaklarını gösteriyorlar.”</td>
+        <td><span class="pill yellow">Bazı ilişkiler olabilir</span></td>
+        <td>Su bağlamı önemlidir, fakat bütün çizgileri tek bir hidrolik harita olarak açıklamak için yeterli kanıt yok.</td>
+      </tr>
+      <tr>
+        <td>“2024’te AI çizgilerin sırrını tamamen çözdü.”</td>
+        <td><span class="pill red">Yanlış</span></td>
+        <td>AI yeni adayları bulmayı hızlandırdı; saha ekipleri bunları doğruladı. Çalışma işlev konusunda güçlü yeni örüntüler sundu ama “nihai çözüm” vermedi.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="bilinmeyen">
+  <h2>Hâlâ bilinmeyenler</h2>
+  <div class="grid">
+    <div class="fact"><b>Belirli figürlerin anlamı</b>Maymun, örümcek, kuşlar ve başka motiflerin neden seçildiğini kesin olarak bilmiyoruz.</div>
+    <div class="fact"><b>Her çizginin işlevi</b>Bazıları tören yolu, bazıları sosyal işaret, bazıları astronomik veya çevresel işlev taşıyor olabilir.</div>
+    <div class="fact"><b>Ritüellerin içeriği</b>Yüründüğünü veya törensel kullanıldığını düşünmek başka, ritüelin tam olarak ne olduğunu bilmek başka.</div>
+    <div class="fact"><b>Üretim organizasyonu</b>Kimlerin planladığı, kaç kişinin çalıştığı ve projelerin hangi sosyal otorite tarafından yönetildiği her grup için bilinmiyor.</div>
+    <div class="fact"><b>Motiflerin “dili”</b>2024 çalışması figürlerin dağılımında bilgi aktarımına işaret ediyor; fakat bu sembolik sistem henüz okunmuş değil.</div>
+    <div class="fact"><b>Tam kronoloji</b>Her geoglif doğrudan tarihlenmiş değil. Genel dönem bilinse de tek tek yapıların yaşları çoğu kez bağlamsal çıkarıma dayanıyor.</div>
+  </div>
+</section>
+
+<section id="degerlendirme">
+  <h2>Benim değerlendirmem</h2>
+  <div class="card emphasis">
+    <p class="verdict">🟡 Gizem çözülüyor — fakat “tek cevap” beklemek muhtemelen baştan yanlış.</p>
+    <p>
+      Nazca Çizgileri hakkında bugün en güçlü değişim şu: araştırmacılar artık onları dev bir bilmece gibi,
+      “Bu çizgilerin tek amacı neydi?” diye okumaktan uzaklaşıyor. Çünkü aynı bölgede yüzlerce yıl boyunca,
+      farklı tekniklerle ve farklı sosyal bağlamlarda üretilmiş çok sayıda geoglif var.
+    </p>
+    <p>
+      Bu nedenle benim en olası değerlendirmem: <b>Nazca peyzajı ritüel yürüyüşlerin, topluluk törenlerinin,
+      sosyal bilginin, su ve kutsal coğrafya ilişkilerinin bir araya geldiği çok katmanlı bir kültürel sistemdi.</b>
+      Bazı çizgilerin astronomik işlevi olması mümkündür; ama bu bütün sistemi açıklamaz.
+    </p>
+    <p>
+      En etkileyici tarafı “nasıl yaptılar?” değil. Bunu basit araçlarla yapabiliyorlardı.
+      Asıl soru, <b>bu dev peyzajın onlar için nasıl bir anlam dünyası oluşturduğudur.</b>
+    </p>
+  </div>
+  <div class="callout">
+    <b>Seri için durum:</b> 🟡 <b>Temel üretim ve kullanım bağlamı giderek iyi anlaşılıyor; sembolik anlam ve tek tek yapıların amacı hâlâ açık.</b>
+  </div>
+</section>
+
+<section id="kaynaklar">
+  <h2>Kaynakça</h2>
+  <p class="small">Popüler içerikler nihai kanıt olarak kullanılmadı. Ana iddialar UNESCO ve akademik yayınlara dayandırıldı.</p>
+
+  <div class="source"><b>UNESCO World Heritage Centre.</b> “Lines and Geoglyphs of Nasca and Palpa.” Alanın kronolojisi, kapsamı ve temel sınıflandırması.<br>
+  <a href="https://whc.unesco.org/en/list/700" target="_blank" rel="noopener">UNESCO kaydı</a></div>
+
+  <div class="source"><b>Sakai, M. ve çalışma arkadaşları (2024).</b> “AI-accelerated Nazca survey nearly doubles the number of known figurative geoglyphs and sheds light on their purpose.” <i>Proceedings of the National Academy of Sciences</i>. DOI: 10.1073/pnas.2407652121.<br>
+  <a href="https://doi.org/10.1073/pnas.2407652121" target="_blank" rel="noopener">PNAS makalesi</a></div>
+
+  <div class="source"><b>Ruggles, C. & Saunders, N. J. (2015).</b> “Desert labyrinth: lines, landscape and meaning at Nazca, Peru.” <i>Antiquity</i>.<br>
+  <a href="https://www.cambridge.org/core/journals/antiquity/article/abs/desert-labyrinth-lines-landscape-and-meaning-at-nazca-peru/6CFD0AC5DDA25CABB21DBF0837C06BBC" target="_blank" rel="noopener">Cambridge / Antiquity</a></div>
+
+  <div class="source"><b>Rink, W. J. & Bartoll, J. (2015).</b> “Dating the geometric Nasca lines in the Peruvian desert.” <i>Antiquity</i>. Optik uyarmalı lüminesans ile bazı geometrik çizgiler için MS 400–650 aralığı.<br>
+  <a href="https://www.cambridge.org/core/journals/antiquity/article/abs/dating-the-geometric-nasca-lines-in-the-peruvian-desert/BC66A0CB3A36EC987BAF15BA3A3ED8E3" target="_blank" rel="noopener">Cambridge / Antiquity</a></div>
+
+  <div class="source"><b>Clarkson, P. B. (2020).</b> “Nasca and Pampa Jumana Lines and Geoglyphs.” <i>Encyclopedia of Global Archaeology</i>. Springer.<br>
+  <a href="https://doi.org/10.1007/978-3-030-30018-0_1626" target="_blank" rel="noopener">Springer kaydı</a></div>
+
+  <div class="source"><b>Yamagata University (2024).</b> AI destekli Nazca araştırmasının saha sonuçları ve 303 yeni geoglif duyurusu.<br>
+  <a href="https://www.yamagata-u.ac.jp/en/information/info/20240924/" target="_blank" rel="noopener">Üniversite araştırma özeti</a></div>
+
+  <p class="small" style="margin-top:24px">Son güncelleme: 6 Ekim 2026.</p>
+  <button id="print" onclick="window.print()">Yazdır / PDF olarak kaydet</button>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Çözülemeyen Sorular</b> · Nazca Çizgileri araştırma dosyası<br>
+    Görselsiz, kaynakçalı, interaktif okuma sürümü.
+  </div>
+</footer>
+</body>
+</html>

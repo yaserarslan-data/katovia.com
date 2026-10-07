@@ -1,0 +1,1562 @@
+{
+  "schemaVersion": 1,
+  "id": "baghdad-battery",
+  "locale": "tr",
+  "source": {
+    "filename": "Bagdat_Pili_Interaktif_Dosya.html",
+    "sha256": "d23b3e7975bc7cce3cb2c9b4e42fcb6ee4f9ef4bb3dec278020fb29c7beeaa9e",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "source-only",
+    "independentlyReviewed": false
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "60 saniyede dosya"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nBağdat “Pili”nin en önemli gerçeği şu: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "bir pil gibi çalıştırılabilir olması, antik çağda pil olarak kullanıldığını kanıtlamaz."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n1930'larda Bağdat yakınındaki Khujut Rabu'da bulunan küçük seramik kapların içinde bakır silindir ve demir çubuk vardı.\nWilhelm König 1938'de bunların galvanik hücre olabileceğini öne sürdü.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nModern replikalar asidik bir elektrolitle elektrik üretmeyi başardı.\nHatta 2026'da yayımlanan deneysel bir çalışma, uygun düzenlemeyle ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1,4 voltun üzerinde"
+                  ]
+                },
+                " gerilim ve görünür elektrokimyasal etkiler elde edilebildiğini savundu.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAma arkeolojik problem aynı kaldı:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "elektrik kablosu, seri bağlama düzeni, kesin elektrolit kalıntısı, kullanım talimatı veya tartışmasız elektro-kaplanmış bir nesne yok."
+                  ]
+                },
+                "\nDolayısıyla fiziksel olasılık ile tarihsel kullanım arasında hâlâ büyük bir boşluk var.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "İddia"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“Antik Mezopotamyalılar elektrik biliyordu. Bağdat Pili ile altın kaplama yapıyor, hatta tıbbi elektroterapi uyguluyorlardı.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu cümle üç ayrı şeyi tek kanıt gibi sunuyor:\ncihazın elektrik üretebilmesi, insanların bunu bildiği ve elektriği belirli bir amaç için kullandığı.\nİlkini deney gösterebilir. İkinci ve üçüncü iddialar için ise arkeolojik bağlam gerekir.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Bildiğimiz gerçekler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Nesne kombinasyonu gerçek"
+                  ]
+                },
+                "Seramik kavanoz, bakır silindir ve demir çubuk birlikteliği 1930'larda yayımlandı."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tarihleme kesin değil"
+                  ]
+                },
+                "Buluntu bağlamı modern standartlara göre zayıf olduğundan Part mı Sasani mi olduğu konusunda belirsizlik var."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Galvanik hücre kurulabilir"
+                  ]
+                },
+                "Bakır ve demir farklı elektrotlar olarak, asidik sıvı varlığında küçük bir gerilim üretebilir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "“Elektro-kaplama” doğrudan kanıtlanmadı"
+                  ]
+                },
+                "Antik Mezopotamya'da elektrikle kaplandığı tartışmasız biçimde gösterilmiş bir nesne bilinmiyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Alternatif benzer kaplar var"
+                  ]
+                },
+                "Seleucia ve Ctesiphon'dan benzer kaplar, büyü/dua metinlerini saklamak için kullanılan nesnelerle karşılaştırıldı."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Orijinal eserlerin akıbeti sorunlu"
+                  ]
+                },
+                "Bağdat'taki orijinal buluntuların 2003 yağması sonrasında kaybolduğu/akıbetinin belirsiz olduğu bildirildi; yeniden analiz imkânı ciddi biçimde sınırlı."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kanıtlar"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — Evet, gerçekten elektrik üretebilir"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBakır ve demir iki farklı metal elektrot olarak çalışabilir.\nAralarına sirke, şarap, üzüm suyu veya başka iyon içeren asidik bir sıvı konursa kimyasal potansiyel farkından elektrik akımı doğabilir.\nBu temel elektro-kimya tartışmalı değil.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Fiziksel olarak mümkün"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — 2026 deneyi hipotezi güçlendirdi ama tarihi çözmedi"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAlexander Bazes'in 2026 tarihli deneysel çalışması, Bağdat Pili'nin ayrıntılarını taklit eden bir replikada\n1,4 voltun üzerinde gerilim ve görünür elektrokimyasal reaksiyonlar üretebildiğini bildirdi.\nÇalışma, “bu tasarım işe yaramaz” itirazına karşı önemli bir deneysel sonuç sunuyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nFakat bu deney modern araştırmacının düzeneği pil olarak ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "nasıl çalıştırabileceğini"
+                  ]
+                },
+                " gösterir;\nantik kullanıcının gerçekten bu amaçla kullandığını tek başına göstermez.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Yeni ve önemli; niyet kanıtı değil"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — Elektro-kaplama hipotezinin kritik boşluğu"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nKönig'in en ünlü önerisi elektrikle altın kaplamaydı.\nAncak David A. Scott gibi arkeometalurji uzmanları, bölgede o tarihte elektro-kaplamayı gösteren doğrudan kanıt bulunmadığını vurgular.\nİnce altın kaplamaların elektrik gerektirmeyen ateş yaldızlama, amalgam veya başka metalurjik tekniklerle yapılabildiği biliniyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "Arkeolojik zincir eksik"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — Elektrik kullanıldıysa devre nerede?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nİşlevsel bir teknoloji yalnızca hücreden ibaret değildir.\nElektro-kaplama için iletken bağlantılar, kaplanacak nesne, uygun elektrolit/metal tuzu ve muhtemelen birden fazla hücre gerekir.\nBugüne kadar bu parçaları Bağdat Pili ile doğrudan bağlayan güvenilir bir buluntu grubu yok.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "En büyük sorunlardan biri"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — Alternatif “ritüel/scroll kabı” açıklaması"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nCtesiphon'daki benzer kapların papirüs üzerine yazılı büyü, dua veya koruyucu metinleri saklayan nesneler olarak yorumlandığı biliniyor.\nBakır silindirin içine organik bir metin yerleştirilmiş ve zamanla tamamen çürümüş olması mümkündür.\nDemir çubuğun işlevi bu modelde tartışmalı olsa da, arkeolojik bağlam açısından “ritüel depo” ciddi bir alternatiftir.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Makul alternatif"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "6 — Korozyon elektrolit kanıtı mı?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nDemir ve bakır üzerindeki korozyon bazen asidik elektrolit kalıntısı olarak anlatılır.\nAncak gömülü metal nesneler toprak nemi ve çevresel kimya nedeniyle de korozyona uğrar.\nOrijinal iç yüzeyler modern analitik yöntemlerle ayrıntılı biçimde yeniden incelenmeden bu kanıt belirleyici sayılamaz.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Belirsiz"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Teoriler"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori A — Gerçek galvanik pil / elektro-kaplama cihazı"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Geometri elektrik hücresi kurmaya elverişli. Replikalar elektrik üretiyor; 2026 çalışması daha güçlü elektrokimyasal etkiler de gösterdi."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Kullanım zinciri yok: elektrolit kalıntısı, kablo, seri bağlantı, kaplama düzeneği ve kesin elektrokaplanmış eser bulunmadı."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori B — Elektroterapi / ağrı giderme"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Paul Keyser, düşük gerilimli elektrik hissinin ağrı giderici veya ritüel-tıbbi amaçla kullanılabileceğini öne sürdü."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Bunu anlatan antik tıbbi metin veya elektrot uygulama aparatı yok. Çok spekülatif."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori C — Büyü / dua / kutsal metin kabı"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Bölgedeki benzer kapların yazılı tılsım ve koruyucu metinlerle ilişkilendirilmesi tarihsel bağlama uyuyor."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Khujut Rabu örneğinin bakır + demir düzeninin tüm ayrıntılarını kusursuz açıklamak kolay değil."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori D — Başka bir saklama veya zanaat kabı"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Arkeolojik nesnelerin özgün kullanımı bazen modern sınıflandırmalarımıza hiç uymayabilir."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Spesifik bakır silindir + demir çubuk birleşiminin neden gerektiğini açıklamak gerekir."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "viral"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral iddialar: doğru mu?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "İddia"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Hüküm"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Neden?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Bağdat Pili kesin olarak dünyanın ilk pilidir.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıtlanmadı"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Bir galvanik hücre olarak çalışabilir; özgün işlevi bilinmiyor."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“2000 yıl önce elektrik kullandıkları kanıtlandı.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Aşırı"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Elektrik teknolojisi kullanımını gösteren tamamlayıcı arkeolojik sistem yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Antik altın takılar elektro-kaplamayla üretildi.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıtlanmadı"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Yaldız için elektrik gerektirmeyen tarihsel teknikler mevcut; tartışmasız elektrokaplama örneği gösterilemedi."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“İçine sirke koyunca voltaj veriyor; o halde pildir.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Mantık hatası"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Bir nesnenin modern deneyde bir işlevi yapabilmesi, tarihsel tasarım amacını kanıtlamaz."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Hiç elektrik üretemiyor.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Uygun elektrolitle replika hücrelerin gerilim üretmesi fiziksel olarak gösterildi."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“2026'da gizem tamamen çözüldü.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Hayır"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Yeni çalışma işlevsel elektrokimyayı güçlendirdi; antik insanların niyetini ve kullanımını kanıtlamadı."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Uzaylı teknolojisiydi.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıt yok"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Bileşenlerin tamamı dönemin bilinen seramik ve metal işçiliğiyle üretilebilir."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Hâlâ bilinmeyenler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Özgün işlev"
+                  ]
+                },
+                "Elektrik hücresi mi, ritüel kap mı, başka bir şey mi?"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "İçinde hangi sıvı vardı?"
+                  ]
+                },
+                "Güvenilir özgün elektrolit analizi yok."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Parçalar gerçekten tek cihaz mıydı?"
+                  ]
+                },
+                "Eski kazı belgelerinin yetersizliği özgün montaj konusunda belirsizlik bırakıyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tarihi tam olarak ne?"
+                  ]
+                },
+                "Part ve Sasani dönemleri arasında farklı değerlendirmeler var."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Eğer pildiyse neye bağlandı?"
+                  ]
+                },
+                "Tel, elektrot ve kullanım düzeneği bulunmuş değil."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Orijinaller yeniden incelenebilir mi?"
+                  ]
+                },
+                "2003 sonrası eserlerin akıbeti nedeniyle modern analiz fırsatı ciddi biçimde zarar gördü."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Benim değerlendirmem"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🟡 Bağdat Pili mümkün bir pil; ama henüz tarihsel olarak kanıtlanmış bir pil değil."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu dosyada iki uç yaklaşım da problemli.\n“Antik insanlar elektrik kullanamazdı, dolayısıyla imkânsız” demek yanlış;\nçünkü düzenek gerçekten elektrokimyasal hücre olarak çalışabilir.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAma tam tersi olan “çalışıyor, demek ki kesin pil” sonucu da yanlış.\nArkeolojide niyeti anlamak için ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "işlevsel bağlam"
+                  ]
+                },
+                " gerekir:\nkablolar, kullanılmış elektrolit, elektrokaplanmış ürün, seri hücre dizisi veya bunu tarif eden metin.\nBunların hiçbiri kesin biçimde elimizde değil.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n2026 deneyi bence dosyayı daha ilginç yaptı:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "“Bu şey pil olamazdı” savunmasını zayıflatıyor."
+                  ]
+                },
+                "\nFakat “antik elektrik teknolojisi kanıtlandı” çizgisine bizi taşımıyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nDolayısıyla şu an en doğru cümle:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Elektrik üretmek için şaşırtıcı derecede uygun bir antik nesne; fakat özgün kullanım amacı çözülememiş."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Seri için durum:"
+              ]
+            },
+            " 🟡 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Gerçek bir tartışma var."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nFiziksel olarak pil işlevi mümkün. Arkeolojik olarak bunun amaçlanan işlev olduğu henüz gösterilemedi.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kaynakça"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Deneysel kapasite ile tarihsel kullanım özellikle ayrı tutuldu. Kaynak kalitesi ve arkeolojik sınırlamalar metinde açıkça belirtildi."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Keyser, P. T. (1993)."
+              ]
+            },
+            " “The Purpose of the Parthian Galvanic Cells: A First-Century A.D. Electric Battery Used for Analgesia.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal of Near Eastern Studies"
+              ]
+            },
+            " 52(2):81–98. Elektrik hücresi ve elektroterapi hipotezinin akademik savunularından biri."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Eggert, G. (1994)."
+              ]
+            },
+            " “On the origin of a gilding method of the Baghdad silversmiths.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Gold Bulletin"
+              ]
+            },
+            ". König'in elektro-kaplama argümanında kullandığı modern Bağdat yaldızlama pratiğinin tarihsel kökenini eleştirel olarak inceler.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://link.springer.com/article/10.1007/BF03214771"
+              },
+              "children": [
+                "Springer / Gold Bulletin"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Scott, D. A."
+              ]
+            },
+            " ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Metallography and Microstructure of Ancient and Historic Metals."
+              ]
+            },
+            " Getty Conservation Institute. Antik yaldızlama ve metalurji bağlamında elektro-kaplama iddialarına eleştirel yaklaşım."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Bazes, A. (2026)."
+              ]
+            },
+            " “The Baghdad Battery: Experimental Verification of a 2,000-Year-Old Device Capable of Driving Visible and Useful Electrochemical Reactions at over 1.4 Volts.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Sino-Platonic Papers"
+              ]
+            },
+            " 377. Modern replika deneyinde güçlü elektrokimyasal performans iddiası.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.sino-platonic.org/complete/spp377_baghdad_battery.pdf"
+              },
+              "children": [
+                "Sino-Platonic Papers"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "History (2026)."
+              ]
+            },
+            " “Could Ancient Mesopotamians Have Built a Battery?” Güncel popüler-bilim özeti; buluntu tarihi, König hipotezi ve devam eden arkeolojik tartışmayı derler.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.history.com/articles/baghdad-battery"
+              },
+              "children": [
+                "History"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "von Handorf, D. E. (2002)."
+              ]
+            },
+            " “The Baghdad Battery—Myth or Reality?” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Plating & Surface Finishing."
+              ]
+            },
+            " Elektro-kaplama hipotezini teknik açıdan değerlendiren çalışma."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Son güncelleme: 6 Ekim 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

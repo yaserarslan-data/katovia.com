@@ -1,0 +1,1994 @@
+{
+  "schemaVersion": 1,
+  "id": "antikythera-mechanism",
+  "locale": "en",
+  "source": {
+    "filename": "Antikythera_Duzenegi_Interaktif_Dosya.html",
+    "sha256": "3f6bf1d48ac8621a8137800e35e4f2a3e740c68d82a296030839f0086db194dc",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "editorial-translation",
+    "independentlyReviewed": false,
+    "sourceLocale": "tr",
+    "sourceRevision": "2026-10-06",
+    "sourceContentSha256": "6cf8b3f98d1fd8cd07ebdb642f4bc7d6d03431a8e2e881a9339f5e2a781f2fe6"
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The case in 60 seconds"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n      The Antikythera Mechanism is not a legend: it is a real, ancient Greek astronomical calculating device driven by gears. Yet only about a third of the original survives, so the exact mechanical arrangement of the planetary display on its front remains uncertain.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The strongest finding is that the mechanism represented solar and lunar cycles, calendar cycles and sequences of eclipses mechanically. The functions of its rear dials are well established. For the front, inscriptions support a display of the planets as well, but the exact arrangement of the missing gears depends on reconstructions.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The real mystery:"
+                  ]
+                },
+                " Rather than simply “What did it do?”, the questions are ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "who made it, which workshop tradition it belonged to, how many similar devices existed, and exactly how its front system worked."
+                  ]
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The claim"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n      “Such a complex geared computer could not have been made in the second or first century BCE. The Antikythera Mechanism must be a technology a thousand years ahead of its time, with no explainable origin.”\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The first part of this reaction is understandable: among surviving examples, the mechanism really is extraordinary. But the conclusion that it “could not have been made in its own time” has not been established. Greek mechanical traditions, astronomical knowledge and written sources show that the intellectual foundations for such devices existed.\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What we know"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "A genuine archaeological find"
+                  ]
+                },
+                "Recovered in 1900–1901 from a Roman-period shipwreck off Antikythera."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Date"
+                  ]
+                },
+                "The National Archaeological Museum's chronology places the mechanism's manufacture around 150–100 BCE and the wreck around 70 BCE."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "State of preservation"
+                  ]
+                },
+                "It now consists of 82 fragments; about a third survives, and roughly 30 gears have been directly identified."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Materials"
+                  ]
+                },
+                "The core mechanism consists of bronze gears and dials; it was housed in a box or case."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Rear face"
+                  ]
+                },
+                "The Metonic cycle, the Saros eclipse cycle and calendar indicators associated with Panhellenic games are well understood."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Front face"
+                  ]
+                },
+                "Inscriptions support the presence of a “cosmos” display showing the movements of the Sun, Moon and the five planets known in antiquity."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The evidence"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — The gears are not merely decorative"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      A 2006 Nature study reassessed gear ratios and inscriptions using high-resolution X-ray tomography and surface imaging. It found a mechanical arrangement modelling the Moon's phases and its apparently irregular motion; the device could also calculate eclipse cycles.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Strong evidence"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — The rear dials have been deciphered"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      A 2008 Nature study linked the upper rear dial to the 19-year Metonic calendar cycle and the lower rear dial to the Saros eclipse cycle of 223 synodic months. A subsidiary dial for the Olympics and other Panhellenic games was also identified.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Very strong"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — The device carries a kind of “instruction manual”"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The inscriptions readable through CT are more than labels: they describe the device's displays and astronomical cycles. Comprehensive epigraphic publications in 2016 systematically published the front-cover, back-cover and dial inscriptions.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Direct physical evidence"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — A strong but incomplete reconstruction of the front"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The UCL model published in Scientific Reports in 2021 combined planetary cycles specified in the inscriptions, gear ratios and physical constraints to propose a layered front “cosmos” system displaying the Sun, Moon, Mercury, Venus, Mars, Jupiter and Saturn. The model is consistent with the data, but because parts are missing, ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "it is not proof of the original arrangement in every detail."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Strong reconstruction, not certain"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — The calendar-ring debate reopened in 2024"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Graham Woan and Joseph Bayley reanalysed the surviving hole positions using Bayesian methods. Their results favoured a ring with approximately 354–355 holes; under their model assumptions, they found the 360- and 365-hole alternatives unlikely. This may strengthen a lunar-calendar interpretation, but it does not mean that the mechanism's entire calendar architecture has been rewritten.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "New and open to debate"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "zaman"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Timeline"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "150–100 BCE"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The period of manufacture according to the National Archaeological Museum's chronology."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Around 70 BCE / 60–50 BCE"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The ship sinks off Antikythera. Museum sources give dates around 70 BCE or within 60–50 BCE for the sinking."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1900–1901"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Sponge divers discover the wreck; artefacts are recovered."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1902"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The significance of the geared structure begins to be recognised."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1950s–1974"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Derek de Solla Price studies the device systematically and interprets it as an ancient mechanical calculator."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2005"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "A campaign of microfocus X-ray CT and advanced surface imaging begins."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2006"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Nature: important analyses of lunar motion, eclipse calculations and gear architecture."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2008"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Nature: the Metonic calendar, Saros eclipse dial and Panhellenic games indicator are described in detail."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2016"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "A comprehensive scholarly publication of the inscriptions appears."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2021"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The UCL team publishes a new mechanical model for the front cosmos display."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2024"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "A new statistical analysis of the calendar ring's hole count favours approximately 354–355 holes."
+                  ]
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Theories"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory A — A device for astronomical teaching and demonstration"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The inscriptions, dials and planetary and eclipse displays clearly support its interpretation as a “mechanical cosmos”. Such an object would be well suited to teaching, demonstration and calculation."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " No document directly identifies its users or the context in which it was used."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory B — A tool for calendars and astronomical prediction"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The Metonic and Saros cycles are built directly into the rear of the mechanism; eclipse predictions are supported by physical evidence."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " “Prediction” here does not mean precise astronomical calculation in the modern sense; it means forecasting based on cyclical schemes."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory C — Archimedes or his tradition"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Ancient sources describe celestial spheres or mechanical models attributed to Archimedes. The Corinthian origin of some calendar names also makes a connection with Syracuse interesting."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " There is no direct evidence that Archimedes made the mechanism. Indeed, it was probably made about a century after his death."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory D — Rhodes / the circle of Hipparkhos"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The modelling of lunar motion has been found consistent with Hipparkhos's astronomical theories; Rhodes was also an important centre of astronomy and mechanics at the time."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " There is no signature, workshop mark or document that would establish that “Hipparkhos made it”."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory E — The sole surviving example of a lost technological tradition"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " From an engineering perspective, it is reasonable to see an exceptional device as the product of an experienced workshop tradition rather than something developed from scratch. Ancient literature also refers to mechanical models of the heavens."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " No other complete devices of the same complexity survive. We therefore do not know the extent of that tradition."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "abartilar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral claims: are they true?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Claim"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Assessment"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Why?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It is the world's first computer.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Partly true"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Computer” does not mean a modern electronic device here, but an ",
+                        {
+                          "tag": "b",
+                          "attrs": {},
+                          "children": [
+                            "analogue calculator"
+                          ]
+                        },
+                        " that performs calculations involving multiple variables through mechanical ratios."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It calculated planetary positions precisely.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Probable / model-dependent"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The inscriptions strongly support a planetary display. However, most of the front gear system is missing, so its complete mechanism is a reconstruction."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It knew solar and lunar eclipses in advance.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill green"
+                          },
+                          "children": [
+                            "Yes, in a cyclical sense"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The Saros dial displayed eclipse sequences mechanically."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“This technology was impossible in ancient Greece.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Unsupported"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The necessary components of astronomy, ratio mathematics, metalworking and gear technology existed in the Hellenistic world. What is remarkable is their combination in such a compact device."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“It could be alien technology.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "No evidence"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The device's language, astronomy, calendars and manufacture are consistent with ancient Greek scientific culture."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Nothing like it existed for the next 1,000 years.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "An oversimplification"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "There is a long gap in surviving geared mechanisms of comparable complexity; this does not mean that mechanical knowledge was absent during the intervening millennium."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What remains unknown"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Who made it?"
+                  ]
+                },
+                "No name, signature or definite workshop information survives."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Where was it made?"
+                  ]
+                },
+                "Rhodes, the Corinth/Syracuse area and other Hellenistic centres have been discussed."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "What was the exact front gear arrangement?"
+                  ]
+                },
+                "Critical parts are missing. Modern reconstructions are evidence-based, but it is not certain that they are the only possible solution."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "How many similar devices existed?"
+                  ]
+                },
+                "It would be surprising for so advanced a device to have been unique, but others could have been melted down, recycled or lost."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "What was its precise purpose?"
+                  ]
+                },
+                "Teaching, demonstration, calendars, astrological/astronomical planning, or a combination of these are possible."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "How many holes did the calendar ring have?"
+                  ]
+                },
+                "The 2024 analysis supports 354–355; this remains dependent on model and measurement assumptions."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "My assessment"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🟡 The mystery is less “how it worked” than ",
+                {
+                  "tag": "br",
+                  "attrs": {},
+                  "children": []
+                },
+                "exactly ",
+                {
+                  "tag": "em",
+                  "attrs": {},
+                  "children": [
+                    "who developed such an advanced mechanical tradition."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The Antikythera Mechanism does not belong in the category of “unexplainable technology”. Its physical gears, dials, astronomical ratios and inscriptions make its basic functions fairly well understood. Yet the loss of two-thirds of the device leaves its front planetary system and manufacturing context particularly open.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The most reasonable picture is that astronomy, geometrical models and precise bronze craftsmanship came together in the Hellenistic scientific world within an advanced tradition of mechanical calculation, of which only one example survives today. Its uniqueness does not show that the technology fell from the sky; it shows ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "how incomplete the archaeological record can be"
+                  ]
+                },
+                ".\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "h3",
+              "attrs": {},
+              "children": [
+                "Balance of evidence"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Astronomical calculator"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "very strong"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Eclipse / calendar functions"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "very strong"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Planetary display"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "strong"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Complete front gear arrangement"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "uncertain"
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "score"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Maker / workshop"
+                  ]
+                },
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "unknown"
+                  ]
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Status in this series:"
+              ]
+            },
+            " 🟡 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Largely understood, but critical details of its reconstruction and origins remain open."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n    This is not a debate about an image's formation mechanism, as with the Shroud of Turin, or about fundamental meaning, as with Voynich. Much of the Antikythera Mechanism has been explained by science.\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "References"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Popular accounts were used only for orientation. The list below contains the scholarly and institutional sources supporting the case's main claims."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Freeth, T. et al. (2006)."
+              ]
+            },
+            " “Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Nature"
+              ]
+            },
+            " 444, 587–591. DOI: 10.1038/nature05357.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.nature.com/articles/nature05357"
+              },
+              "children": [
+                "Nature article"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Freeth, T., Jones, A., Steele, J. M. et al. (2008)."
+              ]
+            },
+            " “Calendars with Olympiad display and eclipse prediction on the Antikythera Mechanism.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Nature"
+              ]
+            },
+            " 454, 614–617. DOI: 10.1038/nature07130.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.nature.com/articles/nature07130"
+              },
+              "children": [
+                "Nature article"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Freeth, T. et al. (2021)."
+              ]
+            },
+            " “A Model of the Cosmos in the ancient Greek Antikythera Mechanism.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Scientific Reports"
+              ]
+            },
+            " 11, 5821. DOI: 10.1038/s41598-021-84310-w.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.nature.com/articles/s41598-021-84310-w"
+              },
+              "children": [
+                "Scientific Reports article"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Jones, A. and colleagues (2016)."
+              ]
+            },
+            " ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Inscriptions of the Antikythera Mechanism"
+              ]
+            },
+            ". NYU Faculty Digital Archive / Almagest special publication.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://archive.nyu.edu/jspui/handle/2451/71597"
+              },
+              "children": [
+                "NYU archive"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "National Archaeological Museum, Athens."
+              ]
+            },
+            " “The Mysteries of the Mechanism of Antikythera” — chronology, archaeology and history-of-science sections.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://antikythera-mechanism.namuseum.gr/en/"
+              },
+              "children": [
+                "Museum dossier"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Woan, G. & Bayley, J. (2024)."
+              ]
+            },
+            " “An improved calendar ring hole-count for the Antikythera mechanism.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Horological Journal"
+              ]
+            },
+            ".",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://eprints.gla.ac.uk/329337/"
+              },
+              "children": [
+                "University of Glasgow record"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Last updated: 6 October 2026. This study aims to distinguish “certain”, “strong”, “possible” and “speculative” interpretations of the available physical and scholarly evidence."
+          ]
+        },
+        "\n  ",
+        "\n"
+      ]
+    }
+  ]
+}

@@ -17,9 +17,9 @@ export function createI18n({ backend = storage, browserLanguage = globalThis.nav
   return {
     get locale() { return locale; },
     t: (key, params) => translate(locale, key, params),
-    setLocale(next) {
+    setLocale(next, { persist = true } = {}) {
       if (!valid(next)) return false;
-      backend.set('locale', next);
+      if (persist) backend.set('locale', next);
       if (next !== locale) { locale = next; listeners.forEach((fn) => fn(locale)); }
       return true;
     },

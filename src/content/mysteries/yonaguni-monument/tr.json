@@ -1,0 +1,1775 @@
+{
+  "schemaVersion": 1,
+  "id": "yonaguni-monument",
+  "locale": "tr",
+  "source": {
+    "filename": "Yonaguni_Aniti_Interaktif_Dosya.html",
+    "sha256": "ff5b00004709a8ed3fa02497c98b2c319cdbee3696610d7a84225bd5b174446c",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "source-only",
+    "independentlyReviewed": false
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "60 saniyede dosya"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nYonaguni'deki yapı gerçekten şaşırtıcı derecede geometrik görünüyor. Ama “geometrik görünmek” tek başına insan yapımı olduğunu kanıtlamıyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAna oluşum yaklaşık ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "100 × 60 metre"
+                  ]
+                },
+                " ölçülerinde ve yaklaşık ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "25 metre"
+                  ]
+                },
+                " yüksekliğinde.\nBüyük düz yüzeyler, teraslar, dik kenarlar ve basamak benzeri kırıklar içeriyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBölgenin jeolojisi ise tam da bu tür şekilleri doğal olarak üretebilecek özelliklere sahip:\nYonaguni'de Miyosen yaşlı kumtaşları yaygın ve kayaçlarda çok sayıda ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "eklem, kırık ve fay"
+                  ]
+                },
+                " bulunuyor.\n2020 tarihli jeomorfoloji çalışması adadaki kaya yüzeylerinde belirgin eklem sistemlerini ve erozyon biçimlerini belgeliyor;\n2024'teki yeni denizaltı jeomorfolojisi çalışması da Yonaguni çevresindeki kumtaşı erozyon şekillerini çok ışınlı sonar,\nROV fotogrametrisi ve dalışlarla inceliyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nİnsan yapımı olduğu görüşünün en güçlü savunucusu Ryukyus Üniversitesi'nden Masaaki Kimura.\nKimura yapıyı yaklaşık 10.000 yıl önce karadayken inşa edilmiş veya işlenmiş bir kompleks olarak yorumladı.\nBuna karşılık jeolog Robert Schoch, yapının ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "büyük ölçüde doğal"
+                  ]
+                },
+                " olduğu, ancak eski insanlar tarafından yer yer kullanılmış veya değiştirilmiş olabileceği sonucuna vardı.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "İddia"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“Yonaguni, son Buzul Çağı'nın sonunda sular altında kalan 10.000+ yıllık kayıp bir uygarlığın piramit veya tapınak kompleksidir.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu iddia iki farklı şeyi birbirine bağlıyor:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "oluşumun bir zamanlar deniz seviyesinin üstünde kalmış olması"
+                  ]
+                },
+                " ile\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "insanlar tarafından inşa edilmiş olması"
+                  ]
+                },
+                ".\nİlk olasılık paleocoğrafya açısından mümkündür; ikincisi ise ayrıca arkeolojik kanıt gerektirir.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Bildiğimiz gerçekler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "1986'da fark edildi"
+                  ]
+                },
+                "Dalış işletmecisi Kihachiro Aratake, Yonaguni'nin güney kıyısı açıklarında yapıyı keşfetti."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Dev bir kaya kütlesi"
+                  ]
+                },
+                "Japonya Ulusal Turizm Örgütü ana yapıyı yaklaşık 100 × 60 m ve 25 m yüksekliğinde tanımlıyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Kaya türü önemli"
+                  ]
+                },
+                "Yonaguni Adası'nın temelinde yaygın olarak Miyosen yaşlı Yaeyama Grubu kumtaşları bulunuyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Eklem ve faylar yaygın"
+                  ]
+                },
+                "Adadaki yüzey jeolojisi yatay/düşey kırık sistemleri, normal faylar ve belirgin erozyon şekilleri gösteriyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "İnsan yapımı görüşü akademide de savunuldu"
+                  ]
+                },
+                "Masaaki Kimura 2000 ve 2003 çalışmalarında yapıyı su altında kalmış insan yapımı bir anıt olarak yorumladı."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Uzlaşma yok"
+                  ]
+                },
+                "Site, Japon resmi turizm sayfasında bile doğal oluşum / insan tarafından değiştirilmiş oluşum / kayıp uygarlık kalıntısı seçenekleriyle sunuluyor."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kanıtlar"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — Doğal açıklamanın en güçlü noktası: kaya nasıl kırılıyor?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nYonaguni'de kumtaşları yatay tabakalanma ve dikey eklem sistemleri boyunca ayrılabiliyor.\nBu iki yön birleştiğinde dik duvarlar, geniş düz platformlar ve “basamak” görünümü oluşabilir.\n2020'de yayımlanan saha çalışması, adanın Sanninu-dai bölgesinde yatay streslerden gelişmiş çok sayıda eklem ve normal fay bulunduğunu raporladı.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Doğal model için güçlü"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Aynı adada benzer köşeli şekiller karada da görülüyor"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu kritik bir karşılaştırma. Eğer aynı kaya birimi kıyıda ve karada da düz yüzeyler, dik kenarlar,\nteras benzeri platformlar ve kırık bloklar oluşturuyorsa, su altındaki geometrinin insan eli gerektirmediği anlaşılır.\nRobert Schoch'un sahadaki temel argümanı da budur.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Karşılaştırmalı jeoloji"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — Kimura'nın insan yapımı yorumu gerçek bir akademik tezdir"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nMasaaki Kimura, su altı jeolojik-jeofizik araştırmaları, dalış gözlemleri ve Ryukyu paleocoğrafyasını birleştirerek\nYonaguni yapısını 6.000–10.000+ yıllık insan yapımı bir kompleks olarak yorumladı.\n2003 tarihli makalesinde yapıyı büyük bir ",
+                {
+                  "tag": "i",
+                  "attrs": {},
+                  "children": [
+                    "gusuku"
+                  ]
+                },
+                " benzeri yapı olarak nitelendirdi.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAncak bu, “bilim insanları yapının insan yapımı olduğunu kanıtladı” anlamına gelmiyor.\nBu, tartışmanın bir tarafındaki yayımlanmış yorumdur.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Gerçek akademik görüş; konsensüs değil"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — En kritik eksik: kesin insan işçiliği izi"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBir mimari kompleks iddiasını güçlü biçimde doğrulayacak şeyler;\ntekrarlanan alet izleri, taş ocakçılığı izleri, duvar örgüsü, harç, insan yapımı dolgu,\ngüvenilir kültürel tabaka veya yapı ile doğrudan ilişkili tarihlenebilir arkeolojik materyaldir.\nYonaguni ana yapısı için bu tür kanıtların hiçbiri genel kabul görmüş biçimde ortaya konmuş değil.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "İnsan yapımı tezinin temel zayıflığı"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — “10.000 yıl önce karadaydı” ≠ “10.000 yıl önce inşa edildi”"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nSon Buzul Çağı sonrasında küresel deniz seviyesinin yükselmesi, bugün sığ denizde kalan kıyı alanlarının bir bölümünün geçmişte karada olması ihtimalini makul kılar.\nKimura'nın paleocoğrafya çalışmaları Ryukyu bölgesinin aşamalı olarak su altında kaldığını tartışır.\nFakat bir kayanın o sırada karada bulunması, insanların onu yaptığını kanıtlamaz.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Çok önemli ayrım"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "6 — 2024 araştırmaları hâlâ jeomorfolojiye odaklanıyor"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nKyushu Üniversitesi ve farklı Japon araştırma kurumlarından ekiplerin 2024'te sunduğu çalışma,\nYonaguni çevresindeki su altı kumtaşı erozyon şekillerini çok ışınlı sonar, ROV fotogrametrisi ve SCUBA araştırmalarıyla inceledi.\nBu, alanın hâlâ ciddi jeomorfolojik araştırma konusu olduğunu gösteriyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "Güncel bilimsel bağlam"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "zaman"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Zaman çizelgesi"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Miyosen"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Yonaguni'nin büyük bölümünü oluşturan Yaeyama Grubu kumtaşları oluşur."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Son Buzul Çağı"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Deniz seviyesi bugünkünden daha düşüktür; bugünkü kıyının bazı bölümleri karadadır."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Holosen başı"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Deniz seviyesinin yükselmesiyle kıyı peyzajı giderek su altında kalır."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1986"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Kihachiro Aratake ana su altı oluşumunu keşfeder."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1990'lar"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Masaaki Kimura yapının insan yapımı bir kompleks olduğu görüşünü geliştirir; uluslararası ilgi artar."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2000–2004"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Kimura, Ryukyu paleocoğrafyası ve Yonaguni'nin insan yapımı yorumunu akademik yayınlarda savunur."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2020"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Yonaguni'nin kara jeomorfolojisini inceleyen çalışma, kumtaşları, faylar, eklemler ve erozyon biçimlerini ayrıntılandırır."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2024"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Yeni sonar, ROV fotogrametri ve dalış araştırmaları su altı kumtaşı erozyon şekillerine odaklanır."
+                  ]
+                }
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Teoriler"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori A — Tamamen doğal kaya oluşumu"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Kumtaşının tabakalanması, eklem sistemleri, faylanma ve deniz erozyonu büyük düz yüzeyleri ve dik basamakları açıklayabiliyor. Benzer şekiller adanın karasında da mevcut."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Bazı detaylar —özellikle düzenli terasların birleşimi— ilk bakışta alışılmadık derecede “mimari” görünüyor. Görsel sezgi kanıt değildir ama soruyu canlı tutuyor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori B — Doğal oluşum, insanlar tarafından kısmen değiştirilmiş"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Robert Schoch'un da benimsediği ara model. Doğal kaya yüzeyinin eski insanlar tarafından basamak, geçit veya ritüel alan olarak kullanılması ya da küçük ölçekte düzeltilmesi teorik olarak mümkün."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Bu “touch-up” işlemlerini güvenilir biçimde gösterecek tartışmasız alet izleri ve kültürel tabakalar henüz yok."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori C — Tamamen insan yapımı antik anıt"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Kimura'nın tanımladığı platformlar, basamaklar, geçitler ve çevredeki bazı biçimler mimari plan hissi yaratıyor. Bölgenin geçmişte daha düşük deniz seviyesinde bulunmuş olması kronolojik olarak insan erişimini mümkün kılar."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " “İnsan erişebilirdi” ile “insan inşa etti” farklıdır. Kesin yapı tekniği, alet izi, arkeolojik kültür ve tarihlendirilebilir yapı malzemesi gösterilememiştir."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori D — Mu / Atlantis / kayıp ileri uygarlık"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Popüler kültürde güçlü bir anlatı oluşturuyor."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Yonaguni'yi Mu veya Atlantis'e bağlayan bağımsız arkeolojik, yazılı ya da teknolojik kanıt yok."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "abartilar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral iddialar: doğru mu?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "İddia"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Hüküm"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Neden?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Kesinlikle 10.000 yıllık bir piramit.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıtlanmadı"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "10.000 yıl civarı insan yapımı yorumu Kimura'nın tezidir; yapının inşa tarihi olarak bağımsız biçimde doğrulanmış değil."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Bilim insanları bunun doğal olamayacağını söylüyor.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Jeolojik açıklama güçlüdür; sahayı inceleyen jeologlar arasında doğal veya çoğunlukla doğal yorum vardır."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Merdivenler 90 derece olduğu için doğa yapamaz.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış mantık"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Eklemli ve tabakalı kayaçlarda yaklaşık dik açılar doğal kırılma ile oluşabilir."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Üzerinde hiyeroglifler bulundu.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Tartışmalı / zayıf"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Çeşitli çizikler ve şekiller yazı veya sembol olarak yorumlandı, ancak genel kabul görmüş epigrafik bir okuma yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Bir şehir, yol ve stadyum kompleksi bulundu.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Yorum"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Bu adlandırmalar Kimura'nın morfolojik yorumlarına dayanıyor; bağımsız olarak doğrulanmış mimari işlevler değiller."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Deniz seviyesi yükseldiğine göre kesinlikle eski bir uygarlık battı.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Çıkarım hatası"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Eski kıyıların su altında kalması gerçek; ama bu kıyılarda anıtsal uygarlık bulunduğu sonucu ayrıca kanıt gerektirir."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Hâlâ bilinmeyenler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "İnsan müdahalesi oldu mu?"
+                  ]
+                },
+                "Doğal bir formasyonun eski topluluklar tarafından kullanılmış veya kısmen değiştirilmiş olması hâlâ makul bir açık soru."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Hangi yüzeyler ne zaman açığa çıktı?"
+                  ]
+                },
+                "Detaylı yerel deniz seviyesi ve tektonik tarih, alanın hangi dönemlerde karada olduğunu daha hassas belirleyebilir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Şüpheli “alet izleri” gerçek mi?"
+                  ]
+                },
+                "İnsan işçiliği ile doğal çatlak/erozyon izlerini mikroölçekte ayıracak kapsamlı yayımlanmış çalışma kritik olurdu."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Yakın çevrede kültürel materyal var mı?"
+                  ]
+                },
+                "Yapıyla doğrudan ilişkili güvenilir arkeolojik materyal bulunması tartışmayı kökten değiştirebilir."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Benim değerlendirmem"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🟡 Görüntü çok “yapay”; kanıt ağırlığı ise doğal oluşumdan yana."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nYonaguni'nin en büyük tuzağı görsel sezgi. Basamaklar, düz yüzeyler ve dik köşeler beynimize hemen “mimari” diyor.\nAma jeoloji, özellikle yatay tabakalı ve dik eklemli kumtaşlarında, şaşırtıcı derecede geometrik yüzeyler üretebilir.\nYonaguni'nin kara jeolojisi bu mekanizmayı doğrudan gösteriyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu yüzden ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "tamamen insan yapımı kayıp şehir/piramit"
+                  ]
+                },
+                " tezi için mevcut kanıt yetersiz.\nFakat ben dosyayı 🟢 yapmıyorum; çünkü daha dar bir olasılık —doğal oluşumun insanlar tarafından kullanılmış veya yer yer değiştirilmiş olması—\narkeolojik olarak henüz tam kapanmış değil.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nDolayısıyla en iyi çalışma hipotezi:\n",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "ana kütle doğal; olası insan kullanımı veya küçük ölçekli müdahale araştırmaya değer."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Seri için durum:"
+              ]
+            },
+            " 🟡 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Büyük kayıp uygarlık iddiası zayıf; insan müdahalesi ihtimali tamamen kapanmış değil."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kaynakça"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Popüler “Atlantis/Mu” anlatıları kanıt olarak kullanılmadı. Ana çerçeve jeoloji, paleocoğrafya ve yayımlanmış insan-yapımı tezinin karşılaştırılmasıyla kuruldu."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ogata, T., Otsubo, M. & Itoh, H. (2020)."
+              ]
+            },
+            " “Geosites of Yonaguni Island Located at the Westernmost Point of Japan.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "E-journal GEO"
+              ]
+            },
+            " 15(1):44–54. Yonaguni'nin kumtaşı, fay, eklem ve erozyon jeomorfolojisi.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.4157/ejgeo.15.44"
+              },
+              "children": [
+                "J-STAGE / DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Kan, H. ve çalışma arkadaşları (2024)."
+              ]
+            },
+            " “Submarine Erosional landforms of sandstone around Yonaguni Island.” Association of Japanese Geographers Annual Meeting. Çok ışınlı sonar, ROV fotogrametrisi ve SCUBA araştırmaları.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.14866/ajg.2024s.0_121"
+              },
+              "children": [
+                "J-STAGE / DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Kimura, M. (2003)."
+              ]
+            },
+            " “Paleogeography of Ryukyu Islands and submarine ruins off Yonaguni, Okinawa, southern Japan.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Journal of Fossil Research"
+              ]
+            },
+            " 36(2):33–42. İnsan yapımı yorumun akademik sunumu.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.60339/kasekiken.36.2_33"
+              },
+              "children": [
+                "J-STAGE / DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Kimura, M. (2000)."
+              ]
+            },
+            " “Paleogeography of the Ryukyu Islands.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Tropics"
+              ]
+            },
+            " 10(1):5–24. Ryukyu paleocoğrafyası, deniz seviyesi ve su altı kalıntıları yorumu.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.3759/tropics.10.5"
+              },
+              "children": [
+                "J-STAGE / DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Omura, A. et al. (1994)."
+              ]
+            },
+            " “Tectonic History of Yonaguni Island…”. ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "The Quaternary Research"
+              ]
+            },
+            " 33(4):213–231. Yonaguni'nin tektonik ve deniz terası tarihçesi.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.4116/jaqua.33.213"
+              },
+              "children": [
+                "J-STAGE / DOI"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Japan National Tourism Organization."
+              ]
+            },
+            " “Yonaguni Underwater Monument.” Keşif, boyutlar ve resmî turizm çerçevesi.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.japan.travel/en/spot/564/"
+              },
+              "children": [
+                "JNTO"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Robert M. Schoch."
+              ]
+            },
+            " Yonaguni saha değerlendirmesi. Akademik dergi makalesi değil; sahayı inceleyen bir jeoloğun doğal / kısmi insan müdahalesi görüşünü doğrudan belgeleyen birincil yorum.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.robertschoch.com/yonaguni.html"
+              },
+              "children": [
+                "Schoch – Yonaguni"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Son güncelleme: 6 Ekim 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

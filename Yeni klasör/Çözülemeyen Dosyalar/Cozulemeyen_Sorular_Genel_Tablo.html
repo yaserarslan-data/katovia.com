@@ -1,0 +1,193 @@
+
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Çözülemeyen Sorular — Genel Tablo</title>
+<style>
+:root{
+  --bg:#0d0f13; --panel:#151821; --text:#eef2f7; --muted:#aab3c3; --line:#2b3140;
+  --green:#56c596; --yellow:#f3c969; --red:#ef6a6a; --accent:#d7b36a; --max:1200px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:linear-gradient(180deg,#0b0d11,#11141b 38%,#0d0f13);
+  color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+.wrap{max-width:var(--max);margin:auto;padding:42px 20px 70px}
+h1{font-size:clamp(2rem,5vw,4rem);line-height:1.04;letter-spacing:-.04em;margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 26px;font-size:1.03rem}
+.toolbar{
+  position:sticky;top:0;z-index:5;
+  background:rgba(13,15,19,.92);backdrop-filter:blur(12px);
+  border:1px solid var(--line);border-radius:16px;padding:12px;
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px
+}
+button,select,input{
+  background:#11151c;color:var(--text);border:1px solid var(--line);
+  border-radius:10px;padding:10px 12px;font:inherit
+}
+button{cursor:pointer}
+button.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+input{flex:1;min-width:220px}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:#d8deea}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+table{width:100%;border-collapse:collapse;min-width:950px}
+thead th{
+  position:sticky;top:0;background:#11151c;color:#dce3ee;
+  text-align:left;padding:14px;border-bottom:1px solid var(--line);font-size:.92rem
+}
+tbody td{padding:14px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:#181d27}
+.num{width:56px;color:#aeb7c5}
+.topic{font-weight:800}
+.status{
+  display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;font-weight:800;font-size:.85rem;white-space:nowrap
+}
+.green{color:#84e7bd;background:rgba(86,197,150,.11);border:1px solid rgba(86,197,150,.35)}
+.yellow{color:#f7dc8a;background:rgba(243,201,105,.11);border:1px solid rgba(243,201,105,.35)}
+.red{color:#ff9999;background:rgba(239,106,106,.11);border:1px solid rgba(239,106,106,.35)}
+.empty{padding:28px;text-align:center;color:var(--muted);display:none}
+.legend{margin-top:16px;color:var(--muted);font-size:.94rem}
+@media(max-width:700px){.wrap{padding:28px 12px 50px}.toolbar{position:static}.sub{font-size:.96rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Çözülemeyen Sorular — Genel Tablo</h1>
+  <p class="sub">Hazırladığımız tüm dosyaların kısa özeti. Duruma göre filtreleyebilir, sıralayabilir ve konu içinde arama yapabilirsin.</p>
+
+  <div class="toolbar">
+    <button class="filter active" data-filter="all">Tümü</button>
+    <button class="filter" data-filter="green">🟢 Açıklanmış</button>
+    <button class="filter" data-filter="yellow">🟡 Kısmen çözülmüş</button>
+    <button class="filter" data-filter="red">🔴 Çözülememiş</button>
+
+    <select id="sort">
+      <option value="default">Sıralama: Dosya sırası</option>
+      <option value="status-asc">Durum: 🟢 → 🟡 → 🔴</option>
+      <option value="status-desc">Durum: 🔴 → 🟡 → 🟢</option>
+      <option value="topic-asc">Konu: A → Z</option>
+      <option value="topic-desc">Konu: Z → A</option>
+    </select>
+
+    <input id="search" type="search" placeholder="Konu veya gizem ara…">
+  </div>
+
+  <div class="stats">
+    <span class="stat">Toplam: <b id="totalCount">14</b></span>
+    <span class="stat">🟢 <b id="greenCount">4</b></span>
+    <span class="stat">🟡 <b id="yellowCount">5</b></span>
+    <span class="stat">🔴 <b id="redCount">5</b></span>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Konu</th>
+          <th>Temel gizem</th>
+          <th>Araştırmadan çıkan sonuç</th>
+          <th>Durum</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div id="empty" class="empty">Bu filtreye uyan konu bulunamadı.</div>
+  </div>
+
+  <div class="legend">
+    🟢 Büyük ölçüde açıklanmış · 🟡 Kısmen çözülmüş · 🔴 Gerçekten çözülememiş
+  </div>
+</div>
+
+<script>
+const data = [
+  {id:1, topic:"Torino Kefeni", mystery:"İnsan görüntüsü kumaşa nasıl oluştu ve gerçekten İsa'ya mı ait?", result:"Görüntünün kesin oluşum mekanizması tartışmalı. Ancak “modern teknolojiyle yapılamaz” iddiası abartılı; Orta Çağ tarihini destekleyen ciddi kanıt bulunuyor.", status:"yellow", label:"🟡 Kısmen çözülmüş"},
+  {id:2, topic:"Voynich El Yazması", mystery:"Metin hangi dilde ve ne anlatıyor?", result:"Metin rastgele görünmüyor; dilsel yapıya benzer güçlü düzenlilikler var. Ama dili, sistemi ve anlamı çözülemedi.", status:"red", label:"🔴 Çözülememiş"},
+  {id:3, topic:"Antikythera Düzeneği", mystery:"Antik çağda bu kadar gelişmiş mekanik hesaplayıcı nasıl yapıldı?", result:"Gerçek bir Helenistik astronomik analog hesaplayıcı. Temel çalışma prensibi büyük ölçüde çözüldü; ön gezegen sistemi ve üreticisi belirsiz.", status:"yellow", label:"🟡 Kısmen çözülmüş"},
+  {id:4, topic:"Nazca Çizgileri", mystery:"Dev şekiller neden yapıldı?", result:"Uzaylı pisti açıklaması desteklenmiyor. Ritüeller, yürüyüş yolları, kutsal peyzaj, toplumsal iletişim ve muhtemelen su/gökyüzü bağlantıları birlikte rol oynamış olabilir.", status:"yellow", label:"🟡 Kısmen çözülmüş"},
+  {id:5, topic:"Codex Gigas", mystery:"Şeytan'ın yardımıyla tek gecede mi yazıldı?", result:"Tek gecede yazılma ve Şeytan anlaşması efsane. Büyük bölümünün tek bir kâtibin uzun yıllar süren emeği olması muhtemel.", status:"green", label:"🟢 Açıklanmış"},
+  {id:6, topic:"Bakır Parşömen", mystery:"Listelenen dev hazine gerçekten var mı ve nerede?", result:"Metin gerçek bir hazine envanteri gibi davranıyor. Fakat hazine bulunmadı; Tapınak hazinesi olduğu da kanıtlanmadı.", status:"red", label:"🔴 Çözülememiş"},
+  {id:7, topic:"Baigong Boruları", mystery:"Çin'deki “antik metal borular” kim tarafından yapıldı?", result:"İnsan yapımı boru olduklarına dair güçlü kanıt yok. Doğal mineralizasyon, konkresyon ve kök kalıpları çok daha iyi açıklama.", status:"green", label:"🟢 Açıklanmış"},
+  {id:8, topic:"Yonaguni Anıtı", mystery:"Su altındaki basamaklı yapı doğal mı, insan yapımı mı?", result:"Ana kütlenin doğal jeolojik oluşum olması daha güçlü. Ancak eski insanların kullanmış veya kısmen değiştirmiş olması tamamen dışlanamıyor.", status:"yellow", label:"🟡 Kısmen çözülmüş"},
+  {id:9, topic:"Saksaywaman / Puma Punku", mystery:"Dev taşlar inanılmaz hassaslıkla nasıl işlendi?", result:"Kayıp lazer/CNC teknolojisi gerekmiyor. Taş çekiçleri, aşındırma, ölçme, oturtma ve çok yüksek ustalıkla açıklanabiliyor.", status:"green", label:"🟢 Açıklanmış"},
+  {id:10, topic:"Roma Dodekahedronları", mystery:"Bu bronz 12 yüzlü nesneler ne işe yarıyordu?", result:"Ölçüm, örgü, mumluk, askeri araç, oyun ve ritüel gibi teoriler var. Hiçbiri kesinleşmedi.", status:"red", label:"🔴 Çözülememiş"},
+  {id:11, topic:"Rongorongo Yazısı", mystery:"Rapa Nui'nin işaretleri ne söylüyor?", result:"Düzenli bir yazı/notasyon sistemi olduğu güçlü. Mamari tabletinde ay takvimi muhtemelen tanındı; geri kalanı okunamıyor.", status:"red", label:"🔴 Çözülememiş"},
+  {id:12, topic:"Phaistos Diski", mystery:"Spiral yazı hangi dili kodluyor?", result:"Yapılı bir sistem ve muhtemelen hece yazısı. Ama tek ana belge bulunduğundan çözüm önerilerini doğrulamak neredeyse imkânsız.", status:"red", label:"🔴 Çözülememiş"},
+  {id:13, topic:"Bağdat Pili", mystery:"Antik Mezopotamya elektrik kullanıyor muydu?", result:"Düzenek gerçekten elektrik üretebilir. Fakat antik insanların onu pil olarak kullandığını gösteren arkeolojik teknoloji zinciri yok.", status:"yellow", label:"🟡 Kısmen çözülmüş"},
+  {id:14, topic:"Dendera Light", mystery:"Mısırlılar elektrik ampulü mü çizdi?", result:"En güçlü açıklama Harsomtus'un lotustan doğuşunu anlatan dini ikonografi. Elektrik teknolojisine dair bağımsız kanıt yok.", status:"green", label:"🟢 Açıklanmış"}
+];
+
+let currentFilter = "all";
+let currentSort = "default";
+let searchTerm = "";
+
+const statusRank = {green:1, yellow:2, red:3};
+
+function getVisible(){
+  let rows = data.filter(x => currentFilter === "all" || x.status === currentFilter);
+  if(searchTerm){
+    const q = searchTerm.toLocaleLowerCase("tr-TR");
+    rows = rows.filter(x =>
+      x.topic.toLocaleLowerCase("tr-TR").includes(q) ||
+      x.mystery.toLocaleLowerCase("tr-TR").includes(q) ||
+      x.result.toLocaleLowerCase("tr-TR").includes(q)
+    );
+  }
+  rows = [...rows];
+  if(currentSort === "status-asc") rows.sort((a,b)=>statusRank[a.status]-statusRank[b.status] || a.id-b.id);
+  if(currentSort === "status-desc") rows.sort((a,b)=>statusRank[b.status]-statusRank[a.status] || a.id-b.id);
+  if(currentSort === "topic-asc") rows.sort((a,b)=>a.topic.localeCompare(b.topic,"tr"));
+  if(currentSort === "topic-desc") rows.sort((a,b)=>b.topic.localeCompare(a.topic,"tr"));
+  if(currentSort === "default") rows.sort((a,b)=>a.id-b.id);
+  return rows;
+}
+
+function render(){
+  const rows = getVisible();
+  const tbody = document.getElementById("rows");
+  tbody.innerHTML = rows.map(x => `
+    <tr>
+      <td class="num">${String(x.id).padStart(2,"0")}</td>
+      <td class="topic">${x.topic}</td>
+      <td>${x.mystery}</td>
+      <td>${x.result}</td>
+      <td><span class="status ${x.status}">${x.label}</span></td>
+    </tr>
+  `).join("");
+
+  document.getElementById("empty").style.display = rows.length ? "none" : "block";
+
+  document.getElementById("totalCount").textContent = rows.length;
+  document.getElementById("greenCount").textContent = rows.filter(x=>x.status==="green").length;
+  document.getElementById("yellowCount").textContent = rows.filter(x=>x.status==="yellow").length;
+  document.getElementById("redCount").textContent = rows.filter(x=>x.status==="red").length;
+}
+
+document.querySelectorAll(".filter").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    currentFilter = btn.dataset.filter;
+    document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    render();
+  });
+});
+
+document.getElementById("sort").addEventListener("change",e=>{
+  currentSort = e.target.value;
+  render();
+});
+
+document.getElementById("search").addEventListener("input",e=>{
+  searchTerm = e.target.value.trim();
+  render();
+});
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,1664 @@
+{
+  "schemaVersion": 1,
+  "id": "roman-dodecahedra",
+  "locale": "tr",
+  "source": {
+    "filename": "Roma_Dodekahedronlari_Interaktif_Dosya.html",
+    "sha256": "423ae4a7485697d622a54312a3b3d1c5747121ea4ade7d995c34f28210680776",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "source-only",
+    "independentlyReviewed": false
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "60 saniyede dosya"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nRoma dodekahedronları bu serideki en saf “gerçek gizem” örneklerinden biri:\nnesnelerin gerçekliği, tarihi ve üretim tekniği biliniyor — ama ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "ne işe yaradıkları bilinmiyor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBugüne kadar yaklaşık ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "130 civarında"
+                  ]
+                },
+                " örnek biliniyor. Çoğu Galya, Britanya, Germania ve çevresindeki kuzeybatı Roma eyaletlerinden geliyor.\nİtalya'da örnek bulunmaması dikkat çekici.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nHepsi içi boş bakır alaşımlı çokyüzlüler. On iki beşgen yüzün her birinde farklı çapta dairesel bir delik,\n20 köşenin her birinde küçük bir topuz bulunuyor. Fakat ölçüleri standart değil ve antik metinlerde bunları tarif eden bilinen bir pasaj yok.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nÖnerilen işlevler arasında ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "ölçüm aleti, mumluk, örgü aracı, askeri mesafe ölçer, kalıp, oyun nesnesi,\nastrolojik araç ve kehanet/ritüel nesnesi"
+                  ]
+                },
+                " var. Hiçbiri henüz tartışmayı kapatmış değil.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "İddia"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“Romalılar bu karmaşık bronz nesneden yüzlerce yaptı, ama ne olduğunu hiçbir yere yazmadı.\nBelki gizli bir askeri alet, gelişmiş hesap makinesi veya kayıp teknoloji ürünüydü.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nİlk bölüm doğru: bugün işlevini bilmiyoruz. Ama buradan “gizli ileri teknoloji” sonucu çıkmıyor.\nAsıl şaşırtıcı olan, yüzlerce örneği bulunan bir nesnenin işlevini açıklayan metinsel veya ikonografik kanıtın bugüne ulaşmamış olması.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Bildiğimiz gerçekler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Gerçek Roma dönemi eserleri"
+                  ]
+                },
+                "Buluntular yaklaşık MS 2.–4. yüzyıl aralığına tarihleniyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Yaklaşık 130 örnek"
+                  ]
+                },
+                "Bilinen sayı yeni keşiflerle değişiyor; Britanya'da 30'dan fazla örnek veya parça biliniyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Coğrafi dağılım tuhaf"
+                  ]
+                },
+                "Başlıca kuzeybatı eyaletlerinde bulunuyorlar; Roma'nın Akdeniz çekirdeğinde ve İtalya'da yok denecek kadar az/yok."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Standart ölçü yok"
+                  ]
+                },
+                "Boyut, ağırlık ve delik çapları örnekten örneğe değişiyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Yazıt yok"
+                  ]
+                },
+                "Çoğu üzerinde kullanım talimatı, sayı, ölçek veya açıklayıcı yazı bulunmuyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Bağlamlar çeşitli"
+                  ]
+                },
+                "Yerleşimler, askeri alanlar, mezarlar, tapınak çevreleri, kuyular ve başka farklı arkeolojik bağlamlarda bulunmuş örnekler var."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kanıtlar"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — Ölçüm aleti teorisinin problemi: standart değiller"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nEğer dodekahedronlar düzenli bir askeri veya mühendislik ölçüm aracı olsaydı,\nen azından delik çaplarında, karşılıklı yüzlerde veya toplam boyutlarda belirli standartlar beklemek makul olurdu.\nFakat örnekler boyut ve ağırlık bakımından önemli ölçüde değişiyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nNorton Disney ekibi de yeni buluntunun ölçü standardizasyonu göstermediğini vurgulayarak\n“ölçüm cihazı” teorisine şüpheyle yaklaşıyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Ölçüm teorisi zayıflıyor"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Yoğun kullanım aşınması genellikle yok"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n2023'te Lincolnshire'daki Norton Disney kazısında bulunan örnek tamamen korunmuş ve son derece iyi durumda.\nAraştırma ekibi, nesnede düzenli mekanik kullanım bekletecek belirgin aşınma izleri görmediklerini bildiriyor.\nBu, günlük üretim aracı teorilerine karşı önemli bir ipucu.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Pratik araç teorilerine karşı"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — 2023 Norton Disney buluntusu neden çok önemli?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBirçok eski dodekahedronun tam kazı bağlamı belirsizken Norton Disney örneği kontrollü arkeolojik kazıda,\nyaklaşık 1 metre derinlikte büyük bir çukur içinde bulundu.\nBakır alaşımı analizi yaklaşık ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "%75 bakır, %7 kalay, %18 kurşun"
+                  ]
+                },
+                " verdi.\nYakınında 4. yüzyıl Roma seramiği bulunması, geç Roma bağlamını güçlendiriyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Nadir iyi bağlam"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — Ama Norton Disney bile gizemi çözmedi"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n2024 ve 2025'te çevrede yapılan ek kazılar, nesnenin neden o çukura bırakıldığını kesinleştiremedi.\nRoyal Archaeological Institute raporunda açıkça, bir ritüel depo olduğuna dair bariz kanıt bulunmadığı belirtiliyor.\nYani en iyi bağlamlı örneklerden biri bile bize “işlevi şuydu” demiyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "Gizem devam ediyor"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — Ritüel/astrolojik teori neden ciddiye alınıyor?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nLiège'deki Grand Curtius Müzesi, dodekahedronların kuzeybatı Roma eyaletlerindeki Kelt gelenekleriyle ilişkili olabileceğini\nve astroloji/kehanet teorisinin özellikle ilgi çekici olduğunu belirtiyor.\nCenevre'de bulunan, yüzlerinde zodyak adları bulunan dodekahedral bir zar benzeri nesne,\ndodekahedral biçimin kehanet bağlamında kullanılabildiğine dair karşılaştırmalı bir ipucu sunuyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAma bu nesne ile delikli bronz dodekahedronların aynı işlevi gördüğünü doğrudan kanıtlamıyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "İlginç bağlamsal destek"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "6 — “Örgü aparatı” çalışıyor olması yeterli değil"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nModern replikalarla eldiven parmakları veya tüp biçimli örgüler yapılabildiği gösterildi.\nFakat bir nesnenin bugün bir işi yapabilmesi, onun antik çağda o amaçla üretildiğini kanıtlamaz.\nÜstelik bronz, pahalı ve ağır bir malzeme; daha basit ahşap düzenekler aynı işi yapabilirdi.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill red"
+              },
+              "children": [
+                "Fonksiyon ≠ tarihsel kanıt"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Teoriler"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori A — Ritüel / kehanet / astrolojik nesne"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Standardizasyon eksikliği, sınırlı aşınma, yüksek üretim emeği ve bazı kutsal/funerary bağlamlar faydacı araçtan ziyade sembolik değere uyabilir. Kuzeybatı eyaletlerde yoğunlaşması yerel dini gelenek ihtimalini güçlendirir."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Dodekahedronu ritüelde gösteren bir Roma tasviri veya onu adlandıran bir metin yok. “Ritüel” bazen işlevi bilinmeyen nesneler için kolay kaçış açıklaması olabilir."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori B — Mesafe / boyut ölçme veya optik görüş aleti"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Farklı çaplı karşılıklı deliklerden bakıldığında görüş alanı değişir; teorik olarak açı veya mesafe tahmini yapılabilir."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Örnekler standart değil, çoğunda ölçü işaretleri yok ve bilinen bir Roma metni bu yöntemi tarif etmiyor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori C — Örgü / eldiven üretim aparatı"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Replikalar pratikte iplik örmeye yarayabiliyor."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Antik örgü kullanımına dair doğrudan iz yok; bronz gereksiz pahalı; ayrıca ilgili “spool knitting” tekniği için açık antik paraleller zayıf."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori D — Mumluk"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Bazı örneklerin içinde balmumu kalıntısı bulunduğu iddiaları bu teoriyi doğurdu."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Mumluk için aşırı karmaşık ve pahalı bir tasarım; balmumu başka amaçlarla da bulaşmış olabilir. Tüm örneklerde ortak kanıt yok."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori E — Usta işi / statü nesnesi"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Kayıp mum döküm tekniğiyle üretilmeleri ciddi metal işçiliği gerektiriyor; zanaatkâr beceri gösterisi veya prestij nesnesi olabilir."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Neden aynı karakteristik delik-topuz tasarımının geniş bir coğrafyada tekrarlandığını tek başına açıklamıyor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori F — Birden fazla işlev"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Farklı boyut ve bağlamlar, tek bir kullanım yerine bölgesel veya dönemsel değişkenlik ihtimalini açık bırakıyor."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Aynı temel tasarımın sürekli korunması, ortak bir çekirdek anlam veya işleve işaret ediyor olabilir."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "viral"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral iddialar: doğru mu?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "İddia"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Hüküm"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Neden?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Romalıların mesafe ölçme cihazıydı.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Kanıtlanmamış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Geometrik olarak mümkün senaryolar üretilebilir; fakat standart ölçüler ve antik kullanım kanıtı yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Roma askerleri top menzili hesaplıyordu.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Spekülasyon"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Bunu destekleyen yazıt, kullanım izi veya askeri metin bulunmuyor."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Eldiven örmek için kullanılıyordu; gizem çözüldü.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Çözülmedi"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Modern replikanın işe yaraması tarihsel amacı kanıtlamaz."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Bunlar Roma takvimi.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Spekülasyon"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "12 yüz aylarla ilişkilendirilebilir, ama yüzlerde ay adları veya düzenli takvim işaretleri yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Hepsi aynı ölçülerde üretildi.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Boyut ve ağırlıkları değişiyor."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“İtalya'da da her yerde bulunuyor.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Yanlış"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Dağılım özellikle kuzeybatı Roma eyaletlerinde yoğunlaşıyor; bu coğrafi örüntü gizemin önemli parçası."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Romalılar ne olduğunu yazmadığı için uzaylı teknolojisi olabilir.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıt yok"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Nesnelerin üretim tekniği Roma metal işçiliğiyle tamamen uyumlu."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Hâlâ bilinmeyenler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Temel işlev"
+                  ]
+                },
+                "En büyük soru hâlâ bu. Bugün hiçbir teori tartışmayı kapatmıyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Neden yalnızca kuzeybatıda?"
+                  ]
+                },
+                "Galya/Kelt gelenekleriyle bağlantı güçlü bir ihtimal ama doğrudan kanıt eksik."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Delik çapları neden farklı?"
+                  ]
+                },
+                "Ölçüm, ritüel, optik veya estetik sebeplerden hangisinin belirleyici olduğu bilinmiyor."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Köşe topuzları ne işe yarıyordu?"
+                  ]
+                },
+                "Tutma, ayakta durma, ip bağlama, sembolik tasarım veya üretim zorunluluğu olabilir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Neden metinlerde yok?"
+                  ]
+                },
+                "Belki yerel ve yaygın olmayan bir nesneydi; belki adı farklıydı; belki ilgili metinler kayboldu."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tek işlev mi, çok işlev mi?"
+                  ]
+                },
+                "Farklı boyut ve bağlamların tek tip kullanım mı yoksa farklı kullanımlar mı gösterdiği bilinmiyor."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Benim değerlendirmem"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🔴 Bu sefer gerçekten “ne işe yarıyordu?” sorusunun cevabını bilmiyoruz."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nRoman dodekahedronları Voynich'e benzer biçimde gerçek bir açık problem, fakat farklı nedenle:\nmetni okuyamıyoruz değil; ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "nesnenin kendisi konuşmuyor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBenim kanıt ağırlığına göre en makul geniş kategori ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "ritüel / sembolik / kehanet"
+                  ]
+                },
+                " tarafı.\nBunu “çözüm” olarak değil, mevcut veriye en iyi uyan çalışma hipotezi olarak görüyorum:\nölçü standardının olmaması, bazı örneklerde sınırlı aşınma, pahalı bronz üretim ve kuzeybatı eyaletlere özgü dağılım bunu destekliyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAma kritik nokta şu: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "henüz hiçbir teoriye 🟢 veremiyoruz."
+                  ]
+                },
+                "\nNorton Disney gibi iyi bağlamlı yeni buluntular çoğaldıkça gizem bir gün çözülebilir.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Seri için durum:"
+              ]
+            },
+            " 🔴 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Gerçekten çözülememiş."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nNesnenin dönemi, coğrafyası ve nasıl üretildiği biliniyor; temel kullanım amacı bilinmiyor.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kaynakça"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Kaynaklarda müze, üniversite, arkeoloji kurumu ve güncel kazı raporları önceliklendirildi."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Grand Curtius Museum, Liège."
+              ]
+            },
+            " Gallo-Roman dodekahedron; tarih, buluntu bağlamı, üretim tekniği ve başlıca işlev teorileri.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.grandcurtius.be/en/museums-collections/archaeology/dodecahedron"
+              },
+              "children": [
+                "Grand Curtius"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Newcastle University (2024)."
+              ]
+            },
+            " “Digging for Britain dodecahedron.” Roma dodekahedronlarının biçim, dağılım ve doktora araştırması bağlamı.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.ncl.ac.uk/press/articles/archive/2024/01/diggingforbritaindodecahedron/"
+              },
+              "children": [
+                "Newcastle University"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Norton Disney History & Archaeology Group."
+              ]
+            },
+            " 2023 buluntusunun kazı bağlamı, XRF bileşimi, sonraki kazılar ve devam eden araştırma.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://nortondisneyhag.org/?page_id=2406"
+              },
+              "children": [
+                "Norton Disney Dodecahedron"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Royal Archaeological Institute (2025)."
+              ]
+            },
+            " Norton Disney kazısı ara raporu; dodekahedronun bulunduğu alanın yeniden incelenmesi ve ritüel depo kanıtının belirsizliği.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.royalarchinst.org/sites/royalarchinst.org/files/2026-02/Spring%202025_Newsletter69.pdf"
+              },
+              "children": [
+                "RAI Newsletter"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Roman Society (2024–2025)."
+              ]
+            },
+            " Norton Disney kazılarına ilişkin saha güncellemeleri ve bağlamsal değerlendirmeler.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.romansociety.org/Portals/0/Documents/Epistula/Epistula%20XXVIII%20Winter%202024.pdf"
+              },
+              "children": [
+                "Roman Society"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Portable Antiquities Scheme record LIN-BC9890."
+              ]
+            },
+            " Norton Disney örneğinin ölçüleri, malzemesi, üretim yöntemi ve stratigrafik buluntu kaydı."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Son güncelleme: 6 Ekim 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}

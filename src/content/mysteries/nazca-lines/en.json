@@ -1,0 +1,1840 @@
+{
+  "schemaVersion": 1,
+  "id": "nazca-lines",
+  "locale": "en",
+  "source": {
+    "filename": "Nazca_Cizgileri_Interaktif_Dosya.html",
+    "sha256": "a201029acca12d14b86b9967e848ed74c754869201ca6ca708b2783265d6c6ec",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "editorial-translation",
+    "independentlyReviewed": false,
+    "sourceLocale": "tr",
+    "sourceRevision": "2026-10-06",
+    "sourceContentSha256": "801d0e47548c25af594f022d539686ebe92ab6a60ba4ea8952c7a9fbfa570651"
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The case in 60 seconds"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n      The Nazca Lines are not a single project. They form an immense geoglyph landscape created by different communities over hundreds of years, with different types and probably different functions.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      UNESCO broadly dates the Nazca and Palpa geoglyphs to ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "500 BCE – 500 CE."
+                  ]
+                },
+                " However, direct dating studies of some geometric lines also indicate ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "400–650 CE."
+                  ]
+                },
+                " It is therefore incorrect to say that “they were all made at exactly the same time”.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      A prominent view in current scholarship is that the lines were neither solely an astronomical calendar nor solely a water map, but served multiple functions, including\n      ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "ritual movement, community ceremonies, routes, sacred places and the transmission of social information."
+                  ]
+                },
+                " The PNAS study published in 2024 substantially strengthened this idea of multiple uses.\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The claim"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n      “These enormous shapes can only be seen from the air. So the Nazca people either made them for flying beings or understood the lines through some extraordinary technology that we still cannot explain.”\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The critical error is this: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "a figure does not need to be seen in its entirety at a glance to have meaning."
+                  ]
+                },
+                "\n      Many lines and relief-type geoglyphs can be perceived at ground level, from nearby elevations or from paths around them. Some are also clearly associated with walking and ceremonial routes.\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What we know"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "An enormous area"
+                  ]
+                },
+                "The UNESCO World Heritage site covers approximately 450 km² of the Nazca and Palpa desert landscape."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "They are not all the same type"
+                  ]
+                },
+                "There are animals, plants, human forms and imaginary beings, alongside straight lines, spirals, trapezoids and broad runway-like shapes."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "How were they made?"
+                  ]
+                },
+                "By moving dark surface stones aside to expose the lighter underlying layer. Some smaller figures were made with relief-type techniques involving piled or repositioned stones."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Why have they survived?"
+                  ]
+                },
+                "The extremely arid climate, low rainfall and relative stability of the desert surface helped preserve the lines over long periods."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "More than one culture"
+                  ]
+                },
+                "Production spans different phases, particularly the Paracas and Nasca periods."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "New discoveries continue"
+                  ]
+                },
+                "In 2024, AI-assisted surveying and field verification identified 303 new figurative geoglyphs."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "The evidence"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — “Visible only from the air” is incorrect"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Nazca research increasingly emphasises ground-level routes, hills and paths. Ruggles and Saunders's field-based study showed that some line systems could be experienced as a ceremonial “labyrinth” when followed on foot.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Strong field evidence"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — 2024: two different geoglyph worlds"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The Yamagata University and IBM Research team verified 303 new figurative geoglyphs. Most large ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "line-type"
+                  ]
+                },
+                " figures depict wild animals and are associated with networks of linear/trapezoidal ceremonial features. Smaller ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "relief-type"
+                  ]
+                },
+                " figures more often show motifs connected with human activities, such as people, domesticated camelids and severed heads; these tend to lie near winding paths.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The study's interpretation matters: large line-type figures may have been associated with ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "community-scale ceremonial activities,"
+                  ]
+                },
+                "while smaller relief-type figures may have been associated with ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "sharing information among individuals or small groups."
+                  ]
+                },
+                " These are possible connections.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "PNAS · strong new evidence"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — Astronomy may play a role, but does not explain the entire system"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      Some lines have been proposed to align with sunrise/sunset or the rising/setting of particular celestial bodies. Yet chance alignments can be expected among hundreds of lines, and there is no general consensus explaining the entire geoglyph network as a single astronomical calendar. Astronomy remains ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "one"
+                  ]
+                },
+                " possible function in modern scholarship.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Partial support"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — The water connection is appealing, but not the only explanation"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      In an arid environment, water was central to Nasca society's rituals and settlement patterns. Some lines have been linked to water sources, valleys or groundwater systems. But there is insufficient evidence to explain every geoglyph as a “groundwater map”.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill yellow"
+              },
+              "children": [
+                "Strong in context, not a universal explanation"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — The dates do not fit into a single century"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      UNESCO summarises the broad production period as 500 BCE–500 CE. By contrast, Rink and Bartoll's optically stimulated luminescence study dated some geometric stone lines near Palpa to ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "400–650 CE."
+                  ]
+                },
+                " This shows that the geoglyph tradition was long-lasting and developed through multiple phases.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill blue"
+              },
+              "children": [
+                "A substantially layered chronology"
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "zaman"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Timeline"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Around 500 BCE"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The geoglyph tradition becomes evident in the Middle/Late Formative periods, particularly in the Paracas context."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "200 BCE – 500 CE"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Lines, geometric shapes and large figurative geoglyphs are extensively produced and used during the Nasca culture period."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "400–650 CE"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Direct OSL dating places some geometric lines in this later interval."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1920s"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Modern scholarly interest grows; air travel helps make the region's lines more widely known."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1940s–1990s"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Astronomical calendars, ritual walking, water and sacred-landscape theories are extensively debated."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1994"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The Nasca and Palpa lines enter the UNESCO World Heritage List."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2015"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "New dating and ground-level landscape studies further weaken single-purpose explanations."
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "2024"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "AI-assisted surveying verifies 303 new figurative geoglyphs and strengthens two different models of use."
+                  ]
+                }
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Theories"
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory A — Ritual routes and community ceremonies"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Field studies show connections between lines, trapezoids, some figures, linked sacred places and walking routes. The 2024 PNAS findings strengthen the idea of community-scale use, particularly for large line-type figures."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " “Ritual” is a broad category; it does not tell us exactly which ceremony used each line."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory B — An astronomical calendar / celestial alignments"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Some lines may have meaningful solar or celestial orientations, and the ritual importance of celestial events in Andean societies is known."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " In an enormous dataset of thousands of lines, chance alignments are inevitable. There is no strong evidence reducing the whole system to a single celestial calendar."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory C — Water worship, fertility and sacred landscape"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Water was vital in Nazca's extremely arid environment; the Andean world contains strong connections between water sources, mountains and rituals."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " It has not been shown that every geoglyph corresponds to groundwater or an irrigation system."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory D — Route markers and social information"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " The clustering of small relief-type figures near winding paths, with motifs related to human activities, supports this interpretation in the 2024 study."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Which motif conveyed which message remains unresolved."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Theory E — There was no single purpose"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Strength:"
+                      ]
+                    },
+                    " Different periods, techniques, scales, motifs and spatial contexts show why there is no need to expect a single function over hundreds of years."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Weakness:"
+                      ]
+                    },
+                    " Even if a multifunctional model is correct, explaining the exact meaning of individual lines remains difficult."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "abartilar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral claims: are they true?"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n    ",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Claim"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Assessment"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Why?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“They can only be seen from an aircraft.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Some can be perceived from nearby hills and at ground level; some are already associated with paths and walking routes."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“They were landing strips for aliens.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "No evidence"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "The archaeological context, techniques and motifs are consistent with local Paracas/Nasca cultures. The “runway” interpretation is not based on physical evidence."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“The Nazca people could not have made lines this straight.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Straight lines and large figures can be produced using simple stakes, ropes and measuring techniques; extraordinary technology is not required."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“They were all an astronomical calendar.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "An overgeneralisation"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Some alignments may exist, but modern research gives greater weight to models of multiple ritual and social uses."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“They mark groundwater sources.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Some connections are possible"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Water is an important context, but there is insufficient evidence to explain every line as part of a single hydraulic map."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“AI completely solved the mystery in 2024.”"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "AI accelerated the identification of candidates; field teams verified them. The study supplied strong new patterns concerning function, but not a “final solution”."
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "What remains unknown"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The meaning of particular figures"
+                  ]
+                },
+                "We do not know for certain why monkeys, spiders, birds and other motifs were chosen."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The function of every line"
+                  ]
+                },
+                "Some may have been ceremonial routes, others social markers, and others may have served astronomical or environmental functions."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The content of the rituals"
+                  ]
+                },
+                "Thinking that a feature was walked along or used ceremonially is different from knowing exactly what the ritual involved."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Organisation of production"
+                  ]
+                },
+                "For each group, we do not know who planned the work, how many people participated, or which social authority managed the projects."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The “language” of the motifs"
+                  ]
+                },
+                "The 2024 study points to information transfer in the figures' distribution, but this symbolic system has not yet been read."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "The full chronology"
+                  ]
+                },
+                "Not every geoglyph has been directly dated. Even where the general period is known, the ages of individual features often depend on contextual inference."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "My assessment"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🟡 The mystery is becoming clearer — but expecting “one answer” is probably misguided from the outset."
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The strongest shift in Nazca research is that researchers are moving away from treating the lines as a giant riddle with the question “What was their single purpose?” The same region contains numerous geoglyphs made over hundreds of years using different techniques in different social contexts.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      My most likely interpretation is therefore: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "the Nazca landscape was a multilayered cultural system combining ritual walks, community ceremonies, social information, water and relationships with sacred geography."
+                  ]
+                },
+                "\n      Some lines may have had astronomical functions, but that does not explain the entire system.\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n      The most remarkable question is not “How did they make them?” They could do that using simple tools. It is ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "what world of meaning this vast landscape created for them."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Status in this series:"
+              ]
+            },
+            " 🟡 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "The basic context of production and use is increasingly understood; symbolic meanings and the purposes of individual features remain open."
+              ]
+            },
+            "\n  "
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n  ",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "References"
+          ]
+        },
+        "\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Popular content was not used as conclusive evidence. The main claims draw on UNESCO and academic publications."
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "UNESCO World Heritage Centre."
+              ]
+            },
+            " “Lines and Geoglyphs of Nasca and Palpa.” The site's chronology, extent and basic classification.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://whc.unesco.org/en/list/700"
+              },
+              "children": [
+                "UNESCO record"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Sakai, M. and colleagues (2024)."
+              ]
+            },
+            " “AI-accelerated Nazca survey nearly doubles the number of known figurative geoglyphs and sheds light on their purpose.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Proceedings of the National Academy of Sciences"
+              ]
+            },
+            ". DOI: 10.1073/pnas.2407652121.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.1073/pnas.2407652121"
+              },
+              "children": [
+                "PNAS article"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Ruggles, C. & Saunders, N. J. (2015)."
+              ]
+            },
+            " “Desert labyrinth: lines, landscape and meaning at Nazca, Peru.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Antiquity"
+              ]
+            },
+            ".",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.cambridge.org/core/journals/antiquity/article/abs/desert-labyrinth-lines-landscape-and-meaning-at-nazca-peru/6CFD0AC5DDA25CABB21DBF0837C06BBC"
+              },
+              "children": [
+                "Cambridge / Antiquity"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Rink, W. J. & Bartoll, J. (2015)."
+              ]
+            },
+            " “Dating the geometric Nasca lines in the Peruvian desert.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Antiquity"
+              ]
+            },
+            ". Optically stimulated luminescence dates some geometric lines to 400–650 CE.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.cambridge.org/core/journals/antiquity/article/abs/dating-the-geometric-nasca-lines-in-the-peruvian-desert/BC66A0CB3A36EC987BAF15BA3A3ED8E3"
+              },
+              "children": [
+                "Cambridge / Antiquity"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Clarkson, P. B. (2020)."
+              ]
+            },
+            " “Nasca and Pampa Jumana Lines and Geoglyphs.” ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Encyclopedia of Global Archaeology"
+              ]
+            },
+            ". Springer.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://doi.org/10.1007/978-3-030-30018-0_1626"
+              },
+              "children": [
+                "Springer record"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Yamagata University (2024)."
+              ]
+            },
+            " Field results from AI-assisted Nazca research and the announcement of 303 new geoglyphs.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n  ",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.yamagata-u.ac.jp/en/information/info/20240924/"
+              },
+              "children": [
+                "University research summary"
+              ]
+            }
+          ]
+        },
+        "\n\n  ",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Last updated: 6 October 2026."
+          ]
+        },
+        "\n  ",
+        "\n"
+      ]
+    }
+  ]
+}

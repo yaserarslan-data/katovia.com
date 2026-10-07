@@ -8,7 +8,7 @@ test('previous preview URLs reach canonical root routes, including query/hash an
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', `https://katovia.com${route}`);
     await expect(page.locator('[data-page]')).toHaveCount(1);
     const links = await page.locator('nav a').evaluateAll((nodes) => nodes.map((node) => new URL(node.href).pathname));
-    expect(links).toEqual(sections.map((section) => section.route));
+    expect(links).toEqual([...sections.map((section) => section.route), '/mysteries/']);
   }
   const context = await browser.newContext({ javaScriptEnabled: false }); const plain = await context.newPage();
   await plain.goto('http://127.0.0.1:4173/v2/today/'); await expect(plain).toHaveURL('http://127.0.0.1:4173/today/');

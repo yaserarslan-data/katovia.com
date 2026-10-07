@@ -1,6 +1,9 @@
 // UI text only.
 export const messages = {
   "en": {
+    "nav.mysteries": "Mysteries",
+    "mysteries.discovery": "Claims, evidence and open questions.",
+    "mysteries.explore": "Explore the research cases",
     "error.retry": "This action could not be completed. Please try again.",
     "common.skip": "Skip to content",
     "common.homeLabel": "Katovia homepage",
@@ -376,6 +379,9 @@ export const messages = {
     "tool.pixel-art-grid.seoTitle": "Pixel Art Grid — Free Browser Tool | Katovia"
   },
   "tr": {
+    "nav.mysteries": "Gizem Dosyaları",
+    "mysteries.discovery": "İddialar, kanıtlar ve açık sorular.",
+    "mysteries.explore": "Araştırma dosyalarını keşfet",
     "error.retry": "Bu işlem tamamlanamadı. Yeniden deneyebilirsin.",
     "common.skip": "İçeriğe geç",
     "common.homeLabel": "Katovia ana sayfa",

@@ -1,3 +1,5 @@
+import { mysteryPages } from './mysteries.mjs';
+import { mysteryRoutes } from '../src/catalog/mysteries.js';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, posix } from 'node:path';
 import { sections, entries } from '../src/catalog/registry.js';
@@ -47,6 +49,7 @@ function home(route) {
     <section class="home-cta" aria-labelledby="home-create">${txt('home.create','h2','id="home-create"')}${txt('home.createCopy','p')}<a class="button button-accent" href="/create/" data-i18n="creator.own">CREATE YOUR OWN</a></section>
     <section class="home-cta" aria-labelledby="home-challenge">${txt('home.challenge','h2','id="home-challenge"')}${txt('home.challengeCopy','p')}<a class="button" href="/challenge/" data-i18n="duel.own">CREATE A CHALLENGE</a></section>
     <section aria-labelledby="home-tools"><div class="section-heading">${txt('home.tools','h2','id="home-tools"')}${txt('home.browserOnly','span','class="eyebrow"')}</div><div class="section-grid">${tools.map(entry=>card(entry,route)).join('\n')}</div></section>
+    <section class="home-cta"><h2 data-i18n="nav.mysteries">Mysteries</h2><p data-i18n="mysteries.discovery">Claims, evidence and open questions.</p><a class="button" data-mystery-entry data-i18n="mysteries.explore" href="/mysteries/">Explore the research cases</a></section>
     <section id="laboratuvar" aria-labelledby="home-lab"><div class="section-heading">${txt('lab.collection','h2','id="home-lab"')}<a class="button" href="/lab/" data-i18n="common.return">Explore the lab</a></div><div class="section-grid">${entries.filter(entry=>['qr','golf','yuk-ustasi'].includes(entry.id)).map(entry=>card(entry,route)).join('\n')}</div></section>
   </main>`;
 }
@@ -86,7 +89,7 @@ function documentPage(section) {
     <a class="wordmark" href="${hrefFrom(route, '/')}" data-i18n-label="common.homeLabel" aria-label="Katovia homepage"><svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3v18M8 12l11-9M8 12l11 9" stroke="currentColor" stroke-width="3.5"/></svg>KATOVIA</a>
     <div class="language-control" role="group" data-i18n-label="common.language" aria-label="Language selection"><button type="button" data-locale="tr" data-i18n-label="common.tr" aria-label="Switch language to Turkish" aria-pressed="false" lang="tr">TR</button><button type="button" data-locale="en" data-i18n-label="common.en" aria-label="Switch language to English" aria-pressed="true" lang="en">EN</button></div>
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>${txt('common.menu')} <span aria-hidden="true">☰</span></button>
-    <nav id="primary-navigation" class="navigation" data-i18n-label="common.navigation" aria-label="Main navigation" data-navigation>${sections.map((item) => `<a class="nav-link" data-i18n="nav.${item.id}" href="${hrefFrom(route, item.route)}"${section?.id === item.id ? ' aria-current="page"' : ''}>${escape(translate('en', `nav.${item.id}`))}</a>`).join('')}</nav>
+    <nav id="primary-navigation" class="navigation" data-i18n-label="common.navigation" aria-label="Main navigation" data-navigation>${sections.map((item) => `<a class="nav-link" data-i18n="nav.${item.id}" href="${hrefFrom(route, item.route)}"${section?.id === item.id ? ' aria-current="page"' : ''}>${escape(translate('en', `nav.${item.id}`))}</a>`).join('')}<a class="nav-link" data-mystery-entry data-i18n="nav.mysteries" href="/mysteries/">Mysteries</a></nav>
   </div></header>
   ${section ? sectionPage(section) : home(route)}
   <footer class="site-footer"><div class="container footer-inner"><p class="eyebrow">KATOVIA / ${txt('common.motto')}</p><a class="footer-link" href="${hrefFrom(route, '/lab/')}">${txt('common.return')} <span aria-hidden="true">&nbsp;↗</span></a></div></footer>
@@ -106,10 +109,10 @@ const compatibilityPages = [{ id: '', route: '/' }, ...sections].map(({ id, rout
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Katovia — Moved</title><link rel="canonical" href="https://katovia.com${route}"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0;url=${route}"><script>location.replace(${JSON.stringify(route)} + location.search + location.hash);</script></head><body><a href="${route}">Katovia / Devam et / Continue</a></body></html>
 `
 }));
-const indexable = ['/', ...sections.map(entry=>entry.route), ...experiences.map(entry=>entry.route),...tools.map(entry=>entry.route)];
+const indexable = [...mysteryRoutes, '/', ...sections.map(entry=>entry.route), ...experiences.map(entry=>entry.route),...tools.map(entry=>entry.route)];
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexable.map(route=>`  <url><loc>https://katovia.com${route}</loc></url>`).join('\n')}\n</urlset>\n`;
 const robots='User-agent: *\nAllow: /\nDisallow: /v2/\n# Personal player pages use HTML noindex and are excluded from the sitemap.\nSitemap: https://katovia.com/sitemap.xml\n';
-const pages = [{path:'sitemap.xml',html:sitemap},{path:'robots.txt',html:robots},{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), ...[...experiences,...tools,...personalPages].map((entry) => ({ path:`${entry.route.slice(1)}index.html`, html:documentPage(entry) })), { path: '404.html', html: notFound }, ...compatibilityPages];
+const pages = [...await mysteryPages(), {path:'sitemap.xml',html:sitemap},{path:'robots.txt',html:robots},{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), ...[...experiences,...tools,...personalPages].map((entry) => ({ path:`${entry.route.slice(1)}index.html`, html:documentPage(entry) })), { path: '404.html', html: notFound }, ...compatibilityPages];
 for (const page of pages) {
   const path = `${siteRoot}/${page.path}`;
   const html=page.html.replace(/[ \t]+$/gm,'');

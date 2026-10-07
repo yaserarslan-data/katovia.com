@@ -1,0 +1,1602 @@
+{
+  "schemaVersion": 1,
+  "id": "codex-gigas",
+  "locale": "tr",
+  "source": {
+    "filename": "Codex_Gigas_Interaktif_Dosya.html",
+    "sha256": "475609951e120c34a710408cc67db549432da0ae5155a1e17c3e1cd135189d1b",
+    "revision": "2026-10-06"
+  },
+  "editorial": {
+    "translationState": "source-only",
+    "independentlyReviewed": false
+  },
+  "sections": [
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "ozet"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "60 saniyede dosya"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\nCodex Gigas gerçekten olağanüstü bir el yazmasıdır. Ama onu gizemli yapan şey “doğaüstü biçimde yazılmış olması” değil;\nolağanüstü boyutu, tek elden çıkmış görünmesi ve sonradan kitabın etrafında büyüyen efsanedir.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nEser, 13. yüzyıl başlarında Bohemya’da hazırlanmış dev bir Latin el yazmasıdır. İçinde Kutsal Kitap metinleri,\nJosephus, Isidore’un ",
+                {
+                  "tag": "i",
+                  "attrs": {},
+                  "children": [
+                    "Etymologiae"
+                  ]
+                },
+                "’si, tıp metinleri, Cosmas’ın Bohemya kroniği, takvim, dualar ve bazı büyü/koruyucu formüller bulunur.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\n“Bir keşiş tek gecede bitirdi, Şeytan yardım etti” hikâyesi tarihsel bir kayıt değil, daha geç dönemde şekillenmiş bir efsanedir.\nEl yazısının büyük ölçüde tek bir kâtibe ait olması ise gerçektir — fakat bu, kitabın tek gecede yazıldığı anlamına gelmez.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "iddia"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "İddia"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "quote"
+              },
+              "children": [
+                "\n“Bir keşiş manastır kurallarını çiğnediği için diri diri duvara örülmeye mahkûm edildi.\nKendisini kurtarmak için tek gecede tüm insan bilgisini içeren bir kitap yazacağına söz verdi.\nGece yarısına geldiğinde yetiştiremeyeceğini anlayınca Şeytan’la anlaşma yaptı; Şeytan kitabı tamamladı,\nkeşiş de teşekkür için onun portresini çizdi.”\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBu anlatı Codex Gigas’ın popüler kimliğinin merkezinde. Ancak elimizde bu olayı doğrulayan çağdaş bir belge yok.\nEfsanenin ayrıntıları da kaynaklara göre değişiyor.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "gercekler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Bildiğimiz gerçekler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Dev bir eser"
+                  ]
+                },
+                "Codex Gigas, günümüze ulaşan en büyük Orta Çağ resimli el yazmalarından biridir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "13. yüzyıl"
+                  ]
+                },
+                "Bohemya’da yaklaşık 1204–1230 arasına tarihlenir; Podlažice Benedikten çevresiyle ilişkilidir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tek ciltlik kütüphane"
+                  ]
+                },
+                "İncil dışında tarih, ansiklopedi, tıp, takvim, dualar ve yerel kayıtlar da içerir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Şeytan resmi gerçek"
+                  ]
+                },
+                "Kitapta tam sayfa bir Şeytan tasviri vardır; “Devil’s Bible” lakabı buradan gelir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Karşı sayfa önemli"
+                  ]
+                },
+                "Şeytan tasvirinin karşısında tam sayfa “Göksel Şehir” resmi bulunur; bu ikilik ahlaki/teolojik bir karşıtlık olarak yorumlanır."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tek kâtip ihtimali güçlü"
+                  ]
+                },
+                "Paleografik tutarlılık, kitabın büyük bölümünün tek bir el tarafından yazıldığı görüşünü destekler."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kanitlar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kanıtlar"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "1 — Metin ve içerik doğaüstü değil, Orta Çağ’a ait"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nCodex Gigas’ın içeriği, 13. yüzyıl Latin Hristiyan dünyasında bilinen ve dolaşımda olan metinlerden oluşur:\nVulgata İncil’i, Josephus’un eserleri, Isidore’un ",
+                {
+                  "tag": "i",
+                  "attrs": {},
+                  "children": [
+                    "Etymologiae"
+                  ]
+                },
+                "’si, tıbbi derlemeler ve Cosmas’ın Bohemya kroniği.\nYani içerik, “bilinmeyen bir kaynak”tan gelmiş görünmüyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Çok güçlü"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "2 — Şeytan portresi kitabın bağlamıyla çelişmiyor"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nTam sayfa Şeytan portresi ürkütücü ve sıra dışı olsa da karşısında Göksel Şehir bulunuyor.\nBu kompozisyon, kurtuluş ile lanetlenmenin karşı karşıya getirilmesi olarak okunabilir.\nŞeytan’ın resmedilmesi, kitabın Şeytan’ı yücelttiğini tek başına göstermez.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Bağlamsal olarak güçlü"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "3 — “Tek gecede yazıldı” iddiası fiziksel üretimle uyuşmuyor"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nBöylesine büyük bir parşömen kodeksin hazırlanması; derilerin işlenmesi, sayfaların hazırlanması,\nçizgilenmesi, yüz binlerce kelimenin yazılması, rubrication ve süslemelerin yapılması gibi çok sayıda aşama gerektirir.\nTek elden çıkmış olması, tek oturumda üretildiği anlamına gelmez.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nModern popüler hesaplar bazen yaklaşık 20–30 yıllık bir üretim süresi önerir; bu kesin bir kronometre hesabı değildir,\nama “bir gece” efsanesinin tarihsel olamayacağını göstermek için zaten böyle bir sayı gerekmiyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Efsaneyle açıkça uyumsuz"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "4 — Efsane çağdaş üretim kaydı değil"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nŞeytan yardımı anlatısının farklı versiyonları vardır. Kaynaklar, hikâyeyi doğrudan 13. yüzyıl üretim belgesi olarak değil,\ndaha sonra oluşmuş bir gelenek olarak ele alır. Ayrıntıların değişmesi — Şeytan’ın kitabı getirmesi,\nmalzeme sağlaması veya yazıma yardım etmesi gibi — efsanenin zaman içinde şekillendiğini gösterir.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Tarihsel ayrım net"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "h3",
+          "attrs": {},
+          "children": [
+            "5 — Kitabın yolculuğu belgelenebiliyor"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nCodex Gigas Bohemya’daki manastır çevrelerinden Habsburg İmparatoru II. Rudolf’un Prag koleksiyonuna geçti.\n1648’de Otuz Yıl Savaşları’nın sonunda İsveç kuvvetleri Prag’dan eseri savaş ganimeti olarak götürdü.\nDaha sonra Stockholm’de kraliyet kütüphanesine, bugün de İsveç Millî Kütüphanesi’ne ulaştı.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "pill green"
+              },
+              "children": [
+                "Belgesel tarih"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "zaman"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Zaman çizelgesi"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "timeline"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1204–1230 civarı"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Codex Gigas Bohemya’da hazırlanır."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "13.–16. yüzyıllar"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Eser Bohemya’daki dinî kurumlar arasında dolaşır; yerel tarih kayıtlarıyla ilişkili kullanımı sürer."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1594"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "II. Rudolf’un Prag’daki koleksiyonuna alınır."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1648"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Prag’ın İsveç kuvvetlerince yağmalanması sırasında savaş ganimeti olarak ele geçirilir."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1649"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Stockholm’de Kraliyet Kütüphanesi koleksiyonuna girer."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "1697"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Stockholm Kraliyet Sarayı yangınından kurtulur."
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "t"
+              },
+              "children": [
+                {
+                  "tag": "time",
+                  "attrs": {},
+                  "children": [
+                    "Günümüz"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "İsveç Millî Kütüphanesi’nde korunur ve dijital olarak incelenebilir."
+                  ]
+                }
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "teoriler"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Teoriler"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori A — Tek bir keşiş/kâtip, uzun yıllar boyunca çalıştı"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " El yazısındaki yüksek tutarlılık tek ana kâtip fikrini destekliyor. Büyük bir manastır projesinin uzun yıllar sürmesi tarihsel olarak olağan."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Kâtibin kimliği kesin bilinmiyor; çalışma süresini tam yıl olarak hesaplamak mümkün değil."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori B — Bir “tek ciltlik bilgi dünyası” oluşturma girişimiydi"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " İncil, tarih, tıp, ansiklopedi, yerel kronik ve takvimin aynı ciltte buluşması bu fikri destekliyor."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Yazarın kendi önsözünde “amacım tüm insan bilgisini tek kitaba toplamak” dediği açık bir beyan yok."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori C — Şeytan ve Göksel Şehir ahlaki bir karşıtlık oluşturuyor"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " İki tam sayfa görselin karşılıklı yerleştirilmesi bilinçli bir teolojik karşıtlık izlenimi veriyor."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Bu anlamlandırmayı açıklayan çağdaş bir yorum metni yok; dolayısıyla ikonografik yorumdur."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "details",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "summary",
+              "attrs": {},
+              "children": [
+                "Teori D — Efsane, kitabın dev boyutu ve Şeytan resmi yüzünden sonradan doğdu"
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "inside"
+              },
+              "children": [
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Güçlü yanı:"
+                      ]
+                    },
+                    " Olağanüstü boyut + tek el + ürkütücü tam sayfa Şeytan resmi, dramatik bir köken hikâyesi üretmek için ideal unsurlar."
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        "Zayıf yanı:"
+                      ]
+                    },
+                    " Efsanenin ilk kez tam olarak ne zaman ve hangi ara aşamalarla şekillendiğini ayrıntılı biçimde izlemek zor."
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "abartilar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Viral iddialar: doğru mu?"
+          ]
+        },
+        "\n",
+        {
+          "tag": "table",
+          "attrs": {},
+          "children": [
+            "\n",
+            {
+              "tag": "thead",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "İddia"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Hüküm"
+                      ]
+                    },
+                    {
+                      "tag": "th",
+                      "attrs": {},
+                      "children": [
+                        "Neden?"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "tbody",
+              "attrs": {},
+              "children": [
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Kitap tek gecede yazıldı.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Efsane"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Üretim ölçeği ve materyal hazırlığı bunu tarihsel olarak desteklemiyor; çağdaş kayıt yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Şeytan kitabı yazdı.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıt yok"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Bu, daha sonraki folklorik anlatının parçası."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Bütün kitap tek kişinin elinden çıktı.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill green"
+                          },
+                          "children": [
+                            "Büyük ölçüde doğru"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Paleografik tutarlılık tek ana kâtibi güçlü biçimde destekliyor."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“İçinde kara büyü kitabı var.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Abartılı"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Dualar, kovma/adjurasyon metinleri ve bazı tılsım/koruyucu formüller var; fakat bütün eser okült bir grimuar değil."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Şeytan resmi kitabın yarısında ve tek büyük resim odur.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill yellow"
+                          },
+                          "children": [
+                            "Eksik anlatım"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Şeytan resmi çok dikkat çekici; fakat karşısında aynı ölçekte Göksel Şehir resmi bulunur."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Kitabın bazı sayfaları bilinçli olarak yok edildi çünkü korkunç sırlar içeriyordu.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Kanıt yok"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Eksik yapraklar var; ne zaman ve neden çıkarıldıkları kesin değil. İçerikleri hakkında sansasyonel iddialar spekülasyon."
+                      ]
+                    }
+                  ]
+                },
+                "\n",
+                {
+                  "tag": "tr",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "“Kitap lanetlidir.”"
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {
+                            "class": "pill red"
+                          },
+                          "children": [
+                            "Folklor"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "attrs": {},
+                      "children": [
+                        "Tarihsel olaylar ve yangın/war stories gerçek olabilir; doğaüstü laneti destekleyen doğrulanabilir kanıt yok."
+                      ]
+                    }
+                  ]
+                },
+                "\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "bilinmeyen"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Hâlâ bilinmeyenler"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "grid"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Kâtibin kimliği"
+                  ]
+                },
+                "Tek ana el güçlü görünse de kişiyi kesin olarak tanımlayamıyoruz."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Tam üretim süresi"
+                  ]
+                },
+                "Yıllar sürdüğü açıkça daha makul, fakat 10 mu, 20 mi, 30 mu — kesin değil."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Neden bu kadar büyük?"
+                  ]
+                },
+                "Prestij, kullanım, anıtsallık veya kapsamlı derleme fikri rol oynamış olabilir."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Şeytan portresinin özel amacı"
+                  ]
+                },
+                "Teolojik karşıtlık güçlü bir yorum; sanatçının kendi açıklaması yok."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Eksik yaprakların içeriği"
+                  ]
+                },
+                "Bir grup yaprak çıkarılmış durumda; tam içerik ve çıkarılma nedeni kesin değil."
+              ]
+            },
+            "\n",
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "fact"
+              },
+              "children": [
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "Efsanenin doğuşu"
+                  ]
+                },
+                "Hikâyenin geç dönemde şekillendiği anlaşılıyor, ama oluşum zinciri eksiksiz değil."
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "degerlendirme"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Benim değerlendirmem"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "card emphasis"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {
+                "class": "verdict"
+              },
+              "children": [
+                "🟢 Codex Gigas’ın “doğaüstü gizemi” büyük ölçüde efsane."
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nGerçek gizem, Şeytan’ın kitabı yazıp yazmadığı değil. Bu konuda elimizde tarihsel kanıt yok ve fiziksel üretim süreci normal Orta Çağ kitap yapımıyla açıklanabiliyor.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nAsıl etkileyici soru şu: ",
+                {
+                  "tag": "b",
+                  "attrs": {},
+                  "children": [
+                    "13. yüzyılda tek bir kâtip veya çok küçük bir üretim çevresi, böylesine devasa ve içerik bakımından bu kadar kapsamlı bir kodeksi neden oluşturdu?"
+                  ]
+                },
+                "\nBu, doğaüstünden çok insan emeği ve Orta Çağ bilgi kültürü açısından etkileyici.\n"
+              ]
+            },
+            "\n",
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "\nŞeytan portresi de tek başına “satanik kitap” kanıtı değil. Karşısındaki Göksel Şehir ile birlikte okunduğunda,\niyilik–kötülük, kurtuluş–lanetlenme karşıtlığı çok daha makul bir bağlam sunuyor.\n"
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "callout"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Seri için durum:"
+              ]
+            },
+            " 🟢 ",
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Büyük ölçüde çözülmüş."
+              ]
+            },
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\nEserin tarihi, içeriği ve üretim bağlamı oldukça iyi biliniyor. Açık kalan meseleler kâtibin kimliği,\nüretim süresinin tam uzunluğu, eksik yapraklar ve efsanenin tam oluşum tarihi.\n"
+          ]
+        },
+        "\n"
+      ]
+    },
+    {
+      "tag": "section",
+      "attrs": {
+        "id": "kaynaklar"
+      },
+      "children": [
+        "\n",
+        {
+          "tag": "h2",
+          "attrs": {},
+          "children": [
+            "Kaynakça"
+          ]
+        },
+        "\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Ana çerçeve kurumsal kataloglar ve el yazması kayıtlarına dayandırıldı; popüler “lanet” anlatıları kaynak olarak kullanılmadı."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "National Library of Sweden — Codex Gigas."
+              ]
+            },
+            " Eserin katalog kaydı, içerik yapısı, tarihçesi ve dijital koleksiyonu.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.kb.se/in-english/the-codex-gigas.html"
+              },
+              "children": [
+                "İsveç Millî Kütüphanesi"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Library of Congress — World Digital Library."
+              ]
+            },
+            " “Devil’s Bible / Codex Gigas.” İçerik ve provenans özeti.",
+            {
+              "tag": "br",
+              "attrs": {},
+              "children": []
+            },
+            "\n",
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "https://www.loc.gov/resource/gdcwdl.wdl_03042/"
+              },
+              "children": [
+                "Library of Congress kaydı"
+              ]
+            }
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "National Library of Sweden / Manuscripta."
+              ]
+            },
+            " Codex Gigas A 148 katalog ve dijital kayıtları; yapraklar, yazıtlar ve içerik bölümleri."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Cahn, Walter (1982)."
+              ]
+            },
+            " ",
+            {
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                "Romanesque Bible Illumination"
+              ]
+            },
+            ". Cornell University Press. Romanesk İncil üretimi ve resimli el yazmaları bağlamı."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "source"
+          },
+          "children": [
+            {
+              "tag": "b",
+              "attrs": {},
+              "children": [
+                "Cosmas of Prague / Josephus / Isidore metin bölümleri."
+              ]
+            },
+            " Codex içeriğinin büyük kısmı bilinen Orta Çağ Latin metin geleneğine aittir; kataloglarda ayrı ayrı tanımlanmıştır."
+          ]
+        },
+        "\n\n",
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "small"
+          },
+          "children": [
+            "Son güncelleme: 6 Ekim 2026."
+          ]
+        },
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}
