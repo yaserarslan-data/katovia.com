@@ -28,10 +28,10 @@ const morsePairs=[
 const morse=morsePairs.map(([name,character],index)=>({id:`morse-international-${name.codePointAt(0).toString(16).padStart(4,'0')}`,profileId:'morse-international',order:index+1,character,forms:[{role:'primary',text:character}],label:{tr:name,en:name}}));
 const braille=(profileId,letters,glyphs)=>[...letters].map((name,index)=>({id:`${profileId}-${[...glyphs][index].codePointAt(0).toString(16)}`,profileId,order:index+1,character:[...glyphs][index],forms:[{role:'primary',text:[...glyphs][index]}],label:{tr:`${name} harfi`,en:`Letter ${name}`}}));
 export const profiles=Object.freeze([
- {id:'greek-modern',systemId:'greek',languageTag:'el',title:{tr:'Modern Greek',en:'Modern Greek'},expectedCount:24,entries:greek},
- {id:'cyrillic-russian',systemId:'cyrillic',languageTag:'ru',title:{tr:'Russian Cyrillic',en:'Russian Cyrillic'},expectedCount:33,entries:russian},
+ {id:'greek-modern',systemId:'greek',languageTag:'el',title:{tr:'Modern Yunanca',en:'Modern Greek'},expectedCount:24,entries:greek},
+ {id:'cyrillic-russian',systemId:'cyrillic',languageTag:'ru',title:{tr:'Rus Kiril Alfabesi',en:'Russian Cyrillic'},expectedCount:33,entries:russian},
  {id:'hiragana-basic',systemId:'hiragana',languageTag:'ja',title:{tr:'Hiragana',en:'Hiragana'},expectedCount:46,entries:kana,groups},
- {id:'morse-international',systemId:'morse',languageTag:'en',title:{tr:'International Morse',en:'International Morse'},expectedCount:36,entries:morse},
+ {id:'morse-international',systemId:'morse',languageTag:'en',title:{tr:'Uluslararası Mors Kodu',en:'International Morse'},expectedCount:36,entries:morse},
  {id:'braille-tr',systemId:'braille',languageTag:'tr',title:{tr:'Türkçe Braille',en:'Turkish Braille'},expectedCount:29,entries:braille('braille-tr','abcçdefgğhıijklmnoöprsştuüvyz','⠁⠃⠉⠡⠙⠑⠋⠛⠣⠓⠔⠊⠚⠅⠇⠍⠝⠕⠪⠏⠗⠎⠩⠞⠥⠳⠧⠽⠵')},
  {id:'braille-ueb',systemId:'braille',languageTag:'en',title:{tr:'İngilizce Braille',en:'English Braille'},expectedCount:26,entries:braille('braille-ueb','abcdefghijklmnopqrstuvwxyz','⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠅⠇⠍⠝⠕⠏⠟⠗⠎⠞⠥⠧⠺⠭⠽⠵')},
 ]);

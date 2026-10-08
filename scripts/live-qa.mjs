@@ -2,6 +2,7 @@ import {qaNewTools} from './qa-new-tools.mjs';
 import {qaMysteries} from './qa-mysteries.mjs';
 import {qaAlphabet} from './qa-alphabet.mjs';
 import {qaCleanup} from './qa-cleanup.mjs';
+import {qaBrand} from './qa-brand.mjs';
 import { chromium } from '@playwright/test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -43,8 +44,9 @@ try {
   }
   if(process.argv[2]==='Tools1')await qaNewTools(page,base);
   if(process.argv[2]==='Mysteries1'){await qaNewTools(page,base);await qaMysteries(page,base);}
-  if(['Alphabet1','Character1','Cleanup1'].includes(process.argv[2])){await qaNewTools(page,base);await qaMysteries(page,base);await qaAlphabet(page,base,process.argv[2]!=='Alphabet1');}
-  if(process.argv[2]==='Cleanup1')await qaCleanup(page,base,{retired:true});
+  if(['Alphabet1','Character1','Cleanup1','Brand1'].includes(process.argv[2])){await qaNewTools(page,base);await qaMysteries(page,base);await qaAlphabet(page,base,process.argv[2]!=='Alphabet1');}
+  if(['Cleanup1','Brand1'].includes(process.argv[2]))await qaCleanup(page,base,{retired:true});
+  if(process.argv[2]==='Brand1')await qaBrand(page,base);
   const manifest = JSON.parse(await readFile('scripts/legacy-manifest.json','utf8'));
   for (const item of manifest.files.filter((item) => item.category==='html' && item.path!=='index.html')) {
     const response=await page.goto(base+'/'+item.path); assert.equal(response.status(),200);

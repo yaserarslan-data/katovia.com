@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises';
+import { mysteryVisuals } from '../src/mysteries/visuals.js';
 import { mysteries, mysteryRoutes, mysteryIndexRoute, mysteryRoute, mysteryStatus } from '../src/catalog/mysteries.js';
 import { sections } from '../src/catalog/registry.js';
 import { translate } from '../src/i18n/index.js';
@@ -41,8 +42,9 @@ function index(locale) {
 }
 function article(entry, locale, content) {
   const c=copy[locale], position=mysteries.indexOf(entry);
+  const visual=mysteryVisuals[entry.id],image=visual?`<figure class="mystery-visual"><img src="${'../'.repeat(mysteryRoute(entry,locale).split('/').filter(Boolean).length+1)}src/mysteries/visuals/${visual.file}" width="800" height="400" alt="${escape(visual.alt[locale])}" decoding="async"><figcaption>${escape(visual.caption[locale])}</figcaption></figure>`:'';
   const adjacent=(offset,label)=>{const target=mysteries[position+offset];return target?`<a class="button" href="${mysteryRoute(target,locale)}">${label}: ${escape(target.titles[locale])}</a>`:'';};
-  return `<main id="main-content" class="container mystery-reader" tabindex="-1"><header class="mystery-intro"><p class="eyebrow">KATOVIA / ${c.name}</p><h1>${escape(entry.titles[locale])}</h1><p>${escape(entry.questions[locale])}</p><p class="mystery-status ${entry.status}">${mysteryStatus[locale][entry.status]}</p><p>${c.notice}</p><p>${c.source}: <time datetime="${content.source.revision}">${content.source.revision}</time></p><p class="mystery-note">${c.translation} ${c.review}</p><button type="button" class="button" data-mystery-print>${c.print}</button></header>
+  return `<main id="main-content" class="container mystery-reader" tabindex="-1"><header class="mystery-intro"><p class="eyebrow">KATOVIA / ${c.name}</p><h1>${escape(entry.titles[locale])}</h1><p>${escape(entry.questions[locale])}</p>${image}<p class="mystery-status ${entry.status}">${mysteryStatus[locale][entry.status]}</p><p>${c.notice}</p><p>${c.source}: <time datetime="${content.source.revision}">${content.source.revision}</time></p><p class="mystery-note">${c.translation} ${c.review}</p><button type="button" class="button" data-mystery-print>${c.print}</button></header>
   <details class="mystery-toc"><summary>${c.toc}</summary><nav aria-label="${c.toc}">${content.sections.map(section=>`<a href="#${section.attrs.id}">${escape(text(section.children.find(node=>node.tag==='h2') || {children:[section.attrs.id]}))}</a>`).join('')}</nav></details>
   <article class="mystery-content">${content.sections.map(node => renderNode(node, locale)).join('')}</article><nav class="mystery-pagination" aria-label="${c.pagination}">${adjacent(-1,c.previous)}<a class="button" data-mystery-back href="${mysteryIndexRoute(locale)}">${c.back}</a>${adjacent(1,c.next)}</nav></main>`;
 }
