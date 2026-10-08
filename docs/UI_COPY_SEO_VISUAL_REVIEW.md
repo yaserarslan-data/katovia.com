@@ -103,6 +103,18 @@ The combined package is authorized for commit, push and production deployment wi
 
 Approved combined-release preflight: production build passed; 62/62 Node tests passed; 89/89 full Chrome browser tests passed; dev smoke passed. The additional Brand1 live-smoke function also passed against the local production artifact, including the locked bilingual hero, CREATE reset, old quiz links, Duel share/rematch, Alphabet state and six localized illustration pages. The new headline test reads the existing two localized spans rather than assuming DOM whitespace between them; no headline markup change was needed.
 
+### Verified Brand1 production release
+
+- TR badge: `MERAK ALANI`; EN badge: `SPACE FOR CURIOSITY`.
+- TR slogan: `Merakını harekete geçir.`; EN slogan: `Put your curiosity into motion.`
+- Headline preserved: `BİR ŞEY OYNA.` / `PLAY SOMETHING.`
+- Deployed source SHA: `f67fa45a7fb97c76518426b0700f3df618c5a843`.
+- Production SHA: `d33424ed50399afd9315468ed8b9223ea6b63870`.
+- Exact previous-production rollback SHA: `ff56ed2572a0bc0c4548291ec5616318c1e75bc1`; remote rollback branch is ready. Rollback was not needed.
+- Pages build, complete served-byte verification and all live release suites passed. Live UI checks cover branding in both locales/four widths, reset/cancel and old quiz links, Duel share/rematch, Alphabet profile/search/query/hash, TOOLS copy/canonical, and six localized illustration pages. No page errors or external runtime requests in the new UI smoke.
+- Root routes, daily games, all fourteen Mysteries in TR/EN, six Alphabet profiles / 194 entries, Beautiful Quotes, QR/Card, sitemap and 18 legacy page checks passed. Removed Phase 1 paths remain 404.
+- No new dependencies, resources, paid services, external media or fonts. CNAME, app-ads, analytics, research content/original HTML, legacy bytes and `tanitim/` remain unchanged.
+
 ## 12. Changed files
 
 Controllers/markup: `src/duel/client.js`, `src/features/duel.js`, `src/creator/client.js`, `src/features/creator.js`.
