@@ -1,0 +1,1 @@
+export const creations=Object.freeze([Object.freeze({id:'language-forge',type:'create',creation:true,status:'available',route:'/create/language-forge/',titleKey:'forge.hero',descriptionKey:'forge.description',seoTitleKey:'forge.seoTitle',metaKey:'forge.meta'})]);

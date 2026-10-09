@@ -1,6 +1,8 @@
+import {forgeMessages} from '../language-forge/ui/messages.js';
 // UI text only.
 export const messages = {
   "en": {
+    ...forgeMessages.en,
     "duel.resultHeading": "YOUR RESULT",
     "duel.linkLabel": "Challenge link",
     "duel.challengeReady": "Your target is ready to share.",
@@ -443,6 +445,7 @@ export const messages = {
     "tool.pixel-art-grid.seoTitle": "Pixel Art Grid — Free Browser Tool | Katovia"
   },
   "tr": {
+    ...forgeMessages.tr,
     "duel.resultHeading": "MEYDAN OKUMA SONUCUN",
     "duel.linkLabel": "Meydan okuma bağlantısı",
     "duel.challengeReady": "Hedefin paylaşılmaya hazır.",

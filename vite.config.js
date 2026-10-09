@@ -1,4 +1,5 @@
 import { mysteryRoutes } from './src/catalog/mysteries.js';
+import { creations } from './src/catalog/creations.js';
 import { defineConfig } from 'vite';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
@@ -45,7 +46,7 @@ export default defineConfig({
     target: ['es2022', 'safari16'],
     rolldownOptions: {
       output: { postBanner: '/*! Vite preload helper: Copyright (c) 2019-present VoidZero Inc. and Vite contributors. MIT; license: /katovia-assets/vite-runtime-LICENSE.txt */' },
-      input: [...mysteryRoutes.map(route => resolve(siteRoot, `${route.slice(1)}index.html`)), resolve(siteRoot, 'index.html'), ...sections.map((section) => resolve(siteRoot, `${section.id}/index.html`)), ...[...experiences,...tools,...personalPages].map((entry) => resolve(siteRoot, `${entry.route.slice(1)}index.html`)), resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
+      input: [...mysteryRoutes.map(route => resolve(siteRoot, `${route.slice(1)}index.html`)), resolve(siteRoot, 'index.html'), ...sections.map((section) => resolve(siteRoot, `${section.id}/index.html`)), ...[...experiences,...tools,...personalPages,...creations].map((entry) => resolve(siteRoot, `${entry.route.slice(1)}index.html`)), resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
     },
   },
 });

@@ -87,7 +87,8 @@ elif mode=='publish':
             except Exception:
                 if retry==11:raise
                 time.sleep(10)
-        subprocess.run(['node','scripts/live-qa.mjs',label],check=True);settings();plan['status']='published';print('RELEASE VERIFIED',label,flush=True)
+        qa=['node','scripts/qa-language-forge-release.mjs'] if label=='LanguageForge1' else ['node','scripts/live-qa.mjs',label]
+        subprocess.run(qa,check=True);settings();plan['status']='published';print('RELEASE VERIFIED',label,flush=True)
     except Exception as error:
         print('Release failed:',str(error),flush=True)
         if pushed or remote()==plan['release']:

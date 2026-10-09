@@ -1,0 +1,1086 @@
+[
+  {
+    "input": {
+      "engineVersion": "e1",
+      "datasetVersion": "d1",
+      "seed": "0123456789abcdef0123456789abcdef",
+      "config": {
+        "preset": "flowing",
+        "wordLength": "balanced"
+      }
+    },
+    "canonicalName": "neniru",
+    "displayName": "Neniru",
+    "lexicon": [
+      {
+        "semanticId": "pronoun.i",
+        "word": "rima"
+      },
+      {
+        "semanticId": "pronoun.you-singular",
+        "word": "same"
+      },
+      {
+        "semanticId": "pronoun.third-singular",
+        "word": "neru"
+      },
+      {
+        "semanticId": "pronoun.we",
+        "word": "rilire"
+      },
+      {
+        "semanticId": "pronoun.you-plural",
+        "word": "rana"
+      },
+      {
+        "semanticId": "pronoun.they-plural",
+        "word": "levi"
+      },
+      {
+        "semanticId": "noun.person",
+        "word": "lalura"
+      },
+      {
+        "semanticId": "noun.child",
+        "word": "nele"
+      },
+      {
+        "semanticId": "noun.mother",
+        "word": "yivesa"
+      },
+      {
+        "semanticId": "noun.father",
+        "word": "lamo"
+      },
+      {
+        "semanticId": "noun.friend",
+        "word": "lovemi"
+      },
+      {
+        "semanticId": "noun.water",
+        "word": "nera"
+      },
+      {
+        "semanticId": "noun.fire",
+        "word": "yisa"
+      },
+      {
+        "semanticId": "noun.ground",
+        "word": "yirome"
+      },
+      {
+        "semanticId": "noun.sky",
+        "word": "sinala"
+      },
+      {
+        "semanticId": "noun.sun",
+        "word": "nala"
+      },
+      {
+        "semanticId": "noun.moon",
+        "word": "mesa"
+      },
+      {
+        "semanticId": "noun.star",
+        "word": "ramuni"
+      },
+      {
+        "semanticId": "noun.wind",
+        "word": "nela"
+      },
+      {
+        "semanticId": "noun.tree",
+        "word": "lere"
+      },
+      {
+        "semanticId": "noun.sea",
+        "word": "ruyina"
+      },
+      {
+        "semanticId": "noun.hand",
+        "word": "maruve"
+      },
+      {
+        "semanticId": "noun.eye",
+        "word": "eva"
+      },
+      {
+        "semanticId": "noun.mouth",
+        "word": "nimeli"
+      },
+      {
+        "semanticId": "noun.head",
+        "word": "ane"
+      },
+      {
+        "semanticId": "noun.heart",
+        "word": "none"
+      },
+      {
+        "semanticId": "noun.house",
+        "word": "rasa"
+      },
+      {
+        "semanticId": "noun.city",
+        "word": "vise"
+      },
+      {
+        "semanticId": "noun.mountain",
+        "word": "ini"
+      },
+      {
+        "semanticId": "noun.river",
+        "word": "sala"
+      },
+      {
+        "semanticId": "noun.road",
+        "word": "nenune"
+      },
+      {
+        "semanticId": "noun.food",
+        "word": "rera"
+      },
+      {
+        "semanticId": "verb.go",
+        "word": "mala"
+      },
+      {
+        "semanticId": "verb.come",
+        "word": "ela"
+      },
+      {
+        "semanticId": "verb.see",
+        "word": "ralo"
+      },
+      {
+        "semanticId": "verb.hear",
+        "word": "nina"
+      },
+      {
+        "semanticId": "verb.drink",
+        "word": "veni"
+      },
+      {
+        "semanticId": "verb.eat",
+        "word": "loni"
+      },
+      {
+        "semanticId": "verb.speak",
+        "word": "marase"
+      },
+      {
+        "semanticId": "verb.know",
+        "word": "nima"
+      },
+      {
+        "semanticId": "verb.give",
+        "word": "ameri"
+      },
+      {
+        "semanticId": "verb.take",
+        "word": "risene"
+      },
+      {
+        "semanticId": "verb.make",
+        "word": "renena"
+      },
+      {
+        "semanticId": "verb.love",
+        "word": "solo"
+      },
+      {
+        "semanticId": "adj.good",
+        "word": "noli"
+      },
+      {
+        "semanticId": "adj.bad",
+        "word": "mini"
+      },
+      {
+        "semanticId": "adj.big",
+        "word": "lereyi"
+      },
+      {
+        "semanticId": "adj.small",
+        "word": "laye"
+      },
+      {
+        "semanticId": "adj.hot",
+        "word": "seyene"
+      },
+      {
+        "semanticId": "adj.cold",
+        "word": "esimi"
+      },
+      {
+        "semanticId": "adj.new",
+        "word": "mevu"
+      },
+      {
+        "semanticId": "adj.old",
+        "word": "nunasu"
+      },
+      {
+        "semanticId": "noun.joy",
+        "word": "lora"
+      },
+      {
+        "semanticId": "noun.fear",
+        "word": "vona"
+      },
+      {
+        "semanticId": "noun.calm",
+        "word": "rare"
+      },
+      {
+        "semanticId": "noun.hope",
+        "word": "riveva"
+      },
+      {
+        "semanticId": "adverb.now",
+        "word": "niru"
+      },
+      {
+        "semanticId": "adverb.today",
+        "word": "nili"
+      },
+      {
+        "semanticId": "adverb.yesterday",
+        "word": "sumi"
+      },
+      {
+        "semanticId": "adverb.tomorrow",
+        "word": "enesa"
+      },
+      {
+        "semanticId": "noun.life",
+        "word": "ramo"
+      },
+      {
+        "semanticId": "noun.death",
+        "word": "nale"
+      },
+      {
+        "semanticId": "noun.thing",
+        "word": "numa"
+      },
+      {
+        "semanticId": "noun.word",
+        "word": "lovu"
+      }
+    ]
+  },
+  {
+    "input": {
+      "engineVersion": "e1",
+      "datasetVersion": "d1",
+      "seed": "fedcba9876543210fedcba9876543210",
+      "config": {
+        "preset": "crisp",
+        "wordLength": "short"
+      }
+    },
+    "canonicalName": "kankik",
+    "displayName": "Kankik",
+    "lexicon": [
+      {
+        "semanticId": "pronoun.i",
+        "word": "gip"
+      },
+      {
+        "semanticId": "pronoun.you-singular",
+        "word": "krapdi"
+      },
+      {
+        "semanticId": "pronoun.third-singular",
+        "word": "dap"
+      },
+      {
+        "semanticId": "pronoun.we",
+        "word": "krok"
+      },
+      {
+        "semanticId": "pronoun.you-plural",
+        "word": "kron"
+      },
+      {
+        "semanticId": "pronoun.they-plural",
+        "word": "sa"
+      },
+      {
+        "semanticId": "noun.person",
+        "word": "pi"
+      },
+      {
+        "semanticId": "noun.child",
+        "word": "no"
+      },
+      {
+        "semanticId": "noun.mother",
+        "word": "ka"
+      },
+      {
+        "semanticId": "noun.father",
+        "word": "totgit"
+      },
+      {
+        "semanticId": "noun.friend",
+        "word": "kok"
+      },
+      {
+        "semanticId": "noun.water",
+        "word": "pis"
+      },
+      {
+        "semanticId": "noun.fire",
+        "word": "grot"
+      },
+      {
+        "semanticId": "noun.ground",
+        "word": "pa"
+      },
+      {
+        "semanticId": "noun.sky",
+        "word": "bit"
+      },
+      {
+        "semanticId": "noun.sun",
+        "word": "po"
+      },
+      {
+        "semanticId": "noun.moon",
+        "word": "krik"
+      },
+      {
+        "semanticId": "noun.star",
+        "word": "pot"
+      },
+      {
+        "semanticId": "noun.wind",
+        "word": "rop"
+      },
+      {
+        "semanticId": "noun.tree",
+        "word": "dan"
+      },
+      {
+        "semanticId": "noun.sea",
+        "word": "tok"
+      },
+      {
+        "semanticId": "noun.hand",
+        "word": "grip"
+      },
+      {
+        "semanticId": "noun.eye",
+        "word": "bin"
+      },
+      {
+        "semanticId": "noun.mouth",
+        "word": "dopnar"
+      },
+      {
+        "semanticId": "noun.head",
+        "word": "totrip"
+      },
+      {
+        "semanticId": "noun.heart",
+        "word": "lit"
+      },
+      {
+        "semanticId": "noun.house",
+        "word": "skikrok"
+      },
+      {
+        "semanticId": "noun.city",
+        "word": "sit"
+      },
+      {
+        "semanticId": "noun.mountain",
+        "word": "na"
+      },
+      {
+        "semanticId": "noun.river",
+        "word": "da"
+      },
+      {
+        "semanticId": "noun.road",
+        "word": "tot"
+      },
+      {
+        "semanticId": "noun.food",
+        "word": "stis"
+      },
+      {
+        "semanticId": "verb.go",
+        "word": "ni"
+      },
+      {
+        "semanticId": "verb.come",
+        "word": "skogo"
+      },
+      {
+        "semanticId": "verb.see",
+        "word": "dip"
+      },
+      {
+        "semanticId": "verb.hear",
+        "word": "tap"
+      },
+      {
+        "semanticId": "verb.drink",
+        "word": "pat"
+      },
+      {
+        "semanticId": "verb.eat",
+        "word": "pras"
+      },
+      {
+        "semanticId": "verb.speak",
+        "word": "si"
+      },
+      {
+        "semanticId": "verb.know",
+        "word": "sti"
+      },
+      {
+        "semanticId": "verb.give",
+        "word": "tipto"
+      },
+      {
+        "semanticId": "verb.take",
+        "word": "li"
+      },
+      {
+        "semanticId": "verb.make",
+        "word": "sik"
+      },
+      {
+        "semanticId": "verb.love",
+        "word": "dis"
+      },
+      {
+        "semanticId": "adj.good",
+        "word": "tin"
+      },
+      {
+        "semanticId": "adj.bad",
+        "word": "ki"
+      },
+      {
+        "semanticId": "adj.big",
+        "word": "prip"
+      },
+      {
+        "semanticId": "adj.small",
+        "word": "kror"
+      },
+      {
+        "semanticId": "adj.hot",
+        "word": "skop"
+      },
+      {
+        "semanticId": "adj.cold",
+        "word": "ta"
+      },
+      {
+        "semanticId": "adj.new",
+        "word": "tak"
+      },
+      {
+        "semanticId": "adj.old",
+        "word": "trip"
+      },
+      {
+        "semanticId": "noun.joy",
+        "word": "stap"
+      },
+      {
+        "semanticId": "noun.fear",
+        "word": "kin"
+      },
+      {
+        "semanticId": "noun.calm",
+        "word": "bi"
+      },
+      {
+        "semanticId": "noun.hope",
+        "word": "sar"
+      },
+      {
+        "semanticId": "adverb.now",
+        "word": "di"
+      },
+      {
+        "semanticId": "adverb.today",
+        "word": "piktat"
+      },
+      {
+        "semanticId": "adverb.yesterday",
+        "word": "dangik"
+      },
+      {
+        "semanticId": "adverb.tomorrow",
+        "word": "grat"
+      },
+      {
+        "semanticId": "noun.life",
+        "word": "grok"
+      },
+      {
+        "semanticId": "noun.death",
+        "word": "gat"
+      },
+      {
+        "semanticId": "noun.thing",
+        "word": "stin"
+      },
+      {
+        "semanticId": "noun.word",
+        "word": "pit"
+      }
+    ]
+  },
+  {
+    "input": {
+      "engineVersion": "e1",
+      "datasetVersion": "d1",
+      "seed": "00000000000000000000000000000001",
+      "config": {
+        "preset": "rhythmic",
+        "wordLength": "long"
+      }
+    },
+    "canonicalName": "tapi",
+    "displayName": "Tapi",
+    "lexicon": [
+      {
+        "semanticId": "pronoun.i",
+        "word": "naroku"
+      },
+      {
+        "semanticId": "pronoun.you-singular",
+        "word": "kamipa"
+      },
+      {
+        "semanticId": "pronoun.third-singular",
+        "word": "porosa"
+      },
+      {
+        "semanticId": "pronoun.we",
+        "word": "kinuro"
+      },
+      {
+        "semanticId": "pronoun.you-plural",
+        "word": "kepono"
+      },
+      {
+        "semanticId": "pronoun.they-plural",
+        "word": "pinise"
+      },
+      {
+        "semanticId": "noun.person",
+        "word": "masele"
+      },
+      {
+        "semanticId": "noun.child",
+        "word": "rinapu"
+      },
+      {
+        "semanticId": "noun.mother",
+        "word": "nupote"
+      },
+      {
+        "semanticId": "noun.father",
+        "word": "rilenate"
+      },
+      {
+        "semanticId": "noun.friend",
+        "word": "latoru"
+      },
+      {
+        "semanticId": "noun.water",
+        "word": "torame"
+      },
+      {
+        "semanticId": "noun.fire",
+        "word": "tiripu"
+      },
+      {
+        "semanticId": "noun.ground",
+        "word": "tarisi"
+      },
+      {
+        "semanticId": "noun.sky",
+        "word": "sotenu"
+      },
+      {
+        "semanticId": "noun.sun",
+        "word": "nekuma"
+      },
+      {
+        "semanticId": "noun.moon",
+        "word": "nareka"
+      },
+      {
+        "semanticId": "noun.star",
+        "word": "repuka"
+      },
+      {
+        "semanticId": "noun.wind",
+        "word": "rapopi"
+      },
+      {
+        "semanticId": "noun.tree",
+        "word": "tunoku"
+      },
+      {
+        "semanticId": "noun.sea",
+        "word": "latipi"
+      },
+      {
+        "semanticId": "noun.hand",
+        "word": "serami"
+      },
+      {
+        "semanticId": "noun.eye",
+        "word": "turipa"
+      },
+      {
+        "semanticId": "noun.mouth",
+        "word": "tesula"
+      },
+      {
+        "semanticId": "noun.head",
+        "word": "ruroso"
+      },
+      {
+        "semanticId": "noun.heart",
+        "word": "limokuti"
+      },
+      {
+        "semanticId": "noun.house",
+        "word": "lekuri"
+      },
+      {
+        "semanticId": "noun.city",
+        "word": "tuporu"
+      },
+      {
+        "semanticId": "noun.mountain",
+        "word": "lopani"
+      },
+      {
+        "semanticId": "noun.river",
+        "word": "nonale"
+      },
+      {
+        "semanticId": "noun.road",
+        "word": "musaru"
+      },
+      {
+        "semanticId": "noun.food",
+        "word": "serepi"
+      },
+      {
+        "semanticId": "verb.go",
+        "word": "papotu"
+      },
+      {
+        "semanticId": "verb.come",
+        "word": "motetara"
+      },
+      {
+        "semanticId": "verb.see",
+        "word": "makuno"
+      },
+      {
+        "semanticId": "verb.hear",
+        "word": "meloti"
+      },
+      {
+        "semanticId": "verb.drink",
+        "word": "ranisa"
+      },
+      {
+        "semanticId": "verb.eat",
+        "word": "mususi"
+      },
+      {
+        "semanticId": "verb.speak",
+        "word": "palotu"
+      },
+      {
+        "semanticId": "verb.know",
+        "word": "kusonuki"
+      },
+      {
+        "semanticId": "verb.give",
+        "word": "kosana"
+      },
+      {
+        "semanticId": "verb.take",
+        "word": "rasara"
+      },
+      {
+        "semanticId": "verb.make",
+        "word": "nirise"
+      },
+      {
+        "semanticId": "verb.love",
+        "word": "musiro"
+      },
+      {
+        "semanticId": "adj.good",
+        "word": "ralapa"
+      },
+      {
+        "semanticId": "adj.bad",
+        "word": "nupesu"
+      },
+      {
+        "semanticId": "adj.big",
+        "word": "tepiso"
+      },
+      {
+        "semanticId": "adj.small",
+        "word": "nimule"
+      },
+      {
+        "semanticId": "adj.hot",
+        "word": "notena"
+      },
+      {
+        "semanticId": "adj.cold",
+        "word": "mekoru"
+      },
+      {
+        "semanticId": "adj.new",
+        "word": "nepikira"
+      },
+      {
+        "semanticId": "adj.old",
+        "word": "rorepa"
+      },
+      {
+        "semanticId": "noun.joy",
+        "word": "laroso"
+      },
+      {
+        "semanticId": "noun.fear",
+        "word": "tirore"
+      },
+      {
+        "semanticId": "noun.calm",
+        "word": "retino"
+      },
+      {
+        "semanticId": "noun.hope",
+        "word": "rosute"
+      },
+      {
+        "semanticId": "adverb.now",
+        "word": "letoka"
+      },
+      {
+        "semanticId": "adverb.today",
+        "word": "nukipumo"
+      },
+      {
+        "semanticId": "adverb.yesterday",
+        "word": "likoro"
+      },
+      {
+        "semanticId": "adverb.tomorrow",
+        "word": "ralinuru"
+      },
+      {
+        "semanticId": "noun.life",
+        "word": "tasuma"
+      },
+      {
+        "semanticId": "noun.death",
+        "word": "lirato"
+      },
+      {
+        "semanticId": "noun.thing",
+        "word": "kulare"
+      },
+      {
+        "semanticId": "noun.word",
+        "word": "resutu"
+      }
+    ]
+  },
+  {
+    "input": {
+      "engineVersion": "e1",
+      "datasetVersion": "d1",
+      "seed": "ffffffffffffffffffffffffffffffff",
+      "config": {
+        "preset": "clustered",
+        "wordLength": "balanced"
+      }
+    },
+    "canonicalName": "blobredra",
+    "displayName": "Blobredra",
+    "lexicon": [
+      {
+        "semanticId": "pronoun.i",
+        "word": "peflor"
+      },
+      {
+        "semanticId": "pronoun.you-singular",
+        "word": "bloplok"
+      },
+      {
+        "semanticId": "pronoun.third-singular",
+        "word": "brerok"
+      },
+      {
+        "semanticId": "pronoun.we",
+        "word": "klebaslo"
+      },
+      {
+        "semanticId": "pronoun.you-plural",
+        "word": "pleprok"
+      },
+      {
+        "semanticId": "pronoun.they-plural",
+        "word": "pralbok"
+      },
+      {
+        "semanticId": "noun.person",
+        "word": "sedrogle"
+      },
+      {
+        "semanticId": "noun.child",
+        "word": "drogat"
+      },
+      {
+        "semanticId": "noun.mother",
+        "word": "dreses"
+      },
+      {
+        "semanticId": "noun.father",
+        "word": "glopkogret"
+      },
+      {
+        "semanticId": "noun.friend",
+        "word": "tibor"
+      },
+      {
+        "semanticId": "noun.water",
+        "word": "raflo"
+      },
+      {
+        "semanticId": "noun.fire",
+        "word": "klabrer"
+      },
+      {
+        "semanticId": "noun.ground",
+        "word": "toget"
+      },
+      {
+        "semanticId": "noun.sky",
+        "word": "krasle"
+      },
+      {
+        "semanticId": "noun.sun",
+        "word": "blobras"
+      },
+      {
+        "semanticId": "noun.moon",
+        "word": "frogre"
+      },
+      {
+        "semanticId": "noun.star",
+        "word": "gatis"
+      },
+      {
+        "semanticId": "noun.wind",
+        "word": "brikreblo"
+      },
+      {
+        "semanticId": "noun.tree",
+        "word": "broflet"
+      },
+      {
+        "semanticId": "noun.sea",
+        "word": "frople"
+      },
+      {
+        "semanticId": "noun.hand",
+        "word": "glerkop"
+      },
+      {
+        "semanticId": "noun.eye",
+        "word": "luglop"
+      },
+      {
+        "semanticId": "noun.mouth",
+        "word": "kroblapra"
+      },
+      {
+        "semanticId": "noun.head",
+        "word": "prokles"
+      },
+      {
+        "semanticId": "noun.heart",
+        "word": "drolder"
+      },
+      {
+        "semanticId": "noun.house",
+        "word": "loplodra"
+      },
+      {
+        "semanticId": "noun.city",
+        "word": "floslop"
+      },
+      {
+        "semanticId": "noun.mountain",
+        "word": "boplekre"
+      },
+      {
+        "semanticId": "noun.river",
+        "word": "kloli"
+      },
+      {
+        "semanticId": "noun.road",
+        "word": "frugebles"
+      },
+      {
+        "semanticId": "noun.food",
+        "word": "pregroglur"
+      },
+      {
+        "semanticId": "verb.go",
+        "word": "tolut"
+      },
+      {
+        "semanticId": "verb.come",
+        "word": "drabrefle"
+      },
+      {
+        "semanticId": "verb.see",
+        "word": "bobrol"
+      },
+      {
+        "semanticId": "verb.hear",
+        "word": "blerbepfa"
+      },
+      {
+        "semanticId": "verb.drink",
+        "word": "prebro"
+      },
+      {
+        "semanticId": "verb.eat",
+        "word": "brupo"
+      },
+      {
+        "semanticId": "verb.speak",
+        "word": "karsekop"
+      },
+      {
+        "semanticId": "verb.know",
+        "word": "trokle"
+      },
+      {
+        "semanticId": "verb.give",
+        "word": "luslor"
+      },
+      {
+        "semanticId": "verb.take",
+        "word": "pedror"
+      },
+      {
+        "semanticId": "verb.make",
+        "word": "frerot"
+      },
+      {
+        "semanticId": "verb.love",
+        "word": "trekrep"
+      },
+      {
+        "semanticId": "adj.good",
+        "word": "plokrisger"
+      },
+      {
+        "semanticId": "adj.bad",
+        "word": "drufro"
+      },
+      {
+        "semanticId": "adj.big",
+        "word": "pogro"
+      },
+      {
+        "semanticId": "adj.small",
+        "word": "bofra"
+      },
+      {
+        "semanticId": "adj.hot",
+        "word": "klopo"
+      },
+      {
+        "semanticId": "adj.cold",
+        "word": "grodradre"
+      },
+      {
+        "semanticId": "adj.new",
+        "word": "troklo"
+      },
+      {
+        "semanticId": "adj.old",
+        "word": "prodre"
+      },
+      {
+        "semanticId": "noun.joy",
+        "word": "trore"
+      },
+      {
+        "semanticId": "noun.fear",
+        "word": "grokrol"
+      },
+      {
+        "semanticId": "noun.calm",
+        "word": "prapluk"
+      },
+      {
+        "semanticId": "noun.hope",
+        "word": "gralgo"
+      },
+      {
+        "semanticId": "adverb.now",
+        "word": "sodok"
+      },
+      {
+        "semanticId": "adverb.today",
+        "word": "torle"
+      },
+      {
+        "semanticId": "adverb.yesterday",
+        "word": "breler"
+      },
+      {
+        "semanticId": "adverb.tomorrow",
+        "word": "prebropru"
+      },
+      {
+        "semanticId": "noun.life",
+        "word": "slolpo"
+      },
+      {
+        "semanticId": "noun.death",
+        "word": "sluslopet"
+      },
+      {
+        "semanticId": "noun.thing",
+        "word": "lopreplos"
+      },
+      {
+        "semanticId": "noun.word",
+        "word": "drargo"
+      }
+    ]
+  }
+]

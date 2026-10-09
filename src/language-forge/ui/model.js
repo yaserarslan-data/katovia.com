@@ -1,0 +1,8 @@
+import { presets } from '../data/presets.js';
+import { concepts } from '../data/concepts.js';
+export function setupState(){return {selectedPreset:'flowing',wordLength:'balanced',grammarConfig:{...presets[0].grammar},grammarCustomized:false,status:'setup',generatedPackage:null,activeDictionaryFilter:'all',search:''};}
+export function choosePreset(state,id){const preset=presets.find(p=>p.id===id);if(!preset)throw new TypeError('preset');state.selectedPreset=id;if(!state.grammarCustomized)state.grammarConfig={...preset.grammar};}
+export function createSeed(cryptoObject=globalThis.crypto){const bytes=new Uint8Array(16);cryptoObject.getRandomValues(bytes);return [...bytes].map(x=>x.toString(16).padStart(2,'0')).join('');}
+export function generationInput(state,newSeed=createSeed){const previous=state.generatedPackage;const samePhonology=previous?.config.preset===state.selectedPreset&&previous?.config.wordLength===state.wordLength;return {engineVersion:'e1',datasetVersion:'d1',grammarVersion:'g1',seed:samePhonology?previous.seed:newSeed(),config:{preset:state.selectedPreset,wordLength:state.wordLength,grammar:{...state.grammarConfig}}};}
+export function dictionaryRows(pack,search,category){const words=new Map(pack.language.lexicon.map(x=>[x.semanticId,x.word]));const query=search.trim().toLowerCase();return concepts.filter(c=>(category==='all'||c.category===category)&&(!query||[words.get(c.semanticId),c.labels.en,c.labels.tr].some(s=>s.toLowerCase().includes(query)))).map(c=>({...c,word:words.get(c.semanticId)}));}
+export function punctuate(example){return example.surface+(example.explanation.question?'?':'.');}

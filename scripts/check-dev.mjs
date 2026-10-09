@@ -5,13 +5,14 @@ import { resolve } from 'node:path';
 import { repoRoot } from './paths.mjs';
 import { sections } from '../src/catalog/registry.js';
 import { mysteryRoutes } from '../src/catalog/mysteries.js';
+import { creations } from '../src/catalog/creations.js';
 
 const server = await createServer({ configFile: resolve(repoRoot, 'vite.config.js'), server: { port: 0, host: '127.0.0.1' } });
 let browser;
 try {
   await server.listen();
   const base = `http://127.0.0.1:${server.httpServer.address().port}`;
-  for (const route of ['/', '/v2/', ...sections.map((section) => section.route), ...mysteryRoutes, '/tools/alphabet-lab/', '/lab/guzel-sozler/', '/laboratuvar/qr-kod-olusturucu.html', '/laboratuvar/dijital-kartvizit-olusturucu.html']) {
+  for (const route of ['/', '/v2/', ...sections.map((section) => section.route), ...creations.map(entry=>entry.route), ...mysteryRoutes, '/tools/alphabet-lab/', '/lab/guzel-sozler/', '/laboratuvar/qr-kod-olusturucu.html', '/laboratuvar/dijital-kartvizit-olusturucu.html']) {
     const response = await fetch(base + route);
     if (response.status !== 200) throw new Error(`Dev ${route}: ${response.status}`);
     if (route === '/' && !(await response.text()).includes('data-daily-mount')) throw new Error('Dev root shell missing');
@@ -38,7 +39,16 @@ try {
   await page.locator('[data-alpha-profile="greek-modern"]').click();
   if(await page.locator('[data-alpha-symbol]').count()!==24)throw new Error('Dev Alphabet grid mismatch');
   if(errors.length)throw new Error(errors.join('\n'));
-  console.log('Dev smoke passed: root shell, app and mystery routes, QR, true 404, source modules and mobile navigation.');
+  await page.goto(base + '/create/language-forge/');
+  await page.waitForSelector('[data-forge][data-ready="true"]');
+  await page.locator('[data-forge-submit]').click();
+  await page.waitForSelector('[data-forge-result]:not([hidden])');
+  if(await page.locator('[data-forge-entry]').count()!==64||await page.locator('[data-forge-sentence]').count()!==12)throw new Error('Dev Forge result mismatch');
+  const language=await page.locator('[data-forge-name]').textContent();
+  await page.locator('[data-locale="tr"]').click();
+  if(await page.locator('[data-forge-name]').textContent()!==language)throw new Error('Dev Forge locale changed identity');
+  if(errors.length)throw new Error(errors.join('\n'));
+  console.log('Dev smoke passed: root shell, app/mystery/Forge routes, QR, true 404, source modules, mobile navigation and Forge locale preservation.');
 } finally {
   await browser?.close();
   await server.close();

@@ -1,0 +1,3426 @@
+[
+  {
+    "input": {
+      "engineVersion": "e1",
+      "datasetVersion": "d1",
+      "seed": "0123456789abcdef0123456789abcdef",
+      "config": {
+        "preset": "flowing",
+        "wordLength": "balanced"
+      },
+      "grammarVersion": "g1"
+    },
+    "grammar": {
+      "version": "g1",
+      "config": {
+        "wordOrder": "SVO",
+        "adjectivePosition": "before",
+        "morphologyStrategy": "particle"
+      },
+      "markers": {
+        "grammar.plural": "rimo",
+        "grammar.past": "leli",
+        "grammar.future": "me",
+        "grammar.negation": "naye",
+        "grammar.question": "yale",
+        "grammar.possession": "ru",
+        "grammar.copula": "reyo",
+        "grammar.above": "sa"
+      },
+      "linkingVowel": "e",
+      "examples": [
+        {
+          "id": "sentence.see-moon",
+          "surface": "rima ralo mesa",
+          "tokens": [
+            {
+              "surface": "rima",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "rima"
+                }
+              ]
+            },
+            {
+              "surface": "ralo",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "ralo"
+                }
+              ]
+            },
+            {
+              "surface": "mesa",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "mesa"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.drink-water",
+          "surface": "same veni nera",
+          "tokens": [
+            {
+              "surface": "same",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "same"
+                }
+              ]
+            },
+            {
+              "surface": "veni",
+              "semanticId": "verb.drink",
+              "meaningId": "verb.drink",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.drink",
+                  "surface": "veni"
+                }
+              ]
+            },
+            {
+              "surface": "nera",
+              "semanticId": "noun.water",
+              "meaningId": "noun.water",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.water",
+                  "surface": "nera"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.child-sea",
+          "surface": "nele ralo ruyina",
+          "tokens": [
+            {
+              "surface": "nele",
+              "semanticId": "noun.child",
+              "meaningId": "noun.child",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.child",
+                  "surface": "nele"
+                }
+              ]
+            },
+            {
+              "surface": "ralo",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "ralo"
+                }
+              ]
+            },
+            {
+              "surface": "ruyina",
+              "semanticId": "noun.sea",
+              "meaningId": "noun.sea",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.sea",
+                  "surface": "ruyina"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.love-city",
+          "surface": "rilire solo vise",
+          "tokens": [
+            {
+              "surface": "rilire",
+              "semanticId": "pronoun.we",
+              "meaningId": "pronoun.we",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.we",
+                  "surface": "rilire"
+                }
+              ]
+            },
+            {
+              "surface": "solo",
+              "semanticId": "verb.love",
+              "meaningId": "verb.love",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.love",
+                  "surface": "solo"
+                }
+              ]
+            },
+            {
+              "surface": "vise",
+              "semanticId": "noun.city",
+              "meaningId": "noun.city",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.city",
+                  "surface": "vise"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.we",
+                "person": 1,
+                "number": "plural",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.good-person",
+          "surface": "noli lalura marase",
+          "tokens": [
+            {
+              "surface": "noli",
+              "semanticId": "adj.good",
+              "meaningId": "adj.good",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "adj.good",
+                  "surface": "noli"
+                }
+              ]
+            },
+            {
+              "surface": "lalura",
+              "semanticId": "noun.person",
+              "meaningId": "noun.person",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.person",
+                  "surface": "lalura"
+                }
+              ]
+            },
+            {
+              "surface": "marase",
+              "semanticId": "verb.speak",
+              "meaningId": "verb.speak",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.speak",
+                  "surface": "marase"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "adjectivePosition": "before",
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.children-moon",
+          "surface": "rimo nele ralo mesa",
+          "tokens": [
+            {
+              "surface": "rimo",
+              "markerId": "grammar.plural",
+              "meaningId": "grammar.plural",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.plural",
+                  "surface": "rimo"
+                }
+              ]
+            },
+            {
+              "surface": "nele",
+              "semanticId": "noun.child",
+              "meaningId": "noun.child",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.child",
+                  "surface": "nele"
+                }
+              ]
+            },
+            {
+              "surface": "ralo",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "ralo"
+                }
+              ]
+            },
+            {
+              "surface": "mesa",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "mesa"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [],
+            "morphology": [
+              {
+                "semanticId": "noun.child",
+                "markerId": "grammar.plural",
+                "strategy": "particle"
+              }
+            ],
+            "plural": true,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.past-go",
+          "surface": "rima leli mala",
+          "tokens": [
+            {
+              "surface": "rima",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "rima"
+                }
+              ]
+            },
+            {
+              "surface": "leli",
+              "markerId": "grammar.past",
+              "meaningId": "grammar.past",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.past",
+                  "surface": "leli"
+                }
+              ]
+            },
+            {
+              "surface": "mala",
+              "semanticId": "verb.go",
+              "meaningId": "verb.go",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.go",
+                  "surface": "mala"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [
+              {
+                "semanticId": "verb.go",
+                "markerId": "grammar.past",
+                "strategy": "particle"
+              }
+            ],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "past"
+          }
+        },
+        {
+          "id": "sentence.future-go",
+          "surface": "levi me mala",
+          "tokens": [
+            {
+              "surface": "levi",
+              "semanticId": "pronoun.they-plural",
+              "meaningId": "pronoun.they-plural",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.they-plural",
+                  "surface": "levi"
+                }
+              ]
+            },
+            {
+              "surface": "me",
+              "markerId": "grammar.future",
+              "meaningId": "grammar.future",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.future",
+                  "surface": "me"
+                }
+              ]
+            },
+            {
+              "surface": "mala",
+              "semanticId": "verb.go",
+              "meaningId": "verb.go",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.go",
+                  "surface": "mala"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.they-plural",
+                "person": 3,
+                "number": "plural",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [
+              {
+                "semanticId": "verb.go",
+                "markerId": "grammar.future",
+                "strategy": "particle"
+              }
+            ],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "future"
+          }
+        },
+        {
+          "id": "sentence.not-drink",
+          "surface": "rima naye veni nera",
+          "tokens": [
+            {
+              "surface": "rima",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "rima"
+                }
+              ]
+            },
+            {
+              "surface": "naye",
+              "markerId": "grammar.negation",
+              "meaningId": "grammar.negation",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.negation",
+                  "surface": "naye"
+                }
+              ]
+            },
+            {
+              "surface": "veni",
+              "semanticId": "verb.drink",
+              "meaningId": "verb.drink",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.drink",
+                  "surface": "veni"
+                }
+              ]
+            },
+            {
+              "surface": "nera",
+              "semanticId": "noun.water",
+              "meaningId": "noun.water",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.water",
+                  "surface": "nera"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": true,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.question-moon",
+          "surface": "same ralo mesa yale",
+          "tokens": [
+            {
+              "surface": "same",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "same"
+                }
+              ]
+            },
+            {
+              "surface": "ralo",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "ralo"
+                }
+              ]
+            },
+            {
+              "surface": "mesa",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "mesa"
+                }
+              ]
+            },
+            {
+              "surface": "yale",
+              "markerId": "grammar.question",
+              "meaningId": "grammar.question",
+              "role": "question",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.question",
+                  "surface": "yale"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": true,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.your-house",
+          "surface": "same ru rasa reyo noli",
+          "tokens": [
+            {
+              "surface": "same",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "same"
+                }
+              ]
+            },
+            {
+              "surface": "ru",
+              "markerId": "grammar.possession",
+              "meaningId": "grammar.possession",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.possession",
+                  "surface": "ru"
+                }
+              ]
+            },
+            {
+              "surface": "rasa",
+              "semanticId": "noun.house",
+              "meaningId": "noun.house",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.house",
+                  "surface": "rasa"
+                }
+              ]
+            },
+            {
+              "surface": "reyo",
+              "markerId": "grammar.copula",
+              "meaningId": "grammar.copula",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.copula",
+                  "surface": "reyo"
+                }
+              ]
+            },
+            {
+              "surface": "noli",
+              "semanticId": "adj.good",
+              "meaningId": "adj.good",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "adj.good",
+                  "surface": "noli"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": true,
+            "copula": true,
+            "locativeRelation": null
+          }
+        },
+        {
+          "id": "sentence.sun-above",
+          "surface": "nala reyo sa ini",
+          "tokens": [
+            {
+              "surface": "nala",
+              "semanticId": "noun.sun",
+              "meaningId": "noun.sun",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.sun",
+                  "surface": "nala"
+                }
+              ]
+            },
+            {
+              "surface": "reyo",
+              "markerId": "grammar.copula",
+              "meaningId": "grammar.copula",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.copula",
+                  "surface": "reyo"
+                }
+              ]
+            },
+            {
+              "surface": "sa",
+              "markerId": "grammar.above",
+              "meaningId": "grammar.above",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.above",
+                  "surface": "sa"
+                }
+              ]
+            },
+            {
+              "surface": "ini",
+              "semanticId": "noun.mountain",
+              "meaningId": "noun.mountain",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.mountain",
+                  "surface": "ini"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": true,
+            "locativeRelation": "above"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "engineVersion": "e1",
+      "datasetVersion": "d1",
+      "seed": "fedcba9876543210fedcba9876543210",
+      "config": {
+        "preset": "crisp",
+        "wordLength": "short"
+      },
+      "grammarVersion": "g1"
+    },
+    "grammar": {
+      "version": "g1",
+      "config": {
+        "wordOrder": "SOV",
+        "adjectivePosition": "after",
+        "morphologyStrategy": "suffix"
+      },
+      "markers": {
+        "grammar.plural": "potko",
+        "grammar.past": "prak",
+        "grammar.future": "top",
+        "grammar.negation": "kotbas",
+        "grammar.question": "ratkas",
+        "grammar.possession": "gri",
+        "grammar.copula": "kak",
+        "grammar.above": "sko"
+      },
+      "linkingVowel": "i",
+      "examples": [
+        {
+          "id": "sentence.see-moon",
+          "surface": "gip krik dip",
+          "tokens": [
+            {
+              "surface": "gip",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "gip"
+                }
+              ]
+            },
+            {
+              "surface": "krik",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "krik"
+                }
+              ]
+            },
+            {
+              "surface": "dip",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "dip"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.drink-water",
+          "surface": "krapdi pis pat",
+          "tokens": [
+            {
+              "surface": "krapdi",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "krapdi"
+                }
+              ]
+            },
+            {
+              "surface": "pis",
+              "semanticId": "noun.water",
+              "meaningId": "noun.water",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.water",
+                  "surface": "pis"
+                }
+              ]
+            },
+            {
+              "surface": "pat",
+              "semanticId": "verb.drink",
+              "meaningId": "verb.drink",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.drink",
+                  "surface": "pat"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.child-sea",
+          "surface": "no tok dip",
+          "tokens": [
+            {
+              "surface": "no",
+              "semanticId": "noun.child",
+              "meaningId": "noun.child",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.child",
+                  "surface": "no"
+                }
+              ]
+            },
+            {
+              "surface": "tok",
+              "semanticId": "noun.sea",
+              "meaningId": "noun.sea",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.sea",
+                  "surface": "tok"
+                }
+              ]
+            },
+            {
+              "surface": "dip",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "dip"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.love-city",
+          "surface": "krok sit dis",
+          "tokens": [
+            {
+              "surface": "krok",
+              "semanticId": "pronoun.we",
+              "meaningId": "pronoun.we",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.we",
+                  "surface": "krok"
+                }
+              ]
+            },
+            {
+              "surface": "sit",
+              "semanticId": "noun.city",
+              "meaningId": "noun.city",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.city",
+                  "surface": "sit"
+                }
+              ]
+            },
+            {
+              "surface": "dis",
+              "semanticId": "verb.love",
+              "meaningId": "verb.love",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.love",
+                  "surface": "dis"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.we",
+                "person": 1,
+                "number": "plural",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.good-person",
+          "surface": "pi tin si",
+          "tokens": [
+            {
+              "surface": "pi",
+              "semanticId": "noun.person",
+              "meaningId": "noun.person",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.person",
+                  "surface": "pi"
+                }
+              ]
+            },
+            {
+              "surface": "tin",
+              "semanticId": "adj.good",
+              "meaningId": "adj.good",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "adj.good",
+                  "surface": "tin"
+                }
+              ]
+            },
+            {
+              "surface": "si",
+              "semanticId": "verb.speak",
+              "meaningId": "verb.speak",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.speak",
+                  "surface": "si"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "adjectivePosition": "after",
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.children-moon",
+          "surface": "nopotko krik dip",
+          "tokens": [
+            {
+              "surface": "nopotko",
+              "semanticId": "noun.child",
+              "meaningId": "noun.child",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.child",
+                  "surface": "no"
+                },
+                {
+                  "type": "marker",
+                  "markerId": "grammar.plural",
+                  "surface": "potko"
+                }
+              ]
+            },
+            {
+              "surface": "krik",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "krik"
+                }
+              ]
+            },
+            {
+              "surface": "dip",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "dip"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [],
+            "morphology": [
+              {
+                "semanticId": "noun.child",
+                "markerId": "grammar.plural",
+                "strategy": "suffix"
+              }
+            ],
+            "plural": true,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.past-go",
+          "surface": "gip niprak",
+          "tokens": [
+            {
+              "surface": "gip",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "gip"
+                }
+              ]
+            },
+            {
+              "surface": "niprak",
+              "semanticId": "verb.go",
+              "meaningId": "verb.go",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.go",
+                  "surface": "ni"
+                },
+                {
+                  "type": "marker",
+                  "markerId": "grammar.past",
+                  "surface": "prak"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [
+              {
+                "semanticId": "verb.go",
+                "markerId": "grammar.past",
+                "strategy": "suffix"
+              }
+            ],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "past"
+          }
+        },
+        {
+          "id": "sentence.future-go",
+          "surface": "sa nitop",
+          "tokens": [
+            {
+              "surface": "sa",
+              "semanticId": "pronoun.they-plural",
+              "meaningId": "pronoun.they-plural",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.they-plural",
+                  "surface": "sa"
+                }
+              ]
+            },
+            {
+              "surface": "nitop",
+              "semanticId": "verb.go",
+              "meaningId": "verb.go",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.go",
+                  "surface": "ni"
+                },
+                {
+                  "type": "marker",
+                  "markerId": "grammar.future",
+                  "surface": "top"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.they-plural",
+                "person": 3,
+                "number": "plural",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [
+              {
+                "semanticId": "verb.go",
+                "markerId": "grammar.future",
+                "strategy": "suffix"
+              }
+            ],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "future"
+          }
+        },
+        {
+          "id": "sentence.not-drink",
+          "surface": "gip pis kotbas pat",
+          "tokens": [
+            {
+              "surface": "gip",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "gip"
+                }
+              ]
+            },
+            {
+              "surface": "pis",
+              "semanticId": "noun.water",
+              "meaningId": "noun.water",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.water",
+                  "surface": "pis"
+                }
+              ]
+            },
+            {
+              "surface": "kotbas",
+              "markerId": "grammar.negation",
+              "meaningId": "grammar.negation",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.negation",
+                  "surface": "kotbas"
+                }
+              ]
+            },
+            {
+              "surface": "pat",
+              "semanticId": "verb.drink",
+              "meaningId": "verb.drink",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.drink",
+                  "surface": "pat"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": true,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.question-moon",
+          "surface": "krapdi krik dip ratkas",
+          "tokens": [
+            {
+              "surface": "krapdi",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "krapdi"
+                }
+              ]
+            },
+            {
+              "surface": "krik",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "krik"
+                }
+              ]
+            },
+            {
+              "surface": "dip",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "dip"
+                }
+              ]
+            },
+            {
+              "surface": "ratkas",
+              "markerId": "grammar.question",
+              "meaningId": "grammar.question",
+              "role": "question",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.question",
+                  "surface": "ratkas"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": true,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.your-house",
+          "surface": "krapdi gri skikrok tin kak",
+          "tokens": [
+            {
+              "surface": "krapdi",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "krapdi"
+                }
+              ]
+            },
+            {
+              "surface": "gri",
+              "markerId": "grammar.possession",
+              "meaningId": "grammar.possession",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.possession",
+                  "surface": "gri"
+                }
+              ]
+            },
+            {
+              "surface": "skikrok",
+              "semanticId": "noun.house",
+              "meaningId": "noun.house",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.house",
+                  "surface": "skikrok"
+                }
+              ]
+            },
+            {
+              "surface": "tin",
+              "semanticId": "adj.good",
+              "meaningId": "adj.good",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "adj.good",
+                  "surface": "tin"
+                }
+              ]
+            },
+            {
+              "surface": "kak",
+              "markerId": "grammar.copula",
+              "meaningId": "grammar.copula",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.copula",
+                  "surface": "kak"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": true,
+            "copula": true,
+            "locativeRelation": null
+          }
+        },
+        {
+          "id": "sentence.sun-above",
+          "surface": "po sko na kak",
+          "tokens": [
+            {
+              "surface": "po",
+              "semanticId": "noun.sun",
+              "meaningId": "noun.sun",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.sun",
+                  "surface": "po"
+                }
+              ]
+            },
+            {
+              "surface": "sko",
+              "markerId": "grammar.above",
+              "meaningId": "grammar.above",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.above",
+                  "surface": "sko"
+                }
+              ]
+            },
+            {
+              "surface": "na",
+              "semanticId": "noun.mountain",
+              "meaningId": "noun.mountain",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.mountain",
+                  "surface": "na"
+                }
+              ]
+            },
+            {
+              "surface": "kak",
+              "markerId": "grammar.copula",
+              "meaningId": "grammar.copula",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.copula",
+                  "surface": "kak"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SOV",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": true,
+            "locativeRelation": "above"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "engineVersion": "e1",
+      "datasetVersion": "d1",
+      "seed": "00000000000000000000000000000001",
+      "config": {
+        "preset": "rhythmic",
+        "wordLength": "long"
+      },
+      "grammarVersion": "g1"
+    },
+    "grammar": {
+      "version": "g1",
+      "config": {
+        "wordOrder": "SVO",
+        "adjectivePosition": "after",
+        "morphologyStrategy": "suffix"
+      },
+      "markers": {
+        "grammar.plural": "mose",
+        "grammar.past": "lena",
+        "grammar.future": "le",
+        "grammar.negation": "nome",
+        "grammar.question": "mima",
+        "grammar.possession": "rala",
+        "grammar.copula": "tole",
+        "grammar.above": "tolo"
+      },
+      "linkingVowel": "u",
+      "examples": [
+        {
+          "id": "sentence.see-moon",
+          "surface": "naroku makuno nareka",
+          "tokens": [
+            {
+              "surface": "naroku",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "naroku"
+                }
+              ]
+            },
+            {
+              "surface": "makuno",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "makuno"
+                }
+              ]
+            },
+            {
+              "surface": "nareka",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "nareka"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.drink-water",
+          "surface": "kamipa ranisa torame",
+          "tokens": [
+            {
+              "surface": "kamipa",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "kamipa"
+                }
+              ]
+            },
+            {
+              "surface": "ranisa",
+              "semanticId": "verb.drink",
+              "meaningId": "verb.drink",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.drink",
+                  "surface": "ranisa"
+                }
+              ]
+            },
+            {
+              "surface": "torame",
+              "semanticId": "noun.water",
+              "meaningId": "noun.water",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.water",
+                  "surface": "torame"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.child-sea",
+          "surface": "rinapu makuno latipi",
+          "tokens": [
+            {
+              "surface": "rinapu",
+              "semanticId": "noun.child",
+              "meaningId": "noun.child",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.child",
+                  "surface": "rinapu"
+                }
+              ]
+            },
+            {
+              "surface": "makuno",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "makuno"
+                }
+              ]
+            },
+            {
+              "surface": "latipi",
+              "semanticId": "noun.sea",
+              "meaningId": "noun.sea",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.sea",
+                  "surface": "latipi"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.love-city",
+          "surface": "kinuro musiro tuporu",
+          "tokens": [
+            {
+              "surface": "kinuro",
+              "semanticId": "pronoun.we",
+              "meaningId": "pronoun.we",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.we",
+                  "surface": "kinuro"
+                }
+              ]
+            },
+            {
+              "surface": "musiro",
+              "semanticId": "verb.love",
+              "meaningId": "verb.love",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.love",
+                  "surface": "musiro"
+                }
+              ]
+            },
+            {
+              "surface": "tuporu",
+              "semanticId": "noun.city",
+              "meaningId": "noun.city",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.city",
+                  "surface": "tuporu"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.we",
+                "person": 1,
+                "number": "plural",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.good-person",
+          "surface": "masele ralapa palotu",
+          "tokens": [
+            {
+              "surface": "masele",
+              "semanticId": "noun.person",
+              "meaningId": "noun.person",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.person",
+                  "surface": "masele"
+                }
+              ]
+            },
+            {
+              "surface": "ralapa",
+              "semanticId": "adj.good",
+              "meaningId": "adj.good",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "adj.good",
+                  "surface": "ralapa"
+                }
+              ]
+            },
+            {
+              "surface": "palotu",
+              "semanticId": "verb.speak",
+              "meaningId": "verb.speak",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.speak",
+                  "surface": "palotu"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "adjectivePosition": "after",
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.children-moon",
+          "surface": "rinapumose makuno nareka",
+          "tokens": [
+            {
+              "surface": "rinapumose",
+              "semanticId": "noun.child",
+              "meaningId": "noun.child",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.child",
+                  "surface": "rinapu"
+                },
+                {
+                  "type": "marker",
+                  "markerId": "grammar.plural",
+                  "surface": "mose"
+                }
+              ]
+            },
+            {
+              "surface": "makuno",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "makuno"
+                }
+              ]
+            },
+            {
+              "surface": "nareka",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "nareka"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [],
+            "morphology": [
+              {
+                "semanticId": "noun.child",
+                "markerId": "grammar.plural",
+                "strategy": "suffix"
+              }
+            ],
+            "plural": true,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.past-go",
+          "surface": "naroku papotulena",
+          "tokens": [
+            {
+              "surface": "naroku",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "naroku"
+                }
+              ]
+            },
+            {
+              "surface": "papotulena",
+              "semanticId": "verb.go",
+              "meaningId": "verb.go",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.go",
+                  "surface": "papotu"
+                },
+                {
+                  "type": "marker",
+                  "markerId": "grammar.past",
+                  "surface": "lena"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [
+              {
+                "semanticId": "verb.go",
+                "markerId": "grammar.past",
+                "strategy": "suffix"
+              }
+            ],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "past"
+          }
+        },
+        {
+          "id": "sentence.future-go",
+          "surface": "pinise papotule",
+          "tokens": [
+            {
+              "surface": "pinise",
+              "semanticId": "pronoun.they-plural",
+              "meaningId": "pronoun.they-plural",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.they-plural",
+                  "surface": "pinise"
+                }
+              ]
+            },
+            {
+              "surface": "papotule",
+              "semanticId": "verb.go",
+              "meaningId": "verb.go",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.go",
+                  "surface": "papotu"
+                },
+                {
+                  "type": "marker",
+                  "markerId": "grammar.future",
+                  "surface": "le"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.they-plural",
+                "person": 3,
+                "number": "plural",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [
+              {
+                "semanticId": "verb.go",
+                "markerId": "grammar.future",
+                "strategy": "suffix"
+              }
+            ],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "future"
+          }
+        },
+        {
+          "id": "sentence.not-drink",
+          "surface": "naroku nome ranisa torame",
+          "tokens": [
+            {
+              "surface": "naroku",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "naroku"
+                }
+              ]
+            },
+            {
+              "surface": "nome",
+              "markerId": "grammar.negation",
+              "meaningId": "grammar.negation",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.negation",
+                  "surface": "nome"
+                }
+              ]
+            },
+            {
+              "surface": "ranisa",
+              "semanticId": "verb.drink",
+              "meaningId": "verb.drink",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.drink",
+                  "surface": "ranisa"
+                }
+              ]
+            },
+            {
+              "surface": "torame",
+              "semanticId": "noun.water",
+              "meaningId": "noun.water",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.water",
+                  "surface": "torame"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": true,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.question-moon",
+          "surface": "kamipa makuno nareka mima",
+          "tokens": [
+            {
+              "surface": "kamipa",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "kamipa"
+                }
+              ]
+            },
+            {
+              "surface": "makuno",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "makuno"
+                }
+              ]
+            },
+            {
+              "surface": "nareka",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "nareka"
+                }
+              ]
+            },
+            {
+              "surface": "mima",
+              "markerId": "grammar.question",
+              "meaningId": "grammar.question",
+              "role": "question",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.question",
+                  "surface": "mima"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": true,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.your-house",
+          "surface": "kamipa rala lekuri tole ralapa",
+          "tokens": [
+            {
+              "surface": "kamipa",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "kamipa"
+                }
+              ]
+            },
+            {
+              "surface": "rala",
+              "markerId": "grammar.possession",
+              "meaningId": "grammar.possession",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.possession",
+                  "surface": "rala"
+                }
+              ]
+            },
+            {
+              "surface": "lekuri",
+              "semanticId": "noun.house",
+              "meaningId": "noun.house",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.house",
+                  "surface": "lekuri"
+                }
+              ]
+            },
+            {
+              "surface": "tole",
+              "markerId": "grammar.copula",
+              "meaningId": "grammar.copula",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.copula",
+                  "surface": "tole"
+                }
+              ]
+            },
+            {
+              "surface": "ralapa",
+              "semanticId": "adj.good",
+              "meaningId": "adj.good",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "adj.good",
+                  "surface": "ralapa"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": true,
+            "copula": true,
+            "locativeRelation": null
+          }
+        },
+        {
+          "id": "sentence.sun-above",
+          "surface": "nekuma tole tolo lopani",
+          "tokens": [
+            {
+              "surface": "nekuma",
+              "semanticId": "noun.sun",
+              "meaningId": "noun.sun",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.sun",
+                  "surface": "nekuma"
+                }
+              ]
+            },
+            {
+              "surface": "tole",
+              "markerId": "grammar.copula",
+              "meaningId": "grammar.copula",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.copula",
+                  "surface": "tole"
+                }
+              ]
+            },
+            {
+              "surface": "tolo",
+              "markerId": "grammar.above",
+              "meaningId": "grammar.above",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.above",
+                  "surface": "tolo"
+                }
+              ]
+            },
+            {
+              "surface": "lopani",
+              "semanticId": "noun.mountain",
+              "meaningId": "noun.mountain",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.mountain",
+                  "surface": "lopani"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "SVO",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": true,
+            "locativeRelation": "above"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "engineVersion": "e1",
+      "datasetVersion": "d1",
+      "seed": "ffffffffffffffffffffffffffffffff",
+      "config": {
+        "preset": "clustered",
+        "wordLength": "balanced"
+      },
+      "grammarVersion": "g1"
+    },
+    "grammar": {
+      "version": "g1",
+      "config": {
+        "wordOrder": "VSO",
+        "adjectivePosition": "before",
+        "morphologyStrategy": "particle"
+      },
+      "markers": {
+        "grammar.plural": "grat",
+        "grammar.past": "gliblit",
+        "grammar.future": "fleklut",
+        "grammar.negation": "grukra",
+        "grammar.question": "drobre",
+        "grammar.possession": "glep",
+        "grammar.copula": "plepol",
+        "grammar.above": "ri"
+      },
+      "linkingVowel": "a",
+      "examples": [
+        {
+          "id": "sentence.see-moon",
+          "surface": "bobrol peflor frogre",
+          "tokens": [
+            {
+              "surface": "bobrol",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "bobrol"
+                }
+              ]
+            },
+            {
+              "surface": "peflor",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "peflor"
+                }
+              ]
+            },
+            {
+              "surface": "frogre",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "frogre"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.drink-water",
+          "surface": "prebro bloplok raflo",
+          "tokens": [
+            {
+              "surface": "prebro",
+              "semanticId": "verb.drink",
+              "meaningId": "verb.drink",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.drink",
+                  "surface": "prebro"
+                }
+              ]
+            },
+            {
+              "surface": "bloplok",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "bloplok"
+                }
+              ]
+            },
+            {
+              "surface": "raflo",
+              "semanticId": "noun.water",
+              "meaningId": "noun.water",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.water",
+                  "surface": "raflo"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.child-sea",
+          "surface": "bobrol drogat frople",
+          "tokens": [
+            {
+              "surface": "bobrol",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "bobrol"
+                }
+              ]
+            },
+            {
+              "surface": "drogat",
+              "semanticId": "noun.child",
+              "meaningId": "noun.child",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.child",
+                  "surface": "drogat"
+                }
+              ]
+            },
+            {
+              "surface": "frople",
+              "semanticId": "noun.sea",
+              "meaningId": "noun.sea",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.sea",
+                  "surface": "frople"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.love-city",
+          "surface": "trekrep klebaslo floslop",
+          "tokens": [
+            {
+              "surface": "trekrep",
+              "semanticId": "verb.love",
+              "meaningId": "verb.love",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.love",
+                  "surface": "trekrep"
+                }
+              ]
+            },
+            {
+              "surface": "klebaslo",
+              "semanticId": "pronoun.we",
+              "meaningId": "pronoun.we",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.we",
+                  "surface": "klebaslo"
+                }
+              ]
+            },
+            {
+              "surface": "floslop",
+              "semanticId": "noun.city",
+              "meaningId": "noun.city",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.city",
+                  "surface": "floslop"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.we",
+                "person": 1,
+                "number": "plural",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.good-person",
+          "surface": "karsekop plokrisger sedrogle",
+          "tokens": [
+            {
+              "surface": "karsekop",
+              "semanticId": "verb.speak",
+              "meaningId": "verb.speak",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.speak",
+                  "surface": "karsekop"
+                }
+              ]
+            },
+            {
+              "surface": "plokrisger",
+              "semanticId": "adj.good",
+              "meaningId": "adj.good",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "adj.good",
+                  "surface": "plokrisger"
+                }
+              ]
+            },
+            {
+              "surface": "sedrogle",
+              "semanticId": "noun.person",
+              "meaningId": "noun.person",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.person",
+                  "surface": "sedrogle"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "adjectivePosition": "before",
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.children-moon",
+          "surface": "bobrol grat drogat frogre",
+          "tokens": [
+            {
+              "surface": "bobrol",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "bobrol"
+                }
+              ]
+            },
+            {
+              "surface": "grat",
+              "markerId": "grammar.plural",
+              "meaningId": "grammar.plural",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.plural",
+                  "surface": "grat"
+                }
+              ]
+            },
+            {
+              "surface": "drogat",
+              "semanticId": "noun.child",
+              "meaningId": "noun.child",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.child",
+                  "surface": "drogat"
+                }
+              ]
+            },
+            {
+              "surface": "frogre",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "frogre"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [],
+            "morphology": [
+              {
+                "semanticId": "noun.child",
+                "markerId": "grammar.plural",
+                "strategy": "particle"
+              }
+            ],
+            "plural": true,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.past-go",
+          "surface": "gliblit tolut peflor",
+          "tokens": [
+            {
+              "surface": "gliblit",
+              "markerId": "grammar.past",
+              "meaningId": "grammar.past",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.past",
+                  "surface": "gliblit"
+                }
+              ]
+            },
+            {
+              "surface": "tolut",
+              "semanticId": "verb.go",
+              "meaningId": "verb.go",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.go",
+                  "surface": "tolut"
+                }
+              ]
+            },
+            {
+              "surface": "peflor",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "peflor"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [
+              {
+                "semanticId": "verb.go",
+                "markerId": "grammar.past",
+                "strategy": "particle"
+              }
+            ],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "past"
+          }
+        },
+        {
+          "id": "sentence.future-go",
+          "surface": "fleklut tolut pralbok",
+          "tokens": [
+            {
+              "surface": "fleklut",
+              "markerId": "grammar.future",
+              "meaningId": "grammar.future",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.future",
+                  "surface": "fleklut"
+                }
+              ]
+            },
+            {
+              "surface": "tolut",
+              "semanticId": "verb.go",
+              "meaningId": "verb.go",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.go",
+                  "surface": "tolut"
+                }
+              ]
+            },
+            {
+              "surface": "pralbok",
+              "semanticId": "pronoun.they-plural",
+              "meaningId": "pronoun.they-plural",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.they-plural",
+                  "surface": "pralbok"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.they-plural",
+                "person": 3,
+                "number": "plural",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [
+              {
+                "semanticId": "verb.go",
+                "markerId": "grammar.future",
+                "strategy": "particle"
+              }
+            ],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "future"
+          }
+        },
+        {
+          "id": "sentence.not-drink",
+          "surface": "grukra prebro peflor raflo",
+          "tokens": [
+            {
+              "surface": "grukra",
+              "markerId": "grammar.negation",
+              "meaningId": "grammar.negation",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.negation",
+                  "surface": "grukra"
+                }
+              ]
+            },
+            {
+              "surface": "prebro",
+              "semanticId": "verb.drink",
+              "meaningId": "verb.drink",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.drink",
+                  "surface": "prebro"
+                }
+              ]
+            },
+            {
+              "surface": "peflor",
+              "semanticId": "pronoun.i",
+              "meaningId": "pronoun.i",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.i",
+                  "surface": "peflor"
+                }
+              ]
+            },
+            {
+              "surface": "raflo",
+              "semanticId": "noun.water",
+              "meaningId": "noun.water",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.water",
+                  "surface": "raflo"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.i",
+                "person": 1,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": true,
+            "question": false,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.question-moon",
+          "surface": "bobrol bloplok frogre drobre",
+          "tokens": [
+            {
+              "surface": "bobrol",
+              "semanticId": "verb.see",
+              "meaningId": "verb.see",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "verb.see",
+                  "surface": "bobrol"
+                }
+              ]
+            },
+            {
+              "surface": "bloplok",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "bloplok"
+                }
+              ]
+            },
+            {
+              "surface": "frogre",
+              "semanticId": "noun.moon",
+              "meaningId": "noun.moon",
+              "role": "object",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.moon",
+                  "surface": "frogre"
+                }
+              ]
+            },
+            {
+              "surface": "drobre",
+              "markerId": "grammar.question",
+              "meaningId": "grammar.question",
+              "role": "question",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.question",
+                  "surface": "drobre"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": true,
+            "possession": false,
+            "copula": false,
+            "locativeRelation": null,
+            "tense": "present"
+          }
+        },
+        {
+          "id": "sentence.your-house",
+          "surface": "plepol bloplok glep loplodra plokrisger",
+          "tokens": [
+            {
+              "surface": "plepol",
+              "markerId": "grammar.copula",
+              "meaningId": "grammar.copula",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.copula",
+                  "surface": "plepol"
+                }
+              ]
+            },
+            {
+              "surface": "bloplok",
+              "semanticId": "pronoun.you-singular",
+              "meaningId": "pronoun.you-singular",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "pronoun.you-singular",
+                  "surface": "bloplok"
+                }
+              ]
+            },
+            {
+              "surface": "glep",
+              "markerId": "grammar.possession",
+              "meaningId": "grammar.possession",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.possession",
+                  "surface": "glep"
+                }
+              ]
+            },
+            {
+              "surface": "loplodra",
+              "semanticId": "noun.house",
+              "meaningId": "noun.house",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.house",
+                  "surface": "loplodra"
+                }
+              ]
+            },
+            {
+              "surface": "plokrisger",
+              "semanticId": "adj.good",
+              "meaningId": "adj.good",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "adj.good",
+                  "surface": "plokrisger"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [
+              {
+                "semanticId": "pronoun.you-singular",
+                "person": 2,
+                "number": "singular",
+                "gender": "unspecified"
+              }
+            ],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": true,
+            "copula": true,
+            "locativeRelation": null
+          }
+        },
+        {
+          "id": "sentence.sun-above",
+          "surface": "plepol blobras ri boplekre",
+          "tokens": [
+            {
+              "surface": "plepol",
+              "markerId": "grammar.copula",
+              "meaningId": "grammar.copula",
+              "role": "verb",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.copula",
+                  "surface": "plepol"
+                }
+              ]
+            },
+            {
+              "surface": "blobras",
+              "semanticId": "noun.sun",
+              "meaningId": "noun.sun",
+              "role": "subject",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.sun",
+                  "surface": "blobras"
+                }
+              ]
+            },
+            {
+              "surface": "ri",
+              "markerId": "grammar.above",
+              "meaningId": "grammar.above",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "marker",
+                  "markerId": "grammar.above",
+                  "surface": "ri"
+                }
+              ]
+            },
+            {
+              "surface": "boplekre",
+              "semanticId": "noun.mountain",
+              "meaningId": "noun.mountain",
+              "role": "complement",
+              "analysis": [
+                {
+                  "type": "root",
+                  "semanticId": "noun.mountain",
+                  "surface": "boplekre"
+                }
+              ]
+            }
+          ],
+          "explanation": {
+            "wordOrder": "VSO",
+            "pronouns": [],
+            "morphology": [],
+            "plural": false,
+            "negation": false,
+            "question": false,
+            "possession": false,
+            "copula": true,
+            "locativeRelation": "above"
+          }
+        }
+      ]
+    }
+  }
+]
