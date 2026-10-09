@@ -365,7 +365,7 @@ export const mysteries = Object.freeze([
       "en"
     ],
     "titles": {
-      "tr": "Dendera Light",
+      "tr": "Dendera Işığı",
       "en": "Dendera Light"
     },
     "questions": {

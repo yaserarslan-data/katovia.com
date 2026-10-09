@@ -8,7 +8,6 @@ export const sections = Object.freeze([
 ]);
 
 export const entries = Object.freeze([
-  { id: 'guzel-sozler', type: 'lab', route: '/lab/guzel-sozler/', status: 'legacy' },
   { id: 'qr', type: 'tool', route: '/laboratuvar/qr-kod-olusturucu.html', status: 'legacy' },
   { id: 'business-card', type: 'tool', route: '/laboratuvar/dijital-kartvizit-olusturucu.html', status: 'legacy' },
   { id: 'yuk-ustasi', type: 'lab', route: '/oyunlar/yuk-ustasi.html', status: 'legacy' },

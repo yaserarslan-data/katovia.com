@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { mysteries, mysteryRoutes, mysteryRoute } from '../src/catalog/mysteries.js';
-import { loadMystery, renderNode } from '../scripts/mysteries.mjs';
+import { loadMystery, renderNode, presentSection } from '../scripts/mysteries.mjs';
 import { checkMysteries } from '../scripts/check-mysteries.mjs';
 import { createI18n } from '../src/i18n/index.js';
 
@@ -18,7 +18,7 @@ test('only approved pilots have content and public routes; original sources are 
     const original=source.toString('utf8');
     const originalIds=[...original.matchAll(/<section\s+id="([^"]+)"/g)].map(match=>match[1]);
     assert.deepEqual(content.sections.map(section=>section.attrs.id),originalIds);
-    const markup=content.sections.map(renderNode).join('');
+    const markup=content.sections.map(section=>renderNode(presentSection(section,'tr'))).join('');
     assert.doesNotMatch(markup,/<script|\bonclick=|\bstyle=|class="track"/);
     const html=await readFile(`dist${mysteryRoute(entry,'tr')}index.html`,'utf8');
     assert.equal((html.match(/<h1[\s>]/g)||[]).length,1);
@@ -85,7 +85,7 @@ test('complete editorial EN translations preserve every semantic node, anchor, a
       assert.doesNotMatch(html,/verified scientific review|English translations have not been published|İngilizce çeviri henüz yayınlanmadı/);
     }
     const enHtml=await readFile(`dist${mysteryRoute(entry,'en')}index.html`,'utf8');
-    assert.ok(enHtml.includes(en.sections.map(node=>renderNode(node,'en')).join('').replace(/[ \t]+$/gm,'')));
+    assert.ok(enHtml.includes(en.sections.map(node=>renderNode(presentSection(node,'en'),'en')).join('').replace(/[ \t]+$/gm,'')));
   }
 });
 test('content renderer rejects executable tags and dangerous links',()=>{

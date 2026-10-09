@@ -5,7 +5,7 @@ import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { sections } from './src/catalog/registry.js';
 import { personalPages } from './src/catalog/personal.js';
-import { tools } from './src/catalog/tools.js';
+import { toolPages as tools } from './src/catalog/tools.js';
 import { experiences } from './src/catalog/experiences.js';
 import { manifest, safePath } from './scripts/legacy.mjs';
 import { repoRoot, siteRoot, distRoot } from './scripts/paths.mjs';

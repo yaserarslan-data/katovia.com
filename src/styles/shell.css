@@ -82,3 +82,7 @@
   .section-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(3rem, 14vw, 4.8rem); }
 }
+
+.catalog-group{margin-block:var(--space-7)}.collection-link{margin-top:1.25rem}.catalog-note{color:var(--muted);margin-top:auto;padding-top:1rem}.home-create-grid{margin-top:1.5rem}.home-create-grid .section-card:first-child{border-color:var(--accent)}.experience-help{margin-block:1.5rem}.experience-help summary{cursor:pointer;min-height:44px;padding-block:.75rem}
+
+[aria-labelledby="related-products"] .section-card{gap:.75rem;padding:1rem}[aria-labelledby="related-products"] .section-card h3{font-size:1.1rem}

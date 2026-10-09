@@ -15,7 +15,7 @@ import { translate } from '../src/i18n/index.js';
 import { personalPages } from '../src/catalog/personal.js';
 import { duelMarkup } from '../src/features/duel.js';
 import { creatorMarkup, creationMarkup } from '../src/features/creator.js';
-import { tools } from '../src/catalog/tools.js';
+import { tools, toolPages, discoveryCollections, creativeTools, toolGroups, relatedProducts } from '../src/catalog/tools.js';
 import { toolMarkup } from '../src/features/tools.js';
 import { experiences } from '../src/catalog/experiences.js';
 import { experienceMarkup } from '../src/features/activities.js';
@@ -29,12 +29,12 @@ const txt = (key, tag = 'span', attrs = '') => `<${tag} data-i18n="${key}" ${att
 const statusLabel = (status) => txt(`status.${status}`);
 
 function card(entry, route, heading = 'h3') {
-  return `<a class="section-card" data-card-id="${entry.id}" href="${hrefFrom(route, entry.route)}">
+  return `<a class="section-card" data-card-id="${entry.id}"${entry.id==='language-forge'?' data-forge-card':''} href="${hrefFrom(route, entry.route)}">
         ${entry.visual?`<svg class="tool-visual" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="5" width="38" height="38" rx="8" stroke="currentColor" stroke-width="2"/><path d="${entry.id==='image-compressor'?'M12 32l8-10 7 6 5-8 5 12M16 15h4':entry.id==='lucky-draw'?'M24 12v24M12 24h24M16 16l16 16M32 16L16 32':'M16 8v32M24 8v32M32 8v32M8 16h32M8 24h32M8 32h32'}" stroke="currentColor" stroke-width="2"/></svg>`:''}
         ${entry.activity?`<div class="code-art code-art-${entry.id}" aria-hidden="true"></div>`:''}
         <div class="section-card-top">${txt(`common.${entry.type}`, 'span', 'class="eyebrow"')}<span class="card-arrow" aria-hidden="true">↗</span></div>
         ${txt(entry.titleKey || `entry.${entry.id}.title`, heading)}${txt(entry.descriptionKey || `entry.${entry.id}.description`, 'p')}
-        <div class="section-card-bottom"><span class="pill">${statusLabel(entry.status)}</span></div>
+        ${entry.status==='legacy'?txt('lab.turkish','small','class="catalog-note"'):''}
       </a>`;
 }
 
@@ -42,31 +42,47 @@ function daily(route, isHome = false) {
   return gameMarkup();
 }
 
+const quizProduct = {id:'quiz-creator', type:'create', route:'/create/#quiz-creator', titleKey:'creator.product', descriptionKey:'creator.productDescription'};
+const forgeProduct = {...creations[0], titleKey:'forge.title'};
+const products = [...toolPages, forgeProduct, quizProduct];
+const selectProducts = ids => ids.map(id => products.find(entry => entry.id===id));
+function continuation(key, href, attrs='') {return txt(key,'a',`class="button collection-link" href="${href}" ${attrs}`);}
+function collection(id, key, list, route, link='') {
+  return `<section class="catalog-group" aria-labelledby="${id}"><div class="section-heading">${txt(key,'h2',`id="${id}"`)}</div><div class="section-grid">${list.map(entry=>card(entry,route)).join('\n')}</div>${link}</section>`;
+}
 function home(route) {
   return `<main id="main-content" class="container has-daily" tabindex="-1">
-    <section class="hero" aria-labelledby="home-title"><div class="hero-top">${txt('home.eyebrow', 'p', 'class="eyebrow"')}<span class="pill"><span class="status-dot" aria-hidden="true"></span>${txt('home.preview')}</span></div>
+    <section class="hero" aria-labelledby="home-title"><div class="hero-top">${txt('home.eyebrow','p','class="eyebrow"')}<span class="pill">${txt('home.preview')}</span></div>
       <h1 id="home-title">${txt('home.play')}<br>${txt('home.something')}</h1>
-      <div class="hero-bottom">${txt('home.description', 'p')}${txt('common.motto', 'span', 'class="index-label"')}</div>
+      <div class="hero-bottom">${txt('home.description','p')}${txt('common.motto','span','class="index-label"')}</div>${continuation('home.start','#home-daily')}
     </section>
-    <section aria-labelledby="home-daily"><div class="section-heading">${txt('nav.today','h2','id="home-daily"')}${txt('home.dailyHint','span','class="eyebrow"')}</div>${daily(route,true)}<div class="daily-links"><a class="button" href="/today/#memory-grid" data-i18n="memory.title">MEMORY GRID</a><a class="button" href="/today/#reaction" data-i18n="reaction.title">REACTION</a><a class="button" href="/today/" data-i18n="home.allDaily">ALL DAILY GAMES</a></div></section>
-    <section aria-labelledby="home-play"><div class="section-heading">${txt('home.playNow','h2','id="home-play"')}${txt('home.now','span','class="eyebrow"')}</div><div class="section-grid">${experiences.map(entry=>card(entry,route)).join('\n')}</div></section>
-    <section class="home-cta" aria-labelledby="home-create">${txt('home.create','h2','id="home-create"')}${txt('home.createCopy','p')}<a class="button button-accent" href="/create/" data-i18n="creator.own">CREATE YOUR OWN</a></section>
-    <section class="home-cta" aria-labelledby="home-challenge">${txt('home.challenge','h2','id="home-challenge"')}${txt('home.challengeCopy','p')}<a class="button" href="/challenge/" data-i18n="duel.own">CREATE A CHALLENGE</a></section>
-    <section aria-labelledby="home-tools"><div class="section-heading">${txt('home.tools','h2','id="home-tools"')}${txt('home.browserOnly','span','class="eyebrow"')}</div><div class="section-grid">${tools.map(entry=>card(entry,route)).join('\n')}</div></section>
-    <section class="home-cta"><h2 data-i18n="nav.mysteries">Mysteries</h2><p data-i18n="mysteries.discovery">Claims, evidence and open questions.</p><a class="button" data-mystery-entry data-i18n="mysteries.explore" href="/mysteries/">Explore the research cases</a></section>
-    <section id="laboratuvar" aria-labelledby="home-lab"><div class="section-heading">${txt('lab.collection','h2','id="home-lab"')}<a class="button" href="/lab/" data-i18n="common.return">Explore the lab</a></div><div class="section-grid">${entries.filter(entry=>['guzel-sozler','qr','golf','yuk-ustasi'].includes(entry.id)).map(entry=>card(entry,route)).join('\n')}</div></section>
+    <section aria-labelledby="home-daily"><div class="section-heading">${txt('nav.today','h2','id="home-daily"')}${txt('home.dailyHint','span','class="eyebrow"')}</div>${daily(route,true)}<div class="daily-links">${continuation('memory.title','/today/#memory-grid')}${continuation('reaction.title','/today/#reaction')}${continuation('home.allDaily','/today/')}</div></section>
+    <section aria-labelledby="home-create"><div class="section-heading">${txt('home.create','h2','id="home-create"')}</div>${txt('home.createCopy','p')}<div class="section-grid home-create-grid">${card(forgeProduct,route)}${card(quizProduct,route)}</div>${continuation('home.allCreate','/create/')}</section>
+    ${collection('home-play','home.playNow',experiences.filter(entry=>entry.id!=='koi-pond'),route,continuation('home.allPlay','/play/'))}
+    <section class="home-cta" aria-labelledby="home-challenge">${txt('home.challenge','h2','id="home-challenge"')}${txt('home.challengeCopy','p')}${continuation('duel.own','/challenge/')}</section>
+    ${collection('home-tools','home.tools',selectProducts(['image-compressor','lucky-draw']),route,continuation('home.allTools','/tools/'))}
+    <section class="home-cta">${txt('nav.mysteries','h2')}${txt('mysteries.discovery','p')}${continuation('mysteries.explore','/mysteries/','data-mystery-entry')}</section>
+    <section id="laboratuvar">${collection('home-lab','lab.collection',selectProducts(['beautiful-quotes']),route,continuation('common.return','/lab/'))}</section>
   </main>`;
 }
-
 function sectionPage(section) {
-  const available = section.tool || section.id==='tools' ? tools.filter((entry)=>entry.id!==section.id) : section.id === 'play' || section.activity ? experiences.filter((entry)=>entry.id!==section.id) : section.id==='lab'?entries:entries.filter((entry) => entry.type === section.type);
-  return `<main id="main-content" class="container section-page${section.id === 'today' ? ' daily-page' : ''}" tabindex="-1">
-    <header class="section-intro"><p class="eyebrow">${section.creation?'LANGUAGE FORGE':`KATOVIA / ${txt(`nav.${section.id==='d' ? 'challenge' : section.personal ? 'create' : section.tool ? 'tools' : section.activity ? 'play' : section.id}`)}`}</p>${txt(section.activity || section.tool || section.personal || section.creation ? section.titleKey : `section.${section.id}.label`, 'h1')}${txt(section.activity || section.tool || section.personal || section.creation ? section.descriptionKey : `section.${section.id}.description`, 'p')}</header>
-    ${section.creation ? forgeMarkup() : section.id==='d' ? duelMarkup('play') : section.personal ? creationMarkup() : section.id==='create' ? forgeCard()+creatorMarkup()+txt('section.create.note','p') : section.id==='challenge' ? `${duelMarkup()}<section class="activity-panel">${txt('challenge.heading','h2')}${txt('challenge.guide','p')}<a class="button" href="/today/#reaction" data-i18n="challenge.train">Try Reaction Daily</a><p>${txt('challenge.future')}</p></section>` : section.tool ? (section.id==='alphabet-lab'?alphabetMarkup():section.id==='beautiful-quotes'?quoteMarkup():toolMarkup(section))+txt(`tool.${section.id}.about`,'p','class="experience-guide"') : section.activity ? experienceMarkup(section) + txt(`play.${section.id}.about`, 'p', 'class="experience-guide"') : section.id === 'today' ? daily(section.route) + `<div id="memory-grid">${memoryMarkup()}</div><div id="reaction">${reactionMarkup()}</div>` : ['play','tools'].includes(section.id) ? '' : `<div class="placeholder"><span class="pill">${statusLabel(section.status)}</span>${txt(`section.${section.id}.note`, 'p')}</div>`}
-    ${available.length ? `<section aria-labelledby="collection-title"><div class="section-heading">${txt(section.id === 'tools' || section.tool ? 'tools.collection' : section.id === 'play' || section.activity ? 'play.collection' : 'lab.collection', 'h2', 'id="collection-title"')}<span class="eyebrow"><span>${available.length}</span> ${txt('common.projects')}</span></div><div class="section-grid">${available.map((entry) => card(entry, section.route)).join('\n')}</div></section>` : ''}
-
-    ${section.id === 'lab' ? `<p class="legacy-note">${txt('lab.legacyIntro')} <a href="${hrefFrom(section.route, '/lab/')}" data-i18n="lab.legacyLink">${escape(translate('en', 'lab.legacyLink'))}</a>.</p>` : ''}
-  </main>`;
+  const owner=section.id==='d'?'challenge':section.personal?'create':section.owner || (section.activity?'play':section.id);
+  const detail=section.activity || section.tool || section.personal || section.creation;
+  let body='';
+  if(section.creation) body=forgeMarkup();
+  else if(section.id==='d') body=duelMarkup('play');
+  else if(section.personal) body=creationMarkup();
+  else if(section.id==='create') body=collection('create-products','nav.create',[forgeProduct,quizProduct,...creativeTools],section.route)+`<section id="quiz-creator" aria-labelledby="quiz-product-title">${txt('creator.product','h2','id="quiz-product-title"')}${creatorMarkup()}</section>`;
+  else if(section.id==='challenge') body=duelMarkup()+`<details class="experience-help"><summary>${txt('challenge.heading')}</summary>${txt('challenge.guide','p')}</details>${continuation('challenge.train','/today/#reaction')}`;
+  else if(section.tool) body=(section.id==='alphabet-lab'?alphabetMarkup():section.id==='beautiful-quotes'?quoteMarkup():toolMarkup(section))+`<details class="experience-help"><summary>${txt('common.howItWorks')}</summary>${txt(`tool.${section.id}.about`,'p','class="experience-guide"')}</details>`;
+  else if(section.activity) body=experienceMarkup(section)+txt(`play.${section.id}.about`,'p','class="experience-guide"');
+  else if(section.id==='today') body=daily(section.route)+`<div id="memory-grid">${memoryMarkup()}</div><div id="reaction">${reactionMarkup()}</div>`;
+  else if(section.id==='tools') body=toolGroups.map(group=>collection(`tools-${group.id}`,`catalog.${group.id}`,selectProducts(group.ids),section.route)).join('');
+  else if(section.id==='lab') body=collection('lab-discovery','lab.discovery',discoveryCollections,section.route)+collection('lab-games','lab.games',entries.filter(entry=>entry.route.startsWith('/oyunlar/')),section.route)+collection('lab-tools','lab.tools',entries.filter(entry=>['qr','business-card','karar'].includes(entry.id)),section.route)+collection('lab-messages','lab.messages',entries.filter(entry=>['cuma','kandil','dogum-gunu','bayram'].includes(entry.id)),section.route);
+  else if(section.id==='play') body=collection('collection-title','play.collection',experiences,section.route);
+  if(section.tool) body+=collection('related-products','related.heading',selectProducts(relatedProducts[section.id] || []).map(entry=>({...entry,visual:false,activity:false})),section.route,continuation(owner==='lab'?'common.return':owner==='create'?'home.allCreate':'home.allTools',`/${owner}/`));
+  if(section.activity) body+=collection('collection-title','play.collection',experiences.filter(entry=>entry.id!==section.id),section.route,continuation('home.allPlay','/play/'));
+  return `<main id="main-content" class="container section-page${section.id==='today'?' daily-page':''}" tabindex="-1"><header class="section-intro"><p class="eyebrow">${section.creation?'LANGUAGE FORGE':`KATOVIA / ${txt(`nav.${owner}`)}`}</p>${txt(detail?section.titleKey:`section.${section.id}.label`,'h1')}${txt(detail?section.descriptionKey:`section.${section.id}.description`,'p')}</header>${body}</main>`;
 }
 
 function documentPage(section) {
@@ -75,7 +91,7 @@ function documentPage(section) {
   const descriptionKey = section?.activity || section?.tool || section?.personal || section?.creation ? section.metaKey || section.descriptionKey : section ? `section.${section.id}.description` : 'home.meta';
   // Paths below are relative to the source HTML, so Vite can resolve out-of-root modules.
   const sourceScript = '../'.repeat(route.split('/').filter(Boolean).length + 1) + 'src/shell/main.js';
-  const schema=section?.tool||section?.activity||section?.creation?JSON.stringify({'@context':'https://schema.org','@type':section.tool||section.creation?'WebApplication':'SoftwareApplication',name:translate('en',section.creation?'forge.title':section.titleKey),description:translate('en',descriptionKey),url:`https://katovia.com${route}`,applicationCategory:section.tool?'UtilitiesApplication':'EntertainmentApplication',operatingSystem:'Web browser',isAccessibleForFree:true,inLanguage:['en','tr']}).replace(/</g,'\\u003c'):null;
+  const schema=section?.tool||section?.activity||section?.creation?JSON.stringify({'@context':'https://schema.org','@type':section.tool||section.creation?'WebApplication':'SoftwareApplication',name:translate('en',section.creation?'forge.title':section.titleKey),description:translate('en',descriptionKey),url:`https://katovia.com${route}`,applicationCategory:section.owner==='create'?'DesignApplication':section.owner==='lab'?'EducationalApplication':section.tool?'UtilitiesApplication':'EntertainmentApplication',operatingSystem:'Web browser',isAccessibleForFree:true,inLanguage:['en','tr']}).replace(/</g,'\\u003c'):null;
   return `<!doctype html>
 <!-- Generated from src/catalog/registry.js by scripts/generate-pages.mjs. -->
 <html lang="en">
@@ -95,10 +111,10 @@ function documentPage(section) {
     <a class="wordmark" href="${hrefFrom(route, '/')}" data-i18n-label="common.homeLabel" aria-label="Katovia homepage"><svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3v18M8 12l11-9M8 12l11 9" stroke="currentColor" stroke-width="3.5"/></svg>KATOVIA</a>
     <div class="language-control" role="group" data-i18n-label="common.language" aria-label="Language selection"><button type="button" data-locale="tr" data-i18n-label="common.tr" aria-label="Switch language to Turkish" aria-pressed="false" lang="tr">TR</button><button type="button" data-locale="en" data-i18n-label="common.en" aria-label="Switch language to English" aria-pressed="true" lang="en">EN</button></div>
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>${txt('common.menu')} <span aria-hidden="true">☰</span></button>
-    <nav id="primary-navigation" class="navigation" data-i18n-label="common.navigation" aria-label="Main navigation" data-navigation>${sections.map((item) => `<a class="nav-link" data-i18n="nav.${item.id}" href="${hrefFrom(route, item.route)}"${section?.id === item.id ? ' aria-current="page"' : ''}>${escape(translate('en', `nav.${item.id}`))}</a>`).join('')}<a class="nav-link" data-mystery-entry data-i18n="nav.mysteries" href="/mysteries/">Mysteries</a></nav>
+    <nav id="primary-navigation" class="navigation" data-i18n-label="common.navigation" aria-label="Main navigation" data-navigation>${sections.map((item) => `<a class="nav-link" data-i18n="nav.${item.id}" href="${hrefFrom(route, item.route)}"${(section?.owner || (section?.activity?'play':section?.creation?'create':section?.id)) === item.id ? ' aria-current="page"' : ''}>${escape(translate('en', `nav.${item.id}`))}</a>`).join('')}<a class="nav-link" data-mystery-entry data-i18n="nav.mysteries" href="/mysteries/">Mysteries</a></nav>
   </div></header>
   ${section ? sectionPage(section) : home(route)}
-  <footer class="site-footer"><div class="container footer-inner"><p class="eyebrow">KATOVIA / ${txt('common.motto')}</p><a class="footer-link" href="${hrefFrom(route, '/lab/')}">${txt('common.return')} <span aria-hidden="true">&nbsp;↗</span></a></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><p class="eyebrow">KATOVIA / ${txt('common.motto')}</p><a class="footer-link" href="${hrefFrom(route, section?.id==='lab'?'/':'/lab/')}">${txt(section?.id==='lab'?'common.homeLabel':'common.return')} <span aria-hidden="true">&nbsp;↗</span></a></div></footer>
 </body>
 </html>
 `;
@@ -115,10 +131,10 @@ const compatibilityPages = [{ id: '', route: '/' }, ...sections].map(({ id, rout
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Katovia — Moved</title><link rel="canonical" href="https://katovia.com${route}"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0;url=${route}"><script>location.replace(${JSON.stringify(route)} + location.search + location.hash);</script></head><body><a href="${route}">Katovia / Devam et / Continue</a></body></html>
 `
 }));
-const indexable = [...mysteryRoutes, '/', ...sections.map(entry=>entry.route), ...experiences.map(entry=>entry.route),...tools.map(entry=>entry.route),...creations.map(entry=>entry.route)];
+const indexable = [...mysteryRoutes, '/', ...sections.map(entry=>entry.route), ...experiences.map(entry=>entry.route),...toolPages.map(entry=>entry.route),...creations.map(entry=>entry.route)];
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexable.map(route=>`  <url><loc>https://katovia.com${route}</loc></url>`).join('\n')}\n</urlset>\n`;
 const robots='User-agent: *\nAllow: /\nDisallow: /v2/\n# Personal player pages use HTML noindex and are excluded from the sitemap.\nSitemap: https://katovia.com/sitemap.xml\n';
-const pages = [...await mysteryPages(), {path:'sitemap.xml',html:sitemap},{path:'robots.txt',html:robots},{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), ...[...experiences,...tools,...personalPages,...creations].map((entry) => ({ path:`${entry.route.slice(1)}index.html`, html:documentPage(entry) })), { path: '404.html', html: notFound }, ...compatibilityPages];
+const pages = [...await mysteryPages(), {path:'sitemap.xml',html:sitemap},{path:'robots.txt',html:robots},{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), ...[...experiences,...toolPages,...personalPages,...creations].map((entry) => ({ path:`${entry.route.slice(1)}index.html`, html:documentPage(entry) })), { path: '404.html', html: notFound }, ...compatibilityPages];
 for (const page of pages) {
   const path = `${siteRoot}/${page.path}`;
   const html=page.html.replace(/[ \t]+$/gm,'');

@@ -38,6 +38,10 @@ export function mount(root,{generate=generateLanguagePackage,seedFactory=createS
     get('form').hidden=state.status==='generated'||Boolean(saved)||state.receiver||state.invalidShare;get('result').hidden=state.status!=='generated';
     get('restore').hidden=!saved;get('invalid').hidden=!state.invalidShare;get('receiver').hidden=!state.receiver;get('copy-project').hidden=!state.receiver;
     for(const name of ['rename','change','new'])get(name).hidden=state.receiver;
+    const generated=state.status==='generated';
+    const importHost=generated?get('import-slot'):root;
+    if(get('import-area').parentElement!==importHost){if(generated)importHost.append(get('import-area'));else get('import-start').after(get('import-area'));}
+    get('import-hint').hidden=generated;get('regeneration').hidden=state.receiver;
     get('import-area').hidden=state.receiver;get('storage-warning').hidden=!storageFailed||state.receiver;get('storage-warning').textContent=storageFailed?label('saveWarning'):'';
     if(confirmKey)get('confirm-text').textContent=label(confirmKey);
     status(statusKey);
@@ -47,7 +51,7 @@ export function mount(root,{generate=generateLanguagePackage,seedFactory=createS
     const rows=dictionaryRows(state.generatedPackage,state.search,state.activeDictionaryFilter);
     const host=get('dictionary');host.replaceChildren();
     for(const row of rows){const pair=element('div');pair.dataset.forgeEntry=row.semanticId;pair.append(element('dt',row.labels[i18n.locale]),element('dd',row.word));
-      if(!state.receiver){const actions=element('details',undefined,'forge-word-actions'),summary=element('summary','⋯');summary.setAttribute('aria-label',label('actions',{word:row.labels[i18n.locale]}));actions.append(summary);for(const type of ['edit','reroll']){const b=element('button',label(type));b.type='button';b.dataset.forgeWordAction=type;b.dataset.semanticId=row.semanticId;b.setAttribute('aria-label',label(type==='edit'?'editLabel':'rerollLabel',{word:row.labels[i18n.locale]}));actions.append(b);}pair.append(actions);if(editor===row.semanticId)pair.append(editorForm());}
+      if(!state.receiver){const actions=element('details',undefined,'forge-word-actions'),summary=element('summary','⋯');summary.setAttribute('aria-label',label('wordActions',{word:row.labels[i18n.locale]}));actions.append(summary);for(const type of ['edit','reroll']){const b=element('button',label(type));b.type='button';b.dataset.forgeWordAction=type;b.dataset.semanticId=row.semanticId;b.setAttribute('aria-label',label(type==='edit'?'editLabel':'rerollLabel',{word:row.labels[i18n.locale]}));actions.append(b);}pair.append(actions);if(editor===row.semanticId)pair.append(editorForm());}
       host.append(pair);}
     get('empty').hidden=rows.length>0;get('count').textContent=label('count',{shown:rows.length,total:64});
   }
