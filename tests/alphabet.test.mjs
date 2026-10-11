@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {dataset,profiles,validateDataset,findEntries,readState,stateUrl} from '../src/tools/alphabet/model.js';
-import {tools} from '../src/catalog/tools.js';
+import {toolPages} from '../src/catalog/tools.js';
 test('character inventory has six profiles, 194 unique records and only minimal fields',()=>{
  assert.equal(validateDataset().records,194);assert.deepEqual(profiles.map(p=>p.entries.length),[24,33,46,36,29,26]);
  assert.deepEqual(Object.keys(dataset),['profiles']);
@@ -35,6 +35,6 @@ test('static character route has 194 readable rows, clean UI and unchanged SEO',
  assert.equal((html.match(/data-alpha-static-entry=/g)||[]).length,194);assert.equal((html.match(/data-alpha-static-profile=/g)||[]).length,6);
  assert.match(html,/rel="canonical" href="https:\/\/katovia.com\/tools\/alphabet-lab\/"/);
  assert.ok((await readFile('dist/sitemap.xml','utf8')).includes('https://katovia.com/tools/alphabet-lab/'));
- assert.equal(tools.find(t=>t.id==='alphabet-lab').module,'alphabet-lab');
+ assert.equal(toolPages.find(t=>t.id==='alphabet-lab').module,'alphabet-lab');
  assert.doesNotMatch(html,/SHA-256|UNICODE LICENSE|sourceRefs|alphabet-provenance|Romanization|Pronunciation|unicode\.org|loc\.gov|cornell\.edu|irodori|iceb\.org|perkins\.org/i);
 });

@@ -122,66 +122,6 @@
       "sha256": "0e1740e63f0e2b1eb40c6c2f46a7da3546f8f1f3a37a7331e84edb318294456b"
     },
     {
-      "path": "oyunlar/araba-firlat.html",
-      "category": "html",
-      "bytes": 29092,
-      "sha256": "d3be0e1566d578bd8f13189d73fed24d7a02d9c570ed1882d4cdd41c9ffd9ff7"
-    },
-    {
-      "path": "oyunlar/bilardo.html",
-      "category": "html",
-      "bytes": 19021,
-      "sha256": "9e17dc98ed4bfb0e58f28f6bce255bece3c5eada11a456233d5132aef7c4278f"
-    },
-    {
-      "path": "oyunlar/buz-hokeyi.html",
-      "category": "html",
-      "bytes": 18500,
-      "sha256": "85cd008074de19f07208abd843a2e581587562db87f65d2564e07280938bf4e2"
-    },
-    {
-      "path": "oyunlar/falso-sut.html",
-      "category": "html",
-      "bytes": 28166,
-      "sha256": "952a10eaaf649781289c936b11054058ac70991753752a76ead18203312893a8"
-    },
-    {
-      "path": "oyunlar/golf-mini-oyun.html",
-      "category": "html",
-      "bytes": 20574,
-      "sha256": "1fc2cd97ec0a90ed81c57229b6ce197ce631e38e50f76eed68c55ff3aee68c07"
-    },
-    {
-      "path": "oyunlar/kus-fotografcisi.html",
-      "category": "html",
-      "bytes": 29774,
-      "sha256": "ba952cd3a2769b3ea1123cedc2197c6353174b72e99b4e94766f514fee2feaab"
-    },
-    {
-      "path": "oyunlar/serit-kacisi.html",
-      "category": "html",
-      "bytes": 16013,
-      "sha256": "9a0aab198448e9bde4d0864b7336c203ff1b5b6bf8c8185a2c6e7a9e40d49861"
-    },
-    {
-      "path": "oyunlar/sut-gol.html",
-      "category": "html",
-      "bytes": 29160,
-      "sha256": "63d81766b502df3202924934a07bc0782ff7af5ecb2859dbce8e323597f80952"
-    },
-    {
-      "path": "oyunlar/tas-yagmuru.html",
-      "category": "html",
-      "bytes": 19912,
-      "sha256": "a195f3cf5b22bf7ffcec445605bdcc172c90b43ec636f6e08844e56c18ac4867"
-    },
-    {
-      "path": "oyunlar/yuk-ustasi.html",
-      "category": "html",
-      "bytes": 36782,
-      "sha256": "2e68d6ea52fc76698fd5f9dd0dcfe212b7d7ead546cde0da372a25f453ad8d57"
-    },
-    {
       "path": "laboratuvar/js/katovia-qr.js",
       "category": "js",
       "bytes": 11310,
@@ -211,6 +151,21 @@
     ],
     "added": [
       "laboratuvar/js/katovia-qr.js"
+    ]
+  },
+  "authorizedGameCleanup": {
+    "milestone": "KATOVIA-CLEANUP-002",
+    "removed": [
+      "oyunlar/araba-firlat.html",
+      "oyunlar/bilardo.html",
+      "oyunlar/buz-hokeyi.html",
+      "oyunlar/falso-sut.html",
+      "oyunlar/golf-mini-oyun.html",
+      "oyunlar/kus-fotografcisi.html",
+      "oyunlar/serit-kacisi.html",
+      "oyunlar/sut-gol.html",
+      "oyunlar/tas-yagmuru.html",
+      "oyunlar/yuk-ustasi.html"
     ]
   }
 }

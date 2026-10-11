@@ -13,8 +13,8 @@ test('profile selection, exact lookup, locale preserves search and history, safe
  await page.goBack();await expect(page.locator('[data-alpha-symbol][aria-pressed=true]')).toHaveCount(1);
  await page.goto('/tools/alphabet-lab/?profile=bad#%ZZ');await expect(page.locator('[data-tool]')).toHaveAttribute('data-ready','true');await expect(page.locator('[data-alpha-search]')).toBeDisabled();
 });
-test('dataset client stays lazy on TOOLS index and keyboard selection remains accessible',async({page},info)=>{
- const bodies=[];page.on('response',async response=>{if(response.url().endsWith('.js'))bodies.push(await response.text());});await page.goto('/tools/');await expect(page.locator('[data-card-id=alphabet-lab]')).toBeVisible();expect(bodies.some(body=>body.includes('greek-modern-')&&body.includes('Letter'))).toBe(false);
+test('dataset client stays lazy on LAB index and keyboard selection remains accessible',async({page},info)=>{
+ const bodies=[];page.on('response',async response=>{if(response.url().endsWith('.js'))bodies.push(await response.text());});await page.goto('/tools/');await expect(page.locator('[data-card-id=alphabet-lab]')).toHaveCount(0);await page.goto('/lab/');await expect(page.locator('[data-card-id=alphabet-lab]')).toBeVisible();expect(bodies.some(body=>body.includes('greek-modern-')&&body.includes('Letter'))).toBe(false);
  await page.locator('[data-card-id=alphabet-lab]').click();await expect(page.locator('[data-tool]')).toHaveAttribute('data-ready','true');await page.locator('[data-alpha-profile=greek-modern]').focus();await page.keyboard.press('Enter');await page.locator('[data-alpha-symbol]').first().focus();await page.keyboard.press('Enter');await expect(page.locator('[data-alpha-symbol][aria-pressed=true]')).toHaveCount(1);
  await page.setViewportSize({width:1440,height:900});await page.screenshot({path:info.outputPath('alphabet-desktop.png')});
 });

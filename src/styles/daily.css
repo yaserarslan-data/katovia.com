@@ -52,6 +52,7 @@
   .game-topline { flex-wrap: wrap; }
   .game-bottomline { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
   .game-stage { padding: var(--space-5) var(--space-4); min-height: 330px; }
+  .has-daily .game-title span { font-size: clamp(3.2rem, 12vw, 4.8rem); }
   .game-halo i { width: 220px; height: 220px; }
   .game-halo i:nth-child(3) { width: 280px; height: 280px; }
   .result-actions { padding: var(--space-4); }

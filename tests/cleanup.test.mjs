@@ -12,7 +12,7 @@ test('all fifty restored quotes keep their original texts and stable IDs, with t
 });
 test('authorized legacy manifest changes do not weaken unrelated legacy protection',async()=>{
  const old=JSON.parse(execFileSync('git',['show','34e4236:scripts/legacy-manifest.json'],{encoding:'utf8'})),next=JSON.parse(await readFile('scripts/legacy-manifest.json','utf8'));
- for(const file of old.files){if(next.authorizedCleanup.changed.includes(file.path)||next.authorizedCleanup.removed.includes(file.path))continue;assert.deepEqual(next.files.find(f=>f.path===file.path),file,file.path);}
+ for(const file of old.files){if(next.authorizedCleanup.changed.includes(file.path)||next.authorizedCleanup.removed.includes(file.path)||next.authorizedGameCleanup.removed.includes(file.path))continue;assert.deepEqual(next.files.find(f=>f.path===file.path),file,file.path);}
  assert.equal(next.files.some(f=>/vendor\/|assets\/apps\//.test(f.path)),false);
 });
 test('restored route is indexable, accessible without JS and legacy link resolves; Vite notices accompany retained CSS helper',async()=>{

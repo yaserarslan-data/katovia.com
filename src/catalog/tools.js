@@ -1,13 +1,14 @@
 import { translate } from '../i18n/index.js';
 // Execution module and public category ownership are independent.
 const additions = {'beautiful-quotes':'creative','alphabet-lab':'education','image-compressor':'media','pixel-art-grid':'creative','lucky-draw':'decision'};
+const modules = {'beautiful-quotes':'beautiful-quotes','alphabet-lab':'alphabet-lab','image-compressor':'image-compressor','pixel-art-grid':'pixel-art-grid','lucky-draw':'lucky-draw'};
 const owners = {'beautiful-quotes':'lab','alphabet-lab':'lab','pixel-art-grid':'create'};
 export const toolPages = Object.freeze(['beautiful-quotes','alphabet-lab','image-compressor','pixel-art-grid','lucky-draw','json-formatter','text-diff','regex-tester','css-gradient','color-palette'].map(id => Object.freeze({
   id, slug:id, owner:owners[id] || 'tools', category:additions[id] || (['css-gradient','color-palette'].includes(id)?'design':'developer'),
   type:owners[id] || 'tool', status:'available', route:id==='beautiful-quotes'?'/lab/guzel-sozler/':`/tools/${id}/`,
   titles:{tr:translate('tr',`tool.${id}.title`),en:translate('en',`tool.${id}.title`)},
   titleKey:`tool.${id}.title`, descriptionKey:`tool.${id}.description`, seoTitleKey:`tool.${id}.seoTitle`,
-  module:additions[id] || 'client', visual:!!additions[id] && !['alphabet-lab','beautiful-quotes'].includes(id), tool:true,
+  module:modules[id] || 'client', visual:!!additions[id] && !['alphabet-lab','beautiful-quotes'].includes(id), tool:true,
 })));
 export const tools = Object.freeze(toolPages.filter(entry => entry.owner === 'tools'));
 export const discoveryCollections = Object.freeze(toolPages.filter(entry => entry.owner === 'lab'));

@@ -7,7 +7,7 @@ for(const locale of ['en','tr'])test(`curated catalogs, localization and respons
   await page.goto(route);await expect(page.locator('html')).toHaveAttribute('lang',locale);
   for(const width of [360,390,768,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);}
   if(route==='/tools/')await expect(page.locator('[data-card-id]')).toHaveCount(7);
-  if(route==='/lab/')await expect(page.locator('[data-card-id]')).toHaveCount(19);
+  if(route==='/lab/')await expect(page.locator('[data-card-id]')).toHaveCount(9);
   if(route==='/create/')await expect(page.locator('[data-card-id]')).toHaveCount(3);
   await page.setViewportSize({width:390,height:844});await page.screenshot({path:info.outputPath(`${route.replaceAll('/','')||'home'}-${locale}-mobile.png`),fullPage:true});
  }

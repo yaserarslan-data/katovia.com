@@ -74,7 +74,9 @@ for(const entry of mysteries)test(`${entry.id}: full English reader, language an
     await expect(page.locator('h1')).toHaveText(entry.titles.en);
     const expected=sectionCounts[entry.id];
     await expect(page.locator('.mystery-content section')).toHaveCount(expected);
-    await expect(page.locator('.mystery-note')).toContainText('editorial translation');
+    await expect(page.locator('.mystery-translation')).toBeVisible();
+    await expect(page.locator('.mystery-translation')).toContainText('editorial translation');
+    await expect(page.locator('.mystery-note')).toBeVisible();
     await expect(page.locator('.mystery-note')).toContainText('verification has not been completed');
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
     if(width===360||width===1440)await page.screenshot({path:info.outputPath(`en-reader-${width}.png`)});

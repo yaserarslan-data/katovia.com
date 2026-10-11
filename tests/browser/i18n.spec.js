@@ -12,11 +12,11 @@ test('browser detection, instant switch, metadata, persistence and keyboard', as
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.locator('h1')).toHaveText('PLAYSOMETHING.');
   await expect(page).toHaveTitle('Katovia — Play something');
-  await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Three daily mini games/);
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Daily mini games, creative experiences and Language Forge/);
   await page.reload(); await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  await page.goto('/create/'); await expect(page.locator('h1')).toHaveText('Turn an idea into a game.');
+  await page.goto('/create/'); await expect(page.locator('h1')).toHaveText('Make something of your own.');
   await page.locator('[data-locale="tr"]').click();
-  await expect(page.locator('h1')).toHaveText('Bir fikri oyuna dönüştür.');
+  await expect(page.locator('h1')).toHaveText('Kendine ait bir şey oluştur.');
   await expect(page.locator('nav [data-i18n="nav.challenge"]')).toHaveText('MEYDAN OKU');
   await page.goto('/tools/'); await expect(page.locator('html')).toHaveAttribute('lang', 'tr');
   await expect(page.locator('h1')).toHaveText('Küçük işler. Temiz çözümler.');

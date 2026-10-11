@@ -39,7 +39,7 @@ test('home mouse play, hidden timer, saved result on refresh and dedicated TODAY
   await expect(page.locator('[data-game-action]')).toBeHidden();
   await page.goto('/today/');
   await expect(page.locator('[data-actual]')).toHaveText('5.07');
-  await expect(page.locator('[data-streak]')).toContainText('1 DAY');
+  await expect(page.locator('[data-streak]')).toHaveText('Daily streak / 1 day');
 });
 test('keyboard exact score and native share; opt out of raw score', async ({ page }, testInfo) => {
   await fakeTime(page, { nativeShare: true }); await page.goto('/today/');

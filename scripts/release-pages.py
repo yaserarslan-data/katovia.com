@@ -68,9 +68,18 @@ elif mode=='prepare':
             assert path in basepaths and path not in paths and path not in preserved
             assert (path.startswith('katovia-assets/') and Path(path).suffix in ['.js','.css']) or path in ['assets/apps/balonlubum.jpg','assets/apps/iletisim-analizi.jpg','assets/apps/kare-savaslari.jpg','assets/apps/mental-detox.jpg','laboratuvar/vendor/README.md','laboratuvar/vendor/kjua-0.10.0.min.js','laboratuvar/vendor/kjua-LICENSE.txt']
             git('update-index','--force-remove',path,env=env);retired.append(path)
+    # Persistent retirement: later releases must not inherit removed game files.
+    games=json.loads(Path('scripts/legacy-game-retirements.json').read_text())
+    assert games['milestone']=='KATOVIA-CLEANUP-002' and len(games['paths'])==10
+    assert set(games['paths'])=={file['path'] for file in games['files']}
+    for path in games['paths']:
+        assert path.startswith('oyunlar/') and Path(path).suffix=='.html' and len(Path(path).parts)==2
+        assert path not in preserved and path not in paths and not (ROOT/path).exists() and not (ROOT/'dist'/path).exists()
+        if path in basepaths:
+            git('update-index','--force-remove',path,env=env);retired.append(path)
     source=git('rev-parse','HEAD');release=git('commit-tree',git('write-tree',env=env),'-p',plan['base'],input=f'Publish Katovia master release {label}\n\nTested source: {source}\nArtifact-only release; preserved legacy paths.\n'.encode())
     assert set(git('diff','--name-only',plan['base'],release).splitlines())<=set(paths)|set(retired)
-    if cleanup:subprocess.run(['node','scripts/reference-graph.mjs',release],check=True)
+    if cleanup or label=='LegacyGames2':subprocess.run(['node','scripts/reference-graph.mjs',release],check=True)
     rollback=git('commit-tree',git('rev-parse',plan['base']+'^{tree}'),'-p',release,input=f'Rollback master release {label} to verified production tree\n'.encode())
     assert not git('diff','--name-only',plan['base'],rollback)
     for name,sha in [('release',release),('rollback',rollback)]:git('update-ref',f'refs/heads/codex/katovia-master-{label.lower()}-{name}',sha)
@@ -87,7 +96,7 @@ elif mode=='publish':
             except Exception:
                 if retry==11:raise
                 time.sleep(10)
-        qa=['node','scripts/qa-language-forge-release.mjs'] if label=='LanguageForge1' else ['node','scripts/live-qa.mjs',label]
+        qa=['node','scripts/qa-legacy-games-release.mjs'] if label=='LegacyGames2' else ['node','scripts/qa-language-forge-release.mjs'] if label=='LanguageForge1' else ['node','scripts/live-qa.mjs',label]
         subprocess.run(qa,check=True);settings();plan['status']='published';print('RELEASE VERIFIED',label,flush=True)
     except Exception as error:
         print('Release failed:',str(error),flush=True)

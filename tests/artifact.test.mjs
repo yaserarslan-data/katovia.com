@@ -9,10 +9,10 @@ import { checkArtifact, artifactFiles } from '../scripts/check-artifact.mjs';
 import { repoRoot, distRoot } from '../scripts/paths.mjs';
 
 test('authorized cleanup preserves legacy routes and remaining bytes without retired vendor or unused JPEGs', async () => {
-  assert.equal(manifest.files.length, 31);
-  const expected = { config: 2, html: 19, data: 6, js: 4 };
+  assert.equal(manifest.files.length, 21);
+  const expected = { config: 2, html: 9, data: 6, js: 4 };
   assert.deepEqual(await checkLegacy(), expected);
-  assert.deepEqual(await checkLegacy(distRoot, { rootCutover: true }), { ...expected, html: 18 });
+  assert.deepEqual(await checkLegacy(distRoot, { rootCutover: true }), { ...expected, html: 8 });
   await checkArtifact();
   const files = await artifactFiles();
   assert.equal(files.some((file) => /^(tanitim|docs|src|scripts|node_modules|\.git)\//.test(file)), false);
