@@ -1,3 +1,4 @@
+import {hostedGames} from '../src/catalog/games.js';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
@@ -15,7 +16,10 @@ test('exact ten approved games are absent from source, artifact, catalogs and bo
 test('retirement preserves every retained manifest hash and current SEO/compatibility',async()=>{
  const before=JSON.parse(execFileSync('git',['show','8aacf18:scripts/legacy-manifest.json'],{encoding:'utf8'})),after=JSON.parse(await readFile('scripts/legacy-manifest.json','utf8'));
  assert.deepEqual(after.files,before.files.filter(f=>!retired.paths.includes(f.path)));assert.deepEqual(retired.files,before.files.filter(f=>retired.paths.includes(f.path)));
- for(const file of ['site/sitemap.xml','site/robots.txt','CNAME','app-ads.txt'])assert.equal(await readFile(file,'utf8'),execFileSync('git',['show',`8aacf18:${file}`],{encoding:'utf8'}));
+ for(const file of ['site/robots.txt','CNAME','app-ads.txt'])assert.equal(await readFile(file,'utf8'),execFileSync('git',['show',`8aacf18:${file}`],{encoding:'utf8'}));
+ const locs=xml=>[...xml.matchAll(/<loc>([^<]+)<[/]loc>/g)].map(match=>match[1]).sort();
+ const previous=locs(execFileSync('git',['show','8aacf18:site/sitemap.xml'],{encoding:'utf8'}));
+ assert.deepEqual(locs(await readFile('site/sitemap.xml','utf8')),[...previous,...hostedGames.map(game=>'https://katovia.com'+game.route)].sort());
  const runner=await readFile('scripts/release-pages.py','utf8');assert.match(runner,/Persistent retirement/);assert.match(runner,/update-index','--force-remove',path/);
 });
 

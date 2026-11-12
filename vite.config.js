@@ -1,3 +1,5 @@
+import { hostedGames } from './src/catalog/games.js';
+import { gameBuildFiles } from './scripts/game-builds.mjs';
 import { mysteryRoutes } from './src/catalog/mysteries.js';
 import { creations } from './src/catalog/creations.js';
 import { defineConfig } from 'vite';
@@ -12,7 +14,7 @@ import { repoRoot, siteRoot, distRoot } from './scripts/paths.mjs';
 import { mimeTypes } from './scripts/server.mjs';
 
 function legacyDevFiles() {
-  const allowed = new Set(manifest.files.filter((file) => file.path !== 'index.html').map((file) => `/${file.path}`));
+  const allowed = new Set([...manifest.files,...gameBuildFiles].filter((file) => file.path !== 'index.html').map((file) => `/${file.path}`));
   return {
     name: 'explicit-legacy-dev-files',
     configureServer(server) {
@@ -46,7 +48,7 @@ export default defineConfig({
     target: ['es2022', 'safari16'],
     rolldownOptions: {
       output: { postBanner: '/*! Vite preload helper: Copyright (c) 2019-present VoidZero Inc. and Vite contributors. MIT; license: /katovia-assets/vite-runtime-LICENSE.txt */' },
-      input: [...mysteryRoutes.map(route => resolve(siteRoot, `${route.slice(1)}index.html`)), resolve(siteRoot, 'index.html'), ...sections.map((section) => resolve(siteRoot, `${section.id}/index.html`)), ...[...experiences,...tools,...personalPages,...creations].map((entry) => resolve(siteRoot, `${entry.route.slice(1)}index.html`)), resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
+      input: [...mysteryRoutes.map(route => resolve(siteRoot, `${route.slice(1)}index.html`)), resolve(siteRoot, 'index.html'), ...sections.map((section) => resolve(siteRoot, `${section.id}/index.html`)), ...[...experiences,...hostedGames,...tools,...personalPages,...creations].map((entry) => resolve(siteRoot, `${entry.route.slice(1)}index.html`)), resolve(siteRoot, 'v2/index.html'), ...sections.map((section) => resolve(siteRoot, `v2/${section.id}/index.html`)), resolve(siteRoot, '404.html')],
     },
   },
 });

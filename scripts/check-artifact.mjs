@@ -1,3 +1,5 @@
+import { hostedGames } from '../src/catalog/games.js';
+import { gameBuildFiles, checkGameBuilds } from './game-builds.mjs';
 import { mysteryRoutes } from '../src/catalog/mysteries.js';
 import { creations } from '../src/catalog/creations.js';
 import { readFile, readdir } from 'node:fs/promises';
@@ -20,9 +22,10 @@ export async function artifactFiles(root = distRoot, prefix = '') {
   return result;
 }
 export async function checkArtifact() {
+  await checkGameBuilds(distRoot);
   const counts = await checkLegacy(distRoot, { rootCutover: true });
-  const htmlEntries = [...mysteryRoutes.map(route => `${route.slice(1)}index.html`), 'index.html', ...sections.map((item) => `${item.id}/index.html`), ...[...experiences,...tools,...personalPages,...creations].map((entry) => `${entry.route.slice(1)}index.html`), 'v2/index.html', ...sections.map((item) => `v2/${item.id}/index.html`), '404.html'];
-  const allowed = new Set([...manifest.files.map((file) => file.path), ...htmlEntries, 'sitemap.xml','robots.txt','favicon.ico','katovia-assets/vite-runtime-LICENSE.txt']);
+  const htmlEntries = [...mysteryRoutes.map(route => `${route.slice(1)}index.html`), 'index.html', ...sections.map((item) => `${item.id}/index.html`), ...[...experiences,...hostedGames,...tools,...personalPages,...creations].map((entry) => `${entry.route.slice(1)}index.html`), 'v2/index.html', ...sections.map((item) => `v2/${item.id}/index.html`), '404.html'];
+  const allowed = new Set([...manifest.files.map((file) => file.path), ...gameBuildFiles.map(file=>file.path), ...htmlEntries, 'sitemap.xml','robots.txt','favicon.ico','katovia-assets/vite-runtime-LICENSE.txt']);
   for (const name of await artifactFiles()) {
     if (!allowed.has(name) && !/^katovia-assets\/[a-zA-Z0-9_-]+\.(js|css|svg)$/.test(name)) throw new Error(`Unexpected file leaked into artifact: ${name}`);
   }

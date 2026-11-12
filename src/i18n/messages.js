@@ -1,8 +1,10 @@
+import {gameShelfMessages} from '../catalog/games.js';
 import {forgeMessages} from '../language-forge/ui/messages.js';
 // UI text only.
 export const messages = {
   "en": {
     ...forgeMessages.en,
+    ...gameShelfMessages.en,
     "home.start": "Play today",
     "home.allPlay": "See all experiences",
     "home.allCreate": "See all creation tools",
@@ -448,6 +450,7 @@ export const messages = {
   },
   "tr": {
     ...forgeMessages.tr,
+    ...gameShelfMessages.tr,
     "home.start": "Bugünün oyununa başla",
     "home.allPlay": "Tüm deneyimleri gör",
     "home.allCreate": "Tüm oluşturma araçlarını gör",

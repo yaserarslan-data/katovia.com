@@ -10,3 +10,6 @@ laboratuvar/data/guzel-sozler.js -text whitespace=cr-at-eol
 laboratuvar/js/qr-kod-olusturucu.js -text whitespace=cr-at-eol
 laboratuvar/js/dijital-kartvizit-olusturucu.js -text whitespace=cr-at-eol
 laboratuvar/js/katovia-qr.js -text whitespace=cr-at-eol
+
+# Preserve imported game release bytes for the package manifest.
+game-builds/** -text whitespace=cr-at-eol

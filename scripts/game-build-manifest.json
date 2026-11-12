@@ -1,0 +1,847 @@
+[
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/book-open.wav",
+    "bytes": 54728,
+    "sha256": "f5c7419ca615df984a8b9f3513296f7de63de417127f412db244addfc09589cc"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/citation-printer.wav",
+    "bytes": 75014,
+    "sha256": "cff1d2b309cfe71e44801389c54cff2f6cc1e8265eaee8048606e385fc5dde3b"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/drawer.wav",
+    "bytes": 30912,
+    "sha256": "8f28fb901ad290df6579ab2abb655a1e9a081e6a1d2e9b209130f84517c53116"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/office-tone.wav",
+    "bytes": 1058444,
+    "sha256": "fd77679f374e2af869e47e667dc27801f672c72439c99c86ca23516d815ea3be"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/paper-pick.wav",
+    "bytes": 26504,
+    "sha256": "fa8f6ed5e752e3cbbbe5a8755286a5215d1be37e6f5268db9cce04f7c81e3e99"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/paper-return.wav",
+    "bytes": 57374,
+    "sha256": "adba8b6e335c5da002e244b2507300345c25a2b5c5959d232684086d40f7aa60"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/paper-slide.wav",
+    "bytes": 48554,
+    "sha256": "d7bea228e14c9f65c321ff7cc946d20b1c641a10cc451ca92b04f997fb556de8"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/queue-bell.wav",
+    "bytes": 92654,
+    "sha256": "404251a210204dc68d5c60583e6488a6d10488316a3842feded7661d3b8aa29c"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/shift-clear.wav",
+    "bytes": 97064,
+    "sha256": "d568e709427c4275d162eaefb662aaa2698632e386581b6228186ff26c6d76a9"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/stamp-lift.wav",
+    "bytes": 16802,
+    "sha256": "2f18e3a689e800ad01a84fd5ae9962549df54455354538ff12824c158343be49"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/assets/audio/stamp.wav",
+    "bytes": 33560,
+    "sha256": "ee937fb828ea9ead5f6623835095e00c8415edd7e726887e3dd76d49c7531168"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/index.html",
+    "bytes": 15820,
+    "sha256": "8d824361e922c2f5c8d7f7abf069439478a34ad5c306d6f447316a3139aa8293"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/src/audio.js",
+    "bytes": 2766,
+    "sha256": "1028ffc8c3e7e783eb5182edee19e32ad91b15304c697469a9ed89a7385ec971"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/src/content.js",
+    "bytes": 3188,
+    "sha256": "0341b6e42113af955f5243c5fa8a78d6776505de6066638a6da23ee48df45e87"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/src/core.js",
+    "bytes": 14902,
+    "sha256": "dc0e38af3d1516c6bbe263da819839ecd18d013b24cc87ec8973d43cd6c36f13"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/src/game.js",
+    "bytes": 31557,
+    "sha256": "c20b30b1e7652ed0cfb3e0beb7f901419e9dbe828b72929cf89604ec8da2215f"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/src/katovia-intro.css",
+    "bytes": 4698,
+    "sha256": "a82fcd53f256048db82de3be5ba52524e33670f106607f4ec8eef1f420d568f0"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/src/katovia-intro.js",
+    "bytes": 2474,
+    "sha256": "4d10753412c656668de50d11dedab5fddcdba2bdd8394f1102eb860cf1b18355"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/src/office.css",
+    "bytes": 24529,
+    "sha256": "f408772eb6387ed13ef2dd81f378d05c21505b9bad9d1a752ddb80b5fc187fe6"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/src/office.js",
+    "bytes": 4433,
+    "sha256": "c4ec2a5a9deffb4516a96b4e8c7c07205b9d2f9a98270b7a950a9895f563d4c9"
+  },
+  {
+    "path": "game-builds/approve-or-deny/1.1/src/style.css",
+    "bytes": 20897,
+    "sha256": "8b59db12cac52a45f7a58047d255a6635181d8920a47846d48238246ea140b0f"
+  },
+  {
+    "path": "game-builds/how-fast-can-you-type/0.2/index.html",
+    "bytes": 8005,
+    "sha256": "f1400c7a67ecb434415a86cb8e555b580b68e207539cde12f20e245a0d8975bb"
+  },
+  {
+    "path": "game-builds/how-fast-can-you-type/0.2/src/core.js",
+    "bytes": 4440,
+    "sha256": "ec93b0ba848d0b238fdb62cd58e70a04214be542c9248b7459480f0b05e5f8b4"
+  },
+  {
+    "path": "game-builds/how-fast-can-you-type/0.2/src/game.js",
+    "bytes": 12661,
+    "sha256": "2f62c0ae6121851e06bb44740427e2013212e216d002885ec124704e70d2432e"
+  },
+  {
+    "path": "game-builds/how-fast-can-you-type/0.2/src/katovia-intro.css",
+    "bytes": 4698,
+    "sha256": "a82fcd53f256048db82de3be5ba52524e33670f106607f4ec8eef1f420d568f0"
+  },
+  {
+    "path": "game-builds/how-fast-can-you-type/0.2/src/katovia-intro.js",
+    "bytes": 2474,
+    "sha256": "4d10753412c656668de50d11dedab5fddcdba2bdd8394f1102eb860cf1b18355"
+  },
+  {
+    "path": "game-builds/how-fast-can-you-type/0.2/src/levels.js",
+    "bytes": 11691,
+    "sha256": "7fd99afeb86479efef0d2ac86eca4f2d3be64ea8999458430aa524930d983776"
+  },
+  {
+    "path": "game-builds/how-fast-can-you-type/0.2/src/style.css",
+    "bytes": 11193,
+    "sha256": "0c6492bfbfc0f35e9d94c7f144387aec4fed18dc6edd0fc4721f54cb9ffbf9af"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/akira.png",
+    "bytes": 1663919,
+    "sha256": "eac3dd216510b49a8c4571daecd3bab11ce38636f9e4e7d4a99f7f3032ff6f01"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/aya.png",
+    "bytes": 625613,
+    "sha256": "1f131f5a1a1a5d41fff60519267e6569ad015692d1abc69e8f7321d16f49385e"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/blade.png",
+    "bytes": 1528311,
+    "sha256": "72a346a2345f40c1ca0257dc41bd9390ce7e62cf45772b2c401ecc8c2b79a949"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/ch1-route.png",
+    "bytes": 2459768,
+    "sha256": "01f86f85bbf51a761c4109aba4dd6c0d2341c68fb025a6fc7e488e0f0ec45072"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/cinema.png",
+    "bytes": 2698155,
+    "sha256": "8fcf6ae62a6cb31f754a3451a8fe97ebd90630510db5ba4bf6e69731fa9d9249"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/daichi.png",
+    "bytes": 1812592,
+    "sha256": "ac08cdca9cf0f736daa8511dd24082e80f91b1ebd12cd9221f6d246fc2dd92ea"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/daigo.png",
+    "bytes": 1355087,
+    "sha256": "04907401a9c163114b9507cd69d64982888e907bf3ff3c0ea07840c79256e8dc"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/districts.png",
+    "bytes": 2534264,
+    "sha256": "c653df363a16501e74b798cd4bffea965854e9976e20d14ab9858b5fe052e33b"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/enemy.png",
+    "bytes": 1862244,
+    "sha256": "36fe39b6512a2d50bb0925282a41a693bca14937e18514b8b7b2a19aaf3157a7"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/finale.png",
+    "bytes": 2752791,
+    "sha256": "bf29129c33485c1d9a4dff8bac034543cec9a7d6408981b81929d93be8ad6a1a"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/genda.png",
+    "bytes": 1814577,
+    "sha256": "b08095606a5f396ec34fd74648b0d105fa8e64bdf39ac66ed4e26843fb84b5f2"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/interiors.png",
+    "bytes": 2227492,
+    "sha256": "8c33ffa7f57598a36cdbd6db748bd463f7a66f164cc401bcdd6664a29da08f4f"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/kaito.png",
+    "bytes": 1715131,
+    "sha256": "5603f8c0e09cb86beb9e37b49c4bcf86d34a1a806037848dc27bf3ddb0b5f3cf"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/kazuo-bare.png",
+    "bytes": 1760100,
+    "sha256": "308fc46e1cfaaaf9b0e86e579d2c8ba0303dc5281c4ddee8615347be1fe3ea3e"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/kazuo.png",
+    "bytes": 1760515,
+    "sha256": "1ccdfe9237aeb3cfc82308017dcfdb57e0d48c4feae5422ceb9c099c734bc58a"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/mika.png",
+    "bytes": 1706255,
+    "sha256": "99b2259d85894ca8b88cb74a5d0eb70230139a3bc6713fd5929fae6c8338dc8c"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/natsumi.png",
+    "bytes": 882817,
+    "sha256": "c48e747a2af6c66598a0f1daf31616cc5070c8d9cb86b43344732a01d7987c59"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/prologue.png",
+    "bytes": 2314958,
+    "sha256": "7f725c2edfa36a461a9ede535c248589fb4ec84135144a23833dec3e290f7e95"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/reina.png",
+    "bytes": 1667358,
+    "sha256": "37de462922b372d455a97e0346c3a27dd1ccb2f9daa8d38565de4f9bb010bef7"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/ren.png",
+    "bytes": 1844350,
+    "sha256": "2a5fb3a25f5f808ec8200966a185c69e3620a86df12e8008acbf2fb09231c05f"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/riku.png",
+    "bytes": 2011650,
+    "sha256": "27023c00538f4312b524ce0cf527ef6142a13674b3c005f57e54446978ad5059"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/rooftop.png",
+    "bytes": 1884120,
+    "sha256": "24e73f24ebf7749b824c93e9ed1c4319e87d4a15b24c88c16fc1a2b3999c077f"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/run.png",
+    "bytes": 1746348,
+    "sha256": "f2c12ec816b34a69b5aa80c73867f7c85b1819ec33247a27e4b06c3c8106c31d"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/signal-breach.wav",
+    "bytes": 3590692,
+    "sha256": "f4b1a240006c68696c7ac7087413ebba948e6cca79e9747a7a6a2e07ccc73ad1"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/street-crew.png",
+    "bytes": 1801707,
+    "sha256": "f2eb9dc265d2f5c535ecb3c6b8c0d8e37719bf0e8829dff8dfa0790f7d10f208"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/tetsuo.png",
+    "bytes": 1815536,
+    "sha256": "b802db4779a4899a1548510af7349d6263cfd8b04f242954345f743b8d066a1e"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/assets/worker.png",
+    "bytes": 1773608,
+    "sha256": "c33075c25f171f643e053d39858ef47e180d28b1204f47922ee828f959ffe80c"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/game.js",
+    "bytes": 80614,
+    "sha256": "44b1855db3497f4c2421f3374d65224b9b63122d24d1046632ea8723d71bcb5a"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/index.html",
+    "bytes": 3876,
+    "sha256": "fd46107abb046a529ee14f46201a7d7e3a46279c78b46efdb1c9cb0157c72f2e"
+  },
+  {
+    "path": "game-builds/i-was-born-to-be-great/1.1/style.css",
+    "bytes": 5175,
+    "sha256": "2451edb5cdf620ef76c9dc999ec0d8ce390a6a5d7584b5c56d7d1ece792aa97f"
+  },
+  {
+    "path": "game-builds/night-shift-0300/1.1/game.bundle.js",
+    "bytes": 2829092,
+    "sha256": "c1e680dc9613748ac2199acd8ccf1a96ae0e446bf5e5d0c1837ef645f3c335e1"
+  },
+  {
+    "path": "game-builds/night-shift-0300/1.1/game.css",
+    "bytes": 22003,
+    "sha256": "b8cc27bad767f6be6172ba21f2672f2cec6416f1f841a7d9af9def392974b02e"
+  },
+  {
+    "path": "game-builds/night-shift-0300/1.1/index.html",
+    "bytes": 11662,
+    "sha256": "ffc30c9831452efc7d7a1f665f510e652ee50ef9733a01c968950cda76181ea6"
+  },
+  {
+    "path": "game-builds/night-shift-0300/1.1/katovia-intro.css",
+    "bytes": 4698,
+    "sha256": "a82fcd53f256048db82de3be5ba52524e33670f106607f4ec8eef1f420d568f0"
+  },
+  {
+    "path": "game-builds/night-shift-0300/1.1/katovia-intro.js",
+    "bytes": 2474,
+    "sha256": "4d10753412c656668de50d11dedab5fddcdba2bdd8394f1102eb860cf1b18355"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/assets/favicon-CTMOAXfT.svg",
+    "bytes": 234,
+    "sha256": "efcf7ae19a42f7e6126e56385ecc909284a69bfbf466572ec28033a1a493d4ac"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/assets/index-B-4CwgeM.css",
+    "bytes": 145049,
+    "sha256": "06960a1ce60af87b0651998c8310d5f3cae499290cd1a96dbe60a1e7f0963528"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/assets/index-BRxf6VnE.js",
+    "bytes": 710501,
+    "sha256": "1cb39e52b0513337f7438504f7146e92c1a1ca04bdcdc03c8c1b0a9407a607e8"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/audio/rain-on-the-terminal-loop.mp3",
+    "bytes": 3841388,
+    "sha256": "509e768236594ba15da060164594757614dcd871798d5cf0ef77d6ec5e7559f1"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/index.html",
+    "bytes": 655,
+    "sha256": "a70a901117ac50ff51062e16335af21978c6da8a4f9f6a52379c9119dd580adb"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/photos/101.png",
+    "bytes": 1999098,
+    "sha256": "a7dad0ef5f4290a283d3a5f52cb74b37183ef307beddd9746ea2a1ea22751e32"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/photos/102-workday.png",
+    "bytes": 1898642,
+    "sha256": "13c7c0484de0d3b05b01d354dca96e6dc35ae88b8f42478fa85df2db3d21a6be"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/photos/102.png",
+    "bytes": 1964093,
+    "sha256": "bcf276936eb943568b7555b7362c49b6d90342f2f56cb07848afcc3cdf33c9e1"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/photos/201.png",
+    "bytes": 2008181,
+    "sha256": "4936e6088f0cca56b557452a9e1d043f6d26737f034df385dee3359e6c126419"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/photos/202.png",
+    "bytes": 1961656,
+    "sha256": "d04607e41639ff50906b5af3675a1ac9927f6139ca32071bc124362071f48e2f"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/photos/301.png",
+    "bytes": 2181699,
+    "sha256": "7406362e051a1e7cdf5369164c67254c43ae7801bca34e5512a6983ae5205c26"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/photos/302.png",
+    "bytes": 2016453,
+    "sha256": "75b47744fdfc2d4e06a12ead439d4440efa1840dc6cc1fea88bc5860e06997e2"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/photos/401.png",
+    "bytes": 1953625,
+    "sha256": "0d9c762bfd14ecc6303c9157164e270e6fab70346d63bb20d2863ae715634e77"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/photos/402.png",
+    "bytes": 2132707,
+    "sha256": "7e9b4370f5f5014cc11edde4e132e366610dfaee7e401aec73c60bda129bfac7"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/101-daily.png",
+    "bytes": 1999098,
+    "sha256": "a7dad0ef5f4290a283d3a5f52cb74b37183ef307beddd9746ea2a1ea22751e32"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/101-friends.png",
+    "bytes": 2429799,
+    "sha256": "ed4e27046c28aad64b21eb484b960c90cb2a0af7642b966f705d7747744cf898"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/101-household.png",
+    "bytes": 1976557,
+    "sha256": "b35629545b8d62e5f501363fc6e1e311994dcac6dc9726ff13cd7b0636594b06"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/101-room.png",
+    "bytes": 1964483,
+    "sha256": "ac95608656fdf7b0b4c7d0adb9e1d8faf62ecd1fc11a570dcf89c678d794633e"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/101-walk.png",
+    "bytes": 2411179,
+    "sha256": "5e044c9a5e6a6b1e5e7492271d8d7cf5d53e8053cf4e53123d0ce2e7d4213c1c"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/102-daily.png",
+    "bytes": 2031934,
+    "sha256": "179ef7e482c6fa371f76194d8f704334966a695597ebe9c0d4f6f619c764fa83"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/102-household.png",
+    "bytes": 2182837,
+    "sha256": "5695f51bf1f1a5a30ca80511b37ab15bc72ef98cb1aad605256ae60e98b189f5"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/102-kitchen.png",
+    "bytes": 2230268,
+    "sha256": "246a06b5b9782c63375da180ca6ae72cf3c09681ba71c9fd7f26726c9b263125"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/102-lake.png",
+    "bytes": 2510799,
+    "sha256": "1f1ef484245e1c5dc2bde1be7c3af4d76463eae8a3186000d04b052cbd01bee4"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/102-online.png",
+    "bytes": 1964093,
+    "sha256": "bcf276936eb943568b7555b7362c49b6d90342f2f56cb07848afcc3cdf33c9e1"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/102-room.png",
+    "bytes": 1972909,
+    "sha256": "1ec614fefba48e49b5eb857d9caa160ae516946a9e7bdffcab2e6eace9cb7f48"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/102-workday.png",
+    "bytes": 1898642,
+    "sha256": "13c7c0484de0d3b05b01d354dca96e6dc35ae88b8f42478fa85df2db3d21a6be"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/201-birthday.png",
+    "bytes": 2280064,
+    "sha256": "736252470511d65163dd01b10eeb8f05c25ea3e58218a1c09bc30aa2a678a64a"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/201-camping-drawing.png",
+    "bytes": 3589757,
+    "sha256": "9b963a53ff95bb035c89269479ae52fb8cb2c8b91ed5fa4b8062b0e9c53b88bd"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/201-daily.png",
+    "bytes": 2008181,
+    "sha256": "4936e6088f0cca56b557452a9e1d043f6d26737f034df385dee3359e6c126419"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/201-family.png",
+    "bytes": 2360888,
+    "sha256": "de2c0cd4d9af5a67d3c4452a73aa3a8df591a6d2fba6f548a2eba06fd12e3a2b"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/201-household.png",
+    "bytes": 1987546,
+    "sha256": "84b1f31d1ceb2191f5e745d09babe7d7afb22abd44c0b0e4ba1d13336cfd4b0e"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/201-room.png",
+    "bytes": 1792116,
+    "sha256": "d4023ad7a25745b60ce36c9612e4fa98666eca001f0c7eb9ef2ad9d25a9db8cc"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/201-summer.png",
+    "bytes": 2614542,
+    "sha256": "500b19b469b5ad64dc9e636eb8862ebfcc9a7309fe18f2de78722e2bcc3d8329"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/201-work-lunch.png",
+    "bytes": 2134725,
+    "sha256": "4af5a2a3f5e67608addd0b74806c21dfcf337bcc3f4ad4e2b5b67a0f3ac1484f"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/202-at-home-portrait.png",
+    "bytes": 1633552,
+    "sha256": "27f045bd88e847ad2cf6e41226cbbc95c2a4bcaa1e510aef302ef1eee5a96ffb"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/202-at-home-window.png",
+    "bytes": 1716449,
+    "sha256": "6fcf1b1dfc3e47514adbcaa2cd679e9ef356b5a86ded91e890be267cca14bcad"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/202-coffee.png",
+    "bytes": 2194883,
+    "sha256": "69fe3029f7d1ca082e168e6ff90de2b61a74357dcf4db8841bc77f03c81e9197"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/202-daily.png",
+    "bytes": 1961656,
+    "sha256": "d04607e41639ff50906b5af3675a1ac9927f6139ca32071bc124362071f48e2f"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/202-dinner.png",
+    "bytes": 2106170,
+    "sha256": "57795bd6545f03a0fd52d3432908520930e4be85b44c6765928bb30876b63cdf"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/202-garden.png",
+    "bytes": 2217660,
+    "sha256": "0b3f22a1cf3db9cc4d7defd95295256cad74c0fbd52520ee9a350e6b00ed79fd"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/202-household.png",
+    "bytes": 1976840,
+    "sha256": "b6f7dd3b066fcb1d521b13cd739ffe2677b0b2e9236eb60ba987821213ab1c3e"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/202-room.png",
+    "bytes": 1999971,
+    "sha256": "9809b5e84029decc51bfa2597160ce35299c8c879d6f1341cd515d911f489043"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/202-walk.png",
+    "bytes": 2254908,
+    "sha256": "47cc2ec61582587a5cb6a9a38390d92b6d5d78832371fa3dd68524b37e788f0f"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/301-daily.png",
+    "bytes": 2181699,
+    "sha256": "7406362e051a1e7cdf5369164c67254c43ae7801bca34e5512a6983ae5205c26"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/301-drawing.png",
+    "bytes": 3360730,
+    "sha256": "0dfe21c15f14a2e2b17ae9bb89eaaaffdb638fa289a35e93aa1b0dad7d4b4347"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/301-household.png",
+    "bytes": 2016600,
+    "sha256": "08efac4894ebbaf7877e631b7392bf3ffda818c9a90657c80531351ff83b772d"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/301-room.png",
+    "bytes": 2090907,
+    "sha256": "0a2f3768695dac226929991c78f091a07de6d6531d61719879a45b3028026dcd"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/301-school.png",
+    "bytes": 2099685,
+    "sha256": "92b7b492a4755b90d3d6103523203210647feb5d6d930b1aed41dc6899a8b22e"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/301-walk.png",
+    "bytes": 2603074,
+    "sha256": "6c34b37cc87b850c79c2835f6c32e9aa98a369d0c0e5303126f336d814eac58c"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/302-daily.png",
+    "bytes": 2016453,
+    "sha256": "75b47744fdfc2d4e06a12ead439d4440efa1840dc6cc1fea88bc5860e06997e2"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/302-household.png",
+    "bytes": 2052857,
+    "sha256": "e79afe0c77fd5abb71957f594ae382a2f610bf09e80031472f91078bb82326fa"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/302-room.png",
+    "bytes": 1958416,
+    "sha256": "33ea008df7bff6c30e1ff82abe61b36d96a6372333cbb1cf99b50aa5cc83a702"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/401-daily.png",
+    "bytes": 1953625,
+    "sha256": "0d9c762bfd14ecc6303c9157164e270e6fab70346d63bb20d2863ae715634e77"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/401-garden.png",
+    "bytes": 2704093,
+    "sha256": "c952635722135567c72debc8dd1474c56c16dc49945ffee0ea8494054b74e647"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/401-household.png",
+    "bytes": 1971178,
+    "sha256": "0683815b94480f7c192b3796fabff0c110da0edb7f9c450f6125c1314c8c5e95"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/401-retirement.png",
+    "bytes": 2293671,
+    "sha256": "e27b4b5a70a0ff8b767cf2b35e2dc138b911e4e1e4913499650cce030dbcd12c"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/401-room.png",
+    "bytes": 2024997,
+    "sha256": "1a9a7da3905d050f020dfa972e75ae13f0ded69bed091f02a909612008d27269"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/402-anniversary.png",
+    "bytes": 2149890,
+    "sha256": "aa353d9943d6f414b3253ad7b4afd6fbf4ea206197fa9c79c8f3781b0819f6fd"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/402-daily.png",
+    "bytes": 2132707,
+    "sha256": "7e9b4370f5f5014cc11edde4e132e366610dfaee7e401aec73c60bda129bfac7"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/402-garden.png",
+    "bytes": 2712991,
+    "sha256": "b6ebcb67428faac170e9f0645c6abcc1e158f32ce826281142314b23ed8759b0"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/402-household.png",
+    "bytes": 2136785,
+    "sha256": "7765f29e87474a04057ef5276c6aa71eab3121b15c71e09ef45fde25e9dbf07d"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/402-postcard.png",
+    "bytes": 3530394,
+    "sha256": "97a82155865ab32ba37a2295c2bcb749d6f0e96e88adb21d23050e2665886524"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/402-room.png",
+    "bytes": 2086055,
+    "sha256": "4fe443dfe12004e5f7a1ab9f6b1821fa4c7a55d6a2d8d63afd4385cd60cd29cc"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-101-a.png",
+    "bytes": 2336747,
+    "sha256": "9c78526c2b570f0a803afbdd5c350b022ed96792b2aee73108de1f76a3339e66"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-101-b.png",
+    "bytes": 2083031,
+    "sha256": "c1ffc7da9d8680fd445b47bcb7d1bd647cf4018bfee3e78b05e2b6801a70c938"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-102-a.png",
+    "bytes": 2521629,
+    "sha256": "fa655d60b55d493b50104d2ccd540cb61b2c482079e150bb7550c83764de9f9f"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-102-b.png",
+    "bytes": 2297241,
+    "sha256": "8bf17162ff55f0f03cdb3b7596b17a64b52d032f5a8e16a49301f16912ee8bdb"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-201-a.png",
+    "bytes": 2743986,
+    "sha256": "1afb0364f7d2089f8508403a4d55af7429f18347f5c0e091fc731d646f135565"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-201-b.png",
+    "bytes": 2453855,
+    "sha256": "dd42f56f80f5beb22160095469a541df66fbf705b115571784c8e56151028adb"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-202-a.png",
+    "bytes": 2358130,
+    "sha256": "344f8b19f662fdb278ba9e220122b84c159006532b9600dad42848a150a519b8"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-202-b.png",
+    "bytes": 2163743,
+    "sha256": "a4d4d7095c85d3c2c2199e623216ea4765a8fba9c7c19b717eb53f059f7753ed"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-301-a.png",
+    "bytes": 2366183,
+    "sha256": "d6348f450c19a6b4801bd1c25bb23790d710e11089fcd793d8eb9fe5d3386965"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-301-b.png",
+    "bytes": 2099063,
+    "sha256": "ac544472a2ec809f28feb7fbb85a3d2ec556080aa456a06140a32fcbc75d05dc"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-302-a.png",
+    "bytes": 2367266,
+    "sha256": "62f2c5faa67925f7f8b98039141d1ece49eea555b5243c7151fd6cecbb6e77c8"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-302-b.png",
+    "bytes": 2193119,
+    "sha256": "941c49bde3369d56003e67883c0b60ee84ef893495dce306fa9f49bc452d3a2a"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-401-a.png",
+    "bytes": 2555058,
+    "sha256": "f4419cb47dc8e1902e6f3a42d6227827d960b5c0d6bd2c02147969cfaa61a23f"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-401-b.png",
+    "bytes": 2353547,
+    "sha256": "9612509cc63b95e8aba559feb16d48ca3ab67e17adea6a4e58e7726184b71121"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-402-a.png",
+    "bytes": 2594965,
+    "sha256": "5b66e34f65c7171eb9d0035fd805a658cd879b8c4e1b50b875a21635ff89be83"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-402-b.png",
+    "bytes": 2345880,
+    "sha256": "0f2c237f93db13aaf21f919ea73bd6d730a8600ba5c32850c543df370b399598"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-supplied-102-01.png",
+    "bytes": 2146029,
+    "sha256": "d0d13d6f64443d2c0c6837dd84582e8e2638c47c4ef6d800e7be884256e4b7c7"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-supplied-102-02.png",
+    "bytes": 2084528,
+    "sha256": "d312b8d8f16dea43b1117618db5d4f1d36dacc08a29a5966b87d4249dc9b2302"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-supplied-102-03.png",
+    "bytes": 1952763,
+    "sha256": "fa64076609d39485ebfa6e7cf31f5ff24c0e0fb386fc3b08413b928c267df2f2"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-supplied-201-01.png",
+    "bytes": 2254242,
+    "sha256": "0dab736f41344ea1ed2adca3bbdc704873d591faee2ca719eaa03efb75c20369"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-supplied-202-01.png",
+    "bytes": 1889883,
+    "sha256": "9489b038449cd7df3919532c5fad7b92075c19abd44c16ce0698be0ea84f7ef4"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-supplied-202-02.png",
+    "bytes": 1922018,
+    "sha256": "267ad92b800b5ba4b104f48c54c1ac48262a19d7ab8716ae0f324f76a45b3e8c"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/cam-supplied-202-03.png",
+    "bytes": 2072716,
+    "sha256": "eeed9f755af4b2f898c749768f9bc277736f50de12ec4d55b6e2c0f3becbd37b"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/mirrorlock/mirror-private.png",
+    "bytes": 288533,
+    "sha256": "c5d3f89aac02e5e95479f5a2115493a0177014f206b8e41251fd985e0cdf1fe8"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/mirrorlock/phone-selfie.png",
+    "bytes": 274650,
+    "sha256": "d8a685dcdf269c91fd486bda9e34d7b236a3de1465b53a9d2c25200218961451"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/mirrorlock/portre_01.png",
+    "bytes": 274650,
+    "sha256": "d8a685dcdf269c91fd486bda9e34d7b236a3de1465b53a9d2c25200218961451"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/mirrorlock/portre_02.png",
+    "bytes": 288533,
+    "sha256": "c5d3f89aac02e5e95479f5a2115493a0177014f206b8e41251fd985e0cdf1fe8"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/mirrorlock/portre_03.png",
+    "bytes": 275997,
+    "sha256": "68f91b1e639196b8ad7be9b9f7bc9699c7286c54ec96e5d3ed1fab1458f897ea"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/mirrorlock/portre_04.png",
+    "bytes": 349421,
+    "sha256": "e18609feab25c70aa9ae48eb6dda1b47138e5f19bb6568e3d49fa44f538f7a8c"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/mirrorlock/portre_05.png",
+    "bytes": 352010,
+    "sha256": "a9979a04a5af9f0d4093d8548a9a49dbebc82082aebb2a180e691edfa2243e18"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/mirrorlock/portre_06.png",
+    "bytes": 352279,
+    "sha256": "afa1093174fd2bee01442dce86905b30af9da371ce1d64d7b6e860bff936490c"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/mirrorlock/recording-still.png",
+    "bytes": 275997,
+    "sha256": "68f91b1e639196b8ad7be9b9f7bc9699c7286c54ec96e5d3ed1fab1458f897ea"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/mirrorlock/second-visit.png",
+    "bytes": 349421,
+    "sha256": "e18609feab25c70aa9ae48eb6dda1b47138e5f19bb6568e3d49fa44f538f7a8c"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/nightglass/After_Hours_Portraits_01.png",
+    "bytes": 260466,
+    "sha256": "ecc85cef9c0f8c93f0bc7eb6f08b46ca3f2c9c1ac00b6fc6144fc5c47816184a"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/nightglass/After_Hours_Portraits_02.png",
+    "bytes": 274484,
+    "sha256": "63e09de84a70d62885b589d3c94aeb8ee93d6f26f8011d200560476794326c33"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/nightglass/After_Hours_Portraits_03.png",
+    "bytes": 258327,
+    "sha256": "126d5bff0b61d3bdddd4be73310933dd3bef5bef63658fb18e77ac52e299a48c"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/nightglass/Windowlight_Session_01.png",
+    "bytes": 323929,
+    "sha256": "4aa306b098a3b2163cd3718aa9514678a72fc77279b33d0fd1720296a34db013"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/nightglass/Windowlight_Session_02.png",
+    "bytes": 317367,
+    "sha256": "4b2f96abeaaabfbebb8e419d71c959781c30704f0a6aeb09b69a690491413bdd"
+  },
+  {
+    "path": "game-builds/port-404-8/1.3-rc1/visuals/nightglass/Windowlight_Session_03.png",
+    "bytes": 278988,
+    "sha256": "0cf44a4df6f7afadfd71e00b2457cb1cfc29dd465ef4b696c49c93f40fcaec88"
+  },
+  {
+    "path": "game-builds/sorting-error/0.1/index.html",
+    "bytes": 13408,
+    "sha256": "d161603cd90bd7e7676078d42400d10cb627b4a84d149807173aa87642b42a87"
+  },
+  {
+    "path": "game-builds/the-liquor-ledger/0.4/assets/index-CS-hhkQ4.js",
+    "bytes": 162277,
+    "sha256": "c7a61e7474561321d0b3ef34c2987a01e58890f3317fc68722bf1235ee3f45dc"
+  },
+  {
+    "path": "game-builds/the-liquor-ledger/0.4/assets/index-CsbNa67B.css",
+    "bytes": 59985,
+    "sha256": "9c0f7e4b28b48ac4dcfe13a06843f307c792e369b07f0780ecd3f4750624b1ae"
+  },
+  {
+    "path": "game-builds/the-liquor-ledger/0.4/index.html",
+    "bytes": 566,
+    "sha256": "35732335182fcd377168e10ef2e674ab850bd03be07e3ae689d024f29c76ca10"
+  }
+]

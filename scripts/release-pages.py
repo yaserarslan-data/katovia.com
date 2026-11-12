@@ -20,7 +20,7 @@ def settings():
 def public(path):
     req=urllib.request.Request('https://katovia.com/'+path,headers={'User-Agent':'Katovia-release-QA','Cache-Control':'no-cache'})
     with opener.open(req,timeout=30) as response:return response.read()
-def served(path):return Path(path).suffix.lower() in ['.html','.js','.css','.txt','.jpg','.png','.svg','.json','.xml']
+def served(path):return Path(path).suffix.lower() in ['.html','.js','.css','.txt','.jpg','.png','.svg','.json','.xml','.mp3','.wav']
 def verify(tree,paths):
     def one(path):
         expected=subprocess.check_output(['git','show',tree+':'+path]);actual=public(path)
@@ -96,7 +96,7 @@ elif mode=='publish':
             except Exception:
                 if retry==11:raise
                 time.sleep(10)
-        qa=['node','scripts/qa-legacy-games-release.mjs'] if label=='LegacyGames2' else ['node','scripts/qa-language-forge-release.mjs'] if label=='LanguageForge1' else ['node','scripts/live-qa.mjs',label]
+        qa=['node','scripts/qa-hosted-games.mjs'] if label=='PlayGames1' else ['node','scripts/qa-legacy-games-release.mjs'] if label=='LegacyGames2' else ['node','scripts/qa-language-forge-release.mjs'] if label=='LanguageForge1' else ['node','scripts/live-qa.mjs',label]
         subprocess.run(qa,check=True);settings();plan['status']='published';print('RELEASE VERIFIED',label,flush=True)
     except Exception as error:
         print('Release failed:',str(error),flush=True)

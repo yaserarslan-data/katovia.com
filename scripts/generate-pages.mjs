@@ -1,3 +1,4 @@
+import { hostedGames } from '../src/catalog/games.js';
 import {alphabetMarkup} from '../src/tools/alphabet/markup.js';
 import {creations} from '../src/catalog/creations.js';
 import {forgeMarkup,forgeCard} from '../src/language-forge/ui/markup.js';
@@ -67,7 +68,7 @@ function home(route) {
 }
 function sectionPage(section) {
   const owner=section.id==='d'?'challenge':section.personal?'create':section.owner || (section.activity?'play':section.id);
-  const detail=section.activity || section.tool || section.personal || section.creation;
+  const detail=section.activity || section.tool || section.personal || section.creation || section.game;
   let body='';
   if(section.creation) body=forgeMarkup();
   else if(section.id==='d') body=duelMarkup('play');
@@ -79,7 +80,8 @@ function sectionPage(section) {
   else if(section.id==='today') body=daily(section.route)+`<div id="memory-grid">${memoryMarkup()}</div><div id="reaction">${reactionMarkup()}</div>`;
   else if(section.id==='tools') body=toolGroups.map(group=>collection(`tools-${group.id}`,`catalog.${group.id}`,selectProducts(group.ids),section.route)).join('');
   else if(section.id==='lab') body=collection('lab-discovery','lab.discovery',discoveryCollections,section.route)+collection('lab-tools','lab.tools',entries.filter(entry=>['qr','business-card','karar'].includes(entry.id)),section.route)+collection('lab-messages','lab.messages',entries.filter(entry=>['cuma','kandil','dogum-gunu','bayram'].includes(entry.id)),section.route);
-  else if(section.id==='play') body=collection('collection-title','play.collection',experiences,section.route);
+  else if(section.id==='play') body=collection('collection-title','play.collection',experiences,section.route)+collection('game-shelf','gameShelf.heading',hostedGames,section.route);
+  else if(section.game) body=`<section class="activity-panel"><p>${txt('gameShelf.language')} · ${txt('gameShelf.'+section.input)} · ${escape(section.version)}</p>${txt('gameShelf.launch','a',`class="button button-accent collection-link" data-game-launch href="${section.runtime}"`)} ${continuation('gameShelf.back','/play/')}</section>`;
   if(section.tool) body+=collection('related-products','related.heading',selectProducts(relatedProducts[section.id] || []).map(entry=>({...entry,visual:false,activity:false})),section.route,continuation(owner==='lab'?'common.return':owner==='create'?'home.allCreate':'home.allTools',`/${owner}/`));
   if(section.activity) body+=collection('collection-title','play.collection',experiences.filter(entry=>entry.id!==section.id),section.route,continuation('home.allPlay','/play/'));
   return `<main id="main-content" class="container section-page${section.id==='today'?' daily-page':''}" tabindex="-1"><header class="section-intro"><p class="eyebrow">${section.creation?'LANGUAGE FORGE':`KATOVIA / ${txt(`nav.${owner}`)}`}</p>${txt(detail?section.titleKey:`section.${section.id}.label`,'h1')}${txt(detail?section.descriptionKey:`section.${section.id}.description`,'p')}</header>${body}</main>`;
@@ -87,8 +89,8 @@ function sectionPage(section) {
 
 function documentPage(section) {
   const route = section?.route || '/';
-  const titleKey = section?.activity || section?.tool || section?.personal || section?.creation ? section.seoTitleKey || section.titleKey : section ? `page.${section.id}.title` : 'home.title';
-  const descriptionKey = section?.activity || section?.tool || section?.personal || section?.creation ? section.metaKey || section.descriptionKey : section ? `section.${section.id}.description` : 'home.meta';
+  const titleKey = section?.activity || section?.tool || section?.personal || section?.creation || section?.game ? section.seoTitleKey || section.titleKey : section ? `page.${section.id}.title` : 'home.title';
+  const descriptionKey = section?.activity || section?.tool || section?.personal || section?.creation || section?.game ? section.metaKey || section.descriptionKey : section ? `section.${section.id}.description` : 'home.meta';
   // Paths below are relative to the source HTML, so Vite can resolve out-of-root modules.
   const sourceScript = '../'.repeat(route.split('/').filter(Boolean).length + 1) + 'src/shell/main.js';
   const schema=section?.tool||section?.activity||section?.creation?JSON.stringify({'@context':'https://schema.org','@type':section.tool||section.creation?'WebApplication':'SoftwareApplication',name:translate('en',section.creation?'forge.title':section.titleKey),description:translate('en',descriptionKey),url:`https://katovia.com${route}`,applicationCategory:section.owner==='create'?'DesignApplication':section.owner==='lab'?'EducationalApplication':section.tool?'UtilitiesApplication':'EntertainmentApplication',operatingSystem:'Web browser',isAccessibleForFree:true,inLanguage:['en','tr']}).replace(/</g,'\\u003c'):null;
@@ -131,10 +133,10 @@ const compatibilityPages = [{ id: '', route: '/' }, ...sections].map(({ id, rout
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Katovia — Moved</title><link rel="canonical" href="https://katovia.com${route}"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0;url=${route}"><script>location.replace(${JSON.stringify(route)} + location.search + location.hash);</script></head><body><a href="${route}">Katovia / Devam et / Continue</a></body></html>
 `
 }));
-const indexable = [...mysteryRoutes, '/', ...sections.map(entry=>entry.route), ...experiences.map(entry=>entry.route),...toolPages.map(entry=>entry.route),...creations.map(entry=>entry.route)];
+const indexable = [...mysteryRoutes, '/', ...sections.map(entry=>entry.route), ...experiences.map(entry=>entry.route),...hostedGames.map(entry=>entry.route),...toolPages.map(entry=>entry.route),...creations.map(entry=>entry.route)];
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexable.map(route=>`  <url><loc>https://katovia.com${route}</loc></url>`).join('\n')}\n</urlset>\n`;
 const robots='User-agent: *\nAllow: /\nDisallow: /v2/\n# Personal player pages use HTML noindex and are excluded from the sitemap.\nSitemap: https://katovia.com/sitemap.xml\n';
-const pages = [...await mysteryPages(), {path:'sitemap.xml',html:sitemap},{path:'robots.txt',html:robots},{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), ...[...experiences,...toolPages,...personalPages,...creations].map((entry) => ({ path:`${entry.route.slice(1)}index.html`, html:documentPage(entry) })), { path: '404.html', html: notFound }, ...compatibilityPages];
+const pages = [...await mysteryPages(), {path:'sitemap.xml',html:sitemap},{path:'robots.txt',html:robots},{ path: 'index.html', html: documentPage() }, ...sections.map((section) => ({ path: `${section.id}/index.html`, html: documentPage(section) })), ...[...experiences,...hostedGames,...toolPages,...personalPages,...creations].map((entry) => ({ path:`${entry.route.slice(1)}index.html`, html:documentPage(entry) })), { path: '404.html', html: notFound }, ...compatibilityPages];
 for (const page of pages) {
   const path = `${siteRoot}/${page.path}`;
   const html=page.html.replace(/[ \t]+$/gm,'');
